@@ -174,8 +174,8 @@ def main():
     journalists, cases, incidents, glossary = load("journalists"), load("cases"), load("incidents"), load("glossary")
     report = {"sources": {"ok": 0, "failed": []}, "outlets": {"published": [], "failed": []}, "actors": {"published": [], "failed": []},
               "journalists": {"published": [], "failed": []}, "cases": {"published": [], "draft": [], "failed": []},
-              "incidents": {"published": [], "draft": [], "failed": []}, "claims": {"created": 0, "existing": 0, "skipped_no_quote": 0, "failed": []},
-              "glossary": {"published": [], "failed": []}, "slug_map": {}}
+              "incidents": {"published": [], "draft": [], "failed": []}, "claims": {"created": 0, "existing": 0, "superseded": 0, "skipped_no_quote": 0, "failed": []},
+              "glossary": {"published": [], "failed": []}, "events": {"created": 0, "failed": []}, "slug_map": {}}
 
     def fail(section, key, status, body):
         report[section]["failed"].append({"slug": key, "status": status, "detail": body.get("details") or body})
@@ -230,6 +230,7 @@ def main():
 
     # ---- cases (draft first; incidents link to them) ----
     case_rows = {}
+    case_claim_ids = {}
     for c in cases:
         court = c["court"]
         level = "appellate" if "Appeals" in court and "District" not in court else "trial"
@@ -249,13 +250,63 @@ def main():
                "reporter_citation": reporter, "filed_on": c.get("filed_on"), "decided_on": decided,
                "status": CASE_STATUS.get(c["slug"], "pending"), "holding": holding or None}
         case_rows[c["slug"]] = row
-        st, b = api.call("PUT", f"/admin/records/case/{c['slug']}", {**row, "reason": REASON, "batch_label": BATCH})
+        # Fetch existing current claims before the first PUT: once a case carries
+        # current claims (e.g. from a prior run), the admin API requires every
+        # holding paragraph to keep a {c:ID} reference (same rule as incidents).
+        st, existing = api.call("GET", f"/admin/records/case/{c['slug']}")
+        have = {(cl["field"], cl["source_id"], cl["evidence_quote"]): cl for cl in (existing.get("claims") or []) if cl["status"] == "current"}
+        existing_ids = sorted({cl["id"] for cl in (existing.get("claims") or []) if cl["status"] == "current"})
+        first_row = {**row, "holding": with_refs(row["holding"], existing_ids) if existing_ids and row["holding"] else row["holding"]}
+        st, b = api.call("PUT", f"/admin/records/case/{c['slug']}", {**first_row, "reason": REASON, "batch_label": BATCH})
         if st != 200:
             fail("cases", c["slug"], st, b)
             case_rows[c["slug"]] = None
             continue
         docs = [{"source_id": sid[x], "role": "opinion" if src_by_seed[x]["kind"] == "court_record" else "reporting"} for x in c.get("sources", []) if x in sid]
         api.call("PUT", f"/admin/cases/{c['slug']}/links", {"sources": docs, "reason": "seed links", "batch_label": BATCH})
+        # direct case claims (subject_type "case"), from court records or reporting, per spec 2.4's
+        # case claim field allowlist (filed_on, docket, judge, claims_asserted, holding, decided_on, status, appeal).
+        ids = []
+        for cl in c.get("claims", []):
+            q = (cl.get("evidence_quote") or "").strip()
+            if not q:
+                report["claims"]["skipped_no_quote"] += 1
+                continue
+            src = src_by_seed.get(cl["source_id"])
+            if not src or cl["source_id"] not in sid:
+                report["claims"]["failed"].append({"case": c["slug"], "field": cl["field"], "error": "unknown source"})
+                continue
+            key = (cl["field"], sid[cl["source_id"]], q)
+            body = {
+                "value": cl.get("value"), "statement": cl["statement"], "source_id": sid[cl["source_id"]], "evidence_quote": q,
+                "evidence_date": src.get("published_on"), "method": CLAIM_METHOD.get(src["kind"], "outlet_report"),
+                "verified_at": src.get("accessed_on", "2026-09-22"), "confidence": "medium", "batch_label": BATCH,
+            }
+            if key in have:
+                old = have[key]
+                if old["statement"] != cl["statement"] or (old.get("value") or None) != (cl.get("value") or None):
+                    st, b = api.call("POST", f"/admin/claims/{old['id']}/supersede", {
+                        **body, "reason": "correction", "note": "Corrected statement wording (seed repair pass)", "batch_label": BATCH,
+                    })
+                    if st == 200:
+                        ids.append(b["id"])
+                        report["claims"]["superseded"] = report["claims"].get("superseded", 0) + 1
+                    else:
+                        report["claims"]["failed"].append({"case": c["slug"], "field": cl["field"], "status": st, "detail": b.get("details") or b, "note": "supersede failed"})
+                        ids.append(old["id"])
+                else:
+                    ids.append(old["id"])
+                report["claims"]["existing"] += 1
+                continue
+            st, b = api.call("POST", "/admin/claims", {
+                "subject_type": "case", "subject_slug": c["slug"], "field": cl["field"], **body,
+            })
+            if st == 200:
+                ids.append(b["id"])
+                report["claims"]["created"] += 1
+            else:
+                report["claims"]["failed"].append({"case": c["slug"], "field": cl["field"], "status": st, "detail": b.get("details") or b})
+        case_claim_ids[c["slug"]] = ids
     case_dates = {c["slug"]: (c.get("filed_on") or c.get("decided_on") or "") for c in cases}
 
     # ---- incidents ----
@@ -282,13 +333,42 @@ def main():
             "stated_justification": inc.get("stated_justification"),
             "effect_on_reporting": inc.get("effect_on_reporting"),
         }
-        st, b = api.call("PUT", f"/admin/records/incident/{slug}", {**base_row, **prose, "reason": REASON, "batch_label": BATCH})
+        # Fetch any existing record's current claims BEFORE the first PUT: once a
+        # record carries current claims, the admin API requires every prose
+        # paragraph to keep a {c:ID} reference, so a re-run's first PUT on an
+        # already-published record must not strip refs down to bare prose (a
+        # fresh draft has no current claims yet, so this is a no-op for it).
+        st, existing = api.call("GET", f"/admin/records/incident/{slug}")
+        have = {(c["field"], c["source_id"], c["evidence_quote"]): c for c in (existing.get("claims") or []) if c["status"] == "current"}
+        by_field = {}
+        for c in (existing.get("claims") or []):
+            if c["status"] == "current":
+                by_field.setdefault(c["field"], []).append(c["id"])
+        existing_all_ids = sorted({i for ids in by_field.values() for i in ids})
+        pick0 = lambda f: by_field.get(f) or existing_all_ids
+        first_prose = {
+            "summary": with_refs(prose["summary"], pick0("occurred_on")) if existing_all_ids else prose["summary"],
+            "what_happened": ("\n\n".join([with_refs(inc["what_happened"], existing_all_ids)] +
+                              ([with_refs(status_text, pick0("status"))] if status_text else []))
+                              if existing_all_ids else prose["what_happened"]),
+            "stated_justification": (with_refs(prose["stated_justification"], pick0("stated_justification"))
+                                      if existing_all_ids else prose["stated_justification"]),
+            "effect_on_reporting": (with_refs(prose["effect_on_reporting"], pick0("effect_on_reporting"))
+                                     if existing_all_ids else prose["effect_on_reporting"]),
+        }
+        st, b = api.call("PUT", f"/admin/records/incident/{slug}", {**base_row, **first_prose, "reason": REASON, "batch_label": BATCH})
         if st != 200:
             fail("incidents", slug, st, b)
             continue
         # links
+        actor_roles = inc.get("actor_roles", {})
+        def role_for(a):
+            if a in actor_roles:
+                return actor_roles[a]
+            bt = actor_kind.get(a, ("", ""))[1]
+            return "ruled" if bt == "court" else "legislated" if bt == "legislature" else "other"
         links = {
-            "actors": [{"slug": a, "role": "ruled" if actor_kind.get(a, ("", ""))[1] == "court" else "legislated" if actor_kind.get(a, ("", ""))[1] == "legislature" else "other"} for a in inc.get("actors", []) if a in actor_kind],
+            "actors": [{"slug": a, "role": role_for(a)} for a in inc.get("actors", []) if a in actor_kind],
             "outlets": [{"slug": o, "relation": "affected"} for o in inc.get("outlets", [])],
             "journalists": [{"slug": j, "relation": "affected"} for j in inc.get("journalists", [])],
             "cases": [{"slug": c, "relation": case_relation(case_dates.get(c, ""), inc["occurred_on"])} for c in inc.get("cases", []) if case_rows.get(c)],
@@ -298,10 +378,7 @@ def main():
         st, b = api.call("PUT", f"/admin/incidents/{slug}/links", links)
         if st != 200:
             fail("incidents", slug + " (links)", st, b)
-        # claims
-        st, existing = api.call("GET", f"/admin/records/incident/{slug}")
-        have = {(c["field"], c["source_id"], c["evidence_quote"]): c["id"] for c in (existing.get("claims") or []) if c["status"] == "current"}
-        by_field = {}
+        # claims (have/by_field pre-seeded above from the existing record, if any)
         for cl in inc.get("claims", []):
             q = (cl.get("evidence_quote") or "").strip()
             if not q:
@@ -312,15 +389,40 @@ def main():
                 report["claims"]["failed"].append({"incident": slug, "field": cl["field"], "error": "unknown source"})
                 continue
             key = (cl["field"], sid[cl["source_id"]], q)
+            body = {
+                "value": cl.get("value"), "statement": cl["statement"], "source_id": sid[cl["source_id"]], "evidence_quote": q,
+                "evidence_date": src.get("published_on"), "method": CLAIM_METHOD.get(src["kind"], "outlet_report"),
+                "verified_at": src.get("accessed_on", "2026-09-22"), "confidence": "medium", "batch_label": BATCH,
+            }
             if key in have:
-                by_field.setdefault(cl["field"], []).append(have[key])
+                old = have[key]
+                if old["statement"] != cl["statement"] or (old.get("value") or None) != (cl.get("value") or None):
+                    # The seed's wording changed since this claim was first created (same
+                    # field/source/quote, e.g. a later voice-lint fix) -- supersede it with
+                    # a corrected claim rather than leaving the stale statement live.
+                    st, b = api.call("POST", f"/admin/claims/{old['id']}/supersede", {
+                        **body, "reason": "correction", "note": "Corrected statement wording (seed repair pass)", "batch_label": BATCH,
+                    })
+                    if st == 200:
+                        new_id = b["id"]
+                        have[key] = {**old, "id": new_id, "statement": cl["statement"], "value": cl.get("value")}
+                        bucket = by_field.setdefault(cl["field"], [])
+                        if old["id"] in bucket:
+                            bucket.remove(old["id"])
+                        if new_id not in bucket:
+                            bucket.append(new_id)
+                        report["claims"]["superseded"] = report["claims"].get("superseded", 0) + 1
+                    else:
+                        report["claims"]["failed"].append({"incident": slug, "field": cl["field"], "status": st, "detail": b.get("details") or b, "note": "supersede failed"})
+                        if old["id"] not in by_field.setdefault(cl["field"], []):
+                            by_field[cl["field"]].append(old["id"])
+                else:
+                    if old["id"] not in by_field.setdefault(cl["field"], []):
+                        by_field[cl["field"]].append(old["id"])
                 report["claims"]["existing"] += 1
                 continue
             st, b = api.call("POST", "/admin/claims", {
-                "subject_type": "incident", "subject_slug": slug, "field": cl["field"], "value": cl.get("value"),
-                "statement": cl["statement"], "source_id": sid[cl["source_id"]], "evidence_quote": q,
-                "evidence_date": src.get("published_on"), "method": CLAIM_METHOD.get(src["kind"], "outlet_report"),
-                "verified_at": src.get("accessed_on", "2026-09-22"), "confidence": "medium", "batch_label": BATCH,
+                "subject_type": "incident", "subject_slug": slug, "field": cl["field"], **body,
             })
             if st == 200:
                 by_field.setdefault(cl["field"], []).append(b["id"])
@@ -349,6 +451,45 @@ def main():
             report["incidents"]["published"].append(slug)
         else:
             fail("incidents", slug, st, b)
+            continue
+        # events (spec section 2.3 `events` table; POST /admin/events per section 8).
+        # Each seed event names the incident claim field it is evidenced by; the
+        # claim was created above, so by_field has its id.
+        #
+        # NOTE: there is no admin GET/list endpoint for events and no
+        # delete/retire endpoint (POST /admin/events is a blind INSERT with no
+        # server-side dedup) -- see WORKLOG.md. As a best-effort guard against
+        # re-running this script creating duplicate rows, we read the record's
+        # own public JSON twin (which does include `events`) and skip any
+        # event whose (occurred_on, kind, label) tuple is already present.
+        if inc.get("events"):
+            existing_events = set()
+            try:
+                with urllib.request.urlopen(
+                    urllib.request.Request(api.base + f"/incidents/{slug}.json",
+                                            headers={"User-Agent": UA, "Accept": "application/json"}),
+                    timeout=30,
+                ) as r:
+                    for e in json.loads(r.read().decode() or "{}").get("events", []):
+                        existing_events.add((e.get("date") or e.get("occurred_on"), e.get("kind"), e.get("label")))
+            except Exception as e:
+                print(f"  WARN could not fetch public JSON for event dedup on {slug}: {e}", file=sys.stderr)
+        for ev in inc.get("events", []):
+            claim_ids = by_field.get(ev.get("claim_field"))
+            if not claim_ids:
+                report["claims"]["failed"].append({"incident": slug, "field": "event:" + ev.get("label", "?"), "error": "no claim for event's claim_field"})
+                continue
+            if (ev["occurred_on"], ev["kind"], ev["label"]) in existing_events:
+                continue
+            st, b = api.call("POST", "/admin/events", {
+                "incident_slug": slug, "occurred_on": ev["occurred_on"], "precision": ev.get("precision", "day"),
+                "kind": ev["kind"], "label": ev["label"], "claim_id": claim_ids[-1], "batch_label": BATCH,
+            })
+            if st != 200:
+                report["events"]["failed"].append({"incident": slug, "label": ev["label"], "status": st, "detail": b.get("details") or b})
+                print(f"  FAIL event {slug} {ev['label']}: {st} {json.dumps(b.get('details') or b)[:300]}", file=sys.stderr)
+            else:
+                report["events"]["created"] += 1
 
     # ---- cases: links to incidents, refs, publish ----
     for c in cases:
@@ -365,9 +506,10 @@ def main():
         st, b = api.call("PUT", f"/admin/cases/{c['slug']}/links", {"sources": docs, "incidents": inc_links, "reason": "seed links", "batch_label": BATCH})
         if st != 200:
             fail("cases", c["slug"] + " (links)", st, b)
-        # citable: claims of linked incidents that rest on one of this case's sources
+        # citable: this case's own direct claims, plus claims of linked incidents that rest
+        # on one of this case's sources
         case_src = {sid.get(x) for x in c.get("sources", [])}
-        refs = []
+        refs = list(case_claim_ids.get(c["slug"], []))
         for s in c.get("related_incidents", []):
             ic = inc_claims.get(s)
             if not ic:
