@@ -653,3 +653,92 @@ export async function deleteEvent(env, id) {
   await env.DB.prepare("DELETE FROM events WHERE id = ?").bind(id).run();
   return { id, deleted: true, event: e };
 }
+
+// ---------- v2: incident classification, tactics, countries ----------
+
+export const INCIDENT_V2_FIELDS = ["level", "tactic_primary", "leader_slug", "issue_of_the_day", "outcome", "outcome_on", "outcome_note", "granularity", "country", "jurisdiction"];
+
+// POST /admin/incidents/<slug>/fields: only the v2 classification fields,
+// through upsertRecord so a revision and (when published) a ledger entry
+// are appended like every other record write.
+export async function setIncidentFields(env, slug, body) {
+  const inc = await getRecord(env, "incident", slug);
+  if (!inc) throw new ValidationError({ error: "not_found" }, 404);
+  const patch = { reason: body.reason, is_correction: body.is_correction };
+  let n = 0;
+  for (const k of INCIDENT_V2_FIELDS) {
+    if (Object.prototype.hasOwnProperty.call(body, k)) { patch[k] = body[k]; n++; }
+  }
+  if (!n) throw new ValidationError({ error: "nothing_to_update", fields: INCIDENT_V2_FIELDS });
+  const r = await upsertRecord(env, "incident", slug, patch);
+  if (Array.isArray(body.tactics)) await setIncidentTactics(env, slug, { tactics: body.tactics, primary: body.tactic_primary, reason: body.reason, _skipRevision: true });
+  return r;
+}
+
+// PUT /admin/incidents/<slug>/tactics {primary, tactics:[slug...], reason}
+export async function setIncidentTactics(env, slug, body) {
+  const inc = await getRecord(env, "incident", slug);
+  if (!inc) throw new ValidationError({ error: "not_found" }, 404);
+  const primary = body.primary || inc.tactic_primary;
+  const list = [...new Set([...(Array.isArray(body.tactics) ? body.tactics : []), ...(primary ? [primary] : [])])];
+  if (!list.length) throw new ValidationError({ field: "tactics", error: "required" });
+  if (!body.reason && !body._skipRevision) throw new ValidationError({ field: "reason", error: "required" });
+  const known = new Set((await all(env, "SELECT slug FROM tactics")).map((t) => t.slug));
+  const bad = list.filter((t) => !known.has(t));
+  if (bad.length) throw new ValidationError({ field: "tactics", error: "unknown_tactic", values: bad, allowed: [...known] });
+  const stmts = [env.DB.prepare("DELETE FROM incident_tactics WHERE incident_id = ?").bind(inc.id)];
+  for (const t of list) stmts.push(env.DB.prepare("INSERT INTO incident_tactics (incident_id, tactic_slug, is_primary) VALUES (?,?,?)").bind(inc.id, t, t === primary ? 1 : 0));
+  if (!body._skipRevision) {
+    const revision = (inc.revision || 1) + 1;
+    const now = isoNow();
+    stmts.push(env.DB.prepare("UPDATE incidents SET tactic_primary = ?, revision = ?, updated_at = ? WHERE id = ?").bind(primary || null, revision, now, inc.id));
+    stmts.push(env.DB.prepare("INSERT INTO revisions (record_type, record_id, revision, body_json, reason, is_correction, created_at) VALUES ('incident', ?, ?, ?, ?, 0, ?)")
+      .bind(inc.id, revision, JSON.stringify({ tactics: list, tactic_primary: primary }), body.reason, now));
+    if (inc.pub_state === "published") {
+      stmts.push(env.DB.prepare("INSERT INTO changes (changed_at, kind, record_type, record_id, reason, is_correction) VALUES (?, 'record_revised', 'incident', ?, ?, 0)").bind(now, inc.id, body.reason));
+    }
+  }
+  await env.DB.batch(stmts);
+  return { id: inc.id, slug, tactic_primary: primary || null, tactics: list };
+}
+
+// POST /admin/countries/<iso2>/press-freedom {rank, year, source_url, source_id?, note?}
+export async function setCountryPressFreedom(env, iso2, body) {
+  const cc = String(iso2 || "").toUpperCase();
+  const c = await first(env, "SELECT iso2 FROM countries WHERE iso2 = ?", cc);
+  if (!c) throw new ValidationError({ error: "unknown_country", iso2: cc }, 404);
+  const rank = parseInt(body.rank, 10);
+  const year = parseInt(body.year, 10);
+  const errors = [];
+  if (!(rank >= 1 && rank <= 250)) errors.push({ field: "rank", error: "integer_1_to_250" });
+  if (!(year >= 2002 && year <= 2100)) errors.push({ field: "year", error: "year" });
+  if (!body.source_url || !/^https:\/\//.test(body.source_url)) errors.push({ field: "source_url", error: "https_url_required" });
+  let sourceId = body.source_id ? parseInt(body.source_id, 10) : null;
+  if (sourceId && !(await first(env, "SELECT id FROM sources WHERE id = ?", sourceId))) errors.push({ field: "source_id", error: "unknown_source" });
+  if (errors.length) throw new ValidationError(errors);
+  if (!sourceId) {
+    const s = await first(env, "SELECT id FROM sources WHERE url = ?", body.source_url);
+    sourceId = s ? s.id : null;
+  }
+  await env.DB.prepare("UPDATE countries SET press_freedom_rank_latest = ?, press_freedom_rank_year = ?, press_freedom_source_url = ?, press_freedom_source_id = ?, notes = COALESCE(?, notes), updated_at = ? WHERE iso2 = ?")
+    .bind(rank, year, body.source_url, sourceId, body.note || null, isoNow(), cc).run();
+  return first(env, "SELECT * FROM countries WHERE iso2 = ?", cc);
+}
+
+// PUT /admin/tactics/<slug> {name?, definition?, notes?, first_recorded_on?, reason}
+export async function updateTactic(env, slug, body) {
+  const t = await first(env, "SELECT * FROM tactics WHERE slug = ?", slug);
+  if (!t) throw new ValidationError({ error: "not_found" }, 404);
+  const next = { name: body.name ?? t.name, definition: body.definition ?? t.definition, notes: body.notes ?? t.notes, first_recorded_on: body.first_recorded_on ?? t.first_recorded_on };
+  const errors = [];
+  if (String(next.definition).trim().split(/\s+/).length > 80) errors.push({ field: "definition", error: "max_80_words" });
+  for (const k of ["name", "definition", "notes"]) {
+    const hits = lintText(next[k] || "");
+    if (hits.length) errors.push({ field: k, error: "voice_lint", hits: hits.map((h) => h.phrase) });
+  }
+  if (next.first_recorded_on && !DATE_RE.test(next.first_recorded_on)) errors.push({ field: "first_recorded_on", error: "date_format" });
+  if (errors.length) throw new ValidationError(errors);
+  await env.DB.prepare("UPDATE tactics SET name = ?, definition = ?, notes = ?, first_recorded_on = ?, updated_at = ? WHERE slug = ?")
+    .bind(next.name, next.definition, next.notes || null, next.first_recorded_on || null, isoNow(), slug).run();
+  return first(env, "SELECT * FROM tactics WHERE slug = ?", slug);
+}

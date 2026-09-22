@@ -5,19 +5,24 @@
 // does not permit a call gets 403, logged to admin_denials (401s are never
 // logged). Every successful write adds an admin_writes row.
 //
-// Scopes: triage (queues, submissions to rejected/hold, link checks and
-// snapshots), desk (triage plus sources and News Desk notes, pause only),
-// publish (all content, accepting submissions, resume), operator (export,
-// rollup, health, changed-urls, indexnow; no content writes).
+// Scopes (v2): triage (queues, submissions to rejected/hold, link checks and
+// snapshots, coverage show/hide), publish (all content, accepting
+// submissions, coverage attached to incidents), operator (export, rollup,
+// health, changed-urls, indexnow, cron runs, search rebuild, event delete).
+// The desk scope and the News Desk pipeline are retired (brief 2026-09-22):
+// desk tokens are no longer accepted and /admin/desk/* and /admin/notes/*
+// answer 410. The news_desk_notes table is kept.
 
 import { sha256Hex, isoNow, isoDate } from "./util.js";
 import { all, first, countsForHealth, getLastExport } from "./db.js";
 import {
   normalizeType, upsertRecord, publishRecord, withdrawRecord, replaceIncidentLinks, replaceCaseLinks,
   replaceSimpleSources, createClaim, supersedeClaim, setClaimStatus, createEvent, listEvents, deleteEvent, ValidationError, TYPES,
+  setIncidentFields, setIncidentTactics, setCountryPressFreedom, updateTactic,
 } from "./records.js";
+import { runCoverage, listCoverage, updateCoverageItem, getFeeds, setFeeds, lastCoverageRun } from "./coverage.js";
+import { rebuildSearchIndex } from "./search.js";
 import { upsertSource, dueSources, recordChecks, setWayback, linkIntegrity } from "./linkstate.js";
-import { createNote, listNotesByState, publishHeldNote, revertNote, setDeskPaused, deskPaused } from "./newsdesk.js";
 import { runExport } from "./export.js";
 import { rollupRequests } from "./cron.js";
 import { pingIndexNow } from "./indexnow.js";
@@ -25,15 +30,14 @@ import { hashIp } from "./logger.js";
 import { SITE_ORIGIN } from "./site.js";
 
 const RATE_LIMIT_PER_MINUTE = 120;
-const SCOPED = new Set(["triage", "desk", "publish"]);
+const SCOPED = new Set(["triage", "publish"]);
 const SUBMISSION_STATUSES = ["pending", "hold", "accepted", "rejected"];
 const CLASSIFICATIONS = ["spam", "injection", "off_topic", "agrees", "contradicts", "new_information", "tip_in_scope", "tip_out_of_scope"];
 
-const TRIAGE_UP = ["triage", "desk", "publish"];
-const DESK_UP = ["desk", "publish"];
+const TRIAGE_UP = ["triage", "publish"];
 const PUBLISH = ["publish"];
 const OPERATOR = ["operator"];
-const ANY = ["triage", "desk", "publish", "operator"];
+const ANY = ["triage", "publish", "operator"];
 
 function adminJson(obj, status = 200) {
   return new Response(JSON.stringify(obj, null, 2), {
@@ -117,7 +121,7 @@ async function health(env) {
   return {
     generated_at: isoNow(), counts, last_export: lastExport, admin_denials: denials,
     link_integrity: await linkIntegrity(env), past_next_review_on: overdue,
-    desk_paused: await deskPaused(env),
+    coverage_last_run: await lastCoverageRun(env),
   };
 }
 
@@ -132,9 +136,8 @@ async function changedUrls(env, since) {
       urls.add(`${SITE_ORIGIN}${prefix.replace(/\/$/, "")}`);
     }
   }
-  const notes = await all(env, "SELECT slug FROM news_desk_notes WHERE state = 'published' AND published_at >= ?", cutoff);
-  for (const n of notes) urls.add(`${SITE_ORIGIN}/news/${n.slug}`);
-  if (notes.length) urls.add(`${SITE_ORIGIN}/news`);
+  const cov = await first(env, "SELECT COUNT(*) AS n FROM coverage_items WHERE state = 'shown' AND fetched_at >= ?", cutoff);
+  if (cov && cov.n) urls.add(`${SITE_ORIGIN}/coverage`);
   const claims = await all(env, "SELECT id FROM claims WHERE created_at >= ?", cutoff);
   for (const c of claims) urls.add(`${SITE_ORIGIN}/claims/${c.id}`);
   if (urls.size) {
@@ -175,7 +178,7 @@ async function updateSubmission(env, id, body, scope) {
 function routes() {
   return [
     ["GET", /^\/admin\/health$/, ANY, async ({ env }) => ({ result: await health(env) })],
-    ["GET", /^\/admin\/changed-urls$/, ["operator", "desk", "publish"], async ({ env, url }) => ({ result: await changedUrls(env, url.searchParams.get("since")) })],
+    ["GET", /^\/admin\/changed-urls$/, ["operator", "publish"], async ({ env, url }) => ({ result: await changedUrls(env, url.searchParams.get("since")) })],
     ["GET", /^\/admin\/writes$/, PUBLISH, async ({ env, url }) => {
       const since = url.searchParams.get("since") || "1970-01-01";
       const batch = url.searchParams.get("batch");
@@ -247,7 +250,50 @@ function routes() {
       const r = await deleteEvent(env, parseInt(m[1], 10));
       return { result: r, write: { record_type: "event", record_id: r.id, summary: `event ${r.id} deleted` } };
     }],
-    ["POST", /^\/admin\/sources$/, DESK_UP, async ({ env, body }) => {
+    ["GET", /^\/admin\/sources$/, TRIAGE_UP, async ({ env, url }) => {
+      const limit = Math.min(parseInt(url.searchParams.get("limit") || "1000", 10) || 1000, 5000);
+      const offset = parseInt(url.searchParams.get("offset") || "0", 10) || 0;
+      const state = url.searchParams.get("link_state");
+      const rows = state
+        ? await all(env, "SELECT * FROM sources WHERE link_state = ? ORDER BY id LIMIT ? OFFSET ?", state, limit, offset)
+        : await all(env, "SELECT * FROM sources ORDER BY id LIMIT ? OFFSET ?", limit, offset);
+      const total = await first(env, "SELECT COUNT(*) AS n FROM sources");
+      return { result: { total: total ? total.n : 0, count: rows.length, offset, sources: rows } };
+    }],
+    ["POST", /^\/admin\/incidents\/([a-z0-9-]+)\/fields$/, PUBLISH, async ({ env, body }, m) => {
+      const r = await setIncidentFields(env, m[1], body);
+      return { result: r, write: { record_type: "incident", record_id: r.id, batch_label: body.batch_label, summary: `v2 fields for incident ${m[1]} r${r.revision}` } };
+    }],
+    ["PUT", /^\/admin\/incidents\/([a-z0-9-]+)\/tactics$/, PUBLISH, async ({ env, body }, m) => {
+      const r = await setIncidentTactics(env, m[1], body);
+      return { result: r, write: { record_type: "incident", record_id: r.id, batch_label: body.batch_label, summary: `tactics for incident ${m[1]}: ${r.tactics.join(", ")}` } };
+    }],
+    ["GET", /^\/admin\/countries$/, ANY, async ({ env }) => ({ result: { countries: await all(env, "SELECT * FROM countries ORDER BY iso2") } })],
+    ["POST", /^\/admin\/countries\/([A-Za-z]{2})\/press-freedom$/, PUBLISH, async ({ env, body }, m) => {
+      const r = await setCountryPressFreedom(env, m[1], body);
+      return { result: r, write: { record_type: "country", summary: `RSF rank ${r.iso2} ${r.press_freedom_rank_latest} (${r.press_freedom_rank_year})` } };
+    }],
+    ["GET", /^\/admin\/tactics$/, ANY, async ({ env }) => ({ result: { tactics: await all(env, "SELECT * FROM tactics ORDER BY sort") } })],
+    ["PUT", /^\/admin\/tactics\/([a-z_]+)$/, PUBLISH, async ({ env, body }, m) => {
+      const r = await updateTactic(env, m[1], body);
+      return { result: r, write: { record_type: "tactic", summary: `tactic ${m[1]} updated${body.reason ? `: ${body.reason}` : ""}` } };
+    }],
+    ["GET", /^\/admin\/coverage$/, TRIAGE_UP, async ({ env, url }) => {
+      const rows = await listCoverage(env, { state: url.searchParams.get("state") || "all", limit: Math.min(parseInt(url.searchParams.get("limit") || "200", 10) || 200, 1000), offset: parseInt(url.searchParams.get("offset") || "0", 10) || 0 });
+      return { result: { count: rows.length, items: rows } };
+    }],
+    ["POST", /^\/admin\/coverage\/(\d+)$/, TRIAGE_UP, async ({ env, body, auth }, m) => {
+      const r = await updateCoverageItem(env, parseInt(m[1], 10), body, auth.scope);
+      return { result: r, write: { record_type: "coverage_item", record_id: r.id, summary: `coverage ${r.id} ${r.state}${body.incident_slug !== undefined ? ` incident=${body.incident_slug || "none"}` : ""}` } };
+    }],
+    ["GET", /^\/admin\/coverage\/feeds$/, ANY, async ({ env }) => ({ result: { feeds: await getFeeds(env) } })],
+    ["PUT", /^\/admin\/coverage\/feeds$/, OPERATOR, async ({ env, body }) => {
+      const r = await setFeeds(env, body.feeds);
+      return { result: r, write: { record_type: "coverage_feeds", summary: `${r.count} coverage feeds` } };
+    }],
+    ["POST", /^\/admin\/cron\/coverage$/, OPERATOR, async ({ env, body }) => ({ result: await runCoverage(env, { maxNew: Math.min(parseInt(body.max_new || "40", 10) || 40, 80), dryRun: !!body.dry_run }) })],
+    ["POST", /^\/admin\/search\/rebuild$/, OPERATOR, async ({ env }) => ({ result: await rebuildSearchIndex(env) })],
+    ["POST", /^\/admin\/sources$/, PUBLISH, async ({ env, body }) => {
       const r = await upsertSource(env, body);
       return { result: r, write: r.created ? { record_type: "source", record_id: r.id, batch_label: body.batch_label, summary: `source ${r.id}` } : null };
     }],
@@ -259,23 +305,6 @@ function routes() {
     ["POST", /^\/admin\/sources\/(\d+)\/wayback$/, TRIAGE_UP, async ({ env, body }, m) => {
       const r = await setWayback(env, parseInt(m[1], 10), body);
       return { result: r, write: { record_type: "source", record_id: r.id, summary: r.wayback_url ? "snapshot set" : "archive attempt counted" } };
-    }],
-    ["POST", /^\/admin\/desk\/notes$/, DESK_UP, async ({ env, body }) => {
-      const r = await createNote(env, body);
-      return { result: r, write: { record_type: "news_desk_note", record_id: r.id, batch_label: body.run_id, summary: `note ${r.slug} ${r.state}` } };
-    }],
-    ["GET", /^\/admin\/desk\/notes$/, DESK_UP, async ({ env, url }) => ({ result: { notes: await listNotesByState(env, url.searchParams.get("state") || "held") } })],
-    ["POST", /^\/admin\/desk\/notes\/(\d+)\/publish$/, DESK_UP, async ({ env }, m) => {
-      const r = await publishHeldNote(env, parseInt(m[1], 10));
-      return { result: r, write: { record_type: "news_desk_note", record_id: r.id, summary: `note ${r.slug} published` } };
-    }],
-    ["POST", /^\/admin\/desk\/notes\/(\d+)\/revert$/, DESK_UP, async ({ env, body }, m) => {
-      const r = await revertNote(env, parseInt(m[1], 10), body);
-      return { result: r, write: { record_type: "news_desk_note", record_id: r.id, summary: `note ${r.slug} reverted: ${body.reason}` } };
-    }],
-    ["POST", /^\/admin\/desk\/pause$/, DESK_UP, async ({ env, body }) => {
-      const r = await setDeskPaused(env, !!body.paused);
-      return { result: r, write: { record_type: "desk", summary: `desk paused=${r.paused}` } };
     }],
     ["GET", /^\/admin\/submissions$/, TRIAGE_UP, async ({ env, url }) => {
       const status = url.searchParams.get("status");
@@ -300,7 +329,6 @@ function routes() {
 
 // Extra scope rules that depend on the body (checked before the handler).
 function bodyScopeDenial(auth, path, body) {
-  if (path === "/admin/desk/pause" && auth.scope === "desk" && !(body && body.paused === true)) return "desk scope may pause but not resume";
   if (/^\/admin\/submissions\/\d+$/.test(path) && auth.scope !== "publish" && body && body.status === "accepted") return `scope ${auth.scope} may set rejected or hold only`;
   return null;
 }
@@ -312,6 +340,9 @@ export async function handleAdminRequest(request, env, ctx, url) {
 
   const path = url.pathname;
   const method = request.method;
+  if (/^\/admin\/(desk|notes)(\/|$)/.test(path)) {
+    return adminJson({ error: "gone", message: "The News Desk pipeline and its endpoints were retired on 2026-09-22 (v2). The notes table is kept; recent coverage is collected by the Worker's hourly cron (see /admin/coverage)." }, 410);
+  }
   const table = routes();
   const pathMatches = table.filter(([, re]) => re.test(path));
   if (!pathMatches.length) return adminJson({ error: "not_found", path }, 404);

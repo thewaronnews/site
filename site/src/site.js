@@ -3,7 +3,7 @@
 // no characterizing words outside quotation marks.
 
 export const SITE_NAME = "The War On News";
-export const SITE_SUBTITLE = "A dated record of government actions that limit reporting.";
+export const SITE_SUBTITLE = "How governments have limited journalists, 1900 to today.";
 export const SITE_DESCRIPTOR = SITE_SUBTITLE;
 export const SITE_ORIGIN = "https://thewaronnews.com";
 export const SITE_HOST = "thewaronnews.com";
@@ -29,38 +29,54 @@ export const DATAPACKAGE_NAME = "the-war-on-news";
 export const COPYRIGHT_YEAR = "2026";
 
 // 40-word definition used on the home page, in JSON-LD and in llms.txt.
-export const HOME_DEFINITION = "The War On News is a dated, sourced reference to actions by officials, governments, regulators and legislatures that limit journalists' ability to gather or publish news. It covers the United States first, with incidents from other countries for context.";
+export const HOME_DEFINITION = "The War On News is a dated, sourced record of actions by governments, officials, regulators, courts and legislatures that limited journalists' ability to gather or publish news, from 1900 to today. Browse it by country, by tactic or by time, and compare which governments used the same tactics and what came of them.";
 
 export const HOME_METHOD_LINE = "Each entry states who did what and when, quotes the reason the official gave, and links to the reporting and court records it rests on. Every fact is a claim with a verbatim quotation, a source address, a method and a check date.";
 
 export const HOME_DATA_LINE = "Every page is also published as Markdown (add .md) and JSON (add .json). The full record is a nightly Frictionless Data Package under CC BY 4.0 at /data, and a public MCP server at /mcp lets AI assistants search and fetch it.";
 
-export const META_DESCRIPTION_HOME = "A dated, sourced record of government actions that limit journalists' ability to report. US-first, with global context. Incidents, cases, timeline, data and MCP.";
+export const META_DESCRIPTION_HOME = "A dated, sourced record of how governments have limited journalists since 1900, by country, tactic and era, with outcomes, court cases, data and MCP.";
 
 export const SECTIONS = [
   { label: "Incidents", path: "/incidents" },
+  { label: "Countries", path: "/countries" },
+  { label: "Tactics", path: "/tactics" },
+  { label: "Compare", path: "/compare" },
+  { label: "Eras", path: "/eras" },
   { label: "Timeline", path: "/timeline" },
   { label: "Cases", path: "/cases" },
-  { label: "News Desk", path: "/news" },
-  { label: "Actors", path: "/actors" },
-  { label: "Outlets", path: "/outlets" },
+  { label: "Recent coverage", path: "/coverage" },
   { label: "Glossary", path: "/glossary" },
-  { label: "Data", path: "/data" },
-  { label: "Methodology", path: "/methodology" },
+  { label: "Search", path: "/search" },
   { label: "About", path: "/about" },
 ];
 
+// Footer (brief 2026-09-22, "Copy rules").
 export const FOOTER_LINKS = [
-  { label: "About", path: "/about" },
-  { label: "Methodology", path: "/methodology" },
-  { label: "Editorial policy", path: "/editorial-policy" },
+  { label: "Terms of use", path: "/terms" },
+  { label: "Privacy", path: "/privacy" },
   { label: "Corrections", path: "/corrections" },
-  { label: "Changes", path: "/changes" },
+  { label: "Sources and standards", path: "/sources-and-standards" },
+  { label: "Contact", path: "/about#contact" },
   { label: "Data", path: "/data" },
-  { label: "Feeds", path: "/feeds" },
   { label: "MCP", path: "/mcp" },
-  { label: "llms.txt", path: "/llms.txt" },
+  { label: "Feeds", path: "/feeds" },
 ];
+
+export const CONTINENTS = {
+  africa: "Africa",
+  asia: "Asia",
+  europe: "Europe",
+  "north-america": "North America",
+  "south-america": "South America",
+  oceania: "Oceania",
+  antarctica: "Antarctica",
+};
+
+// Tier of government that acted (v2; brief 2026-09-22).
+export const LEVEL_LABELS = { national: "National", state_or_province: "State or province", municipal: "Municipal", supranational: "Supranational" };
+
+export const OUTCOME_LABELS = { reversed: "Reversed", upheld: "Upheld by a court", sustained: "Sustained", ongoing: "Ongoing", unknown: "Unknown" };
 
 // Human-readable labels for enum values (display only; data keeps the enum).
 export const INCIDENT_TYPE_LABELS = {
@@ -95,22 +111,22 @@ export const CASE_STATUS_LABELS = {
   withdrawn: "withdrawn",
 };
 
-export const LEVEL_LABELS = { federal: "Federal", state: "State", local: "Local", foreign: "Foreign" };
-
+// Link states stay in the data and the .json twins; public pages show only
+// the source and, when the original no longer resolves, the archived copy.
 export const LINK_STATE_LABELS = {
   unchecked: "unchecked",
-  live: "live",
+  live: "resolves",
   paywalled: "subscription",
-  bot_blocked: "live, blocks automated checks",
-  dead: "offline",
+  bot_blocked: "resolves, refuses automated checks",
+  dead: "no longer resolves",
   redirected: "moved",
 };
 
 export const COUNTRY_NAMES = {
   US: "United States", HU: "Hungary", IN: "India", IL: "Israel", PS: "Palestine", RU: "Russia",
-  SV: "El Salvador", HK: "Hong Kong", TR: "Turkiye", GB: "United Kingdom", CA: "Canada",
+  SV: "El Salvador", HK: "Hong Kong", TR: "Türkiye", GB: "United Kingdom", CA: "Canada",
 };
 
 export const SUBDIVISION_NAMES = { "US-LA": "Louisiana", "US-FL": "Florida", "US-DC": "District of Columbia" };
 
-export const NEWS_PAGE_SIZE = 30;
+export const COVERAGE_PAGE_DAYS = 60;
