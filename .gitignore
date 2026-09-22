@@ -3,3 +3,5 @@ admin-token-*.txt
 secrets.env
 __pycache__/
 site/tools/__pycache__/
+*.pem
+*.bundle
