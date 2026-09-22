@@ -8,7 +8,7 @@ HERE="$(cd "$(dirname "$0")" && pwd)"
 . "$HERE/_secrets.sh"
 CLIENT_NAME="${1:-}"
 [[ "$CLIENT_NAME" =~ ^[a-zA-Z0-9_-]+$ ]] || { echo "usage: issue-mcp-token.sh <client_name> ([a-zA-Z0-9_-]+)" >&2; exit 1; }
-OUT_DIR="${OUT_DIR:-$HOME/.twon}"
+OUT_DIR="${OUT_DIR:-$([ -d /home/claude/.twon ] && echo /home/claude/.twon || echo "$HOME/.twon")}"
 mkdir -p "$OUT_DIR"; chmod 700 "$OUT_DIR"
 KV_ID=$(kv_id)
 [ -n "$KV_ID" ] || { echo "KV namespace $KV_NAME not found" >&2; exit 1; }

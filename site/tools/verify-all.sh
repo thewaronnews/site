@@ -11,11 +11,16 @@ UA="twon-verify/1.0"
 FAILS=0
 row() { printf '%-4s %-48s %-40s %8s\n' "$1" "$2" "$3" "$4"; }
 get() {
-  local path="$1" want="${2:-200}" out
-  out=$(curl -sS -m 30 -A "$UA" -o /tmp/twon-verify.$$ -w '%{http_code} %{content_type} %{size_download}' "$BASE$path")
-  set -- $out
-  row "$1" "$path" "$2" "$3"
-  [ "$1" = "$want" ] || FAILS=$((FAILS+1))
+  local path="$1" want="${2:-200}" out code ctype size i
+  for i in 1 2 3 4; do
+    out=$(curl -sS -m 30 -A "$UA" -o /tmp/twon-verify.$$ -w '%{http_code}|%{content_type}|%{size_download}' "$BASE$path" 2>/dev/null)
+    code=${out%%|*}
+    [ -n "$code" ] && [ "$code" != "000" ] && break
+    sleep 2
+  done
+  IFS='|' read -r code ctype size <<<"$out"
+  row "${code:-000}" "$path" "${ctype:--}" "${size:-0}"
+  [ "$code" = "$want" ] || FAILS=$((FAILS+1))
 }
 PAGES="/ /incidents /incidents/$INC /actors /actors/donald-trump /outlets /outlets/cnn /journalists /cases /timeline /timeline/2025 /timeline/actor/donald-trump /timeline/type/access_ban /timeline/country/us /news /glossary /glossary/hard-pass /claims/1 /sources/1 /changes /corrections /corrections/log /about /methodology /editorial-policy /data /feeds /mcp /search"
 echo "== pages in three formats =="

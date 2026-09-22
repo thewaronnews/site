@@ -1,0 +1,462 @@
+{
+ "sources": {
+  "ok": 99,
+  "failed": []
+ },
+ "outlets": {
+  "published": [
+   "cnn",
+   "ms-now",
+   "politico",
+   "associated-press",
+   "wall-street-journal",
+   "npr",
+   "pbs",
+   "voice-of-america",
+   "abc-news",
+   "cbs-news",
+   "military-times",
+   "el-faro",
+   "apple-daily",
+   "next-magazine",
+   "the-nation",
+   "bbc",
+   "indian-express",
+   "hindustan-times"
+  ],
+  "failed": []
+ },
+ "actors": {
+  "published": [
+   "donald-trump",
+   "white-house-press-office",
+   "white-house-correspondents-association",
+   "jacqui-heinrich",
+   "eugene-daniels",
+   "taylor-budowich",
+   "trevor-mcfadden",
+   "timothy-j-kelly",
+   "cornelia-pillard",
+   "gregory-katsas",
+   "neomi-rao",
+   "pete-hegseth",
+   "us-department-of-defense",
+   "brendan-carr",
+   "federal-communications-commission",
+   "pam-bondi",
+   "us-department-of-justice",
+   "kari-lake",
+   "us-agency-for-global-media",
+   "louisiana-legislature",
+   "john-w-degravelles",
+   "ron-desantis",
+   "richard-nixon",
+   "charles-colson",
+   "barack-obama",
+   "viktor-orban",
+   "hungarian-national-assembly",
+   "adani-group",
+   "government-of-israel",
+   "state-duma",
+   "vladimir-putin",
+   "nayib-bukele",
+   "hong-kong-department-of-justice",
+   "government-of-turkiye",
+   "congress-of-the-united-states"
+  ],
+  "failed": []
+ },
+ "journalists": {
+  "published": [
+   "betsy-klein",
+   "akayla-gardner",
+   "cheyenne-haslett",
+   "jim-acosta",
+   "jimmy-lai",
+   "mark-lowen",
+   "ravi-nair"
+  ],
+  "failed": []
+ },
+ "cases": {
+  "published": [],
+  "draft": [
+   {
+    "slug": "sherrill-v-knight-1977",
+    "reason": "no current claim on the case or a linked incident rests on the case's sources"
+   },
+   {
+    "slug": "cnn-v-trump-2018",
+    "reason": "no current claim on the case or a linked incident rests on the case's sources"
+   },
+   {
+    "slug": "ap-v-budowich-2025",
+    "reason": "no current claim on the case or a linked incident rests on the case's sources"
+   }
+  ],
+  "failed": [
+   {
+    "slug": "cnn-msnow-politico-v-trump-2026",
+    "status": 422,
+    "detail": [
+     {
+      "field": "holding",
+      "error": "voice_lint",
+      "hits": [
+       "retaliation",
+       "unconstitutional"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "incidents": {
+  "published": [
+   "2026-white-house-bans-cnn-msnow-politico",
+   "2025-pentagon-press-corps-forfeits-badges",
+   "2025-whca-loses-control-of-press-pool",
+   "2025-fcc-pressure-precedes-kimmel-suspension",
+   "2025-paramount-cbs-settle-60-minutes-suit",
+   "2025-doj-rescinds-media-subpoena-guidelines",
+   "2026-israel-maintains-ban-on-foreign-press-access-to-gaza"
+  ],
+  "draft": [
+   {
+    "slug": "2025-usagm-moves-to-shut-down-voice-of-america",
+    "reason": "no seed claim carries a verbatim evidence quote"
+   },
+   {
+    "slug": "2018-white-house-revokes-acosta-press-pass",
+    "reason": "no seed claim carries a verbatim evidence quote"
+   },
+   {
+    "slug": "2024-louisiana-enacts-police-buffer-zone-law",
+    "reason": "no seed claim carries a verbatim evidence quote"
+   },
+   {
+    "slug": "2025-florida-halo-law-takes-effect",
+    "reason": "no seed claim carries a verbatim evidence quote"
+   }
+  ],
+  "failed": [
+   {
+    "slug": "2025-white-house-bars-ap-gulf-of-america",
+    "status": 422,
+    "detail": [
+     {
+      "field": "what_happened",
+      "error": "voice_lint",
+      "hits": [
+       "retaliation"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "2025-pentagon-issues-new-press-credentialing-rules",
+    "status": 422,
+    "detail": [
+     {
+      "field": "what_happened",
+      "error": "voice_lint",
+      "hits": [
+       "punish"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "2025-trump-order-ends-cpb-funding-npr-pbs",
+    "status": 422,
+    "detail": [
+     {
+      "field": "stated_justification",
+      "error": "voice_lint",
+      "hits": [
+       "biased"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "2025-federal-judge-blocks-louisiana-buffer-law",
+    "status": 422,
+    "detail": [
+     {
+      "field": "summary",
+      "error": "voice_lint",
+      "hits": [
+       "chilling"
+      ]
+     },
+     {
+      "field": "what_happened",
+      "error": "voice_lint",
+      "hits": [
+       "straightforward"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "1971-nixon-white-house-compiles-enemies-list",
+    "status": 422,
+    "detail": [
+     {
+      "field": "unknowns",
+      "error": "voice_lint",
+      "hits": [
+       "targeted"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "2013-obama-doj-charges-eight-under-espionage-act",
+    "status": 422,
+    "detail": [
+     {
+      "field": "what_happened",
+      "error": "voice_lint",
+      "hits": [
+       "chilling",
+       "chilling effect"
+      ]
+     },
+     {
+      "field": "effect_on_reporting",
+      "error": "voice_lint",
+      "hits": [
+       "chilling",
+       "chilling effect"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "2023-hungary-sovereignty-protection-act",
+    "status": 422,
+    "detail": [
+     {
+      "field": "what_happened",
+      "error": "voice_lint",
+      "hits": [
+       "harass"
+      ]
+     },
+     {
+      "field": "effect_on_reporting",
+      "error": "voice_lint",
+      "hits": [
+       "censorship"
+      ]
+     },
+     {
+      "field": "title",
+      "error": "voice_lint",
+      "hits": [
+       "targeting"
+      ]
+     },
+     {
+      "field": "title",
+      "error": "voice_lint",
+      "hits": [
+       "targeting"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "2026-india-journalist-sentenced-adani-defamation",
+    "status": 422,
+    "detail": [
+     {
+      "field": "what_happened",
+      "error": "voice_lint",
+      "hits": [
+       "regime"
+      ]
+     },
+     {
+      "field": "effect_on_reporting",
+      "error": "voice_lint",
+      "hits": [
+       "censorship"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "2026-russia-new-law-targets-exiled-journalists-assets",
+    "status": 422,
+    "detail": [
+     {
+      "field": "what_happened",
+      "error": "voice_lint",
+      "hits": [
+       "targeting"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "2026-el-salvador-freezes-el-faro-shareholder-assets",
+    "status": 422,
+    "detail": [
+     {
+      "field": "summary",
+      "error": "voice_lint",
+      "hits": [
+       "harassment"
+      ]
+     },
+     {
+      "field": "what_happened",
+      "error": "voice_lint",
+      "hits": [
+       "harassment"
+      ]
+     },
+     {
+      "field": "effect_on_reporting",
+      "error": "voice_lint",
+      "hits": [
+       "harassment"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "2025-hong-kong-convicts-jimmy-lai-under-national-security-law",
+    "status": 422,
+    "detail": [
+     {
+      "field": "summary",
+      "error": "voice_lint",
+      "hits": [
+       "targeted"
+      ]
+     },
+     {
+      "field": "effect_on_reporting",
+      "error": "voice_lint",
+      "hits": [
+       "censorship"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "2025-turkiye-crackdown-on-journalists-covering-protests",
+    "status": 422,
+    "detail": [
+     {
+      "field": "what_happened",
+      "error": "voice_lint",
+      "hits": [
+       "crackdown"
+      ]
+     },
+     {
+      "field": "stated_justification",
+      "error": "voice_lint",
+      "hits": [
+       "crackdown on",
+       "crackdown"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "claims": {
+  "created": 12,
+  "existing": 0,
+  "skipped_no_quote": 32,
+  "failed": []
+ },
+ "glossary": {
+  "published": [
+   "hard-pass",
+   "day-pass",
+   "press-pool",
+   "pool-report",
+   "whca",
+   "sherrill-v-knight-standard",
+   "espionage-act",
+   "slapp",
+   "anti-slapp",
+   "shield-law",
+   "foia",
+   "credentialing",
+   "viewpoint-discrimination",
+   "public-forum-doctrine",
+   "corporation-for-public-broadcasting",
+   "fcc-news-distortion-policy",
+   "gag-order",
+   "national-security-law-hong-kong",
+   "foreign-agent-law",
+   "embed",
+   "actual-malice",
+   "chilling-effect",
+   "subpoena",
+   "leak-investigation",
+   "background-and-on-background"
+  ],
+  "failed": [
+   {
+    "slug": "prior-restraint",
+    "status": 422,
+    "detail": [
+     {
+      "field": "definition",
+      "error": "voice_lint",
+      "hits": [
+       "unconstitutional"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "access-journalism",
+    "status": 422,
+    "detail": [
+     {
+      "field": "definition",
+      "error": "voice_lint",
+      "hits": [
+       "critics say"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "slug_map": {
+  "white-house-bans-cnn-msnow-politico": "2026-white-house-bans-cnn-msnow-politico",
+  "white-house-bars-ap-gulf-of-america": "2025-white-house-bars-ap-gulf-of-america",
+  "pentagon-issues-new-press-credentialing-rules": "2025-pentagon-issues-new-press-credentialing-rules",
+  "pentagon-press-corps-forfeits-badges": "2025-pentagon-press-corps-forfeits-badges",
+  "whca-loses-control-of-press-pool": "2025-whca-loses-control-of-press-pool",
+  "fcc-pressure-precedes-kimmel-suspension": "2025-fcc-pressure-precedes-kimmel-suspension",
+  "paramount-cbs-settle-60-minutes-suit": "2025-paramount-cbs-settle-60-minutes-suit",
+  "trump-order-ends-cpb-funding-npr-pbs": "2025-trump-order-ends-cpb-funding-npr-pbs",
+  "usagm-moves-to-shut-down-voice-of-america": "2025-usagm-moves-to-shut-down-voice-of-america",
+  "doj-rescinds-media-subpoena-guidelines": "2025-doj-rescinds-media-subpoena-guidelines",
+  "white-house-revokes-acosta-press-pass": "2018-white-house-revokes-acosta-press-pass",
+  "louisiana-enacts-police-buffer-zone-law": "2024-louisiana-enacts-police-buffer-zone-law",
+  "federal-judge-blocks-louisiana-buffer-law": "2025-federal-judge-blocks-louisiana-buffer-law",
+  "florida-halo-law-takes-effect": "2025-florida-halo-law-takes-effect",
+  "nixon-white-house-compiles-enemies-list": "1971-nixon-white-house-compiles-enemies-list",
+  "obama-doj-charges-eight-under-espionage-act": "2013-obama-doj-charges-eight-under-espionage-act",
+  "hungary-sovereignty-protection-act": "2023-hungary-sovereignty-protection-act",
+  "india-journalist-sentenced-adani-defamation": "2026-india-journalist-sentenced-adani-defamation",
+  "israel-maintains-ban-on-foreign-press-access-to-gaza": "2026-israel-maintains-ban-on-foreign-press-access-to-gaza",
+  "russia-new-law-targets-exiled-journalists-assets": "2026-russia-new-law-targets-exiled-journalists-assets",
+  "el-salvador-freezes-el-faro-shareholder-assets": "2026-el-salvador-freezes-el-faro-shareholder-assets",
+  "hong-kong-convicts-jimmy-lai-under-national-security-law": "2025-hong-kong-convicts-jimmy-lai-under-national-security-law",
+  "turkiye-crackdown-on-journalists-covering-protests": "2025-turkiye-crackdown-on-journalists-covering-protests"
+ }
+}

@@ -22,7 +22,7 @@ set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 . "$HERE/_secrets.sh"
 
-OUT_DIR="${OUT_DIR:-$HOME/.twon}"
+OUT_DIR="${OUT_DIR:-$([ -d /home/claude/.twon ] && echo /home/claude/.twon || echo "$HOME/.twon")}"
 COPY_DIR="${COPY_DIR:-/mnt/user-data/outputs/twon-tokens}"
 WHAT="${1:-all}"
 case "$WHAT" in triage|desk|publish|operator|all) ;; *) echo "usage: $0 [triage|desk|publish|operator|all]" >&2; exit 1 ;; esac
