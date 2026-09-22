@@ -1,378 +1,310 @@
-// Nightly and manual exports (spec section 9, P0.5). Reads the public
-// tables from D1, builds JSON rows and RFC 4180 CSV for each, writes both
-// to R2 under data/YYYY-MM-DD/ and latest/, and commits the same files to
-// the public GitHub repository. Never touches observations (raw), only its
-// observation_daily rollup; never exports an unpublished question or a note
-// that is not status='published'; never exports ip_hash, ua_raw or
-// reviewer_note from notes.
+// The open knowledge export (spec 4.5): a Frictionless Data Package (v2
+// profile, tabular resources that v1 validators accept) of the public
+// record, written nightly to R2 (data/YYYY-MM-DD/ and latest/, served at
+// /data/...) and, when GITHUB_TOKEN is set, committed to the data repo.
+// Not exported: submissions, instrument tables, questions, mcp_calls,
+// admin_*, revisions. Published rows only, plus withdrawn rows with prose
+// nulled; reverted notes keep revert_reason with a null note.
 
-import { isoNow, isoDate, safeJsonParse, sha256Hex } from "./util.js";
+import { isoNow, isoDate, sha256Hex } from "./util.js";
+import { all, insertExportRow } from "./db.js";
+import { ENUMS } from "./records.js";
+import { commitFilesToGithub, githubConfigured } from "./github.js";
 import {
-  listEntities, listAllClaimsForExport, listAllChangesForExport,
-  listAllObservationDailyForExport, listPublishedQuestionsForExport,
-  listPublishedNotesForExport, listMcpCallsDailyForExport, insertExportRow,
-} from "./db.js";
-import {
-  SITE_NAME, SITE_ORIGIN, DATA_LICENSE, LICENSE_URL, ATTRIBUTION_TEXT, DATA_REPO,
-  PUBLISHER_NAME, AUTHOR_NAME,
+  SITE_NAME, SITE_ORIGIN, SITE_SUBTITLE, DATA_LICENSE, DATA_LICENSE_SPDX, LICENSE_URL, ATTRIBUTION_TEXT,
+  PUBLISHER_NAME, DATAPACKAGE_NAME, DATA_REPO_DEFAULT,
 } from "./site.js";
-import { commitFilesToGithub, fileExistsInRepo } from "./github.js";
 
-const SCHEMA_VERSION = "1";
-const CLAIM_URL_PATTERN = `${SITE_ORIGIN}/claims/{id}`;
+const PROSE = {
+  incidents: ["summary", "what_happened", "stated_justification", "effect_on_reporting", "unknowns"],
+  cases: ["holding", "unknowns"],
+  actors: ["unknowns"],
+  outlets: ["unknowns"],
+  explainers: ["body_md", "dek", "unknowns"],
+  glossary_terms: ["definition", "body_md"],
+};
 
-// ---------- CSV (RFC 4180: header row, UTF-8, \n line endings) ----------
+// table -> {sql, pk, fks, enums, descriptions}
+function tableDefs() {
+  const visible = (t) => `SELECT id FROM ${t} WHERE pub_state IN ('published','withdrawn')`;
+  return {
+    incidents: { sql: `SELECT * FROM incidents WHERE pub_state IN ('published','withdrawn') ORDER BY id`, pk: ["id"], enums: { occurred_on_precision: "precision", level: "level", type: "incident_type", status: "incident_status", pub_state: null }, desc: "One row per recorded incident: a dated government action that limited reporting." },
+    events: { sql: `SELECT * FROM events WHERE pub_state = 'published' AND (incident_id IN (${visible("incidents")}) OR case_id IN (${visible("cases")})) ORDER BY id`, pk: ["id"], fks: [["incident_id", "incidents"], ["case_id", "cases"], ["claim_id", "claims"]], enums: { occurred_on_precision: "precision", kind: "event_kind" }, desc: "Dated developments of an incident or case, each backed by a claim." },
+    actors: { sql: `SELECT * FROM actors WHERE pub_state IN ('published','withdrawn') ORDER BY id`, pk: ["id"], enums: { kind: "actor_kind", body_type: "body_type" }, desc: "Officials and bodies named in incidents. No descriptive or party field by design." },
+    outlets: { sql: `SELECT * FROM outlets WHERE pub_state IN ('published','withdrawn') ORDER BY id`, pk: ["id"], enums: { kind: "outlet_kind" }, desc: "News organizations named in incidents." },
+    journalists: { sql: `SELECT * FROM journalists WHERE pub_state IN ('published','withdrawn') ORDER BY id`, pk: ["id"], fks: [["outlet_id", "outlets"]], desc: "Journalists named in incidents; professional facts only." },
+    cases: { sql: `SELECT * FROM cases WHERE pub_state IN ('published','withdrawn') ORDER BY id`, pk: ["id"], enums: { court_level: "court_level", status: "case_status" }, desc: "Court cases connected to incidents." },
+    sources: { sql: `SELECT id, url, final_url, title, publisher, outlet_id, source_kind, published_on, first_seen, last_checked, http_status, link_state, link_state_since, consecutive_failures, wayback_url, wayback_saved_at, archive_attempts, created_at FROM sources ORDER BY id`, pk: ["id"], enums: { source_kind: "source_kind" }, desc: "Every source the record cites, with its latest link state and Wayback snapshot." },
+    claims: { sql: `SELECT * FROM claims WHERE (subject_type = 'incident' AND subject_id IN (${visible("incidents")})) OR (subject_type = 'case' AND subject_id IN (${visible("cases")})) OR (subject_type = 'actor' AND subject_id IN (${visible("actors")})) OR (subject_type = 'outlet' AND subject_id IN (${visible("outlets")})) OR (subject_type = 'journalist' AND subject_id IN (${visible("journalists")})) OR subject_type = 'event' ORDER BY id`, pk: ["id"], fks: [["source_id", "sources"]], enums: { method: "method", confidence: "confidence" }, desc: "The atomic record: one dated statement with a verbatim quote, source, method and check date. All statuses; claims are append-only." },
+    news_desk_notes: { sql: `SELECT id, slug, title, CASE WHEN state = 'reverted' THEN NULL ELSE note END AS note, word_count, primary_source_id, secondary_source_ids, incident_id, story_date, jev_model, jev_scores, gates_passed, run_id, state, published_at, reverted_at, revert_reason, created_at FROM news_desk_notes WHERE state IN ('published','reverted') ORDER BY id`, pk: ["id"], fks: [["primary_source_id", "sources"]], desc: "News Desk notes, published and reverted (reverted rows keep revert_reason and a null note)." },
+    explainers: { sql: `SELECT * FROM explainers WHERE pub_state IN ('published','withdrawn') ORDER BY id`, pk: ["id"], desc: "Explainer articles." },
+    glossary_terms: { sql: `SELECT * FROM glossary_terms WHERE pub_state IN ('published','withdrawn') ORDER BY id`, pk: ["id"], desc: "Glossary terms and definitions." },
+    incident_actors: { sql: `SELECT * FROM incident_actors WHERE incident_id IN (${visible("incidents")}) AND actor_id IN (${visible("actors")})`, pk: ["incident_id", "actor_id", "role"], fks: [["incident_id", "incidents"], ["actor_id", "actors"]], enums: { role: "actor_role" }, desc: "Which actors took part in which incidents, and in what role." },
+    incident_outlets: { sql: `SELECT * FROM incident_outlets WHERE incident_id IN (${visible("incidents")}) AND outlet_id IN (${visible("outlets")})`, pk: ["incident_id", "outlet_id", "relation"], fks: [["incident_id", "incidents"], ["outlet_id", "outlets"]], enums: { relation: "outlet_relation" }, desc: "Outlets affected by or party to incidents." },
+    incident_journalists: { sql: `SELECT * FROM incident_journalists WHERE incident_id IN (${visible("incidents")}) AND journalist_id IN (${visible("journalists")})`, pk: ["incident_id", "journalist_id", "relation"], fks: [["incident_id", "incidents"], ["journalist_id", "journalists"]], enums: { relation: "journalist_relation" }, desc: "Journalists affected by or party to incidents." },
+    incident_cases: { sql: `SELECT * FROM incident_cases WHERE incident_id IN (${visible("incidents")}) AND case_id IN (${visible("cases")})`, pk: ["incident_id", "case_id", "relation"], fks: [["incident_id", "incidents"], ["case_id", "cases"]], enums: { relation: "case_relation" }, desc: "Cases arising from incidents or cited as precedent." },
+    incident_sources: { sql: `SELECT * FROM incident_sources WHERE incident_id IN (${visible("incidents")})`, pk: ["incident_id", "source_id"], fks: [["incident_id", "incidents"], ["source_id", "sources"]], enums: { role: "source_role" }, desc: "Sources cited by each incident." },
+    incident_related: { sql: `SELECT * FROM incident_related WHERE incident_id IN (${visible("incidents")}) AND related_id IN (${visible("incidents")})`, pk: ["incident_id", "related_id"], fks: [["incident_id", "incidents"]], enums: { relation: "related_relation" }, desc: "Links between related incidents." },
+    case_parties: { sql: `SELECT * FROM case_parties WHERE case_id IN (${visible("cases")})`, pk: ["case_id", "party_type", "party_id", "side"], fks: [["case_id", "cases"]], enums: { party_type: "party_type", side: "side" }, desc: "Parties to each case." },
+    case_sources: { sql: `SELECT * FROM case_sources WHERE case_id IN (${visible("cases")})`, pk: ["case_id", "source_id"], fks: [["case_id", "cases"], ["source_id", "sources"]], enums: { role: "case_source_role" }, desc: "Court documents and reporting for each case." },
+    explainer_sources: { sql: `SELECT * FROM explainer_sources WHERE explainer_id IN (${visible("explainers")})`, pk: ["explainer_id", "source_id"], fks: [["explainer_id", "explainers"], ["source_id", "sources"]], desc: "Sources cited by explainers." },
+    glossary_sources: { sql: `SELECT * FROM glossary_sources WHERE term_id IN (${visible("glossary_terms")})`, pk: ["term_id", "source_id"], fks: [["term_id", "glossary_terms"], ["source_id", "sources"]], desc: "Sources for glossary terms." },
+    changes: { sql: `SELECT * FROM changes ORDER BY id`, pk: ["id"], desc: "The public ledger of new, superseded, disputed and retired claims, publications, revisions, withdrawals, reverted notes and link-state changes." },
+  };
+}
+
+const INT_COLS = new Set(["id", "revision", "sort", "word_count", "surfer_score", "surfer_exception", "http_status", "consecutive_failures", "archive_attempts", "is_correction", "party_id"]);
+const DATETIME_COLS = new Set(["created_at", "updated_at", "published_at", "changed_at", "reverted_at", "first_seen", "last_checked", "link_state_since"]);
+const DATE_COLS = new Set(["occurred_on", "ended_on", "status_updated_on", "reviewed_on", "next_review_on", "filed_on", "decided_on", "term_start", "term_end", "story_date"]);
+
+const COMMON_DESC = {
+  id: "Stable numeric identifier.",
+  slug: "URL identifier; the record lives at https://thewaronnews.com/<section>/<slug>.",
+  pub_state: "draft, published or withdrawn. Withdrawn rows keep identity fields; prose is null.",
+  published_at: "UTC timestamp of first publication.",
+  reviewed_on: "Date of the last full review against sources.",
+  next_review_on: "Date the next full review is due.",
+  revision: "Revision number; every prose change appends a revision.",
+  created_at: "UTC timestamp the row was created.",
+  updated_at: "UTC timestamp of the last content change.",
+  unknowns: "What the record does not establish, stated in terms of the record.",
+  occurred_on: "Date of the action (first day of the period when imprecise).",
+  occurred_on_precision: "day, month, year or approximate.",
+  jurisdiction: "US (federal), ISO 3166-2 (US-LA), place (US-LA:new-orleans) or ISO 3166-1 alpha-2.",
+  country: "ISO 3166-1 alpha-2 country code.",
+  status: "Status value from the table's enumerated list.",
+  summary: "Direct answer to what happened, with {c:ID} claim references.",
+  what_happened: "Narrative of the action, Markdown with {c:ID} claim references.",
+  stated_justification: "The reason the actor gave, quoted verbatim, with claim references.",
+  effect_on_reporting: "What changed for reporting, with claim references.",
+  statement: "One English sentence stating the fact.",
+  evidence_quote: "Verbatim quotation of 300 characters or fewer from the source.",
+  verified_at: "Date the claim was checked against its source.",
+  method: "How the claim is established.",
+  source_id: "sources.id the claim or note rests on.",
+  link_state: "unchecked, live, paywalled, bot_blocked, dead or redirected.",
+  wayback_url: "Internet Archive snapshot of the source.",
+};
+
+function fieldType(col) {
+  if (INT_COLS.has(col) || /_id$/.test(col)) return "integer";
+  if (DATETIME_COLS.has(col)) return "datetime";
+  if (DATE_COLS.has(col)) return "date";
+  return "string";
+}
 
 function csvField(v) {
   if (v === null || v === undefined) return "";
   const s = typeof v === "object" ? JSON.stringify(v) : String(v);
-  if (/[",\n]/.test(s)) return '"' + s.replace(/"/g, '""') + '"';
-  return s;
+  return /[",\n\r]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
 }
 
 function toCsv(columns, rows) {
   const lines = [columns.map(csvField).join(",")];
-  for (const row of rows) {
-    lines.push(columns.map((c) => csvField(row[c])).join(","));
-  }
+  for (const r of rows) lines.push(columns.map((c) => csvField(r[c])).join(","));
   return lines.join("\n") + "\n";
 }
 
-// ---------- table definitions: columns, one-sentence descriptions, rows ----------
+async function columnsOf(env, table, rows) {
+  if (rows.length) return Object.keys(rows[0]);
+  if (table === "sources") return ["id", "url", "final_url", "title", "publisher", "outlet_id", "source_kind", "published_on", "first_seen", "last_checked", "http_status", "link_state", "link_state_since", "consecutive_failures", "wayback_url", "wayback_saved_at", "archive_attempts", "created_at"];
+  const info = await all(env, `PRAGMA table_info(${table})`);
+  return info.map((c) => c.name);
+}
 
-const COLUMN_DESCRIPTIONS = {
-  entities: {
-    id: "Numeric identifier for the entity, stable across the record's lifetime.",
-    slug: "URL-safe identifier used in /crawlers/<slug> and /observed/<slug>.",
-    vendor: "The company or organization that operates or documents the entity.",
-    name: "Display name of the entity.",
-    kind: "One of crawler, fetcher, search_bot, ads_bot, engine, policy_token.",
-    purpose: "One of training, search, user_fetch, ads, mixed, or empty when undocumented.",
-    ua_token: "The token expected in the entity's User-Agent header, when documented.",
-    ua_pattern: "The regular expression the instrument uses to match this entity's User-Agent header.",
-    robots_token: "The token the entity's operator documents for robots.txt directives.",
-    ip_list_url: "URL of the vendor's published IP range list, when one exists.",
-    docs_url: "URL of the vendor's primary documentation for this entity.",
-    first_documented: "ISO date the entity was first documented by its vendor, when known.",
-    first_seen_here: "ISO date this site first logged a request from this entity.",
-    last_seen_here: "ISO date this site last logged a request from this entity.",
-    status: "One of active, retired, unverified.",
-    notes: "Free-text identity notes about the entity. Policy facts live in claims, not here.",
-    created_at: "ISO timestamp the row was created.",
-    updated_at: "ISO timestamp the row was last updated.",
-  },
-  claims: {
-    id: "Numeric identifier for the claim, used in the claim URL pattern.",
-    entity_id: "The entities.id this claim is about.",
-    slug: "Optional URL-safe identifier for the claim.",
-    field: "The fact this claim states, for example respects_robots_txt.",
-    value: "The short typed value of the claim, for example yes, no, or a token.",
-    statement: "One canonical English sentence stating the fact.",
-    evidence_url: "Source URL the claim was verified against.",
-    evidence_quote: "A verbatim quote of 300 characters or fewer from the evidence URL.",
-    method: "One of vendor_doc, observed_here, third_party, test_here.",
-    verified_at: "ISO date this site checked the evidence URL.",
-    confidence: "One of high, medium, low.",
-    status: "One of current, superseded, disputed.",
-    supersedes_id: "The claims.id this claim replaces, when it supersedes an earlier claim.",
-    evidence_date: "ISO date the evidence source itself carries, when the source shows one.",
-    created_at: "ISO timestamp the row was created.",
-    updated_at: "ISO timestamp the row was last updated.",
-  },
-  changes: {
-    id: "Numeric identifier for the change row.",
-    claim_id: "The claims.id this change is about, when the change is about one claim.",
-    entity_id: "The entities.id this change is about.",
-    changed_at: "ISO timestamp (UTC) the change was recorded. Rows written before 2026-09-17 carry a date-only value backfilled to midnight UTC.",
-    kind: "One of new, updated, superseded, retired, disputed.",
-    old_value: "The claim value before the change, when applicable.",
-    new_value: "The claim value after the change, when applicable.",
-    evidence_url: "Source URL supporting the change, when one was recorded.",
-    note: "A free-text note about the change, written by a reviewer.",
-  },
-  observation_daily: {
-    id: "Numeric identifier for the daily rollup row.",
-    date: "ISO date the requests were counted on.",
-    entity_id: "The entities.id these requests are attributed to.",
-    requests: "Count of requests from this entity on this date.",
-    paths: "A JSON array of distinct paths requested, capped at 100 per day.",
-    formats: "A JSON array of distinct response formats served (html, md, json, txt, xml, csv).",
-    verified_share: "The share of this day's requests whose identity was verified against a published IP range or Cloudflare's verified-bot signal, from 0 to 1. To aggregate across days, sum verified_requests and requests separately and divide; averaging this column across days is not request-weighted.",
-    verified_requests: "Count of this day's requests whose identity was verified, the numerator of verified_share (verified_share = verified_requests / requests).",
-  },
-  questions: {
-    id: "Numeric identifier for the question.",
-    ts_first: "ISO timestamp the question was first asked.",
-    ts_last: "ISO timestamp the question was most recently asked.",
-    text_norm: "The normalised text of the question: lowercase, punctuation stripped, lightly stemmed.",
-    count: "How many times this normalised question has been asked.",
-    sources: "A JSON array of sources the question arrived from, for example search, mcp, seeded, prompt_batch, note.",
-    matched_claim_ids: "A JSON array of claims.id values this question matched, when any did.",
-    gap: "1 when no published claim matched the question, 0 otherwise.",
-  },
-  notes: {
-    id: "Numeric identifier for the note.",
-    target_type: "One of claim, entity, question.",
-    target_id: "The id of the claim, entity, or question this note is about.",
-    body: "The text of the note, as submitted.",
-    author_claim: "Free text the submitter gave for who or what they are, for example a model, agent, or human.",
-    ts: "ISO timestamp the note was submitted.",
-    status: "Always published in this export; unpublished notes are never exported.",
-  },
-  mcp_calls_daily: {
-    date: "ISO date the calls were made on.",
-    tool: "The MCP tool name called, for example lookup_crawler.",
-    client_name: "The MCP client name reported at initialize, or unknown.",
-    calls: "Count of calls to this tool by this client on this date.",
-    avg_latency_ms: "Mean latency in milliseconds across these calls, rounded to the nearest integer.",
-  },
-};
-
-async function buildTable(name, rows) {
-  const columns = Object.keys(COLUMN_DESCRIPTIONS[name]);
-  const csv = toCsv(columns, rows);
-  return { name, columns, rows, csv };
+function tableSchema(table, def, columns) {
+  const fields = columns.map((c) => {
+    const f = { name: c, type: fieldType(c), description: COMMON_DESC[c] || `${c.replace(/_/g, " ")} (${table}).` };
+    const en = def.enums && def.enums[c];
+    if (en && ENUMS[en]) f.constraints = { enum: ENUMS[en] };
+    if (c === "pub_state") f.constraints = { enum: ["published", "withdrawn"] };
+    return f;
+  });
+  const schema = { fields, primaryKey: def.pk };
+  if (def.fks && def.fks.length) {
+    schema.foreignKeys = def.fks.filter(([col]) => columns.includes(col)).map(([col, ref]) => ({ fields: [col], reference: { resource: ref, fields: ["id"] } }));
+  }
+  return schema;
 }
 
 export async function buildExport(env, dateStr = isoDate()) {
-  const [entities, claims, changes, observationDaily, questions, notes, mcpCallsDaily] = await Promise.all([
-    listEntities(env),
-    listAllClaimsForExport(env),
-    listAllChangesForExport(env),
-    listAllObservationDailyForExport(env),
-    listPublishedQuestionsForExport(env),
-    listPublishedNotesForExport(env),
-    listMcpCallsDailyForExport(env),
-  ]);
-
-  const tables = {
-    entities: await buildTable("entities", entities),
-    claims: await buildTable("claims", claims),
-    changes: await buildTable("changes", changes),
-    observation_daily: await buildTable("observation_daily", observationDaily),
-    questions: await buildTable("questions", questions),
-    notes: await buildTable("notes", notes),
-    mcp_calls_daily: await buildTable("mcp_calls_daily", mcpCallsDaily),
-  };
-
-  return { date: dateStr, generated_at: isoNow(), tables };
-}
-
-function buildManifest(dateStr, rowCounts) {
-  return {
-    date: dateStr,
-    generated_at: isoNow(),
-    site: SITE_NAME,
-    site_url: SITE_ORIGIN,
-    license: DATA_LICENSE,
-    license_url: LICENSE_URL,
-    attribution: ATTRIBUTION_TEXT,
-    schema_version: SCHEMA_VERSION,
-    claim_url_pattern: CLAIM_URL_PATTERN,
-    row_counts: rowCounts,
-  };
-}
-
-function buildSchemaDoc(tables) {
-  const out = { schema_version: SCHEMA_VERSION, generated_at: isoNow(), tables: {} };
-  for (const [name, t] of Object.entries(tables)) {
-    out.tables[name] = {
-      columns: t.columns.map((c) => ({ name: c, description: COLUMN_DESCRIPTIONS[name][c] })),
-    };
-  }
-  return out;
-}
-
-// ---------- R2 ----------
-
-async function writeFilesToR2(env, files) {
-  const puts = Object.entries(files).map(([key, body]) => {
-    const contentType = key.endsWith(".csv") ? "text/csv; charset=utf-8" : "application/json; charset=utf-8";
-    return env.EXPORTS.put(key, body, { httpMetadata: { contentType } });
-  });
-  await Promise.all(puts);
-}
-
-// ---------- repo files (README, LICENSE, CITATION.cff, .gitattributes) ----------
-
-const LEGALCODE_URL = "https://creativecommons.org/licenses/by/4.0/legalcode.txt";
-const DEED_FALLBACK = `Creative Commons Attribution 4.0 International (CC BY 4.0)
-
-The full legal code could not be fetched at export time. Read it at:
-${LICENSE_URL}legalcode
-
-Summary (this summary is not a substitute for the license itself): you are
-free to share and adapt the material for any purpose, even commercially, as
-long as you give appropriate credit, provide a link to the license, and
-indicate if changes were made.
-`;
-
-async function fetchLicenseText() {
-  try {
-    const res = await fetch(LEGALCODE_URL);
-    if (res.ok) return await res.text();
-  } catch {
-    // fall through to the deed fallback below
-  }
-  return DEED_FALLBACK;
-}
-
-function buildReadme(schemaDoc) {
-  const lines = [];
-  lines.push(`# ${SITE_NAME} dataset`);
-  lines.push("");
-  lines.push(`${SITE_NAME} publishes dated, sourced claims about AI crawlers and AI search engines and their agents. This repository holds a nightly export of the public tables under a Creative Commons Attribution 4.0 International license. The site is published at ${SITE_ORIGIN}.`);
-  lines.push("");
-  lines.push("## What this dataset covers");
-  lines.push("");
-  lines.push(`${SITE_NAME} logs every request from an identified crawler and publishes per-crawler daily counts. Each daily count states the share of requests whose identity was verified against the vendor's published IP ranges or reverse DNS. Every fact on ${SITE_NAME} is a dated claim with a verbatim vendor quote, a source URL, a method, and a confidence. A published claim is never edited: a change creates a new claim that supersedes the old claim, both claims stay addressable, and every supersession is listed in the changes table. ${SITE_NAME} records every search query made on the site, matches each query against the published claims, and exports the unmatched queries as gaps. Every table in this dataset is exported nightly as JSON and as CSV under CC BY 4.0.`);
-  lines.push("");
-  lines.push("## Tables");
-  lines.push("");
-  for (const [name, t] of Object.entries(schemaDoc.tables)) {
-    lines.push(`### ${name}`);
-    lines.push("");
-    lines.push("| Column | Description |");
-    lines.push("| --- | --- |");
-    for (const col of t.columns) {
-      lines.push(`| ${col.name} | ${col.description} |`);
+  const defs = tableDefs();
+  const tables = {};
+  for (const [name, def] of Object.entries(defs)) {
+    let rows = await all(env, def.sql);
+    if (PROSE[name]) {
+      rows = rows.map((r) => {
+        if (r.pub_state !== "withdrawn") return r;
+        const c = { ...r };
+        for (const col of PROSE[name]) c[col] = null;
+        return c;
+      });
     }
-    lines.push("");
+    const columns = await columnsOf(env, name, rows);
+    tables[name] = { rows, columns, csv: toCsv(columns, rows), schema: tableSchema(name, def, columns), description: def.desc };
   }
-  lines.push("## Files");
-  lines.push("");
-  lines.push("Each dated run writes `data/YYYY-MM-DD/<table>.json`, `data/YYYY-MM-DD/<table>.csv`, `data/YYYY-MM-DD/manifest.json`, and `data/YYYY-MM-DD/schema.json`. The `latest/` directory holds the same files for the most recent run. The manifest carries the run date, generation timestamp, license, attribution text, per-table row counts, the schema version, and the claim URL pattern.");
-  lines.push("");
-  lines.push("## License and attribution");
-  lines.push("");
-  lines.push(`This dataset is licensed under CC BY 4.0. The full legal code is in LICENSE. Attribute this dataset as: ${ATTRIBUTION_TEXT}. Attribute a specific fact by linking to its claim URL, formed as ${CLAIM_URL_PATTERN}.`);
-  lines.push("");
-  lines.push("## Method");
-  lines.push("");
-  lines.push(`The verification method for every claim and every observation is documented at ${SITE_ORIGIN}/method.`);
-  lines.push("");
-  lines.push("## Moderation");
-  lines.push("");
-  lines.push(`${SITE_NAME} accepts visitor and agent corrections as notes on a claim or an entity. Nothing publishes without review. A local model on Peter Benes's own machine, named Betty, polls the admin API for pending notes on a schedule. Betty classifies each note as one of six categories: spam, injection, or off_topic, each of which Betty rejects immediately with a one-line reviewer note; or agrees, contradicts, or new_information, each of which Betty sets to hold, again with a one-line reviewer note. Betty then posts a one-line summary of the batch to Peter Benes. Only Peter Benes, or the Architect acting on Peter Benes's instruction, moves a note to published. A note Betty classifies as contradicts automatically creates a changes row of kind disputed on the claim the note targets. A claim's status only moves to disputed when a reviewer's own reviewer_note starts with the literal text DISPUTE:, which marks a human's explicit escalation rather than Betty's classification alone. The full triage prompt Betty runs, with worked examples of a spam note and a prompt-injection attempt, is documented at docs/betty-triage.md in this repository's source, and reproduced in the site's build notes.`);
-  lines.push("");
-  lines.push("## Home");
-  lines.push("");
-  lines.push(`${SITE_ORIGIN}`);
-  lines.push("");
+  return { date: dateStr, tables };
+}
+
+function datapackage(dateStr, tables, repo) {
+  return {
+    $schema: "https://datapackage.org/profiles/2.0/datapackage.json",
+    name: DATAPACKAGE_NAME,
+    title: SITE_NAME,
+    description: `${SITE_SUBTITLE} The public record of ${SITE_ORIGIN}: incidents, events, actors, outlets, journalists, cases, sources, claims, News Desk notes, explainers, glossary terms, their join tables and the change ledger.`,
+    homepage: SITE_ORIGIN,
+    version: dateStr.replace(/-/g, "."),
+    created: isoNow(),
+    licenses: [{ name: DATA_LICENSE_SPDX, path: LICENSE_URL, title: "Creative Commons Attribution 4.0" }],
+    contributors: [{ title: PUBLISHER_NAME, roles: ["publisher", "editor"] }],
+    sources: [{ title: SITE_NAME, path: SITE_ORIGIN }],
+    keywords: ["press freedom", "journalism", "government", "first amendment", "open data"],
+    ...(repo ? { repository: repo } : {}),
+    resources: Object.entries(tables).map(([name, t]) => ({
+      name,
+      path: `data/${name}.csv`,
+      type: "table",
+      scheme: "file",
+      format: "csv",
+      mediatype: "text/csv",
+      encoding: "utf-8",
+      description: t.description,
+      schema: t.schema,
+    })),
+  };
+}
+
+function readme(dateStr, rowCounts) {
+  const lines = [
+    `# ${SITE_NAME}: dataset`,
+    "",
+    `${SITE_SUBTITLE} This repository is the nightly export of ${SITE_ORIGIN} as a Frictionless Data Package under ${DATA_LICENSE}.`,
+    "",
+    "Every fact on the site is a claim: one dated statement with a verbatim quotation of up to 300 characters, the source address, the kind of source, the date it was checked and an archived copy. Claims are never edited; a new claim supersedes an old one and both stay in `claims`, linked by `supersedes_id` and `superseded_by`.",
+    "",
+    "## Files",
+    "",
+    "- `datapackage.json`: the Data Package descriptor with a Table Schema per table (types, enums, keys).",
+    "- `data/<table>.csv`: the latest rows, which the descriptor points to.",
+    "- `json/<table>.json`: the same rows as JSON.",
+    "- `snapshots/YYYY-MM-DD/`: weekly snapshots (Sundays and on schema change).",
+    "",
+    `## Tables (export of ${dateStr})`,
+    "",
+    "| Table | Rows |",
+    "| --- | --- |",
+    ...Object.entries(rowCounts).map(([k, v]) => `| ${k} | ${v} |`),
+    "",
+    "## Licence and attribution",
+    "",
+    `${DATA_LICENSE} (${LICENSE_URL}). Credit: "${ATTRIBUTION_TEXT}". Cite a single fact by its claim URL, ${SITE_ORIGIN}/claims/<id>. Quotations and linked sources keep their owners' terms.`,
+    "",
+    "## Method",
+    "",
+    `See ${SITE_ORIGIN}/methodology and ${SITE_ORIGIN}/editorial-policy.`,
+    "",
+  ];
   return lines.join("\n");
 }
 
-function buildCitationCff() {
+function citationCff(dateStr) {
   return `cff-version: 1.2.0
 message: "If you use this dataset, please cite it as below."
 title: "${SITE_NAME}"
+type: dataset
 authors:
-  - name: "${AUTHOR_NAME}"
-  - name: "Benes the Menace"
+  - name: "${PUBLISHER_NAME}"
+version: "${dateStr.replace(/-/g, ".")}"
+date-released: "${dateStr}"
 url: "${SITE_ORIGIN}"
-repository-code: "${DATA_REPO}"
-license: CC-BY-4.0
+license: ${DATA_LICENSE_SPDX}
 `;
 }
 
-const GITATTRIBUTES = "*.csv text eol=lf\n*.json text eol=lf\n";
+const LICENSE_FALLBACK = `Creative Commons Attribution 4.0 International (CC BY 4.0)
 
-async function maybeBuildRepoFiles(env, schemaDoc) {
-  let hasLicense = false;
+Full legal code: ${LICENSE_URL}legalcode
+
+You are free to share and adapt this material for any purpose, even
+commercially, with appropriate credit, a link to the licence, and an
+indication of any changes.
+`;
+
+async function licenseText() {
   try {
-    hasLicense = await fileExistsInRepo(env, "LICENSE");
+    const res = await fetch("https://creativecommons.org/licenses/by/4.0/legalcode.txt");
+    if (res.ok) return await res.text();
   } catch {
-    hasLicense = false;
+    // fallback below
   }
-  if (hasLicense) return { included: false, files: {} };
-  const license = await fetchLicenseText();
-  return {
-    included: true,
-    files: {
-      "README.md": buildReadme(schemaDoc),
-      "LICENSE": license,
-      "CITATION.cff": buildCitationCff(),
-      ".gitattributes": GITATTRIBUTES,
-    },
-  };
+  return LICENSE_FALLBACK;
 }
 
-// ---------- orchestration ----------
+function contentTypeFor(key) {
+  if (key.endsWith(".csv")) return "text/csv; charset=utf-8";
+  if (key.endsWith(".json")) return "application/json; charset=utf-8";
+  if (key.endsWith(".md")) return "text/markdown; charset=utf-8";
+  return "text/plain; charset=utf-8";
+}
 
 export async function runExport(env, kind = "daily") {
   const dateStr = isoDate();
   const built = await buildExport(env, dateStr);
-
-  const files = {};
+  const repo = env.DATA_REPO || DATA_REPO_DEFAULT;
   const rowCounts = {};
+  const pkgFiles = {};
   for (const [name, t] of Object.entries(built.tables)) {
-    files[`data/${dateStr}/${name}.json`] = JSON.stringify(t.rows, null, 2);
-    files[`data/${dateStr}/${name}.csv`] = t.csv;
-    files[`latest/${name}.json`] = JSON.stringify(t.rows, null, 2);
-    files[`latest/${name}.csv`] = t.csv;
+    pkgFiles[`data/${name}.csv`] = t.csv;
+    pkgFiles[`json/${name}.json`] = JSON.stringify(t.rows, null, 2);
     rowCounts[name] = t.rows.length;
   }
-  const manifest = buildManifest(dateStr, rowCounts);
-  const schemaDoc = buildSchemaDoc(built.tables);
-  files[`data/${dateStr}/manifest.json`] = JSON.stringify(manifest, null, 2);
-  files[`latest/manifest.json`] = JSON.stringify(manifest, null, 2);
-  files[`data/${dateStr}/schema.json`] = JSON.stringify(schemaDoc, null, 2);
-  files[`latest/schema.json`] = JSON.stringify(schemaDoc, null, 2);
+  const dp = datapackage(dateStr, built.tables, repo);
+  pkgFiles["datapackage.json"] = JSON.stringify(dp, null, 2);
+  pkgFiles["README.md"] = readme(dateStr, rowCounts);
+  pkgFiles["CITATION.cff"] = citationCff(dateStr);
+  pkgFiles["LICENSE"] = await licenseText();
 
-  await writeFilesToR2(env, files);
-
-  const payloadForHash = Object.keys(files).sort().map((k) => `${k}:${files[k]}`).join("\n");
-  const payloadHash = await sha256Hex(payloadForHash);
-  let lastHash = null;
-  if (env.KV) {
-    try {
-      lastHash = await env.KV.get("export:last_payload_hash");
-    } catch {
-      lastHash = null;
+  const notes = [];
+  if (env.EXPORTS) {
+    const puts = [];
+    for (const [path, body] of Object.entries(pkgFiles)) {
+      puts.push(env.EXPORTS.put(`data/${dateStr}/${path}`, body, { httpMetadata: { contentType: contentTypeFor(path) } }));
+      puts.push(env.EXPORTS.put(`latest/${path}`, body, { httpMetadata: { contentType: contentTypeFor(path) } }));
     }
+    await Promise.all(puts);
+  } else {
+    notes.push("R2 binding missing; nothing written.");
   }
 
+  // Unchanged payload (ignoring timestamps) skips the GitHub commit.
+  const hashBasis = Object.entries(pkgFiles).filter(([p]) => p !== "datapackage.json" && p !== "CITATION.cff" && p !== "README.md").map(([p, b]) => `${p}:${b}`).join("\n");
+  const payloadHash = await sha256Hex(hashBasis);
   let githubCommit = null;
-  let note = null;
-
-  if (lastHash === payloadHash) {
-    note = "No change since the last export. GitHub commit skipped.";
+  if (!githubConfigured(env)) {
+    notes.push("GitHub skipped: GITHUB_TOKEN, GITHUB_ORG or GITHUB_REPO not set.");
   } else {
-    let repoFiles = { included: false, files: {} };
-    try {
-      repoFiles = await maybeBuildRepoFiles(env, schemaDoc);
-    } catch (err) {
-      note = `Repo-file check failed, proceeding with data files only: ${String(err && err.message || err)}`;
-    }
-    const allFiles = Object.assign({}, files, repoFiles.files);
-    const now = new Date();
-    const message = kind === "manual"
-      ? `Manual export ${dateStr} ${now.toISOString().slice(11, 16)} UTC`
-      : `Nightly export ${dateStr}`;
-    const result = await commitFilesToGithub(env, allFiles, message);
-    githubCommit = result.sha;
-    if (result.error) {
-      note = `GitHub commit used the ${result.method} method after the Git Data API failed: ${result.error}`;
-    } else if (repoFiles.included && !note) {
-      note = "Included README.md, LICENSE, CITATION.cff and .gitattributes (first commit to this repo with these files).";
-    }
-    if (githubCommit && env.KV) {
-      try {
-        await env.KV.put("export:last_payload_hash", payloadHash);
-      } catch {
-        // best effort; a missed cache update only costs one redundant commit later
+    let last = null;
+    try { last = env.KV ? await env.KV.get("export:last_payload_hash") : null; } catch { last = null; }
+    if (last === payloadHash) {
+      notes.push("No change since the last export; GitHub commit skipped.");
+    } else {
+      const files = { ...pkgFiles };
+      const sunday = new Date(`${dateStr}T00:00:00Z`).getUTCDay() === 0;
+      if (sunday) {
+        for (const [p, b] of Object.entries(pkgFiles)) {
+          if (p.startsWith("data/") || p.startsWith("json/") || p === "datapackage.json") files[`snapshots/${dateStr}/${p}`] = b;
+        }
+      }
+      const res = await commitFilesToGithub(env, files, `${kind === "manual" ? "Manual" : "Nightly"} export ${dateStr}`);
+      githubCommit = res.sha;
+      if (res.error) notes.push(`GitHub: ${res.method}: ${res.error}`);
+      if (githubCommit && env.KV) {
+        try { await env.KV.put("export:last_payload_hash", payloadHash); } catch { /* best effort */ }
       }
     }
   }
 
-  const exportRow = await insertExportRow(env, {
-    ts: isoNow(),
-    kind,
-    r2Key: `data/${dateStr}/`,
-    githubCommit,
-    rowCounts,
-    note,
+  return insertExportRow(env, {
+    ts: isoNow(), kind, r2Key: `data/${dateStr}/`, githubCommit, rowCounts, version: dp.version, note: notes.join(" ") || null,
   });
-
-  return exportRow;
 }

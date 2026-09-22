@@ -1,14 +1,17 @@
-// The instrument (spec section 6). Runs after the response is built, inside
+// The instrument, kept from Crank #2 (spec 2.3: entities -> bots,
+// observations -> requests). Runs after the response is built, inside
 // ctx.waitUntil, so logging never delays a reply. Matches User-Agent against
-// entities.ua_pattern (cached), verifies identity by IP-list membership or
+// bots.ua_pattern (cached), verifies identity by IP-list membership or
 // Cloudflare's verified-bot signal where available, hashes the IP with a
 // daily rotating salt, and tallies unmatched bot-like and human traffic in KV.
+// Our own tools identify as twon-* (twon-smoke/, twon-verify/, twon-desk/,
+// twon-archive/) and are never counted.
 
-import { getEntityPatterns, insertObservation } from "./db.js";
+import { getBotPatterns as getEntityPatterns, insertRequestRow } from "./db.js";
 import { ipInAnyCidr, parseIpListJson } from "./ipmatch.js";
 import { isoDate, isoNow, sha256Hex } from "./util.js";
 
-const BOT_LIKE = /bot|crawler|spider|fetch|agent|http/i;
+const BOT_LIKE = /bot|crawler|spider|fetch|agent|http|feed|rss|reader/i;
 const UNKNOWN_UA_CAP = 500;
 const IP_LIST_TTL_MS = 26 * 60 * 60 * 1000; // slightly over a day; cron refreshes nightly anyway
 
@@ -85,7 +88,7 @@ async function tallyUnknownUa(env, dateStr, ua) {
 // Does not change anything the instrument stores below.
 export function classifyUa(ua, patterns) {
   if (!ua) return "empty";
-  if (ua.startsWith("rsbm-smoke/")) return "smoke";
+  if (ua.startsWith("twon-")) return "smoke";
   const match = patterns.find((p) => {
     try {
       return new RegExp(p.pattern).test(ua);
@@ -116,7 +119,7 @@ export async function isAnalyticsEligible(env, ua) {
 export async function observe(request, response, env, formatServed) {
   try {
     const ua = request.headers.get("User-Agent") || "";
-    if (ua.startsWith("rsbm-smoke/")) return; // our own smoke-test traffic, not counted
+    if (ua.startsWith("twon-")) return; // our own tools, not counted
 
     const url = new URL(request.url);
     const dateStr = isoDate();
@@ -160,9 +163,9 @@ export async function observe(request, response, env, formatServed) {
 
     const ipHash = await hashIp(env, ip, dateStr);
 
-    await insertObservation(env, {
+    await insertRequestRow(env, {
       ts: isoNow(),
-      entity_id: match.id,
+      bot_id: match.id,
       ua_raw: ua,
       ip_hash: ipHash,
       ip_verified: ipVerified,
@@ -173,7 +176,6 @@ export async function observe(request, response, env, formatServed) {
       format_served: formatServed,
       accept_header: request.headers.get("Accept") || null,
       status: response.status,
-      robots_allowed: 1,
       referer: request.headers.get("Referer") || null,
       cf_bot_category: cf.verifiedBotCategory || null,
     });

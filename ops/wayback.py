@@ -95,10 +95,10 @@ def save_simple(url: str) -> bool:
         with urllib.request.urlopen(req, timeout=SAVE_TIMEOUT) as resp:
             return 200 <= resp.status < 400
     except urllib.error.HTTPError as exc:
-        # Save Page Now often 302s through a job page; treat known
-        # "already captured" style codes as soft successes, everything
-        # else as failure.
-        return exc.code in (302, 429) is False and exc.code < 500
+        # Save Page Now often 302s through a job page, and 429 usually
+        # means "already captured / try the availability API"; treat both
+        # as soft successes. Anything else is a failure.
+        return exc.code in (302, 429)
     except Exception as exc:  # noqa: BLE001
         common.log(SCRIPT, "save_simple_error", url=url, error=str(exc))
         return False

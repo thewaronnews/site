@@ -1,5 +1,5 @@
 // Commits export files to the public GitHub data repository from the
-// Worker (spec section 9, P0.5). Uses env.GITHUB_TOKEN (a Worker secret),
+// Worker (spec 4.5). Kept from Crank #2. Uses env.GITHUB_TOKEN (a Worker secret),
 // env.GITHUB_ORG and env.GITHUB_REPO (plain worker vars). Tries the Git
 // Data API first, making one commit for every file in a run; falls back to
 // the Contents API per file if any Git Data API step fails.
@@ -17,7 +17,7 @@ async function gh(env, path, opts = {}) {
         "Authorization": `Bearer ${token}`,
         "Accept": "application/vnd.github+json",
         "X-GitHub-Api-Version": "2022-11-28",
-        "User-Agent": "rattlesnakesbymail-worker",
+        "User-Agent": "twon-export/1.0",
       },
       opts.headers || {}
     ),
@@ -89,7 +89,7 @@ async function commitViaGitData(env, files, message) {
       message,
       tree: treeData.sha,
       parents: [headSha],
-      author: { name: "Rattlesnakes By Mail", email: "noreply@rattlesnakesbymail.com", date: new Date().toISOString() },
+      author: { name: "The War On News", email: "hello@thewaronnews.com", date: new Date().toISOString() },
     }),
   });
   if (!commitRes.ok) throw new Error(`commit create failed: HTTP ${commitRes.status}`);
@@ -148,4 +148,10 @@ export async function commitFilesToGithub(env, files, message) {
       };
     }
   }
+}
+
+// True only when a token, org and repo are all configured. The export skips
+// GitHub cleanly (and says so in the exports row) when this is false.
+export function githubConfigured(env) {
+  return !!(env.GITHUB_TOKEN && env.GITHUB_ORG && env.GITHUB_REPO);
 }

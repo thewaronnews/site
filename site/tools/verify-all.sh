@@ -1,148 +1,43 @@
 #!/usr/bin/env bash
-# verify-all.sh — operator smoke test: fetch every sitemap URL's HTML, .md
-# and .json views plus a fixed list of key routes, and flag non-200s and
-# machine-unfriendly content (markdown bold leaking into text, em dashes,
-# "[object Object]", "undefined"). Read-only; makes no changes.
-#
-# Usage: site/tools/verify-all.sh
-#
-# Requires: bash, curl, xargs, python3.
-
+# Live verification (spec 11, L-134): real requests with UA twon-verify/1.0,
+# recording status, content type and byte size for every page in HTML, .md
+# and .json, the discovery files, feeds, sitemaps, the stylesheet, and the
+# http->https and www->apex redirects.
+# Usage: verify-all.sh [base] [incident_slug]
 set -uo pipefail
-
-HOST="rattlesnakesbymail.com"
-BASE="https://${HOST}"
-UA="rsbm-verify/1.0 (operator smoke test)"
-PARALLEL=8
-
-WORK_DIR="$(mktemp -d)"
-trap 'rm -rf "$WORK_DIR"' EXIT
-
-FIXED_ROUTES=(
-  "/robots.txt"
-  "/sitemap.xml"
-  "/sitemap-machine.xml"
-  "/sitemap-index.xml"
-  "/.well-known/agent.json"
-  "/llms.txt"
-  "/changes.xml"
-  "/compare"
-  "/fields"
-  "/recipes"
-  "/.well-known/mcp/server.json"
-)
-
-# --- gather URLs from the sitemap -------------------------------------
-SITEMAP_BODY="$(curl -sS -A "$UA" "${BASE}/sitemap.xml")"
-if [ -z "$SITEMAP_BODY" ]; then
-  echo "FATAL: could not fetch ${BASE}/sitemap.xml"
-  exit 1
-fi
-printf '%s' "$SITEMAP_BODY" | grep -o '<loc>[^<]*</loc>' | sed -e 's/<loc>//' -e 's/<\/loc>//' > "$WORK_DIR/sitemap_urls.txt"
-
-# --- build the full list of view URLs to check ------------------------
-VIEWS_FILE="$WORK_DIR/views.txt"
-: > "$VIEWS_FILE"
-while IFS= read -r loc; do
-  [ -z "$loc" ] && continue
-  path="${loc#${BASE}}"
-  if [ "$path" = "/" ] || [ -z "$path" ]; then
-    echo "${BASE}/" >> "$VIEWS_FILE"
-    echo "${BASE}/.md" >> "$VIEWS_FILE"
-    echo "${BASE}/.json" >> "$VIEWS_FILE"
-  else
-    echo "${loc}" >> "$VIEWS_FILE"
-    echo "${loc}.md" >> "$VIEWS_FILE"
-    echo "${loc}.json" >> "$VIEWS_FILE"
-  fi
-done < "$WORK_DIR/sitemap_urls.txt"
-
-: > "$WORK_DIR/fixed.txt"
-for r in "${FIXED_ROUTES[@]}"; do
-  echo "${BASE}${r}" >> "$WORK_DIR/fixed.txt"
-done
-
-TOTAL_VIEWS="$(wc -l < "$VIEWS_FILE" | tr -d ' ')"
-TOTAL_FIXED="$(wc -l < "$WORK_DIR/fixed.txt" | tr -d ' ')"
-
-# --- checker function, run in parallel via xargs -----------------------
-check_one() {
-  local url="$1"
-  local ua="$2"
-  local out
-  out="$(curl -sS -A "$ua" -w '\nHTTPSTATUS:%{http_code}' --max-time 15 "$url" 2>/dev/null)"
-  local status body
-  status="$(printf '%s' "$out" | grep -o 'HTTPSTATUS:[0-9]*$' | sed 's/HTTPSTATUS://')"
-  body="$(printf '%s' "$out" | sed '$d')"
-  local flags=""
-  [ "$status" != "200" ] && flags="${flags}NON200;"
-  case "$body" in
-    *'**'*) flags="${flags}BOLD;" ;;
-  esac
-  if printf '%s' "$body" | grep -q $'\xe2\x80\x94'; then
-    flags="${flags}EMDASH;"
-  fi
-  case "$body" in
-    *'[object Object]'*) flags="${flags}OBJOBJ;" ;;
-  esac
-  if printf '%s' "$body" | grep -qw 'undefined'; then
-    flags="${flags}UNDEFINED;"
-  fi
-  printf '%s\t%s\t%s\n' "$url" "$status" "$flags"
+BASE="${1:-https://thewaronnews.com}"
+INC="${2:-2026-white-house-bans-cnn-msnow-politico}"
+UA="twon-verify/1.0"
+FAILS=0
+row() { printf '%-4s %-48s %-40s %8s\n' "$1" "$2" "$3" "$4"; }
+get() {
+  local path="$1" want="${2:-200}" out
+  out=$(curl -sS -m 30 -A "$UA" -o /tmp/twon-verify.$$ -w '%{http_code} %{content_type} %{size_download}' "$BASE$path")
+  set -- $out
+  row "$1" "$path" "$2" "$3"
+  [ "$1" = "$want" ] || FAILS=$((FAILS+1))
 }
-export -f check_one
-
-RESULTS_FILE="$WORK_DIR/results.tsv"
-cat "$VIEWS_FILE" "$WORK_DIR/fixed.txt" | xargs -P "$PARALLEL" -I{} bash -c 'check_one "$1" "$2"' _ {} "$UA" > "$RESULTS_FILE"
-
-# --- summarize -----------------------------------------------------------
-NON200_LINES="$(awk -F'\t' '$3 ~ /NON200/' "$RESULTS_FILE")"
-BOLD_LINES="$(awk -F'\t' '$3 ~ /BOLD/' "$RESULTS_FILE")"
-EMDASH_LINES="$(awk -F'\t' '$3 ~ /EMDASH/' "$RESULTS_FILE")"
-OBJOBJ_LINES="$(awk -F'\t' '$3 ~ /OBJOBJ/' "$RESULTS_FILE")"
-UNDEFINED_LINES="$(awk -F'\t' '$3 ~ /UNDEFINED/' "$RESULTS_FILE")"
-
-NON200_COUNT="$(printf '%s\n' "$NON200_LINES" | grep -c . || true)"
-BOLD_COUNT="$(printf '%s\n' "$BOLD_LINES" | grep -c . || true)"
-EMDASH_COUNT="$(printf '%s\n' "$EMDASH_LINES" | grep -c . || true)"
-OBJOBJ_COUNT="$(printf '%s\n' "$OBJOBJ_LINES" | grep -c . || true)"
-UNDEFINED_COUNT="$(printf '%s\n' "$UNDEFINED_LINES" | grep -c . || true)"
-
-TOTAL_CHECKED="$(wc -l < "$RESULTS_FILE" | tr -d ' ')"
-
-echo "verify-all: ${TOTAL_CHECKED} URLs checked (${TOTAL_VIEWS} sitemap views + ${TOTAL_FIXED} fixed routes)"
-echo "non-200: ${NON200_COUNT}"
-echo "bold-markdown (**): ${BOLD_COUNT}"
-echo "em-dash: ${EMDASH_COUNT}"
-echo "[object Object]: ${OBJOBJ_COUNT}"
-echo "undefined: ${UNDEFINED_COUNT}"
-
-if [ "$NON200_COUNT" -gt 0 ]; then
-  echo "-- non-200 (up to 10) --"
-  printf '%s\n' "$NON200_LINES" | head -10 | awk -F'\t' '{print $2, $1}'
-fi
-if [ "$BOLD_COUNT" -gt 0 ]; then
-  echo "-- bold-markdown (up to 5) --"
-  printf '%s\n' "$BOLD_LINES" | head -5 | awk -F'\t' '{print $1}'
-fi
-if [ "$EMDASH_COUNT" -gt 0 ]; then
-  echo "-- em-dash (up to 5) --"
-  printf '%s\n' "$EMDASH_LINES" | head -5 | awk -F'\t' '{print $1}'
-fi
-if [ "$OBJOBJ_COUNT" -gt 0 ]; then
-  echo "-- [object Object] (up to 5) --"
-  printf '%s\n' "$OBJOBJ_LINES" | head -5 | awk -F'\t' '{print $1}'
-fi
-if [ "$UNDEFINED_COUNT" -gt 0 ]; then
-  echo "-- undefined (up to 5) --"
-  printf '%s\n' "$UNDEFINED_LINES" | head -5 | awk -F'\t' '{print $1}'
-fi
-
-FAIL=0
-[ "$NON200_COUNT" -gt 0 ] && FAIL=1
-[ "$BOLD_COUNT" -gt 0 ] && FAIL=1
-[ "$EMDASH_COUNT" -gt 0 ] && FAIL=1
-[ "$OBJOBJ_COUNT" -gt 0 ] && FAIL=1
-[ "$UNDEFINED_COUNT" -gt 0 ] && FAIL=1
-
-exit $FAIL
+PAGES="/ /incidents /incidents/$INC /actors /actors/donald-trump /outlets /outlets/cnn /journalists /cases /timeline /timeline/2025 /timeline/actor/donald-trump /timeline/type/access_ban /timeline/country/us /news /glossary /glossary/hard-pass /claims/1 /sources/1 /changes /corrections /corrections/log /about /methodology /editorial-policy /data /feeds /mcp /search"
+echo "== pages in three formats =="
+for p in $PAGES; do
+  if [ "$p" = "/" ]; then get /; get /index.md; get /index.json; continue; fi
+  get "$p"; get "$p.md"; get "$p.json"
+done
+echo "== discovery, feeds, sitemaps, assets =="
+for p in /robots.txt /llms.txt /llms-full.txt /sitemap.xml /sitemaps/pages.xml /sitemaps/incidents.xml /sitemaps/news.xml /sitemaps/news-google.xml /sitemaps/machine.xml /assets/site.css /changes.xml /news/feed.xml /news/atom.xml /news/feed.json /incidents/feed.xml /incidents/atom.xml /incidents/feed.json /data/datapackage.json /data/data/incidents.csv /data/json/incidents.json /.well-known/mcp/server.json /.well-known/agent.json; do get "$p"; done
+[ -n "${INDEXNOW_KEY:-}" ] && get "/$INDEXNOW_KEY.txt"
+echo "== negotiation =="
+for a in "text/markdown" "application/json"; do
+  row "$(curl -sS -m 30 -A "$UA" -H "Accept: $a" -o /dev/null -w '%{http_code}' "$BASE/incidents/$INC")" "Accept: $a" "$(curl -sS -m 30 -A "$UA" -H "Accept: $a" -o /dev/null -w '%{content_type}' "$BASE/incidents/$INC")" ""
+done
+echo "== Link header on incident page =="
+curl -sSI -m 30 -A "$UA" "$BASE/incidents/$INC" | grep -i '^link:' | head -2
+echo "== redirects =="
+row "$(curl -sS -m 30 -A "$UA" -o /dev/null -w '%{http_code}' "https://www.${BASE#https://}/about")" "https://www -> $(curl -sS -m 30 -A "$UA" -o /dev/null -w '%{redirect_url}' "https://www.${BASE#https://}/about")" "" ""
+H=$(curl -sS -m 20 -A "$UA" -o /dev/null -w '%{http_code} %{redirect_url}' "http://${BASE#https://}/" 2>&1) || true
+row "${H%% *}" "http:// -> ${H#* }" "" ""
+echo "== 404 and 405 =="
+get /nope 404; get /nope.json 404
+rm -f /tmp/twon-verify.$$
+echo "failures: $FAILS"
+[ "$FAILS" -eq 0 ]

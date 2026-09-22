@@ -1,0 +1,78 @@
+{
+  "_comment": "Static part of the News Desk Jev question set (spec section 7.2). newsdesk.py adds a `novelty` question at runtime, whose `criteria` lists the top term-overlap incident slugs for this candidate plus \"new\" -- that part cannot be static. state = 'Headline / Outlet / Date / Text'; untrusted candidate text goes only in state, never in instructions.",
+  "model": "featherless-ai/Qwen3.6-35B-A3B-classifier",
+  "questions": {
+    "in_scope": {
+      "type": "noul",
+      "instructions": "Does the text report a specific action taken or formally announced by a government official, government body, court acting on a government request, or legislature, that limits journalists' or news outlets' ability to gather or publish news?",
+      "criteria": {
+        "true": "concrete government action affecting access, credentials, funding, legal exposure or publication",
+        "false": "opinion, rhetoric alone, private-company action, private violence, protest arrests, unrelated"
+      }
+    },
+    "type": {
+      "type": "choice",
+      "instructions": "Which category best fits the government action?",
+      "criteria": {
+        "access_ban": "denial or revocation of physical access to a government space or event",
+        "credential_revocation": "deactivation, suspension or non-renewal of a press credential or hard pass",
+        "lawsuit_against_press": "a government actor sues, or is sued over an action against, a journalist or outlet",
+        "regulatory_pressure": "a regulator (e.g. FCC) threatens or takes action against a broadcaster or licensee",
+        "funding_cut": "government funding for a news organization or public broadcaster is cut or clawed back",
+        "arrest_or_detention": "a journalist is arrested or detained by government authorities",
+        "subpoena_or_seizure": "a subpoena, warrant or seizure of journalists' records, devices or sources",
+        "legislation": "a bill, statute or regulation is proposed, passed or enacted",
+        "physical_obstruction": "government personnel physically block or interfere with newsgathering",
+        "other": "a government action limiting reporting that does not fit the above"
+      }
+    },
+    "level": {
+      "type": "choice",
+      "instructions": "Which level of government acted?",
+      "criteria": {
+        "federal": "the U.S. federal government or a federal agency, court or official",
+        "state": "a U.S. state government, agency, court or official",
+        "local": "a U.S. city, county or other local government, agency, court or official",
+        "foreign": "a non-U.S. national, regional or local government"
+      }
+    },
+    "actor_type": {
+      "type": "choice",
+      "instructions": "Who took the action?",
+      "criteria": {
+        "executive_official": "a president, governor, mayor or other elected/appointed executive officeholder",
+        "agency": "an executive-branch agency or department",
+        "regulator": "an independent regulatory body (e.g. FCC)",
+        "legislature": "a legislative body or one of its committees",
+        "court": "a court or judge",
+        "law_enforcement": "police, a sheriff, a prosecutor's office or similar",
+        "foreign_government": "a non-U.S. national or sub-national government"
+      }
+    },
+    "development": {
+      "type": "choice",
+      "instructions": "What kind of news is this?",
+      "criteria": {
+        "new_action": "reports a government action not previously recorded",
+        "court_development": "a filing, hearing or ruling in an existing case",
+        "response": "an official statement or response reacting to a prior recorded action",
+        "analysis": "commentary, explainer or opinion about a topic rather than a new dated action"
+      }
+    },
+    "private_allegation": {
+      "type": "noul",
+      "instructions": "Does the text allege a crime or misconduct by a named journalist or private individual?",
+      "criteria": {
+        "true": "the text makes or repeats a specific allegation of wrongdoing against a named private person",
+        "false": "no such allegation, or the allegation concerns a government actor acting in an official capacity"
+      }
+    }
+  },
+  "thresholds": {
+    "in_scope": {"eligible": 0.85, "hold": 0.60},
+    "type_confidence_hold_below": 0.60,
+    "novelty_match_at_or_above": 0.70,
+    "development_analysis_drop_at_or_above": 0.60,
+    "private_allegation_hold_at_or_above": 0.50
+  }
+}

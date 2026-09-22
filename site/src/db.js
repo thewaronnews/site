@@ -1,18 +1,46 @@
-// D1 access helpers. Uses the native D1 binding (env.DB), not the REST API,
-// since this code runs inside the Worker itself.
+// D1 read layer for the public pages, feeds, MCP and export. Uses the
+// native D1 binding (env.DB). Writes live in records.js, newsdesk.js and
+// linkstate.js so every content write goes through validation.
 
-import { safeJsonParse, termOverlapScore } from "./util.js";
+import { safeJsonParse } from "./util.js";
 
-const PATTERNS_KV_KEY = "cache:entity_patterns_v1";
-const PATTERNS_TTL_MS = 10 * 60 * 1000; // 10 minutes, per spec section 6
+const SOURCE_COLS = "id, url, final_url, title, publisher, outlet_id, source_kind, published_on, first_seen, last_checked, http_status, link_state, link_state_since, consecutive_failures, wayback_url, wayback_saved_at, archive_attempts";
 
-let memPatterns = null; // { at: number, list: [...] }
+export async function all(env, sql, ...binds) {
+  const { results } = await env.DB.prepare(sql).bind(...binds).all();
+  return results || [];
+}
 
-export async function getEntityPatterns(env) {
+export async function first(env, sql, ...binds) {
+  return (await env.DB.prepare(sql).bind(...binds).first()) || null;
+}
+
+// Public source object (spec 3.2).
+export function sourceObject(s) {
+  if (!s) return null;
+  return {
+    id: s.id,
+    url: s.url,
+    final_url: s.final_url || null,
+    title: s.title,
+    publisher: s.publisher,
+    published_on: s.published_on || null,
+    link_state: s.link_state,
+    link_state_since: s.link_state_since || null,
+    wayback_url: s.wayback_url || null,
+    wayback_saved_at: s.wayback_saved_at || null,
+  };
+}
+
+// ---------- bots (instrument) ----------
+
+const PATTERNS_KV_KEY = "cache:bot_patterns_v1";
+const PATTERNS_TTL_MS = 10 * 60 * 1000;
+let memPatterns = null;
+
+export async function getBotPatterns(env) {
   const now = Date.now();
-  if (memPatterns && now - memPatterns.at < PATTERNS_TTL_MS) {
-    return memPatterns.list;
-  }
+  if (memPatterns && now - memPatterns.at < PATTERNS_TTL_MS) return memPatterns.list;
   if (env.KV) {
     try {
       const cached = await env.KV.get(PATTERNS_KV_KEY, "json");
@@ -24,18 +52,8 @@ export async function getEntityPatterns(env) {
       // fall through to D1
     }
   }
-  const { results } = await env.DB.prepare(
-    `SELECT id, slug, name, vendor, kind, ua_pattern, ip_list_url FROM entities WHERE status = 'active' AND ua_pattern IS NOT NULL`
-  ).all();
-  const list = (results || []).map((r) => ({
-    id: r.id,
-    slug: r.slug,
-    name: r.name,
-    vendor: r.vendor,
-    kind: r.kind,
-    pattern: r.ua_pattern,
-    ip_list_url: r.ip_list_url,
-  }));
+  const rows = await all(env, "SELECT id, slug, name, vendor, kind, ua_pattern, ip_list_url FROM bots");
+  const list = rows.map((r) => ({ id: r.id, slug: r.slug, name: r.name, vendor: r.vendor, kind: r.kind, pattern: r.ua_pattern, ip_list_url: r.ip_list_url }));
   memPatterns = { at: now, list };
   if (env.KV) {
     try {
@@ -47,411 +65,362 @@ export async function getEntityPatterns(env) {
   return list;
 }
 
-export async function listEntities(env) {
-  const { results } = await env.DB.prepare(
-    `SELECT * FROM entities ORDER BY vendor, name`
-  ).all();
-  return results || [];
+export async function insertRequestRow(env, r) {
+  await env.DB.prepare(
+    `INSERT INTO requests (ts, bot_id, ua_raw, ip_hash, ip_verified, verify_method, asn, country, path, format_served, accept_header, status, referer, cf_bot_category)
+     VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)`
+  ).bind(r.ts, r.bot_id, r.ua_raw, r.ip_hash, r.ip_verified, r.verify_method, r.asn, r.country, r.path, r.format_served, r.accept_header, r.status, r.referer, r.cf_bot_category).run();
 }
 
-export async function getEntityBySlug(env, slug) {
-  return await env.DB.prepare(`SELECT * FROM entities WHERE slug = ?`).bind(slug).first();
+// ---------- sources and claims ----------
+
+export async function getSource(env, id) {
+  return first(env, `SELECT ${SOURCE_COLS}, created_at FROM sources WHERE id = ?`, id);
 }
 
-export async function getEntityById(env, id) {
-  return await env.DB.prepare(`SELECT * FROM entities WHERE id = ?`).bind(id).first();
+export async function getSourcesByIds(env, ids) {
+  const clean = [...new Set((ids || []).map((x) => parseInt(x, 10)).filter(Number.isInteger))];
+  if (!clean.length) return [];
+  return all(env, `SELECT ${SOURCE_COLS} FROM sources WHERE id IN (${clean.map(() => "?").join(",")})`, ...clean);
 }
 
-export async function listClaimsForEntity(env, entityId, { onlyCurrent = true } = {}) {
-  const sql = onlyCurrent
-    ? `SELECT * FROM claims WHERE entity_id = ? AND status = 'current' ORDER BY field`
-    : `SELECT * FROM claims WHERE entity_id = ? ORDER BY field`;
-  const { results } = await env.DB.prepare(sql).bind(entityId).all();
-  return results || [];
+export async function listSourceChecks(env, sourceId, limit = 50) {
+  return all(env, "SELECT checked_at, checker, http_status, final_url, observed_state, detail FROM source_checks WHERE source_id = ? ORDER BY checked_at DESC LIMIT ?", sourceId, limit);
 }
 
 export async function getClaim(env, id) {
-  return await env.DB.prepare(`SELECT * FROM claims WHERE id = ?`).bind(id).first();
+  return first(env, "SELECT * FROM claims WHERE id = ?", id);
 }
 
-export async function listAllCurrentClaims(env, limit = 5000) {
-  const { results } = await env.DB.prepare(
-    `SELECT * FROM claims WHERE status = 'current' ORDER BY id LIMIT ?`
-  ).bind(limit).all();
-  return results || [];
+export async function listClaimsFor(env, subjectType, subjectId, { currentOnly = true } = {}) {
+  const rows = await all(
+    env,
+    `SELECT * FROM claims WHERE subject_type = ? AND subject_id = ? ${currentOnly ? "AND status = 'current'" : ""} ORDER BY id`,
+    subjectType, subjectId
+  );
+  return attachSources(env, rows);
 }
 
-// Joins each change row to the claim it is about, so callers can show the
-// claim's field (what changed) and link to the claim, without a second
-// round trip per row. claim_field/claim_value/claim_statement are null when
-// a change has no claim_id (there are none of those today, but the schema
-// allows it).
-export async function listChanges(env, { entitySlug = null, limit = 200 } = {}) {
-  if (entitySlug) {
-    const { results } = await env.DB.prepare(
-      `SELECT changes.*, entities.slug AS entity_slug, entities.name AS entity_name,
-              claims.field AS claim_field, claims.value AS claim_value, claims.statement AS claim_statement
-       FROM changes
-       JOIN entities ON entities.id = changes.entity_id
-       LEFT JOIN claims ON claims.id = changes.claim_id
-       WHERE entities.slug = ? ORDER BY changed_at DESC LIMIT ?`
-    ).bind(entitySlug, limit).all();
-    return results || [];
+export async function attachSources(env, claims) {
+  const sources = await getSourcesByIds(env, claims.map((c) => c.source_id));
+  const byId = new Map(sources.map((s) => [s.id, s]));
+  return claims.map((c) => ({ ...c, source: sourceObject(byId.get(c.source_id)) }));
+}
+
+export async function getClaimsByIds(env, ids) {
+  const clean = [...new Set(ids.filter(Number.isInteger))];
+  if (!clean.length) return [];
+  const rows = await all(env, `SELECT * FROM claims WHERE id IN (${clean.map(() => "?").join(",")})`, ...clean);
+  return attachSources(env, rows);
+}
+
+export async function listAllCurrentClaims(env, limit = 10000) {
+  return all(env, "SELECT id, subject_type, subject_id, created_at FROM claims WHERE status = 'current' ORDER BY id LIMIT ?", limit);
+}
+
+// ---------- incidents ----------
+
+const INCIDENT_LIST_COLS = "id, slug, title, occurred_on, occurred_on_precision, ended_on, jurisdiction, country, level, type, summary, status, status_updated_on, pub_state, published_at, reviewed_on, updated_at";
+
+export async function listIncidents(env, { type, level, country, status, actorId, limit = 500 } = {}) {
+  const where = ["i.pub_state = 'published'"];
+  const binds = [];
+  if (type) { where.push("i.type = ?"); binds.push(type); }
+  if (level) { where.push("i.level = ?"); binds.push(level); }
+  if (country) { where.push("i.country = ?"); binds.push(country.toUpperCase()); }
+  if (status) { where.push("i.status = ?"); binds.push(status); }
+  if (actorId) { where.push("i.id IN (SELECT incident_id FROM incident_actors WHERE actor_id = ?)"); binds.push(actorId); }
+  binds.push(limit);
+  return all(env, `SELECT ${INCIDENT_LIST_COLS.split(", ").map((c) => "i." + c).join(", ")} FROM incidents i WHERE ${where.join(" AND ")} ORDER BY i.occurred_on DESC, i.id DESC LIMIT ?`, ...binds);
+}
+
+export async function getIncidentRow(env, slug) {
+  return first(env, "SELECT * FROM incidents WHERE slug = ?", slug);
+}
+
+export async function getIncidentFull(env, slug) {
+  const inc = await getIncidentRow(env, slug);
+  if (!inc) return null;
+  if (inc.pub_state !== "published") return { row: inc };
+  const [actors, outlets, journalists, cases, related, events, claims, srcRows] = await Promise.all([
+    all(env, `SELECT a.id, a.slug, a.name, a.kind, a.body_type, a.role AS actor_role, a.office, a.jurisdiction, a.wikidata_qid, a.official_url, ia.role, ia.role_at_time
+              FROM incident_actors ia JOIN actors a ON a.id = ia.actor_id WHERE ia.incident_id = ? AND a.pub_state = 'published' ORDER BY a.name`, inc.id),
+    all(env, `SELECT o.id, o.slug, o.name, o.kind, o.homepage_url, io.relation FROM incident_outlets io JOIN outlets o ON o.id = io.outlet_id
+              WHERE io.incident_id = ? AND o.pub_state = 'published' ORDER BY o.name`, inc.id),
+    all(env, `SELECT j.id, j.slug, j.name, j.role, ij.relation, o.slug AS outlet_slug, o.name AS outlet_name FROM incident_journalists ij
+              JOIN journalists j ON j.id = ij.journalist_id LEFT JOIN outlets o ON o.id = COALESCE(ij.outlet_id_at_time, j.outlet_id)
+              WHERE ij.incident_id = ? AND j.pub_state = 'published' ORDER BY j.name`, inc.id),
+    all(env, `SELECT c.id, c.slug, c.caption, c.short_name, c.court, c.docket, c.status, c.filed_on, c.decided_on, ic.relation FROM incident_cases ic
+              JOIN cases c ON c.id = ic.case_id WHERE ic.incident_id = ? AND c.pub_state = 'published' ORDER BY c.filed_on`, inc.id),
+    all(env, `SELECT i.slug, i.title, i.occurred_on, i.occurred_on_precision, ir.relation FROM incident_related ir JOIN incidents i ON i.id = ir.related_id
+              WHERE ir.incident_id = ? AND i.pub_state = 'published' ORDER BY i.occurred_on`, inc.id),
+    all(env, `SELECT e.id, e.occurred_on, e.occurred_on_precision, e.kind, e.label, e.claim_id, c.slug AS case_slug FROM events e LEFT JOIN cases c ON c.id = e.case_id
+              WHERE e.incident_id = ? AND e.pub_state = 'published' ORDER BY e.occurred_on, e.id`, inc.id),
+    listClaimsFor(env, "incident", inc.id),
+    all(env, `SELECT s.*, ins.role AS cite_role, ins.sort FROM incident_sources ins JOIN sources s ON s.id = ins.source_id WHERE ins.incident_id = ? ORDER BY ins.sort, s.id`, inc.id),
+  ]);
+  return { row: inc, actors, outlets, journalists, cases, related, events, claims, sources: srcRows };
+}
+
+// ---------- actors / outlets / journalists ----------
+
+export async function listActors(env) {
+  return all(env, `SELECT a.id, a.slug, a.name, a.kind, a.body_type, a.role, a.office, a.jurisdiction, a.country, a.updated_at,
+    (SELECT COUNT(DISTINCT ia.incident_id) FROM incident_actors ia JOIN incidents i ON i.id = ia.incident_id WHERE ia.actor_id = a.id AND i.pub_state = 'published') AS incident_count
+    FROM actors a WHERE a.pub_state = 'published' ORDER BY a.name`);
+}
+
+export async function getActorFull(env, slug) {
+  const row = await first(env, "SELECT * FROM actors WHERE slug = ?", slug);
+  if (!row || row.pub_state !== "published") return row ? { row } : null;
+  const incidents = await all(env, `SELECT i.slug, i.title, i.occurred_on, i.occurred_on_precision, i.type, i.status, ia.role, ia.role_at_time
+    FROM incident_actors ia JOIN incidents i ON i.id = ia.incident_id WHERE ia.actor_id = ? AND i.pub_state = 'published' ORDER BY i.occurred_on DESC`, row.id);
+  const cases = await all(env, `SELECT c.slug, c.caption, c.court, c.status, cp.side FROM case_parties cp JOIN cases c ON c.id = cp.case_id
+    WHERE cp.party_type = 'actor' AND cp.party_id = ? AND c.pub_state = 'published'`, row.id);
+  const claims = await listClaimsFor(env, "actor", row.id);
+  return { row, incidents, cases, claims };
+}
+
+export async function listOutlets(env) {
+  return all(env, `SELECT o.id, o.slug, o.name, o.kind, o.country, o.homepage_url, o.updated_at,
+    (SELECT COUNT(DISTINCT io.incident_id) FROM incident_outlets io JOIN incidents i ON i.id = io.incident_id WHERE io.outlet_id = o.id AND i.pub_state = 'published') AS incident_count
+    FROM outlets o WHERE o.pub_state = 'published' ORDER BY o.name`);
+}
+
+export async function getOutletFull(env, slug) {
+  const row = await first(env, "SELECT * FROM outlets WHERE slug = ?", slug);
+  if (!row || row.pub_state !== "published") return row ? { row } : null;
+  const incidents = await all(env, `SELECT i.slug, i.title, i.occurred_on, i.occurred_on_precision, i.type, i.status, io.relation
+    FROM incident_outlets io JOIN incidents i ON i.id = io.incident_id WHERE io.outlet_id = ? AND i.pub_state = 'published' ORDER BY i.occurred_on DESC`, row.id);
+  const journalists = await all(env, "SELECT slug, name, role FROM journalists WHERE outlet_id = ? AND pub_state = 'published' ORDER BY name", row.id);
+  const claims = await listClaimsFor(env, "outlet", row.id);
+  return { row, incidents, journalists, claims };
+}
+
+export async function listJournalists(env) {
+  return all(env, `SELECT j.id, j.slug, j.name, j.role, j.updated_at, o.slug AS outlet_slug, o.name AS outlet_name FROM journalists j
+    LEFT JOIN outlets o ON o.id = j.outlet_id WHERE j.pub_state = 'published' ORDER BY j.name`);
+}
+
+export async function getJournalistFull(env, slug) {
+  const row = await first(env, `SELECT j.*, o.slug AS outlet_slug, o.name AS outlet_name FROM journalists j LEFT JOIN outlets o ON o.id = j.outlet_id WHERE j.slug = ?`, slug);
+  if (!row || row.pub_state !== "published") return row ? { row } : null;
+  const incidents = await all(env, `SELECT i.slug, i.title, i.occurred_on, i.occurred_on_precision, i.type, i.status, ij.relation
+    FROM incident_journalists ij JOIN incidents i ON i.id = ij.incident_id WHERE ij.journalist_id = ? AND i.pub_state = 'published' ORDER BY i.occurred_on DESC`, row.id);
+  const claims = await listClaimsFor(env, "journalist", row.id);
+  return { row, incidents, claims };
+}
+
+// ---------- cases ----------
+
+export async function listCases(env) {
+  return all(env, "SELECT id, slug, caption, short_name, court, court_level, docket, filed_on, decided_on, status, updated_at FROM cases WHERE pub_state = 'published' ORDER BY COALESCE(filed_on, decided_on) DESC");
+}
+
+export async function getCaseFull(env, slug) {
+  const row = await first(env, "SELECT * FROM cases WHERE slug = ?", slug);
+  if (!row || row.pub_state !== "published") return row ? { row } : null;
+  const [partyRows, documents, events, incidents, claims] = await Promise.all([
+    all(env, "SELECT party_type, party_id, side FROM case_parties WHERE case_id = ?", row.id),
+    all(env, "SELECT s.*, cs.role AS doc_role FROM case_sources cs JOIN sources s ON s.id = cs.source_id WHERE cs.case_id = ? ORDER BY s.published_on, s.id", row.id),
+    all(env, "SELECT id, occurred_on, occurred_on_precision, kind, label, claim_id FROM events WHERE case_id = ? AND pub_state = 'published' ORDER BY occurred_on, id", row.id),
+    all(env, `SELECT i.id, i.slug, i.title, i.occurred_on, i.occurred_on_precision, ic.relation FROM incident_cases ic JOIN incidents i ON i.id = ic.incident_id
+      WHERE ic.case_id = ? AND i.pub_state = 'published' ORDER BY i.occurred_on`, row.id),
+    listClaimsFor(env, "case", row.id),
+  ]);
+  const parties = [];
+  for (const p of partyRows) {
+    const table = p.party_type === "actor" ? "actors" : p.party_type === "outlet" ? "outlets" : "journalists";
+    const r = await first(env, `SELECT slug, name, pub_state FROM ${table} WHERE id = ?`, p.party_id);
+    if (r) parties.push({ party_type: p.party_type, side: p.side, slug: r.pub_state === "published" ? r.slug : null, name: r.name });
   }
-  const { results } = await env.DB.prepare(
-    `SELECT changes.*, entities.slug AS entity_slug, entities.name AS entity_name,
-            claims.field AS claim_field, claims.value AS claim_value, claims.statement AS claim_statement
-     FROM changes
-     LEFT JOIN entities ON entities.id = changes.entity_id
-     LEFT JOIN claims ON claims.id = changes.claim_id
-     ORDER BY changed_at DESC LIMIT ?`
-  ).bind(limit).all();
-  return results || [];
+  return { row, parties, documents, events, incidents, claims };
 }
 
-export async function listObservationDailyForEntity(env, entityId, days = 30) {
-  const { results } = await env.DB.prepare(
-    `SELECT * FROM observation_daily WHERE entity_id = ? ORDER BY date DESC LIMIT ?`
-  ).bind(entityId, days).all();
-  return results || [];
-}
+// ---------- timeline ----------
 
-export async function listObservationDaily(env, days = 30) {
-  const { results } = await env.DB.prepare(
-    `SELECT observation_daily.*, entities.slug AS entity_slug, entities.name AS entity_name
-     FROM observation_daily JOIN entities ON entities.id = observation_daily.entity_id
-     ORDER BY date DESC LIMIT ?`
-  ).bind(days * 20).all();
-  return results || [];
-}
-
-// Request-weighted per-entity summary: requests and verified_requests are
-// summed over the window (date >= cutoffDate), so the verified share is
-// sum(verified_requests)/sum(requests), not a mean of daily shares. first_seen
-// and last_seen are unbounded (over every observation_daily row ever rolled
-// up for the entity), since "when have we ever seen this crawler" is a
-// different question from "how much traffic in the last 30 days". An entity
-// with rows only outside the window still appears, with requests = 0.
-export async function observationWindowSummary(env, cutoffDate) {
-  const { results } = await env.DB.prepare(
-    `SELECT observation_daily.entity_id,
-            entities.slug AS entity_slug, entities.name AS entity_name,
-            SUM(CASE WHEN observation_daily.date >= ? THEN observation_daily.requests ELSE 0 END) AS requests,
-            SUM(CASE WHEN observation_daily.date >= ? THEN COALESCE(observation_daily.verified_requests, 0) ELSE 0 END) AS verified_requests,
-            MIN(observation_daily.date) AS first_seen,
-            MAX(observation_daily.date) AS last_seen
-     FROM observation_daily
-     JOIN entities ON entities.id = observation_daily.entity_id
-     GROUP BY observation_daily.entity_id
-     ORDER BY requests DESC, entities.name ASC`
-  ).bind(cutoffDate, cutoffDate).all();
-  return results || [];
-}
-
-// The distinct response formats requested within the window, per entity.
-// Kept as a separate query because observation_daily.formats is a per-day
-// JSON array and merging those sets is easiest done in JS, not SQL.
-export async function observationWindowFormats(env, cutoffDate) {
-  const { results } = await env.DB.prepare(
-    `SELECT entity_id, formats FROM observation_daily WHERE date >= ?`
-  ).bind(cutoffDate).all();
-  const byEntity = {};
-  for (const r of results || []) {
-    const arr = safeJsonParse(r.formats, []);
-    if (!Array.isArray(arr)) continue;
-    if (!byEntity[r.entity_id]) byEntity[r.entity_id] = new Set();
-    for (const f of arr) byEntity[r.entity_id].add(f);
+export async function timelineRows(env, { year, actorSlug, type, country, from, to } = {}) {
+  const where = ["i.pub_state = 'published'"];
+  const binds = [];
+  if (type) { where.push("i.type = ?"); binds.push(type); }
+  if (country) { where.push("i.country = ?"); binds.push(country.toUpperCase()); }
+  if (actorSlug) { where.push("i.id IN (SELECT ia.incident_id FROM incident_actors ia JOIN actors a ON a.id = ia.actor_id WHERE a.slug = ?)"); binds.push(actorSlug); }
+  const incRows = await all(env, `SELECT i.id, i.slug, i.title, i.occurred_on, i.occurred_on_precision, i.type, i.country FROM incidents i WHERE ${where.join(" AND ")}`, ...binds);
+  const incIds = incRows.map((r) => r.id);
+  const bySlug = new Map(incRows.map((r) => [r.id, r]));
+  let evRows = [];
+  if (incIds.length) {
+    evRows = await all(env, `SELECT e.id, e.incident_id, e.case_id, e.occurred_on, e.occurred_on_precision, e.kind, e.label, e.claim_id, c.slug AS case_slug
+      FROM events e LEFT JOIN cases c ON c.id = e.case_id WHERE e.pub_state = 'published' AND e.incident_id IN (${incIds.map(() => "?").join(",")})`, ...incIds);
   }
-  return byEntity;
-}
-
-export async function recentObservations(env, limit = 20) {
-  const { results } = await env.DB.prepare(
-    `SELECT observations.ts, observations.path, observations.format_served, observations.ip_verified,
-            observations.verify_method, entities.slug AS entity_slug, entities.name AS entity_name
-     FROM observations LEFT JOIN entities ON entities.id = observations.entity_id
-     WHERE observations.entity_id IS NOT NULL
-     ORDER BY observations.ts DESC LIMIT ?`
-  ).bind(limit).all();
-  return results || [];
-}
-
-export async function insertObservation(env, row) {
-  await env.DB.prepare(
-    `INSERT INTO observations
-      (ts, entity_id, ua_raw, ip_hash, ip_verified, verify_method, asn, country, path, format_served, accept_header, status, robots_allowed, referer, cf_bot_category)
-     VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`
-  ).bind(
-    row.ts, row.entity_id ?? null, row.ua_raw ?? null, row.ip_hash ?? null,
-    row.ip_verified ? 1 : 0, row.verify_method ?? null, row.asn ?? null, row.country ?? null,
-    row.path ?? null, row.format_served ?? null, row.accept_header ?? null, row.status ?? null,
-    row.robots_allowed === null || row.robots_allowed === undefined ? null : (row.robots_allowed ? 1 : 0),
-    row.referer ?? null, row.cf_bot_category ?? null
-  ).run();
-}
-
-export async function upsertQuestion(env, { textRaw, textNorm, hash, source, ts }) {
-  const existing = await env.DB.prepare(`SELECT * FROM questions WHERE hash = ?`).bind(hash).first();
-  if (existing) {
-    const sources = safeJsonParse(existing.sources, []);
-    if (!sources.includes(source)) sources.push(source);
-    await env.DB.prepare(
-      `UPDATE questions SET ts_last = ?, count = count + 1, sources = ? WHERE id = ?`
-    ).bind(ts, JSON.stringify(sources), existing.id).run();
-    return existing.id;
+  const rows = incRows.map((i) => ({
+    date: i.occurred_on, precision: i.occurred_on_precision, kind: "incident", label: i.title,
+    incident_slug: i.slug, case_slug: null, claim_id: null,
+  }));
+  for (const e of evRows) {
+    const inc = bySlug.get(e.incident_id);
+    rows.push({ date: e.occurred_on, precision: e.occurred_on_precision, kind: e.kind, label: e.label, incident_slug: inc ? inc.slug : null, case_slug: e.case_slug || null, claim_id: e.claim_id });
   }
-  const res = await env.DB.prepare(
-    `INSERT INTO questions (ts_first, ts_last, text_raw, text_norm, hash, count, sources, matched_claim_ids, gap, published)
-     VALUES (?,?,?,?,?,1,?,?,?,0)`
-  ).bind(ts, ts, textRaw, textNorm, hash, JSON.stringify([source]), JSON.stringify([]), 1).run();
-  return res.meta && res.meta.last_row_id;
+  let out = rows;
+  if (year) out = out.filter((r) => r.date.startsWith(String(year)));
+  if (from) out = out.filter((r) => r.date >= from);
+  if (to) out = out.filter((r) => r.date <= to);
+  out.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : (a.kind === "incident" ? -1 : 1)));
+  return out;
 }
 
-export async function insertNote(env, { ts, targetType, targetId, body, authorClaim, uaRaw, ipHash }) {
-  const res = await env.DB.prepare(
-    `INSERT INTO notes (ts, target_type, target_id, body, author_claim, ua_raw, ip_hash, status)
-     VALUES (?,?,?,?,?,?,?,'pending')`
-  ).bind(ts, targetType, targetId ?? null, body, authorClaim ?? null, uaRaw ?? null, ipHash ?? null).run();
-  return res.meta && res.meta.last_row_id;
+// ---------- news desk ----------
+
+export async function listNotes(env, { limit = 30, offset = 0 } = {}) {
+  return all(env, `SELECT id, slug, title, note, word_count, primary_source_id, secondary_source_ids, incident_id, story_date, state, published_at, created_at
+    FROM news_desk_notes WHERE state = 'published' ORDER BY published_at DESC, id DESC LIMIT ? OFFSET ?`, limit, offset);
 }
 
-export async function listPublishedQuestions(env, limit = 200) {
-  const { results } = await env.DB.prepare(
-    `SELECT * FROM questions WHERE published = 1 ORDER BY ts_last DESC LIMIT ?`
-  ).bind(limit).all();
-  return results || [];
+export async function countPublishedNotes(env) {
+  const r = await first(env, "SELECT COUNT(*) AS n FROM news_desk_notes WHERE state = 'published'");
+  return r ? r.n : 0;
 }
 
-export async function listGapQuestions(env, limit = 50) {
-  const { results } = await env.DB.prepare(
-    `SELECT * FROM questions WHERE gap = 1 ORDER BY count DESC, ts_last DESC LIMIT ?`
-  ).bind(limit).all();
-  return results || [];
+export async function getNoteBySlug(env, slug) {
+  return first(env, "SELECT * FROM news_desk_notes WHERE slug = ?", slug);
 }
 
-export async function getQuestionById(env, id) {
-  return await env.DB.prepare(`SELECT * FROM questions WHERE id = ?`).bind(id).first();
-}
-
-export async function getQuestionByHash(env, hash) {
-  return await env.DB.prepare(`SELECT * FROM questions WHERE hash = ?`).bind(hash).first();
-}
-
-// Public note shape: exactly these seven columns, in this order, and
-// nothing else. This is the one place every public code path (entity,
-// claim and question pages, and the export) reads published notes from,
-// so ua_raw, ip_hash, reviewer_note and classification can never leak
-// through a public JSON, HTML or Markdown view, an export, or a future
-// call site that forgets to shape the row itself. The admin API reads
-// notes through its own queries below (listNotesByStatus, getNoteById),
-// which keep the full row on purpose.
-const PUBLIC_NOTE_COLUMNS = "id, target_type, target_id, body, author_claim, ts, status";
-
-export async function listPublishedNotesForTarget(env, targetType, targetId) {
-  const { results } = await env.DB.prepare(
-    `SELECT ${PUBLIC_NOTE_COLUMNS} FROM notes WHERE target_type = ? AND target_id = ? AND status = 'published' ORDER BY ts DESC`
-  ).bind(targetType, targetId).all();
-  return results || [];
-}
-
-// v1 search: simple term overlap, no embeddings (spec section 7). The
-// dataset is small (entities: a few dozen; claims: a few hundred at most
-// in this phase) so ranking in JS after a full-table fetch is adequate.
-export async function searchEntitiesAndClaims(env, normalizedQuery) {
-  const words = normalizedQuery.split(" ").filter(Boolean);
-  if (words.length === 0) return { entities: [], claims: [] };
-
-  const { results: allEntities } = await env.DB.prepare(`SELECT * FROM entities`).all();
-  const entityScored = (allEntities || [])
-    .map((e) => ({
-      e,
-      score: termOverlapScore(normalizedQuery, `${e.slug} ${e.vendor} ${e.name} ${e.kind} ${e.purpose || ""}`.toLowerCase()),
-    }))
-    .filter((x) => x.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 20)
-    .map((x) => x.e);
-
-  const { results: allClaims } = await env.DB.prepare(`SELECT * FROM claims WHERE status = 'current'`).all();
-  const claimScored = (allClaims || [])
-    .map((c) => ({
-      c,
-      score: termOverlapScore(normalizedQuery, `${c.field} ${c.statement}`.toLowerCase()),
-    }))
-    .filter((x) => x.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 20)
-    .map((x) => x.c);
-
-  return { entities: entityScored, claims: claimScored };
-}
-
-export async function migrationApplied(env, filename) {
-  const row = await env.DB.prepare(`SELECT filename FROM migrations WHERE filename = ?`).bind(filename).first();
-  return !!row;
-}
-
-// ---------- P0.5: exports (spec section 9) ----------
-// Claims are exported in full (every status), because a superseded or
-// disputed claim stays addressable and belongs in the public record just
-// as much as a current one. observations is never exported, only its
-// observation_daily rollup; questions and notes are filtered to published
-// content only, at the call sites below.
-
-export async function listAllClaimsForExport(env) {
-  const { results } = await env.DB.prepare(`SELECT * FROM claims ORDER BY id`).all();
-  return results || [];
-}
-
-export async function listAllChangesForExport(env) {
-  const { results } = await env.DB.prepare(`SELECT * FROM changes ORDER BY id`).all();
-  return results || [];
-}
-
-export async function listAllObservationDailyForExport(env) {
-  const { results } = await env.DB.prepare(`SELECT * FROM observation_daily ORDER BY date, entity_id`).all();
-  return results || [];
-}
-
-export async function listPublishedQuestionsForExport(env) {
-  const { results } = await env.DB.prepare(
-    `SELECT id, ts_first, ts_last, text_norm, count, sources, matched_claim_ids, gap
-     FROM questions WHERE published = 1 ORDER BY id`
-  ).all();
-  return results || [];
-}
-
-export async function listPublishedNotesForExport(env) {
-  const { results } = await env.DB.prepare(
-    `SELECT ${PUBLIC_NOTE_COLUMNS} FROM notes WHERE status = 'published' ORDER BY id`
-  ).all();
-  return results || [];
-}
-
-export async function listMcpCallsDailyForExport(env) {
-  const { results } = await env.DB.prepare(
-    `SELECT substr(ts, 1, 10) AS date, tool, COALESCE(client_name, 'unknown') AS client_name,
-            COUNT(*) AS calls, ROUND(AVG(latency_ms)) AS avg_latency_ms
-     FROM mcp_calls
-     WHERE tool != 'initialize'
-     GROUP BY date, tool, client_name
-     ORDER BY date, tool, client_name`
-  ).all();
-  return results || [];
-}
-
-export async function insertExportRow(env, { ts, kind, r2Key, githubCommit, rowCounts, note }) {
-  const res = await env.DB.prepare(
-    `INSERT INTO exports (ts, kind, r2_key, github_commit, row_counts, note) VALUES (?,?,?,?,?,?)`
-  ).bind(ts, kind, r2Key, githubCommit ?? null, JSON.stringify(rowCounts || {}), note ?? null).run();
-  const id = res.meta && res.meta.last_row_id;
+export async function noteWithSources(env, n) {
+  const secondary = safeJsonParse(n.secondary_source_ids, []) || [];
+  const sources = await getSourcesByIds(env, [n.primary_source_id, ...secondary]);
+  const byId = new Map(sources.map((s) => [s.id, s]));
+  let incident = null;
+  if (n.incident_id) incident = await first(env, "SELECT slug, title, pub_state FROM incidents WHERE id = ?", n.incident_id);
   return {
-    id,
-    ts,
-    kind,
-    r2_key: r2Key,
-    github_commit: githubCommit ?? null,
-    row_counts: rowCounts || {},
-    note: note ?? null,
+    primary: byId.get(n.primary_source_id) || null,
+    secondary: secondary.map((id) => byId.get(parseInt(id, 10))).filter(Boolean),
+    incident: incident && incident.pub_state === "published" ? incident : null,
   };
 }
 
-export async function getLastExport(env) {
-  const row = await env.DB.prepare(`SELECT * FROM exports ORDER BY id DESC LIMIT 1`).first();
-  if (!row) return null;
-  return { ...row, row_counts: safeJsonParse(row.row_counts, {}) };
+// ---------- glossary / explainers ----------
+
+export async function listGlossary(env) {
+  return all(env, "SELECT id, slug, term, definition, updated_at FROM glossary_terms WHERE pub_state = 'published' ORDER BY term COLLATE NOCASE");
 }
 
-// ---------- P0.5: admin API (spec section 7 / handoff "Notes moderation") ----------
+export async function getGlossaryTerm(env, slug) {
+  const row = await first(env, "SELECT * FROM glossary_terms WHERE slug = ?", slug);
+  if (!row || row.pub_state !== "published") return row ? { row } : null;
+  const sources = await all(env, "SELECT s.* FROM glossary_sources gs JOIN sources s ON s.id = gs.source_id WHERE gs.term_id = ? ORDER BY s.id", row.id);
+  return { row, sources };
+}
 
-const TABLES_FOR_HEALTH = [
-  "entities", "claims", "changes", "observations", "observation_daily",
-  "questions", "notes", "exports", "mcp_calls",
-];
+export async function listExplainers(env) {
+  return all(env, "SELECT id, slug, title, dek, published_at, updated_at FROM explainers WHERE pub_state = 'published' ORDER BY published_at DESC");
+}
 
-export async function countsForHealth(env) {
-  const out = {};
-  for (const t of TABLES_FOR_HEALTH) {
-    const row = await env.DB.prepare(`SELECT COUNT(*) AS c FROM ${t}`).first();
-    out[t] = (row && row.c) || 0;
+export async function getExplainer(env, slug) {
+  const row = await first(env, "SELECT * FROM explainers WHERE slug = ?", slug);
+  if (!row || row.pub_state !== "published") return row ? { row } : null;
+  const sources = await all(env, "SELECT s.* FROM explainer_sources es JOIN sources s ON s.id = es.source_id WHERE es.explainer_id = ? ORDER BY es.sort, s.id", row.id);
+  return { row, sources };
+}
+
+// ---------- changes ----------
+
+export async function listChanges(env, { limit = 200, correctionsOnly = false } = {}) {
+  return all(env, `SELECT * FROM changes ${correctionsOnly ? "WHERE is_correction = 1" : ""} ORDER BY changed_at DESC, id DESC LIMIT ?`, limit);
+}
+
+export async function listRevertedNotes(env) {
+  return all(env, "SELECT slug, title, story_date, published_at, reverted_at, revert_reason FROM news_desk_notes WHERE state = 'reverted' ORDER BY reverted_at DESC");
+}
+
+// Record path for a change row (public ledger links).
+export async function recordPathFor(env, recordType, recordId) {
+  const map = { incident: ["incidents", "/incidents/"], actor: ["actors", "/actors/"], outlet: ["outlets", "/outlets/"], journalist: ["journalists", "/journalists/"], case: ["cases", "/cases/"], explainer: ["explainers", "/explainers/"], glossary_term: ["glossary_terms", "/glossary/"], news_desk_note: ["news_desk_notes", "/news/"] };
+  const m = map[recordType];
+  if (!m || !recordId) return null;
+  const r = await first(env, `SELECT slug FROM ${m[0]} WHERE id = ?`, recordId);
+  return r ? `${m[1]}${r.slug}` : null;
+}
+
+// ---------- search ----------
+
+export async function upsertQuestion(env, { textRaw, textNorm, hash, source, ts, resultCount }) {
+  const existing = await first(env, "SELECT id, sources FROM questions WHERE hash = ?", hash);
+  if (existing) {
+    const sources = new Set(safeJsonParse(existing.sources, []) || []);
+    sources.add(source);
+    await env.DB.prepare("UPDATE questions SET ts_last = ?, count = count + 1, sources = ?, result_count = ? WHERE id = ?")
+      .bind(ts, JSON.stringify([...sources]), resultCount || 0, existing.id).run();
+    return existing.id;
+  }
+  const res = await env.DB.prepare("INSERT INTO questions (ts_first, ts_last, text_raw, text_norm, hash, count, sources, result_count) VALUES (?,?,?,?,?,1,?,?)")
+    .bind(ts, ts, textRaw, textNorm, hash, JSON.stringify([source]), resultCount || 0).run();
+  return res.meta && res.meta.last_row_id;
+}
+
+// FTS5 first (search_fts), falling back to LIKE term overlap when the FTS
+// table is missing or the query does not parse.
+export async function searchRecords(env, q, limit = 30) {
+  const terms = String(q || "").toLowerCase().replace(/[^\p{L}\p{N}\s-]/gu, " ").split(/\s+/).filter((t) => t.length > 1).slice(0, 8);
+  if (!terms.length) return [];
+  try {
+    const ftsQuery = terms.map((t) => `"${t.replace(/"/g, "")}"*`).join(" OR ");
+    const rows = await all(env, "SELECT record_type, record_id, title, snippet(search_fts, 3, '', '', '...', 20) AS snippet, bm25(search_fts) AS score FROM search_fts WHERE search_fts MATCH ? ORDER BY score LIMIT ?", ftsQuery, limit);
+    if (rows.length) return resolveSearchRows(env, rows);
+  } catch {
+    // fall through to LIKE
+  }
+  const like = `%${terms[0]}%`;
+  const rows = await all(env, `SELECT 'incident' AS record_type, id AS record_id, title, summary AS snippet FROM incidents WHERE pub_state = 'published' AND (title LIKE ? OR summary LIKE ? OR what_happened LIKE ?)
+    UNION ALL SELECT 'case', id, caption, holding FROM cases WHERE pub_state = 'published' AND (caption LIKE ? OR holding LIKE ?)
+    UNION ALL SELECT 'actor', id, name, role FROM actors WHERE pub_state = 'published' AND (name LIKE ? OR role LIKE ?)
+    UNION ALL SELECT 'glossary_term', id, term, definition FROM glossary_terms WHERE pub_state = 'published' AND (term LIKE ? OR definition LIKE ?) LIMIT ?`,
+  like, like, like, like, like, like, like, like, like, limit);
+  return resolveSearchRows(env, rows);
+}
+
+async function resolveSearchRows(env, rows) {
+  const out = [];
+  for (const r of rows) {
+    const path = await recordPathFor(env, r.record_type, r.record_id);
+    if (!path) continue;
+    const table = { incident: "incidents", case: "cases", actor: "actors", outlet: "outlets", journalist: "journalists", glossary_term: "glossary_terms", explainer: "explainers" }[r.record_type];
+    if (table) {
+      const pub = await first(env, `SELECT pub_state FROM ${table} WHERE id = ?`, r.record_id);
+      if (!pub || pub.pub_state !== "published") continue;
+    }
+    out.push({ record_type: r.record_type, title: r.title, path, snippet: String(r.snippet || "").replace(/\{c:\d+\}/g, "").slice(0, 300) });
   }
   return out;
 }
 
-// ---------- P1.1: scoped admin tokens / admin_denials (migration 0010) ----------
-// Deliberately not in TABLES_FOR_HEALTH or export.js's COLUMN_DESCRIPTIONS:
-// admin_denials is an internal security log, never exported, never
-// reachable by any public route. GET /admin/health surfaces only a count
-// and the latest row's ts/scope/attempted_status, via this function.
+// ---------- health / export bookkeeping ----------
 
-export async function insertAdminDenial(env, { ts, scope, method, path, attemptedStatus, noteId, ipHash }) {
-  const res = await env.DB.prepare(
-    `INSERT INTO admin_denials (ts, scope, method, path, attempted_status, note_id, ip_hash) VALUES (?,?,?,?,?,?,?)`
-  ).bind(ts, scope, method, path, attemptedStatus ?? null, noteId ?? null, ipHash ?? null).run();
-  return res.meta && res.meta.last_row_id;
-}
-
-export async function getAdminDenialsSummary(env) {
-  const countRow = await env.DB.prepare(`SELECT COUNT(*) AS c FROM admin_denials`).first();
-  const latest = await env.DB.prepare(
-    `SELECT ts, scope, attempted_status FROM admin_denials ORDER BY id DESC LIMIT 1`
-  ).first();
-  return { count: (countRow && countRow.c) || 0, latest: latest || null };
-}
-
-export async function listNotesByStatus(env, status, limit = 50) {
-  const { results } = await env.DB.prepare(
-    `SELECT * FROM notes WHERE status = ? ORDER BY ts DESC LIMIT ?`
-  ).bind(status, limit).all();
-  return results || [];
-}
-
-export async function getNoteById(env, id) {
-  return await env.DB.prepare(`SELECT * FROM notes WHERE id = ?`).bind(id).first();
-}
-
-export async function updateNote(env, id, { status, reviewerNote, classification }) {
-  await env.DB.prepare(
-    `UPDATE notes SET status = ?, reviewer_note = ?, classification = ? WHERE id = ?`
-  ).bind(status, reviewerNote ?? null, classification ?? null, id).run();
-  return await getNoteById(env, id);
-}
-
-// changed_at is always stored as a full UTC timestamp from this point on
-// (migration 0009 backfilled the earlier date-only rows). A caller that
-// still passes a bare date (10 chars, YYYY-MM-DD) gets it normalised to
-// midnight UTC here, so every writer converges on one shape without every
-// call site having to know about it; a caller that passes nothing gets
-// the current instant.
-function normalizeChangedAt(changedAt) {
-  if (!changedAt) return new Date().toISOString();
-  if (typeof changedAt === "string" && /^\d{4}-\d{2}-\d{2}$/.test(changedAt)) {
-    return `${changedAt}T00:00:00Z`;
+export async function countsForHealth(env) {
+  const tables = ["incidents", "actors", "outlets", "journalists", "cases", "events", "claims", "sources", "news_desk_notes", "explainers", "glossary_terms", "changes", "submissions", "requests", "questions", "mcp_calls", "admin_writes", "admin_denials"];
+  const out = {};
+  for (const t of tables) {
+    try {
+      const r = await first(env, `SELECT COUNT(*) AS n FROM ${t}`);
+      out[t] = r ? r.n : 0;
+    } catch {
+      out[t] = null;
+    }
   }
-  return changedAt;
+  for (const t of ["incidents", "actors", "outlets", "journalists", "cases", "explainers", "glossary_terms"]) {
+    const r = await first(env, `SELECT COUNT(*) AS n FROM ${t} WHERE pub_state = 'published'`);
+    out[`${t}_published`] = r ? r.n : 0;
+  }
+  const cur = await first(env, "SELECT COUNT(*) AS n FROM claims WHERE status = 'current'");
+  out.claims_current = cur ? cur.n : 0;
+  return out;
 }
 
-export async function insertChange(env, { claimId, entityId, changedAt, kind, oldValue, newValue, evidenceUrl, note }) {
-  const res = await env.DB.prepare(
-    `INSERT INTO changes (claim_id, entity_id, changed_at, kind, old_value, new_value, evidence_url, note)
-     VALUES (?,?,?,?,?,?,?,?)`
-  ).bind(claimId ?? null, entityId ?? null, normalizeChangedAt(changedAt), kind, oldValue ?? null, newValue ?? null, evidenceUrl ?? null, note ?? null).run();
-  return res.meta && res.meta.last_row_id;
+export async function getLastExport(env) {
+  return first(env, "SELECT * FROM exports ORDER BY id DESC LIMIT 1");
 }
 
-export async function updateClaimStatus(env, claimId, status) {
-  await env.DB.prepare(`UPDATE claims SET status = ?, updated_at = ? WHERE id = ?`)
-    .bind(status, isoNowSafe(), claimId).run();
-}
-
-function isoNowSafe() {
-  return new Date().toISOString();
-}
-
-export async function deleteChangeById(env, id) {
-  await env.DB.prepare(`DELETE FROM changes WHERE id = ?`).bind(id).run();
-}
-
-export async function getChangeById(env, id) {
-  return await env.DB.prepare(`SELECT * FROM changes WHERE id = ?`).bind(id).first();
+export async function insertExportRow(env, { ts, kind, r2Key, githubCommit, rowCounts, version, note }) {
+  const res = await env.DB.prepare("INSERT INTO exports (ts, kind, r2_key, github_commit, row_counts, datapackage_version, note) VALUES (?,?,?,?,?,?,?)")
+    .bind(ts, kind, r2Key, githubCommit, JSON.stringify(rowCounts), version || null, note || null).run();
+  return { id: res.meta && res.meta.last_row_id, ts, kind, r2_key: r2Key, github_commit: githubCommit, row_counts: rowCounts, datapackage_version: version, note };
 }

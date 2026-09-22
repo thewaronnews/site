@@ -1,0 +1,14 @@
+{"error": "<urlopen error Tunnel connection failed: 502 Bad Gateway>", "event": "fetch_incidents_error", "script": "newsdesk", "ts": "2026-09-22T19:39:42Z"}
+{"error": "<urlopen error Tunnel connection failed: 502 Bad Gateway>", "event": "fetch_notes_error", "script": "newsdesk", "ts": "2026-09-22T19:39:42Z"}
+{"error": "HTTP Error 404: Not Found", "event": "feed_error", "org": "U.S. Press Freedom Tracker", "script": "newsdesk", "ts": "2026-09-22T19:39:43Z", "url": "https://pressfreedomtracker.us/feed/"}
+{"count": 10, "event": "feed_fetched", "org": "Committee to Protect Journalists (CPJ)", "script": "newsdesk", "ts": "2026-09-22T19:39:43Z"}
+{"error": "HTTP Error 404: Not Found", "event": "feed_error", "org": "Reporters Without Borders (RSF)", "script": "newsdesk", "ts": "2026-09-22T19:39:44Z", "url": "https://rsf.org/en/rss.xml"}
+{"error": "HTTP Error 404: Not Found", "event": "feed_error", "org": "Freedom of the Press Foundation (FPF)", "script": "newsdesk", "ts": "2026-09-22T19:39:45Z", "url": "https://freedom.press/feed/"}
+{"count": 10, "event": "feed_fetched", "org": "Reporters Committee for Freedom of the Press (RCFP)", "script": "newsdesk", "ts": "2026-09-22T19:39:46Z"}
+{"error": "HTTP Error 404: Not Found", "event": "feed_error", "org": "Knight First Amendment Institute", "script": "newsdesk", "ts": "2026-09-22T19:39:46Z", "url": "https://knightcolumbia.org/feed"}
+{"error": "XML or text declaration not at start of entity: line 2, column 0", "event": "feed_error", "org": "Nieman Lab", "script": "newsdesk", "ts": "2026-09-22T19:39:46Z", "url": "https://www.niemanlab.org/feed/"}
+{"count": 10, "event": "feed_fetched", "org": "Poynter", "script": "newsdesk", "ts": "2026-09-22T19:39:47Z"}
+{"count": 10, "event": "feed_fetched", "org": "Columbia Journalism Review (CJR)", "script": "newsdesk", "ts": "2026-09-22T19:39:47Z"}
+{"count": 10, "event": "feed_fetched", "org": "PEN America", "script": "newsdesk", "ts": "2026-09-22T19:39:48Z"}
+{"event": "sweep_missing", "path": "/home/claude/crank3/twon/ops/candidates/2026-09-22.json", "script": "newsdesk", "ts": "2026-09-22T19:39:48Z"}
+{"count": 50, "event": "gathered", "script": "newsdesk", "ts": "2026-09-22T19:39:48Z"}
