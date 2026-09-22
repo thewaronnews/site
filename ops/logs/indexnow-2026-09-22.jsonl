@@ -6,3 +6,6 @@
 {"count": 100, "event": "pinged", "script": "indexnow", "status": 200, "ts": "2026-09-22T20:46:13Z"}
 {"count": 100, "event": "pinged", "script": "indexnow", "status": 200, "ts": "2026-09-22T20:46:13Z"}
 {"count": 54, "event": "pinged", "script": "indexnow", "status": 200, "ts": "2026-09-22T20:46:14Z"}
+{"count": 984, "event": "pinged", "script": "indexnow", "status": 200, "ts": "2026-09-22T23:30:01Z"}
+{"error": "INDEXNOW_KEY is not set (see ops/README.md)", "event": "fatal", "script": "indexnow", "ts": "2026-09-22T23:53:44Z"}
+{"count": 984, "event": "pinged", "script": "indexnow", "status": 200, "ts": "2026-09-22T23:53:58Z"}

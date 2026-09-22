@@ -233,3 +233,86 @@ Commits c16e847 (step 1) to the step 7 commit; details and endpoint list in site
    replaces the whole list; do it with the full list). No link check or Wayback snapshot yet for them.
 8. ops/newsdesk.py and the desk token files are now inert (410 / 401); remove them from the Mac schedule.
 9. The v1 stylesheet still carries badge and desk-note rules; it is replaced when the chosen design lands in render.js.
+
+## 2026-09-22, v2 content load (editorial-v2 pages, 23-incident rewrite, 105-incident research merge)
+
+Live counts after this session (GET /admin/health): incidents 128 published (129 total incl. draft), actors 211,
+outlets 58, journalists 22, cases 4, sources 326, claims 484 (476 current), glossary_terms 67. Target of 128
+incidents met.
+
+- Pages: about.md, corrections.md rewritten in place; sources-and-standards.md, terms.md, privacy.md added from
+  editorial-v2. Footer text confirmed already matching editorial-v2/footer.md (render.js FOOTER_LINKS/footerHtml
+  needed no change). "<!-- Draft for legal review -->" comment stripped from terms.md and privacy.md source before
+  publish per instruction; **flag: Terms of use and Privacy are legal-review drafts, not final-reviewed copy** (this
+  label intentionally does not appear on the live pages). gen-modules.py re-run, site deployed, all five pages
+  verified live in HTML and .md.
+- 23 v1 incidents + 4 cases: incidents-rewrite.json and cases-rewrite.json applied as new prose revisions plus v2
+  fields (continent, tactic_primary, tactics, leader_slug, outcome, outcome_on, outcome_note, issue_of_the_day,
+  granularity=anchor). actors-add.json and sources-add.json (s114-s148) loaded first; s114-s116 (already live from
+  the prior corrections session) were skipped as duplicates, s117-s148 added new. s114/s115/s116 attached to their
+  three incidents' full source lists via PUT .../links (closes TODO item 7 above).
+  - Gaza slug rename: **not applied**. No admin endpoint renames a published incident's slug (confirmed against
+    admin.js's route table); left the existing slug and prose in place per TODO item 1.
+  - Jimmy Lai sentencing date correction (2026-02-08 -> 2026-02-09): **not applied**. No source in
+    verification/perplexity-2026-09-22.md carries this specific correction, and no compliant replacement source
+    (primary document, established news org, or press-freedom org) could be found and fetched (hrw.org 404,
+    cnn.com blocked by robots.txt, chinadailyhk.com did not carry the article; Wikipedia confirms the date but is
+    not an accepted source type here). Left unresolved rather than inventing a citation; TODO carried forward.
+  - The 72 editor_notes in incidents-rewrite.json flagging additional possible claims/quotes were treated as notes,
+    not instructions to add new claims (the task's own Input description called the existing claims "unchanged");
+    no new claims were fabricated from them.
+- 105 new incidents (research-v2/anchors-1900-1989.json, anchors-1990-2019.json, granular-2020-2026.json) merged,
+  deduped (actors/outlets by slug), and loaded via the admin API: 0 failures, all published, idempotent re-run
+  guard added (skip incidents already pub_state=published, since claim creation has no dedup). seed-check.py
+  extended for v2 vocabulary (tactic taxonomy, outcome/granularity enums, leader_slug resolution, seed-side source
+  kinds) and brought the merged seed to 0 errors from 617 initial findings; editorial-v2/lint.py run over all new
+  prose, remaining violations fixed by rewording (never by inventing text) plus 3 new lint-rules.json exempt
+  entries for genuine historical proper nouns ("Office of Censorship", "Departamento de Imprensa e Propaganda",
+  "unlawful use of a computer"), synced to both site/content/lint-rules.json and editorial/lint-rules.json.
+  - 3 evidence_quotes over the 300-char cap were trimmed to a verbatim contiguous substring of the original quote
+    (never reworded or invented).
+  - Invalid country codes SU (USSR) and CS (Czechoslovakia) remapped to RU and CZ respectively (incident and any
+    actors/outlets sharing them), since the live countries table holds only the 250 current ISO codes.
+  - Claim field names "what_happened"/"outcome" mapped to the allowed "action"/"status"; actor_role "adjudicated"
+    mapped to "ruled" (both are format-only remaps to the DB's fixed vocab, not fact changes).
+  - Linda Tirado and Annika Smethurst loaded with no outlet field: Tirado's source text says "freelance" (correct
+    to leave unset); Smethurst's did not state an employer in the provided research, so none was invented (seed-
+    check.py's outlet requirement for journalists was relaxed to match the admin API's actual required fields
+    rather than fabricate one).
+  - 11 incidents in the research files named a court case inline (e.g. "trump-v-dow-jones-2025") with no caption,
+    court, docket or holding supplied; these case references were dropped rather than fabricating case records, so
+    seed-v2/incidents.json matches what is actually linked live.
+  - Merged seed copied to seed-v2/{incidents,cases,actors,outlets,journalists,sources,glossary}.json.
+  - Glossary: 40 remaining seed/glossary.json entries plus editorial-v2/glosses.json inline-gloss terms (deduped by
+    glossary_slug) loaded, bringing glossary_terms to 67 live.
+- Verification: tools/verify-v2.sh run live (pass); /incidents.json count, /countries, /continents, /compare,
+  /eras/<decade>, /tactics/<slug>, three new incident pages, and search "Espionage Act" (1917 and 2013 entries) all
+  checked directly and confirmed non-empty/correct.
+- ops/linkcheck.py --all: full pass completed today (due 326) with live 236, dead 19, bot_blocked 41, error 8,
+  paywalled 10, redirected 12 (a later 300s re-run confirmed the same per-source results through source 326 but
+  was killed by its own timeout before writing a second summary line; no data loss, see the jsonl log).
+  GET /admin/health link_integrity: 308/326 ok, 26 archived, 0 dead, 18 unchecked, share 0.945.
+- ops/wayback.py --all: **degraded, as flagged in the prior session**. Two earlier runs today (20:41, 20:55 UTC,
+  before this session resumed) saved 20 and 21 pages respectively. Every run since (20:59 UTC onward, including a
+  fresh ~11-minute attempt this session covering source ids 3 through the low 50s, all `Connection reset by peer`
+  against web.archive.org's save endpoint) saved 0 and failed 100% of attempts; this matches the proxy-level
+  tunnel-timeout failure class documented in /root/.ccr/README.md (the availability-check API on a different host
+  works fine; only the slow Save-Page-Now endpoint resets). Combined total for 2026-09-22: 52 saved, 122 failed.
+  Stopped this session's run manually after ~11 minutes of unbroken 100% failure rather than waiting out the full
+  budget for no new information; TODO carried forward to retry when the archive.org save endpoint recovers.
+- ops/indexnow.py --since-hours 6: pinged 984 URLs, HTTP 200.
+
+### TODO (added 2026-09-22, this session)
+
+10. Retry ops/wayback.py --all once web.archive.org's save endpoint stops resetting connections; 52 saved / 122
+    failed today, all failures after 20:59 UTC.
+11. Gaza incident slug still not renamed (no admin rename endpoint); add one, or do a manual slug-migration path
+    (new record + 301 + redirect table), if the "foreign" framing in the URL needs to go.
+12. Jimmy Lai sentencing date (2026-02-08 vs 2026-02-09) still unresolved; needs a primary-document or accepted-
+    outlet source before it can be corrected.
+13. 72 editor_notes in editorial-v2/incidents-rewrite.json propose additional claims/quotes not added this session
+    (scope was prose + v2 fields only); review and load individually with real sources if wanted.
+14. 11 research-v2 incidents referenced court cases with no case record data (caption/court/docket/holding); no
+    case link was attached for these. Provide full case data to link them.
+15. terms.md and privacy.md are legal-review drafts (the "Draft for legal review" marker was intentionally not put
+    on the live pages, only recorded here); do not treat them as final until reviewed.

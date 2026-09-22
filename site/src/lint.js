@@ -5,7 +5,10 @@ export const LINT_RULES = {
  "applies_to": "the site's own words only; text inside quotation marks (\" “ ”) and Markdown blockquotes is verbatim and never linted",
  "matching": "case-insensitive, whole words; a banned phrase that contains a quotation_only word is reported once, as the banned phrase",
  "exempt": [
-  "The War On News"
+  "The War On News",
+  "Office of Censorship",
+  "Departamento de Imprensa e Propaganda",
+  "unlawful use of a computer"
  ],
  "banned": [
   {

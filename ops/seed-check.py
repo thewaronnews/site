@@ -63,7 +63,14 @@ SPEC_ENUMS = {
         "funding_cut", "arrest_or_detention", "subpoena_or_seizure", "legislation",
         "physical_obstruction", "other",
     },
-    "incident.level": {"federal", "state", "local", "foreign"},
+    # v2 (brief 2026-09-22): level is the tier of government that acted, not a
+    # domestic/foreign distinction. Both the legacy v1 values and the live v2
+    # values are accepted here so the checker still validates pre-v2 seed
+    # rows; the admin API itself only accepts the v2 set.
+    "incident.level": {
+        "federal", "state", "local", "foreign",
+        "national", "state_or_province", "municipal", "supranational",
+    },
     "incident.occurred_on_precision": {"day", "month", "year", "approximate"},
     "source.source_kind": {
         "reporting", "primary_document", "court_record", "official_statement", "dataset", "reference",
@@ -74,6 +81,35 @@ SPEC_ENUMS = {
         "public_media", "press_association", "other",
     },
     "actor.kind": {"person", "body"},
+    # v2 fields (brief 2026-09-22).
+    "incident.outcome": {"reversed", "upheld", "sustained", "ongoing", "unknown"},
+    "incident.granularity": {"anchor", "granular"},
+    "tactic.slug": {
+        "access_ban", "credential_control", "outlet_licensing", "prior_restraint",
+        "secrets_and_espionage_laws", "insult_and_defamation_laws", "surveillance_and_subpoenas",
+        "funding_and_ownership_pressure", "expulsion_and_visa_denial", "shutdowns_and_blocking",
+        "detention_and_violence", "lawsuits_against_press", "disinformation_labeling",
+    },
+}
+
+# Pre-DB-mapping seed vocabularies that the load tools (load-seed.py,
+# tools/v2-backfill.py's siblings, the v2 research loader) translate into the
+# SPEC_ENUMS values above before posting to the admin API (e.g. sources.kind
+# "outlet_report"/"org_report"/"official_document"/... -> source_kind
+# "reporting"/"reference"/"primary_document"; actors.kind "office"/"other"
+# -> DB kind "body"). A value in one of these sets is reported at
+# "warning", not "error": it is seed-side shorthand with an established,
+# tested translation, not a value the admin API would actually reject as
+# posted.
+SEED_SIDE_VOCAB = {
+    "source.source_kind": {
+        "outlet_report", "org_report", "official_statement", "court_record", "primary_document",
+        "official_document", "press_freedom_report", "advocacy_report", "press_freedom_org",
+        "advocacy_legal", "legal_analysis", "other", "dataset", "reference", "reporting",
+    },
+    "actor.kind": {"person", "body", "office", "other"},
+    "source.link_state": {"blocks_automated_checks"},
+    "outlet.kind": {"wire", "publisher"},
 }
 
 # Prose fields checked for em/en dashes and lint per record type. This is
@@ -150,12 +186,21 @@ def check_date(report: Report, file: str, record: str, field: str, value: Any, r
 
 def check_enum(report: Report, file: str, record: str, field: str, value: Any, enum_key: str, severity: str = "error") -> None:
     allowed = SPEC_ENUMS[enum_key]
-    if value not in allowed:
+    if value in allowed:
+        return
+    seed_vocab = SEED_SIDE_VOCAB.get(enum_key)
+    if seed_vocab and value in seed_vocab:
         report.add(
             file, record, "enum_shape_mismatch",
-            f"{field}='{value}' not in spec enum {enum_key}={sorted(allowed)}",
-            severity=severity,
+            f"{field}='{value}' is seed-side shorthand for spec enum {enum_key}, translated by the load tools",
+            severity="warning",
         )
+        return
+    report.add(
+        file, record, "enum_shape_mismatch",
+        f"{field}='{value}' not in spec enum {enum_key}={sorted(allowed)}",
+        severity=severity,
+    )
 
 
 def check_country(report: Report, file: str, record: str, value: Any) -> None:
@@ -271,7 +316,11 @@ def run(seed_dir: Path) -> Report:
     for j in journalists:
         slug = j.get("slug", "?")
         check_slug(report, "journalists", slug, slug)
-        for field in ("name", "outlet", "role"):
+        # `outlet` is not required: the admin API's own PUT
+        # /admin/records/journalist/<slug> only requires name and role
+        # (outlet_slug is optional, e.g. a freelance journalist or one whose
+        # employer is not stated in the sources reviewed).
+        for field in ("name", "role"):
             if not j.get(field):
                 report.add("journalists", slug, "field_missing", f"{field} is missing or empty")
         outlet = j.get("outlet")
@@ -329,9 +378,29 @@ def run(seed_dir: Path) -> Report:
             check_enum(report, "incidents", slug, "occurred_on_precision", i["occurred_on_precision"], "incident.occurred_on_precision")
         if "level" in i:
             check_enum(report, "incidents", slug, "level", i["level"], "incident.level")
-        if "type" in i:
+        if "type" in i and not i.get("tactic_primary"):
+            # v2 incidents carry `type` as a duplicate of tactic_primary (a
+            # 13-tactic-taxonomy slug, checked below) rather than the legacy
+            # v1 incident.type enum, and the admin API is never sent `type`
+            # for a v2 load, so it is not re-checked against the old enum
+            # here.
             check_enum(report, "incidents", slug, "type", i["type"], "incident.type")
         check_country(report, "incidents", slug, i.get("country"))
+
+        # -- v2 fields (brief 2026-09-22) --
+        if i.get("tactic_primary"):
+            check_enum(report, "incidents", slug, "tactic_primary", i["tactic_primary"], "tactic.slug")
+        for t in i.get("tactics") or []:
+            check_enum(report, "incidents", slug, "tactics[]", t, "tactic.slug")
+        if "outcome" in i and i["outcome"] is not None:
+            check_enum(report, "incidents", slug, "outcome", i["outcome"], "incident.outcome")
+        if "granularity" in i and i["granularity"] is not None:
+            check_enum(report, "incidents", slug, "granularity", i["granularity"], "incident.granularity")
+        leader = i.get("leader_slug")
+        if leader and leader not in actor_slugs:
+            report.add("incidents", slug, "broken_reference", f"leader_slug: '{leader}' not found in actors.json")
+        if i.get("issue_of_the_day") and len(str(i["issue_of_the_day"]).split()) > 60:
+            report.add("incidents", slug, "issue_of_the_day_length", "issue_of_the_day exceeds 60 words")
 
         for a in i.get("actors", []):
             if a not in actor_slugs:
