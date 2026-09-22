@@ -1,0 +1,33 @@
+# desk/feeds.yaml -- News Desk sweep feeds (spec section 7.1 step 1).
+#
+# Tracker RSS feeds are leads only (spec: "Advocacy feeds are leads only");
+# every candidate still goes through Jev in_scope scoring and the gates in
+# section 7.3 before it can publish. URLs below are the publicly documented
+# feed endpoints for each organization as of 2026-09-22; CONFIRM each one
+# against the live site during P1a build (spec: "URLs confirmed in P1a") --
+# a 404/410 feed here should be fixed, not silently skipped forever.
+#
+# newsdesk.py treats a feed it cannot fetch as a soft failure (logged, run
+# continues with whatever feeds did work).
+
+feeds:
+  - org: "U.S. Press Freedom Tracker"
+    url: "https://pressfreedomtracker.us/feed/"
+  - org: "Committee to Protect Journalists (CPJ)"
+    url: "https://cpj.org/feed/"
+  - org: "Reporters Without Borders (RSF)"
+    url: "https://rsf.org/en/rss.xml"
+  - org: "Freedom of the Press Foundation (FPF)"
+    url: "https://freedom.press/feed/"
+  - org: "Reporters Committee for Freedom of the Press (RCFP)"
+    url: "https://www.rcfp.org/feed/"
+  - org: "Knight First Amendment Institute"
+    url: "https://knightcolumbia.org/feed"
+  - org: "Nieman Lab"
+    url: "https://www.niemanlab.org/feed/"
+  - org: "Poynter"
+    url: "https://www.poynter.org/feed/"
+  - org: "Columbia Journalism Review (CJR)"
+    url: "https://www.cjr.org/feed"
+  - org: "PEN America"
+    url: "https://pen.org/feed/"
