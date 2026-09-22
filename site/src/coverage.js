@@ -21,7 +21,9 @@ const JEV_STATE_LIMIT = 1800;
 // non-browser User-Agents (ops/logs/first-run-2026-09-22.md).
 const BROWSER_UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36";
 const FETCH_UA = "Mozilla/5.0 (compatible; twon-coverage/1.0; +https://thewaronnews.com/coverage)";
-const MAX_NEW_PER_RUN = 40;
+// Subrequest budget: about 26 feed fetches plus at most 20 Jev calls keeps
+// a run under the 50-subrequest limit of the smallest Workers plan.
+const MAX_NEW_PER_RUN = 20;
 const MAX_ITEM_AGE_DAYS = 14;
 
 const GN = (q, hl = "en-US", gl = "US", ceid = "US:en") => `https://news.google.com/rss/search?q=${encodeURIComponent(q)}&hl=${hl}&gl=${gl}&ceid=${ceid}`;
@@ -29,12 +31,16 @@ const GN_QUERIES = [
   '"press freedom" OR "journalists banned" OR "reporters barred"',
   '"journalist arrested" OR "journalist detained" OR "reporter jailed"',
   '"press pass" revoked OR "press credentials" revoked OR "accreditation revoked" journalist',
-  '"foreign agent" law media OR outlet OR journalists',
-  'government shuts down newspaper OR broadcaster OR "news website"',
-  '"internet shutdown" OR "news site blocked" journalists',
-  'journalist expelled OR "visa denied" correspondent',
-  'subpoena reporter sources OR "spyware" journalists government',
-  'defamation charges journalist government OR "fake news law"',
+];
+// Bing News RSS answers Workers more reliably than Google News, which
+// often returns 503 to Cloudflare egress (first run, 2026-09-22).
+const BING = (q, cc = "us") => `https://www.bing.com/news/search?q=${encodeURIComponent(q)}&format=rss&setlang=en&cc=${cc}`;
+const BING_QUERIES = [
+  ["press freedom journalists government", "us"],
+  ["journalist arrested OR detained OR jailed", "us"],
+  ["reporters barred OR banned OR expelled government", "us"],
+  ["news outlet licence revoked OR shut down government", "gb"],
+  ["journalist arrested press freedom", "in"],
 ];
 
 // Seed list: ops/desk/feeds.yaml (press-freedom organisations and media
@@ -52,12 +58,8 @@ export const DEFAULT_FEEDS = [
   { org: "PEN America", url: "https://pen.org/feed/" },
   ...GN_QUERIES.map((q) => ({ org: "Google News", url: GN(q), google: true })),
   { org: "Google News (United Kingdom)", url: GN('"press freedom" OR "journalist arrested" OR "reporters barred"', "en-GB", "GB", "GB:en"), google: true },
-  { org: "Google News (Canada)", url: GN('"press freedom" OR "journalist arrested" OR "reporters barred"', "en-CA", "CA", "CA:en"), google: true },
   { org: "Google News (India)", url: GN('"press freedom" OR "journalist arrested" OR "journalist booked"', "en-IN", "IN", "IN:en"), google: true },
-  { org: "Google News (Australia)", url: GN('"press freedom" OR "journalist arrested" OR "reporters barred"', "en-AU", "AU", "AU:en"), google: true },
-  { org: "Google News (South Africa)", url: GN('"press freedom" OR "journalist arrested"', "en-ZA", "ZA", "ZA:en"), google: true },
-  { org: "Google News (Nigeria)", url: GN('"press freedom" OR "journalist arrested"', "en-NG", "NG", "NG:en"), google: true },
-  { org: "Google News (Philippines)", url: GN('"press freedom" OR "journalist arrested"', "en-PH", "PH", "PH:en"), google: true },
+  ...BING_QUERIES.map(([q, cc]) => ({ org: "Bing News", url: BING(q, cc), bing: true })),
 ];
 
 export async function getFeeds(env) {
@@ -74,7 +76,7 @@ export async function setFeeds(env, feeds) {
   for (const f of feeds) {
     const u = normalizeUrl(f && f.url);
     if (!u || !/^https:\/\//.test(u)) throw new ValidationError({ field: "feeds.url", error: "https_url_required", value: f && f.url });
-    clean.push({ org: String(f.org || new URL(u).hostname).slice(0, 120), url: f.url, ...(f.google || /news\.google\.com/.test(u) ? { google: true } : {}) });
+    clean.push({ org: String(f.org || new URL(u).hostname).slice(0, 120), url: f.url, ...(f.google || /news\.google\.com/.test(u) ? { google: true } : {}), ...(f.bing || /bing\.com\/news/.test(u) ? { bing: true } : {}) });
   }
   await env.KV.put(FEEDS_KV_KEY, JSON.stringify(clean));
   return { count: clean.length, feeds: clean };
@@ -82,14 +84,14 @@ export async function setFeeds(env, feeds) {
 
 // ---------- canonical URLs and titles ----------
 
-const TRACKING = /^(utm_|fbclid$|gclid$|mc_cid$|mc_eid$|ocid$|cmpid$|smid$|taid$|ref$|ref_src$|src$|at_medium$|at_campaign$|guccounter$|rss$|feed$|output$)/i;
+const TRACKING = /^(utm_|fbclid$|gclid$|mc_cid$|mc_eid$|ocid$|oc$|cmpid$|smid$|taid$|ref$|ref_src$|src$|at_medium$|at_campaign$|guccounter$|rss$|feed$|output$)/i;
 
 export function canonicalUrl(raw) {
   try {
     const u = new URL(String(raw).trim());
     if (!/^https?:$/.test(u.protocol)) return null;
     u.protocol = "https:";
-    u.hostname = u.hostname.toLowerCase().replace(/^(www|amp|m)\./, "");
+    u.hostname = u.hostname.toLowerCase();
     u.hash = "";
     for (const k of [...u.searchParams.keys()]) if (TRACKING.test(k)) u.searchParams.delete(k);
     u.searchParams.sort();
@@ -148,6 +150,12 @@ function attr(block, name, attrName, where = null) {
   return null;
 }
 
+// The site prints no em dashes; feed headlines and summaries are otherwise
+// shown as the publisher wrote them.
+function undash(s, joiner) {
+  return String(s || "").replace(/\s*[\u2014\u2015]\s*/g, joiner).replace(/\s+\u2013\s+/g, joiner);
+}
+
 function words(s, n) {
   const w = String(s || "").split(/\s+/).filter(Boolean);
   return w.length <= n ? w.join(" ") : `${w.slice(0, n).join(" ")}...`;
@@ -161,7 +169,12 @@ export function parseFeed(xml, feed) {
     let title = stripTags(tag(b, "title"));
     let link = isAtom ? (attr(b, "link", "href", /rel\s*=\s*["']alternate["']/i) || attr(b, "link", "href")) : stripTags(tag(b, "link")) || stripTags(tag(b, "guid"));
     const date = stripTags(tag(b, isAtom ? "published" : "pubDate") || tag(b, "updated") || tag(b, "dc:date") || "");
-    let publisher = stripTags(tag(b, "source")) || feed.org;
+    let publisher = stripTags(tag(b, "source")) || stripTags(tag(b, "News:Source")) || feed.org;
+    if (/bing\.com\/news\/apiclick/i.test(link || "")) {
+      // Bing wraps the article address in an apiclick redirect (url=...).
+      try { const real = new URL(decodeEntities(link.trim())).searchParams.get("url"); if (real) link = real; } catch { /* keep */ }
+      publisher = publisher.replace(/\s+on MSN$/, "");
+    }
     let summary = stripTags(tag(b, isAtom ? "summary" : "description") || tag(b, "content") || "");
     if (feed.google || /news\.google\.com/.test(feed.url)) {
       // Google News titles end " - Publisher"; the description repeats the
@@ -177,6 +190,9 @@ export function parseFeed(xml, feed) {
     if (summary && titleKey(summary).startsWith(titleKey(title))) summary = "";
     const d = new Date(date);
     if (!title || !link) continue;
+    if (/ - BingNews$/.test(title)) continue;
+    title = undash(title, ": ");
+    summary = undash(summary, ", ");
     items.push({
       title: title.slice(0, 300),
       link: link.trim(),
@@ -212,20 +228,26 @@ async function countryMatchers(env) {
     if (r.name.length > 3) list.push([r.iso2, r.name.toLowerCase()]);
     for (const d of DEMONYMS[r.iso2] || []) list.push([r.iso2, d]);
   }
-  list.push(["US", "united states"], ["GB", "united kingdom"], ["CD", "congo"], ["CZ", "czech"], ["KR", "korea"]);
+  list.push(["US", "united states"], ["GB", "united kingdom"], ["CD", "congo"], ["CZ", "czech"], ["KR", "korea"], ["GB", "bbc"], ["SO", "somaliland"]);
   list.sort((a, b) => b[1].length - a[1].length);
   countryCache = list.map(([iso2, name]) => [iso2, new RegExp(`(^|[^a-z])${name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}($|[^a-z])`, "i")]);
   return countryCache;
 }
 
-export async function guessCountry(env, text) {
-  const t = String(text || "");
-  const counts = new Map();
-  for (const [iso2, re] of await countryMatchers(env)) {
-    if (re.test(t)) counts.set(iso2, (counts.get(iso2) || 0) + 1);
+// The earliest country named in the headline wins (headlines usually lead
+// with the country that acted: "Egypt: Sudanese journalist arrested"), then
+// the summary; a longer name beats a shorter one at the same place.
+export async function guessCountry(env, title, summary = "") {
+  const matchers = await countryMatchers(env);
+  for (const t of [String(title || ""), String(summary || "")]) {
+    let best = null;
+    for (const [iso2, re] of matchers) {
+      const m = re.exec(t);
+      if (m && (!best || m.index < best.index)) best = { iso2, index: m.index };
+    }
+    if (best) return best.iso2;
   }
-  if (!counts.size) return null;
-  return [...counts.entries()].sort((a, b) => b[1] - a[1])[0][0];
+  return null;
 }
 
 // ---------- Jev ----------
@@ -268,6 +290,17 @@ export async function jevClassify(env, state) {
 
 // ---------- the hourly job ----------
 
+const PRESS_RE = /\b(journalists?|reporters?|press|media|newspapers?|broadcasters?|outlets?|correspondents?|editors?|news agency|photojournalists?|bloggers?|publishers?|newsrooms?|radio|television|tv)\b/gi;
+const STATE_RE = /\b(government|authorities|police|court|judge|ministry|minister|law|bill|arrest(ed|s)?|detain(ed|s)?|jail(ed)?|prison|sentenced|charged|ban(s|ned)?|barred|revok(e|ed|es)|expel(led|s)?|deport(ed)?|licen[cs]e|regulator|president|prime minister|parliament|congress|sued|lawsuit|subpoena|raid(ed)?|seiz(e|ed)|block(ed|s)?|shut(down| down)|visa|accreditation|credentials?|pentagon|white house|kremlin|junta|military|security forces|spyware|surveillance|agent)\b/gi;
+
+function prefilterScore(text) {
+  const t = String(text || "");
+  const p = (t.match(PRESS_RE) || []).length;
+  const g = (t.match(STATE_RE) || []).length;
+  if (!p || !g) return Math.min(p, 1);
+  return 1 + Math.min(p, 3) + Math.min(g, 3);
+}
+
 async function fetchFeed(feed) {
   const r = await fetch(feed.url, { headers: { "User-Agent": feed.google ? BROWSER_UA : FETCH_UA, Accept: "application/rss+xml, application/atom+xml, application/xml, text/xml;q=0.9, */*;q=0.5" }, redirect: "follow", cf: { cacheTtl: 300 } });
   if (!r.ok) throw new Error(`HTTP ${r.status}`);
@@ -275,25 +308,18 @@ async function fetchFeed(feed) {
   return parseFeed(text.slice(0, 2_000_000), feed);
 }
 
-// Google News item links point at news.google.com/rss/articles/...; the
-// real address is resolved by following the redirect when it is plain HTTP,
-// otherwise the Google link is kept (it still opens the article).
-async function resolveGoogleLink(link) {
-  try {
-    const r = await fetch(link, { method: "GET", redirect: "manual", headers: { "User-Agent": BROWSER_UA } });
-    const loc = r.headers.get("Location");
-    if (loc && /^https?:\/\//.test(loc) && !/google\.com/.test(new URL(loc).hostname)) return loc;
-  } catch { /* keep the Google link */ }
-  return link;
-}
+// Google News item links (news.google.com/rss/articles/...) are kept as
+// given: they open the publisher's page in a browser, and resolving them
+// would cost a subrequest each. Title similarity catches the same story
+// arriving from Google News and from the publisher's own feed.
 
 export async function runCoverage(env, { maxNew = MAX_NEW_PER_RUN, dryRun = false } = {}) {
   const started = Date.now();
   const feeds = await getFeeds(env);
   const out = { started_at: isoNow(), feeds: feeds.length, feed_errors: [], fetched: 0, fresh: 0, duplicates: 0, scored: 0, shown: 0, hidden: 0, jev_errors: 0, pruned: 0, new_items: [] };
-  const results = await Promise.allSettled(feeds.map((f) => fetchFeed(f)));
+  const fetched = await Promise.allSettled(feeds.map((f) => fetchFeed(f)));
   let candidates = [];
-  results.forEach((r, i) => {
+  fetched.forEach((r, i) => {
     if (r.status === "fulfilled") candidates.push(...r.value);
     else out.feed_errors.push({ url: feeds[i].url, error: String(r.reason && r.reason.message || r.reason).slice(0, 120) });
   });
@@ -307,50 +333,55 @@ export async function runCoverage(env, { maxNew = MAX_NEW_PER_RUN, dryRun = fals
   const seenUrls = new Set(recent.map((r) => r.url));
   const seenKeys = recent.map((r) => r.title_key);
   const batchKeys = [];
-  let scoredCount = 0;
+  const fresh = [];
   for (const c of candidates) {
-    if (scoredCount >= maxNew) break;
-    if (Date.now() - started > 25000) break;
     const key = titleKey(c.title);
-    if (!key) continue;
-    let url = canonicalUrl(c.link);
-    if (!url) continue;
+    const url = canonicalUrl(c.link);
+    if (!key || !url) continue;
     const dupByTitle = (k) => k === key || jaccard(k, key) >= 0.8;
     if (seenUrls.has(url) || seenKeys.some(dupByTitle) || batchKeys.some(dupByTitle)) { out.duplicates++; continue; }
-    batchKeys.push(key);
-    if (c.google) {
-      const resolved = canonicalUrl(await resolveGoogleLink(c.link));
-      if (resolved) url = resolved;
-      if (seenUrls.has(url)) { out.duplicates++; continue; }
-    }
     seenUrls.add(url);
-    let score = null;
-    let tactic = null;
-    let tacticConf = null;
-    let model = null;
-    try {
-      const state = `Headline: ${c.title}\nOutlet: ${c.publisher}\nDate: ${c.published_at || "unknown"}\nText: ${c.summary || c.title}`;
-      const j = await jevClassify(env, state);
-      model = j.model;
-      score = j.answers.in_scope && typeof j.answers.in_scope.noul === "number" ? j.answers.in_scope.noul : null;
-      if (j.answers.tactic) { tactic = j.answers.tactic.choice || null; tacticConf = j.answers.tactic.confidence ?? null; }
-      out.scored++;
-    } catch (e) {
-      out.jev_errors++;
-      if (out.jev_errors <= 3) out.feed_errors.push({ url: "jev", error: String(e.message || e).slice(0, 160) });
-    }
-    scoredCount++;
-    const country = await guessCountry(env, `${c.title} ${c.summary}`);
-    const state = score !== null && score >= SHOW_THRESHOLD ? "shown" : "hidden";
-    const reason = score === null ? "not scored" : state === "shown" ? `in_scope ${score.toFixed(2)}` : `in_scope ${score.toFixed(2)} below ${SHOW_THRESHOLD}`;
-    if (state === "shown") out.shown++; else out.hidden++;
-    out.new_items.push({ title: c.title, publisher: c.publisher, url, score, tactic, country, state });
-    if (dryRun) continue;
-    const now = isoNow();
-    await env.DB.prepare(`INSERT OR IGNORE INTO coverage_items (url, title, title_key, publisher, published_at, summary, feed_url, jev_in_scope, jev_model, tactic_guess, tactic_confidence, country_guess, state, state_reason, fetched_at, updated_at)
-      VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`)
-      .bind(url, c.title, key, c.publisher, c.published_at, c.summary || null, c.feed_url, score, model, tactic, tacticConf, country, state, reason, now, now).run();
+    batchKeys.push(key);
+    fresh.push({ ...c, url, key, pre: prefilterScore(`${c.title} ${c.summary}`) });
   }
+  // Cheap keyword screen first: Jev scores only items that mention both
+  // the press and a state actor or action, best matches and newest first.
+  fresh.sort((x, y) => y.pre - x.pre || String(y.published_at || "").localeCompare(String(x.published_at || "")));
+  const toScore = fresh.filter((c) => c.pre >= 2).slice(0, maxNew);
+  const scoreSet = new Set(toScore);
+  const results = new Map();
+  for (let k = 0; k < toScore.length; k += 4) {
+    if (Date.now() - started > 90000) break;
+    const group = toScore.slice(k, k + 4);
+    const settled = await Promise.allSettled(group.map((c) => jevClassify(env, `Headline: ${c.title}\nOutlet: ${c.publisher}\nDate: ${c.published_at || "unknown"}\nText: ${c.summary || c.title}`)));
+    settled.forEach((r, i) => {
+      if (r.status === "fulfilled") { results.set(group[i], r.value); out.scored++; }
+      else { out.jev_errors++; if (out.jev_errors <= 3) out.feed_errors.push({ url: "jev", error: String(r.reason && r.reason.message || r.reason).slice(0, 160) }); }
+    });
+  }
+  const now = isoNow();
+  const stmts = [];
+  for (const c of fresh) {
+    const j = results.get(c);
+    // Items not screened in, or not reached this run, are stored only when
+    // they failed the keyword screen (so they are not re-read every hour);
+    // screened items that were not scored wait for the next run.
+    if (!j && scoreSet.has(c)) continue;
+    const score = j && j.answers.in_scope && typeof j.answers.in_scope.noul === "number" ? j.answers.in_scope.noul : null;
+    const tactic = j && j.answers.tactic ? j.answers.tactic.choice || null : null;
+    const tacticConf = j && j.answers.tactic ? j.answers.tactic.confidence ?? null : null;
+    const country = await guessCountry(env, c.title, c.summary);
+    const state = score !== null && score >= SHOW_THRESHOLD ? "shown" : "hidden";
+    const reason = !j ? "keyword screen" : score === null ? "not scored" : state === "shown" ? `in_scope ${score.toFixed(2)}` : `in_scope ${score.toFixed(2)} below ${SHOW_THRESHOLD}`;
+    if (state === "shown") out.shown++; else out.hidden++;
+    if (j) out.new_items.push({ title: c.title, publisher: c.publisher, url: c.url, score, tactic, country, state });
+    stmts.push(env.DB.prepare(`INSERT OR IGNORE INTO coverage_items (url, title, title_key, publisher, published_at, summary, feed_url, jev_in_scope, jev_model, tactic_guess, tactic_confidence, country_guess, state, state_reason, fetched_at, updated_at)
+      VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`)
+      .bind(c.url, c.title, c.key, c.publisher, c.published_at, c.summary || null, c.feed_url, score, j ? j.model : null, tactic, tacticConf, country, state, reason, now, now));
+  }
+  out.screened_out = fresh.filter((c) => c.pre < 2).length;
+  out.new_items.sort((x, y) => (y.score || 0) - (x.score || 0));
+  if (!dryRun) for (let k = 0; k < stmts.length; k += 50) await env.DB.batch(stmts.slice(k, k + 50));
   if (!dryRun) {
     const pr = await env.DB.prepare("DELETE FROM coverage_items WHERE incident_id IS NULL AND COALESCE(published_at, fetched_at) < ?").bind(isoNow(new Date(Date.now() - RETENTION_DAYS * 86400000))).run();
     out.pruned = (pr.meta && pr.meta.changes) || 0;

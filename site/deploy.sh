@@ -38,7 +38,8 @@ KV_NAME="twon-kv"
 R2_NAME="twon-exports"
 ZONE_HOST="thewaronnews.com"
 ZONE_HOST_WWW="www.thewaronnews.com"
-CRON="17 7 * * *"
+CRON="17 7 * * *"          # nightly: rollup, bot IP lists, export
+CRON_COVERAGE="5 * * * *"  # hourly: recent coverage (feeds, Jev, prune)
 GA4_MEASUREMENT_ID="${GA4_MEASUREMENT_ID:-}"
 DATA_REPO="${DATA_REPO:-https://github.com/${GITHUB_ORG:-thewaronnews}/${GITHUB_REPO:-data}}"
 
@@ -157,6 +158,7 @@ SECRETS_LIST=$(cf_get "/accounts/$CLOUDFLARE_ACCOUNT_ID/workers/scripts/$WORKER_
 has_secret() { echo "$SECRETS_LIST" | jq -r --arg n "$1" '.result[]? | select(.name==$n) | .name' 2>/dev/null; }
 HAS_SALT=$(has_secret SALT_SECRET)
 HAS_GITHUB_TOKEN=$(has_secret GITHUB_TOKEN)
+HAS_JEV_API_KEY=$(has_secret JEV_API_KEY)
 
 # ---------- upload worker ----------
 log "Uploading worker script $WORKER_NAME"
@@ -230,7 +232,24 @@ if [ -z "$HAS_GITHUB_TOKEN" ]; then
 else
   log "GITHUB_TOKEN already set, leaving it alone."
 fi
+# JEV_API_KEY: when set, the coverage cron uses the paid Jev endpoint
+# (api.featherless.ai); without it, the demo endpoint.
+if [ -z "$HAS_JEV_API_KEY" ] && [ -n "${JEV_API_KEY:-}" ]; then
+  log "Setting JEV_API_KEY Worker secret (value not printed)"
+  put_secret JEV_API_KEY "$JEV_API_KEY"
+fi
 # ADMIN_TOKEN (operator scope) is issued by tools/issue-scoped-admin-tokens.sh.
+
+# ---------- coverage feed list in KV (seeded once; edit with PUT /admin/coverage/feeds) ----------
+KV_FEEDS=$(curl -sS -o /dev/null -w "%{http_code}" "${AUTH[@]}" "$API/accounts/$CLOUDFLARE_ACCOUNT_ID/storage/kv/namespaces/$KV_ID/values/coverage:feeds")
+if [ "$KV_FEEDS" = "404" ]; then
+  log "Seeding coverage:feeds in KV from src/coverage.js DEFAULT_FEEDS"
+  FEEDS_JSON=$(node -e 'import(process.argv[1]).then((m) => console.log(JSON.stringify(m.DEFAULT_FEEDS)))' "$(pwd)/src/coverage.js")
+  RES=$(curl -sS "${AUTH[@]}" -X PUT "$API/accounts/$CLOUDFLARE_ACCOUNT_ID/storage/kv/namespaces/$KV_ID/values/coverage:feeds" -H "Content-Type: text/plain" --data-binary "$FEEDS_JSON")
+  ok "$RES" && log "coverage:feeds seeded ($(echo "$FEEDS_JSON" | jq length) feeds)" || log "coverage:feeds not seeded: $(echo "$RES" | jq -c '.errors')"
+else
+  log "coverage:feeds already in KV (HTTP $KV_FEEDS), leaving it alone"
+fi
 
 # ---------- custom domains ----------
 attach_domain() {
@@ -250,8 +269,8 @@ attach_domain "$ZONE_HOST"
 attach_domain "$ZONE_HOST_WWW"
 
 # ---------- cron ----------
-log "Setting cron schedule ($CRON UTC)"
-RES=$(cf_put "/accounts/$CLOUDFLARE_ACCOUNT_ID/workers/scripts/$WORKER_NAME/schedules" "[{\"cron\":\"$CRON\"}]")
+log "Setting cron schedules ($CRON and $CRON_COVERAGE UTC)"
+RES=$(cf_put "/accounts/$CLOUDFLARE_ACCOUNT_ID/workers/scripts/$WORKER_NAME/schedules" "[{\"cron\":\"$CRON\"},{\"cron\":\"$CRON_COVERAGE\"}]")
 if ! ok "$RES"; then
   echo "Setting cron failed:"; echo "$RES" | jq -c '.errors'
   exit 1
