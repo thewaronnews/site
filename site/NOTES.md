@@ -1,5 +1,53 @@
 # The War On News (thewaronnews.com), Crank #3: Worker notes
 
+## v2 (2026-09-22, brief v2-brief-2026-09-22.md)
+
+- Migration `0004_v2.sql`: `tactics` (13, seeded), `countries` (250: ISO 3166-1 plus XK, continent slug, UN M49
+  sub-region, RSF rank columns; list in `tools/data/countries.txt`), `incident_tactics`, `coverage_items`;
+  `incidents` rebuilt (level = national | state_or_province | municipal | supranational; `type` optional; new
+  continent, tactic_primary, leader_slug, issue_of_the_day, outcome/outcome_on/outcome_note, granularity; `era` is a
+  VIRTUAL generated column). The rebuild keeps every statement FK-consistent on its own (children copied aside,
+  emptied, parent rebuilt, children restored) because deploy.sh sends one statement per D1 call and deferred FKs do
+  not survive a parent DROP. Events de-duplicated in the same pass (12 -> 6 CNN rows) and
+  `UNIQUE (incident_id, occurred_on, kind, label)`; `POST /admin/events` is now idempotent on that key.
+- Pre-migration backup of every table: `dump.py` in the session scratchpad produced `prod-pre-v2.sqlite` (D1's export
+  API refuses databases with FTS5 tables). Time-travel bookmark before 0004:
+  `00000009-00000000-000050ee-6cfe64e7e68e04e2ca55111eac6da066`.
+- Scopes: triage, publish, operator. Desk tokens are no longer accepted; `/admin/desk/*` and `/admin/notes/*` answer
+  410; `newsdesk.js` removed (the `news_desk_notes` table is kept).
+- New admin endpoints: `GET /admin/sources` (limit/offset/link_state), `GET /admin/events?incident=|case=`,
+  `DELETE /admin/events/:id` (operator), `POST /admin/incidents/:slug/fields` (v2 fields, revision appended),
+  `PUT /admin/incidents/:slug/tactics` {primary, tactics[], reason}, `GET /admin/tactics`, `PUT /admin/tactics/:slug`,
+  `GET /admin/countries`, `POST /admin/countries/:iso2/press-freedom` {rank, year, source_url, source_id?},
+  `GET /admin/coverage?state=`, `POST /admin/coverage/:id` {state, reason | incident_slug (publish) | tactic_guess |
+  country_guess}, `GET|PUT /admin/coverage/feeds` (KV `coverage:feeds`), `POST /admin/cron/coverage` {max_new,
+  dry_run} (operator; runs the hourly job now), `POST /admin/search/rebuild` (operator).
+- Modules: `search.js` (facet parsing, canonical query, one incident query for every list view, CSV, FTS over incident,
+  actor, outlet, journalist, case, glossary_term, tactic, country, coverage_item), `v2routes.js` (faceted /incidents
+  and /search, /countries, /countries/<iso2>, /continents, /continents/<slug>, /tactics, /tactics/<slug>, /compare,
+  /eras, /eras/<decade>s, /leaders, /leaders/<slug>, /coverage), `coverage.js` (hourly job).
+- Facets on /incidents, /search and search_incidents: country (comma list), continent, tactic, from, to (year or
+  date), level, actor, leader, outlet, outcome, source_kind, has_case; plus q, sort (date, date_asc, country, tactic,
+  relevance), per_page (max 100), page, view (table | cards). Canonical query order is fixed; the canonical link and
+  the .md/.json alternates carry it. `?format=csv` on every list view; `/incidents.csv` for the full set.
+- Redirects (301): /methodology -> /sources-and-standards; /news, /news/page/N -> /coverage; /news/{feed.xml,atom.xml,
+  feed.json} -> /coverage/...; /countries/US -> /countries/us; /tactics/access-ban -> /tactics/access_ban;
+  /eras/1970 -> /eras/1970s. /sitemaps/news.xml and news-google.xml are gone (404).
+- Policy pages come from `content/<slug>.md` through `tools/gen-modules.py`; a slug without a file (terms, privacy,
+  sources-and-standards today) is served as its title plus "Text pending editorial review." Drop the editor's file in
+  `content/` and re-run deploy.sh to swap it in.
+- Crons: `17 7 * * *` nightly (unchanged) and `5 * * * *` recent coverage; `scheduled()` dispatches on event.cron.
+  Coverage: 20 feeds from KV (10 organisations from ops/desk/feeds.yaml, 5 Google News searches, 5 Bing News
+  searches; Google News answers most Worker fetches with 503, Bing works), items older than 14 days skipped, canonical
+  URL (tracking parameters, fragment) plus title-similarity (Jaccard >= 0.8) dedupe, keyword screen, Jev demo
+  (`simple-jev-demo-api.featherless.ai`, browser User-Agent, 1,800-character state; paid endpoint when the Worker
+  secret JEV_API_KEY exists) for in_scope and tactic, 4 calls in parallel, at most 20 per hourly run; shown when
+  in_scope >= 0.80; country guessed from the earliest country name in the headline; unattached items pruned after 60
+  days. Em dashes in feed headlines and summaries are replaced (": " and ", ").
+- Tools: `tools/verify-v2.sh` (all v2 routes in three formats, facets, CSV, feeds, redirects), `tools/mcp-smoke.sh`
+  (11 tools), `tools/v2-backfill.py` (tactics, leaders, outcomes for the 23 v1 incidents, wording),
+  `tools/apply-corrections-2026-09-22.py`, `tools/local-harness.mjs` (now `DB_FILE=` runs on a copy of real data).
+
 Built and deployed 2026-09-22 from `twon-data-and-record-spec.md` v1.0 on top of
 a copy of Crank #2's Worker. Everything below was checked against the live site
 or the Cloudflare API on 2026-09-22.

@@ -169,3 +169,67 @@ Lai conviction: 2025-12-15). Remaining unquoted " -- " uses outside quotations w
 incident and case now publishes with at least one quoted claim, and the CNN case docket/judge are
 confirmed (item 2). The events duplication (item 4) and the glossary self-reference lint warnings (item
 3) are the only two open items, both requiring a Worker-side decision rather than a seed fix.
+
+## 2026-09-22: v2 back end (lead implementer), per v2-brief-2026-09-22.md
+
+Commits c16e847 (step 1) to the step 7 commit; details and endpoint list in site/NOTES.md "v2".
+
+- Step 1: migration 0004_v2 applied live (tactics 13, countries 250, incident_tactics, coverage_items, incidents
+  rebuilt with the v2 fields and the new level enum, era generated). **Events fixed: CNN incident 12 rows -> 6**,
+  UNIQUE index on events(incident_id, occurred_on, kind, label); `POST /admin/events` idempotent;
+  `GET /admin/events?incident=` and operator `DELETE /admin/events/:id` added (worklog item 4 above closed).
+- Step 2: admin API for v2 fields, tactics, country RSF rank, coverage (hide/show/attach), feeds, `GET /admin/sources`,
+  search rebuild, manual coverage cron. Desk scope retired; /admin/desk/* and /admin/notes/* answer 410.
+- Steps 3-4: faceted /incidents and /search (12 facets, sort, view, page size capped at 100, facet counts, canonical
+  URL, descriptive title, .md/.json twins, ?format=csv), /incidents.csv; /countries, /countries/<iso2>, /continents,
+  /continents/<slug>, /tactics, /tactics/<slug>, /compare, /eras, /eras/<decade>, /leaders, /leaders/<slug>,
+  /coverage with RSS/Atom/JSON feeds. /news removed (301 to /coverage); "News Desk" gone from routes, nav, llms.txt,
+  sitemaps, feeds, MCP. Sitemaps and llms.txt list the new views.
+- Step 5: hourly cron `5 * * * *` (deploy.sh); manual run through `POST /admin/cron/coverage`: 319 items fetched,
+  112 fresh, 40 scored by Jev, 13 shown (in_scope >= 0.80). 109 coverage rows stored (13 shown).
+- Step 6: link-state badges removed from every template (states stay in .json); dead sources read "original page no
+  longer resolves; archived copy"; new footer; /terms, /privacy, /sources-and-standards (placeholder "Text pending
+  editorial review."), /methodology 301; MCP: search_incidents facets, get_country, get_tactic, compare,
+  recent_coverage; latest_news removed; mcp-smoke.sh 14/14 live.
+- v2 classification of the 23 v1 incidents via tools/v2-backfill.py: tactics (primary plus others) for 22, leader_slug
+  for 17 (actors that exist), outcomes only where the record's own claims state them (Acosta reversed 2018-11-19,
+  Hungary reversed 2026-06-30, Louisiana law reversed 2025-01-31, CNN 2026, AP, VOA ongoing, Gaza sustained).
+  Wording without "foreign" framing: Gaza incident prose and title, claims 12 and 104 superseded (reason update,
+  new ids 112, 113), glossary espionage-act, national-security-law-hong-kong, foreign-agent-law.
+- Corrections (verification/perplexity-2026-09-22.md, items 1-4) applied as superseding claims with is_correction
+  revisions (tools/apply-corrections-2026-09-22.py):
+  1. AP exclusion 2025-02-16 -> 2025-02-11: claim 28 -> 108, source added s114 (VOA, 2025-02-12, "on Tuesday").
+  2. Pentagon rules 2025-09-21 -> 2025-09-19: claim 32 -> 109, source added s115 (NPR, 2025-09-20, "confirmed to NPR
+     Friday"). Note: The Guardian (2025-09-20) says the memo was "issued Thursday" (2025-09-18); 09-19 is the date the
+     rules were made public.
+  3. Louisiana HB173 2024-05-28 -> 2024-05-24: claim 48 -> 110, source added s116 (Louisiana Legislature bill history,
+     primary document: "05/24 H Signed by the Governor. Becomes Act No. 259."; effective 2024-08-01). The v1 date came
+     from WVUE's "signed into law Tuesday (May 28)".
+  4. Jimmy Lai conviction: record already 2025-12-15; claim 82 value 2025-12-14 superseded by 111 (same HRW source).
+- Step 7: tools/verify-v2.sh live: 27 pages x 3 formats, 10 facet views, 6 CSV, 13 feeds/sitemaps/discovery all 200;
+  6 redirects 301; removed sitemaps 404; 190 rendered pages parsed with balanced tags. Public HTML grep: "News Desk" 0,
+  "Blocks automatic" 0, "Live" only in the programme name "Jimmy Kimmel Live!", em dashes only inside verbatim quotes.
+
+### TODO (v2)
+
+1. "foreign" still appears in public HTML in: the Gaza incident slug (URLs; a slug change needs a rename path the
+   admin API lacks), verbatim quotes and source titles, statutory names in quotation marks ("collusion with foreign
+   forces", "foreign agent"), the glossary term name "Foreign agent law", the publisher Foreign Policy, the
+   append-only /changes ledger reasons, and site prose on four incidents that reports what governments said or
+   describes correspondents (Hong Kong/Lai, Turkiye, Hungary, Russia). Editorial pass needed.
+2. about.md still narrates AI agents and "US first"; the editor's About, Sources and standards, Terms of use and
+   Privacy texts are pending (Terms and Privacy: "Draft for legal review", keep that label in the worklog only).
+3. RSF ranks: no country has one yet (Perplexity reported US 64th in 2026; confirm against RSF and set with
+   `POST /admin/countries/US/press-freedom`).
+4. Leaders missing (no actor yet): India (Modi), Israel (Netanyahu), Hong Kong (John Lee), Turkiye (Erdogan),
+   Louisiana (Landry). Nixon enemies list has no tactic (no clean fit; editorial call). issue_of_the_day is empty on
+   every incident; most outcomes are "unknown" until sourced.
+5. Coverage: Google News answers most Worker fetches with 503 (Bing News carries the search load); country guesses are
+   headline heuristics; the hourly scheduled run had not fired yet at hand-off (first due 23:05 UTC); check
+   /admin/health coverage_last_run. Consider rotating feeds if the plan's subrequest limit bites (20 feeds + 20 Jev).
+6. Jimmy Lai sentencing date (verification item 5: 2026-02-08 vs 2026-02-09) not applied; the Pentagon
+   "struck down in March 2026" item is already covered by claim 35.
+7. New sources s114-s116 are cited by claims but not yet listed in incident_sources (PUT /admin/incidents/<slug>/links
+   replaces the whole list; do it with the full list). No link check or Wayback snapshot yet for them.
+8. ops/newsdesk.py and the desk token files are now inert (410 / 401); remove them from the Mac schedule.
+9. The v1 stylesheet still carries badge and desk-note rules; it is replaced when the chosen design lands in render.js.
