@@ -18,10 +18,17 @@ import path from "node:path";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const site = path.dirname(here);
-const db = new DatabaseSync(":memory:");
+// DB_FILE=/path/to/copy.sqlite runs against a copy of real data (see
+// NOTES.md: production dump); migrations already recorded there are skipped.
+const db = new DatabaseSync(process.env.DB_FILE || ":memory:");
+db.exec("PRAGMA foreign_keys = ON");
+const applied = new Set();
+try { for (const r of db.prepare("SELECT filename FROM migrations").all()) applied.add(r.filename); } catch { /* fresh db */ }
 for (const f of readdirSync(path.join(site, "migrations")).sort()) {
+  if (applied.has(f)) continue;
   const stmts = JSON.parse(execFileSync("python3", [path.join(here, "split-sql.py"), path.join(site, "migrations", f)]).toString());
   for (const s of stmts) db.exec(s);
+  db.prepare("INSERT INTO migrations (filename, applied_at) VALUES (?, ?)").run(f, new Date().toISOString());
 }
 
 function norm(v) {

@@ -14,7 +14,7 @@ import { sha256Hex, isoNow, isoDate } from "./util.js";
 import { all, first, countsForHealth, getLastExport } from "./db.js";
 import {
   normalizeType, upsertRecord, publishRecord, withdrawRecord, replaceIncidentLinks, replaceCaseLinks,
-  replaceSimpleSources, createClaim, supersedeClaim, setClaimStatus, createEvent, ValidationError, TYPES,
+  replaceSimpleSources, createClaim, supersedeClaim, setClaimStatus, createEvent, listEvents, deleteEvent, ValidationError, TYPES,
 } from "./records.js";
 import { upsertSource, dueSources, recordChecks, setWayback, linkIntegrity } from "./linkstate.js";
 import { createNote, listNotesByState, publishHeldNote, revertNote, setDeskPaused, deskPaused } from "./newsdesk.js";
@@ -238,6 +238,14 @@ function routes() {
     ["POST", /^\/admin\/events$/, PUBLISH, async ({ env, body }) => {
       const r = await createEvent(env, body);
       return { result: r, write: { record_type: "event", record_id: r.id, batch_label: body.batch_label, summary: `event ${r.id}` } };
+    }],
+    ["GET", /^\/admin\/events$/, ANY, async ({ env, url }) => {
+      const rows = await listEvents(env, { incidentSlug: url.searchParams.get("incident"), caseSlug: url.searchParams.get("case") });
+      return { result: { count: rows.length, events: rows } };
+    }],
+    ["DELETE", /^\/admin\/events\/(\d+)$/, OPERATOR, async ({ env }, m) => {
+      const r = await deleteEvent(env, parseInt(m[1], 10));
+      return { result: r, write: { record_type: "event", record_id: r.id, summary: `event ${r.id} deleted` } };
     }],
     ["POST", /^\/admin\/sources$/, DESK_UP, async ({ env, body }) => {
       const r = await upsertSource(env, body);

@@ -15,7 +15,10 @@ export const ENUMS = {
   body_type: ["executive_office", "agency", "regulator", "legislature", "court", "law_enforcement", "foreign_government", "other"],
   outlet_kind: ["newspaper", "broadcaster", "cable_news", "wire_service", "digital", "magazine", "public_media", "press_association", "other"],
   precision: ["day", "month", "year", "approximate"],
-  level: ["federal", "state", "local", "foreign"],
+  // v2: the tier of government that acted (brief 2026-09-22).
+  level: ["national", "state_or_province", "municipal", "supranational"],
+  outcome: ["reversed", "upheld", "sustained", "ongoing", "unknown"],
+  granularity: ["anchor", "granular"],
   incident_type: ["access_ban", "credential_revocation", "lawsuit_against_press", "regulatory_pressure", "funding_cut", "arrest_or_detention", "subpoena_or_seizure", "legislation", "physical_obstruction", "other"],
   incident_status: ["in_effect", "in_litigation", "enjoined", "reversed", "expired", "resolved", "historical"],
   court_level: ["trial", "appellate", "supreme", "agency", "foreign"],
@@ -51,12 +54,12 @@ export const CLAIM_FIELDS = {
 export const TYPES = {
   incident: {
     table: "incidents", path: "/incidents/", claims: true,
-    cols: ["title", "occurred_on", "occurred_on_precision", "ended_on", "jurisdiction", "country", "level", "type", "summary", "what_happened", "stated_justification", "effect_on_reporting", "unknowns", "status", "status_updated_on", "external_ids", "illustration_key", "next_review_on"],
-    required: ["title", "occurred_on", "jurisdiction", "level", "type", "summary", "what_happened", "status", "status_updated_on"],
-    enums: { occurred_on_precision: "precision", level: "level", type: "incident_type", status: "incident_status" },
-    dates: ["occurred_on", "ended_on", "status_updated_on", "next_review_on"],
+    cols: ["title", "occurred_on", "occurred_on_precision", "ended_on", "jurisdiction", "country", "level", "type", "tactic_primary", "leader_slug", "issue_of_the_day", "outcome", "outcome_on", "outcome_note", "granularity", "summary", "what_happened", "stated_justification", "effect_on_reporting", "unknowns", "status", "status_updated_on", "external_ids", "illustration_key", "next_review_on"],
+    required: ["title", "occurred_on", "jurisdiction", "level", "summary", "what_happened", "status", "status_updated_on"],
+    enums: { occurred_on_precision: "precision", level: "level", type: "incident_type", status: "incident_status", outcome: "outcome", granularity: "granularity" },
+    dates: ["occurred_on", "ended_on", "status_updated_on", "next_review_on", "outcome_on"],
     prose: ["summary", "what_happened", "stated_justification", "effect_on_reporting"],
-    own: ["title", "unknowns"],
+    own: ["title", "unknowns", "issue_of_the_day", "outcome_note"],
     titleCol: "title",
   },
   actor: {
@@ -206,6 +209,27 @@ async function validateRefs(env, type, id, row, requireRefs) {
   return errors;
 }
 
+// v2 incident fields (brief 2026-09-22): tactic, leader, issue of the day,
+// outcome. The tactic must exist; the leader must be an actor; the issue of
+// the day is at most 60 words.
+async function validateIncidentV2(env, row) {
+  const errors = [];
+  if (row.tactic_primary) {
+    const t = await first(env, "SELECT slug FROM tactics WHERE slug = ?", row.tactic_primary);
+    if (!t) errors.push({ field: "tactic_primary", error: "unknown_tactic", value: row.tactic_primary });
+  }
+  if (row.leader_slug) {
+    const a = await first(env, "SELECT id FROM actors WHERE slug = ?", row.leader_slug);
+    if (!a) errors.push({ field: "leader_slug", error: "unknown_actor", value: row.leader_slug });
+  }
+  if (row.issue_of_the_day && String(row.issue_of_the_day).trim().split(/\s+/).length > 60) errors.push({ field: "issue_of_the_day", error: "max_60_words" });
+  if (row.country) {
+    const c = await first(env, "SELECT iso2 FROM countries WHERE iso2 = ?", row.country);
+    if (!c) errors.push({ field: "country", error: "unknown_country", value: row.country });
+  }
+  return errors;
+}
+
 async function refreshSearch(env, type, id, row) {
   const def = TYPES[type];
   if (!def) return;
@@ -266,6 +290,8 @@ export async function upsertRecord(env, type, slug, body) {
     if (!row.external_ids) row.external_ids = "{}";
     if (!row.occurred_on_precision) row.occurred_on_precision = "day";
     if (!row.country) row.country = "US";
+    if (!row.outcome) row.outcome = "unknown";
+    if (!row.granularity) row.granularity = row.occurred_on && row.occurred_on < "2020" ? "anchor" : "granular";
   }
   if (type === "actor" && !row.country) row.country = "US";
   if (type === "outlet" && !row.country) row.country = "US";
@@ -277,7 +303,12 @@ export async function upsertRecord(env, type, slug, body) {
 
   const pubState = existing ? existing.pub_state : "draft";
   const errors = [...validateShape(type, row), ...lintRecord(type, row), ...(await validateRefs(env, type, existing ? existing.id : null, row, pubState === "published"))];
+  if (type === "incident") errors.push(...(await validateIncidentV2(env, row)));
   if (errors.length) throw new ValidationError(errors);
+  if (type === "incident") {
+    const c = row.country ? await first(env, "SELECT continent FROM countries WHERE iso2 = ?", row.country) : null;
+    row.continent = c ? c.continent : null;
+  }
 
   const now = isoNow();
   let id;
@@ -296,6 +327,12 @@ export async function upsertRecord(env, type, slug, body) {
     id = res.meta.last_row_id;
   }
   const saved = await first(env, `SELECT * FROM ${def.table} WHERE id = ?`, id);
+  if (type === "incident" && saved.tactic_primary) {
+    await env.DB.batch([
+      env.DB.prepare("UPDATE incident_tactics SET is_primary = 0 WHERE incident_id = ?").bind(id),
+      env.DB.prepare("INSERT INTO incident_tactics (incident_id, tactic_slug, is_primary) VALUES (?,?,1) ON CONFLICT(incident_id, tactic_slug) DO UPDATE SET is_primary = 1").bind(id, saved.tactic_primary),
+    ]);
+  }
   await appendRevision(env, type, id, revision, saved, reason, isCorrection);
   if (existing && existing.pub_state === "published") {
     await writeChange(env, { kind: "record_revised", record_type: type, record_id: id, reason, is_correction: isCorrection });
@@ -581,7 +618,38 @@ export async function createEvent(env, body) {
   }
   const pubState = body.pub_state || (claimId ? "published" : "draft");
   if (pubState === "published" && !claimId) throw new ValidationError({ field: "claim_id", error: "required_to_publish" });
+  // Idempotent on (incident_id, occurred_on, kind, label): the UNIQUE index
+  // from migration 0004 backs this; a repeat POST returns the existing row.
+  if (incidentId) {
+    const dup = await first(env, "SELECT id, pub_state FROM events WHERE incident_id = ? AND occurred_on = ? AND kind = ? AND label = ?", incidentId, body.occurred_on, body.kind, body.label);
+    if (dup) return { id: dup.id, pub_state: dup.pub_state, existing: true };
+  }
   const res = await env.DB.prepare("INSERT INTO events (incident_id, case_id, occurred_on, occurred_on_precision, kind, label, claim_id, pub_state, created_at) VALUES (?,?,?,?,?,?,?,?,?)")
     .bind(incidentId, caseId, body.occurred_on, precision, body.kind, body.label, claimId, pubState, isoNow()).run();
   return { id: res.meta.last_row_id, pub_state: pubState };
+}
+
+// GET /admin/events?incident=<slug> (or ?case=<slug>)
+export async function listEvents(env, { incidentSlug, caseSlug } = {}) {
+  if (incidentSlug) {
+    const id = await idBySlug(env, "incidents", incidentSlug, "incident");
+    return all(env, "SELECT * FROM events WHERE incident_id = ? ORDER BY occurred_on, id", id);
+  }
+  if (caseSlug) {
+    const id = await idBySlug(env, "cases", caseSlug, "case");
+    return all(env, "SELECT * FROM events WHERE case_id = ? ORDER BY occurred_on, id", id);
+  }
+  return all(env, "SELECT * FROM events ORDER BY id DESC LIMIT 500");
+}
+
+// DELETE /admin/events/<id> (operator). Events are timeline rows, not
+// claims; a claim about an event keeps its own history. Refuses when a
+// current claim has the event as its subject.
+export async function deleteEvent(env, id) {
+  const e = await first(env, "SELECT * FROM events WHERE id = ?", id);
+  if (!e) throw new ValidationError({ error: "not_found" }, 404);
+  const c = await first(env, "SELECT COUNT(*) AS n FROM claims WHERE subject_type = 'event' AND subject_id = ? AND status = 'current'", id);
+  if (c && c.n) throw new ValidationError({ error: "event_has_current_claims", claims: c.n }, 409);
+  await env.DB.prepare("DELETE FROM events WHERE id = ?").bind(id).run();
+  return { id, deleted: true, event: e };
 }
