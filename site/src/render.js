@@ -8,10 +8,10 @@
 // Blocks: p, h2, h3, dl, table, ul, html (with md text fallback), md
 // (Markdown source with {c:ID} refs), sources, cards, timeline, notice.
 
-import { escapeHtml, a, aHtml, extLink, extLinkMd, linkStateAttr, linkStateLabel, mdToHtml, mdToMd, truncate, proseDate } from "./util.js";
+import { escapeHtml, a, aHtml, extLink, extLinkMd, mdToHtml, mdToMd, truncate, proseDate } from "./util.js";
 import {
   SITE_NAME, SITE_SUBTITLE, SITE_ORIGIN, SECTIONS, FOOTER_LINKS, META_DESCRIPTION_HOME, PUBLISHER_NAME,
-  PUBLISHER_LOCATION, DATA_LICENSE, LICENSE_URL, INCIDENT_STATUS_LABELS,
+  DATA_LICENSE, LICENSE_URL, INCIDENT_STATUS_LABELS, COPYRIGHT_YEAR,
 } from "./site.js";
 import { SITE_CSS_VERSION } from "./css.js";
 import { breadcrumbLd } from "./jsonld.js";
@@ -49,7 +49,7 @@ function footnotesHtml(fn) {
   if (!items.length) return "";
   const lis = items.map(({ n, id, claim }) => {
     if (!claim) return `<li id="fn-${n}">${a(`/claims/${id}`, `Claim ${id}`)}</li>`;
-    const src = claim.source ? `<span class="claim-source">${extLink(claim.source)}${claim.source.publisher ? `, ${escapeHtml(claim.source.publisher)}` : ""}${claim.source.published_on ? `, ${escapeHtml(claim.source.published_on)}` : ""}. <span class="source__badge">${escapeHtml(linkStateLabel(claim.source.link_state))}</span></span>` : "";
+    const src = claim.source ? `<span class="claim-source">${extLink(claim.source)}${claim.source.publisher ? `, ${escapeHtml(claim.source.publisher)}` : ""}${claim.source.published_on ? `, ${escapeHtml(claim.source.published_on)}` : ""}.</span>` : "";
     const quote = claim.evidence_quote ? ` <q class="claim-quote-inline">${escapeHtml(claim.evidence_quote)}</q>` : "";
     return `<li id="fn-${n}">${escapeHtml(claim.statement)}${quote} ${src} ${a(`/claims/${id}`, `Claim ${id}`)}, checked ${escapeHtml(String(claim.verified_at).slice(0, 10))}.</li>`;
   });
@@ -62,7 +62,7 @@ function footnotesMd(fn) {
   const lines = items.map(({ n, id, claim }) => {
     if (!claim) return `[${n}] Claim ${id}: ${SITE_ORIGIN}/claims/${id}`;
     const q = claim.evidence_quote ? ` Quote: "${claim.evidence_quote}"` : "";
-    const src = claim.source ? ` Source: ${claim.source.publisher || ""}${claim.source.published_on ? `, ${claim.source.published_on}` : ""}. ${extLinkMd(claim.source)} (link state: ${linkStateLabel(claim.source.link_state)}).` : "";
+    const src = claim.source ? ` Source: ${claim.source.publisher || ""}${claim.source.published_on ? `, ${claim.source.published_on}` : ""}. ${extLinkMd(claim.source)}` : "";
     return `[${n}] ${claim.statement}${q}${src} Claim: ${SITE_ORIGIN}/claims/${id}, checked ${String(claim.verified_at).slice(0, 10)}.`;
   });
   return `## Claims cited\n\n${lines.join("\n\n")}`;
@@ -117,13 +117,12 @@ function sourceItemHtml(s) {
   if (s.publisher) bits.push(escapeHtml(s.publisher));
   if (s.published_on) bits.push(escapeHtml(s.published_on));
   if (s.cite_role || s.doc_role) bits.push(escapeHtml(s.cite_role || s.doc_role));
-  const since = s.link_state === "dead" && s.link_state_since ? ` Source offline since ${escapeHtml(String(s.link_state_since).slice(0, 10))}.` : "";
-  return `<li class="source" data-state="${escapeHtml(linkStateAttr(s))}" id="source-${s.id}"><span class="source__badge">${escapeHtml(linkStateLabel(s.link_state))}</span> ${extLink(s)}<span class="source__meta">${bits.join(", ")}.${since} ${a(`/sources/${s.id}`, "Source record")}</span></li>`;
+  return `<li class="source" id="source-${s.id}">${extLink(s)}<span class="source__meta">${bits.join(", ")}. ${a(`/sources/${s.id}`, "Source record")}</span></li>`;
 }
 
 function sourceItemMd(s, i) {
   const bits = [s.publisher, s.published_on].filter(Boolean).join(", ");
-  return `${i + 1}. ${extLinkMd(s)}${bits ? ` (${bits})` : ""}. Link state: ${linkStateLabel(s.link_state)}${s.link_state === "dead" && s.link_state_since ? ` since ${String(s.link_state_since).slice(0, 10)}` : ""}.`;
+  return `${i + 1}. ${extLinkMd(s)}${bits ? ` (${bits})` : ""}.`;
 }
 
 function cardHtml(c) {
@@ -203,10 +202,13 @@ function blockToMd(b, fn) {
 
 const WEBMCP_SCRIPT = `<script>(function(){var mc=document.modelContext||navigator.modelContext;if(!mc||!mc.registerTool)return;function rc(n,a){return fetch('/mcp',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({jsonrpc:'2.0',id:1,method:'tools/call',params:{name:n,arguments:a}})}).then(function(r){return r.json()}).then(function(j){return j&&j.result&&j.result.content&&j.result.content[0]?j.result.content[0].text:'No result.'})}
 function t(n,d,p,r){mc.registerTool({name:n,description:d,inputSchema:{type:'object',properties:p,required:r||[]},execute:function(a){return rc(n,a||{})}})}
-t('search_incidents','Search recorded incidents where governments or officials limited journalists\\' ability to report.',{query:{type:'string'},type:{type:'string'},actor:{type:'string'},from:{type:'string'},to:{type:'string'},limit:{type:'integer'}});
+t('search_incidents','Search recorded incidents where governments or officials limited journalists\\' ability to report, with facets.',{query:{type:'string'},country:{type:'string'},continent:{type:'string'},tactic:{type:'string'},leader:{type:'string'},outcome:{type:'string'},from:{type:'string'},to:{type:'string'},limit:{type:'integer'}});
 t('get_incident','One incident with timeline, actors, outlets, cases, claims and archived sources.',{slug:{type:'string'}},['slug']);
 t('get_timeline','Dated timeline entries, oldest first.',{from:{type:'string'},to:{type:'string'},actor:{type:'string'},type:{type:'string'},limit:{type:'integer'}});
-t('latest_news','Latest News Desk notes, each linking to the original reporting.',{limit:{type:'integer'}});
+t('get_country','One country: incidents by year, tactics, heads of government, press-freedom rank.',{iso2:{type:'string'}},['iso2']);
+t('get_tactic','One tactic: definition and incidents by country and year.',{slug:{type:'string'}},['slug']);
+t('compare','Tactic by country matrix of dated incidents with head of government and outcome.',{tactic:{type:'string'},country:{type:'string'},from:{type:'string'},to:{type:'string'}});
+t('recent_coverage','Recent reporting on government actions against journalists, newest first.',{limit:{type:'integer'}});
 })();</script>`;
 
 // ---------- page chrome ----------
@@ -218,14 +220,20 @@ function navHtml(currentPath) {
   }).join("")}</ul></nav>`;
 }
 
+// Footer copy fixed by the v2 brief (2026-09-22, "Copy rules").
 function footerHtml() {
-  return `<footer class="site-footer"><ul>${FOOTER_LINKS.map((l) => `<li>${a(l.path, l.label)}</li>`).join("")}</ul>
-<p>${escapeHtml(SITE_NAME)} is edited and published by ${a("/about", PUBLISHER_NAME)}, ${escapeHtml(PUBLISHER_LOCATION)}. Text and data: ${a(LICENSE_URL, DATA_LICENSE)}. Every page is also available as ${a("/llms.txt", "Markdown and JSON")}.</p></footer>`;
+  return `<footer class="site-footer">
+<p>${escapeHtml(SITE_NAME)} is published by ${a("/about", PUBLISHER_NAME)}.</p>
+<p>&copy; ${COPYRIGHT_YEAR} ${escapeHtml(PUBLISHER_NAME)}. Text and data are licensed ${a(LICENSE_URL, DATA_LICENSE)} unless noted; quotations remain the property of their sources.</p>
+<ul>${FOOTER_LINKS.map((l) => `<li>${a(l.path, l.label)}</li>`).join("")}</ul>
+</footer>`;
 }
 
-export function buildAlternates(basePath) {
-  if (!basePath || basePath === "/") return { html: "/", md: "/index.md", json: "/index.json" };
-  return { html: basePath, md: `${basePath}.md`, json: `${basePath}.json` };
+// query: the canonical query string of a filtered view ("" or "?a=b"),
+// carried onto the canonical link and the .md/.json alternates.
+export function buildAlternates(basePath, query = "") {
+  if (!basePath || basePath === "/") return { html: `/${query}`, md: `/index.md${query}`, json: `/index.json${query}` };
+  return { html: `${basePath}${query}`, md: `${basePath}.md${query}`, json: `${basePath}.json${query}` };
 }
 
 export function renderHtml(doc, alt, analytics = false, ga4 = "") {
@@ -233,7 +241,7 @@ export function renderHtml(doc, alt, analytics = false, ga4 = "") {
   const title = doc.title || SITE_NAME;
   const titleText = isHome ? `${SITE_NAME}: ${SITE_SUBTITLE.replace(/\.$/, "")}` : `${title} | ${SITE_NAME}`;
   const metaDescription = isHome ? META_DESCRIPTION_HOME : truncate(doc.metaDescription || doc.subtitle || SITE_SUBTITLE, 160);
-  const canonical = `${SITE_ORIGIN}${doc.path === "/" ? "/" : doc.path}`;
+  const canonical = `${SITE_ORIGIN}${doc.path === "/" ? "/" : doc.path}${doc.query || ""}`;
   const lds = [];
   if (doc.jsonld) lds.push(...(Array.isArray(doc.jsonld) ? doc.jsonld : [doc.jsonld]));
   lds.push(breadcrumbLd(doc.breadcrumbs || [], doc.path, title));
@@ -254,9 +262,9 @@ export function renderHtml(doc, alt, analytics = false, ga4 = "") {
 <title>${escapeHtml(titleText)}</title>
 <meta name="description" content="${escapeHtml(metaDescription)}">
 ${doc.noindex ? '<meta name="robots" content="noindex">\n' : ""}<link rel="canonical" href="${escapeHtml(canonical)}">
-<link rel="alternate" type="text/markdown" href="${alt.md}">
-<link rel="alternate" type="application/json" href="${alt.json}">
-<link rel="alternate" type="application/atom+xml" title="${escapeHtml(SITE_NAME)}: News Desk" href="/news/atom.xml">
+<link rel="alternate" type="text/markdown" href="${escapeHtml(alt.md)}">
+<link rel="alternate" type="application/json" href="${escapeHtml(alt.json)}">
+<link rel="alternate" type="application/atom+xml" title="${escapeHtml(SITE_NAME)}: Recent coverage" href="/coverage/atom.xml">
 <link rel="alternate" type="application/atom+xml" title="${escapeHtml(SITE_NAME)}: Incidents" href="/incidents/atom.xml">
 <link rel="stylesheet" href="/assets/site.css?v=${SITE_CSS_VERSION}">
 <meta property="og:site_name" content="${escapeHtml(SITE_NAME)}">
@@ -310,6 +318,6 @@ export function renderMarkdown(doc) {
     const f = footnotesMd(fn);
     if (f) parts.push(f);
   }
-  parts.push(`Source page: ${SITE_ORIGIN}${doc.path === "/" ? "/" : doc.path}. ${SITE_NAME}, ${DATA_LICENSE}.`);
+  parts.push(`Source page: ${SITE_ORIGIN}${doc.path === "/" ? "/" : doc.path}${doc.query || ""}. ${SITE_NAME}, ${DATA_LICENSE}.`);
   return parts.join("\n\n") + "\n";
 }

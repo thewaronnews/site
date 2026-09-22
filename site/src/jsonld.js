@@ -203,7 +203,7 @@ export function datasetLd(lastExport) {
     "@context": CTX,
     "@type": "Dataset",
     name: SITE_NAME,
-    description: `${SITE_SUBTITLE} Incidents, events, actors, outlets, journalists, cases, sources, claims and News Desk notes, exported nightly as a Frictionless Data Package.`,
+    description: `${SITE_SUBTITLE} Incidents, events, actors, outlets, journalists, cases, sources, claims, tactics and countries, exported nightly as a Frictionless Data Package.`,
     url: `${SITE_ORIGIN}/data`,
     license: LICENSE_URL,
     isAccessibleForFree: true,

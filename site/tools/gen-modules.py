@@ -25,11 +25,29 @@ def write(name, body):
         f.write(HEADER + body)
 
 
+# Policy pages served from src/content.js. To swap in the editor's text,
+# drop content/<slug>.md in place and re-run deploy.sh; a page without a
+# file is served with its title and the placeholder below.
+POLICY_PAGE_TITLES = {
+    "about": "About The War On News",
+    "corrections": "Corrections policy",
+    "editorial-policy": "Editorial policy",
+    "sources-and-standards": "Sources and standards",
+    "terms": "Terms of use",
+    "privacy": "Privacy",
+}
+PLACEHOLDER = "Text pending editorial review."
+
+
 def gen_content():
     pages = {}
-    for slug in ["about", "methodology", "corrections", "editorial-policy"]:
-        with open(os.path.join(CONTENT, slug + ".md")) as f:
-            text = f.read().replace("—", ", ")
+    for slug, title in POLICY_PAGE_TITLES.items():
+        path = os.path.join(CONTENT, slug + ".md")
+        if os.path.exists(path):
+            with open(path) as f:
+                text = f.read().replace("—", ", ")
+        else:
+            text = "# " + title + "\n\n" + PLACEHOLDER + "\n"
         pages[slug] = text
     body = "export const POLICY_PAGES = " + json.dumps(pages, indent=1, ensure_ascii=False) + ";\n"
     body += "export const POLICY_VERSION = " + json.dumps(

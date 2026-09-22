@@ -16,19 +16,25 @@ import { renderSitemap, renderSitemapIndex } from "./sitemaps.js";
 import { timelineDoc } from "./timeline.js";
 import { SITE_CSS } from "./css.js";
 import {
-  homeHandler, incidentsIndexHandler, incidentHandler, revisionsHandler, actorsIndexHandler, actorHandler,
+  homeHandler, incidentHandler, revisionsHandler, actorsIndexHandler, actorHandler,
   outletsIndexHandler, outletHandler, journalistsIndexHandler, journalistHandler, casesIndexHandler, caseHandler,
-  newsIndexHandler, noteHandler, glossaryIndexHandler, glossaryTermHandler, explainersIndexHandler, explainerHandler,
+  glossaryIndexHandler, glossaryTermHandler, explainersIndexHandler, explainerHandler,
   claimHandler, sourceHandler, changesHandler, correctionsHandler, correctionsLogHandler, policyHandler,
-  dataHandler, feedsHandler, mcpDocHandler, searchHandler, submitHandler, notFoundDoc, methodNotAllowedDoc,
+  dataHandler, feedsHandler, mcpDocHandler, submitHandler, notFoundDoc, methodNotAllowedDoc,
 } from "./routes.js";
+import {
+  incidentsListHandler, searchV2Handler, incidentsCsvHandler, countriesIndexHandler, countryHandler, continentsIndexHandler,
+  continentHandler, tacticsIndexHandler, tacticHandler, compareHandler, erasIndexHandler, eraHandler, leadersIndexHandler,
+  leaderHandler, coverageHandler,
+} from "./v2routes.js";
+import { runCoverage } from "./coverage.js";
 
 const S = "([a-z0-9-]{1,80})";
 const G = ["GET"];
 
 const ROUTES = [
   [G, /^\/$/, (c) => homeHandler(c)],
-  [G, /^\/incidents$/, (c) => incidentsIndexHandler(c)],
+  [G, /^\/incidents$/, (c) => incidentsListHandler(c)],
   [G, new RegExp(`^/incidents/${S}$`), (c, m) => incidentHandler(c, m[1])],
   [G, new RegExp(`^/incidents/${S}/revisions$`), (c, m) => revisionsHandler(c, "incidents", "incident", m[1])],
   [G, /^\/actors$/, (c) => actorsIndexHandler(c)],
@@ -45,9 +51,18 @@ const ROUTES = [
   [G, new RegExp(`^/timeline/actor/${S}$`), (c, m) => timelineDoc(c.env, { actor: m[1] })],
   [G, /^\/timeline\/type\/([a-z_]+)$/, (c, m) => timelineDoc(c.env, { type: m[1] })],
   [G, /^\/timeline\/country\/([a-z]{2})$/, (c, m) => timelineDoc(c.env, { country: m[1] })],
-  [G, /^\/news$/, (c) => newsIndexHandler(c, 1)],
-  [G, /^\/news\/page\/(\d{1,4})$/, (c, m) => newsIndexHandler(c, parseInt(m[1], 10))],
-  [G, new RegExp(`^/news/${S}$`), (c, m) => noteHandler(c, m[1])],
+  [G, /^\/countries$/, (c) => countriesIndexHandler(c)],
+  [G, /^\/countries\/([a-z]{2})$/, (c, m) => countryHandler(c, m[1])],
+  [G, /^\/continents$/, (c) => continentsIndexHandler(c)],
+  [G, /^\/continents\/([a-z-]{4,20})$/, (c, m) => continentHandler(c, m[1])],
+  [G, /^\/tactics$/, (c) => tacticsIndexHandler(c)],
+  [G, /^\/tactics\/([a-z_]{3,40})$/, (c, m) => tacticHandler(c, m[1])],
+  [G, /^\/compare$/, (c) => compareHandler(c)],
+  [G, /^\/eras$/, (c) => erasIndexHandler(c)],
+  [G, /^\/eras\/(\d{4}s)$/, (c, m) => eraHandler(c, m[1])],
+  [G, /^\/leaders$/, (c) => leadersIndexHandler(c)],
+  [G, new RegExp(`^/leaders/${S}$`), (c, m) => leaderHandler(c, m[1])],
+  [G, /^\/coverage$/, (c) => coverageHandler(c)],
   [G, /^\/explainers$/, (c) => explainersIndexHandler(c)],
   [G, new RegExp(`^/explainers/${S}$`), (c, m) => explainerHandler(c, m[1])],
   [G, /^\/glossary$/, (c) => glossaryIndexHandler(c)],
@@ -58,25 +73,27 @@ const ROUTES = [
   [G, /^\/corrections$/, (c) => correctionsHandler(c)],
   [G, /^\/corrections\/log$/, (c) => correctionsLogHandler(c)],
   [G, /^\/about$/, (c) => policyHandler(c, "about")],
-  [G, /^\/methodology$/, (c) => policyHandler(c, "methodology")],
+  [G, /^\/sources-and-standards$/, (c) => policyHandler(c, "sources-and-standards")],
+  [G, /^\/terms$/, (c) => policyHandler(c, "terms")],
+  [G, /^\/privacy$/, (c) => policyHandler(c, "privacy")],
   [G, /^\/editorial-policy$/, (c) => policyHandler(c, "editorial-policy")],
   [G, /^\/data$/, (c) => dataHandler(c)],
   [G, /^\/feeds$/, () => feedsHandler()],
   [G, /^\/mcp$/, () => mcpDocHandler()],
-  [["GET", "POST"], /^\/search$/, (c) => searchHandler(c)],
+  [["GET", "POST"], /^\/search$/, (c) => searchV2Handler(c)],
   [["POST"], /^\/submit$/, (c) => submitHandler(c)],
 ];
 
 async function respondDoc(doc, format, env, request, analytics = false) {
   const status = doc.status || 200;
-  const alt = buildAlternates(doc.path);
+  const alt = buildAlternates(doc.path, doc.query || "");
   let body;
   if (format === "json") body = JSON.stringify(doc.data ?? {}, null, 2);
   else if (format === "md") body = renderMarkdown(doc);
   else body = renderHtml(doc, alt, analytics, env.GA4_MEASUREMENT_ID || "");
   const headers = {
     "Content-Type": contentTypeFor(format),
-    "Link": `<${SITE_ORIGIN}${alt.md}>; rel="alternate"; type="text/markdown", <${SITE_ORIGIN}${alt.json}>; rel="alternate"; type="application/json", <${SITE_ORIGIN}${alt.html}>; rel="canonical"; type="text/html"`,
+    "Link": `<${encodeURI(SITE_ORIGIN + alt.md)}>; rel="alternate"; type="text/markdown", <${encodeURI(SITE_ORIGIN + alt.json)}>; rel="alternate"; type="application/json", <${encodeURI(SITE_ORIGIN + alt.html)}>; rel="canonical"; type="text/html"`,
     "Cache-Control": status >= 400 ? "public, max-age=30" : "public, max-age=60",
     "Vary": "Accept",
   };
@@ -111,18 +128,39 @@ async function r2File(env, pathname) {
   return new Response(obj.body, { status: 200, headers: { "Content-Type": type, "Cache-Control": key.startsWith("images/") ? "public, max-age=604800" : "public, max-age=3600", "Access-Control-Allow-Origin": "*" } });
 }
 
+function redirect301(path) {
+  return new Response(null, { status: 301, headers: { Location: `${SITE_ORIGIN}${path}`, "Cache-Control": "public, max-age=3600" } });
+}
+
+// Permanent moves (v2): /methodology became /sources-and-standards; the
+// News Desk pages and feeds became Recent coverage; country codes and
+// decades have one canonical spelling.
+function v2Redirect(p, search) {
+  let m;
+  if ((m = p.match(/^\/methodology(\.md|\.json)?$/))) return `/sources-and-standards${m[1] || ""}`;
+  if (/^\/news(\/page\/\d+)?(\.md|\.json)?$/.test(p)) return "/coverage";
+  if ((m = p.match(/^\/news\/(feed\.xml|atom\.xml|feed\.json)$/))) return `/coverage/${m[1]}`;
+  if ((m = p.match(/^\/countries\/([A-Za-z]{2})(\.md|\.json)?$/)) && /[A-Z]/.test(m[1])) return `/countries/${m[1].toLowerCase()}${m[2] || ""}${search}`;
+  if ((m = p.match(/^\/tactics\/([a-z]+(?:-[a-z]+)+)(\.md|\.json)?$/))) return `/tactics/${m[1].replace(/-/g, "_")}${m[2] || ""}`;
+  if ((m = p.match(/^\/eras\/(\d{3})0(\.md|\.json)?$/))) return `/eras/${m[1]}0s${m[2] || ""}`;
+  return null;
+}
+
 async function directRoute(request, env, ctx, url) {
   const p = url.pathname;
+  const moved = v2Redirect(p, url.search);
+  if (moved) return ["html", redirect301(moved)];
+  if (p === "/incidents.csv") return ["csv", await incidentsCsvHandler({ env, url })];
   if (p === "/assets/site.css") return ["css", text(SITE_CSS, "text/css; charset=utf-8", "public, max-age=31536000, immutable")];
   if (p === "/robots.txt") return ["txt", text(robotsTxt(), "text/plain; charset=utf-8")];
   if (p === "/llms.txt") return ["txt", text(await llmsTxt(env), "text/plain; charset=utf-8")];
   if (p === "/llms-full.txt") return ["txt", text(await llmsFullTxt(env), "text/plain; charset=utf-8")];
   if (p === "/sitemap.xml") return ["xml", text(await renderSitemapIndex(env), "application/xml; charset=utf-8")];
-  let m = p.match(/^\/sitemaps\/(pages|incidents|news|news-google|machine)\.xml$/);
+  let m = p.match(/^\/sitemaps\/(pages|incidents|machine)\.xml$/);
   if (m) return ["xml", text(await renderSitemap(env, m[1]), "application/xml; charset=utf-8")];
   if (env.INDEXNOW_KEY && p === `/${env.INDEXNOW_KEY}.txt`) return ["txt", text(env.INDEXNOW_KEY, "text/plain; charset=utf-8", "public, max-age=86400")];
   if (p === "/changes.xml") return ["xml", text(await changesAtom(env), "application/atom+xml; charset=utf-8")];
-  m = p.match(/^\/(news|incidents)\/(feed\.xml|atom\.xml|feed\.json)$/);
+  m = p.match(/^\/(coverage|incidents)\/(feed\.xml|atom\.xml|feed\.json)$/);
   if (m) {
     const fmt = m[2] === "feed.xml" ? "rss" : m[2] === "atom.xml" ? "atom" : "json";
     const f = await renderFeed(env, m[1], fmt);
@@ -199,7 +237,11 @@ export default {
     return response;
   },
 
-  async scheduled(_event, env, ctx) {
-    ctx.waitUntil(runNightly(env));
+  // Two cron triggers (deploy.sh): the nightly job at 07:17 UTC and the
+  // hourly recent-coverage collector. POST /admin/cron/coverage runs the
+  // hourly job on demand (operator scope).
+  async scheduled(event, env, ctx) {
+    if (event && event.cron === "17 7 * * *") ctx.waitUntil(runNightly(env));
+    else ctx.waitUntil(runCoverage(env).catch((e) => env.KV && env.KV.put("coverage:last_error", JSON.stringify({ at: new Date().toISOString(), error: String(e && e.message || e) }))));
   },
 };

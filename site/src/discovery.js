@@ -21,32 +21,43 @@ Disallow: /admin/
 Sitemap: ${SITE_ORIGIN}/sitemap.xml
 Sitemap: ${SITE_ORIGIN}/sitemaps/pages.xml
 Sitemap: ${SITE_ORIGIN}/sitemaps/incidents.xml
-Sitemap: ${SITE_ORIGIN}/sitemaps/news.xml
-Sitemap: ${SITE_ORIGIN}/sitemaps/news-google.xml
 Sitemap: ${SITE_ORIGIN}/sitemaps/machine.xml
 `;
 }
 
 export async function llmsTxt(env) {
-  const incidents = await all(env, "SELECT slug, title, occurred_on, type FROM incidents WHERE pub_state = 'published' ORDER BY occurred_on DESC");
+  const incidents = await all(env, "SELECT slug, title, occurred_on, country, tactic_primary FROM incidents WHERE pub_state = 'published' ORDER BY occurred_on DESC");
   const cases = await all(env, "SELECT slug, caption, filed_on, decided_on, status FROM cases WHERE pub_state = 'published' ORDER BY COALESCE(filed_on, decided_on) DESC");
+  const tactics = await all(env, "SELECT slug, name FROM tactics ORDER BY sort");
+  const countries = await all(env, "SELECT DISTINCT i.country AS iso2, c.name FROM incidents i JOIN countries c ON c.iso2 = i.country WHERE i.pub_state = 'published' ORDER BY c.name");
   const lines = [
     `# ${SITE_NAME}`,
-    "> A dated record of government actions that limit reporting. US-first, with global context.",
-    "> Every page exists as HTML, .md and .json. Every fact is a claim with a verbatim quote, source URL, method and verification date. CC BY 4.0.",
-    `> Editor and publisher: ${PUBLISHER_NAME}, Prince Edward County, Ontario. AI agents research, draft and check the site under his editorial control (see /methodology).`,
-    "## Record",
-    `- [Incidents](${SITE_ORIGIN}/incidents.md)`,
+    "> How governments have limited journalists, 1900 to today: a dated, sourced record by country, by tactic and by era, with the head of government at the time, the issue of the day and the outcome.",
+    "> Every page exists as HTML, .md and .json; list views also as CSV (?format=csv). Every fact is a claim with a verbatim quote, source URL, method and verification date. CC BY 4.0.",
+    `> Published by ${PUBLISHER_NAME}, Ontario, Canada. The development of this site and its content were assisted with AI.`,
+    "## Ways in",
+    `- [Incidents, with filters](${SITE_ORIGIN}/incidents.md): country, continent, tactic, from, to, level, actor, leader, outlet, outcome, source_kind, has_case`,
+    `- [Countries](${SITE_ORIGIN}/countries.md)`,
+    `- [Tactics](${SITE_ORIGIN}/tactics.md)`,
+    `- [Compare: tactic by country](${SITE_ORIGIN}/compare.md)`,
+    `- [Eras since 1900](${SITE_ORIGIN}/eras.md)`,
     `- [Timeline](${SITE_ORIGIN}/timeline.md)`,
     `- [Cases](${SITE_ORIGIN}/cases.md)`,
-    `- [News Desk](${SITE_ORIGIN}/news.md)`,
-    ...incidents.map((i) => `- [${i.title}](${SITE_ORIGIN}/incidents/${i.slug}.md): ${i.occurred_on}, ${i.type}`),
-    ...cases.map((c) => `- [${c.caption}](${SITE_ORIGIN}/cases/${c.slug}.md): ${c.filed_on || c.decided_on || ""}, case, ${c.status}`),
+    `- [Recent coverage](${SITE_ORIGIN}/coverage.md)`,
+    `- [Search](${SITE_ORIGIN}/search.md?q=press+pass)`,
+    "## Tactics",
+    ...tactics.map((t) => `- [${t.name}](${SITE_ORIGIN}/tactics/${t.slug}.md)`),
+    "## Countries",
+    ...countries.map((c) => `- [${c.name}](${SITE_ORIGIN}/countries/${c.iso2.toLowerCase()}.md)`),
+    "## Incidents",
+    ...incidents.map((i) => `- [${i.title}](${SITE_ORIGIN}/incidents/${i.slug}.md): ${i.occurred_on}, ${i.country}${i.tactic_primary ? `, ${i.tactic_primary}` : ""}`),
+    "## Cases",
+    ...cases.map((c) => `- [${c.caption}](${SITE_ORIGIN}/cases/${c.slug}.md): ${c.filed_on || c.decided_on || ""}, ${c.status}`),
     "## Data and tools",
-    `- [Dataset](${SITE_ORIGIN}/data.md): CSV, JSON, Frictionless datapackage.json`,
+    `- [Dataset](${SITE_ORIGIN}/data.md): CSV, JSON, Frictionless datapackage.json; all incidents as CSV at ${SITE_ORIGIN}/incidents.csv`,
     `- [MCP server](${SITE_ORIGIN}/mcp.md): Streamable HTTP at /mcp`,
     "## Policies",
-    `- [Methodology](${SITE_ORIGIN}/methodology.md), [Editorial policy](${SITE_ORIGIN}/editorial-policy.md), [Corrections](${SITE_ORIGIN}/corrections.md)`,
+    `- [Sources and standards](${SITE_ORIGIN}/sources-and-standards.md), [Editorial policy](${SITE_ORIGIN}/editorial-policy.md), [Corrections](${SITE_ORIGIN}/corrections.md), [Terms of use](${SITE_ORIGIN}/terms.md), [Privacy](${SITE_ORIGIN}/privacy.md)`,
   ];
   return lines.join("\n") + "\n";
 }
@@ -69,7 +80,7 @@ export async function llmsFullTxt(env) {
 export function agentCard() {
   return {
     name: SITE_NAME,
-    description: "A dated, sourced record of government actions that limit journalists' ability to report. Every fact carries a verbatim quote, source URL, method and check date. Dataset under CC BY 4.0.",
+    description: "How governments have limited journalists, 1900 to today: a dated, sourced record by country, tactic and era. Every fact carries a verbatim quote, source URL, method and check date. Dataset under CC BY 4.0.",
     url: SITE_ORIGIN,
     provider: { organization: PUBLISHER_NAME, url: PUBLISHER_URL },
     version: MCP_SERVER_MANIFEST.version,
@@ -79,7 +90,7 @@ export function agentCard() {
     skills: TOOLS.map((t) => ({ id: t.name, name: t.title, description: t.description, tags: ["mcp", t.annotations && t.annotations.readOnlyHint ? "read" : "write"] })),
     mcp: { endpoint: `${SITE_ORIGIN}/mcp`, transport: "streamable-http", serverManifest: `${SITE_ORIGIN}/.well-known/mcp/server.json` },
     links: {
-      data: `${SITE_ORIGIN}/data`, datapackage: `${SITE_ORIGIN}/data/datapackage.json`, changes: `${SITE_ORIGIN}/changes.xml`,
+      data: `${SITE_ORIGIN}/data`, datapackage: `${SITE_ORIGIN}/data/datapackage.json`, incidents_csv: `${SITE_ORIGIN}/incidents.csv`, changes: `${SITE_ORIGIN}/changes.xml`, coverage: `${SITE_ORIGIN}/coverage/feed.json`,
       sitemap: `${SITE_ORIGIN}/sitemap.xml`, llms: `${SITE_ORIGIN}/llms.txt`, feeds: `${SITE_ORIGIN}/feeds`,
     },
   };

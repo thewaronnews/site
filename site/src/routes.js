@@ -3,21 +3,24 @@
 
 import {
   a, escapeHtml, extLink, isoNow, isoDate, sha256Hex, normalizeQuestion, proseDate, mdToPlain, truncate,
-  safeJsonParse, linkStateLabel,
+  safeJsonParse,
 } from "./util.js";
 import {
   all, first, sourceObject, listIncidents, getIncidentFull, listActors, getActorFull, listOutlets, getOutletFull,
-  listJournalists, getJournalistFull, listCases, getCaseFull, listNotes, countPublishedNotes, getNoteBySlug, noteWithSources,
+  listJournalists, getJournalistFull, listCases, getCaseFull,
   listGlossary, getGlossaryTerm, listExplainers, getExplainer, getClaim, attachSources, getSource, listSourceChecks,
-  listChanges, listRevertedNotes, recordPathFor, searchRecords, upsertQuestion, getLastExport,
+  listChanges, recordPathFor, getLastExport,
 } from "./db.js";
 import { Footnotes, linkCell } from "./render.js";
+import { refData, queryIncidents, countryName } from "./search.js";
+import { listCoverage } from "./coverage.js";
 import {
-  incidentLd, noteLd, actorLd, outletLd, journalistLd, caseLd, articleLd, definedTermLd, definedTermSetLd, datasetLd, websiteLd,
+  incidentLd, actorLd, outletLd, journalistLd, caseLd, articleLd, definedTermLd, definedTermSetLd, datasetLd, websiteLd,
 } from "./jsonld.js";
 import {
-  SITE_NAME, SITE_ORIGIN, SITE_SUBTITLE, HOME_DEFINITION, HOME_METHOD_LINE, HOME_DATA_LINE, INCIDENT_TYPE_LABELS,
+  SITE_NAME, SITE_ORIGIN, SITE_SUBTITLE, HOME_DEFINITION, HOME_METHOD_LINE, HOME_DATA_LINE,
   INCIDENT_STATUS_LABELS, CASE_STATUS_LABELS, LEVEL_LABELS, COUNTRY_NAMES, SUBDIVISION_NAMES, DATA_LICENSE, LICENSE_URL,
+  CONTINENTS, OUTCOME_LABELS,
   ATTRIBUTION_TEXT, CONTACT_CORRECTIONS, DATA_REPO_DEFAULT,
 } from "./site.js";
 import { POLICY_PAGES, POLICY_VERSION } from "./content.js";
@@ -26,7 +29,8 @@ import { TOOLS, SUPPORTED_PROTOCOL_VERSIONS } from "./mcp.js";
 import { hashIp } from "./logger.js";
 
 const LICENSE = { name: DATA_LICENSE, url: LICENSE_URL };
-const NEWS_PAGE_SIZE = 30;
+const BODY_TYPE_LABELS = { executive_office: "executive office", agency: "agency", regulator: "regulator", legislature: "legislature", court: "court", law_enforcement: "law enforcement", foreign_government: "national government", other: "body" };
+const COURT_LEVEL_LABELS = { trial: "trial court", appellate: "appeals court", supreme: "supreme court", agency: "agency tribunal", foreign: "national court" };
 
 function citeAs(title, path) {
   return `${title}. ${ATTRIBUTION_TEXT}. ${SITE_ORIGIN}${path}. Retrieved ${isoDate()}.`;
@@ -37,7 +41,7 @@ function placeLabel(jurisdiction, country) {
   const sub = SUBDIVISION_NAMES[j.split(":")[0]];
   const place = j.includes(":") ? j.split(":")[1].replace(/-/g, " ") : null;
   if (sub) return [place, sub, "United States"].filter(Boolean).join(", ");
-  if (j === "US") return "United States (federal)";
+  if (j === "US") return "United States";
   return COUNTRY_NAMES[country] || COUNTRY_NAMES[j] || j;
 }
 
@@ -51,12 +55,8 @@ function incidentCard(r) {
     title: r.title,
     href: `/incidents/${r.slug}`,
     body: truncate(mdToPlain(r.summary), 240),
-    meta: [INCIDENT_TYPE_LABELS[r.type], LEVEL_LABELS[r.level], `status: ${INCIDENT_STATUS_LABELS[r.status] || r.status}`].filter(Boolean).join(". "),
+    meta: [r.country_name, r.tactic_name, r.leader_name ? `head of government ${r.leader_name}` : null].filter(Boolean).join(". "),
   };
-}
-
-function noteCard(n) {
-  return { date: proseDate(String(n.published_at).slice(0, 10)), title: n.title, href: `/news/${n.slug}`, body: truncate(n.note, 240) };
 }
 
 // 410 for withdrawn records and reverted notes (spec 3.1): title, dates,
@@ -95,24 +95,38 @@ export function methodNotAllowedDoc(path, allowed) {
 // ---------- home ----------
 
 export async function homeHandler({ env }) {
-  const notes = await listNotes(env, { limit: 5 });
-  const incidents = await listIncidents(env, { limit: 5 });
+  const ref = await refData(env);
+  const res = await queryIncidents(env, {}, { paginate: false });
+  const latest = res.all.slice(0, 5);
+  const coverage = await listCoverage(env, { state: "shown", limit: 5 });
   const counts = await first(env, `SELECT (SELECT COUNT(*) FROM incidents WHERE pub_state = 'published') AS incidents,
     (SELECT COUNT(*) FROM cases WHERE pub_state = 'published') AS cases,
     (SELECT COUNT(*) FROM claims WHERE status = 'current') AS claims,
-    (SELECT COUNT(*) FROM sources) AS sources`);
+    (SELECT COUNT(*) FROM sources) AS sources,
+    (SELECT COUNT(DISTINCT country) FROM incidents WHERE pub_state = 'published') AS countries`);
+  const tacticCounts = ref.tacticList.map((t) => [t, res.all.filter((r) => r.tactics.includes(t.slug)).length]).filter(([, n]) => n > 0);
+  const contCounts = Object.entries(CONTINENTS).map(([k, v]) => [k, v, res.all.filter((r) => r.continent === k).length]).filter(([, , n]) => n > 0);
   const blocks = [
     { k: "p", text: HOME_DEFINITION },
     { k: "p", text: HOME_METHOD_LINE },
-    { k: "h2", text: "Latest from the News Desk" },
-    { k: "cards", items: notes.map(noteCard), empty: "The News Desk has not published a note yet. Its first notes follow the editor's review of the first digest." },
-    { k: "html", html: `<p>${a("/news", "All News Desk notes")}</p>`, text: `All News Desk notes: ${SITE_ORIGIN}/news` },
+    { k: "h2", text: "By place" },
+    { k: "ul", items: contCounts.map(([k, v, n]) => linkCell(`/continents/${k}`, `${v}: ${n} ${n === 1 ? "incident" : "incidents"}`)) },
+    { k: "html", html: `<p>${a("/countries", `All ${counts.countries} countries in the record`)}</p>`, text: `Countries: ${SITE_ORIGIN}/countries` },
+    { k: "h2", text: "By tactic" },
+    { k: "ul", items: tacticCounts.map(([t, n]) => linkCell(`/tactics/${t.slug}`, `${t.name}: ${n}`)) },
+    { k: "html", html: `<p>${a("/tactics", "All tactics")} · ${a("/compare", "Compare: who did what, when")}</p>`, text: `Tactics: ${SITE_ORIGIN}/tactics. Compare: ${SITE_ORIGIN}/compare` },
+    { k: "h2", text: "By time" },
+    { k: "html", html: `<p>${a("/eras", "Decade by decade since 1900")} · ${a("/timeline", "The timeline")}</p>`, text: `Eras: ${SITE_ORIGIN}/eras. Timeline: ${SITE_ORIGIN}/timeline` },
     { k: "h2", text: "Latest incidents" },
-    { k: "cards", items: incidents.map(incidentCard), empty: "No incidents are published yet." },
-    { k: "html", html: `<p>${a("/incidents", `All ${counts.incidents} incidents`)}, ${a("/timeline", "the timeline")} and ${a("/cases", "court cases")}.</p>`, text: `All ${counts.incidents} incidents: ${SITE_ORIGIN}/incidents. Timeline: ${SITE_ORIGIN}/timeline. Cases: ${SITE_ORIGIN}/cases.` },
+    { k: "cards", items: latest.map(incidentCard), empty: "No incidents are published yet." },
+    { k: "html", html: `<p>${a("/incidents", `All ${counts.incidents} incidents`)} · ${a("/cases", "Court cases")} · ${a("/search", "Search and filter")}</p>`, text: `All ${counts.incidents} incidents: ${SITE_ORIGIN}/incidents. Cases: ${SITE_ORIGIN}/cases. Search: ${SITE_ORIGIN}/search` },
+    { k: "h2", text: "Recent coverage" },
+    coverage.length
+      ? { k: "html", html: `<ul class="coverage-list">${coverage.map((i) => `<li>${extLink({ url: i.url, title: i.title, link_state: "live" })} <span class="coverage-item__meta">${escapeHtml(i.publisher || "")}${i.published_at ? `, ${escapeHtml(proseDate(i.published_at.slice(0, 10)))}` : ""}</span></li>`).join("")}</ul><p>${a("/coverage", "All recent coverage")}</p>`, text: coverage.map((i) => `- [${i.title}](${i.url}), ${i.publisher || ""}`).join("\n") }
+      : { k: "html", html: `<p>${a("/coverage", "Recent coverage")} from news organisations worldwide, collected hourly.</p>`, text: `Recent coverage: ${SITE_ORIGIN}/coverage` },
     { k: "h2", text: "Data and tools" },
     { k: "p", text: HOME_DATA_LINE },
-    { k: "feeds", items: [{ label: "datapackage.json", href: "/data/datapackage.json" }, { label: "MCP /mcp", href: "/mcp" }, { label: "llms.txt", href: "/llms.txt" }, { label: "Atom: News Desk", href: "/news/atom.xml" }, { label: "Atom: Incidents", href: "/incidents/atom.xml" }] },
+    { k: "feeds", items: [{ label: "datapackage.json", href: "/data/datapackage.json" }, { label: "incidents.csv", href: "/incidents.csv" }, { label: "MCP /mcp", href: "/mcp" }, { label: "llms.txt", href: "/llms.txt" }, { label: "Atom: Incidents", href: "/incidents/atom.xml" }, { label: "Atom: Recent coverage", href: "/coverage/atom.xml" }] },
   ];
   return {
     path: "/",
@@ -120,50 +134,19 @@ export async function homeHandler({ env }) {
     subtitle: SITE_SUBTITLE,
     jsonld: websiteLd(),
     blocks,
-    updatedAt: [incidents[0] && incidents[0].updated_at, notes[0] && notes[0].published_at].filter(Boolean).sort().pop() || null,
+    updatedAt: res.all.map((r) => r.updated_at).sort().pop() || null,
     data: {
       name: SITE_NAME, subtitle: SITE_SUBTITLE, definition: HOME_DEFINITION, counts,
-      latest_notes: notes.map((n) => ({ slug: n.slug, title: n.title, published_at: n.published_at, url: `${SITE_ORIGIN}/news/${n.slug}` })),
-      latest_incidents: incidents.map((i) => ({ slug: i.slug, title: i.title, occurred_on: i.occurred_on, type: i.type, status: i.status, url: `${SITE_ORIGIN}/incidents/${i.slug}` })),
+      continents: contCounts.map(([k, v, n]) => ({ slug: k, name: v, incidents: n, url: `${SITE_ORIGIN}/continents/${k}` })),
+      tactics: tacticCounts.map(([t, n]) => ({ slug: t.slug, name: t.name, incidents: n, url: `${SITE_ORIGIN}/tactics/${t.slug}` })),
+      latest_incidents: latest.map((i) => ({ slug: i.slug, title: i.title, occurred_on: i.occurred_on, country: i.country, tactic_primary: i.tactic_primary, outcome: i.outcome, url: i.url })),
+      recent_coverage: coverage.map((i) => ({ title: i.title, url: i.url, publisher: i.publisher, published_at: i.published_at })),
       dataset: `${SITE_ORIGIN}/data`, mcp: `${SITE_ORIGIN}/mcp`, license: LICENSE,
     },
   };
 }
 
 // ---------- incidents ----------
-
-export async function incidentsIndexHandler({ env, url }) {
-  const f = {
-    type: url.searchParams.get("type") || null,
-    level: url.searchParams.get("level") || null,
-    country: url.searchParams.get("country") || null,
-    status: url.searchParams.get("status") || null,
-  };
-  const rows = await listIncidents(env, f);
-  const all_ = await listIncidents(env, {});
-  const facet = (key, labels) => [...new Set(all_.map((r) => r[key]))].sort().map((v) => a(`/incidents?${key}=${encodeURIComponent(v)}`, labels ? labels[v] || v : v)).join(" ");
-  const active = Object.entries(f).filter(([, v]) => v).map(([k, v]) => `${k} ${v}`).join(", ");
-  return {
-    path: "/incidents",
-    title: "Incidents",
-    metaDescription: "Every recorded government action that limited journalists' ability to report, newest first, with type, level, country and status filters.",
-    blocks: [
-      { k: "p", text: `Each incident is a dated action by an official, government, regulator, court or legislature that limited journalists' ability to gather or publish news. ${rows.length} ${rows.length === 1 ? "incident matches" : "incidents match"}${active ? ` the filter ${active}` : ""}, newest first.` },
-      { k: "html", html: `<p class="filters">Type: ${facet("type", INCIDENT_TYPE_LABELS)}<br>Level: ${facet("level", LEVEL_LABELS)}<br>Country: ${facet("country", COUNTRY_NAMES)}<br>Status: ${facet("status", INCIDENT_STATUS_LABELS)}${active ? `<br>${a("/incidents", "Clear filters")}` : ""}</p>`, text: "Filters: add ?type=, ?level=, ?country= or ?status= to the address." },
-      {
-        k: "table", headers: ["Date", "Incident", "Type", "Where", "Status"],
-        rows: rows.map((r) => [incidentDate(r), linkCell(`/incidents/${r.slug}`, r.title), INCIDENT_TYPE_LABELS[r.type] || r.type, placeLabel(r.jurisdiction, r.country), INCIDENT_STATUS_LABELS[r.status] || r.status]),
-      },
-      { k: "feeds", items: FEED_LIST.filter((x) => x.href.startsWith("/incidents")) },
-    ],
-    updatedAt: rows.map((r) => r.updated_at).sort().pop() || null,
-    data: {
-      filter: f, count: rows.length,
-      incidents: rows.map((r) => ({ ...r, url: `${SITE_ORIGIN}/incidents/${r.slug}` })),
-      license: LICENSE,
-    },
-  };
-}
 
 function sourcesCount(full) {
   const ids = new Set((full.sources || []).map((s) => s.id));
@@ -186,7 +169,21 @@ export async function incidentHandler({ env }, slug) {
   const missing = refIds.filter((id) => !fn.byId.has(id));
   if (missing.length) fn.add(await attachSources(env, await all(env, `SELECT * FROM claims WHERE id IN (${missing.map(() => "?").join(",")})`, ...missing)));
 
-  const blocks = [{ k: "md", md: r.summary }];
+  const ref = await refData(env);
+  const tacticRows = await all(env, "SELECT tactic_slug, is_primary FROM incident_tactics WHERE incident_id = ? ORDER BY is_primary DESC, tactic_slug", r.id);
+  const tacticSlugs = tacticRows.length ? tacticRows.map((t) => t.tactic_slug) : (r.tactic_primary ? [r.tactic_primary] : []);
+  const leader = r.leader_slug ? await first(env, "SELECT slug, name, pub_state FROM actors WHERE slug = ?", r.leader_slug) : null;
+  const facts = [
+    ["Country", linkCell(`/countries/${r.country.toLowerCase()}`, countryName(ref, r.country))],
+    ["Where", placeLabel(r.jurisdiction, r.country)],
+    ["Level of government", LEVEL_LABELS[r.level] || r.level],
+  ];
+  if (tacticSlugs.length) facts.push([tacticSlugs.length > 1 ? "Tactics" : "Tactic", { html: tacticSlugs.map((t) => a(`/tactics/${t}`, (ref.tactics.get(t) || {}).name || t)).join(", "), text: tacticSlugs.map((t) => (ref.tactics.get(t) || {}).name || t).join(", ") }]);
+  if (leader) facts.push(["Head of government at the time", leader.pub_state === "published" ? linkCell(`/leaders/${leader.slug}`, leader.name) : leader.name]);
+  if (r.issue_of_the_day) facts.push(["Issue of the day", r.issue_of_the_day]);
+  facts.push(["Outcome", `${OUTCOME_LABELS[r.outcome] || "Unknown"}${r.outcome_on ? `, ${proseDate(r.outcome_on)}` : ""}${r.outcome_note ? `. ${r.outcome_note}` : ""}`]);
+  facts.push(["Era", { html: a(`/eras/${r.era || `${r.occurred_on.slice(0, 3)}0s`}`, `The ${r.era || `${r.occurred_on.slice(0, 3)}0s`}`), text: `The ${r.era || `${r.occurred_on.slice(0, 3)}0s`}` }]);
+  const blocks = [{ k: "md", md: r.summary }, { k: "dl", items: facts }];
   blocks.push({ k: "h2", text: "What happened" }, { k: "md", md: r.what_happened });
   if (r.stated_justification) blocks.push({ k: "h2", text: "What reason was given" }, { k: "md", md: r.stated_justification });
   if (r.effect_on_reporting) blocks.push({ k: "h2", text: "What changed for reporting" }, { k: "md", md: r.effect_on_reporting });
@@ -234,6 +231,10 @@ export async function incidentHandler({ env }, slug) {
     updatedAt: r.updated_at,
     data: {
       ...r,
+      country_name: countryName(ref, r.country),
+      continent: r.continent,
+      tactics: tacticSlugs,
+      leader: leader ? { slug: leader.slug, name: leader.name, url: `${SITE_ORIGIN}/leaders/${leader.slug}` } : null,
       external_ids: safeJsonParse(r.external_ids, {}),
       url: `${SITE_ORIGIN}${path}`,
       page_meta: meta,
@@ -302,13 +303,15 @@ function claimsBlocks(claims) {
 export async function actorHandler({ env }, slug) {
   const full = await getActorFull(env, slug);
   if (!full) return null;
+  const led = await first(env, "SELECT COUNT(*) AS n FROM incidents WHERE leader_slug = ? AND pub_state = 'published'", slug);
+  full.ledCount = led ? led.n : 0;
   const r = full.row;
   if (r.pub_state === "withdrawn") {
     const w = await withdrawnInfo(env, "actor", r.id);
     return goneDoc(env, `/actors/${slug}`, r.name, { publishedAt: r.published_at, withdrawnAt: w && w.changed_at, reason: w && w.reason });
   }
   if (r.pub_state !== "published") return null;
-  const items = [["Kind", r.kind === "person" ? "person" : (r.body_type || "body").replace(/_/g, " ")], ["Role", r.role]];
+  const items = [["Kind", r.kind === "person" ? "person" : BODY_TYPE_LABELS[r.body_type] || "body"], ["Role", r.role]];
   if (r.office) items.push(["Office", r.office]);
   items.push(["Jurisdiction", placeLabel(r.jurisdiction, r.country)]);
   if (r.term_start || r.term_end) items.push(["Term", `${r.term_start || "?"} to ${r.term_end || "present"}`]);
@@ -326,7 +329,7 @@ export async function actorHandler({ env }, slug) {
       { k: "h2", text: "Incidents" },
       full.incidents.length ? incidentsTable(full.incidents, "role", "Role") : { k: "p", text: "No published incident names this actor yet." },
       ...(full.cases.length ? [{ k: "h2", text: "Court cases" }, { k: "table", headers: ["Case", "Court", "Side"], rows: full.cases.map((c) => [linkCell(`/cases/${c.slug}`, c.caption), c.court, c.side]) }] : []),
-      { k: "html", html: `<p>${a(`/timeline/actor/${slug}`, `Timeline for ${r.name}`)}</p>`, text: `Timeline: ${SITE_ORIGIN}/timeline/actor/${slug}` },
+      { k: "html", html: `<p>${a(`/timeline/actor/${slug}`, `Timeline for ${r.name}`)}${full.ledCount ? ` · ${a(`/leaders/${slug}`, `${full.ledCount} ${full.ledCount === 1 ? "incident" : "incidents"} while head of government`)}` : ""}</p>`, text: `Timeline: ${SITE_ORIGIN}/timeline/actor/${slug}${full.ledCount ? `. As head of government: ${SITE_ORIGIN}/leaders/${slug}` : ""}` },
       ...claimsBlocks(full.claims),
     ],
     updatedAt: r.updated_at,
@@ -454,7 +457,7 @@ export async function caseHandler({ env }, slug) {
   const fn = new Footnotes(full.claims);
   const refIds = [...String(r.holding || "").matchAll(/\{c:(\d+)\}/g)].map((m) => parseInt(m[1], 10)).filter((id) => !fn.byId.has(id));
   if (refIds.length) fn.add(await attachSources(env, await all(env, `SELECT * FROM claims WHERE id IN (${refIds.map(() => "?").join(",")})`, ...refIds)));
-  const items = [["Caption", r.caption], ["Court", r.court], ["Court level", r.court_level]];
+  const items = [["Caption", r.caption], ["Court", r.court], ["Court level", COURT_LEVEL_LABELS[r.court_level] || r.court_level]];
   if (r.docket) items.push(["Docket", r.docket]);
   if (r.reporter_citation) items.push(["Citation", r.reporter_citation]);
   if (r.filed_on) items.push(["Filed", r.filed_on]);
@@ -484,57 +487,6 @@ export async function caseHandler({ env }, slug) {
       incidents: full.incidents.map((i) => ({ slug: i.slug, title: i.title, relation: i.relation, url: `${SITE_ORIGIN}/incidents/${i.slug}` })),
       claims: full.claims, revisions_url: `${SITE_ORIGIN}${path}/revisions`, license: LICENSE, cite_as: citeAs(r.caption, path),
     },
-  };
-}
-
-// ---------- news desk ----------
-
-export async function newsIndexHandler({ env }, page = 1) {
-  const total = await countPublishedNotes(env);
-  const pages = Math.max(1, Math.ceil(total / NEWS_PAGE_SIZE));
-  if (page < 1 || page > pages) return null;
-  const notes = await listNotes(env, { limit: NEWS_PAGE_SIZE, offset: (page - 1) * NEWS_PAGE_SIZE });
-  const path = page === 1 ? "/news" : `/news/page/${page}`;
-  const pager = pages > 1 ? `<nav class="pagination" aria-label="Pages">${Array.from({ length: pages }, (_, i) => i + 1).map((p) => (p === page ? `<span aria-current="page">${p}</span>` : a(p === 1 ? "/news" : `/news/page/${p}`, String(p)))).join("")}</nav>` : "";
-  return {
-    path,
-    title: page === 1 ? "News Desk" : `News Desk, page ${page}`,
-    metaDescription: "Short dated notes on new government actions that limit reporting, each naming and linking the outlet that reported it.",
-    breadcrumbs: page === 1 ? [] : [{ name: "News Desk", path: "/news" }],
-    blocks: [
-      { k: "p", text: "Short dated notes on new government actions that limit reporting. Each note names the outlet that reported the story and links to it; the record entries and case pages carry the full sourcing." },
-      { k: "cards", items: notes.map(noteCard), empty: "The News Desk has not published a note yet." },
-      { k: "html", html: pager, text: pages > 1 ? `Pages: ${Array.from({ length: pages }, (_, i) => `${SITE_ORIGIN}${i === 0 ? "/news" : `/news/page/${i + 1}`}`).join(" ")}` : "" },
-      { k: "feeds", items: FEED_LIST.filter((x) => x.href.startsWith("/news")) },
-    ],
-    updatedAt: notes[0] ? notes[0].published_at : null,
-    data: { page, pages, total, notes: notes.map((n) => ({ id: n.id, slug: n.slug, title: n.title, note: n.note, story_date: n.story_date, published_at: n.published_at, url: `${SITE_ORIGIN}/news/${n.slug}` })) },
-  };
-}
-
-export async function noteHandler({ env }, slug) {
-  const n = await getNoteBySlug(env, slug);
-  if (!n) return null;
-  if (n.state === "reverted") return goneDoc(env, `/news/${slug}`, n.title, { publishedAt: n.published_at, withdrawnAt: n.reverted_at, reason: n.revert_reason });
-  if (n.state !== "published") return null;
-  const src = await noteWithSources(env, n);
-  const path = `/news/${slug}`;
-  const allSources = [src.primary, ...src.secondary].filter(Boolean);
-  const meta = { published: n.published_at, reviewed: null, sources: allSources.length };
-  const blocks = [
-    { k: "html", html: `<div class="desk-note"><span class="desk-note__label">News Desk, ${escapeHtml(proseDate(String(n.published_at).slice(0, 10)))}</span><p>${escapeHtml(n.note)}</p></div>`, text: n.note },
-  ];
-  if (src.incident) blocks.push({ k: "html", html: `<p>Record entry: ${a(`/incidents/${src.incident.slug}`, src.incident.title)}</p>`, text: `Record entry: ${SITE_ORIGIN}/incidents/${src.incident.slug}` });
-  blocks.push({ k: "h2", text: "Sources" }, { k: "sources", sources: allSources });
-  const { jev_scores: _j, gates_passed: _g, run_id: _r, ...pub } = n;
-  return {
-    path, title: n.title, meta, ogType: "article",
-    metaDescription: truncate(n.note, 160),
-    breadcrumbs: [{ name: "News Desk", path: "/news" }],
-    jsonld: noteLd(n, src, src.incident),
-    blocks,
-    updatedAt: n.published_at,
-    data: { ...pub, secondary_source_ids: safeJsonParse(n.secondary_source_ids, []), url: `${SITE_ORIGIN}${path}`, primary_source: sourceObject(src.primary), secondary_sources: src.secondary.map(sourceObject), incident: src.incident ? { slug: src.incident.slug, title: src.incident.title, url: `${SITE_ORIGIN}/incidents/${src.incident.slug}` } : null, license: LICENSE },
   };
 }
 
@@ -625,7 +577,7 @@ export async function claimHandler({ env }, id) {
     ["About", subjPath ? linkCell(subjPath, `${c.subject_type} ${subjPath.split("/").pop()}`) : `${c.subject_type} ${c.subject_id}`],
   ];
   if (c.attribution) items.push(["Attribution", c.attribution]);
-  items.push(["Source", { html: extLink(src), text: `${src.title}. ${src.url}` }], ["Publisher", src.publisher], ["Link state", linkStateLabel(src.link_state)]);
+  items.push(["Source", { html: extLink(src), text: `${src.title}. ${src.url}` }], ["Publisher", src.publisher]);
   items.push(["Method", c.method.replace(/_/g, " ")], ["Checked", String(c.verified_at).slice(0, 10)], ["Confidence", c.confidence], ["Status", c.status]);
   if (c.evidence_date) items.push(["Source date", c.evidence_date]);
   if (c.supersedes_id) items.push(["Supersedes", linkCell(`/claims/${c.supersedes_id}`, `Claim ${c.supersedes_id}`)]);
@@ -659,11 +611,10 @@ export async function sourceHandler({ env }, id) {
     noindex: true,
     subtitle: `${s.publisher}${s.published_on ? `, ${s.published_on}` : ""}`,
     blocks: [
-      { k: "dl", items: [["Address", { html: extLink(s, s.url), text: s.url }], ["Kind", s.source_kind.replace(/_/g, " ")], ["Link state", linkStateLabel(s.link_state)], ["State since", s.link_state_since || ""], ["Last checked", s.last_checked || "not yet"], ["Archived copy", s.wayback_url ? { html: a(s.wayback_url, s.wayback_url), text: s.wayback_url } : `none yet (${s.archive_attempts} attempts)`]] },
+      { k: "dl", items: [["Address", { html: extLink(s, s.url), text: s.url }], ["Kind", s.source_kind.replace(/_/g, " ")], ["Last checked", s.last_checked ? String(s.last_checked).slice(0, 10) : "not yet"], ["Archived copy", s.wayback_url ? { html: a(s.wayback_url, s.wayback_url), text: s.wayback_url } : "none yet"]] },
       { k: "h2", text: "Cited by" },
       { k: "ul", items: [...incidents.map((i) => linkCell(`/incidents/${i.slug}`, i.title)), ...claims.map((c) => linkCell(`/claims/${c.id}`, `Claim ${c.id}: ${c.statement}`))] },
-      { k: "h2", text: "Check history" },
-      checks.length ? { k: "table", headers: ["Checked", "Checker", "HTTP", "Observed"], rows: checks.map((c) => [c.checked_at, c.checker, String(c.http_status ?? ""), c.observed_state]) } : { k: "p", text: "No checks are recorded yet." },
+      { k: "p", text: "The link-check history of this source is in the JSON version of this page." },
     ],
     data: { ...sourceObject(s), source_kind: s.source_kind, last_checked: s.last_checked, archive_attempts: s.archive_attempts, checks, claims, incidents },
   };
@@ -685,7 +636,7 @@ export async function changesHandler({ env }) {
   return {
     path: "/changes",
     title: "Changes",
-    metaDescription: "The public ledger: every new, superseded, disputed and retired claim, publication, revision, withdrawal and reverted note.",
+    metaDescription: "The public ledger: every new, superseded, disputed and retired claim, publication, revision and withdrawal.",
     blocks: [
       { k: "p", text: "Every change to the record, newest first. Claims are never edited: a change adds a claim that supersedes the old one, and both stay addressable." },
       { k: "feeds", items: [{ label: "Changes (Atom)", href: "/changes.xml" }] },
@@ -698,7 +649,7 @@ export async function changesHandler({ env }) {
 
 async function correctionLogBlocks(env) {
   const rows = await changeRows(env, await listChanges(env, { limit: 500, correctionsOnly: true }));
-  const reverted = await listRevertedNotes(env);
+  const reverted = [];
   return {
     rows, reverted,
     blocks: [
@@ -706,7 +657,6 @@ async function correctionLogBlocks(env) {
       rows.length || reverted.length
         ? { k: "table", headers: ["Date", "Change", "Page", "What changed"], rows: [
           ...rows.map((c) => [c.changed_at.slice(0, 10), c.kind.replace(/_/g, " "), c.path ? linkCell(c.path, c.path) : "", c.reason || ""]),
-          ...reverted.map((n) => [String(n.reverted_at).slice(0, 10), "news desk note reverted", linkCell(`/news/${n.slug}`, n.title), n.revert_reason]),
         ] }
         : { k: "p", text: "No corrections have been published." },
     ],
@@ -760,7 +710,6 @@ export async function correctionsHandler(ctx) {
     submitFormBlock("correction"),
   ]);
   doc.data.log = rows.map((c) => ({ changed_at: c.changed_at, kind: c.kind, url: c.path ? `${SITE_ORIGIN}${c.path}` : null, reason: c.reason }));
-  doc.data.reverted_notes = reverted;
   return doc;
 }
 
@@ -770,8 +719,8 @@ export async function correctionsLogHandler({ env }) {
     path: "/corrections/log",
     title: "Correction log",
     breadcrumbs: [{ name: "Corrections", path: "/corrections" }],
-    blocks: [{ k: "html", html: `<p>Corrections and reverted News Desk notes, newest first, under the ${a("/corrections", "corrections policy")}.</p>`, text: `Corrections and reverted News Desk notes under the corrections policy (${SITE_ORIGIN}/corrections).` }, ...blocks.slice(1)],
-    data: { log: rows, reverted_notes: reverted },
+    blocks: [{ k: "html", html: `<p>Corrections, newest first, under the ${a("/corrections", "corrections policy")}.</p>`, text: `Corrections under the corrections policy (${SITE_ORIGIN}/corrections).` }, ...blocks.slice(1)],
+    data: { log: rows },
   };
 }
 
@@ -810,9 +759,9 @@ export async function feedsHandler() {
   return {
     path: "/feeds",
     title: "Feeds",
-    metaDescription: "RSS, Atom and JSON Feed for the News Desk and the incident record, plus the change ledger.",
+    metaDescription: "RSS, Atom and JSON Feed for new and revised incidents and for recent coverage, plus the change ledger.",
     blocks: [
-      { k: "p", text: "Subscribe to the News Desk or to new and revised incident entries. Each feed carries the latest 50 items." },
+      { k: "p", text: "Subscribe to new and revised incident entries or to recent coverage. Each feed carries the latest 50 items." },
       { k: "table", headers: ["Feed", "Address"], rows: FEED_LIST.map((f) => [f.label, linkCell(f.href, `${SITE_ORIGIN}${f.href}`)]) },
     ],
     data: { feeds: FEED_LIST.map((f) => ({ ...f, url: `${SITE_ORIGIN}${f.href}` })) },
@@ -823,7 +772,7 @@ export async function mcpDocHandler() {
   return {
     path: "/mcp",
     title: "MCP server",
-    metaDescription: "A public Model Context Protocol server for searching and fetching incidents, timelines, actors, cases and News Desk notes.",
+    metaDescription: "A public Model Context Protocol server for searching and fetching incidents, countries, tactics, comparisons, timelines, actors, cases and recent coverage.",
     blocks: [
       { k: "p", text: `The War On News runs a public Model Context Protocol server at ${SITE_ORIGIN}/mcp (Streamable HTTP, JSON-RPC 2.0 over POST, no SSE). Read tools return the Markdown twin as content and the JSON twin as structuredContent. The one write tool, suggest_correction, needs a client token from the publisher and stores a pending request for review.` },
       { k: "dl", items: [["Endpoint", `${SITE_ORIGIN}/mcp`], ["Transport", "Streamable HTTP (POST)"], ["Protocol versions", SUPPORTED_PROTOCOL_VERSIONS.join(", ")], ["Server name", "com.thewaronnews/thewaronnews"], ["Manifest", linkCell("/.well-known/mcp/server.json", `${SITE_ORIGIN}/.well-known/mcp/server.json`)]] },
@@ -836,44 +785,7 @@ export async function mcpDocHandler() {
   };
 }
 
-// ---------- search / submit ----------
-
-export async function searchHandler({ env, request, url }) {
-  let q = url.searchParams.get("q") || "";
-  if (request.method === "POST") {
-    const ct = request.headers.get("Content-Type") || "";
-    if (ct.includes("application/json")) q = (await request.json().catch(() => ({}))).q || q;
-    else {
-      const form = await request.formData().catch(() => null);
-      if (form) q = form.get("q") || q;
-    }
-  }
-  q = String(q).slice(0, 300);
-  let results = [];
-  if (q.trim()) {
-    results = await searchRecords(env, q);
-    const ua = request.headers.get("User-Agent") || "";
-    if (!ua.startsWith("twon-")) {
-      const norm = normalizeQuestion(q);
-      try {
-        await upsertQuestion(env, { textRaw: q, textNorm: norm, hash: await sha256Hex(norm), source: "search", ts: isoNow(), resultCount: results.length });
-      } catch {
-        // logging never breaks search
-      }
-    }
-  }
-  return {
-    path: "/search",
-    title: q ? `Search: ${q}` : "Search",
-    noindex: !!q,
-    metaDescription: "Search incidents, cases, actors and glossary terms.",
-    blocks: [
-      { k: "html", html: `<form method="get" action="/search" role="search"><label for="q">Search the record</label><input type="search" id="q" name="q" value="${escapeHtml(q)}" maxlength="300"><button type="submit">Search</button></form>`, text: `Search: ${SITE_ORIGIN}/search?q=<terms>` },
-      ...(q ? [{ k: "h2", text: `${results.length} ${results.length === 1 ? "result" : "results"}` }, { k: "table", headers: ["Result", "Kind", "Excerpt"], rows: results.map((r) => [linkCell(r.path, r.title), r.record_type.replace(/_/g, " "), r.snippet]) }] : []),
-    ],
-    data: { q, count: results.length, results: results.map((r) => ({ ...r, url: `${SITE_ORIGIN}${r.path}` })) },
-  };
-}
+// ---------- submit ----------
 
 const SUBMIT_DAILY_LIMIT = 20;
 

@@ -42,6 +42,12 @@ export function countryName(ref, iso2) {
   return c ? c.name : iso2 || "";
 }
 
+// "the United States", "the Philippines": for running text ("in the ...").
+const NEEDS_THE = /^(United |Netherlands|Philippines|Bahamas|Gambia|Maldives|Central African|Czech Republic|Dominican Republic|Democratic Republic|Republic of|Marshall Islands|Solomon Islands|Comoros|Seychelles|Holy See|Cayman|Falkland|Faroe|Cook Islands|British |Turks and Caicos|Northern Mariana|Cocos|Caribbean Netherlands)/;
+export function inText(name) {
+  return NEEDS_THE.test(name) ? `the ${name}` : name;
+}
+
 // ---------- parameters ----------
 
 const DATE_ARG = /^\d{4}(-\d{2}(-\d{2})?)?$/;
@@ -221,8 +227,9 @@ export function describeFilters(f, ref, { lead = "Incidents" } = {}) {
   const bits = [];
   let head = lead;
   if (f.tactic) head = `${lead}: ${ref.tactics.get(f.tactic).name.toLowerCase()}`;
-  if (f.country) bits.push(`in ${f.country.split(",").map((c) => countryName(ref, c)).join(", ")}`);
-  else if (f.continent) bits.push(`in ${CONTINENTS[f.continent]}`);
+  let place = "";
+  if (f.country) place = ` in ${f.country.split(",").map((c) => inText(countryName(ref, c))).join(" and ")}`;
+  else if (f.continent) place = ` in ${CONTINENTS[f.continent]}`;
   if (f.from && f.to) bits.push(`${f.from} to ${f.to}`);
   else if (f.from) bits.push(`from ${f.from}`);
   else if (f.to) bits.push(`to ${f.to}`);
@@ -234,7 +241,7 @@ export function describeFilters(f, ref, { lead = "Incidents" } = {}) {
   if (f.source_kind) bits.push(`with ${f.source_kind.replace(/_/g, " ")} sources`);
   if (f.has_case === "1") bits.push("with a court case");
   if (f.has_case === "0") bits.push("without a court case");
-  return bits.length ? `${head}, ${bits.join(", ")}` : head;
+  return `${head}${place}${bits.length ? `, ${bits.join(", ")}` : ""}`;
 }
 
 // ---------- CSV ----------

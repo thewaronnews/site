@@ -1,29 +1,26 @@
-// Feeds (spec 4.4): News Desk and Incidents as RSS 2.0, Atom and JSON Feed
-// 1.1 (latest 50 items), plus /changes.xml (Atom). Reverted notes leave the
-// feeds. Incident items carry the latest revision reason.
+// Feeds (spec 4.4, v2): Incidents and Recent coverage as RSS 2.0, Atom and
+// JSON Feed 1.1 (latest 50 items), plus /changes.xml (Atom). Incident items
+// carry the latest revision reason; coverage items link to the publisher.
 
 import { escapeXml, mdToPlain, isoNow } from "./util.js";
-import { all, first, listChanges, recordPathFor, getSourcesByIds } from "./db.js";
+import { all, first, listChanges, recordPathFor } from "./db.js";
 import { SITE_NAME, SITE_ORIGIN, SITE_SUBTITLE, PUBLISHER_NAME, LICENSE_URL } from "./site.js";
 
 const LIMIT = 50;
 
-async function newsItems(env) {
-  const notes = await all(env, "SELECT id, slug, title, note, primary_source_id, published_at, story_date FROM news_desk_notes WHERE state = 'published' ORDER BY published_at DESC LIMIT ?", LIMIT);
-  const sources = await getSourcesByIds(env, notes.map((n) => n.primary_source_id));
-  const byId = new Map(sources.map((s) => [s.id, s]));
-  return notes.map((n) => {
-    const s = byId.get(n.primary_source_id);
-    const text = `${n.note}${s ? `\n\nSource: ${s.publisher}, "${s.title}", ${s.url}` : ""}`;
+async function coverageItems(env) {
+  const rows = await all(env, "SELECT id, url, title, publisher, published_at, summary, fetched_at FROM coverage_items WHERE state = 'shown' ORDER BY COALESCE(published_at, fetched_at) DESC, id DESC LIMIT ?", LIMIT);
+  return rows.map((c) => {
+    const text = `${c.publisher ? `${c.publisher}. ` : ""}${c.summary || ""}`.trim();
     return {
-      id: `${SITE_ORIGIN}/news/${n.slug}`,
-      url: `${SITE_ORIGIN}/news/${n.slug}`,
-      title: n.title,
-      text,
-      html: `<p>${escapeXml(n.note)}</p>${s ? `<p>Source: <a href="${escapeXml(s.url)}">${escapeXml(s.publisher)}: ${escapeXml(s.title)}</a></p>` : ""}`,
-      published: n.published_at,
-      updated: n.published_at,
-      external_url: s ? s.url : null,
+      id: `${SITE_ORIGIN}/coverage#item-${c.id}`,
+      url: c.url,
+      title: c.title,
+      text: text || c.title,
+      html: `<p>${escapeXml(c.publisher || "")}${c.summary ? `: ${escapeXml(c.summary)}` : ""}</p><p><a href="${escapeXml(c.url)}">${escapeXml(c.title)}</a></p>`,
+      published: c.published_at || c.fetched_at,
+      updated: c.published_at || c.fetched_at,
+      external_url: c.url,
     };
   });
 }
@@ -115,15 +112,15 @@ function jsonFeed(items, { title, path, description, selfPath }) {
 }
 
 const FEED_META = {
-  news: { title: `${SITE_NAME}: News Desk`, path: "/news", description: `Dated notes on government actions that limit reporting, each linking to the original reporting. ${SITE_SUBTITLE}` },
+  coverage: { title: `${SITE_NAME}: Recent coverage`, path: "/coverage", description: `Recent reporting on government actions against journalists worldwide, linked to the publishers. ${SITE_SUBTITLE}` },
   incidents: { title: `${SITE_NAME}: Incidents`, path: "/incidents", description: `New and revised incident entries. ${SITE_SUBTITLE}` },
 };
 
-// Returns {body, contentType} or null. kind: news|incidents; fmt: rss|atom|json
+// Returns {body, contentType} or null. kind: coverage|incidents; fmt: rss|atom|json
 export async function renderFeed(env, kind, fmt) {
   const meta = FEED_META[kind];
   if (!meta) return null;
-  const items = kind === "news" ? await newsItems(env) : await incidentItems(env);
+  const items = kind === "coverage" ? await coverageItems(env) : await incidentItems(env);
   if (fmt === "rss") return { body: rss(items, meta), contentType: "application/rss+xml; charset=utf-8" };
   if (fmt === "atom") return { body: atom(items, { ...meta, selfPath: `${meta.path}/atom.xml`, subtitle: meta.description }), contentType: "application/atom+xml; charset=utf-8" };
   if (fmt === "json") return { body: jsonFeed(items, { ...meta, selfPath: `${meta.path}/feed.json` }), contentType: "application/feed+json; charset=utf-8" };
@@ -139,13 +136,13 @@ export async function changesAtom(env) {
     const text = [label, c.record_type ? `${c.record_type} ${c.record_id || ""}`.trim() : "", c.reason ? `Reason: ${c.reason}` : "", c.is_correction ? "Correction." : ""].filter(Boolean).join(". ");
     items.push({ id: `${SITE_ORIGIN}/changes#change-${c.id}`, url: `${SITE_ORIGIN}${path}`, title: `${c.changed_at.slice(0, 10)}: ${label}`, text, html: `<p>${escapeXml(text)}</p>`, published: c.changed_at, updated: c.changed_at });
   }
-  return atom(items, { title: `${SITE_NAME}: changes`, path: "/changes", selfPath: "/changes.xml", subtitle: "Every new, superseded, disputed and retired claim, publication, revision, withdrawal and reverted note." });
+  return atom(items, { title: `${SITE_NAME}: changes`, path: "/changes", selfPath: "/changes.xml", subtitle: "Every new, superseded, disputed and retired claim, publication, revision and withdrawal." });
 }
 
 export const FEED_LIST = [
-  { label: "News Desk (RSS)", href: "/news/feed.xml" },
-  { label: "News Desk (Atom)", href: "/news/atom.xml" },
-  { label: "News Desk (JSON Feed)", href: "/news/feed.json" },
+  { label: "Recent coverage (RSS)", href: "/coverage/feed.xml" },
+  { label: "Recent coverage (Atom)", href: "/coverage/atom.xml" },
+  { label: "Recent coverage (JSON Feed)", href: "/coverage/feed.json" },
   { label: "Incidents (RSS)", href: "/incidents/feed.xml" },
   { label: "Incidents (Atom)", href: "/incidents/atom.xml" },
   { label: "Incidents (JSON Feed)", href: "/incidents/feed.json" },

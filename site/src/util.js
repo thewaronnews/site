@@ -102,44 +102,32 @@ export function aHtml(href, innerHtml, attrs = {}) {
   return `<a href="${escapeHtml(href)}"${attrString(merged)}>${innerHtml}</a>`;
 }
 
-// The only way an external source link is rendered (spec 3.3).
+// The only way an external source link is rendered (spec 3.3, v2 brief):
+// the source, opening in a new tab, plus an "archived copy" link when a
+// Wayback snapshot exists. Link states stay in the data and the .json
+// twins; the page says nothing about them except, when the original no
+// longer resolves, "original page no longer resolves; archived copy".
 export function extLink(source, text) {
   if (!source) return "";
   const label = text || source.title || source.url;
-  const archived = source.wayback_url
-    ? ` <small class="claim-archived-link">${a(source.wayback_url, "archived")}</small>`
-    : "";
-  switch (source.link_state) {
-    case "paywalled":
-      return `${a(source.url, label, { class: "source__link" })} (subscription)${archived}`;
-    case "redirected":
-      return `${a(source.final_url || source.url, label, { class: "source__link", title: source.url })}${archived}`;
-    case "dead": {
-      const snap = source.wayback_url
-        ? `Original link no longer resolves; ${a(source.wayback_url, "archived copy")}`
-        : "Original link no longer resolves; no archived copy exists";
-      return `<span class="source__link">${escapeHtml(label)}</span> <small>${escapeHtml(source.url)}</small>. ${snap}`;
-    }
-    default:
-      return `${a(source.url, label, { class: "source__link" })}${archived}`;
+  if (source.link_state === "dead") {
+    const snap = source.wayback_url ? a(source.wayback_url, "archived copy") : "no archived copy is available";
+    return `<span class="source__link">${escapeHtml(label)}</span> <small class="source__dead">(original page no longer resolves; ${snap})</small>`;
   }
+  const href = source.link_state === "redirected" && source.final_url ? source.final_url : source.url;
+  const archived = source.wayback_url ? ` <small class="claim-archived-link">${a(source.wayback_url, "archived copy")}</small>` : "";
+  return `${a(href, label, { class: "source__link" })}${archived}`;
 }
 
 // Plain-text twin of extLink for the Markdown views.
 export function extLinkMd(source) {
   if (!source) return "";
-  const parts = [];
   const title = source.title || source.url;
   if (source.link_state === "dead") {
-    parts.push(`${title}. ${source.url} (original link no longer resolves)`);
-    parts.push(source.wayback_url ? `Archived copy: ${source.wayback_url}` : "No archived copy exists");
-  } else {
-    const url = source.link_state === "redirected" && source.final_url ? source.final_url : source.url;
-    parts.push(`${title}. ${url}`);
-    if (source.link_state === "paywalled") parts.push("(subscription)");
-    if (source.wayback_url) parts.push(`Archived: ${source.wayback_url}`);
+    return `${title}. ${source.url} (original page no longer resolves; ${source.wayback_url ? `archived copy: ${source.wayback_url}` : "no archived copy is available"})`;
   }
-  return parts.join(" ");
+  const url = source.link_state === "redirected" && source.final_url ? source.final_url : source.url;
+  return `${title}. ${url}${source.wayback_url ? ` Archived copy: ${source.wayback_url}` : ""}`;
 }
 
 export function linkStateLabel(state) {

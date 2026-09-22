@@ -6,8 +6,11 @@
 // documentation page in index.js, not here. Smoke UA prefix: twon-smoke/.
 
 import { MCP_SERVER_NAME, MCP_SERVER_TITLE, SITE_ORIGIN } from "./site.js";
-import { first, all, upsertQuestion, listIncidents, timelineRows, listNotes, getSourcesByIds, sourceObject } from "./db.js";
+import { first, all, upsertQuestion, timelineRows, sourceObject } from "./db.js";
 import { incidentHandler, actorHandler, caseHandler } from "./routes.js";
+import { countryHandler, tacticHandler, compareHandler } from "./v2routes.js";
+import { refData, readFilters, queryIncidents } from "./search.js";
+import { listCoverage } from "./coverage.js";
 import { renderMarkdown } from "./render.js";
 import { sha256Hex, isoNow, isoDate, normalizeQuestion, mdToPlain, linkStateLabel, extLinkMd } from "./util.js";
 import { hashIp } from "./logger.js";
@@ -20,16 +23,18 @@ const SESSION_TTL_SECONDS = 24 * 3600;
 const CACHE_TTL_SECONDS = 5 * 60;
 const SUGGEST_CLIENT_DAILY_LIMIT = 20;
 const SUGGEST_IP_DAILY_LIMIT = 60;
-const CACHEABLE_TOOLS = new Set(["get_incident", "get_timeline", "get_actor", "get_case", "latest_news", "get_sources_for"]);
-const TARGET_TYPES = ["incident", "actor", "outlet", "journalist", "case", "claim", "source", "news_desk_note", "explainer", "glossary_term"];
+const CACHEABLE_TOOLS = new Set(["get_incident", "get_timeline", "get_actor", "get_case", "get_sources_for", "get_tactic", "get_country", "compare", "recent_coverage"]);
+const TACTIC_SLUGS = ["access_ban", "credential_control", "outlet_licensing", "prior_restraint", "secrets_and_espionage_laws", "insult_and_defamation_laws", "surveillance_and_subpoenas", "funding_and_ownership_pressure", "expulsion_and_visa_denial", "shutdowns_and_blocking", "detention_and_violence", "lawsuits_against_press", "disinformation_labeling"];
+const CONTINENT_SLUGS = ["africa", "antarctica", "asia", "europe", "north-america", "oceania", "south-america"];
+const TARGET_TYPES = ["incident", "actor", "outlet", "journalist", "case", "claim", "source", "explainer", "glossary_term"];
 
-const SERVER_INSTRUCTIONS = "The War On News is a dated, sourced record of government actions that limit journalists' ability to report, US-first with global context. Use search_incidents to find incidents, get_incident for one incident with its claims and archived sources, get_timeline for dated entries, get_actor and get_case for people, bodies and court cases, latest_news for News Desk notes and get_sources_for for an incident's sources with link state. Cite pages by their URL. suggest_correction needs a client token from the publisher.";
+const SERVER_INSTRUCTIONS = "The War On News is a dated, sourced record of how governments have limited journalists, 1900 to today, by country, tactic and era. Use search_incidents (with country, continent, tactic, leader, outcome, from and to facets) to find incidents, get_incident for one incident with its claims and archived sources, get_country and get_tactic for a country's or a tactic's record, compare for a tactic by country matrix with heads of government and outcomes, get_timeline for dated entries, get_actor and get_case for people, bodies and court cases, recent_coverage for links to recent reporting, and get_sources_for for an incident's sources with link state. Cite pages by their URL. suggest_correction needs a client token from the publisher.";
 
 export const MCP_SERVER_MANIFEST = {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
   name: MCP_SERVER_NAME,
   title: MCP_SERVER_TITLE,
-  description: "A dated, sourced record of government actions that limit reporting, as MCP tools.",
+  description: "How governments have limited journalists, 1900 to today: a dated, sourced record by country, tactic and era, as MCP tools.",
   version: SERVER_VERSION,
   websiteUrl: SITE_ORIGIN,
   remotes: [{ type: "streamable-http", url: `${SITE_ORIGIN}/mcp` }],
@@ -40,14 +45,21 @@ const RO = { readOnlyHint: true, openWorldHint: false };
 export const TOOLS = [
   {
     name: "search_incidents", title: "Search incidents", annotations: RO,
-    description: "Search recorded incidents where governments or officials limited journalists' ability to report. Returns title, date, type, status, summary and URL, newest first.",
+    description: "Search recorded incidents where governments or officials limited journalists' ability to report, with the same facets as /incidents. Returns date, country, tactic, head of government, outcome, summary and URL, newest first (best match first with a query).",
     inputSchema: { type: "object", properties: {
-      query: { type: "string", description: "Free-text terms matched against titles and summaries." },
-      type: { type: "string", enum: ENUMS.incident_type },
-      actor: { type: "string", description: "Actor slug" },
-      from: { type: "string", format: "date" },
-      to: { type: "string", format: "date" },
-      limit: { type: "integer", minimum: 1, maximum: 50, default: 10 },
+      query: { type: "string", description: "Free-text terms (full-text search over titles and text)." },
+      country: { type: "string", description: "ISO 3166-1 alpha-2 code, or several separated by commas (e.g. US or US,HU)." },
+      continent: { type: "string", enum: CONTINENT_SLUGS },
+      tactic: { type: "string", enum: TACTIC_SLUGS },
+      leader: { type: "string", description: "Actor slug of the head of government at the time (e.g. donald-trump)." },
+      actor: { type: "string", description: "Actor slug of any official or body named in the incident." },
+      outcome: { type: "string", enum: ENUMS.outcome },
+      level: { type: "string", enum: ENUMS.level },
+      from: { type: "string", description: "Year or date (YYYY, YYYY-MM or YYYY-MM-DD)." },
+      to: { type: "string", description: "Year or date (YYYY, YYYY-MM or YYYY-MM-DD)." },
+      has_case: { type: "boolean" },
+      sort: { type: "string", enum: ["date", "date_asc", "country", "tactic", "relevance"] },
+      limit: { type: "integer", minimum: 1, maximum: 100, default: 10 },
     } },
   },
   {
@@ -75,9 +87,27 @@ export const TOOLS = [
     inputSchema: { type: "object", properties: { slug: { type: "string" } }, required: ["slug"] },
   },
   {
-    name: "latest_news", title: "Latest News Desk notes", annotations: RO,
-    description: "Latest News Desk notes, each linking to the original reporting.",
-    inputSchema: { type: "object", properties: { limit: { type: "integer", minimum: 1, maximum: 50, default: 10 } } },
+    name: "get_country", title: "Get a country", annotations: RO,
+    description: "One country's record: incidents by year, tactics used, heads of government at the time, and the latest RSF World Press Freedom Index rank where recorded.",
+    inputSchema: { type: "object", properties: { iso2: { type: "string", description: "ISO 3166-1 alpha-2 code, e.g. US, HU, IN." } }, required: ["iso2"] },
+  },
+  {
+    name: "get_tactic", title: "Get a tactic", annotations: RO,
+    description: "One tactic: plain definition and every recorded incident using it, by country and year.",
+    inputSchema: { type: "object", properties: { slug: { type: "string", enum: TACTIC_SLUGS } }, required: ["slug"] },
+  },
+  {
+    name: "compare", title: "Compare tactics across countries", annotations: RO,
+    description: "Who did what, when: a tactic by country matrix whose cells list dated incidents with the head of government and the outcome. Narrow by tactic, country (comma-separated ISO codes), continent and date range.",
+    inputSchema: { type: "object", properties: {
+      tactic: { type: "string", enum: TACTIC_SLUGS }, country: { type: "string" }, continent: { type: "string", enum: CONTINENT_SLUGS },
+      from: { type: "string", description: "Year or date" }, to: { type: "string", description: "Year or date" },
+    } },
+  },
+  {
+    name: "recent_coverage", title: "Recent coverage", annotations: RO,
+    description: "Links to recent reporting (last 60 days) on government actions against journalists worldwide, newest first, with publisher and date. Headlines belong to their publishers.",
+    inputSchema: { type: "object", properties: { limit: { type: "integer", minimum: 1, maximum: 100, default: 20 } } },
   },
   {
     name: "get_sources_for", title: "Get sources for an incident", annotations: RO,
@@ -180,38 +210,27 @@ function syntheticCtx(env, path) {
 // ---------- tools ----------
 
 async function toolSearchIncidents(args, { env, request }) {
-  const limit = Math.min(Math.max(parseInt(args.limit, 10) || 10, 1), 50);
-  const q = String(args.query || "").trim().slice(0, 300);
-  let actorId = null;
-  if (args.actor) {
-    const a = await first(env, "SELECT id FROM actors WHERE slug = ?", String(args.actor));
-    if (!a) return { content: [{ type: "text", text: `No actor with slug "${args.actor}".` }], structuredContent: { incidents: [] }, isError: false, resultCount: 0 };
-    actorId = a.id;
+  const ref = await refData(env);
+  const limit = Math.min(Math.max(parseInt(args.limit, 10) || 10, 1), 100);
+  const q = String(args.query || "").trim().slice(0, 200);
+  const raw = { ...args, q, per_page: String(limit) };
+  if (typeof args.has_case === "boolean") raw.has_case = args.has_case ? "1" : "0";
+  for (const k of ["country", "continent", "tactic", "leader", "actor", "outcome", "level"]) {
+    if (args[k] && !readFilters({ [k]: args[k] }, ref)[k]) return errResult(`Unknown ${k}: "${args[k]}".`);
   }
-  if (args.type && !ENUMS.incident_type.includes(args.type)) return errResult(`type must be one of: ${ENUMS.incident_type.join(", ")}`);
-  let rows = await listIncidents(env, { type: args.type || null, actorId, limit: 500 });
-  if (args.from) rows = rows.filter((r) => r.occurred_on >= String(args.from));
-  if (args.to) rows = rows.filter((r) => r.occurred_on <= String(args.to));
-  if (q) {
-    const terms = normalizeQuestion(q).split(" ").filter((t) => t.length > 2);
-    const scored = rows.map((r) => {
-      const hay = normalizeQuestion(`${r.title} ${mdToPlain(r.summary)} ${r.type} ${r.jurisdiction}`);
-      const score = terms.filter((t) => hay.includes(t)).length;
-      return { r, score };
-    }).filter((x) => x.score > 0);
-    scored.sort((a, b) => b.score - a.score || (a.r.occurred_on < b.r.occurred_on ? 1 : -1));
-    rows = scored.map((x) => x.r);
-  }
-  rows = rows.slice(0, limit);
+  const f = readFilters(raw, ref);
+  f.per_page = String(limit);
+  const res = await queryIncidents(env, f);
   if (q && !isSmokeTestUa(request)) {
     const norm = normalizeQuestion(q);
-    try { await upsertQuestion(env, { textRaw: q, textNorm: norm, hash: await sha256Hex(norm), source: "mcp", ts: isoNow(), resultCount: rows.length }); } catch { /* never breaks the tool */ }
+    try { await upsertQuestion(env, { textRaw: q, textNorm: norm, hash: await sha256Hex(norm), source: "mcp", ts: isoNow(), resultCount: res.total }); } catch { /* never breaks the tool */ }
   }
-  const incidents = rows.map((r) => ({ slug: r.slug, title: r.title, occurred_on: r.occurred_on, occurred_on_precision: r.occurred_on_precision, type: r.type, level: r.level, country: r.country, status: r.status, status_updated_on: r.status_updated_on, summary: mdToPlain(r.summary), url: `${SITE_ORIGIN}/incidents/${r.slug}` }));
+  const incidents = res.rows.map((r) => ({ slug: r.slug, title: r.title, occurred_on: r.occurred_on, occurred_on_precision: r.occurred_on_precision, country: r.country, country_name: r.country_name, continent: r.continent, level: r.level, tactic_primary: r.tactic_primary, tactics: r.tactics, leader_slug: r.leader_slug, leader_name: r.leader_name, outcome: r.outcome, status: r.status, summary: mdToPlain(r.summary), url: r.url }));
   const text = incidents.length
-    ? incidents.map((i) => `- ${i.occurred_on} ${i.title} (${i.type}, ${i.status}). ${i.summary} ${i.url}`).join("\n")
+    ? incidents.map((i) => `- ${i.occurred_on} ${i.title} (${i.country_name}${i.tactic_primary ? `, ${i.tactic_primary}` : ""}${i.leader_name ? `, head of government ${i.leader_name}` : ""}, outcome ${i.outcome}). ${i.summary} ${i.url}`).join("\n")
     : "No recorded incident matches this search.";
-  return { content: [{ type: "text", text }], structuredContent: { query: q, count: incidents.length, incidents }, isError: false, resultCount: incidents.length };
+  const { per_page: _p, ...filters } = f;
+  return { content: [{ type: "text", text: `${res.total} matching; showing ${incidents.length}.\n${text}` }], structuredContent: { query: q, filters, count: res.total, returned: incidents.length, incidents }, isError: false, resultCount: incidents.length };
 }
 
 async function toolGetIncident(args, { env }) {
@@ -241,14 +260,40 @@ async function toolGetCase(args, { env }) {
   return docResult(await caseHandler(syntheticCtx(env, `/cases/${slug}`), slug), `No published case has the slug "${slug}".`);
 }
 
-async function toolLatestNews(args, { env }) {
-  const limit = Math.min(Math.max(parseInt(args.limit, 10) || 10, 1), 50);
-  const notes = await listNotes(env, { limit });
-  const srcs = await getSourcesByIds(env, notes.map((n) => n.primary_source_id));
-  const byId = new Map(srcs.map((s) => [s.id, s]));
-  const out = notes.map((n) => ({ slug: n.slug, title: n.title, note: n.note, published_at: n.published_at, story_date: n.story_date, url: `${SITE_ORIGIN}/news/${n.slug}`, primary_source: sourceObject(byId.get(n.primary_source_id)) }));
-  const text = out.length ? out.map((n) => `## ${n.title}\n${n.published_at.slice(0, 10)}. ${n.note}\n${n.url}${n.primary_source ? `\nSource: ${n.primary_source.publisher}, ${n.primary_source.url}` : ""}`).join("\n\n") : "The News Desk has not published a note yet.";
-  return { content: [{ type: "text", text }], structuredContent: { notes: out }, isError: false, resultCount: out.length };
+async function toolGetCountry(args, { env }) {
+  const iso = String(args.iso2 || args.country || "").trim().toUpperCase();
+  if (!/^[A-Z]{2}$/.test(iso)) return errResult("get_country requires an ISO 3166-1 alpha-2 code (iso2).");
+  return docResult(await countryHandler(syntheticCtx(env, `/countries/${iso.toLowerCase()}`), iso), `No country has the code "${iso}".`);
+}
+
+async function toolGetTactic(args, { env }) {
+  const slug = String(args.slug || "").trim().toLowerCase().replace(/-/g, "_");
+  if (!TACTIC_SLUGS.includes(slug)) return errResult(`slug must be one of: ${TACTIC_SLUGS.join(", ")}`);
+  return docResult(await tacticHandler(syntheticCtx(env, `/tactics/${slug}`), slug), `No tactic has the slug "${slug}".`);
+}
+
+async function toolCompare(args, { env }) {
+  const params = new URLSearchParams();
+  for (const k of ["tactic", "country", "continent", "from", "to"]) if (args[k]) params.set(k, String(args[k]));
+  const ctx = syntheticCtx(env, `/compare${params.toString() ? `?${params}` : ""}`);
+  const doc = await compareHandler(ctx);
+  const d = doc.data;
+  const lines = [];
+  for (const t of d.tactics) {
+    for (const c of d.countries) {
+      const list = (d.cells[t.slug] || {})[c.iso2];
+      if (list) for (const i of list) lines.push(`- ${t.name} / ${c.name}: ${i.occurred_on} ${i.title}${i.leader_name ? `; head of government ${i.leader_name}` : ""}; outcome ${i.outcome}. ${i.url}`);
+    }
+  }
+  return { content: [{ type: "text", text: `# ${doc.title}\n\n${lines.length ? lines.join("\n") : "No incident matches."}\n\n${d.canonical_url}` }], structuredContent: d, isError: false, resultCount: d.count };
+}
+
+async function toolRecentCoverage(args, { env }) {
+  const limit = Math.min(Math.max(parseInt(args.limit, 10) || 20, 1), 100);
+  const items = await listCoverage(env, { state: "shown", limit });
+  const out = items.map((i) => ({ title: i.title, url: i.url, publisher: i.publisher, published_at: i.published_at, summary: i.summary, country_guess: i.country_guess, tactic_guess: i.tactic_guess }));
+  const text = out.length ? out.map((i) => `- ${String(i.published_at || "").slice(0, 10)} ${i.title} (${i.publisher || ""}) ${i.url}`).join("\n") : "No recent coverage is listed yet.";
+  return { content: [{ type: "text", text }], structuredContent: { count: out.length, items: out, page: `${SITE_ORIGIN}/coverage` }, isError: false, resultCount: out.length };
 }
 
 async function toolGetSourcesFor(args, { env }) {
@@ -322,7 +367,8 @@ async function callTool(name, args, argsHash, deps) {
   }
   const fns = {
     search_incidents: toolSearchIncidents, get_incident: toolGetIncident, get_timeline: toolGetTimeline, get_actor: toolGetActor,
-    get_case: toolGetCase, latest_news: toolLatestNews, get_sources_for: toolGetSourcesFor, suggest_correction: toolSuggestCorrection,
+    get_case: toolGetCase, get_sources_for: toolGetSourcesFor, suggest_correction: toolSuggestCorrection,
+    get_country: toolGetCountry, get_tactic: toolGetTactic, compare: toolCompare, recent_coverage: toolRecentCoverage,
   };
   if (!fns[name]) return { notFoundTool: true, resultCount: 0 };
   const result = await fns[name](args || {}, deps);

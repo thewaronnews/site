@@ -6,7 +6,7 @@ import { escapeXml } from "./util.js";
 import { all } from "./db.js";
 import { SITE_ORIGIN, SITE_NAME } from "./site.js";
 
-const STATIC_PAGES = ["/", "/incidents", "/actors", "/outlets", "/journalists", "/cases", "/timeline", "/news", "/glossary", "/explainers", "/about", "/methodology", "/editorial-policy", "/corrections", "/changes", "/data", "/feeds", "/mcp", "/search"];
+const STATIC_PAGES = ["/", "/incidents", "/countries", "/continents", "/tactics", "/compare", "/eras", "/leaders", "/coverage", "/actors", "/outlets", "/journalists", "/cases", "/timeline", "/glossary", "/about", "/sources-and-standards", "/editorial-policy", "/corrections", "/terms", "/privacy", "/changes", "/data", "/feeds", "/mcp", "/search"];
 
 function maxDate(entries) {
   return entries.reduce((m, e) => (e.lastmod && (!m || e.lastmod > m) ? e.lastmod : m), null);
@@ -22,10 +22,10 @@ ${entries.map((e) => `<url><loc>${escapeXml(SITE_ORIGIN + e.loc)}</loc>${e.lastm
 
 async function pagesEntries(env) {
   const latest = await all(env, `SELECT MAX(updated_at) AS m FROM incidents WHERE pub_state = 'published'
-    UNION ALL SELECT MAX(published_at) FROM news_desk_notes WHERE state = 'published'
+    UNION ALL SELECT MAX(fetched_at) FROM coverage_items WHERE state = 'shown'
     UNION ALL SELECT MAX(changed_at) FROM changes`);
-  const [inc, news, chg] = latest.map((r) => r.m);
-  const lm = { "/incidents": inc, "/timeline": inc, "/news": news, "/changes": chg, "/": [inc, news].filter(Boolean).sort().pop() };
+  const [inc, cov, chg] = latest.map((r) => r.m);
+  const lm = { "/incidents": inc, "/timeline": inc, "/countries": inc, "/continents": inc, "/tactics": inc, "/compare": inc, "/eras": inc, "/leaders": inc, "/coverage": cov, "/changes": chg, "/": [inc, cov].filter(Boolean).sort().pop() };
   return STATIC_PAGES.map((p) => ({ loc: p, lastmod: lm[p] || null }));
 }
 
@@ -38,16 +38,17 @@ async function recordEntries(env) {
   }
   const years = await all(env, "SELECT DISTINCT substr(occurred_on, 1, 4) AS y, MAX(updated_at) AS m FROM incidents WHERE pub_state = 'published' GROUP BY y ORDER BY y");
   for (const y of years) out.push({ loc: `/timeline/${y.y}`, lastmod: y.m });
+  const q = (sql) => all(env, sql);
+  for (const r of await q("SELECT lower(country) AS k, MAX(updated_at) AS m FROM incidents WHERE pub_state = 'published' GROUP BY country ORDER BY country")) out.push({ loc: `/countries/${r.k}`, lastmod: r.m });
+  for (const r of await q("SELECT continent AS k, MAX(updated_at) AS m FROM incidents WHERE pub_state = 'published' AND continent IS NOT NULL GROUP BY continent ORDER BY continent")) out.push({ loc: `/continents/${r.k}`, lastmod: r.m });
+  for (const r of await q("SELECT t.slug AS k, MAX(i.updated_at) AS m FROM tactics t LEFT JOIN incident_tactics it ON it.tactic_slug = t.slug LEFT JOIN incidents i ON i.id = it.incident_id AND i.pub_state = 'published' GROUP BY t.slug ORDER BY t.sort")) out.push({ loc: `/tactics/${r.k}`, lastmod: r.m });
+  for (const r of await q("SELECT era AS k, MAX(updated_at) AS m FROM incidents WHERE pub_state = 'published' GROUP BY era ORDER BY era")) out.push({ loc: `/eras/${r.k}`, lastmod: r.m });
+  for (const r of await q("SELECT i.leader_slug AS k, MAX(i.updated_at) AS m FROM incidents i JOIN actors a ON a.slug = i.leader_slug AND a.pub_state = 'published' WHERE i.pub_state = 'published' GROUP BY i.leader_slug ORDER BY i.leader_slug")) out.push({ loc: `/leaders/${r.k}`, lastmod: r.m });
   return out;
 }
 
-async function newsEntries(env) {
-  const rows = await all(env, "SELECT slug, published_at FROM news_desk_notes WHERE state = 'published' ORDER BY published_at DESC");
-  return rows.map((r) => ({ loc: `/news/${r.slug}`, lastmod: r.published_at }));
-}
-
 async function machineEntries(env) {
-  const base = [...(await pagesEntries(env)), ...(await recordEntries(env)), ...(await newsEntries(env))];
+  const base = [...(await pagesEntries(env)), ...(await recordEntries(env))];
   const out = [];
   for (const e of base) {
     const b = e.loc === "/" ? "/index" : e.loc;
@@ -55,24 +56,13 @@ async function machineEntries(env) {
   }
   const claims = await all(env, "SELECT id, created_at FROM claims WHERE status = 'current' ORDER BY id");
   for (const c of claims) out.push({ loc: `/claims/${c.id}`, lastmod: c.created_at });
-  out.push({ loc: "/llms.txt", lastmod: null }, { loc: "/llms-full.txt", lastmod: null }, { loc: "/data/datapackage.json", lastmod: null });
+  out.push({ loc: "/incidents.csv", lastmod: null }, { loc: "/llms.txt", lastmod: null }, { loc: "/llms-full.txt", lastmod: null }, { loc: "/data/datapackage.json", lastmod: null });
   return out;
 }
 
 export async function renderSitemap(env, name) {
   if (name === "pages") return urlset(await pagesEntries(env));
   if (name === "incidents") return urlset(await recordEntries(env));
-  if (name === "news") return urlset(await newsEntries(env));
-  if (name === "machine") return urlset(await machineEntries(env));
-  if (name === "news-google") {
-    const cutoff = new Date(Date.now() - 48 * 3600 * 1000).toISOString();
-    const rows = await all(env, "SELECT slug, title, published_at FROM news_desk_notes WHERE state = 'published' AND published_at >= ? ORDER BY published_at DESC", cutoff);
-    return urlset(rows.map((r) => ({
-      loc: `/news/${r.slug}`,
-      lastmod: r.published_at,
-      extra: `<news:news><news:publication><news:name>${escapeXml(SITE_NAME)}</news:name><news:language>en</news:language></news:publication><news:publication_date>${r.published_at}</news:publication_date><news:title>${escapeXml(r.title)}</news:title></news:news>`,
-    })), ' xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"');
-  }
   return null;
 }
 
@@ -80,8 +70,6 @@ export async function renderSitemapIndex(env) {
   const children = [
     ["pages", await pagesEntries(env)],
     ["incidents", await recordEntries(env)],
-    ["news", await newsEntries(env)],
-    ["news-google", await newsEntries(env)],
     ["machine", await machineEntries(env)],
   ];
   return `<?xml version="1.0" encoding="UTF-8"?>
