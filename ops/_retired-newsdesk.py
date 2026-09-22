@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
 """
+RETIRED 2026-09-22: the News Desk pipeline was retired in the v2 build.
+/admin/desk and /admin/notes now answer HTTP 410 on the site, recent
+coverage is collected by the Worker's own hourly cron
+(POST /admin/cron/coverage) instead, and admin-token-desk.txt has been
+moved to _retired/ in the Syncthing folder. This file is kept for
+reference only; do not run it and do not issue or use a "desk" scoped
+admin token.
+
 newsdesk.py -- the daily News Desk run (spec section 7).
 
 Runs on the Mac Studio at 06:30 and 16:30 America/Toronto. This script is
