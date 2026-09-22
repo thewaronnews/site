@@ -1,1 +1,8 @@
 {"count": 1, "event": "dry_run", "script": "indexnow", "ts": "2026-09-22T19:40:01Z"}
+{"error": "INDEXNOW_KEY is not set (see ops/README.md)", "event": "fatal", "script": "indexnow", "ts": "2026-09-22T20:45:42Z"}
+{"error": "INDEXNOW_KEY is not set (see ops/README.md)", "event": "fatal", "script": "indexnow", "ts": "2026-09-22T20:45:47Z"}
+{"count": 354, "event": "dry_run", "script": "indexnow", "ts": "2026-09-22T20:45:56Z"}
+{"count": 100, "event": "pinged", "script": "indexnow", "status": 202, "ts": "2026-09-22T20:46:12Z"}
+{"count": 100, "event": "pinged", "script": "indexnow", "status": 200, "ts": "2026-09-22T20:46:13Z"}
+{"count": 100, "event": "pinged", "script": "indexnow", "status": 200, "ts": "2026-09-22T20:46:13Z"}
+{"count": 54, "event": "pinged", "script": "indexnow", "status": 200, "ts": "2026-09-22T20:46:14Z"}

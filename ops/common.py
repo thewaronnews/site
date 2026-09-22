@@ -231,7 +231,12 @@ class JevClient:
         """
         if self.is_demo:
             base = self.DEMO_BASE
-            headers = {"Content-Type": "application/json"}
+            # The demo endpoint sits behind Cloudflare, which 403s
+            # ("error code: 1010") the default urllib User-Agent
+            # ("Python-urllib/3.x") outright -- observed on every call in
+            # this run. A browser UA passes; same fetch, just not
+            # fingerprinted as a bare-urllib bot.
+            headers = {"Content-Type": "application/json", "User-Agent": CHROME_UA}
             if len(state) > self.DEMO_STATE_LIMIT:
                 state = state[: self.DEMO_STATE_LIMIT]
             self._throttle()
@@ -240,6 +245,7 @@ class JevClient:
             headers = {
                 "Content-Type": "application/json",
                 "Authorization": f"Bearer {self.api_key}",
+                "User-Agent": CHROME_UA,
             }
 
         body = {"model": self.model, "state": state, "questions": questions}

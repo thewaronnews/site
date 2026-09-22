@@ -20,11 +20,24 @@ Pipeline:
   5. POST batches of 200 checks to /admin/sources/checks.
 
 Usage:
-  python3 linkcheck.py [--limit N] [--dry-run] [--base URL]
+  python3 linkcheck.py [--limit N] [--dry-run] [--base URL] [--all]
 
 Env:
   TWON_BASE, TWON_TOKEN_FILE_TRIAGE (triage-scope token is sufficient for
   GET /admin/sources/due and POST /admin/sources/checks).
+
+--all: the admin API's only source-listing endpoint is GET
+  /admin/sources/due (spec section 8, linkstate.js dueSources()), which
+  returns sources unchecked for >=20 hours. There is no "all sources"
+  admin endpoint. --all instead reads the public, unauthenticated
+  Frictionless export at {base}/data/json/sources.json (spec section 4.5,
+  refreshed by POST /admin/export) and classifies every row there,
+  regardless of last_checked. Use this for a full backfill pass (e.g. the
+  first run of the day, or right after a bulk of sources was added) when
+  waiting for the 20-hour due window is not what's wanted; the export
+  should be run (POST /admin/export, operator scope) shortly before so the
+  list is current. Ordinary nightly runs should omit --all and rely on
+  /admin/sources/due as designed.
 """
 from __future__ import annotations
 
@@ -249,11 +262,30 @@ PAGE_STATE_TO_OBSERVED = {
 }
 
 
-def run(limit: int, dry_run: bool, base: Optional[str]) -> int:
+def fetch_all_sources_from_export(base: Optional[str]) -> List[Dict[str, Any]]:
+    """Public, unauthenticated fallback used by --all: the sources table of
+    the latest Frictionless export (see module docstring). Not scoped by
+    last_checked, unlike /admin/sources/due."""
+    root = (base or "https://thewaronnews.com").rstrip("/")
+    req = urllib.request.Request(
+        f"{root}/data/json/sources.json",
+        headers={"User-Agent": common.CHROME_UA, "Accept": "application/json"},
+    )
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        import json as _json
+
+        return _json.loads(resp.read().decode("utf-8"))
+
+
+def run(limit: int, dry_run: bool, base: Optional[str], all_sources: bool) -> int:
     client = common.AdminClient("TWON_TOKEN_FILE_TRIAGE", base_url=base)
-    due = client.get(f"/admin/sources/due?limit={limit}") or {"sources": []}
-    sources = due.get("sources", due if isinstance(due, list) else [])
-    common.log(SCRIPT, "start", due_count=len(sources), dry_run=dry_run)
+    if all_sources:
+        sources = fetch_all_sources_from_export(base)
+        common.log(SCRIPT, "start", due_count=len(sources), dry_run=dry_run, mode="all")
+    else:
+        due = client.get(f"/admin/sources/due?limit={limit}") or {"sources": []}
+        sources = due.get("sources", due if isinstance(due, list) else [])
+        common.log(SCRIPT, "start", due_count=len(sources), dry_run=dry_run, mode="due")
 
     jev = common.JevClient()
     host_last_fetch: Dict[str, float] = {}
@@ -321,9 +353,10 @@ def main() -> int:
     ap.add_argument("--limit", type=int, default=500, help="max sources to pull from /admin/sources/due")
     ap.add_argument("--dry-run", action="store_true", help="fetch and classify but do not POST results")
     ap.add_argument("--base", default=None, help="override TWON_BASE")
+    ap.add_argument("--all", action="store_true", help="classify every source from the public data export, ignoring the 20h due window (see module docstring)")
     args = ap.parse_args()
     try:
-        return run(args.limit, args.dry_run, args.base)
+        return run(args.limit, args.dry_run, args.base, args.all)
     except Exception as exc:  # noqa: BLE001
         common.log(SCRIPT, "fatal", error=str(exc))
         print(f"linkcheck: FATAL: {exc}", file=sys.stderr)

@@ -2,27 +2,37 @@
 #
 # Tracker RSS feeds are leads only (spec: "Advocacy feeds are leads only");
 # every candidate still goes through Jev in_scope scoring and the gates in
-# section 7.3 before it can publish. URLs below are the publicly documented
-# feed endpoints for each organization as of 2026-09-22; CONFIRM each one
-# against the live site during P1a build (spec: "URLs confirmed in P1a") --
-# a 404/410 feed here should be fixed, not silently skipped forever.
-#
-# newsdesk.py treats a feed it cannot fetch as a soft failure (logged, run
-# continues with whatever feeds did work).
+# section 7.3 before it can publish. URLs confirmed live 2026-09-22 (ops
+# first run) by fetching each one directly; four of the original ten 404'd
+# and were replaced below with the working equivalent found on the same
+# site (noted per entry). newsdesk.py treats a feed it cannot fetch as a
+# soft failure (logged, run continues with whatever feeds did work) --
+# a 404/410 feed here should still be fixed, not silently skipped forever.
 
 feeds:
   - org: "U.S. Press Freedom Tracker"
-    url: "https://pressfreedomtracker.us/feed/"
+    url: "https://pressfreedomtracker.us/blog/feed/"
+    # was https://pressfreedomtracker.us/feed/ (404 2026-09-22). No site-wide
+    # feed exists; /blog/feed/ (their Analysis section) is the closest live
+    # RSS endpoint -- confirmed 200, valid RSS 2.0, 2026-09-22.
   - org: "Committee to Protect Journalists (CPJ)"
     url: "https://cpj.org/feed/"
   - org: "Reporters Without Borders (RSF)"
-    url: "https://rsf.org/en/rss.xml"
+    url: "https://rsf.org/en/rss/am%C3%A9riques/united-states/feed.xml"
+    # was https://rsf.org/en/rss.xml (404 2026-09-22; that path renders an
+    # HTML page of per-country feed links, not a feed itself). Replaced
+    # with RSF's United States country feed, matching the site's US-first
+    # scope -- confirmed 200, valid RSS 2.0, 2026-09-22.
   - org: "Freedom of the Press Foundation (FPF)"
-    url: "https://freedom.press/feed/"
+    url: "https://freedom.press/rss.xml"
+    # was https://freedom.press/feed/ (404 2026-09-22). Confirmed 200,
+    # valid RSS 2.0, 2026-09-22.
   - org: "Reporters Committee for Freedom of the Press (RCFP)"
     url: "https://www.rcfp.org/feed/"
   - org: "Knight First Amendment Institute"
-    url: "https://knightcolumbia.org/feed"
+    url: "https://knightcolumbia.org/rss/feed.xml"
+    # was https://knightcolumbia.org/feed (404 2026-09-22). Confirmed 200,
+    # valid RSS 2.0, 2026-09-22.
   - org: "Nieman Lab"
     url: "https://www.niemanlab.org/feed/"
   - org: "Poynter"

@@ -1,0 +1,2 @@
+{"attempt": 1, "error": "<urlopen error Tunnel connection failed: 502 Bad Gateway>", "event": "admin_retry_network", "method": "POST", "path": "/admin/sources/8/wayback", "script": "common", "ts": "2026-09-22T20:29:57Z", "wait": 2}
+{"attempt": 1, "error": "<urlopen error Tunnel connection failed: 502 Bad Gateway>", "event": "admin_retry_network", "method": "POST", "path": "/admin/sources/20/wayback", "script": "common", "ts": "2026-09-22T20:33:00Z", "wait": 2}

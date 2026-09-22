@@ -24,8 +24,22 @@ Method, per spec section 6:
     up to 5 attempts total (tracked by the admin API, not locally).
 
 Usage:
-  python3 wayback.py [--limit N] [--dry-run] [--base URL] [--max-failures N]
+  python3 wayback.py [--limit N] [--dry-run] [--base URL] [--max-failures N] [--all]
   python3 wayback.py --url https://example.com/story [--source-id 123]
+
+--all / endpoint note: this script originally queried
+  GET /admin/sources/without-wayback, which does not exist on the Worker
+  -- admin.js / linkstate.js expose only GET /admin/sources/due (unchecked
+  for >=20h), POST /admin/sources/checks and POST /admin/sources/<id>/wayback
+  (spec section 8). Fixed to match the Worker: the default batch mode now
+  calls /admin/sources/due (filtered locally for sources with no
+  wayback_url), same as the nightly cadence intends. Because /admin/sources/due
+  is scoped by last_checked, it will not re-surface sources a same-day
+  linkcheck.py run already touched -- there is no admin endpoint that lists
+  "all sources" or "sources without wayback" outright. --all works around
+  that for a backfill pass by reading the public, unauthenticated
+  Frictionless export at {base}/data/json/sources.json (refreshed by
+  POST /admin/export) instead, filtered locally for a missing wayback_url.
 """
 from __future__ import annotations
 
@@ -149,13 +163,25 @@ def save_spn2(url: str, access_key: str, secret_key: str) -> bool:
     return False
 
 
+def _as_https_web_archive(url: str) -> str:
+    """The Worker's setWayback (linkstate.js) requires wayback_url to match
+    ^https://web\\.archive\\.org/ (admin.js/linkstate.js, spec section 8),
+    but archive.org's own availability API routinely answers with
+    http://web.archive.org/... (observed on every call in this run). The
+    snapshot is served identically over https, so upgrade the scheme here
+    rather than have the Worker reject a real, valid snapshot."""
+    if url.startswith("http://web.archive.org/"):
+        return "https://" + url[len("http://") :]
+    return url
+
+
 def archive_one(url: str) -> Optional[Dict[str, str]]:
     """Full archive-one-URL flow. Returns {"wayback_url", "wayback_saved_at"}
     on success, None on failure."""
     fresh = check_available(url)
     if fresh and snapshot_is_fresh(fresh):
         return {
-            "wayback_url": fresh["url"],
+            "wayback_url": _as_https_web_archive(fresh["url"]),
             "wayback_saved_at": common.iso_now(),
         }
 
@@ -172,14 +198,32 @@ def archive_one(url: str) -> Optional[Dict[str, str]]:
     snapshot = check_available(url)
     if not snapshot:
         return None
-    return {"wayback_url": snapshot["url"], "wayback_saved_at": common.iso_now()}
+    return {"wayback_url": _as_https_web_archive(snapshot["url"]), "wayback_saved_at": common.iso_now()}
 
 
-def run_batch(limit: int, dry_run: bool, base: Optional[str], max_failures: int) -> int:
+def fetch_all_sources_from_export(base: Optional[str]) -> Any:
+    """Public, unauthenticated fallback used by --all (see module
+    docstring): the sources table of the latest Frictionless export."""
+    root = (base or "https://thewaronnews.com").rstrip("/")
+    req = urllib.request.Request(
+        f"{root}/data/json/sources.json",
+        headers={"User-Agent": SAVE_UA, "Accept": "application/json"},
+    )
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        return json.loads(resp.read().decode("utf-8"))
+
+
+def run_batch(limit: int, dry_run: bool, base: Optional[str], max_failures: int, all_sources: bool) -> int:
     client = common.AdminClient("TWON_TOKEN_FILE_TRIAGE", base_url=base)
-    due = client.get(f"/admin/sources/without-wayback?limit={limit}") or {"sources": []}
-    sources = due.get("sources", due if isinstance(due, list) else [])
-    common.log(SCRIPT, "start", count=len(sources), dry_run=dry_run)
+    if all_sources:
+        all_rows = fetch_all_sources_from_export(base)
+        sources = [s for s in all_rows if not s.get("wayback_url")][:limit]
+        common.log(SCRIPT, "start", count=len(sources), dry_run=dry_run, mode="all")
+    else:
+        due = client.get(f"/admin/sources/due?limit={limit}") or {"sources": []}
+        due_sources = due.get("sources", due if isinstance(due, list) else [])
+        sources = [s for s in due_sources if not s.get("wayback_url")]
+        common.log(SCRIPT, "start", count=len(sources), dry_run=dry_run, mode="due")
 
     saved = 0
     failed = 0
@@ -199,13 +243,19 @@ def run_batch(limit: int, dry_run: bool, base: Optional[str], max_failures: int)
             consecutive_failures = 0
             common.log(SCRIPT, "saved", source_id=source_id, url=url, wayback_url=result["wayback_url"])
             if not dry_run:
-                client.post(f"/admin/sources/{source_id}/wayback", result)
+                try:
+                    client.post(f"/admin/sources/{source_id}/wayback", result)
+                except Exception as exc:  # noqa: BLE001 - one bad POST must not kill the batch
+                    common.log(SCRIPT, "post_error", source_id=source_id, url=url, error=str(exc))
         else:
             failed += 1
             consecutive_failures += 1
             common.log(SCRIPT, "failed", source_id=source_id, url=url)
             if not dry_run:
-                client.post(f"/admin/sources/{source_id}/wayback", {"wayback_url": None})
+                try:
+                    client.post(f"/admin/sources/{source_id}/wayback", {"wayback_url": None})
+                except Exception as exc:  # noqa: BLE001
+                    common.log(SCRIPT, "post_error", source_id=source_id, url=url, error=str(exc))
 
         time.sleep(SECONDS_BETWEEN_SAVES)
 
@@ -240,12 +290,13 @@ def main() -> int:
     ap.add_argument("--max-failures", type=int, default=8, help="stop the batch after this many consecutive failures")
     ap.add_argument("--url", default=None, help="archive a single URL instead of the batch queue")
     ap.add_argument("--source-id", type=int, default=None, help="with --url, also POST the result for this source id")
+    ap.add_argument("--all", action="store_true", help="backfill every source missing a wayback_url, via the public data export (see module docstring)")
     args = ap.parse_args()
 
     try:
         if args.url:
             return run_single(args.url, args.source_id, args.dry_run, args.base)
-        return run_batch(args.limit, args.dry_run, args.base, args.max_failures)
+        return run_batch(args.limit, args.dry_run, args.base, args.max_failures, args.all)
     except Exception as exc:  # noqa: BLE001
         common.log(SCRIPT, "fatal", error=str(exc))
         print(f"wayback: FATAL: {exc}", file=sys.stderr)

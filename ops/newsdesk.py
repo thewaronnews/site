@@ -123,6 +123,12 @@ def fetch_feed(url: str, timeout: float = 15.0) -> List[Dict[str, str]]:
     req = urllib.request.Request(url, headers={"User-Agent": "twon-desk/1.0"})
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         raw = resp.read()
+    # Some feeds (observed: Nieman Lab) emit a leading newline/whitespace
+    # before the XML declaration, which is invalid XML that ET.fromstring
+    # rejects outright ("XML or text declaration not at start of entity")
+    # even though the feed itself is well-formed otherwise. Strip leading
+    # whitespace/BOM so a real, working feed isn't misreported as broken.
+    raw = raw.lstrip(b"\xef\xbb\xbf \t\r\n")
     root = ET.fromstring(raw)
     items: List[Dict[str, str]] = []
 
