@@ -63,6 +63,7 @@ async function machineEntries(env) {
 export async function renderSitemap(env, name) {
   if (name === "pages") return urlset(await pagesEntries(env));
   if (name === "incidents") return urlset(await recordEntries(env));
+  if (name === "machine") return urlset(await machineEntries(env));
   return null;
 }
 
