@@ -250,8 +250,9 @@ export async function timelineRows(env, { year, actorSlug, type, country, from, 
   const bySlug = new Map(incRows.map((r) => [r.id, r]));
   let evRows = [];
   if (incIds.length) {
+    // A subquery, not an IN list of ids: D1 allows at most 100 bound parameters.
     evRows = await all(env, `SELECT e.id, e.incident_id, e.case_id, e.occurred_on, e.occurred_on_precision, e.kind, e.label, e.claim_id, c.slug AS case_slug
-      FROM events e LEFT JOIN cases c ON c.id = e.case_id WHERE e.pub_state = 'published' AND e.incident_id IN (${incIds.map(() => "?").join(",")})`, ...incIds);
+      FROM events e LEFT JOIN cases c ON c.id = e.case_id WHERE e.pub_state = 'published' AND e.incident_id IN (SELECT i.id FROM incidents i WHERE ${where.join(" AND ")})`, ...binds);
   }
   const rows = incRows.map((i) => ({
     date: i.occurred_on, precision: i.occurred_on_precision, kind: "incident", label: i.title,

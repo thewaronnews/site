@@ -272,7 +272,9 @@ export async function unitedStatesHandler({ env }) {
   const now = rows.filter((r) => r.occurred_on >= NOW_FROM);
   const before = rows.filter((r) => r.occurred_on < NOW_FROM);
   const nowIds = now.map((r) => r.id);
-  const events = nowIds.length ? await all(env, `SELECT e.incident_id, e.occurred_on, e.occurred_on_precision, e.kind, e.label, c.slug AS case_slug FROM events e LEFT JOIN cases c ON c.id = e.case_id WHERE e.incident_id IN (${nowIds.map(() => "?").join(",")}) AND e.pub_state = 'published' ORDER BY e.occurred_on, e.id`, ...nowIds) : [];
+  // Subqueries rather than id lists: D1 allows at most 100 bound parameters.
+  const NOW_SQL = "SELECT id FROM incidents WHERE pub_state = 'published' AND country = ? AND occurred_on >= ?";
+  const events = nowIds.length ? await all(env, `SELECT e.incident_id, e.occurred_on, e.occurred_on_precision, e.kind, e.label, c.slug AS case_slug FROM events e LEFT JOIN cases c ON c.id = e.case_id WHERE e.incident_id IN (${NOW_SQL}) AND e.pub_state = 'published' ORDER BY e.occurred_on, e.id`, FOCAL, NOW_FROM) : [];
   const eventsBy = new Map();
   for (const e of events) {
     if (!eventsBy.has(e.incident_id)) eventsBy.set(e.incident_id, []);
@@ -371,9 +373,9 @@ export async function unitedStatesHandler({ env }) {
 
   // Sources
   const nowSourceRows = nowIds.length ? await all(env, `SELECT DISTINCT s.* FROM sources s WHERE s.id IN (
-      SELECT source_id FROM incident_sources WHERE incident_id IN (${nowIds.map(() => "?").join(",")})
-      UNION SELECT source_id FROM claims WHERE subject_type = 'incident' AND status = 'current' AND subject_id IN (${nowIds.map(() => "?").join(",")}))
-    ORDER BY s.published_on DESC, s.publisher, s.id`, ...nowIds, ...nowIds) : [];
+      SELECT source_id FROM incident_sources WHERE incident_id IN (${NOW_SQL})
+      UNION SELECT source_id FROM claims WHERE subject_type = 'incident' AND status = 'current' AND subject_id IN (${NOW_SQL}))
+    ORDER BY s.published_on DESC, s.publisher, s.id`, FOCAL, NOW_FROM, FOCAL, NOW_FROM) : [];
   const srcs = nowSourceRows.map(sourceObject);
   blocks.push({ k: "h2", text: "Sources", id: "sources" });
   blocks.push({ k: "p", text: "The sources cited by the 2025 and 2026 incidents above, newest first. Each incident's own page lists its sources with the claims they support." });
