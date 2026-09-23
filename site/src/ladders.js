@@ -8,7 +8,7 @@
 
 import { a, escapeHtml, proseDate, mdToPlain, truncate } from "./util.js";
 import { all, sourceObject } from "./db.js";
-import { linkCell } from "./render.js";
+import { linkCell, blockToHtml, blockToMd } from "./render.js";
 import { refData, readFilters, canonicalQuery, queryIncidents, csvResponse, rsfData } from "./search.js";
 import { incidentTable, rsfHtml, rsfMd, COUNTS_CAVEAT } from "./v2routes.js";
 import { PAGE_NOTES } from "./content.js";
@@ -333,10 +333,20 @@ export async function unitedStatesHandler({ env }) {
     byDecade.get(d).push(r);
   }
   const historyJson = [];
+  const decadeKeys = [...byDecade.keys()];
+  const lastDecadeKey = decadeKeys[decadeKeys.length - 1];
   for (const [d, list] of byDecade) {
     const label = d === "2020s" ? "The 2020s, to 2024" : `The ${d}`;
-    blocks.push({ k: "h3", text: label });
-    blocks.push(incidentTable(list, { cols: ["date", "incident", "tactic", "stage", "leader", "outcome"] }));
+    const tableBlock = incidentTable(list, { cols: ["date", "incident", "tactic", "stage", "leader", "outcome"] });
+    // Atlas (HTML only, TODO 29): each decade collapses into its own
+    // <details>, the most recent one open, so the page is not one long
+    // scroll. The .md twin stays flat (an "### <decade>" heading plus the
+    // table, exactly as before) via this block's plain `text`.
+    blocks.push({
+      k: "html",
+      viewHtml: `<details class="decade-group"${d === lastDecadeKey ? " open" : ""}><summary><h3>${escapeHtml(label)}</h3></summary>${blockToHtml(tableBlock, null)}</details>`,
+      text: `### ${label}\n\n${blockToMd(tableBlock, null)}`,
+    });
     historyJson.push({ decade: d, incidents: list.map((r) => rungJson(r, sources)) });
   }
 

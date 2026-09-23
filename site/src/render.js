@@ -184,7 +184,7 @@ export function blockToHtml(b, fn) {
   }
 }
 
-function blockToMd(b, fn) {
+export function blockToMd(b, fn) {
   switch (b.k) {
     case "p": return b.text ?? "";
     case "h2": return `## ${b.text}`;

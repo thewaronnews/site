@@ -536,6 +536,14 @@
   .now-item .facts { display: flex; flex-wrap: wrap; background: var(--well); }
   .now-item .facts > div { flex: 1 1 9rem; }
   .now-item .facts > div:nth-child(4) { flex: 4 1 20rem; }
+  .decade-group { margin: 0 0 var(--space-3); border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+  .decade-group > summary { cursor: pointer; list-style: none; padding: .7rem 1rem; display: flex; align-items: center; gap: .6rem; }
+  .decade-group > summary::-webkit-details-marker { display: none; }
+  .decade-group > summary::before { content: "\25B8"; display: inline-block; color: var(--ink-2); transition: transform .15s ease; }
+  .decade-group[open] > summary::before { transform: rotate(90deg); }
+  .decade-group > summary h3 { display: inline; margin: 0; font-size: var(--step-1); }
+  .decade-group > summary:hover h3 { text-decoration: underline; }
+  .decade-group .table-wrap { margin: 0 1rem var(--space-3); }
 }
 
 /* ============================== UTILITIES ============================== */
