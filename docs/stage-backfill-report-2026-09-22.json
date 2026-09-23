@@ -1,0 +1,1166 @@
+{
+ "distribution": {
+  "restrict": 20,
+  "pressure": 28,
+  "punish": 40,
+  "eliminate": 9,
+  "silence": 31
+ },
+ "reviewed": 45,
+ "reviewed_changed_from_rule": 21,
+ "reviewed_slugs_not_found": [],
+ "rows": [
+  {
+   "slug": "2026-white-house-bans-cnn-msnow-politico",
+   "tactic": "access_ban",
+   "rule": "restrict",
+   "stage": "restrict",
+   "reviewed": false,
+   "why": "rule: tactic access_ban",
+   "write": 200
+  },
+  {
+   "slug": "2026-russia-new-law-targets-exiled-journalists-assets",
+   "tactic": "disinformation_labeling",
+   "rule": "pressure",
+   "stage": "pressure",
+   "reviewed": true,
+   "why": "freezing of assets and denial of consular services to people in exile",
+   "write": 200
+  },
+  {
+   "slug": "2026-cbp-seizes-grayzone-editor-phones-airport",
+   "tactic": "surveillance_and_subpoenas",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic surveillance_and_subpoenas",
+   "write": 200
+  },
+  {
+   "slug": "2026-court-orders-fcc-to-answer-news-distortion-challenge",
+   "tactic": "funding_and_ownership_pressure",
+   "rule": "pressure",
+   "stage": "pressure",
+   "reviewed": false,
+   "why": "rule: tactic funding_and_ownership_pressure",
+   "write": 200
+  },
+  {
+   "slug": "2026-el-salvador-freezes-el-faro-shareholder-assets",
+   "tactic": "funding_and_ownership_pressure",
+   "rule": "pressure",
+   "stage": "pressure",
+   "reviewed": false,
+   "why": "rule: tactic funding_and_ownership_pressure",
+   "write": 200
+  },
+  {
+   "slug": "2026-india-journalist-sentenced-adani-defamation",
+   "tactic": "insult_and_defamation_laws",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic insult_and_defamation_laws",
+   "write": 200
+  },
+  {
+   "slug": "2026-israel-maintains-ban-on-foreign-press-access-to-gaza",
+   "tactic": "access_ban",
+   "rule": "restrict",
+   "stage": "restrict",
+   "reviewed": true,
+   "why": "entry to Gaza refused except on escorted trips; access ban",
+   "write": 200
+  },
+  {
+   "slug": "2025-hong-kong-convicts-jimmy-lai-under-national-security-law",
+   "tactic": "detention_and_violence",
+   "rule": "eliminate",
+   "stage": "eliminate",
+   "reviewed": true,
+   "why": "20-year prison sentence for a newspaper founder",
+   "write": 200
+  },
+  {
+   "slug": "2025-white-house-restricts-access-to-upper-press-office",
+   "tactic": "access_ban",
+   "rule": "restrict",
+   "stage": "restrict",
+   "reviewed": false,
+   "why": "rule: tactic access_ban",
+   "write": 200
+  },
+  {
+   "slug": "2025-tanzania-internet-shutdown-election-day",
+   "tactic": "shutdowns_and_blocking",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic shutdowns_and_blocking",
+   "write": 200
+  },
+  {
+   "slug": "2025-pentagon-press-corps-forfeits-badges",
+   "tactic": "credential_control",
+   "rule": "restrict",
+   "stage": "restrict",
+   "reviewed": false,
+   "why": "rule: tactic credential_control",
+   "write": 200
+  },
+  {
+   "slug": "2025-pentagon-issues-new-press-credentialing-rules",
+   "tactic": "credential_control",
+   "rule": "restrict",
+   "stage": "restrict",
+   "reviewed": true,
+   "why": "conditions attached to press credentials at one building",
+   "write": 200
+  },
+  {
+   "slug": "2025-fcc-pressure-precedes-kimmel-suspension",
+   "tactic": "funding_and_ownership_pressure",
+   "rule": "pressure",
+   "stage": "pressure",
+   "reviewed": false,
+   "why": "rule: tactic funding_and_ownership_pressure",
+   "write": 200
+  },
+  {
+   "slug": "2025-trump-sues-new-york-times-15-billion",
+   "tactic": "lawsuits_against_press",
+   "rule": "pressure",
+   "stage": "pressure",
+   "reviewed": false,
+   "why": "rule: tactic lawsuits_against_press",
+   "write": 200
+  },
+  {
+   "slug": "2025-serbia-police-target-journalists-protests",
+   "tactic": "detention_and_violence",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic detention_and_violence",
+   "write": 200
+  },
+  {
+   "slug": "2025-ethiopia-arrests-journalists-sheger-fm",
+   "tactic": "detention_and_violence",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic detention_and_violence",
+   "write": 200
+  },
+  {
+   "slug": "2025-fcc-approves-paramount-skydance-with-ombudsman-condition",
+   "tactic": "funding_and_ownership_pressure",
+   "rule": "pressure",
+   "stage": "pressure",
+   "reviewed": false,
+   "why": "rule: tactic funding_and_ownership_pressure",
+   "write": 200
+  },
+  {
+   "slug": "2025-trump-sues-wall-street-journal-epstein-letter",
+   "tactic": "lawsuits_against_press",
+   "rule": "pressure",
+   "stage": "pressure",
+   "reviewed": false,
+   "why": "rule: tactic lawsuits_against_press",
+   "write": 200
+  },
+  {
+   "slug": "2025-congress-rescinds-cpb-funding",
+   "tactic": "funding_and_ownership_pressure",
+   "rule": "pressure",
+   "stage": "pressure",
+   "reviewed": false,
+   "why": "rule: tactic funding_and_ownership_pressure",
+   "write": 200
+  },
+  {
+   "slug": "2025-paramount-cbs-settle-60-minutes-suit",
+   "tactic": "lawsuits_against_press",
+   "rule": "pressure",
+   "stage": "pressure",
+   "reviewed": false,
+   "why": "rule: tactic lawsuits_against_press",
+   "write": 200
+  },
+  {
+   "slug": "2025-australian-journalist-shot-rubber-bullet-los-angeles",
+   "tactic": "detention_and_violence",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic detention_and_violence",
+   "write": 200
+  },
+  {
+   "slug": "2025-trump-order-ends-cpb-funding-npr-pbs",
+   "tactic": "funding_and_ownership_pressure",
+   "rule": "pressure",
+   "stage": "pressure",
+   "reviewed": false,
+   "why": "rule: tactic funding_and_ownership_pressure",
+   "write": 200
+  },
+  {
+   "slug": "2025-doj-rescinds-media-subpoena-guidelines",
+   "tactic": "surveillance_and_subpoenas",
+   "rule": "punish",
+   "stage": "pressure",
+   "reviewed": true,
+   "why": "policy change that allows subpoenas; no subpoena to a reporter in this entry",
+   "write": 200
+  },
+  {
+   "slug": "2025-60-minutes-producer-owens-resigns-loss-of-independence",
+   "tactic": "funding_and_ownership_pressure",
+   "rule": "pressure",
+   "stage": "pressure",
+   "reviewed": false,
+   "why": "rule: tactic funding_and_ownership_pressure",
+   "write": 200
+  },
+  {
+   "slug": "2025-white-house-cuts-wire-service-pool-slot",
+   "tactic": "access_ban",
+   "rule": "restrict",
+   "stage": "restrict",
+   "reviewed": false,
+   "why": "rule: tactic access_ban",
+   "write": 200
+  },
+  {
+   "slug": "2025-turkiye-detains-and-deports-journalists-covering-protests",
+   "tactic": "detention_and_violence",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic detention_and_violence",
+   "write": 200
+  },
+  {
+   "slug": "2025-usagm-moves-to-shut-down-voice-of-america",
+   "tactic": "funding_and_ownership_pressure",
+   "rule": "pressure",
+   "stage": "silence",
+   "reviewed": true,
+   "why": "moves to shut down a public broadcaster",
+   "write": 200
+  },
+  {
+   "slug": "2025-whca-loses-control-of-press-pool",
+   "tactic": "access_ban",
+   "rule": "restrict",
+   "stage": "restrict",
+   "reviewed": false,
+   "why": "rule: tactic access_ban",
+   "write": 200
+  },
+  {
+   "slug": "2025-white-house-bars-ap-gulf-of-america",
+   "tactic": "access_ban",
+   "rule": "restrict",
+   "stage": "restrict",
+   "reviewed": false,
+   "why": "rule: tactic access_ban",
+   "write": 200
+  },
+  {
+   "slug": "2025-tom-homan-signals-end-to-ice-media-ride-alongs",
+   "tactic": "access_ban",
+   "rule": "restrict",
+   "stage": "restrict",
+   "reviewed": false,
+   "why": "rule: tactic access_ban",
+   "write": 200
+  },
+  {
+   "slug": "2025-bangladesh-journalists-attacked-interim-government",
+   "tactic": "detention_and_violence",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": true,
+   "why": "physical attacks on journalists as the record states them",
+   "write": 200
+  },
+  {
+   "slug": "2025-federal-judge-blocks-louisiana-buffer-law",
+   "tactic": "access_ban",
+   "rule": "restrict",
+   "stage": "restrict",
+   "reviewed": false,
+   "why": "rule: tactic access_ban",
+   "write": 200
+  },
+  {
+   "slug": "2025-pakistan-amends-peca-cybercrime-law",
+   "tactic": "disinformation_labeling",
+   "rule": "pressure",
+   "stage": "punish",
+   "reviewed": true,
+   "why": "prison terms of up to three years for information deemed false",
+   "write": 200
+  },
+  {
+   "slug": "2025-fcc-carr-news-distortion-complaints-nbc-cbs",
+   "tactic": "funding_and_ownership_pressure",
+   "rule": "pressure",
+   "stage": "pressure",
+   "reviewed": false,
+   "why": "rule: tactic funding_and_ownership_pressure",
+   "write": 200
+  },
+  {
+   "slug": "2025-tunisia-record-journalists-jailed-decree-54",
+   "tactic": "insult_and_defamation_laws",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic insult_and_defamation_laws",
+   "write": 200
+  },
+  {
+   "slug": "2025-florida-halo-law-takes-effect",
+   "tactic": "access_ban",
+   "rule": "restrict",
+   "stage": "restrict",
+   "reviewed": false,
+   "why": "rule: tactic access_ban",
+   "write": 200
+  },
+  {
+   "slug": "2024-trump-sues-des-moines-register-selzer-poll",
+   "tactic": "lawsuits_against_press",
+   "rule": "pressure",
+   "stage": "pressure",
+   "reviewed": false,
+   "why": "rule: tactic lawsuits_against_press",
+   "write": 200
+  },
+  {
+   "slug": "2024-hong-kong-stand-news-editors-convicted-sedition",
+   "tactic": "insult_and_defamation_laws",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic insult_and_defamation_laws",
+   "write": 200
+  },
+  {
+   "slug": "2024-venezuela-post-election-press-crackdown",
+   "tactic": "detention_and_violence",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": true,
+   "why": "detentions and expulsions of correspondents; blocking of X is secondary",
+   "write": 200
+  },
+  {
+   "slug": "2024-slovakia-dissolves-rtvs-creates-stvr",
+   "tactic": "outlet_licensing",
+   "rule": "silence",
+   "stage": "pressure",
+   "reviewed": true,
+   "why": "public broadcaster restructured under more direct political control",
+   "write": 200
+  },
+  {
+   "slug": "2024-georgia-foreign-influence-law",
+   "tactic": "disinformation_labeling",
+   "rule": "pressure",
+   "stage": "pressure",
+   "reviewed": false,
+   "why": "rule: tactic disinformation_labeling",
+   "write": 200
+  },
+  {
+   "slug": "2024-louisiana-enacts-police-buffer-zone-law",
+   "tactic": "access_ban",
+   "rule": "restrict",
+   "stage": "restrict",
+   "reviewed": false,
+   "why": "rule: tactic access_ban",
+   "write": 200
+  },
+  {
+   "slug": "2024-argentina-milei-closes-telam",
+   "tactic": "funding_and_ownership_pressure",
+   "rule": "pressure",
+   "stage": "silence",
+   "reviewed": true,
+   "why": "closure of the state news agency",
+   "write": 200
+  },
+  {
+   "slug": "2024-india-court-strikes-down-fact-check-unit",
+   "tactic": "disinformation_labeling",
+   "rule": "pressure",
+   "stage": "pressure",
+   "reviewed": false,
+   "why": "rule: tactic disinformation_labeling",
+   "write": 200
+  },
+  {
+   "slug": "2023-hungary-sovereignty-protection-act",
+   "tactic": "disinformation_labeling",
+   "rule": "pressure",
+   "stage": "pressure",
+   "reviewed": false,
+   "why": "rule: tactic disinformation_labeling",
+   "write": 200
+  },
+  {
+   "slug": "2023-turkiye-detains-journalists-disinformation-law",
+   "tactic": "insult_and_defamation_laws",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic insult_and_defamation_laws",
+   "write": 200
+  },
+  {
+   "slug": "2023-marion-county-record-raid-kansas",
+   "tactic": "surveillance_and_subpoenas",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic surveillance_and_subpoenas",
+   "write": 200
+  },
+  {
+   "slug": "2023-arizona-police-recording-law-struck-down",
+   "tactic": "access_ban",
+   "rule": "restrict",
+   "stage": "restrict",
+   "reviewed": false,
+   "why": "rule: tactic access_ban",
+   "write": 200
+  },
+  {
+   "slug": "2023-zimbabwe-patriotic-act-criminalizes-foreign-contact",
+   "tactic": "secrets_and_espionage_laws",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": true,
+   "why": "criminal law with prison terms",
+   "write": 200
+  },
+  {
+   "slug": "2023-guatemala-convicts-zamora-money-laundering",
+   "tactic": "detention_and_violence",
+   "rule": "eliminate",
+   "stage": "eliminate",
+   "reviewed": true,
+   "why": "six-year prison sentence for a newspaper founder",
+   "write": 200
+  },
+  {
+   "slug": "2023-nicaragua-strips-journalists-citizenship",
+   "tactic": "expulsion_and_visa_denial",
+   "rule": "eliminate",
+   "stage": "eliminate",
+   "reviewed": true,
+   "why": "exiled journalists stripped of citizenship",
+   "write": 200
+  },
+  {
+   "slug": "2023-india-tax-authorities-raid-bbc-offices",
+   "tactic": "surveillance_and_subpoenas",
+   "rule": "punish",
+   "stage": "pressure",
+   "reviewed": true,
+   "why": "tax searches of offices",
+   "write": 200
+  },
+  {
+   "slug": "2022-russia-criminalizes-fake-war-reports",
+   "tactic": "insult_and_defamation_laws",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic insult_and_defamation_laws",
+   "write": 200
+  },
+  {
+   "slug": "2021-fbi-raids-project-veritas-founder-okeefe",
+   "tactic": "surveillance_and_subpoenas",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic surveillance_and_subpoenas",
+   "write": 200
+  },
+  {
+   "slug": "2021-rcmp-restricts-press-fairy-creek-court-order",
+   "tactic": "access_ban",
+   "rule": "restrict",
+   "stage": "restrict",
+   "reviewed": true,
+   "why": "the court case concerns exclusion zones; arrests are secondary",
+   "write": 200
+  },
+  {
+   "slug": "2021-doj-bans-seizing-reporters-records-garland",
+   "tactic": "surveillance_and_subpoenas",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": true,
+   "why": "the underlying act is the secret seizure of reporters' records",
+   "write": 200
+  },
+  {
+   "slug": "2021-belarus-blocks-tutby-arrests-staff",
+   "tactic": "shutdowns_and_blocking",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic shutdowns_and_blocking",
+   "write": 200
+  },
+  {
+   "slug": "2021-myanmar-junta-revokes-media-licenses",
+   "tactic": "outlet_licensing",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic outlet_licensing",
+   "write": 200
+  },
+  {
+   "slug": "2020-hhs-officials-alter-cdc-covid-guidance-before-publication",
+   "tactic": "prior_restraint",
+   "rule": "silence",
+   "stage": "restrict",
+   "reviewed": true,
+   "why": "officials altered the government's own publications; no action against an outlet",
+   "write": 200
+  },
+  {
+   "slug": "2020-federal-officers-target-journalists-portland-injunction",
+   "tactic": "access_ban",
+   "rule": "restrict",
+   "stage": "punish",
+   "reviewed": true,
+   "why": "federal officers used tear gas, pepper spray and rubber bullets on journalists; assault by government actors",
+   "write": 200
+  },
+  {
+   "slug": "2020-minneapolis-police-blind-photojournalist-linda-tirado",
+   "tactic": "detention_and_violence",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic detention_and_violence",
+   "write": 200
+  },
+  {
+   "slug": "2020-minnesota-state-patrol-arrests-cnn-crew-minneapolis",
+   "tactic": "detention_and_violence",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic detention_and_violence",
+   "write": 200
+  },
+  {
+   "slug": "2020-australia-high-court-invalidates-smethurst-warrant",
+   "tactic": "surveillance_and_subpoenas",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic surveillance_and_subpoenas",
+   "write": 200
+  },
+  {
+   "slug": "2020-hungary-coronavirus-fake-news-law",
+   "tactic": "insult_and_defamation_laws",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic insult_and_defamation_laws",
+   "write": 200
+  },
+  {
+   "slug": "2020-china-expels-us-newspaper-journalists",
+   "tactic": "expulsion_and_visa_denial",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic expulsion_and_visa_denial",
+   "write": 200
+  },
+  {
+   "slug": "2019-india-kashmir-communications-blackout",
+   "tactic": "shutdowns_and_blocking",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic shutdowns_and_blocking",
+   "write": 200
+  },
+  {
+   "slug": "2019-australia-afp-raids-abc-afghan-files",
+   "tactic": "surveillance_and_subpoenas",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic surveillance_and_subpoenas",
+   "write": 200
+  },
+  {
+   "slug": "2019-us-assange-espionage-act-indictment",
+   "tactic": "secrets_and_espionage_laws",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic secrets_and_espionage_laws",
+   "write": 200
+  },
+  {
+   "slug": "2018-us-cnn-acosta-credential-revoked",
+   "tactic": "credential_control",
+   "rule": "restrict",
+   "stage": "restrict",
+   "reviewed": false,
+   "why": "rule: tactic credential_control",
+   "write": 200
+  },
+  {
+   "slug": "2018-white-house-revokes-acosta-press-pass",
+   "tactic": "credential_control",
+   "rule": "restrict",
+   "stage": "restrict",
+   "reviewed": false,
+   "why": "rule: tactic credential_control",
+   "write": 200
+  },
+  {
+   "slug": "2018-saudi-arabia-khashoggi-killed-consulate",
+   "tactic": "detention_and_violence",
+   "rule": "eliminate",
+   "stage": "eliminate",
+   "reviewed": true,
+   "why": "journalist killed by Saudi agents inside a consulate",
+   "write": 200
+  },
+  {
+   "slug": "2018-myanmar-reuters-journalists-official-secrets-act",
+   "tactic": "secrets_and_espionage_laws",
+   "rule": "punish",
+   "stage": "eliminate",
+   "reviewed": true,
+   "why": "seven-year prison sentences for two reporters; 511 days served",
+   "write": 200
+  },
+  {
+   "slug": "2018-tanzania-online-content-regulations",
+   "tactic": "outlet_licensing",
+   "rule": "silence",
+   "stage": "pressure",
+   "reviewed": true,
+   "why": "registration and fee requirement for online publishers",
+   "write": 200
+  },
+  {
+   "slug": "2017-cambodia-daily-closed-tax-bill",
+   "tactic": "outlet_licensing",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic outlet_licensing",
+   "write": 200
+  },
+  {
+   "slug": "2017-venezuela-foreign-journalists-expelled",
+   "tactic": "expulsion_and_visa_denial",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic expulsion_and_visa_denial",
+   "write": 200
+  },
+  {
+   "slug": "2016-turkey-post-coup-media-closures",
+   "tactic": "outlet_licensing",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic outlet_licensing",
+   "write": 200
+  },
+  {
+   "slug": "2015-poland-public-media-law-firings",
+   "tactic": "funding_and_ownership_pressure",
+   "rule": "pressure",
+   "stage": "pressure",
+   "reviewed": true,
+   "why": "government appointment of public broadcaster heads; dismissals followed",
+   "write": 200
+  },
+  {
+   "slug": "2014-us-james-risen-subpoena-jeffrey-sterling",
+   "tactic": "surveillance_and_subpoenas",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic surveillance_and_subpoenas",
+   "write": 200
+  },
+  {
+   "slug": "2013-egypt-al-jazeera-journalists-jailed",
+   "tactic": "detention_and_violence",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": true,
+   "why": "arrest and prosecution; three-year sentences, pardoned in 2015",
+   "write": 200
+  },
+  {
+   "slug": "2013-obama-doj-charges-eight-under-espionage-act",
+   "tactic": "secrets_and_espionage_laws",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic secrets_and_espionage_laws",
+   "write": 200
+  },
+  {
+   "slug": "2013-uk-miranda-detention-guardian-hard-drives",
+   "tactic": "surveillance_and_subpoenas",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic surveillance_and_subpoenas",
+   "write": 200
+  },
+  {
+   "slug": "2013-ecuador-communications-law-supercom",
+   "tactic": "funding_and_ownership_pressure",
+   "rule": "pressure",
+   "stage": "pressure",
+   "reviewed": true,
+   "why": "regulator issuing sanctions",
+   "write": 200
+  },
+  {
+   "slug": "2013-us-doj-names-fox-reporter-co-conspirator",
+   "tactic": "surveillance_and_subpoenas",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic surveillance_and_subpoenas",
+   "write": 200
+  },
+  {
+   "slug": "2013-us-doj-seizes-ap-phone-records",
+   "tactic": "surveillance_and_subpoenas",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic surveillance_and_subpoenas",
+   "write": 200
+  },
+  {
+   "slug": "2012-us-john-kiriakou-espionage-act-cia-torture-source",
+   "tactic": "secrets_and_espionage_laws",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic secrets_and_espionage_laws",
+   "write": 200
+  },
+  {
+   "slug": "2010-hungary-media-law-content-authority",
+   "tactic": "funding_and_ownership_pressure",
+   "rule": "pressure",
+   "stage": "pressure",
+   "reviewed": true,
+   "why": "government-appointed regulator with power to fine",
+   "write": 200
+  },
+  {
+   "slug": "2010-us-chelsea-manning-espionage-act-wikileaks",
+   "tactic": "secrets_and_espionage_laws",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": true,
+   "why": "prosecution of a source",
+   "write": 200
+  },
+  {
+   "slug": "2009-iran-post-election-foreign-press-restrictions",
+   "tactic": "expulsion_and_visa_denial",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic expulsion_and_visa_denial",
+   "write": 200
+  },
+  {
+   "slug": "2006-russia-politkovskaya-killed",
+   "tactic": "detention_and_violence",
+   "rule": "eliminate",
+   "stage": "eliminate",
+   "reviewed": true,
+   "why": "journalist shot dead; former police officers convicted; who ordered it not established in court",
+   "write": 200
+  },
+  {
+   "slug": "2005-us-judith-miller-jailed-plame-source",
+   "tactic": "surveillance_and_subpoenas",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic surveillance_and_subpoenas",
+   "write": 200
+  },
+  {
+   "slug": "2003-us-pentagon-embedding-rules-iraq",
+   "tactic": "access_ban",
+   "rule": "restrict",
+   "stage": "restrict",
+   "reviewed": true,
+   "why": "ground rules for embedded reporters; access terms, not removal",
+   "write": 200
+  },
+  {
+   "slug": "2002-zimbabwe-aippa-media-licensing",
+   "tactic": "outlet_licensing",
+   "rule": "silence",
+   "stage": "pressure",
+   "reviewed": true,
+   "why": "licence requirement for journalists and media; no withdrawal in this entry",
+   "write": 200
+  },
+  {
+   "slug": "2001-russia-gazprom-takeover-ntv",
+   "tactic": "funding_and_ownership_pressure",
+   "rule": "pressure",
+   "stage": "silence",
+   "reviewed": true,
+   "why": "forced change of ownership of the last major independent network",
+   "write": 200
+  },
+  {
+   "slug": "1998-serbia-public-information-act-fines",
+   "tactic": "insult_and_defamation_laws",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": true,
+   "why": "court fines against newspapers under the act",
+   "write": 200
+  },
+  {
+   "slug": "1998-malaysia-anwar-arrest-press-restrictions",
+   "tactic": "surveillance_and_subpoenas",
+   "rule": "punish",
+   "stage": "pressure",
+   "reviewed": true,
+   "why": "pressure on staff, police visits and monitoring",
+   "write": 200
+  },
+  {
+   "slug": "1995-nigeria-abacha-journalists-tribunal",
+   "tactic": "detention_and_violence",
+   "rule": "punish",
+   "stage": "eliminate",
+   "reviewed": true,
+   "why": "military tribunal, lengthy prison terms, no appeal",
+   "write": 200
+  },
+  {
+   "slug": "1991-gulf-war-us-military-press-pools",
+   "tactic": "access_ban",
+   "rule": "restrict",
+   "stage": "restrict",
+   "reviewed": true,
+   "why": "escorted pools and review of dispatches; detentions were of reporters who left the pools",
+   "write": 200
+  },
+  {
+   "slug": "1989-china-tiananmen-foreign-journalists-expelled",
+   "tactic": "expulsion_and_visa_denial",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic expulsion_and_visa_denial",
+   "write": 200
+  },
+  {
+   "slug": "1988-uk-broadcasting-ban-sinn-fein",
+   "tactic": "outlet_licensing",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": true,
+   "why": "broadcast ban on the voices of named groups; prior restraint",
+   "write": 200
+  },
+  {
+   "slug": "1988-burma-slorc-press-scrutiny",
+   "tactic": "prior_restraint",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic prior_restraint",
+   "write": 200
+  },
+  {
+   "slug": "1985-south-africa-state-of-emergency-media-ban",
+   "tactic": "shutdowns_and_blocking",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic shutdowns_and_blocking",
+   "write": 200
+  },
+  {
+   "slug": "1983-us-grenada-press-exclusion",
+   "tactic": "access_ban",
+   "rule": "restrict",
+   "stage": "restrict",
+   "reviewed": false,
+   "why": "rule: tactic access_ban",
+   "write": 200
+  },
+  {
+   "slug": "1981-poland-martial-law-press-suspended",
+   "tactic": "shutdowns_and_blocking",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic shutdowns_and_blocking",
+   "write": 200
+  },
+  {
+   "slug": "1981-haiti-duvalier-radio-haiti-inter-exile",
+   "tactic": "expulsion_and_visa_denial",
+   "rule": "eliminate",
+   "stage": "eliminate",
+   "reviewed": true,
+   "why": "staff arrested and deported; the director forced into exile",
+   "write": 200
+  },
+  {
+   "slug": "1980-south-korea-chun-doo-hwan-press-purge",
+   "tactic": "outlet_licensing",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic outlet_licensing",
+   "write": 200
+  },
+  {
+   "slug": "1976-argentina-junta-press-decrees",
+   "tactic": "detention_and_violence",
+   "rule": "eliminate",
+   "stage": "eliminate",
+   "reviewed": true,
+   "why": "hundreds of journalists detained, killed or forced into exile",
+   "write": 200
+  },
+  {
+   "slug": "1975-india-emergency-press-censorship",
+   "tactic": "prior_restraint",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic prior_restraint",
+   "write": 200
+  },
+  {
+   "slug": "1973-chile-coup-press-shutdown",
+   "tactic": "shutdowns_and_blocking",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic shutdowns_and_blocking",
+   "write": 200
+  },
+  {
+   "slug": "1972-philippines-marcos-martial-law-media-closures",
+   "tactic": "shutdowns_and_blocking",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic shutdowns_and_blocking",
+   "write": 200
+  },
+  {
+   "slug": "1971-nixon-white-house-compiles-enemies-list",
+   "tactic": "surveillance_and_subpoenas",
+   "rule": "punish",
+   "stage": "pressure",
+   "reviewed": true,
+   "why": "list for possible action through federal agencies, such as tax audits",
+   "write": 200
+  },
+  {
+   "slug": "1971-us-nixon-enemies-list",
+   "tactic": "surveillance_and_subpoenas",
+   "rule": "punish",
+   "stage": "pressure",
+   "reviewed": true,
+   "why": "list for possible action through federal agencies; no action against a journalist in this entry",
+   "write": 200
+  },
+  {
+   "slug": "1971-us-pentagon-papers-injunction",
+   "tactic": "prior_restraint",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic prior_restraint",
+   "write": 200
+  },
+  {
+   "slug": "1972-us-branzburg-v-hayes-reporters-privilege",
+   "tactic": "surveillance_and_subpoenas",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic surveillance_and_subpoenas",
+   "write": 200
+  },
+  {
+   "slug": "1968-czechoslovakia-normalization-censorship",
+   "tactic": "prior_restraint",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic prior_restraint",
+   "write": 200
+  },
+  {
+   "slug": "1960-egypt-nasser-nationalizes-press",
+   "tactic": "funding_and_ownership_pressure",
+   "rule": "pressure",
+   "stage": "silence",
+   "reviewed": true,
+   "why": "nationalisation of every newspaper and magazine",
+   "write": 200
+  },
+  {
+   "slug": "1955-us-eastland-subcommittee-subpoenas-new-york-times",
+   "tactic": "surveillance_and_subpoenas",
+   "rule": "punish",
+   "stage": "punish",
+   "reviewed": false,
+   "why": "rule: tactic surveillance_and_subpoenas",
+   "write": 200
+  },
+  {
+   "slug": "1950-south-africa-suppression-of-communism-act",
+   "tactic": "prior_restraint",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic prior_restraint",
+   "write": 200
+  },
+  {
+   "slug": "1948-israel-military-censorship-established",
+   "tactic": "prior_restraint",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic prior_restraint",
+   "write": 200
+  },
+  {
+   "slug": "1944-australia-calwell-newspaper-seizure",
+   "tactic": "prior_restraint",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic prior_restraint",
+   "write": 200
+  },
+  {
+   "slug": "1941-us-office-of-censorship-wartime-press-code",
+   "tactic": "prior_restraint",
+   "rule": "silence",
+   "stage": "pressure",
+   "reviewed": true,
+   "why": "voluntary code asking the press to withhold information",
+   "write": 200
+  },
+  {
+   "slug": "1939-brazil-vargas-creates-dip",
+   "tactic": "outlet_licensing",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic outlet_licensing",
+   "write": 200
+  },
+  {
+   "slug": "1938-spain-franco-press-law",
+   "tactic": "credential_control",
+   "rule": "restrict",
+   "stage": "silence",
+   "reviewed": true,
+   "why": "government permission to found papers or work as a journalist, with pre-publication control",
+   "write": 200
+  },
+  {
+   "slug": "1933-germany-editors-law",
+   "tactic": "credential_control",
+   "rule": "restrict",
+   "stage": "silence",
+   "reviewed": true,
+   "why": "state register of editors, exclusion of non-Aryans from the profession and directions to omit content: structural control of the whole press",
+   "write": 200
+  },
+  {
+   "slug": "1933-portugal-salazar-formal-censorship",
+   "tactic": "prior_restraint",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic prior_restraint",
+   "write": 200
+  },
+  {
+   "slug": "1931-us-near-v-minnesota-gag-law",
+   "tactic": "prior_restraint",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic prior_restraint",
+   "write": 200
+  },
+  {
+   "slug": "1922-ussr-glavlit-censorship",
+   "tactic": "prior_restraint",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic prior_restraint",
+   "write": 200
+  },
+  {
+   "slug": "1917-us-espionage-act-bars-the-masses-from-the-mail",
+   "tactic": "secrets_and_espionage_laws",
+   "rule": "punish",
+   "stage": "silence",
+   "reviewed": true,
+   "why": "magazine barred from the mail",
+   "write": 200
+  },
+  {
+   "slug": "1917-us-burleson-mail-ban-milwaukee-leader",
+   "tactic": "shutdowns_and_blocking",
+   "rule": "silence",
+   "stage": "silence",
+   "reviewed": false,
+   "why": "rule: tactic shutdowns_and_blocking",
+   "write": 200
+  }
+ ]
+}
