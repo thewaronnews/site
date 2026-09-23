@@ -6,7 +6,7 @@ import { escapeXml } from "./util.js";
 import { all } from "./db.js";
 import { SITE_ORIGIN, SITE_NAME } from "./site.js";
 
-const STATIC_PAGES = ["/", "/incidents", "/countries", "/continents", "/tactics", "/compare", "/eras", "/leaders", "/coverage", "/actors", "/outlets", "/journalists", "/cases", "/timeline", "/glossary", "/about", "/sources-and-standards", "/editorial-policy", "/corrections", "/terms", "/privacy", "/changes", "/data", "/feeds", "/mcp", "/search"];
+const STATIC_PAGES = ["/", "/incidents", "/united-states", "/ladders", "/countries", "/continents", "/tactics", "/eras", "/leaders", "/coverage", "/actors", "/outlets", "/journalists", "/cases", "/timeline", "/glossary", "/about", "/sources-and-standards", "/editorial-policy", "/corrections", "/terms", "/privacy", "/changes", "/data", "/feeds", "/mcp", "/search"];
 
 function maxDate(entries) {
   return entries.reduce((m, e) => (e.lastmod && (!m || e.lastmod > m) ? e.lastmod : m), null);
@@ -25,7 +25,7 @@ async function pagesEntries(env) {
     UNION ALL SELECT MAX(fetched_at) FROM coverage_items WHERE state = 'shown'
     UNION ALL SELECT MAX(changed_at) FROM changes`);
   const [inc, cov, chg] = latest.map((r) => r.m);
-  const lm = { "/incidents": inc, "/timeline": inc, "/countries": inc, "/continents": inc, "/tactics": inc, "/compare": inc, "/eras": inc, "/leaders": inc, "/coverage": cov, "/changes": chg, "/": [inc, cov].filter(Boolean).sort().pop() };
+  const lm = { "/incidents": inc, "/timeline": inc, "/countries": inc, "/continents": inc, "/tactics": inc, "/ladders": inc, "/united-states": inc, "/eras": inc, "/leaders": inc, "/coverage": cov, "/changes": chg, "/": [inc, cov].filter(Boolean).sort().pop() };
   return STATIC_PAGES.map((p) => ({ loc: p, lastmod: lm[p] || null }));
 }
 
@@ -42,6 +42,7 @@ async function recordEntries(env) {
   for (const r of await q("SELECT lower(country) AS k, MAX(updated_at) AS m FROM incidents WHERE pub_state = 'published' GROUP BY country ORDER BY country")) out.push({ loc: `/countries/${r.k}`, lastmod: r.m });
   for (const r of await q("SELECT continent AS k, MAX(updated_at) AS m FROM incidents WHERE pub_state = 'published' AND continent IS NOT NULL GROUP BY continent ORDER BY continent")) out.push({ loc: `/continents/${r.k}`, lastmod: r.m });
   for (const r of await q("SELECT t.slug AS k, MAX(i.updated_at) AS m FROM tactics t LEFT JOIN incident_tactics it ON it.tactic_slug = t.slug LEFT JOIN incidents i ON i.id = it.incident_id AND i.pub_state = 'published' GROUP BY t.slug ORDER BY t.sort")) out.push({ loc: `/tactics/${r.k}`, lastmod: r.m });
+  for (const r of await q("SELECT t.slug AS k, MAX(i.updated_at) AS m FROM tactics t LEFT JOIN incident_tactics it ON it.tactic_slug = t.slug LEFT JOIN incidents i ON i.id = it.incident_id AND i.pub_state = 'published' GROUP BY t.slug ORDER BY t.sort")) out.push({ loc: `/ladders/${r.k}`, lastmod: r.m });
   for (const r of await q("SELECT era AS k, MAX(updated_at) AS m FROM incidents WHERE pub_state = 'published' GROUP BY era ORDER BY era")) out.push({ loc: `/eras/${r.k}`, lastmod: r.m });
   for (const r of await q("SELECT i.leader_slug AS k, MAX(i.updated_at) AS m FROM incidents i JOIN actors a ON a.slug = i.leader_slug AND a.pub_state = 'published' WHERE i.pub_state = 'published' GROUP BY i.leader_slug ORDER BY i.leader_slug")) out.push({ loc: `/leaders/${r.k}`, lastmod: r.m });
   return out;

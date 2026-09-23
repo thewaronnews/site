@@ -24,9 +24,10 @@ import {
 } from "./routes.js";
 import {
   incidentsListHandler, searchV2Handler, incidentsCsvHandler, countriesIndexHandler, countryHandler, continentsIndexHandler,
-  continentHandler, tacticsIndexHandler, tacticHandler, compareHandler, erasIndexHandler, eraHandler, leadersIndexHandler,
+  continentHandler, tacticsIndexHandler, tacticHandler, erasIndexHandler, eraHandler, leadersIndexHandler,
   leaderHandler, coverageHandler,
 } from "./v2routes.js";
+import { laddersIndexHandler, ladderHandler, unitedStatesHandler } from "./ladders.js";
 import { runCoverage } from "./coverage.js";
 
 const S = "([a-z0-9-]{1,80})";
@@ -57,7 +58,9 @@ const ROUTES = [
   [G, /^\/continents\/([a-z-]{4,20})$/, (c, m) => continentHandler(c, m[1])],
   [G, /^\/tactics$/, (c) => tacticsIndexHandler(c)],
   [G, /^\/tactics\/([a-z_]{3,40})$/, (c, m) => tacticHandler(c, m[1])],
-  [G, /^\/compare$/, (c) => compareHandler(c)],
+  [G, /^\/ladders$/, (c) => laddersIndexHandler(c)],
+  [G, /^\/ladders\/([a-z_]{3,40})$/, (c, m) => ladderHandler(c, m[1])],
+  [G, /^\/united-states$/, (c) => unitedStatesHandler(c)],
   [G, /^\/eras$/, (c) => erasIndexHandler(c)],
   [G, /^\/eras\/(\d{4}s)$/, (c, m) => eraHandler(c, m[1])],
   [G, /^\/leaders$/, (c) => leadersIndexHandler(c)],
@@ -134,7 +137,7 @@ function redirect301(path) {
 
 // Permanent moves (v2): /methodology became /sources-and-standards; the
 // News Desk pages and feeds became Recent coverage; country codes and
-// decades have one canonical spelling.
+// decades have one canonical spelling. v3: /compare became /ladders.
 function v2Redirect(p, search) {
   let m;
   if ((m = p.match(/^\/methodology(\.md|\.json)?$/))) return `/sources-and-standards${m[1] || ""}`;
@@ -143,6 +146,18 @@ function v2Redirect(p, search) {
   if ((m = p.match(/^\/countries\/([A-Za-z]{2})(\.md|\.json)?$/)) && /[A-Z]/.test(m[1])) return `/countries/${m[1].toLowerCase()}${m[2] || ""}${search}`;
   if ((m = p.match(/^\/tactics\/([a-z]+(?:-[a-z]+)+)(\.md|\.json)?$/))) return `/tactics/${m[1].replace(/-/g, "_")}${m[2] || ""}`;
   if ((m = p.match(/^\/eras\/(\d{3})0(\.md|\.json)?$/))) return `/eras/${m[1]}0s${m[2] || ""}`;
+  // v3: /compare (tactic x country matrix) became /ladders. A tactic moves
+  // to its ladder; from, to and continent carry over; other parameters drop.
+  if ((m = p.match(/^\/compare(\.md|\.json)?$/))) {
+    const q = new URLSearchParams(search);
+    const tactic = String(q.get("tactic") || "").toLowerCase().replace(/-/g, "_");
+    const keep = new URLSearchParams();
+    for (const k of ["stage", "continent", "from", "to"]) if (q.get(k)) keep.set(k, q.get(k));
+    const qs = keep.toString() ? `?${keep}` : "";
+    if (/^[a-z_]{3,40}$/.test(tactic)) return `/ladders/${tactic}${m[1] || ""}${qs}`;
+    return `/ladders${m[1] || ""}${qs}`;
+  }
+  if ((m = p.match(/^\/ladders\/([a-z]+(?:-[a-z]+)+)(\.md|\.json)?$/))) return `/ladders/${m[1].replace(/-/g, "_")}${m[2] || ""}${search}`;
   return null;
 }
 

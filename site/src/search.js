@@ -1,16 +1,16 @@
 // v2 search and filter (brief 2026-09-22): one faceted incident query used
-// by /incidents, /search, /compare, the country, continent, tactic, era and
+// by /incidents, /search, /ladders, the country, continent, tactic, era and
 // leader pages, the CSV downloads and the MCP tools; full-text search over
 // incidents, actors, outlets, cases, tactics, glossary, countries and
 // recent coverage (search_fts from migration 0003, rebuilt here).
 
 import { all, first } from "./db.js";
 import { mdToPlain, isoNow } from "./util.js";
-import { SITE_ORIGIN, CONTINENTS, LEVEL_LABELS, OUTCOME_LABELS } from "./site.js";
+import { SITE_ORIGIN, CONTINENTS, LEVEL_LABELS, OUTCOME_LABELS, STAGE_LABELS } from "./site.js";
 
 export const MAX_PAGE_SIZE = 100;
 export const DEFAULT_PAGE_SIZE = 50;
-export const FACET_KEYS = ["country", "continent", "tactic", "from", "to", "level", "actor", "leader", "outlet", "outcome", "source_kind", "has_case"];
+export const FACET_KEYS = ["country", "continent", "tactic", "stage", "from", "to", "level", "actor", "leader", "outlet", "outcome", "source_kind", "has_case"];
 const SORTS = ["date", "date_asc", "country", "tactic", "relevance"];
 const SOURCE_KINDS = ["reporting", "primary_document", "court_record", "official_statement", "dataset", "reference"];
 
@@ -42,6 +42,27 @@ export function countryName(ref, iso2) {
   return c ? c.name : iso2 || "";
 }
 
+// ---------- RSF World Press Freedom Index (v3) ----------
+
+export const RSF_OF = 180;
+
+export function ordinal(n) {
+  const v = n % 100;
+  if (v >= 11 && v <= 13) return `${n}th`;
+  return `${n}${({ 1: "st", 2: "nd", 3: "rd" })[n % 10] || "th"}`;
+}
+
+// "RSF 2026 rank: 64th of 180", or null when no rank is recorded.
+export function rsfText(c) {
+  if (!c || !c.press_freedom_rank_latest) return null;
+  return `RSF ${c.press_freedom_rank_year} rank: ${ordinal(c.press_freedom_rank_latest)} of ${RSF_OF}`;
+}
+
+export function rsfData(c) {
+  if (!c || !c.press_freedom_rank_latest) return null;
+  return { index: "RSF World Press Freedom Index", year: c.press_freedom_rank_year, rank: c.press_freedom_rank_latest, of: RSF_OF, label: rsfText(c), source_url: c.press_freedom_source_url || null };
+}
+
 // "the United States", "the Philippines": for running text ("in the ...").
 const NEEDS_THE = /^(United |Netherlands|Philippines|Bahamas|Gambia|Maldives|Central African|Czech Republic|Dominican Republic|Democratic Republic|Republic of|Marshall Islands|Solomon Islands|Comoros|Seychelles|Holy See|Cayman|Falkland|Faroe|Cook Islands|British |Turks and Caicos|Northern Mariana|Cocos|Caribbean Netherlands)/;
 export function inText(name) {
@@ -68,6 +89,8 @@ export function readFilters(src, ref) {
   if (CONTINENTS[cont]) f.continent = cont;
   const tactic = get("tactic").toLowerCase();
   if (ref.tactics.has(tactic)) f.tactic = tactic;
+  const stage = get("stage").toLowerCase();
+  if (STAGE_LABELS[stage]) f.stage = stage;
   const from = get("from");
   if (DATE_ARG.test(from)) f.from = from;
   const to = get("to");
@@ -122,7 +145,7 @@ function toBound(to) {
 
 // ---------- the incident query ----------
 
-const COLS = "i.id, i.slug, i.title, i.occurred_on, i.occurred_on_precision, i.ended_on, i.jurisdiction, i.country, i.continent, i.level, i.type, i.tactic_primary, i.leader_slug, i.issue_of_the_day, i.outcome, i.outcome_on, i.outcome_note, i.granularity, i.era, i.summary, i.status, i.status_updated_on, i.published_at, i.reviewed_on, i.updated_at";
+const COLS = "i.id, i.slug, i.title, i.occurred_on, i.occurred_on_precision, i.ended_on, i.jurisdiction, i.country, i.continent, i.level, i.type, i.tactic_primary, i.leader_slug, i.issue_of_the_day, i.outcome, i.outcome_on, i.outcome_note, i.granularity, i.stage, i.ladder_note, i.era, i.summary, i.status, i.status_updated_on, i.published_at, i.reviewed_on, i.updated_at";
 
 async function ftsIncidentIds(env, q) {
   const terms = String(q || "").toLowerCase().replace(/[^\p{L}\p{N}\s-]/gu, " ").split(/\s+/).filter((t) => t.length > 1).slice(0, 8);
@@ -146,6 +169,7 @@ export async function queryIncidents(env, f, { paginate = true } = {}) {
   if (f.country) { const cs = f.country.split(","); where.push(`i.country IN (${cs.map(() => "?").join(",")})`); binds.push(...cs); }
   if (f.continent) { where.push("i.continent = ?"); binds.push(f.continent); }
   if (f.tactic) { where.push("i.id IN (SELECT incident_id FROM incident_tactics WHERE tactic_slug = ?)"); binds.push(f.tactic); }
+  if (f.stage) { where.push("i.stage = ?"); binds.push(f.stage); }
   if (f.from) { where.push("i.occurred_on >= ?"); binds.push(f.from); }
   if (f.to) { where.push("substr(i.occurred_on, 1, 10) <= ?"); binds.push(toBound(f.to)); }
   if (f.level) { where.push("i.level = ?"); binds.push(f.level); }
@@ -190,6 +214,7 @@ export function enrich(r, ref, tactics) {
   return {
     ...r,
     country_name: c ? c.name : r.country,
+    rsf: rsfData(c),
     continent: r.continent || (c ? c.continent : null),
     continent_name: CONTINENTS[r.continent || (c && c.continent)] || null,
     tactic_name: t ? t.name : null,
@@ -206,11 +231,12 @@ function bump(m, k) {
 }
 
 export function facetCounts(rows) {
-  const out = { country: {}, continent: {}, tactic: {}, level: {}, outcome: {}, era: {}, year: {}, leader: {}, has_case: {} };
+  const out = { country: {}, continent: {}, tactic: {}, stage: {}, level: {}, outcome: {}, era: {}, year: {}, leader: {}, has_case: {} };
   for (const r of rows) {
     bump(out.country, r.country);
     bump(out.continent, r.continent);
     for (const t of r.tactics) bump(out.tactic, t);
+    bump(out.stage, r.stage);
     bump(out.level, r.level);
     bump(out.outcome, r.outcome);
     bump(out.era, r.era);
@@ -230,6 +256,7 @@ export function describeFilters(f, ref, { lead = "Incidents" } = {}) {
   let place = "";
   if (f.country) place = ` in ${f.country.split(",").map((c) => inText(countryName(ref, c))).join(" and ")}`;
   else if (f.continent) place = ` in ${CONTINENTS[f.continent]}`;
+  if (f.stage) bits.push(`stage: ${STAGE_LABELS[f.stage].toLowerCase()}`);
   if (f.from && f.to) bits.push(`${f.from} to ${f.to}`);
   else if (f.from) bits.push(`from ${f.from}`);
   else if (f.to) bits.push(`to ${f.to}`);
@@ -246,7 +273,7 @@ export function describeFilters(f, ref, { lead = "Incidents" } = {}) {
 
 // ---------- CSV ----------
 
-const CSV_COLS = ["slug", "title", "occurred_on", "occurred_on_precision", "country", "country_name", "continent", "jurisdiction", "level", "tactic_primary", "tactics", "leader_slug", "leader_name", "issue_of_the_day", "outcome", "outcome_on", "outcome_note", "era", "granularity", "status", "status_updated_on", "case_count", "summary", "url"];
+const CSV_COLS = ["slug", "title", "occurred_on", "occurred_on_precision", "country", "country_name", "continent", "jurisdiction", "level", "tactic_primary", "tactics", "stage", "ladder_note", "rsf_rank_2026", "leader_slug", "leader_name", "issue_of_the_day", "outcome", "outcome_on", "outcome_note", "era", "granularity", "status", "status_updated_on", "case_count", "summary", "url"];
 
 function csvCell(v) {
   if (v === null || v === undefined) return "";
@@ -256,7 +283,7 @@ function csvCell(v) {
 
 export function incidentsCsv(rows) {
   const lines = [CSV_COLS.join(",")];
-  for (const r of rows) lines.push(CSV_COLS.map((c) => csvCell(c === "summary" ? mdToPlain(r.summary) : r[c])).join(","));
+  for (const r of rows) lines.push(CSV_COLS.map((c) => csvCell(c === "summary" ? mdToPlain(r.summary) : c === "rsf_rank_2026" ? (r.rsf && r.rsf.year === 2026 ? r.rsf.rank : null) : r[c])).join(","));
   return lines.join("\r\n") + "\r\n";
 }
 

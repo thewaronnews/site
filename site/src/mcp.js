@@ -8,7 +8,8 @@
 import { MCP_SERVER_NAME, MCP_SERVER_TITLE, SITE_ORIGIN } from "./site.js";
 import { first, all, upsertQuestion, timelineRows, sourceObject } from "./db.js";
 import { incidentHandler, actorHandler, caseHandler } from "./routes.js";
-import { countryHandler, tacticHandler, compareHandler } from "./v2routes.js";
+import { countryHandler, tacticHandler } from "./v2routes.js";
+import { ladderHandler, unitedStatesHandler } from "./ladders.js";
 import { refData, readFilters, queryIncidents } from "./search.js";
 import { listCoverage } from "./coverage.js";
 import { renderMarkdown } from "./render.js";
@@ -23,12 +24,13 @@ const SESSION_TTL_SECONDS = 24 * 3600;
 const CACHE_TTL_SECONDS = 5 * 60;
 const SUGGEST_CLIENT_DAILY_LIMIT = 20;
 const SUGGEST_IP_DAILY_LIMIT = 60;
-const CACHEABLE_TOOLS = new Set(["get_incident", "get_timeline", "get_actor", "get_case", "get_sources_for", "get_tactic", "get_country", "compare", "recent_coverage"]);
+const CACHEABLE_TOOLS = new Set(["get_incident", "get_timeline", "get_actor", "get_case", "get_sources_for", "get_tactic", "get_country", "ladder", "get_united_states_chapter", "recent_coverage"]);
+const STAGE_SLUGS = ["restrict", "pressure", "punish", "silence", "eliminate"];
 const TACTIC_SLUGS = ["access_ban", "credential_control", "outlet_licensing", "prior_restraint", "secrets_and_espionage_laws", "insult_and_defamation_laws", "surveillance_and_subpoenas", "funding_and_ownership_pressure", "expulsion_and_visa_denial", "shutdowns_and_blocking", "detention_and_violence", "lawsuits_against_press", "disinformation_labeling"];
 const CONTINENT_SLUGS = ["africa", "antarctica", "asia", "europe", "north-america", "oceania", "south-america"];
 const TARGET_TYPES = ["incident", "actor", "outlet", "journalist", "case", "claim", "source", "explainer", "glossary_term"];
 
-const SERVER_INSTRUCTIONS = "The War On News is a dated, sourced record of how governments have limited journalists, 1900 to today, by country, tactic and era. Use search_incidents (with country, continent, tactic, leader, outcome, from and to facets) to find incidents, get_incident for one incident with its claims and archived sources, get_country and get_tactic for a country's or a tactic's record, compare for a tactic by country matrix with heads of government and outcomes, get_timeline for dated entries, get_actor and get_case for people, bodies and court cases, recent_coverage for links to recent reporting, and get_sources_for for an incident's sources with link state. Cite pages by their URL. suggest_correction needs a client token from the publisher.";
+const SERVER_INSTRUCTIONS = "The War On News is a dated, sourced record of how governments have limited journalists, 1900 to today, by country, tactic and era. Use search_incidents (with country, continent, tactic, leader, outcome, from and to facets) to find incidents, get_incident for one incident with its claims and archived sources, get_country and get_tactic for a country's or a tactic's record (every country carries its RSF World Press Freedom Index rank), ladder for one tactic's incidents by escalation stage (restrict, pressure, punish, silence, eliminate) with the United States as the focal case, get_united_states_chapter for the United States chapter (2025 to 2026, the record since 1917, and where each tactic in use now has led elsewhere), get_timeline for dated entries, get_actor and get_case for people, bodies and court cases, recent_coverage for links to recent reporting, and get_sources_for for an incident's sources with link state. Cite pages by their URL. suggest_correction needs a client token from the publisher.";
 
 export const MCP_SERVER_MANIFEST = {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
@@ -97,12 +99,17 @@ export const TOOLS = [
     inputSchema: { type: "object", properties: { slug: { type: "string", enum: TACTIC_SLUGS } }, required: ["slug"] },
   },
   {
-    name: "compare", title: "Compare tactics across countries", annotations: RO,
-    description: "Who did what, when: a tactic by country matrix whose cells list dated incidents with the head of government and the outcome. Narrow by tactic, country (comma-separated ISO codes), continent and date range.",
+    name: "ladder", title: "A tactic's ladder", annotations: RO,
+    description: "Where one tactic has led: its recorded incidents grouped by escalation stage (restrict, pressure, punish, silence, eliminate), then by date, with country and RSF 2026 rank, head of government, what was done, outcome, ladder note and number of sources. United States rows are marked as the focal case and come first within their stage. Entry counts reflect the depth of the record, not the severity of a country's conduct.",
     inputSchema: { type: "object", properties: {
-      tactic: { type: "string", enum: TACTIC_SLUGS }, country: { type: "string" }, continent: { type: "string", enum: CONTINENT_SLUGS },
-      from: { type: "string", description: "Year or date" }, to: { type: "string", description: "Year or date" },
-    } },
+      tactic: { type: "string", enum: TACTIC_SLUGS }, stage: { type: "string", enum: STAGE_SLUGS }, continent: { type: "string", enum: CONTINENT_SLUGS },
+      from: { type: "string", description: "Year or date (YYYY, YYYY-MM or YYYY-MM-DD)" }, to: { type: "string", description: "Year or date (YYYY, YYYY-MM or YYYY-MM-DD)" },
+    }, required: ["tactic"] },
+  },
+  {
+    name: "get_united_states_chapter", title: "The United States chapter", annotations: RO,
+    description: "The focal chapter as JSON: the United States' RSF 2026 rank; incidents dated 2025 and 2026 in date order with events; the earlier record from 1917 by decade; for each tactic in use now, the United States rows, the furthest stage the tactic has reached elsewhere and its ladder; United States court cases; sources.",
+    inputSchema: { type: "object", properties: {} },
   },
   {
     name: "recent_coverage", title: "Recent coverage", annotations: RO,
@@ -272,20 +279,27 @@ async function toolGetTactic(args, { env }) {
   return docResult(await tacticHandler(syntheticCtx(env, `/tactics/${slug}`), slug), `No tactic has the slug "${slug}".`);
 }
 
-async function toolCompare(args, { env }) {
+async function toolLadder(args, { env }) {
+  const tactic = String(args.tactic || "").trim().toLowerCase().replace(/-/g, "_");
+  if (!TACTIC_SLUGS.includes(tactic)) return errResult(`tactic must be one of: ${TACTIC_SLUGS.join(", ")}`);
+  if (args.stage && !STAGE_SLUGS.includes(String(args.stage).toLowerCase())) return errResult(`stage must be one of: ${STAGE_SLUGS.join(", ")}`);
+  if (args.continent && !CONTINENT_SLUGS.includes(String(args.continent).toLowerCase())) return errResult(`continent must be one of: ${CONTINENT_SLUGS.join(", ")}`);
   const params = new URLSearchParams();
-  for (const k of ["tactic", "country", "continent", "from", "to"]) if (args[k]) params.set(k, String(args[k]));
-  const ctx = syntheticCtx(env, `/compare${params.toString() ? `?${params}` : ""}`);
-  const doc = await compareHandler(ctx);
+  for (const k of ["stage", "continent", "from", "to"]) if (args[k]) params.set(k, String(args[k]));
+  const ctx = syntheticCtx(env, `/ladders/${tactic}${params.toString() ? `?${params}` : ""}`);
+  const doc = await ladderHandler(ctx, tactic);
   const d = doc.data;
   const lines = [];
-  for (const t of d.tactics) {
-    for (const c of d.countries) {
-      const list = (d.cells[t.slug] || {})[c.iso2];
-      if (list) for (const i of list) lines.push(`- ${t.name} / ${c.name}: ${i.occurred_on} ${i.title}${i.leader_name ? `; head of government ${i.leader_name}` : ""}; outcome ${i.outcome}. ${i.url}`);
-    }
+  for (const st of d.stages) {
+    lines.push(`## ${st.name}${st.definition ? `: ${st.definition}` : ""}`);
+    for (const r of st.rungs) lines.push(`- ${r.occurred_on} ${r.focal_case ? "[focal case] " : ""}${r.country_name} (${r.rsf ? r.rsf.label : "RSF rank: not recorded"})${r.leader_name ? `; head of government ${r.leader_name}` : ""}: ${r.what_was_done} Outcome: ${r.outcome}.${r.ladder_note ? ` Note: ${r.ladder_note}` : ""} Sources: ${r.sources_count}. ${r.url}`);
   }
-  return { content: [{ type: "text", text: `# ${doc.title}\n\n${lines.length ? lines.join("\n") : "No incident matches."}\n\n${d.canonical_url}` }], structuredContent: d, isError: false, resultCount: d.count };
+  return { content: [{ type: "text", text: `# ${doc.title}\n\n${d.counts_caveat}\n\n${lines.length ? lines.join("\n") : "No incident matches."}\n\n${d.canonical_url}` }], structuredContent: d, isError: false, resultCount: d.count };
+}
+
+async function toolGetUnitedStatesChapter(args, { env }) {
+  const doc = await unitedStatesHandler(syntheticCtx(env, "/united-states"));
+  return { content: [{ type: "text", text: renderMarkdown(doc) }], structuredContent: doc.data, isError: false, resultCount: doc.data.now.incidents.length };
 }
 
 async function toolRecentCoverage(args, { env }) {
@@ -368,7 +382,7 @@ async function callTool(name, args, argsHash, deps) {
   const fns = {
     search_incidents: toolSearchIncidents, get_incident: toolGetIncident, get_timeline: toolGetTimeline, get_actor: toolGetActor,
     get_case: toolGetCase, get_sources_for: toolGetSourcesFor, suggest_correction: toolSuggestCorrection,
-    get_country: toolGetCountry, get_tactic: toolGetTactic, compare: toolCompare, recent_coverage: toolRecentCoverage,
+    get_country: toolGetCountry, get_tactic: toolGetTactic, ladder: toolLadder, get_united_states_chapter: toolGetUnitedStatesChapter, recent_coverage: toolRecentCoverage,
   };
   if (!fns[name]) return { notFoundTool: true, resultCount: 0 };
   const result = await fns[name](args || {}, deps);

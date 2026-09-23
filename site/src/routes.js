@@ -12,7 +12,7 @@ import {
   listChanges, recordPathFor, getLastExport,
 } from "./db.js";
 import { Footnotes, linkCell } from "./render.js";
-import { refData, queryIncidents, countryName } from "./search.js";
+import { refData, queryIncidents, countryName, rsfText } from "./search.js";
 import { listCoverage } from "./coverage.js";
 import {
   incidentLd, actorLd, outletLd, journalistLd, caseLd, articleLd, definedTermLd, definedTermSetLd, datasetLd, websiteLd,
@@ -20,11 +20,12 @@ import {
 import {
   SITE_NAME, SITE_ORIGIN, SITE_SUBTITLE, HOME_DEFINITION, HOME_METHOD_LINE, HOME_DATA_LINE,
   INCIDENT_STATUS_LABELS, CASE_STATUS_LABELS, LEVEL_LABELS, COUNTRY_NAMES, SUBDIVISION_NAMES, DATA_LICENSE, LICENSE_URL,
-  CONTINENTS, OUTCOME_LABELS,
+  CONTINENTS, OUTCOME_LABELS, STAGE_LABELS,
   ATTRIBUTION_TEXT, CONTACT_CORRECTIONS, DATA_REPO_DEFAULT,
 } from "./site.js";
 import { POLICY_PAGES, POLICY_VERSION } from "./content.js";
 import { FEED_LIST } from "./feeds.js";
+import { COUNTS_CAVEAT } from "./v2routes.js";
 import { TOOLS, SUPPORTED_PROTOCOL_VERSIONS } from "./mcp.js";
 import { hashIp } from "./logger.js";
 
@@ -104,17 +105,22 @@ export async function homeHandler({ env }) {
     (SELECT COUNT(*) FROM claims WHERE status = 'current') AS claims,
     (SELECT COUNT(*) FROM sources) AS sources,
     (SELECT COUNT(DISTINCT country) FROM incidents WHERE pub_state = 'published') AS countries`);
-  const tacticCounts = ref.tacticList.map((t) => [t, res.all.filter((r) => r.tactics.includes(t.slug)).length]).filter(([, n]) => n > 0);
-  const contCounts = Object.entries(CONTINENTS).map(([k, v]) => [k, v, res.all.filter((r) => r.continent === k).length]).filter(([, , n]) => n > 0);
+  // v3: continents in map order, without per-place counts (the record is
+  // deepest for the United States; a count per place reads as a ranking).
+  const contList = Object.entries(CONTINENTS).filter(([k]) => res.all.some((r) => r.continent === k));
   const blocks = [
     { k: "p", text: HOME_DEFINITION },
     { k: "p", text: HOME_METHOD_LINE },
+    { k: "h2", text: "The United States" },
+    { k: "html", html: `<p>${a("/united-states", "The United States chapter")}: the situation in 2025 and 2026, the record since 1917, and, for each tactic in use now, where the same tactic has led in other countries.</p>`, text: `The United States chapter: ${SITE_ORIGIN}/united-states` },
+    { k: "h2", text: "Ladders" },
+    { k: "p", text: "Each ladder takes one tactic and sets out, stage by stage, what governments have done with it: restrict, pressure, punish, silence, eliminate." },
+    { k: "ul", items: ref.tacticList.map((t) => linkCell(`/ladders/${t.slug}`, t.name)) },
+    { k: "html", html: `<p>${a("/ladders", "All ladders")} · ${a("/tactics", "All tactics, defined")}</p>`, text: `Ladders: ${SITE_ORIGIN}/ladders. Tactics: ${SITE_ORIGIN}/tactics` },
     { k: "h2", text: "By place" },
-    { k: "ul", items: contCounts.map(([k, v, n]) => linkCell(`/continents/${k}`, `${v}: ${n} ${n === 1 ? "incident" : "incidents"}`)) },
-    { k: "html", html: `<p>${a("/countries", `All ${counts.countries} countries in the record`)}</p>`, text: `Countries: ${SITE_ORIGIN}/countries` },
-    { k: "h2", text: "By tactic" },
-    { k: "ul", items: tacticCounts.map(([t, n]) => linkCell(`/tactics/${t.slug}`, `${t.name}: ${n}`)) },
-    { k: "html", html: `<p>${a("/tactics", "All tactics")} · ${a("/compare", "Compare: who did what, when")}</p>`, text: `Tactics: ${SITE_ORIGIN}/tactics. Compare: ${SITE_ORIGIN}/compare` },
+    { k: "ul", items: contList.map(([k, v]) => linkCell(`/continents/${k}`, v)) },
+    { k: "html", html: `<p>${a("/countries", "All countries in the record, with RSF ranks")}</p>`, text: `Countries: ${SITE_ORIGIN}/countries` },
+    { k: "p", cls: "counts-caveat", text: COUNTS_CAVEAT },
     { k: "h2", text: "By time" },
     { k: "html", html: `<p>${a("/eras", "Decade by decade since 1900")} · ${a("/timeline", "The timeline")}</p>`, text: `Eras: ${SITE_ORIGIN}/eras. Timeline: ${SITE_ORIGIN}/timeline` },
     { k: "h2", text: "Latest incidents" },
@@ -137,8 +143,9 @@ export async function homeHandler({ env }) {
     updatedAt: res.all.map((r) => r.updated_at).sort().pop() || null,
     data: {
       name: SITE_NAME, subtitle: SITE_SUBTITLE, definition: HOME_DEFINITION, counts,
-      continents: contCounts.map(([k, v, n]) => ({ slug: k, name: v, incidents: n, url: `${SITE_ORIGIN}/continents/${k}` })),
-      tactics: tacticCounts.map(([t, n]) => ({ slug: t.slug, name: t.name, incidents: n, url: `${SITE_ORIGIN}/tactics/${t.slug}` })),
+      continents: contList.map(([k, v]) => ({ slug: k, name: v, url: `${SITE_ORIGIN}/continents/${k}` })),
+      tactics: ref.tacticList.map((t) => ({ slug: t.slug, name: t.name, url: `${SITE_ORIGIN}/tactics/${t.slug}`, ladder_url: `${SITE_ORIGIN}/ladders/${t.slug}` })),
+      united_states_chapter: `${SITE_ORIGIN}/united-states`, ladders: `${SITE_ORIGIN}/ladders`, counts_caveat: COUNTS_CAVEAT,
       latest_incidents: latest.map((i) => ({ slug: i.slug, title: i.title, occurred_on: i.occurred_on, country: i.country, tactic_primary: i.tactic_primary, outcome: i.outcome, url: i.url })),
       recent_coverage: coverage.map((i) => ({ title: i.title, url: i.url, publisher: i.publisher, published_at: i.published_at })),
       dataset: `${SITE_ORIGIN}/data`, mcp: `${SITE_ORIGIN}/mcp`, license: LICENSE,
@@ -174,11 +181,13 @@ export async function incidentHandler({ env }, slug) {
   const tacticSlugs = tacticRows.length ? tacticRows.map((t) => t.tactic_slug) : (r.tactic_primary ? [r.tactic_primary] : []);
   const leader = r.leader_slug ? await first(env, "SELECT slug, name, pub_state FROM actors WHERE slug = ?", r.leader_slug) : null;
   const facts = [
-    ["Country", linkCell(`/countries/${r.country.toLowerCase()}`, countryName(ref, r.country))],
+    ["Country", (() => { const c = ref.countries.get(r.country); const t = rsfText(c); const l = linkCell(`/countries/${r.country.toLowerCase()}`, countryName(ref, r.country)); return t ? { html: `${l.html} (${c.press_freedom_source_url ? a(c.press_freedom_source_url, t) : escapeHtml(t)})`, text: `${l.text} (${t})` } : l; })()],
     ["Where", placeLabel(r.jurisdiction, r.country)],
     ["Level of government", LEVEL_LABELS[r.level] || r.level],
   ];
   if (tacticSlugs.length) facts.push([tacticSlugs.length > 1 ? "Tactics" : "Tactic", { html: tacticSlugs.map((t) => a(`/tactics/${t}`, (ref.tactics.get(t) || {}).name || t)).join(", "), text: tacticSlugs.map((t) => (ref.tactics.get(t) || {}).name || t).join(", ") }]);
+  if (r.stage) facts.push(["Stage", { html: `${escapeHtml(STAGE_LABELS[r.stage] || r.stage)} (${a(`/ladders/${r.tactic_primary || tacticSlugs[0] || ""}#stage-${r.stage}`, "see the ladder")})`, text: `${STAGE_LABELS[r.stage] || r.stage} (ladder: ${SITE_ORIGIN}/ladders/${r.tactic_primary || tacticSlugs[0] || ""}#stage-${r.stage})` }]);
+  if (r.ladder_note) facts.push(["Ladder note", r.ladder_note]);
   if (leader) facts.push(["Head of government at the time", leader.pub_state === "published" ? linkCell(`/leaders/${leader.slug}`, leader.name) : leader.name]);
   if (r.issue_of_the_day) facts.push(["Issue of the day", r.issue_of_the_day]);
   facts.push(["Outcome", `${OUTCOME_LABELS[r.outcome] || "Unknown"}${r.outcome_on ? `, ${proseDate(r.outcome_on)}` : ""}${r.outcome_note ? `. ${r.outcome_note}` : ""}`]);

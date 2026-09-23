@@ -126,7 +126,8 @@ REVIEWED = {
 
 LADDER_NOTES = {
     "2006-russia-politkovskaya-killed": "Who ordered the killing was never conclusively established in court.",
-    "2018-saudi-arabia-khashoggi-killed-consulate": "Saudi Arabia denied that the crown prince ordered the killing.",
+    # None clears a note set by an earlier run (the Khashoggi summary already says it).
+    "2018-saudi-arabia-khashoggi-killed-consulate": None,
     "2018-myanmar-reuters-journalists-official-secrets-act": "Both reporters were pardoned in May 2019 after 511 days in prison.",
 }
 
@@ -180,7 +181,7 @@ def main():
         if apply:
             body = {"stage": stage, "reason": REASON, "batch_label": BATCH}
             if slug in LADDER_NOTES:
-                body["ladder_note"] = LADDER_NOTES[slug]
+                body["ladder_note"] = LADDER_NOTES[slug] or ""
             st, r = call("POST", f"/admin/incidents/{slug}/ladder", body)
             row["write"] = "unchanged" if st == 200 and r.get("unchanged") else st
             if st != 200:

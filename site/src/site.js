@@ -29,7 +29,7 @@ export const DATAPACKAGE_NAME = "the-war-on-news";
 export const COPYRIGHT_YEAR = "2026";
 
 // 40-word definition used on the home page, in JSON-LD and in llms.txt.
-export const HOME_DEFINITION = "The War On News is a dated, sourced record of actions by governments, officials, regulators, courts and legislatures that limited journalists' ability to gather or publish news, from 1900 to today. Browse it by country, by tactic or by time, and compare which governments used the same tactics and what came of them.";
+export const HOME_DEFINITION = "The War On News is a dated, sourced record of actions by governments, officials, regulators, courts and legislatures that limited journalists' ability to gather or publish news, from 1900 to today. Browse it by country, by tactic or by time, and follow each tactic's ladder to see where it has led, from restricting access to eliminating journalists.";
 
 export const HOME_METHOD_LINE = "Each entry states who did what and when, quotes the reason the official gave, and links to the reporting and court records it rests on. Every fact is a claim with a verbatim quotation, a source address, a method and a check date.";
 
@@ -39,9 +39,10 @@ export const META_DESCRIPTION_HOME = "A dated, sourced record of how governments
 
 export const SECTIONS = [
   { label: "Incidents", path: "/incidents" },
+  { label: "United States", path: "/united-states" },
+  { label: "Ladders", path: "/ladders" },
   { label: "Countries", path: "/countries" },
   { label: "Tactics", path: "/tactics" },
-  { label: "Compare", path: "/compare" },
   { label: "Eras", path: "/eras" },
   { label: "Timeline", path: "/timeline" },
   { label: "Cases", path: "/cases" },
@@ -75,6 +76,11 @@ export const CONTINENTS = {
 
 // Tier of government that acted (v2; brief 2026-09-22).
 export const LEVEL_LABELS = { national: "National", state_or_province: "State or province", municipal: "Municipal", supranational: "Supranational" };
+
+// Escalation stages (v3 ladder brief), in ladder order. Definitions are in
+// content/page-notes.json (PAGE_NOTES.stages).
+export const STAGE_ORDER = ["restrict", "pressure", "punish", "silence", "eliminate"];
+export const STAGE_LABELS = { restrict: "Restrict", pressure: "Pressure", punish: "Punish", silence: "Silence", eliminate: "Eliminate" };
 
 export const OUTCOME_LABELS = { reversed: "Reversed", upheld: "Upheld by a court", sustained: "Sustained", ongoing: "Ongoing", unknown: "Unknown" };
 

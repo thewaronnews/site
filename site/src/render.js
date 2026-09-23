@@ -207,7 +207,8 @@ t('get_incident','One incident with timeline, actors, outlets, cases, claims and
 t('get_timeline','Dated timeline entries, oldest first.',{from:{type:'string'},to:{type:'string'},actor:{type:'string'},type:{type:'string'},limit:{type:'integer'}});
 t('get_country','One country: incidents by year, tactics, heads of government, press-freedom rank.',{iso2:{type:'string'}},['iso2']);
 t('get_tactic','One tactic: definition and incidents by country and year.',{slug:{type:'string'}},['slug']);
-t('compare','Tactic by country matrix of dated incidents with head of government and outcome.',{tactic:{type:'string'},country:{type:'string'},from:{type:'string'},to:{type:'string'}});
+t('ladder','One tactic\\'s incidents by escalation stage (restrict, pressure, punish, silence, eliminate), United States rows marked as the focal case, with RSF ranks.',{tactic:{type:'string'},stage:{type:'string'},continent:{type:'string'},from:{type:'string'},to:{type:'string'}},['tactic']);
+t('get_united_states_chapter','The United States chapter: 2025 to 2026, the record since 1917, and where each tactic in use now has led elsewhere.',{});
 t('recent_coverage','Recent reporting on government actions against journalists, newest first.',{limit:{type:'integer'}});
 })();</script>`;
 

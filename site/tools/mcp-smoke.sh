@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # MCP smoke test for thewaronnews.com/mcp (spec 5 and 11): initialize,
-# tools/list (11 tools, v2), every read tool, and suggest_correction without a
+# tools/list (12 tools, v3: ladder and get_united_states_chapter replace compare), every read tool, and suggest_correction without a
 # token (must fail). UA prefix twon-smoke/ keeps the calls out of the
 # questions ledger and the request census.
 # Usage: mcp-smoke.sh [base_url] [incident_slug] [actor_slug] [case_slug]
@@ -23,13 +23,17 @@ check() {
 R=$(rpc '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","clientInfo":{"name":"twon-smoke","version":"1.0"}}}')
 check "initialize" "$R" "d['result']['serverInfo']['name']=='com.thewaronnews/thewaronnews'"
 R=$(rpc '{"jsonrpc":"2.0","id":2,"method":"tools/list"}')
-check "tools/list has 11 tools, no latest_news" "$R" "len(d['result']['tools'])==11 and 'latest_news' not in [t['name'] for t in d['result']['tools']]"
+check "tools/list has 12 tools, ladder in, compare and latest_news out" "$R" "len(d['result']['tools'])==12 and 'ladder' in [t['name'] for t in d['result']['tools']] and 'get_united_states_chapter' in [t['name'] for t in d['result']['tools']] and not {'compare','latest_news'} & {t['name'] for t in d['result']['tools']}"
 call() { rpc "{\"jsonrpc\":\"2.0\",\"id\":3,\"method\":\"tools/call\",\"params\":{\"name\":\"$1\",\"arguments\":$2}}"; }
 R=$(call search_incidents '{"query":"White House CNN"}');   check "search_incidents" "$R" "d['result']['structuredContent']['count']>=1"
 R=$(call search_incidents '{"country":"US","tactic":"access_ban","from":"2025"}'); check "search_incidents with facets" "$R" "d['result']['structuredContent']['count']>=1 and all(i['country']=='US' and 'access_ban' in i['tactics'] for i in d['result']['structuredContent']['incidents'])"
 R=$(call get_country '{"iso2":"US"}');                        check "get_country" "$R" "d['result']['structuredContent'].get('iso2')=='US' and d['result']['structuredContent']['incident_count']>=1"
 R=$(call get_tactic '{"slug":"access_ban"}');                 check "get_tactic" "$R" "d['result']['structuredContent'].get('slug')=='access_ban'"
-R=$(call compare '{"tactic":"access_ban"}');                  check "compare" "$R" "d['result']['structuredContent']['count']>=1"
+R=$(call ladder '{"tactic":"access_ban"}');                   check "ladder" "$R" "d['result']['structuredContent']['count']>=1 and d['result']['structuredContent']['stages'][0]['rungs'][0]['focal_case']==True"
+R=$(call ladder '{"tactic":"detention_and_violence","stage":"eliminate"}'); check "ladder with stage" "$R" "d['result']['structuredContent']['count']>=1 and all(s['stage']=='eliminate' for s in d['result']['structuredContent']['stages'])"
+R=$(call ladder '{"tactic":"nonsense"}');                     check "ladder rejects an unknown tactic" "$R" "d['result']['isError']==True"
+R=$(call get_united_states_chapter '{}');                     check "get_united_states_chapter" "$R" "d['result']['structuredContent']['rsf']['rank']==64 and len(d['result']['structuredContent']['now']['incidents'])>=1 and len(d['result']['structuredContent']['tactics_in_use_now'])>=1"
+R=$(call get_country '{"iso2":"RU"}');                        check "get_country carries the RSF rank" "$R" "d['result']['structuredContent']['press_freedom']['rank']>=1"
 R=$(call recent_coverage '{"limit":3}');                      check "recent_coverage" "$R" "'items' in d['result']['structuredContent']"
 R=$(call get_incident "{\"slug\":\"$INC\"}");               check "get_incident" "$R" "d['result']['structuredContent'].get('slug')=='$INC'"
 R=$(call get_timeline '{"limit":5}');                        check "get_timeline" "$R" "len(d['result']['structuredContent']['rows'])>=1"

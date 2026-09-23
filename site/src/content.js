@@ -32,6 +32,6 @@ export const PAGE_NOTES = {
   }
  },
  "ladders_intro": "Each ladder takes one tactic and sets out, stage by stage, what governments have done with it: from restricting access, through pressure and punishment, to silencing outlets and eliminating journalists. Every rung is a dated incident with its country, head of government, outcome and sources. Rows from the United States, the focal case of this record, are marked and shown first within each stage.",
- "us_chapter_intro": "This chapter sets out what the government of the United States and its officials have done to journalists in 2025 and 2026, the earlier record from 1917 to 2019, and, for each tactic in use now, where the same tactic has led in other countries."
+ "us_chapter_intro": "This chapter sets out what the government of the United States and its officials have done to journalists in 2025 and 2026, the earlier record from 1917 to 2024, and, for each tactic in use now, where the same tactic has led in other countries."
 };
 export const POLICY_VERSION = "57c5294b5dc6";
