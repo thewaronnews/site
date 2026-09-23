@@ -46,6 +46,7 @@ export async function llmsTxt(env) {
     `- [Cases](${SITE_ORIGIN}/cases.md)`,
     `- [Recent coverage](${SITE_ORIGIN}/coverage.md)`,
     `- [Search](${SITE_ORIGIN}/search.md?q=press+pass)`,
+    `- [What this record is about](${SITE_ORIGIN}/context.md): the premise, the definition of journalism used here, and the economic pressures on it`,
     "> The number of entries for a country reflects the depth of this record, not the severity of that country's conduct; the record is deepest for the United States. No view ranks countries by count.",
     "## Ladders",
     ...tactics.map((t) => `- [${t.name}](${SITE_ORIGIN}/ladders/${t.slug}.md)`),

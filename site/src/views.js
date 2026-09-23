@@ -163,8 +163,7 @@ ${a("/timeline", "Open the timeline", { class: "more" })}</div></div>
   const duo = `<section class="block duo">
 <div><div class="bhead"><h2 id="cov-h">Recent coverage</h2>${a("/coverage", "All recent coverage")}</div>${cov}</div>
 <div><div class="panel about-record" aria-labelledby="about-h"><h2 id="about-h">What this record is about</h2>
-<p>Journalism, as this record uses the word, means reporting that is verified and based on facts: work that says where its information comes from, can be checked, and is corrected when it is wrong. ${escapeHtml(SITE_NAME)} records actions by governments, officials, regulators, courts and legislatures that limited people's ability to gather or publish such reporting.</p>
-<p>Each entry gives the date and place, who acted, the reason the officials gave in their own words, the outcome, and the sources it rests on. The record states what happened; it does not rate countries.</p>
+<p>This site records one kind of pressure on journalism: government action that limits reporters' access, credentials or funding. That pressure runs alongside an economic one. Newsroom employment in the United States has fallen 26% since 2008, and newspaper advertising revenue is down about 80% since 2005 ${a("https://www.pewresearch.org/journalism/fact-sheet/newspapers/", "Pew Research Center")}, while misleading content, cheaper to produce, spreads faster than verified reporting. ${a("/context", "Read the fuller context")}.</p>
 <p class="links-row">${a("/context", "Why this record exists")}${a("/sources-and-standards", "Sources and standards")}${a("/about", "About")}</p>
 </div>
 <div class="panel" style="margin-top:1rem"><h2 style="margin:0 0 .4rem;font-size:var(--step-1)">Data and tools</h2><p class="muted" style="margin:0">${escapeHtml(v.dataLine)}</p><p class="toolrow">${v.tools.map((t) => a(t.href, t.label, { class: "feed-badge" })).join("")}</p></div>

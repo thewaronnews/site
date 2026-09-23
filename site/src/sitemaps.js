@@ -6,7 +6,7 @@ import { escapeXml } from "./util.js";
 import { all } from "./db.js";
 import { SITE_ORIGIN, SITE_NAME } from "./site.js";
 
-const STATIC_PAGES = ["/", "/incidents", "/united-states", "/ladders", "/countries", "/continents", "/tactics", "/eras", "/leaders", "/coverage", "/actors", "/outlets", "/journalists", "/cases", "/timeline", "/glossary", "/about", "/sources-and-standards", "/editorial-policy", "/corrections", "/terms", "/privacy", "/changes", "/data", "/feeds", "/mcp", "/search"];
+const STATIC_PAGES = ["/", "/incidents", "/united-states", "/ladders", "/countries", "/continents", "/tactics", "/eras", "/leaders", "/coverage", "/actors", "/outlets", "/journalists", "/cases", "/timeline", "/glossary", "/about", "/context", "/sources-and-standards", "/editorial-policy", "/corrections", "/terms", "/privacy", "/changes", "/data", "/feeds", "/mcp", "/search"];
 
 function maxDate(entries) {
   return entries.reduce((m, e) => (e.lastmod && (!m || e.lastmod > m) ? e.lastmod : m), null);

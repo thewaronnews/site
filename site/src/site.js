@@ -56,6 +56,7 @@ export const MASTHEAD_DESCRIPTOR = "A record of government actions against journ
 
 // Footer (brief 2026-09-22, "Copy rules").
 export const FOOTER_LINKS = [
+  { label: "What this record is about", path: "/context" },
   { label: "Terms of use", path: "/terms" },
   { label: "Privacy", path: "/privacy" },
   { label: "Corrections", path: "/corrections" },
