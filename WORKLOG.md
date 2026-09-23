@@ -658,3 +658,34 @@ the 64 affected incidents, nothing removed or reordered. Neither file is under v
     block clear.
 25. The 88 new sources from this session have no Wayback snapshot; run ops/wayback.py once
     web.archive.org's save endpoint recovers (still failing as of the last two sessions' attempts).
+
+## 2026-09-22 (late): Atlas design live on every template (implementer)
+
+Peter approved Concept B "Atlas" and the Etched Record illustrations, and asked that the site make clear its subject is
+journalism and fact-based reporting. Shipped and deployed:
+
+- Assets: eight masters converted to WebP 1600x900 (228 to 240 KB), 800x450 (82 to 88 KB), 1200x630 og crop (WebP 139 to
+  149 KB, JPEG 125 to 177 KB); Inter and Inter Tight variable woff2 self-hosted. All in R2 `twon-exports` via
+  `tools/upload-assets.sh`, served at /assets/img and /assets/fonts with a 1-year immutable cache.
+- Stylesheet replaced (content/site.css, minified to 38.9 KB served); `tools/check-contrast.py` 0 failures in both themes.
+- Templates: masthead with descriptor and global search, new primary nav, home per the mockup (tile map shaded only by
+  "in the record", focal case with events, three ways in with the illustrations, ladder teaser, era strip, recent
+  coverage, "What this record is about" linking /context), incident page layout, ladder lanes with rung cards, search
+  facet chips and view bar, coverage list with country codes, US chapter "Now" panels, long-form reading layout for
+  about, context, sources-and-standards, terms, privacy, corrections. og:image and twitter summary_large_image per page
+  type; SVG favicon.
+- Checks: .md/.json twins of 569 pages and their JSON-LD identical before and after (0 diffs); verify-v3 0 failures (incl.
+  mcp-smoke 18/18 and no count ranking), verify-v2 0 failures; largest HTML page 135 KB (/incidents?per_page=100&view=cards);
+  no horizontal overflow at 1440 and 390 px on 30 templates; fonts and images load on every screenshot; no external
+  script, font or stylesheet on any page. Screenshots: /mnt/user-data/outputs/design-live/.
+
+### TODO (added 2026-09-22, design)
+
+26. /context answers 404 until content/context.md is written (the home page already links it).
+27. Dates render as "September 18, 2026" (proseDate, shared with the twins); a day-month-year form would read less
+    American, but changing it changes the .md twins, so it needs its own decision.
+28. Some coverage feed summaries carry literal HTML entities (for example "&mdash;" from Knight Institute's feed); decode
+    entities in coverage.js at ingest.
+29. The US chapter page is long (26,000 px at desktop); consider collapsing "How it got here" decades into <details>.
+30. Cloudflare's automatic RUM beacon (/cdn-cgi/rum) is on the zone; it is same-origin and async, but turn off Web
+    Analytics' automatic setup if a zero-script page is wanted.

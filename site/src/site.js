@@ -37,20 +37,22 @@ export const HOME_DATA_LINE = "Every page is also published as Markdown (add .md
 
 export const META_DESCRIPTION_HOME = "A dated, sourced record of how governments have limited journalists since 1900, by country, tactic and era, with outcomes, court cases, data and MCP.";
 
+// Primary navigation (Atlas design, 2026-09-22). `match` lists the path
+// prefixes that mark an item as current.
 export const SECTIONS = [
-  { label: "Incidents", path: "/incidents" },
   { label: "United States", path: "/united-states" },
-  { label: "Ladders", path: "/ladders" },
-  { label: "Countries", path: "/countries" },
+  { label: "Countries", path: "/countries", match: ["/countries", "/continents"] },
   { label: "Tactics", path: "/tactics" },
-  { label: "Eras", path: "/eras" },
-  { label: "Timeline", path: "/timeline" },
-  { label: "Cases", path: "/cases" },
-  { label: "Recent coverage", path: "/coverage" },
-  { label: "Glossary", path: "/glossary" },
-  { label: "Search", path: "/search" },
-  { label: "About", path: "/about" },
+  { label: "Ladders", path: "/ladders" },
+  { label: "Timeline", path: "/timeline", match: ["/timeline", "/eras"] },
+  { label: "Coverage", path: "/coverage" },
+  { label: "Search", path: "/search", match: ["/search"] },
+  { label: "About", path: "/about", match: ["/about", "/context", "/sources-and-standards", "/terms", "/privacy", "/corrections", "/editorial-policy"] },
 ];
+
+// Masthead descriptor (HTML only; Peter, 2026-09-22: make clear the subject
+// is journalism and fact-based reporting).
+export const MASTHEAD_DESCRIPTOR = "A record of government actions against journalism and fact-based reporting, 1900 to today";
 
 // Footer (brief 2026-09-22, "Copy rules").
 export const FOOTER_LINKS = [

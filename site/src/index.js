@@ -5,7 +5,7 @@
 
 import { resolveFormat, contentTypeFor } from "./negotiate.js";
 import { SITE_ORIGIN, SITE_HOST } from "./site.js";
-import { renderHtml, renderMarkdown, buildAlternates } from "./render.js";
+import { renderHtml, renderMarkdown, buildAlternates, MARK_SVG } from "./render.js";
 import { observe, isAnalyticsEligible } from "./logger.js";
 import { runNightly } from "./cron.js";
 import { handleMcpRequest, MCP_SERVER_MANIFEST } from "./mcp.js";
@@ -76,6 +76,7 @@ const ROUTES = [
   [G, /^\/corrections$/, (c) => correctionsHandler(c)],
   [G, /^\/corrections\/log$/, (c) => correctionsLogHandler(c)],
   [G, /^\/about$/, (c) => policyHandler(c, "about")],
+  [G, /^\/context$/, (c) => policyHandler(c, "context")],
   [G, /^\/sources-and-standards$/, (c) => policyHandler(c, "sources-and-standards")],
   [G, /^\/terms$/, (c) => policyHandler(c, "terms")],
   [G, /^\/privacy$/, (c) => policyHandler(c, "privacy")],
@@ -131,6 +132,22 @@ async function r2File(env, pathname) {
   return new Response(obj.body, { status: 200, headers: { "Content-Type": type, "Cache-Control": key.startsWith("images/") ? "public, max-age=604800" : "public, max-age=3600", "Access-Control-Allow-Origin": "*" } });
 }
 
+// Illustrations and fonts (Atlas design, 2026-09-22) from R2, uploaded by
+// tools/upload-assets.sh under the same key: /assets/img/<name>-<size>.webp
+// (and -og.jpg), /assets/fonts/<file>.woff2. Names never change content in
+// place, so the cache is a year and immutable.
+const ASSET_TYPES = { webp: "image/webp", jpg: "image/jpeg", png: "image/png", woff2: "font/woff2", txt: "text/plain; charset=utf-8" };
+async function assetFile(env, pathname) {
+  const m = pathname.match(/^\/(assets\/(?:img|fonts)\/[a-zA-Z0-9-]+\.(webp|jpg|png|woff2|txt))$/);
+  const miss = () => new Response("Not found", { status: 404, headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "public, max-age=60" } });
+  if (!m || !env.EXPORTS) return miss();
+  const obj = await env.EXPORTS.get(m[1]);
+  if (!obj) return miss();
+  const headers = { "Content-Type": ASSET_TYPES[m[2]], "Cache-Control": "public, max-age=31536000, immutable", "Access-Control-Allow-Origin": "*" };
+  if (obj.httpEtag) headers.ETag = obj.httpEtag;
+  return new Response(obj.body, { status: 200, headers });
+}
+
 function redirect301(path) {
   return new Response(null, { status: 301, headers: { Location: `${SITE_ORIGIN}${path}`, "Cache-Control": "public, max-age=3600" } });
 }
@@ -167,6 +184,8 @@ async function directRoute(request, env, ctx, url) {
   if (moved) return ["html", redirect301(moved)];
   if (p === "/incidents.csv") return ["csv", await incidentsCsvHandler({ env, url })];
   if (p === "/assets/site.css") return ["css", text(SITE_CSS, "text/css; charset=utf-8", "public, max-age=31536000, immutable")];
+  if (p === "/favicon.svg" || p === "/favicon.ico") return ["svg", text(MARK_SVG, "image/svg+xml", "public, max-age=604800")];
+  if (p.startsWith("/assets/img/") || p.startsWith("/assets/fonts/")) return ["asset", await assetFile(env, p)];
   if (p === "/robots.txt") return ["txt", text(robotsTxt(), "text/plain; charset=utf-8")];
   if (p === "/llms.txt") return ["txt", text(await llmsTxt(env), "text/plain; charset=utf-8")];
   if (p === "/llms-full.txt") return ["txt", text(await llmsFullTxt(env), "text/plain; charset=utf-8")];
@@ -248,7 +267,9 @@ export default {
     if (isHead && response.body) {
       response = new Response(null, { status: response.status, statusText: response.statusText, headers: response.headers });
     }
-    ctx.waitUntil(observe(originalRequest, response, env, formatServed));
+    // Illustrations, fonts and the favicon are page furniture, not page
+    // views: they are not logged, so the human and crawler tallies stay per page.
+    if (formatServed !== "asset" && formatServed !== "svg") ctx.waitUntil(observe(originalRequest, response, env, formatServed));
     return response;
   },
 

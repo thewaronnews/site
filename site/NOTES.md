@@ -1,5 +1,49 @@
 # The War On News (thewaronnews.com), Crank #3: Worker notes
 
+## Atlas design (2026-09-22, Concept B approved by Peter; "Etched Record" illustrations)
+
+- Stylesheet: `content/site.css` (hand-written, `@layer reset, tokens, base, layout, components, pages, utilities, print`;
+  tokens as custom properties with `light-dark()`; fluid type scale; container queries on `.table-wrap` and `.card`;
+  16 px phone gutter, 36 px from 900 px; print block). `tools/gen-modules.py` now minifies it (comments out, whitespace
+  collapsed) into `src/css.js`: served `/assets/site.css?v=<hash>`, 38.9 KB, 1-year immutable. `content/site-extra.css`
+  is gone. Palette from `design/concept-B.html`; the dark theme and the 3:1 `--line-strong` are derived and checked by
+  `tools/check-contrast.py` (all text pairs >= 4.5:1, UI pairs >= 3:1, both themes; run it after any colour change).
+- Fonts: Inter and Inter Tight variable woff2 (fontsource 5.3.0, OFL, latin + latin-ext subsets) in `site/assets/fonts/`,
+  `font-display: swap`, the two latin files preloaded. No external request from any page (no Google Fonts, no CDN).
+- Illustrations: the eight Etched Record masters (`/home/claude/crank3/masters/*.png`) as `site/assets/img/<name>-1600.webp`
+  (228 to 240 KB), `-800.webp` (82 to 88 KB), `-og.webp` (139 to 149 KB) and `-og.jpg` (125 to 177 KB, 1200x630, used for
+  og:image and twitter:image because JPEG is the safe social-card format). `tools/upload-assets.sh` PUTs `assets/img/*`
+  and `assets/fonts/*` to R2 `twon-exports` under the same key (Cloudflare R2 object API, token from secrets.env); the
+  Worker serves `/assets/img/<file>` and `/assets/fonts/<file>` from R2 (`assetFile` in index.js) with
+  `public, max-age=31536000, immutable`. File names never change content in place: a new rendering gets a new name.
+  Assets and the favicon are not logged by `observe()` (page furniture, not page views).
+- Image per page (render.js `artFor`): home and /united-states home-hero (gate), incidents incident, cases case,
+  actors/leaders/journalists/outlets actor, tactics/ladders tactic, countries/continents country, coverage coverage,
+  eras/timeline era-timeline; og:image defaults to home-hero. Header art shows on section and entity pages (not search,
+  record lists, claims, sources, reading pages); the incident page has its own hero.
+- Favicon: `/favicon.svg` (and `/favicon.ico`), a gate-bar mark in #B93A0A, no text (`MARK_SVG` in render.js, also inline
+  in the masthead).
+- Templates: HTML-only fields on the doc model (render.js header): `layout` (home | record | reading), `htmlBody(fn)`,
+  `eyebrow`, `art`, `headExtra`; per block `viewHtml` / `hideHtml`. renderMarkdown and doc.data never read them, so the
+  .md and .json twins are unchanged by construction; verified by fetching 569 pages' .md and .json (1,138 files) and
+  their JSON-LD before and after the deploy: 0 differences. `src/views.js` holds the home page (hero, tile world map
+  shaded only by whether the record has an entry, focal case block with events, three ways in with the illustrations,
+  one-tactic ladder teaser, 1900 to today era strip, recent coverage, "What this record is about" with a link to
+  /context), the incident page (hero, date, country + RSF rank, tactic and stage chips, summary, what happened, stated
+  justification as a quotation block, effect, timeline, actors/outlets/cases, sources, "Claims and evidence", aside with
+  status, last reviewed, fact sheet and "What we don't know"), ladder stage bar, lanes and rung cards, search view bar
+  (count, table/cards toggle, CSV/JSON/Markdown) and incident cards. Facet chips (v2routes `facetLinks`) keep counts for
+  tactic, stage, outcome and level only; country, continent and leader chips have none.
+- Masthead: site name, gate mark, descriptor "A record of government actions against journalism and fact-based
+  reporting, 1900 to today" (`MASTHEAD_DESCRIPTOR`, HTML only; SITE_SUBTITLE and the twins keep the old line), global
+  search box, nav United States, Countries, Tactics, Ladders, Timeline (/timeline, also current on /eras), Coverage,
+  Search, About (`SECTIONS` in site.js, with `match` prefixes).
+- /context: route added; `gen-modules.py` serves `content/context.md` when the file exists (OPTIONAL_PAGE_SLUGS), so the
+  route answers 404 until the page ships and POLICY_VERSION is unchanged until then.
+- util.js `mdToHtml` honours `## Heading {#id}` (about.md's Contact anchor rendered literally before).
+- Local testing: `tools/local-harness.mjs` now serves `assets/img|fonts` from `site/assets`; screenshots with Playwright
+  (NODE_PATH=/home/claude/.npm-global/lib/node_modules, executablePath /opt/pw-browsers/chromium).
+
 ## v3 (2026-09-22, the ladder reframe, brief v3-ladder-brief-2026-09-22.md)
 
 - Migration `0005_ladder.sql`: `incidents.stage` (restrict | pressure | punish | silence | eliminate; nullable in the schema,

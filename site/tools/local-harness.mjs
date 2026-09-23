@@ -11,7 +11,7 @@
 import { DatabaseSync } from "node:sqlite";
 import { execFileSync } from "node:child_process";
 import { createServer } from "node:http";
-import { readdirSync } from "node:fs";
+import { readdirSync, existsSync, readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
@@ -77,7 +77,12 @@ const KV = {
 const r2 = new Map();
 const EXPORTS = {
   async put(k, body) { r2.set(k, body); },
-  async get(k) { return r2.has(k) ? { body: r2.get(k) } : null; },
+  async get(k) {
+    if (r2.has(k)) return { body: r2.get(k) };
+    // assets/img and assets/fonts are read from site/assets (tools/upload-assets.sh ships them to R2).
+    if (/^assets\/(img|fonts)\/[a-zA-Z0-9-]+\.[a-z0-9]+$/.test(k) && existsSync(path.join(site, k))) return { body: readFileSync(path.join(site, k)) };
+    return null;
+  },
 };
 
 const sha = (s) => createHash("sha256").update(s).digest("hex");

@@ -245,8 +245,11 @@ export function mdToHtml(md, { refFn = null, headingOffset = 0, skipH1 = false }
     if (h && lines.length === 1) {
       const level = Math.min(6, h[1].length + headingOffset);
       if (skipH1 && h[1].length === 1) continue;
-      const id = h[2].toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-      out.push(`<h${level} id="${id}">${inlineHtml(h[2], refFn)}</h${level}>`);
+      // "## Contact {#contact}" sets the anchor explicitly (HTML only).
+      const explicit = h[2].match(/^(.*?)\s*\{#([a-z0-9-]+)\}\s*$/);
+      const text = explicit ? explicit[1] : h[2];
+      const id = explicit ? explicit[2] : text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+      out.push(`<h${level} id="${id}">${inlineHtml(text, refFn)}</h${level}>`);
       continue;
     }
     if (lines.every((l) => /^\s*[-*]\s+/.test(l))) {

@@ -7,11 +7,17 @@
 // }
 // Blocks: p, h2, h3, dl, table, ul, html (with md text fallback), md
 // (Markdown source with {c:ID} refs), sources, cards, timeline, notice.
+//
+// HTML-only fields (never read by renderMarkdown, never in doc.data, so the
+// .md and .json twins do not depend on them): doc.layout ("home" | "record"
+// | "reading"), doc.htmlBody(fn) (replaces the block rendering), doc.eyebrow,
+// doc.art (illustration name or null), doc.headExtra (HTML under the title),
+// and on a block: viewHtml (replaces that block's HTML) or hideHtml.
 
 import { escapeHtml, a, aHtml, extLink, extLinkMd, mdToHtml, mdToMd, truncate, proseDate } from "./util.js";
 import {
   SITE_NAME, SITE_SUBTITLE, SITE_ORIGIN, SECTIONS, FOOTER_LINKS, META_DESCRIPTION_HOME, PUBLISHER_NAME,
-  DATA_LICENSE, LICENSE_URL, INCIDENT_STATUS_LABELS, COPYRIGHT_YEAR,
+  DATA_LICENSE, LICENSE_URL, INCIDENT_STATUS_LABELS, COPYRIGHT_YEAR, MASTHEAD_DESCRIPTOR,
 } from "./site.js";
 import { SITE_CSS_VERSION } from "./css.js";
 import { breadcrumbLd } from "./jsonld.js";
@@ -44,16 +50,16 @@ export class Footnotes {
   }
 }
 
-function footnotesHtml(fn) {
+export function footnotesHtml(fn, heading = "Claims and evidence") {
   const items = fn.entries();
   if (!items.length) return "";
   const lis = items.map(({ n, id, claim }) => {
     if (!claim) return `<li id="fn-${n}">${a(`/claims/${id}`, `Claim ${id}`)}</li>`;
     const src = claim.source ? `<span class="claim-source">${extLink(claim.source)}${claim.source.publisher ? `, ${escapeHtml(claim.source.publisher)}` : ""}${claim.source.published_on ? `, ${escapeHtml(claim.source.published_on)}` : ""}.</span>` : "";
-    const quote = claim.evidence_quote ? ` <q class="claim-quote-inline">${escapeHtml(claim.evidence_quote)}</q>` : "";
-    return `<li id="fn-${n}">${escapeHtml(claim.statement)}${quote} ${src} ${a(`/claims/${id}`, `Claim ${id}`)}, checked ${escapeHtml(String(claim.verified_at).slice(0, 10))}.</li>`;
+    const quote = claim.evidence_quote ? `<q class="claim-quote-inline">${escapeHtml(claim.evidence_quote)}</q>` : "";
+    return `<li id="fn-${n}"><span class="claim__statement">${escapeHtml(claim.statement)}</span>${quote}${src}<span class="claim__check">${a(`/claims/${id}`, `Claim ${id}`)}, checked ${escapeHtml(String(claim.verified_at).slice(0, 10))}.</span></li>`;
   });
-  return `<section class="footnotes" aria-labelledby="footnotes-h"><h2 id="footnotes-h">Claims cited</h2><ol>${lis.join("")}</ol></section>`;
+  return `<section class="footnotes" aria-labelledby="footnotes-h"><h2 id="footnotes-h">${escapeHtml(heading)}</h2><p class="muted">Each numbered claim quotes the source it rests on.</p><ol>${lis.join("")}</ol></section>`;
 }
 
 function footnotesMd(fn) {
@@ -83,7 +89,7 @@ export function metaLines(meta) {
   return lines;
 }
 
-function metaHtml(meta) {
+export function metaHtml(meta) {
   const lines = metaLines(meta);
   if (!lines.length) return "";
   return `<div class="page-meta">${lines.map((l) => {
@@ -125,8 +131,9 @@ function sourceItemMd(s, i) {
   return `${i + 1}. ${extLinkMd(s)}${bits ? ` (${bits})` : ""}.`;
 }
 
-function cardHtml(c) {
-  return `<article class="incident"><div class="incident__date">${escapeHtml(c.date || "")}</div><div><h3 class="incident__title">${a(c.href, c.title)}</h3>${c.body ? `<p class="incident__body">${escapeHtml(c.body)}</p>` : ""}${c.meta ? `<p class="meta">${escapeHtml(c.meta)}</p>` : ""}</div></article>`;
+export function cardHtml(c) {
+  const meta = c.metaHtml || (c.meta ? escapeHtml(c.meta) : "");
+  return `<article class="card${c.cls ? ` ${c.cls}` : ""}">${c.date || c.topHtml ? `<p class="card__meta">${c.topHtml || `<time>${escapeHtml(c.date)}</time>`}</p>` : ""}<h3 class="card__title">${a(c.href, c.title)}</h3>${c.body ? `<p class="card__body">${escapeHtml(c.body)}</p>` : ""}${meta ? `<p class="card__foot">${meta}</p>` : ""}</article>`;
 }
 
 function timelineHtml(rows) {
@@ -155,18 +162,20 @@ function timelineMd(rows) {
   }).join("\n");
 }
 
-function blockToHtml(b, fn) {
+export function blockToHtml(b, fn) {
+  if (b.hideHtml) return "";
+  if (b.viewHtml !== undefined) return b.viewHtml;
   switch (b.k) {
     case "p": return `<p${b.cls ? ` class="${b.cls}"` : ""}>${b.html ? b.html : escapeHtml(b.text)}</p>`;
     case "h2": return `<h2 id="${b.id || h2Id(b.text)}">${escapeHtml(b.text)}</h2>`;
     case "h3": return `<h3>${escapeHtml(b.text)}</h3>`;
-    case "dl": return `<dl>${b.items.map(([t, d]) => `<dt>${escapeHtml(t)}</dt><dd>${cellHtml(d)}</dd>`).join("")}</dl>`;
-    case "table": return `<div class="table-wrap"><table>${b.caption ? `<caption>${escapeHtml(b.caption)}</caption>` : ""}<thead><tr>${b.headers.map((h) => `<th scope="col">${escapeHtml(h)}</th>`).join("")}</tr></thead><tbody>${b.rows.map((r) => `<tr>${r.map((c) => `<td>${cellHtml(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+    case "dl": return `<dl class="facts">${b.items.map(([t, d]) => `<div><dt>${escapeHtml(t)}</dt><dd>${cellHtml(d)}</dd></div>`).join("")}</dl>`;
+    case "table": return `<div class="table-wrap"><table>${b.caption ? `<caption>${escapeHtml(b.caption)}</caption>` : ""}<thead><tr>${b.headers.map((h) => `<th scope="col">${escapeHtml(h)}</th>`).join("")}</tr></thead><tbody>${b.rows.map((r) => `<tr>${r.map((c, i) => `<td data-label="${escapeHtml(b.headers[i] || "")}">${cellHtml(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
     case "ul": return `<ul>${b.items.map((i) => `<li>${cellHtml(i)}</li>`).join("")}</ul>`;
     case "html": return b.html;
     case "md": return mdToHtml(b.md, { refFn: fn ? fn.ref : null, skipH1: !!b.skipH1, headingOffset: b.headingOffset || 0 });
-    case "sources": return b.sources.length ? `<ul class="sources">${b.sources.map(sourceItemHtml).join("")}</ul>` : "<p>No sources are linked yet.</p>";
-    case "cards": return b.items.length ? `<div class="stack">${b.items.map(cardHtml).join("")}</div>` : `<p>${escapeHtml(b.empty || "Nothing is published here yet.")}</p>`;
+    case "sources": return b.sources.length ? `<ol class="sources">${b.sources.map(sourceItemHtml).join("")}</ol>` : "<p>No sources are linked yet.</p>";
+    case "cards": return b.items.length ? `<div class="cards">${b.items.map(cardHtml).join("")}</div>` : `<p>${escapeHtml(b.empty || "Nothing is published here yet.")}</p>`;
     case "timeline": return timelineHtml(b.rows);
     case "notice": return `<div class="notice"><p>${b.html || escapeHtml(b.text)}</p></div>`;
     case "feeds": return `<p class="feed-badges">${b.items.map((i) => aHtml(i.href, escapeHtml(i.label), { class: "feed-badge" })).join("")}</p>`;
@@ -212,22 +221,108 @@ t('get_united_states_chapter','The United States chapter: 2025 to 2026, the reco
 t('recent_coverage','Recent reporting on government actions against journalists, newest first.',{limit:{type:'integer'}});
 })();</script>`;
 
+// ---------- illustrations (Etched Record masters, served from R2) ----------
+
+export const ART = ["home-hero", "incident", "case", "actor", "tactic", "country", "coverage", "era-timeline"];
+export const ART_ALT = {
+  "home-hero": "Engraving of a locked iron gate with a press pass hanging from it, a government building behind",
+  incident: "Engraving of an empty press briefing room with a lectern and rows of chairs",
+  case: "Engraving of a bundle of papers tied with ribbon on courthouse steps",
+  actor: "Engraving of an official's desk with a signed, sealed document and a pen",
+  tactic: "Engraving of a hand press bound in chains and a padlock",
+  country: "Engraving of a globe beside an open atlas in a library",
+  coverage: "Engraving of bundled newspapers and a radio on a doorstep",
+  "era-timeline": "Engraving of a shelf of bound volumes lit by a desk lamp",
+};
+
+// Illustration for a path: its og:image and, where the page shows one, the
+// header art. Null where a page has none of its own.
+export function artFor(path) {
+  const p = path || "/";
+  if (p === "/" || p === "/united-states") return "home-hero";
+  if (/^\/incidents\/[^/]+(\/revisions)?$/.test(p)) return "incident";
+  if (/^\/cases(\/|$)/.test(p)) return "case";
+  if (/^\/(actors|leaders|journalists|outlets)(\/|$)/.test(p)) return "actor";
+  if (/^\/(tactics|ladders)(\/|$)/.test(p)) return "tactic";
+  if (/^\/(countries|continents)(\/|$)/.test(p)) return "country";
+  if (/^\/coverage(\/|$)/.test(p)) return "coverage";
+  if (/^\/(eras|timeline)(\/|$)/.test(p)) return "era-timeline";
+  return null;
+}
+
+// Pages whose header carries the illustration (entity and section pages;
+// not search, lists of records, claims, sources or long-form reading).
+function showsArt(path) {
+  return /^\/(united-states|countries|continents|tactics|ladders|eras|timeline|coverage|cases|leaders|actors|outlets|journalists)(\/|$)/.test(path || "")
+    && !/^\/(actors|outlets|journalists)$/.test(path);
+}
+
+export function artImg(name, { sizes = "100vw", eager = false, alt = null, cls = "" } = {}) {
+  const base = `/assets/img/${name}`;
+  return `<img${cls ? ` class="${cls}"` : ""} src="${base}-800.webp" srcset="${base}-800.webp 800w, ${base}-1600.webp 1600w" sizes="${sizes}" width="1600" height="900" alt="${escapeHtml(alt === null ? ART_ALT[name] || "" : alt)}"${eager ? ' fetchpriority="high"' : ' loading="lazy"'} decoding="async">`;
+}
+
+// Gate-bar mark (favicon and masthead), accent colour, no text.
+export const MARK_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#B93A0A"/><g fill="#FBEDE6"><path d="M6.5 26V11.2L7.75 8l1.25 3.2V26z"/><path d="M12.5 26V11.2L13.75 8l1.25 3.2V26z"/><path d="M18.5 26V11.2L19.75 8l1.25 3.2V26z"/><path d="M24.5 26V11.2L25.75 8l1.25 3.2V26z"/><rect x="5" y="13.5" width="22" height="2.2" rx=".6"/><rect x="5" y="21" width="22" height="2.2" rx=".6"/></g></svg>`;
+
 // ---------- page chrome ----------
 
+const EYEBROWS = [
+  [/^\/incidents\/[^/]+\/revisions$/, "Revision history"], [/^\/incidents$/, "The record"], [/^\/cases\/[^/]+/, "Court case"], [/^\/cases$/, "The record"],
+  [/^\/actors\//, "Actor"], [/^\/leaders\//, "Head of government"], [/^\/outlets\//, "Outlet"], [/^\/journalists\//, "Journalist"],
+  [/^\/countries\//, "Country"], [/^\/continents\//, "Continent"], [/^\/tactics\//, "Tactic"], [/^\/ladders\//, "Ladder"],
+  [/^\/eras\//, "Era"], [/^\/(timeline|eras)/, "By time"], [/^\/(countries|continents)$/, "By place"], [/^\/(tactics|ladders)$/, "By tactic"],
+  [/^\/glossary\//, "Glossary"], [/^\/claims\//, "Claim"], [/^\/sources\//, "Source"], [/^\/united-states$/, "Focal chapter"],
+  [/^\/coverage/, "Reporting from elsewhere"], [/^\/(data|feeds|mcp)$/, "Data and tools"], [/^\/(changes|corrections)/, "The record"],
+];
+
+function eyebrowFor(doc) {
+  if (doc.eyebrow !== undefined) return doc.eyebrow;
+  for (const [re, label] of EYEBROWS) if (re.test(doc.path || "")) return label;
+  return null;
+}
+
 function navHtml(currentPath) {
-  return `<nav class="nav" aria-label="Sections"><ul>${SECTIONS.map((s) => {
-    const cur = currentPath === s.path || (currentPath || "").startsWith(`${s.path}/`);
+  const p = currentPath || "";
+  return `<nav class="nav wrap" aria-label="Sections"><ul>${SECTIONS.map((s) => {
+    const cur = (s.match || [s.path]).some((m) => p === m || p.startsWith(`${m}/`));
     return `<li>${a(s.path, s.label, cur ? { "aria-current": "page" } : {})}</li>`;
   }).join("")}</ul></nav>`;
 }
 
+function mastheadHtml(doc) {
+  const q = doc.path === "/search" && doc.data && doc.data.filters && doc.data.filters.q ? doc.data.filters.q : "";
+  return `<header class="masthead">
+<div class="wrap masthead__row">
+<div class="brand"><a href="/" aria-hidden="true" tabindex="-1" class="brand__mark">${MARK_SVG}</a><div><p class="brand__name"><a href="/">${escapeHtml(SITE_NAME)}</a></p><p class="brand__desc">${escapeHtml(MASTHEAD_DESCRIPTOR)}</p></div></div>
+<form class="hsearch" action="/search" method="get" role="search"><label class="vh" for="site-q">Search the record</label><input id="site-q" type="search" name="q" value="${escapeHtml(q)}" placeholder="Search the record" maxlength="200"><button type="submit">Search</button></form>
+</div>
+${navHtml(doc.path)}
+</header>`;
+}
+
 // Footer copy fixed by the v2 brief (2026-09-22, "Copy rules").
 function footerHtml() {
-  return `<footer class="site-footer">
-<p>${escapeHtml(SITE_NAME)} is published by ${a("/about", PUBLISHER_NAME)}.</p>
-<p>&copy; ${COPYRIGHT_YEAR} ${escapeHtml(PUBLISHER_NAME)}. Text and data are licensed ${a(LICENSE_URL, DATA_LICENSE)} unless noted; quotations remain the property of their sources.</p>
+  return `<footer class="site-footer"><div class="wrap">
+<p class="pub">${escapeHtml(SITE_NAME)} is published by ${a("/about", PUBLISHER_NAME)}.</p>
+<p class="lic">&copy; ${COPYRIGHT_YEAR} ${escapeHtml(PUBLISHER_NAME)}. Text and data are licensed ${a(LICENSE_URL, DATA_LICENSE)} unless noted; quotations remain the property of their sources.</p>
 <ul>${FOOTER_LINKS.map((l) => `<li>${a(l.path, l.label)}</li>`).join("")}</ul>
-</footer>`;
+</div></footer>`;
+}
+
+export function crumbsHtml(breadcrumbs) {
+  if (!(breadcrumbs || []).length) return "";
+  return `<nav class="crumbs" aria-label="Breadcrumb">${[{ name: "Home", path: "/" }, ...breadcrumbs].map((c) => a(c.path, c.name)).join('<span aria-hidden="true">/</span>')}</nav>`;
+}
+
+function pageHeadHtml(doc, title) {
+  const art = doc.art !== undefined ? doc.art : showsArt(doc.path) ? artFor(doc.path) : null;
+  const eyebrow = eyebrowFor(doc);
+  return `<header class="page-head${art ? " has-art" : ""}"><div>
+${crumbsHtml(doc.breadcrumbs)}${eyebrow ? `<p class="eyebrow">${escapeHtml(eyebrow)}</p>` : ""}
+<h1>${escapeHtml(title)}</h1>
+${doc.subtitle ? `<p class="subtitle">${escapeHtml(doc.subtitle)}</p>` : ""}${doc.headExtra || ""}
+</div>${art ? `<figure class="page-art">${artImg(art, { sizes: "(min-width: 960px) 34vw, 100vw", eager: true })}</figure>` : ""}</header>`;
 }
 
 // query: the canonical query string of a filtered view ("" or "?a=b"),
@@ -251,10 +346,22 @@ export function renderHtml(doc, alt, analytics = false, ga4 = "") {
     ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${ga4}"></script>\n<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${ga4}',{'anonymize_ip':true});</script>`
     : "";
   const fn = doc.footnotes || null;
-  const body = (doc.blocks || []).map((b) => blockToHtml(b, fn)).join("\n");
-  const crumbs = (doc.breadcrumbs || []).length
-    ? `<p class="meta breadcrumbs">${[{ name: "Home", path: "/" }, ...doc.breadcrumbs].map((c) => a(c.path, c.name)).join(" / ")}</p>`
-    : "";
+  let main;
+  if (doc.layout === "home" || doc.layout === "record") {
+    main = doc.htmlBody(fn);
+  } else {
+    const body = doc.htmlBody ? doc.htmlBody(fn) : (doc.blocks || []).map((b) => blockToHtml(b, fn)).join("\n");
+    main = `<article class="page${doc.layout === "reading" ? " reading" : ""}">
+${pageHeadHtml(doc, title)}
+${metaHtml(doc.meta)}
+<div class="content">
+${body}
+</div>
+${fn ? footnotesHtml(fn) : ""}
+</article>`;
+  }
+  const og = artFor(doc.path) || "home-hero";
+  const ogImage = `${SITE_ORIGIN}/assets/img/${og}-og.jpg`;
   return `<!doctype html>
 <html lang="en-CA">
 <head>
@@ -267,32 +374,34 @@ ${doc.noindex ? '<meta name="robots" content="noindex">\n' : ""}<link rel="canon
 <link rel="alternate" type="application/json" href="${escapeHtml(alt.json)}">
 <link rel="alternate" type="application/atom+xml" title="${escapeHtml(SITE_NAME)}: Recent coverage" href="/coverage/atom.xml">
 <link rel="alternate" type="application/atom+xml" title="${escapeHtml(SITE_NAME)}: Incidents" href="/incidents/atom.xml">
+<link rel="preload" href="/assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-tight-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css?v=${SITE_CSS_VERSION}">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#F2F5F8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1320" media="(prefers-color-scheme: dark)">
 <meta property="og:site_name" content="${escapeHtml(SITE_NAME)}">
 <meta property="og:type" content="${doc.ogType || "website"}">
 <meta property="og:title" content="${escapeHtml(isHome ? SITE_NAME : title)}">
 <meta property="og:description" content="${escapeHtml(metaDescription)}">
 <meta property="og:url" content="${escapeHtml(canonical)}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="${ogImage}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${escapeHtml(ART_ALT[og])}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${ogImage}">
+<meta name="twitter:image:alt" content="${escapeHtml(ART_ALT[og])}">
 ${jsonld}
 ${gtag}
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="masthead"><div><p class="masthead__title">${a("/", SITE_NAME)}</p><p class="masthead__tagline">${escapeHtml(SITE_SUBTITLE)}</p></div></header>
-<div class="site-shell">
-${navHtml(doc.path)}
-<main id="main">
-${crumbs}
-<article>
-<h1>${escapeHtml(title)}</h1>
-${doc.subtitle ? `<p class="subtitle">${escapeHtml(doc.subtitle)}</p>` : ""}
-${metaHtml(doc.meta)}
-${body}
-${fn ? footnotesHtml(fn) : ""}
-</article>
+${mastheadHtml(doc)}
+<main id="main" class="wrap">
+${main}
 </main>
-</div>
 ${footerHtml()}
 ${WEBMCP_SCRIPT}
 </body>

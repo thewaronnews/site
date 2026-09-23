@@ -12,6 +12,7 @@ import { linkCell } from "./render.js";
 import { refData, readFilters, canonicalQuery, queryIncidents, csvResponse, rsfData } from "./search.js";
 import { incidentTable, rsfHtml, rsfMd, COUNTS_CAVEAT } from "./v2routes.js";
 import { PAGE_NOTES } from "./content.js";
+import { stageBarHtml, laneOpenHtml, rungCardsHtml } from "./views.js";
 import {
   SITE_ORIGIN, CONTINENTS, OUTCOME_LABELS, STAGE_ORDER, STAGE_LABELS, CASE_STATUS_LABELS, DATA_LICENSE, LICENSE_URL, ATTRIBUTION_TEXT,
 } from "./site.js";
@@ -201,20 +202,29 @@ export async function ladderHandler({ env, url }, slug) {
     { k: "p", text: t.definition },
     { k: "p", cls: "counts-caveat", text: COUNTS_CAVEAT },
     { k: "html", html: `<form class="filters" method="get" action="${path}">
-<label for="l-stage">Stage</label><select id="l-stage" name="stage"><option value="">Any</option>${optionList(STAGE_ORDER, cf.stage, (st) => STAGE_LABELS[st])}</select>
-<label for="l-continent">Continent</label><select id="l-continent" name="continent"><option value="">Any</option>${optionList(Object.keys(CONTINENTS), cf.continent, (c) => CONTINENTS[c])}</select>
-<label for="l-from">From (year or date)</label><input type="text" id="l-from" name="from" value="${escapeHtml(cf.from || "")}" inputmode="numeric" placeholder="1900">
-<label for="l-to">To (year or date)</label><input type="text" id="l-to" name="to" value="${escapeHtml(cf.to || "")}" inputmode="numeric" placeholder="2026">
-<button type="submit">Apply</button> ${query ? a(path, "Clear all") : ""}</form>`, text: "Narrow with ?stage= (restrict, pressure, punish, silence, eliminate), ?continent=, ?from= and ?to= (year or date)." },
+<div class="field"><label for="l-stage">Stage</label><select id="l-stage" name="stage"><option value="">Any</option>${optionList(STAGE_ORDER, cf.stage, (st) => STAGE_LABELS[st])}</select></div>
+<div class="field"><label for="l-continent">Continent</label><select id="l-continent" name="continent"><option value="">Any</option>${optionList(Object.keys(CONTINENTS), cf.continent, (c) => CONTINENTS[c])}</select></div>
+<div class="field"><label for="l-from">From (year or date)</label><input type="text" id="l-from" name="from" value="${escapeHtml(cf.from || "")}" inputmode="numeric" placeholder="1900"></div>
+<div class="field"><label for="l-to">To (year or date)</label><input type="text" id="l-to" name="to" value="${escapeHtml(cf.to || "")}" inputmode="numeric" placeholder="2026"></div>
+<div class="filters__actions"><button type="submit">Apply</button> ${query ? a(path, "Clear all") : ""}</div></form>`, text: "Narrow with ?stage= (restrict, pressure, punish, silence, eliminate), ?continent=, ?from= and ?to= (year or date)." },
   ];
+  // Atlas design (HTML only): the filter form folds away, a stage bar leads
+  // into one lane per stage, and each lane's table shows as rung cards.
+  const formBlock = blocks[blocks.length - 1];
+  formBlock.viewHtml = `<details class="refine"${query ? " open" : ""}><summary>Narrow this ladder</summary>${formBlock.html}</details>`;
+  blocks.push({ k: "html", html: stageBarHtml(new Set(rows.map((r) => r.stage).filter(Boolean))), text: "" });
   const stagesJson = [];
   for (const st of [...STAGE_ORDER, null]) {
     const list = rows.filter((r) => (st === null ? !STAGE_ORDER.includes(r.stage) : r.stage === st));
     if (!list.length) continue;
     const name = st ? (STAGES[st] || {}).name || STAGE_LABELS[st] : "Stage not yet set";
-    blocks.push({ k: "h2", text: name, id: st ? `stage-${st}` : "stage-unset" });
-    if (st && STAGES[st]) blocks.push({ k: "p", cls: "stage-definition", text: STAGES[st].definition });
+    blocks.push({ k: "h2", text: name, id: st ? `stage-${st}` : "stage-unset", viewHtml: laneOpenHtml(st, name, st && STAGES[st] ? STAGES[st].definition : null) });
+    if (st && STAGES[st]) blocks.push({ k: "p", cls: "stage-definition", text: STAGES[st].definition, hideHtml: true });
     blocks.push({
+      viewHtml: rungCardsHtml(list.map((r) => {
+        const j = rungJson(r, sources);
+        return { slug: r.slug, country: r.country, country_name: r.country_name, rsf: r.rsf, occurred_on: r.occurred_on, occurred_on_precision: r.occurred_on_precision, leader_slug: r.leader_slug, leader_name: r.leader_name, what: j.what_was_done, note: j.ladder_note, outcome: r.outcome, outcome_on: r.outcome_on, sources: j.sources_count, focal: r.country === FOCAL };
+      })),
       k: "table",
       headers: ["Date", "Country", "Head of government", "What was done", "Outcome", "Sources"],
       rows: list.map((r) => {
@@ -294,7 +304,8 @@ export async function unitedStatesHandler({ env }) {
   const nowJson = [];
   for (const r of now) {
     const ev = eventsBy.get(r.id) || [];
-    blocks.push({ k: "h3", text: `${proseDate(r.occurred_on, r.occurred_on_precision)}: ${r.title}` });
+    // Atlas (HTML only): each incident of the "Now" section is one panel.
+    blocks.push({ k: "h3", text: `${proseDate(r.occurred_on, r.occurred_on_precision)}: ${r.title}`, viewHtml: `<article class="panel now-item"><p class="eyebrow"><time datetime="${escapeHtml(r.occurred_on)}">${escapeHtml(proseDate(r.occurred_on, r.occurred_on_precision))}</time></p><h3>${a(`/incidents/${r.slug}`, r.title)}</h3>` });
     blocks.push({ k: "p", text: mdToPlain(r.summary) });
     const facts = [
       ["Tactics", { html: r.tactics.map((t) => a(`/ladders/${t}`, tname(t))).join(", "), text: r.tactics.map(tname).join(", ") }],
@@ -305,9 +316,9 @@ export async function unitedStatesHandler({ env }) {
     facts.push(["Sources", String(sources.get(r.id) || 0)]);
     blocks.push({ k: "dl", items: facts });
     if (ev.length) {
-      blocks.push({ k: "ul", items: ev.map((e) => ({ html: `<time datetime="${escapeHtml(e.occurred_on)}">${escapeHtml(proseDate(e.occurred_on, e.occurred_on_precision))}</time>: ${escapeHtml(e.label)}${e.case_slug ? ` (${a(`/cases/${e.case_slug}`, "court case")})` : ""}`, text: `${e.occurred_on}: ${e.label}` })) });
+      blocks.push({ k: "ul", viewHtml: `<ol class="events">${ev.map((e) => `<li><time datetime="${escapeHtml(e.occurred_on)}">${escapeHtml(proseDate(e.occurred_on, e.occurred_on_precision))}</time>${escapeHtml(e.label)}${e.case_slug ? ` (${a(`/cases/${e.case_slug}`, "court case")})` : ""}</li>`).join("")}</ol>`, items: ev.map((e) => ({ html: `<time datetime="${escapeHtml(e.occurred_on)}">${escapeHtml(proseDate(e.occurred_on, e.occurred_on_precision))}</time>: ${escapeHtml(e.label)}${e.case_slug ? ` (${a(`/cases/${e.case_slug}`, "court case")})` : ""}`, text: `${e.occurred_on}: ${e.label}` })) });
     }
-    blocks.push({ k: "html", html: `<p>${a(`/incidents/${r.slug}`, "Full entry, with claims and sources")}</p>`, text: `Full entry: ${r.url}` });
+    blocks.push({ k: "html", html: `<p>${a(`/incidents/${r.slug}`, "Full entry, with claims and sources")}</p>`, viewHtml: `<p class="cta">${a(`/incidents/${r.slug}`, "Full entry, with claims and sources")}</p></article>`, text: `Full entry: ${r.url}` });
     nowJson.push({ ...rungJson(r, sources), summary: mdToPlain(r.summary), events: ev.map((e) => ({ occurred_on: e.occurred_on, kind: e.kind, label: e.label, case: e.case_slug ? `${SITE_ORIGIN}/cases/${e.case_slug}` : null })) });
   }
   if (!now.length) blocks.push({ k: "p", text: "No incident dated 2025 or later is recorded yet." });

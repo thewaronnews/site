@@ -18,6 +18,7 @@ import {
   SITE_ORIGIN, CONTINENTS, LEVEL_LABELS, OUTCOME_LABELS, STAGE_LABELS, DATA_LICENSE, LICENSE_URL, ATTRIBUTION_TEXT,
 } from "./site.js";
 import { PAGE_NOTES } from "./content.js";
+import { viewBarHtml, incidentCardsHtml, ccBadge, rsfChip } from "./views.js";
 
 const LICENSE = { name: DATA_LICENSE, url: LICENSE_URL };
 const ERA_FIRST = 1900;
@@ -173,10 +174,10 @@ function optionList(values, selected, labelFn, counts) {
 }
 
 function filterFormHtml(action, f, ref, base) {
-  const sel = (name, label, opts) => `<label for="f-${name}">${escapeHtml(label)}</label><select id="f-${name}" name="${name}"><option value="">Any</option>${opts}</select>`;
+  const sel = (name, label, opts) => `<div class="field"><label for="f-${name}">${escapeHtml(label)}</label><select id="f-${name}" name="${name}"><option value="">Any</option>${opts}</select></div>`;
   const countryCodes = Object.keys(base.country).sort((x, y) => countryName(ref, x).localeCompare(countryName(ref, y)));
   return `<form class="filters" method="get" action="${action}" role="search">
-<label for="f-q">Words</label><input type="search" id="f-q" name="q" value="${escapeHtml(f.q || "")}" maxlength="200">
+<div class="field"><label for="f-q">Words</label><input type="search" id="f-q" name="q" value="${escapeHtml(f.q || "")}" maxlength="200"></div>
 ${sel("country", "Country", optionList(countryCodes, f.country, (c) => countryName(ref, c)))}
 ${sel("continent", "Continent", optionList(Object.keys(CONTINENTS).filter((c) => base.continent[c]), f.continent, (c) => CONTINENTS[c]))}
 ${sel("tactic", "Tactic", optionList(ref.tacticList.map((t) => t.slug), f.tactic, (t) => ref.tactics.get(t).name, base.tactic))}
@@ -185,12 +186,12 @@ ${sel("level", "Level of government", optionList(Object.keys(LEVEL_LABELS), f.le
 ${sel("outcome", "Outcome", optionList(Object.keys(OUTCOME_LABELS), f.outcome, (o) => OUTCOME_LABELS[o], base.outcome))}
 ${sel("leader", "Head of government", optionList(Object.keys(base.leader).sort((x, y) => ((ref.actors.get(x) || {}).name || x).localeCompare((ref.actors.get(y) || {}).name || y)), f.leader, (l) => (ref.actors.get(l) || {}).name || l))}
 ${sel("has_case", "Court case", optionList(["1", "0"], f.has_case, (v) => (v === "1" ? "With a court case" : "Without a court case"), base.has_case))}
-<label for="f-from">From (year or date)</label><input type="text" id="f-from" name="from" value="${escapeHtml(f.from || "")}" inputmode="numeric" pattern="\\d{4}(-\\d{2}(-\\d{2})?)?" placeholder="1900">
-<label for="f-to">To (year or date)</label><input type="text" id="f-to" name="to" value="${escapeHtml(f.to || "")}" inputmode="numeric" pattern="\\d{4}(-\\d{2}(-\\d{2})?)?" placeholder="2026">
-<label for="f-sort">Sort by</label><select id="f-sort" name="sort">${optionList(["date", "date_asc", "country", "tactic", ...(f.q ? ["relevance"] : [])], f.sort || (f.q ? "relevance" : "date"), (s) => ({ date: "Date, newest first", date_asc: "Date, oldest first", country: "Country", tactic: "Tactic", relevance: "Best match" })[s])}</select>
-<label for="f-view">Show as</label><select id="f-view" name="view">${optionList(["table", "cards"], f.view || "table", (v) => (v === "table" ? "Table" : "Cards"))}</select>
+<div class="field"><label for="f-from">From (year or date)</label><input type="text" id="f-from" name="from" value="${escapeHtml(f.from || "")}" inputmode="numeric" pattern="\\d{4}(-\\d{2}(-\\d{2})?)?" placeholder="1900"></div>
+<div class="field"><label for="f-to">To (year or date)</label><input type="text" id="f-to" name="to" value="${escapeHtml(f.to || "")}" inputmode="numeric" pattern="\\d{4}(-\\d{2}(-\\d{2})?)?" placeholder="2026"></div>
+<div class="field"><label for="f-sort">Sort by</label><select id="f-sort" name="sort">${optionList(["date", "date_asc", "country", "tactic", ...(f.q ? ["relevance"] : [])], f.sort || (f.q ? "relevance" : "date"), (s) => ({ date: "Date, newest first", date_asc: "Date, oldest first", country: "Country", tactic: "Tactic", relevance: "Best match" })[s])}</select></div>
+<div class="field"><label for="f-view">Show as</label><select id="f-view" name="view">${optionList(["table", "cards"], f.view || "table", (v) => (v === "table" ? "Table" : "Cards"))}</select></div>
 ${f.actor ? `<input type="hidden" name="actor" value="${escapeHtml(f.actor)}">` : ""}${f.outlet ? `<input type="hidden" name="outlet" value="${escapeHtml(f.outlet)}">` : ""}${f.source_kind ? `<input type="hidden" name="source_kind" value="${escapeHtml(f.source_kind)}">` : ""}
-<button type="submit">Apply</button> ${hasFacets(f) || f.q ? a(action, "Clear all") : ""}
+<div class="filters__actions"><button type="submit">Apply</button> ${hasFacets(f) || f.q ? a(action, "Clear all") : ""}</div>
 </form>`;
 }
 
@@ -198,12 +199,18 @@ ${f.actor ? `<input type="hidden" name="actor" value="${escapeHtml(f.actor)}">` 
 // alphabetical or map order without counts (a count per country reads as a
 // ranking of countries); countries carry their RSF rank instead.
 function facetLinks(path, f, facets, ref) {
-  const link = (k, v, label, n) => a(`${path}${canonicalQuery({ ...f, [k]: v, page: undefined })}`, n === null ? label : `${label} (${n})`);
+  // Atlas: each value is a chip; the selected value is marked and links to
+  // the view without it. Counts only for tactic, stage, outcome and level.
+  const link = (k, v, label, n) => {
+    const on = String(f[k] || "") === String(v);
+    const href = `${path}${canonicalQuery({ ...f, [k]: on ? undefined : v, page: undefined })}`;
+    return `<a class="chip${on ? " is-on" : ""}" href="${escapeHtml(href)}"${on ? ' aria-current="true"' : ""}>${escapeHtml(label)}${n === null ? "" : ` <b>${n}</b>`}</a>`;
+  };
   const line = (title, k, labelFn, { order = null, counts = true } = {}) => {
     const entries = Object.entries(facets[k] || {});
     if (!entries.length) return "";
     const sorted = order ? entries.sort((x, y) => order(x[0], y[0])) : entries.sort((x, y) => y[1] - x[1]);
-    return `<p class="facet"><strong>${escapeHtml(title)}:</strong> ${sorted.map(([v, n]) => link(k, v, labelFn(v), counts ? n : null)).join(" ")}</p>`;
+    return `<div class="facet"><span class="facet__label">${escapeHtml(title)}</span>${sorted.map(([v, n]) => link(k, v, labelFn(v), counts ? n : null)).join("")}</div>`;
   };
   const byLabel = (fn) => (x, y) => fn(x).localeCompare(fn(y));
   const cName = (c) => countryName(ref, c);
@@ -267,10 +274,19 @@ async function facetedDoc({ env, url, request }, path) {
   const blocks = [];
   if (!isSearch) blocks.push({ k: "p", text: "Each incident is a dated action by a government, an official, a regulator, a court or a legislature that limited journalists' ability to gather or publish news." });
   blocks.push(caveatBlock());
-  blocks.push({ k: "html", html: filterFormHtml(path, f, ref, base), text: `Filters: ${FACET_KEYS.join(", ")}, plus q, sort (date, date_asc, country, tactic, relevance), per_page (up to ${MAX_PAGE_SIZE}), page and view (table or cards), as query parameters.` });
-  blocks.push({ k: "p", cls: "result-count", text: `${res.total} ${res.total === 1 ? "incident matches" : "incidents match"}${hasFacets(f) || f.q ? " this view" : ""}.${pageNote}` });
+  const formHtml = filterFormHtml(path, f, ref, base);
+  blocks.push({ k: "html", html: formHtml, viewHtml: `<details class="refine"${hasFacets(f) ? " open" : ""}><summary>All filters: country, dates, head of government, sort</summary>${formHtml}</details>`, text: `Filters: ${FACET_KEYS.join(", ")}, plus q, sort (date, date_asc, country, tactic, relevance), per_page (up to ${MAX_PAGE_SIZE}), page and view (table or cards), as query parameters.` });
+  const countText = `${res.total} ${res.total === 1 ? "incident matches" : "incidents match"}${hasFacets(f) || f.q ? " this view" : ""}.${pageNote}`;
+  blocks.push({ k: "p", cls: "result-count", text: countText, hideHtml: true });
   blocks.push({ k: "html", html: `<div class="facets">${facetLinks(path, f, res.facets, ref)}</div>`, text: "" });
-  blocks.push(f.view === "cards" ? incidentCards(res.rows) : res.rows.length ? incidentTable(res.rows) : { k: "p", text: "No incident matches this view. Remove a filter to widen it." });
+  {
+    const sep = query ? "&" : "?";
+    const toggle = [{ label: "Table", href: `${path}${canonicalQuery({ ...f, view: undefined })}`, current: f.view !== "cards" }, { label: "Cards", href: `${path}${canonicalQuery({ ...f, view: "cards" })}`, current: f.view === "cards" }];
+    const fmt = [{ label: "CSV", href: `${path}${query}${sep}format=csv` }, { label: "JSON", href: `${path}.json${query}` }, { label: "Markdown", href: `${path}.md${query}` }];
+    blocks.push({ k: "html", html: viewBarHtml(countText, toggle, fmt), text: "" });
+  }
+  if (f.view === "cards") { const cb = incidentCards(res.rows); cb.viewHtml = incidentCardsHtml(res.rows, cb.empty); blocks.push(cb); }
+  else blocks.push(res.rows.length ? incidentTable(res.rows) : { k: "p", text: "No incident matches this view. Remove a filter to widen it." });
   const pager = pagerBlock(path, f, res);
   if (pager) blocks.push(pager);
   blocks.push(downloadsBlock(path, query));
@@ -681,7 +697,7 @@ export async function coverageHandler({ env, url }) {
     blocks.push({ k: "h2", text: proseDate(day), id: `d-${day}` });
     blocks.push({
       k: "html",
-      html: `<ul class="coverage-list">${list.map((i) => `<li class="coverage-item">${extLink({ url: i.url, title: i.title, link_state: "live" })}<span class="coverage-item__meta">${escapeHtml(i.publisher || new URL(i.url).hostname)}${i.published_at ? `, <time datetime="${escapeHtml(i.published_at)}">${escapeHtml(proseDate(i.published_at.slice(0, 10)))}</time>` : ""}${i.country_guess ? `. ${a(`/countries/${i.country_guess.toLowerCase()}`, countryName(ref, i.country_guess))}` : ""}${i.incident_slug ? `. Record entry: ${a(`/incidents/${i.incident_slug}`, i.incident_title)}` : ""}</span>${i.summary ? `<p class="coverage-item__summary">${escapeHtml(i.summary)}</p>` : ""}</li>`).join("")}</ul>`,
+      html: `<ul class="coverage-list">${list.map((i) => `<li class="coverage-item">${i.country_guess ? ccBadge(i.country_guess) : '<span class="cc-none" aria-hidden="true"></span>'}${extLink({ url: i.url, title: i.title, link_state: "live" })}<span class="coverage-item__meta"><b>${escapeHtml(i.publisher || new URL(i.url).hostname)}</b>${i.published_at ? ` · <time datetime="${escapeHtml(i.published_at)}">${escapeHtml(proseDate(i.published_at.slice(0, 10)))}</time>` : ""}${i.country_guess ? ` · ${a(`/countries/${i.country_guess.toLowerCase()}`, countryName(ref, i.country_guess))}` : ""}${i.incident_slug ? ` · Record entry: ${a(`/incidents/${i.incident_slug}`, i.incident_title)}` : ""}</span>${i.summary ? `<p class="coverage-item__summary">${escapeHtml(i.summary)}</p>` : ""}</li>`).join("")}</ul>`,
       text: list.map((i) => `- [${i.title}](${i.url}), ${i.publisher || ""}${i.published_at ? `, ${i.published_at.slice(0, 10)}` : ""}${i.summary ? `. ${i.summary}` : ""}`).join("\n"),
     });
   }

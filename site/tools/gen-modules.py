@@ -39,6 +39,11 @@ POLICY_PAGE_TITLES = {
 }
 PLACEHOLDER = "Text pending editorial review."
 
+# Optional pages: served only when content/<slug>.md exists (no placeholder;
+# the route answers 404 until the file ships). /context is linked from the
+# home page's "What this record is about" (Atlas design, 2026-09-22).
+OPTIONAL_PAGE_SLUGS = ["context"]
+
 
 def gen_content():
     pages = {}
@@ -50,6 +55,11 @@ def gen_content():
         else:
             text = "# " + title + "\n\n" + PLACEHOLDER + "\n"
         pages[slug] = text
+    for slug in OPTIONAL_PAGE_SLUGS:
+        path = os.path.join(CONTENT, slug + ".md")
+        if os.path.exists(path):
+            with open(path) as f:
+                pages[slug] = f.read().replace("\u2014", ", ")
     body = "export const POLICY_PAGES = " + json.dumps(pages, indent=1, ensure_ascii=False) + ";\n"
     notes_path = os.path.join(CONTENT, "page-notes.json")
     notes = {}
@@ -64,6 +74,19 @@ def gen_content():
     write("content.js", body)
 
 
+def minify_css(css):
+    """Conservative minifier: comments out, whitespace collapsed, no space
+    around braces, semicolons and commas or after colons. Spaces before a
+    colon are kept (descendant pseudo-classes)."""
+    import re
+    css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)
+    css = re.sub(r"\s+", " ", css)
+    css = re.sub(r"\s*([{};,])\s*", r"\1", css)
+    css = re.sub(r":\s+", ":", css)
+    css = css.replace(";}", "}")
+    return css.strip() + "\n"
+
+
 def gen_css():
     with open(os.path.join(CONTENT, "site.css")) as f:
         css = f.read().replace("—", "-").replace("–", "-")
@@ -71,6 +94,7 @@ def gen_css():
     if os.path.exists(extra):
         with open(extra) as f:
             css += "\n" + f.read()
+    css = "/* The War On News, Atlas stylesheet. Source: site/content/site.css */\n" + minify_css(css)
     body = "export const SITE_CSS = " + json.dumps(css, ensure_ascii=False) + ";\n"
     body += "export const SITE_CSS_VERSION = " + json.dumps(hashlib.sha256(css.encode()).hexdigest()[:10]) + ";\n"
     write("css.js", body)

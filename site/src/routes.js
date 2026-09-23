@@ -12,7 +12,9 @@ import {
   listChanges, recordPathFor, getLastExport,
 } from "./db.js";
 import { Footnotes, linkCell } from "./render.js";
-import { refData, queryIncidents, countryName, rsfText } from "./search.js";
+import { refData, queryIncidents, countryName, rsfText, rsfData } from "./search.js";
+import { homeHtml, incidentHtml, shortTitle } from "./views.js";
+import { firstSentence } from "./ladders.js";
 import { listCoverage } from "./coverage.js";
 import {
   incidentLd, actorLd, outletLd, journalistLd, caseLd, articleLd, definedTermLd, definedTermSetLd, datasetLd, websiteLd,
@@ -20,10 +22,10 @@ import {
 import {
   SITE_NAME, SITE_ORIGIN, SITE_SUBTITLE, HOME_DEFINITION, HOME_METHOD_LINE, HOME_DATA_LINE,
   INCIDENT_STATUS_LABELS, CASE_STATUS_LABELS, LEVEL_LABELS, COUNTRY_NAMES, SUBDIVISION_NAMES, DATA_LICENSE, LICENSE_URL,
-  CONTINENTS, OUTCOME_LABELS, STAGE_LABELS,
+  CONTINENTS, OUTCOME_LABELS, STAGE_LABELS, STAGE_ORDER,
   ATTRIBUTION_TEXT, CONTACT_CORRECTIONS, DATA_REPO_DEFAULT,
 } from "./site.js";
-import { POLICY_PAGES, POLICY_VERSION } from "./content.js";
+import { POLICY_PAGES, POLICY_VERSION, PAGE_NOTES } from "./content.js";
 import { FEED_LIST } from "./feeds.js";
 import { COUNTS_CAVEAT } from "./v2routes.js";
 import { TOOLS, SUPPORTED_PROTOCOL_VERSIONS } from "./mcp.js";
@@ -95,6 +97,69 @@ export function methodNotAllowedDoc(path, allowed) {
 
 // ---------- home ----------
 
+// The focal case of the home page (Atlas design): the September 2026 White
+// House action against CNN, MS NOW and Politico.
+const FOCAL_INCIDENT = "2026-white-house-bans-cnn-msnow-politico";
+
+// HTML-only data for the Atlas home page (views.js homeHtml). Nothing here
+// reaches the .md or .json twin.
+async function homeView(env, ref, res, coverage, contList) {
+  const rows = res.all;
+  const inRecord = new Set(rows.map((r) => r.country));
+  const names = new Map(ref.countryList.map((c) => [c.iso2, c.name]));
+  const tname = (t) => (ref.tactics.get(t) || {}).name || t;
+  const f = rows.find((r) => r.slug === FOCAL_INCIDENT) || rows.find((r) => r.country === "US") || null;
+  let focal = null;
+  if (f) {
+    const events = await all(env, "SELECT occurred_on, occurred_on_precision, kind, label FROM events WHERE incident_id = ? AND pub_state = 'published' ORDER BY occurred_on, id", f.id);
+    const plain = mdToPlain(f.summary);
+    const one = firstSentence(plain, 400);
+    const rest = plain.slice(one.length).trim();
+    focal = {
+      ...f, events, rsf: f.rsf || rsfData(ref.countries.get(f.country)),
+      tactics: f.tactics.map((t) => ({ slug: t, name: tname(t) })),
+      summaryParas: [one, ...(rest ? [truncate(rest, 360)] : [])],
+    };
+  }
+  // Ladder teaser: the focal incident's main tactic, one rung per stage
+  // (the United States row first where there is one, then the latest).
+  const lt = (f && f.tactic_primary) || "access_ban";
+  const ladderRows = rows.filter((r) => r.tactics.includes(lt));
+  const byStage = {};
+  for (const st of STAGE_ORDER) {
+    const list = ladderRows.filter((r) => r.stage === st).sort((x, y) => (y.country === "US") - (x.country === "US") || y.occurred_on.localeCompare(x.occurred_on));
+    if (list.length) {
+      const r = list[0];
+      byStage[st] = { slug: r.slug, country: r.country, country_name: r.country_name, year: r.occurred_on.slice(0, 4), focal: r.country === "US", what: truncate(firstSentence(mdToPlain(r.summary), 400).replace(/^(?:On|In|From|By) [A-Z][^,]{2,28}(?:, \d{4})?, /, "").replace(/^./, (ch) => ch.toUpperCase()), 110) };
+    }
+  }
+  // Era strip: one anchor per decade, the earliest entry in it.
+  const nowYear = new Date().getUTCFullYear();
+  const decades = [];
+  for (let d = 1900; d <= nowYear; d += 10) {
+    const list = rows.filter((r) => r.occurred_on.slice(0, 3) === String(d).slice(0, 3)).sort((x, y) => x.occurred_on.localeCompare(y.occurred_on));
+    const pick = d >= 2020 ? list.filter((r) => r.country !== "US").pop() || list[list.length - 1] : list[0];
+    decades.push({ decade: `${d}s`, anchor: pick ? { year: pick.occurred_on.slice(0, 4), country: pick.country_name, what: shortTitle(pick.title.replace(new RegExp(`^(?:${pick.country_name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})(?:'s)?\\s+`), ""), 48) } : null });
+  }
+  if (focal) decades[decades.length - 1].anchor = { year: focal.occurred_on.slice(0, 4), country: focal.country_name, what: "three outlets' passes deactivated at the White House" };
+  const contCounts = new Map();
+  for (const cc of inRecord) {
+    const c = ref.countries.get(cc);
+    if (c) contCounts.set(c.continent, (contCounts.get(c.continent) || 0) + 1);
+  }
+  return {
+    year: String(nowYear), today: new Date().toISOString().slice(0, 10), inRecord, countryNames: names, caveat: COUNTS_CAVEAT, focal,
+    continents: contList.map(([k, v]) => [k, v, contCounts.get(k) || 0]),
+    tactics: ref.tacticList.map((t) => ({ slug: t.slug, name: t.name })),
+    ladder: { slug: lt, name: tname(lt), byStage },
+    stageDefs: Object.fromEntries(STAGE_ORDER.map((st) => [st, firstSentence(((PAGE_NOTES.stages || {})[st] || {}).definition || "", 90).replace(/:.*$/, "")])),
+    decades,
+    coverage: coverage.map((i) => ({ ...i, country: i.country_guess || null })),
+    dataLine: HOME_DATA_LINE,
+    tools: [{ label: "Data package", href: "/data" }, { label: "incidents.csv", href: "/incidents.csv" }, { label: "MCP server", href: "/mcp" }, { label: "Feeds", href: "/feeds" }, { label: "llms.txt", href: "/llms.txt" }],
+  };
+}
+
 export async function homeHandler({ env }) {
   const ref = await refData(env);
   const res = await queryIncidents(env, {}, { paginate: false });
@@ -134,11 +199,14 @@ export async function homeHandler({ env }) {
     { k: "p", text: HOME_DATA_LINE },
     { k: "feeds", items: [{ label: "datapackage.json", href: "/data/datapackage.json" }, { label: "incidents.csv", href: "/incidents.csv" }, { label: "MCP /mcp", href: "/mcp" }, { label: "llms.txt", href: "/llms.txt" }, { label: "Atom: Incidents", href: "/incidents/atom.xml" }, { label: "Atom: Recent coverage", href: "/coverage/atom.xml" }] },
   ];
+  const view = await homeView(env, ref, res, coverage, contList);
   return {
     path: "/",
     title: SITE_NAME,
     subtitle: SITE_SUBTITLE,
     jsonld: websiteLd(),
+    layout: "home",
+    htmlBody: () => homeHtml(view),
     blocks,
     updatedAt: res.all.map((r) => r.updated_at).sort().pop() || null,
     data: {
@@ -192,9 +260,12 @@ export async function incidentHandler({ env }, slug) {
   if (r.issue_of_the_day) facts.push(["Issue of the day", r.issue_of_the_day]);
   facts.push(["Outcome", `${OUTCOME_LABELS[r.outcome] || "Unknown"}${r.outcome_on ? `, ${proseDate(r.outcome_on)}` : ""}${r.outcome_note ? `. ${r.outcome_note}` : ""}`]);
   facts.push(["Era", { html: a(`/eras/${r.era || `${r.occurred_on.slice(0, 3)}0s`}`, `The ${r.era || `${r.occurred_on.slice(0, 3)}0s`}`), text: `The ${r.era || `${r.occurred_on.slice(0, 3)}0s`}` }]);
-  const blocks = [{ k: "md", md: r.summary }, { k: "dl", items: facts }];
+  const summaryBlock = { k: "md", md: r.summary };
+  const factsBlock = { k: "dl", items: facts };
+  const justificationBlock = r.stated_justification ? { k: "md", md: r.stated_justification } : null;
+  const blocks = [summaryBlock, factsBlock];
   blocks.push({ k: "h2", text: "What happened" }, { k: "md", md: r.what_happened });
-  if (r.stated_justification) blocks.push({ k: "h2", text: "What reason was given" }, { k: "md", md: r.stated_justification });
+  if (r.stated_justification) blocks.push({ k: "h2", text: "What reason was given" }, justificationBlock);
   if (r.effect_on_reporting) blocks.push({ k: "h2", text: "What changed for reporting" }, { k: "md", md: r.effect_on_reporting });
   const tl = [{ date: r.occurred_on, precision: r.occurred_on_precision, kind: "incident", label: r.title, incident_slug: null, case_slug: null, claim_id: null },
     ...full.events.map((e) => ({ date: e.occurred_on, precision: e.occurred_on_precision, kind: e.kind, label: e.label, incident_slug: null, case_slug: e.case_slug, claim_id: e.claim_id }))];
@@ -227,6 +298,15 @@ export async function incidentHandler({ env }, slug) {
   const nSources = sourcesCount(full);
   const meta = { published: r.published_at, reviewed: r.reviewed_on, sources: nSources, status: r.status, statusAsOf: r.status_updated_on, unknowns: r.unknowns };
   const path = `/incidents/${slug}`;
+  const cRow = ref.countries.get(r.country);
+  const view = {
+    title: r.title, date: r.occurred_on, dateText: incidentDate(r), country: r.country, countryName: countryName(ref, r.country),
+    rsf: rsfData(cRow), tactics: tacticSlugs.map((t) => ({ slug: t, name: (ref.tactics.get(t) || {}).name || t })),
+    stage: r.stage, ladderTactic: r.tactic_primary || tacticSlugs[0] || "", outcome: r.outcome,
+    summary: summaryBlock, facts: factsBlock, justification: justificationBlock, rest: blocks.slice(2),
+    meta: { published: meta.published, reviewed: meta.reviewed, sources: meta.sources, status: meta.status, statusAsOf: meta.statusAsOf },
+    unknowns: r.unknowns, breadcrumbs: [{ name: "Incidents", path: "/incidents" }],
+  };
   return {
     path,
     title: r.title,
@@ -234,6 +314,8 @@ export async function incidentHandler({ env }, slug) {
     ogType: "article",
     meta,
     footnotes: fn,
+    layout: "record",
+    htmlBody: (f) => incidentHtml(view, f),
     breadcrumbs: [{ name: "Incidents", path: "/incidents" }],
     jsonld: incidentLd(full),
     blocks,
@@ -703,6 +785,8 @@ export async function policyHandler(ctx, slug, extraBlocks = []) {
   const path = `/${slug}`;
   return {
     path, title,
+    layout: "reading",
+    eyebrow: slug === "about" || slug === "context" ? SITE_NAME : "Policies and standards",
     metaDescription: truncate(mdToPlain(md.replace(/^#.*$/m, "")), 160),
     blocks: [{ k: "md", md, skipH1: true }, ...extraBlocks],
     data: { slug, title, markdown: md, version: POLICY_VERSION, url: `${SITE_ORIGIN}${path}`, license: LICENSE },
