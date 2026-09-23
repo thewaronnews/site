@@ -121,12 +121,34 @@ function jaccard(a, b) {
 
 // ---------- RSS / Atom parsing (regex based; feeds are small) ----------
 
-function decodeEntities(s) {
-  return String(s || "")
-    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
+// Named entities feeds actually use beyond the XML-predefined five (quot,
+// apos, lt, gt, amp handled below): typographic punctuation, mostly.
+const NAMED_ENTITIES = {
+  quot: '"', apos: "'", lt: "<", gt: ">", amp: "&", nbsp: " ",
+  mdash: "—", ndash: "–", minus: "−", hellip: "…",
+  lsquo: "‘", rsquo: "’", sbquo: "‚",
+  ldquo: "“", rdquo: "”", bdquo: "„",
+  copy: "©", reg: "®", trade: "™", middot: "·", bull: "•",
+};
+
+function decodeEntitiesOnce(s) {
+  return String(s)
     .replace(/&#(\d+);/g, (_m, n) => String.fromCodePoint(parseInt(n, 10)))
     .replace(/&#x([0-9a-f]+);/gi, (_m, n) => String.fromCodePoint(parseInt(n, 16)))
-    .replace(/&quot;/g, '"').replace(/&apos;|&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&");
+    .replace(/&([a-zA-Z]+);/g, (m, name) => {
+      const key = name.toLowerCase();
+      return Object.prototype.hasOwnProperty.call(NAMED_ENTITIES, key) ? NAMED_ENTITIES[key] : m;
+    });
+}
+
+// Decodes numeric and named HTML entities and strips CDATA wrappers. Two
+// passes: some feeds escape their own already-escaped text (e.g. a title
+// that reaches us as the literal "&amp;#8217;" or "&amp;mdash;"), which
+// only resolves to the real character on a second pass over the entity
+// that the first pass's "&amp;" -> "&" step exposes.
+function decodeEntities(s) {
+  const once = decodeEntitiesOnce(String(s || "").replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1"));
+  return decodeEntitiesOnce(once);
 }
 
 function stripTags(s) {
