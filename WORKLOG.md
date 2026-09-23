@@ -772,7 +772,7 @@ that monkeypatch `fetch_all_sources_from_export()`; the scripts themselves are u
   privilege, not an entitlement (Reuters, 23 Sept, "News outlets will ask judge to end Trump's White House ban at
   hearing"; the Washington Post's 23 Sept piece pins the filing to Tuesday 22 Sept). Added: source 513 (Reuters),
   claim 733 (incident field `action`, outlet_report, high, verbatim quote 186 chars), event 13 (2026-09-22, filing,
-  published, attached to claim 733), and the source attached to the incident (revision 24). The TRO hearing before
+  published, attached to claim 733), and the source attached to the incident through PUT /admin/incidents/<slug>/links (revision 25; an earlier record PUT carrying a `sources` array was ignored by upsertRecord and only bumped the revision to 24). The TRO hearing before
   Judge Timothy Kelly is set for 3:30 pm ET today and had not happened when this ran, so `status` stays
   `in_effect` and no status claim was superseded; the record's "hearing scheduled 2026-09-23" event (6) already
   covered the hearing. Perplexity also reported (not verified against a source page, not recorded): 22 Sept White
