@@ -44,6 +44,27 @@
 - Local testing: `tools/local-harness.mjs` now serves `assets/img|fonts` from `site/assets`; screenshots with Playwright
   (NODE_PATH=/home/claude/.npm-global/lib/node_modules, executablePath /opt/pw-browsers/chromium).
 
+## Atlas polish pass (2026-09-22 late, TODOs 26-29)
+
+- `/context`: `content/context.md` now exists (editorial-v3/context.md verbatim); the route and OPTIONAL_PAGE_SLUGS
+  entry from the Atlas design session needed no change. Home page's about-record panel text comes from
+  editorial-v3/context-home.md (`views.js`). No admin `subject_type` covers a static content page, so
+  editorial-v3/context-claims.json's sourced figures stay as context.md's own inline markdown citations, not DB
+  claims.
+- Dates: `util.js` `proseDate()` is day-month-year ("18 September 2026", no comma, no ordinal). It is the only date
+  formatter the HTML templates and .md twins use; JSON keeps raw ISO; feeds.js's RFC 822/3339 building is separate
+  and untouched.
+- Coverage: `coverage.js` `decodeEntities()` now decodes named entities (mdash, ndash, hellip, lsquo/rsquo,
+  ldquo/rdquo, copy, reg, trade, middot, bull) in addition to the XML-predefined five and numeric refs, in two passes
+  (handles a feed that double-escapes, e.g. "&amp;#8217;"). `tools/cleanup-coverage-entities-2026-09-22.py` is the
+  one-off D1 backfill for rows ingested before the fix; re-run `POST /admin/search/rebuild` after any such backfill
+  so FTS matches the corrected text.
+- `/united-states` "How it got here": `ladders.js` wraps each pre-2020 decade in `<details class="decade-group">`
+  for HTML only (most recent decade open); the .md twin's per-decade `### <decade>` heading and table are unchanged,
+  built via `blockToMd()` (now exported from `render.js`) into the same block's `text`, with `viewHtml` carrying the
+  `<details>` markup, the general twin-preserving pattern the Atlas design already established. CSS: `.decade-group`
+  in content/site.css.
+
 ## v3 (2026-09-22, the ladder reframe, brief v3-ladder-brief-2026-09-22.md)
 
 - Migration `0005_ladder.sql`: `incidents.stage` (restrict | pressure | punish | silence | eliminate; nullable in the schema,

@@ -689,3 +689,61 @@ journalism and fact-based reporting. Shipped and deployed:
 29. The US chapter page is long (26,000 px at desktop); consider collapsing "How it got here" decades into <details>.
 30. Cloudflare's automatic RUM beacon (/cdn-cgi/rum) is on the zone; it is same-origin and async, but turn off Web
     Analytics' automatic setup if a zero-script page is wanted.
+
+## 2026-09-22 (late): Atlas polish pass, TODOs 26-29 closed (implementer)
+
+Four fixes, each committed separately (175056d, be7ed8a, 2cdc14a, cacae2d), deployed and verified live.
+
+- **Context page (TODO 26).** `content/context.md` copied in from `editorial-v3/context.md`; the route (already wired
+  to `OPTIONAL_PAGE_SLUGS`) now serves it instead of 404. The home page's "What this record is about" panel carries
+  `editorial-v3/context-home.md`'s paragraph (Pew newsroom-employment and ad-revenue figures, linking Pew and
+  `/context`) in place of the old placeholder sentence; the links-row's `/context` link is kept. `/context` added to
+  `sitemaps.js` STATIC_PAGES, to `llms.txt`'s "Ways in" list, and to the footer as "What this record is about".
+  `editorial-v3/context-claims.json`'s 15 sourced statistics were **not** loaded as page-level claims: the admin
+  API's claim `subject_type` enum (incident, event, case, actor, outlet, journalist; `records.js` CLAIM_FIELDS/TYPES)
+  has no "page" or "policy" type, so there is no DB record for a static `content/` page to attach a claim to. Kept as
+  inline markdown citations, which `context.md` already carries (each figure dated, attributed to its publisher, and
+  linked), matching the task's documented fallback. Verified live: `/context`, `/context.md`, `/context.json` all
+  200; home page shows the new paragraph with its Pew and `/context` links; `/sitemaps/pages.xml`, `/llms.txt` and
+  `/about`'s footer all list `/context`.
+- **Dates (TODO 27).** The architect decided on day-month-year for a global reader: "18 September 2026", no comma, no
+  ordinal. `util.js`'s single `proseDate()` (shared by every HTML template and its .md twin by construction) changed
+  to put the day first. ISO dates in the JSON twins never went through `proseDate()` and are unchanged; feeds.js
+  builds RSS's RFC 822 and Atom/JSON Feed's RFC 3339 dates independently and are unchanged. Verified on the focal
+  CNN incident: HTML and .md both show "18 September 2026" / "21 September 2026" in prose, JSON `occurred_on` is
+  still `2026-09-18`, `/incidents/feed.xml` `pubDate` is still RFC 822, `/incidents/atom.xml` `updated` is still
+  RFC 3339.
+- **Coverage entities (TODO 28).** `coverage.js`'s `decodeEntities()` only handled the five XML-predefined named
+  entities plus numeric references, so a feed's typographic named entities (Knight Institute's `&mdash;`, `&rsquo;`,
+  `&ldquo;`, `&rdquo;`) and double-encoded text (`&amp;#8217;`) passed into stored titles and summaries verbatim.
+  Added a `NAMED_ENTITIES` table (mdash, ndash, hellip, lsquo/rsquo, ldquo/rdquo, copy, reg, trade, middot, bull) and
+  a second decode pass so an `&amp;`-prefixed double-encoded entity resolves on the pass after `&amp;` -> `&` exposes
+  it; `undash()` then turns the now-real dash characters into ": " / ", " as it already did. One-off cleanup,
+  `tools/cleanup-coverage-entities-2026-09-22.py` (direct D1 HTTP API, Python mirror of the fixed JS logic): 10 of
+  176 live `coverage_items` rows changed (all Knight Institute), then `POST /admin/search/rebuild` to refresh FTS
+  over the corrected text. Verified: `/coverage`, `/coverage.md`, `/coverage.json` show no mdash/rsquo/ldquo/rdquo
+  artifacts.
+- **US chapter decades (TODO 29).** `ladders.js`'s `unitedStatesHandler()`: each pre-2020 decade under "How it got
+  here" is now an HTML-only `<details class="decade-group">` (arrow marker; the most recent decade, "The 2020s, to
+  2024", opens by default, the other 10 start closed). The .md twin is unchanged, a flat `### <decade>` heading plus
+  table per decade, built from the same block's plain `text` field (heading markdown plus `blockToMd()` of the
+  table, `blockToMd` newly exported from `render.js` for this reuse) while `viewHtml` carries the HTML-only
+  `<details>` wrapper, the same twin-preserving mechanism the rest of the Atlas design already uses. `site.css` gets
+  `.decade-group` styling matching the existing `details.refine` pattern; `check-contrast.py` still 0 failures.
+  Verified live with Playwright at 1440 px: all 11 decades render, only the 2020s starts open, and the .md twin
+  keeps every decade heading. **Desktop page height: 24,724 px collapsed vs 26,571 px with every decade forced
+  open, about 7% shorter, not the substantial cut the TODO's phrasing implied.** Most of the page's length is the
+  "Tactics in use now" section (13 tactics, each a table plus prose) and the "Now" panels' full incident cards, not
+  "How it got here": most pre-2020 decades hold only one or two incidents each, so there was little height to
+  reclaim by collapsing them. If a substantially shorter page is still wanted, "Tactics in use now" is the section
+  to collapse next.
+
+Full-suite verification after all four fixes: `tools/verify-v3.sh` 0 failures (incl. mcp-smoke 18/18, no count
+ranking), `tools/verify-v2.sh` 0 failures, `tools/mcp-smoke.sh` 18/18, `ops/indexnow.py --since-hours 2` pinged 102
+URLs, HTTP 200.
+
+### TODO (added 2026-09-22, this session)
+
+31. TODO 30 (Cloudflare RUM beacon) was out of this session's scope and remains open.
+32. "Tactics in use now" on `/united-states` is now the largest section on the page (see above); collapsing it the
+    same way "How it got here" was collapsed would cut the page height much more than this session's change did.

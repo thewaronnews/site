@@ -1,3 +1,6 @@
 {"error": "INDEXNOW_KEY is not set (see ops/README.md)", "event": "fatal", "script": "indexnow", "ts": "2026-09-23T02:02:46Z"}
 {"count": 1402, "event": "pinged", "script": "indexnow", "status": 200, "ts": "2026-09-23T02:02:53Z"}
 {"count": 611, "event": "pinged", "script": "indexnow", "status": 200, "ts": "2026-09-23T02:43:21Z"}
+{"error": "TWON_TOKEN_FILE_PUBLISH is not set (see ops/README.md)", "event": "changed_urls_error", "script": "indexnow", "ts": "2026-09-23T03:41:01Z"}
+{"error": "INDEXNOW_KEY is not set (see ops/README.md)", "event": "fatal", "script": "indexnow", "ts": "2026-09-23T03:41:06Z"}
+{"count": 102, "event": "pinged", "script": "indexnow", "status": 200, "ts": "2026-09-23T03:41:14Z"}
