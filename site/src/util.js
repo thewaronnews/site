@@ -143,7 +143,11 @@ export function linkStateAttr(source) {
 
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-// "2026-09-19" -> "September 19, 2026", honouring precision.
+// "2026-09-19" -> "19 September 2026" (day-month-year, no ordinal, no
+// comma, for a global reader; architect decision 2026-09-22). Honours
+// precision. This is the site's own prose and the .md twin only: ISO dates
+// in JSON stay untouched, and feeds.js builds RFC 822 / RFC 3339 dates
+// independently of this function.
 export function proseDate(iso, precision = "day") {
   if (!iso) return "";
   const m = String(iso).match(/^(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?/);
@@ -154,7 +158,7 @@ export function proseDate(iso, precision = "day") {
   if (precision === "year" || !mo) return y;
   if (precision === "month") return `${mo} ${y}`;
   if (precision === "approximate") return `about ${mo} ${y}`;
-  return d ? `${mo} ${d}, ${y}` : `${mo} ${y}`;
+  return d ? `${d} ${mo} ${y}` : `${mo} ${y}`;
 }
 
 // Partial ISO date for JSON-LD and timeline display, by precision.
