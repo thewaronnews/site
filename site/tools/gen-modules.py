@@ -2,6 +2,7 @@
 """Generate the Worker's data modules from site/content (no bundler).
 
   content/*.md          -> src/content.js  (policy pages, as strings)
+  content/page-notes.json -> src/content.js (PAGE_NOTES: counts caveat, stage legend)
   content/lint-rules.json -> src/lint.js   (voice lint rules + lintText())
   content/site.css      -> src/css.js      (served at /assets/site.css)
 
@@ -50,6 +51,14 @@ def gen_content():
             text = "# " + title + "\n\n" + PLACEHOLDER + "\n"
         pages[slug] = text
     body = "export const POLICY_PAGES = " + json.dumps(pages, indent=1, ensure_ascii=False) + ";\n"
+    notes_path = os.path.join(CONTENT, "page-notes.json")
+    notes = {}
+    if os.path.exists(notes_path):
+        with open(notes_path) as f:
+            notes = json.load(f)
+    # Page notes (v3): short fixed copy used by the view templates, such as
+    # the counts caveat and the ladder stage legend. No em dashes.
+    body += "export const PAGE_NOTES = " + json.dumps(notes, indent=1, ensure_ascii=False).replace("\u2014", ", ") + ";\n"
     body += "export const POLICY_VERSION = " + json.dumps(
         hashlib.sha256(json.dumps(pages, sort_keys=True).encode()).hexdigest()[:12]) + ";\n"
     write("content.js", body)

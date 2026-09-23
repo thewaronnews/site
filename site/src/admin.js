@@ -18,7 +18,7 @@ import { all, first, countsForHealth, getLastExport } from "./db.js";
 import {
   normalizeType, upsertRecord, publishRecord, withdrawRecord, replaceIncidentLinks, replaceCaseLinks,
   replaceSimpleSources, createClaim, supersedeClaim, setClaimStatus, createEvent, listEvents, deleteEvent, ValidationError, TYPES,
-  setIncidentFields, setIncidentTactics, setCountryPressFreedom, updateTactic,
+  setIncidentFields, setIncidentTactics, setIncidentLadder, setCountryPressFreedom, updateTactic,
 } from "./records.js";
 import { runCoverage, listCoverage, updateCoverageItem, getFeeds, setFeeds, lastCoverageRun } from "./coverage.js";
 import { rebuildSearchIndex } from "./search.js";
@@ -263,6 +263,10 @@ function routes() {
     ["POST", /^\/admin\/incidents\/([a-z0-9-]+)\/fields$/, PUBLISH, async ({ env, body }, m) => {
       const r = await setIncidentFields(env, m[1], body);
       return { result: r, write: { record_type: "incident", record_id: r.id, batch_label: body.batch_label, summary: `v2 fields for incident ${m[1]} r${r.revision}` } };
+    }],
+    ["POST", /^\/admin\/incidents\/([a-z0-9-]+)\/ladder$/, PUBLISH, async ({ env, body }, m) => {
+      const r = await setIncidentLadder(env, m[1], body);
+      return { result: r, write: r.unchanged ? null : { record_type: "incident", record_id: r.id, batch_label: body.batch_label, summary: `ladder for incident ${m[1]}: stage ${r.stage || "none"}${r.ladder_note ? ", note set" : ""} r${r.revision}` } };
     }],
     ["PUT", /^\/admin\/incidents\/([a-z0-9-]+)\/tactics$/, PUBLISH, async ({ env, body }, m) => {
       const r = await setIncidentTactics(env, m[1], body);

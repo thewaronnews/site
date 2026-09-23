@@ -19,6 +19,8 @@ export const ENUMS = {
   level: ["national", "state_or_province", "municipal", "supranational"],
   outcome: ["reversed", "upheld", "sustained", "ongoing", "unknown"],
   granularity: ["anchor", "granular"],
+  // v3: escalation stage on the ladder (brief v3-ladder-brief-2026-09-22).
+  stage: ["restrict", "pressure", "punish", "silence", "eliminate"],
   incident_type: ["access_ban", "credential_revocation", "lawsuit_against_press", "regulatory_pressure", "funding_cut", "arrest_or_detention", "subpoena_or_seizure", "legislation", "physical_obstruction", "other"],
   incident_status: ["in_effect", "in_litigation", "enjoined", "reversed", "expired", "resolved", "historical"],
   court_level: ["trial", "appellate", "supreme", "agency", "foreign"],
@@ -54,12 +56,12 @@ export const CLAIM_FIELDS = {
 export const TYPES = {
   incident: {
     table: "incidents", path: "/incidents/", claims: true,
-    cols: ["title", "occurred_on", "occurred_on_precision", "ended_on", "jurisdiction", "country", "level", "type", "tactic_primary", "leader_slug", "issue_of_the_day", "outcome", "outcome_on", "outcome_note", "granularity", "summary", "what_happened", "stated_justification", "effect_on_reporting", "unknowns", "status", "status_updated_on", "external_ids", "illustration_key", "next_review_on"],
+    cols: ["title", "occurred_on", "occurred_on_precision", "ended_on", "jurisdiction", "country", "level", "type", "tactic_primary", "leader_slug", "issue_of_the_day", "outcome", "outcome_on", "outcome_note", "granularity", "stage", "ladder_note", "summary", "what_happened", "stated_justification", "effect_on_reporting", "unknowns", "status", "status_updated_on", "external_ids", "illustration_key", "next_review_on"],
     required: ["title", "occurred_on", "jurisdiction", "level", "summary", "what_happened", "status", "status_updated_on"],
-    enums: { occurred_on_precision: "precision", level: "level", type: "incident_type", status: "incident_status", outcome: "outcome", granularity: "granularity" },
+    enums: { occurred_on_precision: "precision", level: "level", type: "incident_type", status: "incident_status", outcome: "outcome", granularity: "granularity", stage: "stage" },
     dates: ["occurred_on", "ended_on", "status_updated_on", "next_review_on", "outcome_on"],
     prose: ["summary", "what_happened", "stated_justification", "effect_on_reporting"],
-    own: ["title", "unknowns", "issue_of_the_day", "outcome_note"],
+    own: ["title", "unknowns", "issue_of_the_day", "outcome_note", "ladder_note"],
     titleCol: "title",
   },
   actor: {
@@ -223,6 +225,7 @@ async function validateIncidentV2(env, row) {
     if (!a) errors.push({ field: "leader_slug", error: "unknown_actor", value: row.leader_slug });
   }
   if (row.issue_of_the_day && String(row.issue_of_the_day).trim().split(/\s+/).length > 60) errors.push({ field: "issue_of_the_day", error: "max_60_words" });
+  if (row.ladder_note && String(row.ladder_note).trim().split(/\s+/).length > 60) errors.push({ field: "ladder_note", error: "max_60_words" });
   if (row.country) {
     const c = await first(env, "SELECT iso2 FROM countries WHERE iso2 = ?", row.country);
     if (!c) errors.push({ field: "country", error: "unknown_country", value: row.country });
@@ -354,6 +357,7 @@ export async function publishRecord(env, type, slug, body) {
     const citable = await citableClaimIds(env, type, rec.id);
     const own = await first(env, "SELECT COUNT(*) AS n FROM claims WHERE status = 'current' AND subject_type = ? AND subject_id = ?", type, rec.id);
     if (type === "incident" && (!own || own.n < 1)) errors.push({ error: "needs_current_claim", rule: "an incident needs at least one current claim" });
+    if (type === "incident" && rec.pub_state !== "published" && !rec.stage) errors.push({ field: "stage", error: "required_to_publish", allowed: ENUMS.stage });
     if (type === "case" && citable.size < 1) errors.push({ error: "needs_current_claim", rule: "a case needs a current claim on the case or a linked incident" });
   }
   if (errors.length) throw new ValidationError(errors);
@@ -656,7 +660,7 @@ export async function deleteEvent(env, id) {
 
 // ---------- v2: incident classification, tactics, countries ----------
 
-export const INCIDENT_V2_FIELDS = ["level", "tactic_primary", "leader_slug", "issue_of_the_day", "outcome", "outcome_on", "outcome_note", "granularity", "country", "jurisdiction"];
+export const INCIDENT_V2_FIELDS = ["level", "tactic_primary", "leader_slug", "issue_of_the_day", "outcome", "outcome_on", "outcome_note", "granularity", "country", "jurisdiction", "stage", "ladder_note"];
 
 // POST /admin/incidents/<slug>/fields: only the v2 classification fields,
 // through upsertRecord so a revision and (when published) a ledger entry
@@ -673,6 +677,28 @@ export async function setIncidentFields(env, slug, body) {
   const r = await upsertRecord(env, "incident", slug, patch);
   if (Array.isArray(body.tactics)) await setIncidentTactics(env, slug, { tactics: body.tactics, primary: body.tactic_primary, reason: body.reason, _skipRevision: true });
   return r;
+}
+
+// POST /admin/incidents/<slug>/ladder {stage?, ladder_note?, ladder_note_append?, reason}
+// (v3). Sets the escalation stage and the ladder note, or appends a
+// sentence to the existing note; each call is one revision of the record.
+export async function setIncidentLadder(env, slug, body) {
+  const inc = await getRecord(env, "incident", slug);
+  if (!inc) throw new ValidationError({ error: "not_found" }, 404);
+  const patch = { reason: body.reason, is_correction: body.is_correction };
+  if (Object.prototype.hasOwnProperty.call(body, "stage")) patch.stage = body.stage;
+  if (Object.prototype.hasOwnProperty.call(body, "ladder_note")) patch.ladder_note = body.ladder_note;
+  if (body.ladder_note_append) {
+    const base = Object.prototype.hasOwnProperty.call(patch, "ladder_note") ? patch.ladder_note : inc.ladder_note;
+    patch.ladder_note = [base, String(body.ladder_note_append).trim()].filter(Boolean).join(" ");
+  }
+  if (!("stage" in patch) && !("ladder_note" in patch)) throw new ValidationError({ error: "nothing_to_update", fields: ["stage", "ladder_note", "ladder_note_append"] });
+  if ("stage" in patch && !ENUMS.stage.includes(patch.stage)) throw new ValidationError({ field: "stage", error: "enum", allowed: ENUMS.stage });
+  const same = (!("stage" in patch) || patch.stage === inc.stage) && (!("ladder_note" in patch) || (patch.ladder_note || null) === (inc.ladder_note || null));
+  if (same) return { id: inc.id, slug, type: "incident", unchanged: true, revision: inc.revision, stage: inc.stage, ladder_note: inc.ladder_note };
+  const r = await upsertRecord(env, "incident", slug, patch);
+  const saved = await getRecord(env, "incident", slug);
+  return { ...r, stage: saved.stage, ladder_note: saved.ladder_note };
 }
 
 // PUT /admin/incidents/<slug>/tactics {primary, tactics:[slug...], reason}

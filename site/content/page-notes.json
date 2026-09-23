@@ -1,0 +1,12 @@
+{
+  "counts_caveat": "The number of entries reflects the depth of this record, not the severity of a country's conduct.",
+  "stages": {
+    "restrict": {"name": "Restrict", "definition": "Limiting access or credentials for particular reporters or outlets: bans from briefings or buildings, pool changes, credential revocations, accreditation refusals."},
+    "pressure": {"name": "Pressure", "definition": "Using state power short of prosecution to change coverage: regulatory threats, licence reviews, funding cuts, lawsuits by officials, official \"fake news\" or \"foreign agent\" labels, advertising pressure, tax audits."},
+    "punish": {"name": "Punish", "definition": "Legal or physical action against individual journalists or sources: subpoenas and record seizures, prosecutions, arrests, detention, expulsions, visa denials, assault where a government actor is involved."},
+    "silence": {"name": "Silence", "definition": "Removing outlets or channels from the public sphere: closures, licence withdrawals, forced sales, blocking and shutdowns, prior restraint, nationalisation."},
+    "eliminate": {"name": "Eliminate", "definition": "Long imprisonment, killing, disappearance or forced exile of journalists, with state involvement as the sources state it."}
+  },
+  "ladders_intro": "Each ladder takes one tactic and sets out, stage by stage, what governments have done with it: from restricting access, through pressure and punishment, to silencing outlets and eliminating journalists. Every rung is a dated incident with its country, head of government, outcome and sources. Rows from the United States, the focal case of this record, are marked and shown first within each stage.",
+  "us_chapter_intro": "This chapter sets out what the government of the United States and its officials have done to journalists in 2025 and 2026, the earlier record from 1917 to 2019, and, for each tactic in use now, where the same tactic has led in other countries."
+}
