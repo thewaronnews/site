@@ -138,7 +138,7 @@ async function r2File(env, pathname) {
 // place, so the cache is a year and immutable.
 const ASSET_TYPES = { webp: "image/webp", jpg: "image/jpeg", png: "image/png", woff2: "font/woff2", txt: "text/plain; charset=utf-8" };
 async function assetFile(env, pathname) {
-  const m = pathname.match(/^\/(assets\/(?:img|fonts)\/[a-zA-Z0-9-]+\.(webp|jpg|png|woff2|txt))$/);
+  const m = pathname.match(/^\/(assets\/(?:img|fonts)\/[a-zA-Z0-9_-]+\.(webp|jpg|png|woff2|txt))$/);
   const miss = () => new Response("Not found", { status: 404, headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "public, max-age=60" } });
   if (!m || !env.EXPORTS) return miss();
   const obj = await env.EXPORTS.get(m[1]);

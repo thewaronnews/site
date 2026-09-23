@@ -223,7 +223,7 @@ t('recent_coverage','Recent reporting on government actions against journalists,
 
 // ---------- illustrations (Etched Record masters, served from R2) ----------
 
-export const ART = ["home-hero", "incident", "case", "actor", "tactic", "country", "coverage", "era-timeline"];
+export const ART = ["home-hero", "incident", "case", "actor", "tactic", "country", "coverage", "era-timeline", "explainer"];
 export const ART_ALT = {
   "home-hero": "Engraving of a locked iron gate with a press pass hanging from it, a government building behind",
   incident: "Engraving of an empty press briefing room with a lectern and rows of chairs",
@@ -233,6 +233,42 @@ export const ART_ALT = {
   country: "Engraving of a globe beside an open atlas in a library",
   coverage: "Engraving of bundled newspapers and a radio on a doorstep",
   "era-timeline": "Engraving of a shelf of bound volumes lit by a desk lamp",
+  explainer: "Engraving of a reading desk with an open reference book and a lamp",
+  "tactic-access_ban": "Engraving of a panelled door barred by a brass turnstile gate",
+  "tactic-credential_control": "Engraving of a desktop paper punch beside a stack of blank metal plates",
+  "tactic-outlet_licensing": "Engraving of a brass padlock",
+  "tactic-prior_restraint": "Engraving of a proof sheet with a blacked-out column and a hand stamp",
+  "tactic-secrets_and_espionage_laws": "Engraving of a small lockbox with a combination dial",
+  "tactic-insult_and_defamation_laws": "Engraving of a wooden courtroom gavel on its sound block",
+  "tactic-surveillance_and_subpoenas": "Engraving of an antique telephone handset fitted with a metal clip",
+  "tactic-funding_and_ownership_pressure": "Engraving of a rolled ledger page",
+  "tactic-expulsion_and_visa_denial": "Engraving of a brass adjustable date stamp",
+  "tactic-shutdowns_and_blocking": "Engraving of a severed telegraph wire beside a dark screen",
+  "tactic-detention_and_violence": "Engraving of a notebook and pen behind iron cell bars",
+  "tactic-lawsuits_against_press": "Engraving of a bound stack of court filing papers tied with a docket tag",
+  "tactic-disinformation_labeling": "Engraving of a folded newspaper with a blank label pasted across it",
+  "continent-africa": "Engraving of an open atlas showing the outline of Africa",
+  "continent-americas": "Engraving of an open atlas showing the outline of North and South America",
+  "continent-asia": "Engraving of an open atlas showing the outline of Asia",
+  "continent-europe": "Engraving of an open atlas showing the outline of Europe",
+  "continent-oceania": "Engraving of an open atlas showing the outline of Oceania and Australia",
+  "continent-world": "Engraving of an open atlas world map with a magnifying glass",
+};
+
+// Per-slug illustrations generated 2026-09-23 ("Etched Record" set). Falls
+// back to the generic "tactic" / "country" art when a slug has none.
+const TACTIC_ART_SLUGS = new Set([
+  "access_ban", "credential_control", "outlet_licensing", "prior_restraint", "secrets_and_espionage_laws",
+  "insult_and_defamation_laws", "surveillance_and_subpoenas", "funding_and_ownership_pressure",
+  "expulsion_and_visa_denial", "shutdowns_and_blocking", "detention_and_violence", "lawsuits_against_press",
+  "disinformation_labeling",
+]);
+// Continent slugs (per CONTINENTS in site.js) mapped to the art generated for
+// them; north-america/south-america share the single "americas" image, and
+// antarctica (no dedicated image) falls back to the generic world atlas.
+const CONTINENT_ART_SLUG = {
+  africa: "africa", asia: "asia", europe: "europe", oceania: "oceania",
+  "north-america": "americas", "south-america": "americas", antarctica: "world",
 };
 
 // Illustration for a path: its og:image and, where the page shows one, the
@@ -243,8 +279,13 @@ export function artFor(path) {
   if (/^\/incidents\/[^/]+(\/revisions)?$/.test(p)) return "incident";
   if (/^\/cases(\/|$)/.test(p)) return "case";
   if (/^\/(actors|leaders|journalists|outlets)(\/|$)/.test(p)) return "actor";
+  let m = p.match(/^\/(?:tactics|ladders)\/([a-z_]+)/);
+  if (m) return TACTIC_ART_SLUGS.has(m[1]) ? `tactic-${m[1]}` : "tactic";
   if (/^\/(tactics|ladders)(\/|$)/.test(p)) return "tactic";
+  m = p.match(/^\/continents\/([a-z-]+)/);
+  if (m) return CONTINENT_ART_SLUG[m[1]] ? `continent-${CONTINENT_ART_SLUG[m[1]]}` : "country";
   if (/^\/(countries|continents)(\/|$)/.test(p)) return "country";
+  if (/^\/explainers(\/|$)/.test(p)) return "explainer";
   if (/^\/coverage(\/|$)/.test(p)) return "coverage";
   if (/^\/(eras|timeline)(\/|$)/.test(p)) return "era-timeline";
   return null;
@@ -253,7 +294,7 @@ export function artFor(path) {
 // Pages whose header carries the illustration (entity and section pages;
 // not search, lists of records, claims, sources or long-form reading).
 function showsArt(path) {
-  return /^\/(united-states|countries|continents|tactics|ladders|eras|timeline|coverage|cases|leaders|actors|outlets|journalists)(\/|$)/.test(path || "")
+  return /^\/(united-states|countries|continents|tactics|ladders|eras|timeline|coverage|cases|leaders|actors|outlets|journalists|explainers)(\/|$)/.test(path || "")
     && !/^\/(actors|outlets|journalists)$/.test(path);
 }
 
