@@ -547,3 +547,114 @@ glossary terms (none in this research pass).
     run does not fail validation on any of them.
 21. New sources from this session (69 of them) have no Wayback snapshot beyond the 10-failure batch
     already attempted; retry ops/wayback.py once web.archive.org's save endpoint recovers.
+
+## 2026-09-23: v3 second sources (62 incidents) and 6 proposed corrections (4 applied)
+
+Loaded research-v3/second-sources.json (62 incidents, 1-2 journalistic second sources each, 33
+carrying a verbatim quote across 24 incidents) and applied research-v3/corrections-sources.json (6
+corrections carried over from the prior session's SKIPPED list, now with a specific document
+address). Tools: site/tools/apply-second-sources-2026-09-22.py, site/tools/apply-corrections-v3-
+2026-09-22.py. Commit: "v3: second sources and 6 corrections".
+
+**Second sources.** Each of the 96 rows was curl-checked (browser UA, 15s timeout, via the egress
+proxy) and classified with ops/linkcheck.py's own classify_tier1 (dead = network error/timeout/
+404/410, or 403/429/503 with no challenge marker; paywalled/tier2/ambiguous are not dead and are
+routinely part of this corpus, e.g. Reuters' 401s). 3 of 96 were dead on every attempt (allafrica.com
+403; washingtonpost.com timeout; nytimes.com 403) and were not added; two of the three were the only
+non-CPJ second source proposed for their incident but each already had another second source that
+was live, so only one incident (2005-zimbabwe-court-refuses-daily-news-accreditation) ended up with
+no new source at all. 4 of 96 were byte-for-byte the incident's own existing CPJ source (same URL,
+and in each case a quote already word-for-word one of that source's existing claims); these were
+skipped entirely (no re-add, no re-attach, no claim). Net: 89 sources added and attached across 61
+incidents. Of the 33 quoted rows, 26 supported a field this corpus's claims already use for that kind
+of fact (a dated what-happened fact is claim field "action", not "occurred_on", which is a base
+column this seed's claims never populate; an outcome-dated fact is field "status") and got a new
+current claim, method outlet_report, citing the new source; the CPJ claims they corroborate were
+never superseded, both stand. The other 4 quoted rows (2 Egypt, 1 Nicaragua, 1 Kazakhstan) were
+context/background rather than support for a specific field already on the record and were attached
+with no claim. batch_label v3-second-sources-2026-09-22.
+
+**A caching bug found and worked around.** The MCP tool `get_sources_for`, which the loader (like
+the prior sessions' correction scripts) reads to build the "current sources, append new ones" list
+before every `PUT /admin/incidents/:slug/links`, is in mcp.js's `CACHEABLE_TOOLS` with a 5-minute
+TTL. The first run of apply-second-sources-2026-09-22.py was killed by a 2-minute tool timeout partway
+through; a full second run then re-processed every incident, and for 9 incidents already finished by
+run 1 it read a still-cached pre-run-1 source list, so it recreated (harmlessly, `POST /admin/sources`
+dedupes by URL) and reattached the same source, and separately reposted the same claim, since claim-
+posting has no dedupe. Reattaching using ID-recovery-by-URL naturally reconstructed the same correct
+end state for sources; the 4 resulting duplicate claims (id pairs 714/718, 715/719, 716/720, 717/721)
+were retired (`POST /admin/claims/<id>/status`, status retired) after being found by grouping every
+claim in the batch by (field, value, source_id) and flagging groups of more than one. Net current
+claims from this batch: 26 (30 created, 4 retired). A second, more serious instance of the same cache
+staleness caused a real drop, not just a duplicate: apply-corrections-v3-2026-09-22.py's two rows for
+1950-south-africa-suppression-of-communism-act (occurred_on then outcome_on, half a second apart) each
+called the same attach-by-full-rebuild pattern; the second call's cached read didn't yet show the
+first call's added source (id 489, the TRC chronology PDF), so its rebuild silently dropped it. Found
+by refetching the live incident with a cache-busting query string against the public `/incidents/
+<slug>.json` (60s edge cache, not the 5-minute MCP cache) right after the run and comparing to what
+should have been there; fixed with one more `PUT .../links` call carrying the full correct four-source
+list. Checked every other incident this session touched twice in quick succession (9 above, by
+counting `/admin/writes` rows per `.../links` path) against the live public JSON: all 9 were correct
+(a single incident processed once per run is not exposed to this bug the way two corrections
+targeting the same incident, seconds apart, are). TODO below.
+
+**Corrections.** 4 of 6 applied: Haiti occurred_on (1981-01-01 to 1980-11-28, Amnesty International's
+Haiti report, "raided by the Duvalier security forces on 28 November 1980"; superseded the incident's
+existing occurred_on claim, id 141, with new claim 729, and repointed every {c:141} in the record's
+prose to {c:729}, since a superseded claim can no longer be cited -- `PUT /admin/records` enforces
+this, `claim_ref_not_citable`); South Africa occurred_on (1950-03-17 to 1950-07-17, South African TRC
+Final Report chronology, "Commenced: 17 July 1950" -- the record had conflated the Suppression of
+Communism Act's passage date with its commencement date); South Africa outcome_on (1990-02-02 to
+1991-07-31, O'Malley Archive chronology, "31 July 1991 ... Abolished s 55" -- the Act's own
+communism-suppression provision was repealed then, a more precise outcome than the general February
+1990 lifting of banning orders under the act and its successors, which is kept, now clearly
+distinguished, in the outcome note); Serbia outcome_on (2001-01-01 to 2000-10-01, U.S. State
+Department's 2002 country report, "In October 2000, the Government abolished the Law on Public
+Information" -- already what the record's own outcome note said; the base column was wrong).
+2 skipped, both repeating the prior session's reason with the new URL still unreachable: Grenada
+(apps.dtic.mil/sti/tr/pdf/ADA225841.pdf 307-redirects to an Azure "site under maintenance" placeholder
+on every fetch, no report content); Hungary (loc.gov 403s every fetch, with or without extra headers,
+over HTTP/1.1 or HTTP/2). Two incidental fixes needed to publish the South Africa outcome_on claim:
+`outcome_on` requires a full `YYYY-MM-DD` (no month-only value; Serbia's "2000-10" needed a day, so
+day 01 was used as this schema's existing month-precision placeholder convention, same as an
+`occurred_on_precision: "month"` record elsewhere in the corpus); and the outcome note's mention of
+the "Internal Security and Intimidation Amendment Act" tripped voice_lint's quotation-only word
+"intimidation" until the act's proper name was put in quotation marks (stripVerbatim exempts quoted
+spans). batch_label v3-corrections-2026-09-22.
+
+**Verification.** Three incident pages checked live in both HTML and .json: 2026-hungary-mayor-
+removes-telex-reporters (new Reuters and Telex sources render; occurred_on unaffected, 2026-03-10),
+1981-haiti-duvalier-radio-haiti-inter-exile (new Amnesty source renders; occurred_on now 1980-11-28),
+1950-south-africa-suppression-of-communism-act (new TRC and O'Malley sources render; occurred_on
+1950-07-17, outcome_on 1991-07-31). `POST /admin/export` then `ops/linkcheck.py --all`: 491 due, live
+357, paywalled 43, bot_blocked 47, dead 23, redirected 11, error 10 (link_integrity after: 491 total,
+468 ok, 27 archived, 0 dead by the DB's 3-failures-over-48h hysteresis, share 0.953).
+`ops/indexnow.py --since-hours 3`: pinged 611 URLs, HTTP 200. /admin/health: sources 403 -> 491,
+claims 698 -> 732 (689 -> 718 current), incidents unchanged at 190/191 (no incidents added, only
+sources, claims and prose).
+
+**Local seed hygiene.** seed-v2/sources.json (392 -> 480 rows) and seed-v2/incidents.json (190
+incidents, unchanged count) updated append-only to match: 88 new source rows (ids v3ss_001 upward; 5
+of the 93 live attachments reused a URL already present in the local seed under a different incident,
+so no new local row was needed for those), and the new ids appended to the `sources` array of each of
+the 64 affected incidents, nothing removed or reordered. Neither file is under version control
+(/home/claude/crank3 has no .git); only the tool scripts and ops logs were committed, in
+/home/claude/crank3/twon.
+
+### TODO (added 2026-09-23)
+
+22. `get_sources_for`'s 5-minute cache (mcp.js CACHEABLE_TOOLS) makes the established
+    "read-current-then-append-then-PUT-the-whole-list" pattern for admin/incidents/:slug/links unsafe
+    whenever the same incident is touched twice within 5 minutes in one script run (see above: it
+    silently dropped a just-added source once this session, and caused four duplicate claims another
+    time). A future loader touching the same incident more than once per run should keep its own
+    in-memory running list per slug instead of re-reading `get_sources_for` between calls, or the
+    admin API should grow an uncached way to read an incident's current source list.
+23. Comparator research from the v3 brief still not in the record (see the prior session's TODO 19,
+    unchanged this session: Cuba, Uganda, Syria, Afghanistan, Algeria, Uzbekistan, Tajikistan, Israel's
+    2024 Al Jazeera law, Poland 2015-2023 beyond 2015/2021).
+24. Grenada and Hungary corrections remain unapplied for lack of a fetchable source (see SKIPPED in
+    apply-corrections-v3-2026-09-22.py); retry if apps.dtic.mil's maintenance page and loc.gov's 403
+    block clear.
+25. The 88 new sources from this session have no Wayback snapshot; run ops/wayback.py once
+    web.archive.org's save endpoint recovers (still failing as of the last two sessions' attempts).

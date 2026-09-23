@@ -1,0 +1,584 @@
+{
+ "https://www.reuters.com/business/media-telecom/journalist-groups-condemn-hungary-over-reporters-removal-campaign-event-2026-03-17/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/business/media-telecom/journalist-groups-condemn-hungary-over-reporters-removal-campaign-event-2026-03-17/"
+ },
+ "https://telex.hu/english/2026/03/12/we-filed-a-complaint-after-our-colleagues-were-forcibly-removed-from-the-deputy-pm-s-campaign-event": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://telex.hu/english/2026/03/12/we-filed-a-complaint-after-our-colleagues-were-forcibly-removed-from-the-deputy-pm-s-campaign-event"
+ },
+ "https://www.reuters.com/business/media-telecom/russia-closes-moscow-bureau-canadian-broadcaster-cbc-2022-05-18/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/business/media-telecom/russia-closes-moscow-bureau-canadian-broadcaster-cbc-2022-05-18/"
+ },
+ "https://www.reuters.com/world/uk/russia-bans-29-british-journalists-entering-2022-06-14/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/world/uk/russia-bans-29-british-journalists-entering-2022-06-14/"
+ },
+ "https://www.reuters.com/world/europe/russia-bans-121-australians-including-journalists-defence-figures-2022-06-16/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/world/europe/russia-bans-121-australians-including-journalists-defence-figures-2022-06-16/"
+ },
+ "https://www.reuters.com/article/world/factbox-foreign-journalists-forced-to-leave-china-as-diplomatic-tensions-worsen-idUSKBN25Z0QL/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/article/world/factbox-foreign-journalists-forced-to-leave-china-as-diplomatic-tensions-worsen-idUSKBN25Z0QL/"
+ },
+ "https://apnews.com/general-news-9172fa02618c7df5bc6d8e8f92b31bf6": {
+  "state": "tier2",
+  "status": 403,
+  "error": null,
+  "final_url": "https://apnews.com/general-news-9172fa02618c7df5bc6d8e8f92b31bf6"
+ },
+ "https://www.reuters.com/business/media-telecom/belarus-revokes-accreditations-journalists-covering-protests-foreign-media-2020-08-29/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/business/media-telecom/belarus-revokes-accreditations-journalists-covering-protests-foreign-media-2020-08-29/"
+ },
+ "https://www.bbc.com/news/world-europe-53924922": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.bbc.com/news/world-europe-53924922"
+ },
+ "https://www.reuters.com/article/world/philippine-leader-bans-news-site-from-covering-his-events-over-fake-news-idUSKCN1G41TZ/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/article/world/philippine-leader-bans-news-site-from-covering-his-events-over-fake-news-idUSKCN1G41TZ/"
+ },
+ "https://newsinfo.inquirer.net/1154213/palace-justifies-coverage-ban-vs-rappler-its-a-privilege-not-a-right": {
+  "state": "tier2",
+  "status": 403,
+  "error": null,
+  "final_url": "https://newsinfo.inquirer.net/1154213/palace-justifies-coverage-ban-vs-rappler-its-a-privilege-not-a-right"
+ },
+ "https://www.turkishminute.com/2021/12/18/rt-orders-stay-on-changes-to-press-card-regulation-aiming-to-make-cancellation-easier/": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.turkishminute.com/2021/12/18/rt-orders-stay-on-changes-to-press-card-regulation-aiming-to-make-cancellation-easier/"
+ },
+ "https://allafrica.com/stories/200505170875.html": {
+  "state": "dead",
+  "status": 403,
+  "error": null,
+  "final_url": "https://allafrica.com/stories/200505170875.html"
+ },
+ "https://www.voanews.com/a/kazakh-journalists-worry-as-new-media-rules-come-into-force/7802843.html": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.voanews.com/a/kazakh-journalists-worry-as-new-media-rules-come-into-force/7802843.html"
+ },
+ "https://www.rferl.org/a/kazakhstan-cpj-media-accreditation-law/33105583.html": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.rferl.org/a/kazakhstan-cpj-media-accreditation-law/33105583.html"
+ },
+ "https://www.washingtonpost.com/world/asia_pacific/beijing-pulls-credentials-for-journalists-at-three-us-news-outlets-including-the-post/2020/03/17/22a476d6-686f-11ea-b199-3a9799c54512_story.html": {
+  "state": "dead",
+  "status": null,
+  "error": "timeout",
+  "final_url": "https://www.washingtonpost.com/world/asia_pacific/beijing-pulls-credentials-for-journalists-at-three-us-news-outlets-including-the-post/2020/03/17/22a476d6-686f-11ea-b199-3a9799c54512_story.html"
+ },
+ "https://www.latimes.com/world-nation/story/2020-03-17/china-revoke-media-credentials-new-york-times-washington-post": {
+  "state": "paywalled",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.latimes.com/world-nation/story/2020-03-17/china-revoke-media-credentials-new-york-times-washington-post"
+ },
+ "https://www.reuters.com/business/media-telecom/russian-court-revokes-newspaper-novaya-gazetas-license-2022-09-05/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/business/media-telecom/russian-court-revokes-newspaper-novaya-gazetas-license-2022-09-05/"
+ },
+ "https://www.reuters.com/world/asia-pacific/hong-kong-police-arrest-apple-daily-columnist-under-security-law-media-2021-06-23/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/world/asia-pacific/hong-kong-police-arrest-apple-daily-columnist-under-security-law-media-2021-06-23/"
+ },
+ "https://www.bbc.com/news/world-asia-china-57578926": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.bbc.com/news/world-asia-china-57578926"
+ },
+ "https://www.reuters.com/article/world/factbox-chavezs-thorny-dealings-with-venezuelan-media-idUSN24382984/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/article/world/factbox-chavezs-thorny-dealings-with-venezuelan-media-idUSN24382984/"
+ },
+ "https://rsf.org/en/court-orders-authorities-allow-daily-news-reappear": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://rsf.org/en/court-orders-authorities-allow-daily-news-reappear"
+ },
+ "https://www.euronews.com/2021/02/09/hungary-s-first-independent-radio-station-klubradio-to-go-off-air-on-sunday": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.euronews.com/2021/02/09/hungary-s-first-independent-radio-station-klubradio-to-go-off-air-on-sunday"
+ },
+ "https://www.euronews.com/2021/04/11/klubradio-frequency-of-hungarian-independent-radio-to-be-taken-over-by-group-close-to-orba": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.euronews.com/2021/04/11/klubradio-frequency-of-hungarian-independent-radio-to-be-taken-over-by-group-close-to-orba"
+ },
+ "https://www.reuters.com/article/world/israel-publishes-some-details-as-australian-spy-mystery-deepens-idUSBRE91D05P/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/article/world/israel-publishes-some-details-as-australian-spy-mystery-deepens-idUSBRE91D05P/"
+ },
+ "https://www.smh.com.au/national/spies-lies-and-intrigue-life-and-death-of-prisoner-x-20130215-2eih7.html": {
+  "state": "paywalled",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.smh.com.au/national/spies-lies-and-intrigue-life-and-death-of-prisoner-x-20130215-2eih7.html"
+ },
+ "https://www.wionews.com/world/turkey-three-news-outlets-fined-for-their-earthquake-coverage-565075": {
+  "state": "tier2",
+  "status": 403,
+  "error": null,
+  "final_url": "https://www.wionews.com/world/turkey-three-news-outlets-fined-for-their-earthquake-coverage-565075"
+ },
+ "https://cpj.org/2020/10/al-manassa-editor-nora-younis-on-censorship-in-egypt/": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://cpj.org/2020/10/al-manassa-editor-nora-younis-on-censorship-in-egypt/"
+ },
+ "https://www.middleeasteye.net/news/egypt-arrests-journalist-amid-media-crackdown": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.middleeasteye.net/news/egypt-arrests-journalist-amid-media-crackdown"
+ },
+ "https://www.reuters.com/business/media-telecom/russian-ex-journalist-safronov-gets-22-years-prison-treason-2022-09-05/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/business/media-telecom/russian-ex-journalist-safronov-gets-22-years-prison-treason-2022-09-05/"
+ },
+ "https://www.reuters.com/world/asia-pacific/cambodias-hun-sen-orders-shutdown-last-independent-local-news-outlet-2023-02-12/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/world/asia-pacific/cambodias-hun-sen-orders-shutdown-last-independent-local-news-outlet-2023-02-12/"
+ },
+ "https://www.reuters.com/world/asia-pacific/dissident-journalist-jailed-vietnam-9-years-anti-state-acts-2021-12-14/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/world/asia-pacific/dissident-journalist-jailed-vietnam-9-years-anti-state-acts-2021-12-14/"
+ },
+ "https://www.japantimes.co.jp/news/2024/11/29/asia-pacific/crime-legal/china-journalist-espionage-verdict/": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.japantimes.co.jp/news/2024/11/29/asia-pacific/crime-legal/china-journalist-espionage-verdict/"
+ },
+ "https://www.abc.net.au/news/2024-11-29/chinese-journalist-dong-yuyu-jailed-for-espionage/104667352": {
+  "state": "ambiguous",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.abc.net.au/news/2024-11-29/chinese-journalist-dong-yuyu-jailed-for-espionage/104667352"
+ },
+ "https://www.reuters.com/world/middle-east/iran-sentences-two-women-journalists-charges-linked-amini-protests-2023-10-22/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/world/middle-east/iran-sentences-two-women-journalists-charges-linked-amini-protests-2023-10-22/"
+ },
+ "https://www.latimes.com/world-nation/story/2023-10-22/iran-sentences-2-journalists-for-allegedly-collaborating-with-u-s-both-covered-mahsa-aminis-death": {
+  "state": "paywalled",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.latimes.com/world-nation/story/2023-10-22/iran-sentences-2-journalists-for-allegedly-collaborating-with-u-s-both-covered-mahsa-aminis-death"
+ },
+ "https://apnews.com/today-in-history/june-8": {
+  "state": "tier2",
+  "status": 403,
+  "error": null,
+  "final_url": "https://apnews.com/today-in-history/june-8"
+ },
+ "https://www.bbc.com/news/world-asia-22379241": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.bbc.com/news/world-asia-22379241"
+ },
+ "https://www.reuters.com/world/middle-east/turkish-journalist-arrested-insulting-erdogan-cnn-turk-2022-01-22/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/world/middle-east/turkish-journalist-arrested-insulting-erdogan-cnn-turk-2022-01-22/"
+ },
+ "https://www.reuters.com/article/business/corrected-update-1-thai-magazines-former-editor-jailed-for-insulting-king-idUSL4N0AS2P7/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/article/business/corrected-update-1-thai-magazines-former-editor-jailed-for-insulting-king-idUSL4N0AS2P7/"
+ },
+ "https://www.reuters.com/world/europe/russian-journalist-gets-six-years-accusing-russia-ukraine-theatre-bombing-2023-02-15/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/world/europe/russian-journalist-gets-six-years-accusing-russia-ukraine-theatre-bombing-2023-02-15/"
+ },
+ "https://www.reuters.com/world/europe/poland-summons-belarusian-envoy-after-journalist-is-jailed-2023-02-08/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/world/europe/poland-summons-belarusian-envoy-after-journalist-is-jailed-2023-02-08/"
+ },
+ "https://www.bbc.com/news/technology-57881364": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.bbc.com/news/technology-57881364"
+ },
+ "https://www.ap.org/media-center/ap-in-the-news/2021/probe-journalists-activists-among-firms-spyware-targets/": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.ap.org/media-center/ap-in-the-news/2021/probe-journalists-activists-among-firms-spyware-targets/"
+ },
+ "https://www.securityweek.com/spyware-israels-nso-used-against-journalist-amnesty/": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.securityweek.com/spyware-israels-nso-used-against-journalist-amnesty/"
+ },
+ "https://www.middleeasteye.net/news/morocco-omar-radi-dissident-reporter-sentenced-prison": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.middleeasteye.net/news/morocco-omar-radi-dissident-reporter-sentenced-prison"
+ },
+ "https://www.theguardian.com/world/2021/jul/18/nso-spyware-used-to-target-family-of-jamal-khashoggi-leaked-data-shows-saudis-pegasus": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.theguardian.com/world/2021/jul/18/nso-spyware-used-to-target-family-of-jamal-khashoggi-leaked-data-shows-saudis-pegasus"
+ },
+ "https://www.reuters.com/article/world/activists-and-journalists-in-mexico-complain-of-government-spying-idUSKBN19A312/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/article/world/activists-and-journalists-in-mexico-complain-of-government-spying-idUSKBN19A312/"
+ },
+ "https://www.voanews.com/a/huge-pro-government-media-conglomerate-formed-in-hungary-/4678690.html": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.voanews.com/a/huge-pro-government-media-conglomerate-formed-in-hungary-/4678690.html"
+ },
+ "https://www.reuters.com/article/technology/website-editors-sacking-deepens-fears-for-media-freedom-in-hungary-idUSKCN24N1DI/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/article/technology/website-editors-sacking-deepens-fears-for-media-freedom-in-hungary-idUSKCN24N1DI/"
+ },
+ "https://www.theguardian.com/world/2020/jul/24/hungarian-journalists-resign-en-masse-after-claims-of-political-interference": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.theguardian.com/world/2020/jul/24/hungarian-journalists-resign-en-masse-after-claims-of-political-interference"
+ },
+ "https://www.reuters.com/business/poland-uses-state-owned-refiner-buy-regional-media-firm-2020-12-07/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/business/poland-uses-state-owned-refiner-buy-regional-media-firm-2020-12-07/"
+ },
+ "https://turkishminute.com/2016/03/05/zaman-daily-editor-in-chief-bilici-todays-zamans-kenes-fired-by-trustees-after-govt-seizure/": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://turkishminute.com/2016/03/05/zaman-daily-editor-in-chief-bilici-todays-zamans-kenes-fired-by-trustees-after-govt-seizure/"
+ },
+ "https://www.reuters.com/article/world/pro-erdogan-group-agrees-to-buy-owner-of-hurriyet-newspaper-cnn-turk-idUSKBN1GX255/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/article/world/pro-erdogan-group-agrees-to-buy-owner-of-hurriyet-newspaper-cnn-turk-idUSKBN1GX255/"
+ },
+ "https://www.nytimes.com/2018/03/21/world/europe/turkey-media-erdogan-dogan.html": {
+  "state": "dead",
+  "status": 403,
+  "error": null,
+  "final_url": "https://www.nytimes.com/2018/03/21/world/europe/turkey-media-erdogan-dogan.html"
+ },
+ "https://english.ahram.org.eg/UI/Front/Inner.aspx?NewsContentID=466313": {
+  "state": "tier2",
+  "status": 403,
+  "error": null,
+  "final_url": "https://english.ahram.org.eg/UI/Front/Inner.aspx?NewsContentID=466313"
+ },
+ "https://www.hrw.org/report/2019/06/19/crackdown-nicaragua/torture-ill-treatment-and-prosecutions-protesters-and": {
+  "state": "ambiguous",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.hrw.org/report/2019/06/19/crackdown-nicaragua/torture-ill-treatment-and-prosecutions-protesters-and"
+ },
+ "https://www.reuters.com/article/business/turkey-deported-dutch-journalist-on-suspected-terror-links-official-idUSP8N1XC01I/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/article/business/turkey-deported-dutch-journalist-on-suspected-terror-links-official-idUSP8N1XC01I/"
+ },
+ "https://www.straitstimes.com/asia/south-asia/india-revokes-overseas-citizenship-status-of-writer-who-penned-article-critical-of?ai-allowed=1": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.straitstimes.com/asia/south-asia/india-revokes-overseas-citizenship-status-of-writer-who-penned-article-critical-of?ai-allowed=1"
+ },
+ "https://time.com/5721667/aatish-taseer-india-oci/": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://time.com/5721667/aatish-taseer-india-oci/"
+ },
+ "https://www.bbc.com/news/world-asia-55960284": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.bbc.com/news/world-asia-55960284"
+ },
+ "https://apnews.com/article/military-coup-myanmar-explained-f3e8a294e63e00509ea2865b6e5c342d": {
+  "state": "tier2",
+  "status": 403,
+  "error": null,
+  "final_url": "https://apnews.com/article/military-coup-myanmar-explained-f3e8a294e63e00509ea2865b6e5c342d"
+ },
+ "https://www.reuters.com/world/six-million-silenced-two-year-internet-outage-ethiopia--trfn-2022-09-29/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/world/six-million-silenced-two-year-internet-outage-ethiopia--trfn-2022-09-29/"
+ },
+ "https://apnews.com/article/technology-africa-internet-access-kenya-ethiopia-c4c9ba266cd166ba2aa43d1be6268a6a": {
+  "state": "tier2",
+  "status": 403,
+  "error": null,
+  "final_url": "https://apnews.com/article/technology-africa-internet-access-kenya-ethiopia-c4c9ba266cd166ba2aa43d1be6268a6a"
+ },
+ "https://www.reuters.com/business/media-telecom/russia-restricts-access-bbc-russian-service-radio-liberty-ria-2022-03-04/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/business/media-telecom/russia-restricts-access-bbc-russian-service-radio-liberty-ria-2022-03-04/"
+ },
+ "https://www.bbc.com/news/world-middle-east-50459971": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.bbc.com/news/world-middle-east-50459971"
+ },
+ "https://cpj.org/2023/08/india-blocks-social-media-accounts-of-gaon-savera-news-outlet-ahead-of-workers-convention/": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://cpj.org/2023/08/india-blocks-social-media-accounts-of-gaon-savera-news-outlet-ahead-of-workers-convention/"
+ },
+ "https://www.newslaundry.com/2023/08/23/gaon-saveras-social-media-handles-blocked-after-correspondence-from-indian-government": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.newslaundry.com/2023/08/23/gaon-saveras-social-media-handles-blocked-after-correspondence-from-indian-government"
+ },
+ "https://www.reuters.com/business/media-telecom/china-jails-citizen-journalist-four-years-over-wuhan-virus-reporting-2020-12-28/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/business/media-telecom/china-jails-citizen-journalist-four-years-over-wuhan-virus-reporting-2020-12-28/"
+ },
+ "https://www.reuters.com/world/russian-prosecutor-seeks-18-year-sentence-us-journalist-gershkovich-agencies-2024-07-19/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/world/russian-prosecutor-seeks-18-year-sentence-us-journalist-gershkovich-agencies-2024-07-19/"
+ },
+ "https://www.bbc.com/news/world-europe-34116812": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.bbc.com/news/world-europe-34116812"
+ },
+ "https://time.com/5528416/maria-ressa-arrested-cyber-libel/": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://time.com/5528416/maria-ressa-arrested-cyber-libel/"
+ },
+ "https://www.latimes.com/world/asia/la-fg-philippines-maria-ressa-20190218-story.html": {
+  "state": "paywalled",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.latimes.com/world/asia/la-fg-philippines-maria-ressa-20190218-story.html"
+ },
+ "https://www.theguardian.com/world/2015/aug/19/eritrea-forgotten-journalists-jailed-pen-international-press-freedom": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.theguardian.com/world/2015/aug/19/eritrea-forgotten-journalists-jailed-pen-international-press-freedom"
+ },
+ "https://www.bbc.com/news/articles/cx1l6762jeq4o": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.bbc.com/news/articles/cx1l6762jeq4o"
+ },
+ "https://apnews.com/article/manila-journalists-ap-top-news-international-news-philippines-cb026b7094fac489d60cf248eb86bbb2": {
+  "state": "tier2",
+  "status": 403,
+  "error": null,
+  "final_url": "https://apnews.com/article/manila-journalists-ap-top-news-international-news-philippines-cb026b7094fac489d60cf248eb86bbb2"
+ },
+ "https://www.philstar.com/headlines/2020/06/15/2020473/court-convicts-rapplers-ressa-cyber-libel": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.philstar.com/headlines/2020/06/15/2020473/court-convicts-rapplers-ressa-cyber-libel"
+ },
+ "https://meduza.io/en/news/2018/10/27/moscow-court-slaps-independent-magazine-with-crippling-22-million-ruble-fine-for-late-paperwork": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://meduza.io/en/news/2018/10/27/moscow-court-slaps-independent-magazine-with-crippling-22-million-ruble-fine-for-late-paperwork"
+ },
+ "https://www.icij.org/inside-icij/2018/11/independent-russian-magazine-spared-extinction-by-readers-covering-mammoth-political-fine/": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.icij.org/inside-icij/2018/11/independent-russian-magazine-spared-extinction-by-readers-covering-mammoth-political-fine/"
+ },
+ "https://daphnecaruanagalizia.com/2017/02/minister-economy-policy-officer-frozen-bank-accounts-statement-issued-media/": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://daphnecaruanagalizia.com/2017/02/minister-economy-policy-officer-frozen-bank-accounts-statement-issued-media/"
+ },
+ "https://www.assembly.coe.int/LifeRay/JUR/Pdf/TextesProvisoires/2019/20190529-CaruanaGaliziaAssassination-EN.pdf": {
+  "state": "ambiguous",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.assembly.coe.int/LifeRay/JUR/Pdf/TextesProvisoires/2019/20190529-CaruanaGaliziaAssassination-EN.pdf"
+ },
+ "https://cpj.org/2026/08/from-prosecutions-to-bans-and-spurious-copyright-claims-how-kazakhstans-journalists-are-being-silenced/": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://cpj.org/2026/08/from-prosecutions-to-bans-and-spurious-copyright-claims-how-kazakhstans-journalists-are-being-silenced/"
+ },
+ "https://www.occrp.org/en/news/kazakhstans-election-brings-a-new-parliament-and-more-pressure-on-journalists": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.occrp.org/en/news/kazakhstans-election-brings-a-new-parliament-and-more-pressure-on-journalists"
+ },
+ "https://www.npr.org/2019/03/18/704600310/russia-criminalizes-the-spread-of-online-news-which-disrespects-the-government": {
+  "state": "ambiguous",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.npr.org/2019/03/18/704600310/russia-criminalizes-the-spread-of-online-news-which-disrespects-the-government"
+ },
+ "https://www.themoscowtimes.com/2019/03/07/russia-passes-legislation-banning-disrespect-of-authorities-and-fake-news-a64742": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.themoscowtimes.com/2019/03/07/russia-passes-legislation-banning-disrespect-of-authorities-and-fake-news-a64742"
+ },
+ "https://www.themoscowtimes.com/2021/04/23/russia-declares-independent-news-site-meduza-a-foreign-agent-a73722": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.themoscowtimes.com/2021/04/23/russia-declares-independent-news-site-meduza-a-foreign-agent-a73722"
+ },
+ "https://www.dailynewsegypt.com/2019/03/23/supreme-media-council-block-al-mashhad-newspaper/": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.dailynewsegypt.com/2019/03/23/supreme-media-council-block-al-mashhad-newspaper/"
+ },
+ "https://cpj.org/2019/05/egypt-tests-new-censorship-law-with-handling-of-al/": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://cpj.org/2019/05/egypt-tests-new-censorship-law-with-handling-of-al/"
+ },
+ "https://www.reuters.com/article/business/vietnam-rebuffs-criticism-of-misunderstood-web-decree-idUSL4N0G72IA/": {
+  "state": "paywalled",
+  "status": 401,
+  "error": null,
+  "final_url": "https://www.reuters.com/article/business/vietnam-rebuffs-criticism-of-misunderstood-web-decree-idUSL4N0G72IA/"
+ },
+ "https://www.bbc.com/news/world-asia-23920541": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.bbc.com/news/world-asia-23920541"
+ },
+ "https://dokmz.com/2022/03/10/belarus-classifies-deutsche-welle-as-extremist/": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://dokmz.com/2022/03/10/belarus-classifies-deutsche-welle-as-extremist/"
+ },
+ "https://apps.dtic.mil/sti/tr/pdf/ADA225841.pdf": {
+  "state": "ambiguous",
+  "status": 200,
+  "error": null,
+  "final_url": "https://apps.dtic.mil/landingpage/maint.html"
+ },
+ "https://www.amnesty.org/en/wp-content/uploads/2021/06/amr360012002en.pdf": {
+  "state": "ambiguous",
+  "status": 200,
+  "error": null,
+  "final_url": "https://www.amnesty.org/en/wp-content/uploads/2021/06/amr360012002en.pdf"
+ },
+ "https://sabctrc.saha.org.za/originals/finalreport/volume1/chapters/volume1_ch30.pdf": {
+  "state": "ambiguous",
+  "status": 200,
+  "error": null,
+  "final_url": "https://sabctrc.saha.org.za/originals/finalreport/volume1/chapters/volume1_ch30.pdf"
+ },
+ "https://omalley.nelsonmandela.org/cis/omalley/OMalleyWeb/03lv02039/04lv02040/05lv02042.htm": {
+  "state": "ambiguous",
+  "status": 200,
+  "error": null,
+  "final_url": "https://omalley.nelsonmandela.org/cis/omalley/OMalleyWeb/03lv02039/04lv02040/05lv02042.htm"
+ },
+ "https://www.loc.gov/item/global-legal-monitor/2011-01-07/hungary-controversial-new-media-law-defended-by-government/": {
+  "state": "tier2",
+  "status": 403,
+  "error": null,
+  "final_url": "https://www.loc.gov/item/global-legal-monitor/2011-01-07/hungary-controversial-new-media-law-defended-by-government/"
+ },
+ "https://2009-2017.state.gov/j/drl/rls/hrrpt/2002/18401.htm": {
+  "state": "live",
+  "status": 200,
+  "error": null,
+  "final_url": "https://2009-2017.state.gov/j/drl/rls/hrrpt/2002/18401.htm"
+ }
+}
