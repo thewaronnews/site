@@ -1,0 +1,195 @@
+{
+ "applied": [
+  {
+   "n": 13,
+   "slug": "2021-belarus-blocks-tutby-arrests-staff",
+   "set": {
+    "occurred_on": "2021-05-18"
+   },
+   "new_claim": 485,
+   "refiled": null,
+   "source_id": 330,
+   "source_added": true,
+   "source_attached": true,
+   "prose_replaced": "1/1",
+   "revise": 200,
+   "revision": 7
+  },
+  {
+   "n": 14,
+   "slug": "2023-nicaragua-strips-journalists-citizenship",
+   "set": {
+    "occurred_on": "2023-02-15"
+   },
+   "new_claim": 486,
+   "refiled": null,
+   "source_id": 301,
+   "source_added": false,
+   "source_attached": false,
+   "prose_replaced": "1/1",
+   "revise": 200,
+   "revision": 6
+  },
+  {
+   "n": 12,
+   "slug": "2025-trump-sues-new-york-times-15-billion",
+   "set": {
+    "occurred_on": "2025-09-15"
+   },
+   "new_claim": 487,
+   "refiled": null,
+   "source_id": 275,
+   "source_added": false,
+   "source_attached": false,
+   "prose_replaced": "1/1",
+   "revise": 200,
+   "revision": 6
+  },
+  {
+   "n": 10,
+   "slug": "2025-fcc-carr-news-distortion-complaints-nbc-cbs",
+   "set": {
+    "occurred_on": "2025-01-22"
+   },
+   "new_claim": 488,
+   "refiled": null,
+   "source_id": 268,
+   "source_added": false,
+   "source_attached": false,
+   "prose_replaced": "1/1",
+   "revise": 200,
+   "revision": 6
+  },
+  {
+   "n": 11,
+   "slug": "2025-congress-rescinds-cpb-funding",
+   "set": {
+    "outcome_on": "2025-07-24",
+    "outcome_note": "The rescission became law on July 24, 2025 (Public Law 119-28), eliminating CPB's federal appropriation; no restoration of the funding had occurred in the sources reviewed."
+   },
+   "new_claim": 489,
+   "refiled": null,
+   "source_id": 331,
+   "source_added": true,
+   "source_attached": true,
+   "prose_replaced": "1/1",
+   "revise": 200,
+   "revision": 7
+  },
+  {
+   "n": 9,
+   "slug": "2020-federal-officers-target-journalists-portland-injunction",
+   "set": {
+    "occurred_on": "2020-07-23",
+    "outcome_on": "2020-07-23",
+    "outcome_note": "On July 23, 2020, the court ordered federal agents to stop dispersing, arresting or using force against identified journalists and legal observers; the order was later extended."
+   },
+   "new_claim": 491,
+   "refiled": {
+    "331": 490
+   },
+   "source_id": 332,
+   "source_added": true,
+   "source_attached": true,
+   "prose_replaced": "1/1",
+   "revise": 200,
+   "revision": 7
+  },
+  {
+   "n": 7,
+   "slug": "2013-ecuador-communications-law-supercom",
+   "set": {
+    "outcome_on": "2019-02-20",
+    "outcome_note": "President Lenin Moreno's government moved to eliminate SUPERCOM in 2018, and the reform of the Communication Law was published in the Official Register on February 20, 2019; Fundamedios director Cesar Ricaurte said the surrounding legal framework nonetheless remained \"intact.\""
+   },
+   "new_claim": 492,
+   "refiled": null,
+   "source_id": 333,
+   "source_added": true,
+   "source_attached": true,
+   "prose_replaced": "0/0",
+   "revise": 200,
+   "revision": 7
+  },
+  {
+   "n": 15,
+   "slug": "2024-slovakia-dissolves-rtvs-creates-stvr",
+   "set": {
+    "outcome_on": "2024-07-01"
+   },
+   "new_claim": 493,
+   "refiled": null,
+   "source_id": 334,
+   "source_added": true,
+   "source_attached": true,
+   "prose_replaced": "1/1",
+   "revise": 200,
+   "revision": 7
+  },
+  {
+   "n": "note-1",
+   "slug": "2020-australia-high-court-invalidates-smethurst-warrant",
+   "set": {
+    "outcome_note": "The High Court found the 2019 warrant invalid but declined to order the AFP to return or destroy the material it had seized; weeks later the AFP announced it would not charge Smethurst."
+   },
+   "new_claim": 494,
+   "refiled": null,
+   "source_id": 322,
+   "source_added": false,
+   "source_attached": false,
+   "prose_replaced": "0/0",
+   "revise": 200,
+   "revision": 6
+  }
+ ],
+ "skipped": [
+  {
+   "n": 1,
+   "slug": "1983-us-grenada-press-exclusion",
+   "field": "outcome_on",
+   "why": "The verification offers two alternative dates (1984-10-09 or 1984-08-23) and cites \"apps.dtic.mil (Sidle Commission report)\" without a document address; the Sidle report is the recommendation, not the pool's establishment. No source stating a single date could be fetched. Not changed."
+  },
+  {
+   "n": 2,
+   "slug": "1981-haiti-duvalier-radio-haiti-inter-exile",
+   "field": "occurred_on",
+   "why": "Cited source is \"amnesty.org\" with no document address; none could be located. The record's own source (RSF) says Dominique was forced into exile in 1981. Not changed."
+  },
+  {
+   "n": 3,
+   "slug": "1950-south-africa-suppression-of-communism-act",
+   "field": "occurred_on",
+   "why": "Cited sources are en.wikisource.org (a wiki, not an accepted source type) and sabctrc.saha.org.za (the glossary page answers \"Page Not Found\"). Not changed."
+  },
+  {
+   "n": 4,
+   "slug": "1950-south-africa-suppression-of-communism-act",
+   "field": "outcome_on",
+   "why": "Cited source sabctrc.saha.org.za (chronology) could not be reached (\"Page Not Found\"); no other qualifying source fetched. Not changed."
+  },
+  {
+   "n": 5,
+   "slug": "2006-russia-politkovskaya-killed",
+   "field": "outcome description",
+   "why": "Cited sources include en.wikipedia.org (not accepted). No change needed: the live record already names Dmitry Pavlyuchenkov as the former police officer (claim 267, RFE/RL 2012) and says five men were convicted; 2014-06-09 is the sentencing of the others."
+  },
+  {
+   "n": 6,
+   "slug": "2010-hungary-media-law-content-authority",
+   "field": "occurred_on",
+   "why": "Cited sources europarl.europa.eu and loc.gov refuse automated fetches (202 challenge, robots); no document address was given. Not changed."
+  },
+  {
+   "n": 8,
+   "slug": "1998-serbia-public-information-act-fines",
+   "field": "outcome_on",
+   "why": "Cited source 2009-2017.state.gov (Yugoslavia country report) answers every fetch with a \"Technical Difficulties\" error page; the value (\"2000-10\") could not be read. Not changed."
+  },
+  {
+   "n": "note-2",
+   "slug": "2023-zimbabwe-patriotic-act-criminalizes-foreign-contact",
+   "field": "summary wording",
+   "why": "The note concerns how the act's text is described, not an outcome field; the record already says the act criminalizes meeting foreign officials \"with intent to harm Zimbabwe's sovereignty\". Not loaded."
+  }
+ ]
+}
