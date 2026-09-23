@@ -747,3 +747,50 @@ URLs, HTTP 200.
 31. TODO 30 (Cloudflare RUM beacon) was out of this session's scope and remains open.
 32. "Tactics in use now" on `/united-states` is now the largest section on the page (see above); collapsing it the
     same way "How it got here" was collapsed would cut the page height much more than this session's change did.
+
+## 2026-09-23 13:05 UTC: scheduled maintenance run (operator)
+
+Unattended run from the Cowork sandbox on the Mac Studio (device_bash). Background processes do not survive a
+device_bash call, so `linkcheck.py --all` and `wayback.py --all` were driven in slices from `~/twonrun/` wrappers
+that monkeypatch `fetch_all_sources_from_export()`; the scripts themselves are unchanged.
+
+- **Health (13:05Z).** incidents 191 (190 published), sources 512, claims 732, events 6, link_integrity ok 468 /
+  unchecked 44 / dead 0 / archived 27 (share 0.914). coverage_last_run 12:05Z (hourly cron healthy, no manual invoke
+  needed): 20 feeds, 1 feed error (Google News RSS 503, the known one), fetched 585, fresh 241, scored 3, shown 0,
+  hidden 7. Last export 11:24Z (id 10, manual).
+- **Link integrity.** `linkcheck.py --all`: 512 sources checked and posted: live 378, paywalled 44, dead 26,
+  error 50, bot_blocked 4, redirected 10. Health afterwards: ok 486 / unchecked 27 / dead 0 (the Worker's 3-in-48h
+  rule has not tipped any source yet; 26 fetched as dead tonight, mostly the same set as the 02:42Z run's 23).
+  `wayback.py --all` (stopped early by the operator, not by the 10-failure rule): 21 attempted, 3 saved, 18 failed;
+  archive.org answered 429 Too Many Requests, connection resets and TLS EOFs, so the Save Page Now endpoint is
+  still unreliable from here. Archived count 27 -> 30. Single-URL save of the new Reuters source (513) also failed.
+  `indexnow.py --since-hours 26`: 1,446 URLs pinged, HTTP 200 (the 22 September date-format and Atlas changes
+  touched nearly every page).
+- **Focal case (Cable News Network, Inc. v. Trump, D.D.C. 1:26-cv-03287).** Perplexity Pro (Chrome, Browser 2) plus
+  the Reuters piece read directly. New dated development: on 22 September 2026 the administration filed its written
+  opposition to the outlets' motion for a temporary restraining order, arguing that White House access is a
+  privilege, not an entitlement (Reuters, 23 Sept, "News outlets will ask judge to end Trump's White House ban at
+  hearing"; the Washington Post's 23 Sept piece pins the filing to Tuesday 22 Sept). Added: source 513 (Reuters),
+  claim 733 (incident field `action`, outlet_report, high, verbatim quote 186 chars), event 13 (2026-09-22, filing,
+  published, attached to claim 733), and the source attached to the incident (revision 24). The TRO hearing before
+  Judge Timothy Kelly is set for 3:30 pm ET today and had not happened when this ran, so `status` stays
+  `in_effect` and no status claim was superseded; the record's "hearing scheduled 2026-09-23" event (6) already
+  covered the hearing. Perplexity also reported (not verified against a source page, not recorded): 22 Sept White
+  House letters giving each outlet until 5 pm Friday 25 Sept to contest a "preliminary" revocation before it
+  becomes final; the filing questioning Sherrill v. Knight; barred reporters covering Trump at the UN General
+  Assembly on UN credentials; AP reporting Trump telling CNN's Kaitlan Collins "You should not be here". The
+  evening run should check the hearing outcome (Reuters/AP/court record) and, if a TRO is granted or denied, add a
+  ruling event plus a superseding status claim.
+- **Coverage sanity.** /coverage.json: 18 items shown. Only 1 item is new since the last run (id 183, CPJ, DRC
+  journalist arrested, published 23 Sept); 3 more are dated 22 Sept (RSF, NBC, Yahoo). Fewer than 3 added in 24h,
+  noted. No shown item is plainly off-topic; nothing hidden. (fetched_at is refreshed on every cron pass, so it
+  cannot be used to date additions; published_at was used instead.)
+- **Search Console.** Domain property sc-domain:thewaronnews.com (betty@benesthemenace.com): Performance, Indexing
+  and the Pages report all still say "Processing data, please check again in a day or so"; clicks 0, impressions 0
+  (last 3 months); Enhancements: Breadcrumbs 12 valid, 0 invalid. No settings touched. Bing not checked.
+- **Git.** A stale, empty `.git/index.lock` (13:32Z) blocked `git add`; the sandbox cannot delete files in the
+  synced folder, so it was moved aside to `.git/index.lock.stale` (safe to delete).
+- **Open for Peter.** (1) archive.org keeps rate-limiting Save Page Now: consider WAYBACK_ACCESS_KEY/SECRET (SPN2)
+  or a slower cadence; 483 sources still lack a snapshot. (2) The 26 sources fetched as dead twice in 24h will tip
+  to `dead` on the next failing check; a review list is in ops/logs/linkcheck-2026-09-23.jsonl. (3) Coverage cron
+  showed 0 of 3 scored items today; Google News RSS 503s continue.

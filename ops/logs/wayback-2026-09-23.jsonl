@@ -18,3 +18,40 @@
 {"event": "failed", "script": "wayback", "source_id": 25, "ts": "2026-09-23T02:01:37Z", "url": "https://en.wikipedia.org/wiki/Associated_Press_v._Budowich"}
 {"consecutive_failures": 10, "event": "stopping_after_failures", "script": "wayback", "ts": "2026-09-23T02:01:46Z"}
 {"dry_run": false, "event": "summary", "failed": 10, "saved": 0, "script": "wayback", "total": 150, "ts": "2026-09-23T02:01:46Z"}
+{"count": 3, "dry_run": false, "event": "start", "mode": "all", "script": "wayback", "ts": "2026-09-23T13:25:59Z"}
+{"event": "failed", "script": "wayback", "source_id": 3, "ts": "2026-09-23T13:26:08Z", "url": "https://whca.press/2026/09/18/statement-on-white-house-position-on-cnn-msnow-and-politico/"}
+{"event": "failed", "script": "wayback", "source_id": 9, "ts": "2026-09-23T13:26:27Z", "url": "https://www.cnn.com/2026/09/20/politics/white-house-press-pool-trump"}
+{"event": "failed", "script": "wayback", "source_id": 16, "ts": "2026-09-23T13:26:47Z", "url": "https://politifact.com/factchecks/2026/sep/21/tiktok-posts/trump-white-house-press-ban-biden-440/"}
+{"dry_run": false, "event": "summary", "failed": 3, "saved": 0, "script": "wayback", "total": 3, "ts": "2026-09-23T13:26:55Z"}
+{"count": 3, "dry_run": false, "event": "start", "mode": "all", "script": "wayback", "ts": "2026-09-23T13:26:59Z"}
+{"event": "failed", "script": "wayback", "source_id": 18, "ts": "2026-09-23T13:27:07Z", "url": "https://theworlddata.com/us-white-house-press-access-statistics/"}
+{"event": "failed", "script": "wayback", "source_id": 19, "ts": "2026-09-23T13:27:30Z", "url": "https://www.newsonair.gov.in/white-house-bans-associated-press-from-oval-office-air-force-one"}
+{"event": "saved", "script": "wayback", "source_id": 21, "ts": "2026-09-23T13:27:40Z", "url": "https://www.euronews.com/2025/02/25/us-judge-refuses-to-overturn-trumps-ap-white-house-ban-amid-gulf-of-america-row", "wayback_url": "https://web.archive.org/web/20260923015950/https://www.euronews.com/2025/02/25/us-judge-refuses-to-overturn-trumps-ap-white-house-ban-amid-gulf-of-america-row"}
+{"dry_run": false, "event": "summary", "failed": 2, "saved": 1, "script": "wayback", "total": 3, "ts": "2026-09-23T13:27:49Z"}
+{"count": 5, "dry_run": false, "event": "start", "mode": "all", "script": "wayback", "ts": "2026-09-23T13:27:54Z"}
+{"event": "failed", "script": "wayback", "source_id": 22, "ts": "2026-09-23T13:28:04Z", "url": "https://www.npr.org/2025/03/21/nx-s1-5336351/voice-of-america-trump-lawsuit-kari-lake-voa"}
+{"event": "failed", "script": "wayback", "source_id": 23, "ts": "2026-09-23T13:28:24Z", "url": "https://www.afge.org/article/judge-invalidates-trump-administrations-attempts-to-dismantle-voice-of-america/"}
+{"event": "failed", "script": "wayback", "source_id": 24, "ts": "2026-09-23T13:28:42Z", "url": "https://www.npr.org/2025/04/08/nx-s1-5342369/ap-white-house-court-ruling-oval-office-gulf-of-mexico-america"}
+{"event": "saved", "script": "wayback", "source_id": 25, "ts": "2026-09-23T13:28:53Z", "url": "https://en.wikipedia.org/wiki/Associated_Press_v._Budowich", "wayback_url": "https://web.archive.org/web/20260923020134/https://en.wikipedia.org/wiki/Associated_Press_v._Budowich"}
+{"event": "failed", "script": "wayback", "source_id": 26, "ts": "2026-09-23T13:29:14Z", "url": "https://www.courtlistener.com/opinion/10600096/associated-press-v-taylor-budowich/"}
+{"dry_run": false, "event": "summary", "failed": 4, "saved": 1, "script": "wayback", "total": 5, "ts": "2026-09-23T13:29:22Z"}
+{"count": 5, "dry_run": false, "event": "start", "mode": "all", "script": "wayback", "ts": "2026-09-23T13:29:26Z"}
+{"event": "failed", "script": "wayback", "source_id": 28, "ts": "2026-09-23T13:29:33Z", "url": "https://www.npr.org/2025/09/19/nx-s1-5546764/fcc-brendan-carr-kimmel-trump-free-speech"}
+{"event": "failed", "script": "wayback", "source_id": 30, "ts": "2026-09-23T13:29:50Z", "url": "https://www.axios.com/2025/10/14/pentagon-press-restrictions-trump-journalists-news-outlets"}
+{"event": "failed", "script": "wayback", "source_id": 33, "ts": "2026-09-23T13:30:06Z", "url": "https://www.yahoo.com/news/white-house-shakes-press-pool-005713395.html"}
+{"event": "failed", "script": "wayback", "source_id": 34, "ts": "2026-09-23T13:30:21Z", "url": "https://www.yahoo.com/news/white-house-bans-wall-street-195507211.html"}
+{"event": "failed", "script": "wayback", "source_id": 35, "ts": "2026-09-23T13:30:37Z", "url": "https://cpj.org/2026/01/journalist-jailings-imperil-a-free-press-worldwide-amid-reports-of-life-threatening-prison-conditions-cpj/"}
+{"dry_run": false, "event": "summary", "failed": 5, "saved": 0, "script": "wayback", "total": 5, "ts": "2026-09-23T13:30:46Z"}
+{"count": 5, "dry_run": false, "event": "start", "mode": "all", "script": "wayback", "ts": "2026-09-23T13:30:51Z"}
+{"event": "saved", "script": "wayback", "source_id": 36, "ts": "2026-09-23T13:30:53Z", "url": "https://www.niemanlab.org/2024/08/a-new-louisiana-law-limits-the-right-of-journalists-and-everyone-else-to-film-police-abuse/", "wayback_url": "https://web.archive.org/web/20251101085802/https://www.niemanlab.org/2024/08/a-new-louisiana-law-limits-the-right-of-journalists-and-everyone-else-to-film-police-abuse/"}
+{"event": "failed", "script": "wayback", "source_id": 37, "ts": "2026-09-23T13:31:11Z", "url": "https://www.rcfp.org/reporters-recording-guide/louisiana/"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-23T13:31:19Z", "url": "https://www.yahoo.com/news/judge-blocks-enforcement-louisiana-25-225735750.html"}
+{"event": "failed", "script": "wayback", "source_id": 38, "ts": "2026-09-23T13:31:26Z", "url": "https://www.yahoo.com/news/judge-blocks-enforcement-louisiana-25-225735750.html"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-23T13:31:35Z", "url": "https://www.phelps.com/insights/new-buffer-zone-laws-in-louisiana-and-florida-their-impact-on-journalists-first-amendment-rights.html"}
+{"event": "failed", "script": "wayback", "source_id": 39, "ts": "2026-09-23T13:31:42Z", "url": "https://www.phelps.com/insights/new-buffer-zone-laws-in-louisiana-and-florida-their-impact-on-journalists-first-amendment-rights.html"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-23T13:31:51Z", "url": "https://firstamendment.mtsu.edu/article/richard-m-nixon/"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-23T13:31:51Z", "url": "https://firstamendment.mtsu.edu/article/richard-m-nixon/"}
+{"event": "failed", "script": "wayback", "source_id": 42, "ts": "2026-09-23T13:31:51Z", "url": "https://firstamendment.mtsu.edu/article/richard-m-nixon/"}
+{"dry_run": false, "event": "summary", "failed": 4, "saved": 1, "script": "wayback", "total": 5, "ts": "2026-09-23T13:32:00Z"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-23T13:32:09Z", "url": "https://www.reuters.com/legal/government/news-outlets-will-ask-judge-end-trumps-white-house-ban-hearing-2026-09-23/"}
+{"event": "single_failed", "script": "wayback", "ts": "2026-09-23T13:32:16Z", "url": "https://www.reuters.com/legal/government/news-outlets-will-ask-judge-end-trumps-white-house-ban-hearing-2026-09-23/"}
