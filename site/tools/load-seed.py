@@ -43,10 +43,47 @@ CLAIM_METHOD = {
     "outlet_report": "outlet_report", "org_report": "outlet_report", "official_statement": "official_statement",
     "court_record": "court_record", "primary_document": "primary_document", "other": "outlet_report",
 }
-OUTLET_KIND = {"wire": "wire_service"}
+OUTLET_KIND = {
+    "wire": "wire_service", "news_agency": "wire_service",
+    "digital_native": "digital", "news_website": "digital",
+    "media_network": "broadcaster", "newspaper_group": "newspaper",
+    "media_conglomerate": "other",
+}
 ACTOR_KIND = {
     "person": ("person", None), "court": ("body", "court"), "agency": ("body", "agency"),
     "legislature": ("body", "legislature"), "office": ("body", "executive_office"), "other": ("body", "other"),
+}
+# The legacy v1 incidents.type CHECK enum (site/src/records.js ENUMS.incident_type).
+# v2/v3 incidents carry a 13-tactic-taxonomy slug in `type` that duplicates
+# `tactic_primary` instead (seed-check.py's own "Seed vs spec shape" note);
+# posting one of those as `type` would fail the old enum, so it is only sent
+# when it is actually a legacy value, and left unset (null) otherwise --
+# `tactic_primary`/`tactics` carry the real classification for those records.
+LEGACY_INCIDENT_TYPE = {
+    "access_ban", "credential_revocation", "lawsuit_against_press", "regulatory_pressure",
+    "funding_cut", "arrest_or_detention", "subpoena_or_seizure", "legislation",
+    "physical_obstruction", "other",
+}
+# v2/v3 incident classification fields (POST /admin/incidents/<slug>/fields,
+# records.js INCIDENT_V2_FIELDS): sent only when the seed actually carries a
+# value, same reasoning as stage/ladder_note above -- an older or stale local
+# seed copy must never blank out a field a live correction pass already set.
+INCIDENT_V2_SEED_FIELDS = [
+    "tactic_primary", "leader_slug", "issue_of_the_day", "outcome", "outcome_on",
+    "outcome_note", "granularity",
+]
+# Incident claim `field` allowlist (records.js CLAIM_FIELDS.incident) is
+# ["occurred_on","announced_by","action","stated_justification",
+# "effect_on_reporting","status","outlet_affected","journalist_affected",
+# "scope_of_action","reversed_on"]. The v2/v3 seed's own claims name the
+# incident prose field they support instead (matching the WORKLOG's own
+# documented precedent for what_happened -> action, outcome -> status):
+# format-only remaps to the DB's fixed vocabulary, not fact changes.
+CLAIM_FIELD_MAP = {
+    "what_happened": "action",
+    "outcome_note": "status",
+    "what_we_dont_know": "status",
+    "issue_of_the_day": "scope_of_action",
 }
 JURISDICTION = {
     "United States, federal": "US", "Louisiana, United States": "US-LA", "Florida, United States": "US-FL",
@@ -140,6 +177,26 @@ def with_refs(text, ids):
 def case_relation(case_date, incident_date):
     """A case filed on or after the incident arises from it; an earlier one is precedent."""
     return "arising_from" if case_date and case_date >= (incident_date or "")[:10] else "precedent_cited"
+
+
+def default_incident_status(inc):
+    """incidents.status (the enum column) for a slug with no explicit entry
+    in INCIDENT_STATUS (the v1 seed's per-incident overrides). v2/v3 seed
+    incidents carry `outcome` instead; there is no clean formula from
+    outcome + date to status (the live record mixes, e.g., "in_effect" and
+    "historical" across the same decades depending on whether the specific
+    measure -- not just the era -- is still in force), so this is a
+    documented approximation, not a researched fact: a reversed/sustained/
+    upheld matter from before 2020 is treated as a closed, historical
+    episode; a reversed one from 2020 on as a recent reversal; anything
+    else (ongoing/unknown, or no outcome at all) as still in effect."""
+    outcome = inc.get("outcome")
+    year = int((inc.get("occurred_on") or "9999")[:4])
+    if outcome == "reversed":
+        return "historical" if year < 2020 else "reversed"
+    if outcome in ("sustained", "upheld") and year < 2020:
+        return "historical"
+    return "in_effect"
 
 
 def undash(text):
@@ -321,9 +378,21 @@ def main():
         base_row = {
             "title": inc["title"], "occurred_on": inc["occurred_on"], "occurred_on_precision": inc.get("occurred_on_precision", "day"),
             "jurisdiction": jurisdiction(inc["jurisdiction"], inc.get("country", "US")), "country": inc.get("country", "US"),
-            "level": inc["level"], "type": inc["type"], "status": INCIDENT_STATUS.get(seed_slug, "in_effect"),
+            "level": inc["level"], "type": inc["type"] if inc.get("type") in LEGACY_INCIDENT_TYPE else None,
+            "status": INCIDENT_STATUS.get(seed_slug) or default_incident_status(inc),
             "status_updated_on": STATUS_AS_OF, "unknowns": inc.get("what_we_dont_know"),
         }
+        # v3 (brief v3-ladder-brief-2026-09-22): stage is required to publish
+        # an incident, and ladder_note is optional context for a rung. Sent
+        # only when the seed actually carries a value, so a re-run over an
+        # older seed file that predates this field (or a stale local copy
+        # that was never synced back from a live stage-backfill/correction
+        # pass) never overwrites an existing incident's live stage/ladder_note
+        # with a blank -- upsertRecord leaves an omitted column untouched.
+        if inc.get("stage"):
+            base_row["stage"] = inc["stage"]
+        if inc.get("ladder_note"):
+            base_row["ladder_note"] = inc["ladder_note"]
         for k in ("summary", "what_happened", "stated_justification", "effect_on_reporting"):
             inc[k] = undash(inc.get(k))
         status_text = undash(status_text)
@@ -360,6 +429,18 @@ def main():
         if st != 200:
             fail("incidents", slug, st, b)
             continue
+        # v2/v3 classification fields (tactic_primary, leader_slug, outcome,
+        # granularity, issue_of_the_day, plus the full `tactics` list, which
+        # POST /admin/incidents/<slug>/fields keeps in sync with
+        # tactic_primary in one call) -- sent only for the fields the seed
+        # actually carries, same care as stage/ladder_note above.
+        v2_fields = {k: inc[k] for k in INCIDENT_V2_SEED_FIELDS if inc.get(k)}
+        if inc.get("tactics"):
+            v2_fields["tactics"] = inc["tactics"]
+        if v2_fields:
+            st, b = api.call("POST", f"/admin/incidents/{slug}/fields", {**v2_fields, "reason": REASON, "batch_label": BATCH})
+            if st != 200:
+                fail("incidents", slug + " (v2 fields)", st, b)
         # links
         actor_roles = inc.get("actor_roles", {})
         def role_for(a):
@@ -388,7 +469,8 @@ def main():
             if not src or cl["source_id"] not in sid:
                 report["claims"]["failed"].append({"incident": slug, "field": cl["field"], "error": "unknown source"})
                 continue
-            key = (cl["field"], sid[cl["source_id"]], q)
+            field = CLAIM_FIELD_MAP.get(cl["field"], cl["field"])
+            key = (field, sid[cl["source_id"]], q)
             body = {
                 "value": cl.get("value"), "statement": cl["statement"], "source_id": sid[cl["source_id"]], "evidence_quote": q,
                 "evidence_date": src.get("published_on"), "method": CLAIM_METHOD.get(src["kind"], "outlet_report"),
@@ -406,29 +488,29 @@ def main():
                     if st == 200:
                         new_id = b["id"]
                         have[key] = {**old, "id": new_id, "statement": cl["statement"], "value": cl.get("value")}
-                        bucket = by_field.setdefault(cl["field"], [])
+                        bucket = by_field.setdefault(field, [])
                         if old["id"] in bucket:
                             bucket.remove(old["id"])
                         if new_id not in bucket:
                             bucket.append(new_id)
                         report["claims"]["superseded"] = report["claims"].get("superseded", 0) + 1
                     else:
-                        report["claims"]["failed"].append({"incident": slug, "field": cl["field"], "status": st, "detail": b.get("details") or b, "note": "supersede failed"})
-                        if old["id"] not in by_field.setdefault(cl["field"], []):
-                            by_field[cl["field"]].append(old["id"])
+                        report["claims"]["failed"].append({"incident": slug, "field": field, "status": st, "detail": b.get("details") or b, "note": "supersede failed"})
+                        if old["id"] not in by_field.setdefault(field, []):
+                            by_field[field].append(old["id"])
                 else:
-                    if old["id"] not in by_field.setdefault(cl["field"], []):
-                        by_field[cl["field"]].append(old["id"])
+                    if old["id"] not in by_field.setdefault(field, []):
+                        by_field[field].append(old["id"])
                 report["claims"]["existing"] += 1
                 continue
             st, b = api.call("POST", "/admin/claims", {
-                "subject_type": "incident", "subject_slug": slug, "field": cl["field"], **body,
+                "subject_type": "incident", "subject_slug": slug, "field": field, **body,
             })
             if st == 200:
-                by_field.setdefault(cl["field"], []).append(b["id"])
+                by_field.setdefault(field, []).append(b["id"])
                 report["claims"]["created"] += 1
             else:
-                report["claims"]["failed"].append({"incident": slug, "field": cl["field"], "status": st, "detail": b.get("details") or b})
+                report["claims"]["failed"].append({"incident": slug, "field": field, "status": st, "detail": b.get("details") or b})
         inc_claims[seed_slug] = {"slug": slug, "by_field": by_field, "sources": [sid.get(s) for s in inc.get("sources", [])]}
         all_ids = sorted({i for ids in by_field.values() for i in ids})
         if not all_ids:

@@ -1,0 +1,2 @@
+{"error": "INDEXNOW_KEY is not set (see ops/README.md)", "event": "fatal", "script": "indexnow", "ts": "2026-09-23T02:02:46Z"}
+{"count": 1402, "event": "pinged", "script": "indexnow", "status": 200, "ts": "2026-09-23T02:02:53Z"}

@@ -90,6 +90,9 @@ SPEC_ENUMS = {
         "funding_and_ownership_pressure", "expulsion_and_visa_denial", "shutdowns_and_blocking",
         "detention_and_violence", "lawsuits_against_press", "disinformation_labeling",
     },
+    # v3 (brief v3-ladder-brief-2026-09-22): escalation stage. The admin API
+    # now refuses to publish an incident with no stage set.
+    "incident.stage": {"restrict", "pressure", "punish", "silence", "eliminate"},
 }
 
 # Pre-DB-mapping seed vocabularies that the load tools (load-seed.py,
@@ -109,7 +112,10 @@ SEED_SIDE_VOCAB = {
     },
     "actor.kind": {"person", "body", "office", "other"},
     "source.link_state": {"blocks_automated_checks"},
-    "outlet.kind": {"wire", "publisher"},
+    "outlet.kind": {
+        "wire", "publisher", "news_agency", "digital_native", "news_website",
+        "media_network", "newspaper_group", "media_conglomerate",
+    },
 }
 
 # Prose fields checked for em/en dashes and lint per record type. This is
@@ -396,6 +402,12 @@ def run(seed_dir: Path) -> Report:
             check_enum(report, "incidents", slug, "outcome", i["outcome"], "incident.outcome")
         if "granularity" in i and i["granularity"] is not None:
             check_enum(report, "incidents", slug, "granularity", i["granularity"], "incident.granularity")
+        # v3: stage is required on every incident (the admin API refuses to
+        # publish an incident with no stage set).
+        if not i.get("stage"):
+            report.add("incidents", slug, "field_missing", "stage is missing or empty (required to publish, brief v3-ladder-brief-2026-09-22)")
+        else:
+            check_enum(report, "incidents", slug, "stage", i["stage"], "incident.stage")
         leader = i.get("leader_slug")
         if leader and leader not in actor_slugs:
             report.add("incidents", slug, "broken_reference", f"leader_slug: '{leader}' not found in actors.json")

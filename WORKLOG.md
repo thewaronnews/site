@@ -375,3 +375,175 @@ Commits 05e5f65 (step 1) to the step 6 commit; details in site/NOTES.md "v3".
 8. New sources 327 to 334 (RSF, CPJ, govinfo, ACLU of Oregon, ARCOTEL, IRIS Merlin) have no link check or Wayback snapshot.
 9. Design pass: new classes are unstyled (rsf, rsf-rank, rsf-line, focal-case, counts-caveat, ladder-note,
    stage-definition); home "Latest incidents" cards do not show RSF ranks.
+
+## 2026-09-23: v3 ladder content load, 62 comparator incidents (lead implementer)
+
+Loaded research-v3/ladder-1.json and ladder-2.json (62 comparator incidents across 28 countries,
+for the 13 tactics, per v3-ladder-brief-2026-09-22.md) into the live site. Commit: "v3 content: 62
+ladder incidents".
+
+**Before -> after (GET /admin/health):** incidents 128 published / 129 total -> 190 published / 191
+total; actors 211 -> 243; outlets 58 -> 111; journalists 22 -> 79; cases 4 -> 4 (unchanged, no new
+case data in the research); sources 334 -> 403; claims 494 (485 current) -> 698 (689 current);
+glossary_terms 67 -> 67 (unchanged). link_integrity after a full ops/linkcheck.py --all: 403 total,
+382 ok, 27 archived, 0 dead, 21 unchecked, share 0.948.
+
+**Stage distribution, all 190 live incidents:** restrict 20, pressure 41, punish 60, silence 47,
+eliminate 22. The 62 new incidents alone: pressure 13, punish 20, silence 16, eliminate 13 (none at
+restrict, by design: every new incident is a comparator rung placed above a US instance). New
+countries covered: Azerbaijan, Belarus, China, Egypt, Eritrea, Ethiopia, Hong Kong, Hungary, Israel,
+India, Iran, Cambodia, North Korea, Kazakhstan, Morocco, Myanmar, Malta, Mexico, Nicaragua,
+Philippines, Poland, Russia, Saudi Arabia, Thailand, Turkiye, Venezuela, Vietnam, Zimbabwe (28).
+Every one of the 13 tactic ladders now shows comparator rungs at pressure stage or above from a
+non-US state (checked live via /ladders/<tactic>.json): access_ban 8, credential_control 7,
+outlet_licensing 26, prior_restraint 18, secrets_and_espionage_laws 11, insult_and_defamation_laws
+14, surveillance_and_subpoenas 10, funding_and_ownership_pressure 20, expulsion_and_visa_denial 13,
+shutdowns_and_blocking 17, detention_and_violence 32, lawsuits_against_press 5,
+disinformation_labeling 11.
+
+**1. load-seed.py gaps found and fixed (site/tools/load-seed.py).** The task named one known gap
+(stage/ladder_note not sent); testing surfaced four more that would have silently produced wrong or
+rejected records for any v2/v3-schema incident, not just this batch:
+   - `stage`/`ladder_note` now sent, but only when the seed actually carries a value (never as an
+     explicit null), so a re-run over a seed file that predates these fields, or a local copy never
+     synced back from a live stage-backfill or correction pass, cannot blank out a live value.
+   - The full v2 classification (`tactic_primary`, `leader_slug`, `outcome`, `outcome_on`,
+     `outcome_note`, `granularity`, `issue_of_the_day`, and the `tactics` array) was not sent by
+     load-seed.py at all before this session; a v2/v3 incident created through it would have every one
+     of those fields null. Now sent via `POST /admin/incidents/<slug>/fields` right after the base
+     record exists and before publish (publish requires `stage`), same conditional-on-present rule as
+     above.
+   - `incidents.type` is a legacy 10-value enum (access_ban, credential_revocation, ...); the v2/v3
+     seed's `type` duplicates `tactic_primary` from the 13-tactic taxonomy instead, which is a
+     different vocabulary and would fail the old enum for every tactic except access_ban. `type` is now
+     sent only when it is actually one of the legacy values, left null otherwise (matching how the
+     already-live 105-incident v2 batch has it: `type` null, `tactic_primary` set).
+   - Incident claim `field` must be one of the DB's fixed allowlist (occurred_on, announced_by,
+     action, stated_justification, effect_on_reporting, status, outlet_affected, journalist_affected,
+     scope_of_action, reversed_on); the new research's claims use the incident's own prose field names
+     instead (what_happened, outcome_note, issue_of_the_day, what_we_dont_know), causing 114 claim
+     POSTs to fail with `not_in_allowlist` on the first load attempt. Added `CLAIM_FIELD_MAP`
+     (what_happened -> action, outcome_note -> status, what_we_dont_know -> status, issue_of_the_day
+     -> scope_of_action; stated_justification and effect_on_reporting were already valid and pass
+     through), format-only remaps, not fact changes, matching the WORKLOG's own documented precedent
+     for the original what_happened/outcome remap.
+   - `outlets.kind` shorthand from the new research (digital_native, news_website, media_network,
+     newspaper_group, media_conglomerate, news_agency) was not in `OUTLET_KIND`'s translation dict and
+     would fail the DB's 9-value enum; added mappings to digital/broadcaster/newspaper/other/
+     wire_service as appropriate.
+   - `incidents.status` (the enum column, not the seed's free-text `status` narrative) had no formula
+     for a slug outside the original 23-incident `INCIDENT_STATUS` override table and defaulted to
+     "in_effect" unconditionally, which is wrong for a decades-old, long-closed comparator incident.
+     Added `default_incident_status()`: a reversed/sustained/upheld matter from before 2020 is treated
+     as historical; a reversed one from 2020 on as a recent reversal; anything else (ongoing/unknown,
+     or no outcome at all) as still in effect. This is a documented approximation of an editorial
+     judgment call the live data otherwise makes case by case (the "historical" and "in_effect"
+     ranges of occurred_on years genuinely overlap, 1971 to 2019), not a researched fact; flagged for
+     review below.
+   - 57 new journalist records had no `role` (required by the admin API); assigned from the incident
+     text that names them (e.g. "camera operator," "founding editor," "investigative journalist";
+     generic "Journalist" only where the text gives no more specific title, e.g. Diana Okremova, Omar
+     Abdulaziz), never invented beyond what the record states.
+
+**2. Why the existing 128 incidents were not reprocessed.** seed-v2/incidents.json (the merged local
+seed from the prior sessions) turned out to be a stale snapshot: it had no `stage` field at all (the
+live stage-backfill pass never wrote back to it), and several `occurred_on` dates still held their
+pre-correction values (e.g. the AP exclusion's local copy read 2025-02-16 against the live, corrected
+2025-02-11; Pentagon rules 2025-09-21 against live 2025-09-19; Louisiana HB173 2024-05-28 against live
+2024-05-24). load-seed.py's incident loop re-PUTs every incident in its seed file's `incidents.json`
+on every run, including `occurred_on` unconditionally; running it over the full 190-incident merged
+file would have reverted those three live corrections (and blanked `stage`, before the fix above).
+To avoid this, the 62 new incidents were loaded from a separate seed directory containing only the new
+incidents plus the actors, outlets, journalists and sources they reference (existing ones reused by
+slug, new ones added), never the existing 128. `stage`/`ladder_note` were separately backfilled
+read-only from live into the canonical seed-v2/incidents.json (a local-file hygiene fix only, no live
+write) so seed-check.py's new stage requirement does not flag the pre-existing 128. The `occurred_on`
+staleness is a pre-existing condition of the local seed file, not touched by this session; flagged
+below as a TODO, since it means load-seed.py is not actually safe to re-run over the full existing
+seed until that file is refreshed from live or the loader is changed to never blindly resend
+`occurred_on`-class fields for a record that already exists.
+
+**3. Merge (seed-v2/{sources,actors,outlets,journalists,incidents}.json).** Deduped sources by URL
+(69 unique of 73 raw entries: 4 were the same CPJ articles cited in both ladder-1.json and
+ladder-2.json, e.g. the Poczobut sentencing and release, the Russia-Ukraine CPJ tracker, the Kabas
+retrial; source ids remapped, not duplicated); checked against the live 334-source /admin/sources
+list first, no collisions. Actors, outlets and journalists deduped by slug against the existing
+corpus and against each other (e.g. Erdogan, Putin, Orban, Xi, Lukashenko, El-Sisi and Duterte are
+already actors; Maria Ressa, Jimmy Lai, Andrzej Poczobut and others are shared between the two ladder
+files or already journalists); the existing or first-seen record is kept. All 62 incident slugs are
+year-prefixed and none collided with the existing 128. seed-check.py extended with the `incident.stage`
+enum and a required-field check (see below); the full 190-incident merged corpus now checks at 0
+errors. editorial-v2/lint.py: incidents/actors/outlets/journalists/cases/glossary all report clean
+except the same 4 pre-existing, documented glossary self-reference warnings (gag-order, chilling-
+effect) noted in the prior session; lint.py's own JSON_FIELDS scope does not include ladder_note or
+source titles, so its sources.json run is not meaningful (source titles are the outlet's own
+headlines, already excluded from linting by seed-check.py's documented policy) and its incidents.json
+run initially missed the ladder_note voice-lint failures the live admin API caught on the first load
+attempt (see below); this is a real gap in lint.py's field coverage, not fixed this session (it did
+not block anything, since the admin API's own lint is authoritative and caught what it missed).
+
+**4. ops/seed-check.py extended for stage.** Added `incident.stage` to SPEC_ENUMS and a
+`field_missing` check (stage is required to publish, per the v3 brief), matching the treatment of
+`outcome`/`granularity`. Also extended `SEED_SIDE_VOCAB["outlet.kind"]` with the six new outlet-kind
+shorthand values above, so they report as translated shorthand warnings, not hard errors.
+
+**5. "Press press controls" artifact.** Found across 7 incidents, not the 4 the prior worklog TODO
+named (Czechoslovakia 1968, Portugal 1933, Burma 1988, India 1975 were listed; Spain 1938, Poland
+1981 and South Korea 1980 had the same bug and were missed): 17 field instances of "press press
+controls" or "press controls of the press" (a doubled word left by an earlier lint pass that replaced
+"censorship" with "press controls" next to a sentence that already had "press" adjacent). Fixed by
+posting corrected text through the admin API (`PUT /admin/records/incident/<slug>` with only the
+changed field(s), reason and batch_label "v3-ladder-artifact-fix-2026-09-22"), letting every other
+column (stage, tactic_primary, dates, {c:ID} citation markers already embedded in the live text)
+fall through untouched from the existing record, confirmed live afterward. Checked all 190 live
+incidents' own prose fields (title, summary, what_happened, stated_justification,
+effect_on_reporting, status, what_we_dont_know, outcome_note, issue_of_the_day, ladder_note) for any
+other immediately-repeated word: none found (the one apparent case, "it had had its fun" in a 2013 UK
+Miranda-detention claim statement, is correct past-perfect grammar reporting the quote "You've had
+your fun," not a duplication bug, and claim statements were not in scope for this check anyway).
+
+**6. Verification.** All 13 `/ladders/<tactic>` pages checked live (counts above). Three random new
+incident pages (2019-india-revokes-taseer-oci-status, 2024-kazakhstan-restrictive-media-accreditation-
+rules, 2022-russia-bars-entry-foreign-journalists) confirmed live in HTML, .md and .json with correct
+stage, tactic_primary and claims.
+
+**7. ops runs.** `ops/linkcheck.py --all` needed `POST /admin/export` first (its --all mode reads the
+public Frictionless export, which was still yesterday's 326-source snapshot); after refreshing the
+export: 403 due, live 309, paywalled 10, bot_blocked 41, dead 21, redirected 12, error 10.
+`ops/wayback.py --all --limit 150 --max-failures 10`: stopped after exactly 10 consecutive
+`Connection reset by peer` failures against web.archive.org's save endpoint, 0 saved, matching the
+degradation documented in the prior two sessions; archive.org's save endpoint has not recovered.
+`ops/indexnow.py --since-hours 8`: pinged 1402 URLs, HTTP 200.
+
+**What could not be loaded.** All 62 new incidents published; nothing was dropped. No new cases were
+added (none of the 62 incidents named a linkable case with full case data, matching the established
+policy from the prior session of not fabricating case records for a bare inline mention). No new
+glossary terms (none in this research pass).
+
+### TODO (added 2026-09-23)
+
+16. seed-v2/incidents.json's `occurred_on` (and likely other base fields) for the original 128
+    incidents are stale against three live corrections applied directly through the admin API in the
+    prior v3 session (AP exclusion, Pentagon rules, Louisiana HB173 lead dates); do not re-run
+    load-seed.py over the full merged seed until this file is refreshed from live, or change the
+    loader to fetch and diff against the live record before resending base fields for anything that
+    already exists.
+17. `default_incident_status()` (load-seed.py) is a heuristic (year plus outcome), not a researched
+    fact, for the 62 new incidents' `status` enum; the live "historical" vs "in_effect" split for
+    existing incidents does not follow a clean formula (it depends on whether the specific measure,
+    not just the era, is still in force). Spot-check the 62 new incidents' `status` values editorially.
+18. lint.py's JSON_FIELDS does not include `ladder_note`, and its sources.json handling only exempts a
+    file literally named "sources-add.json"; extend both if lint.py is meant to catch what the live
+    admin API's own lint enforces before publish, rather than after a failed load attempt.
+19. Comparator research from the v3 brief still not in the record: Cuba, Uganda, Syria, Afghanistan
+    (Taliban), Algeria, Uzbekistan, Tajikistan, Israel's Al Jazeera law specifically (the 2018 Gaza
+    press-ordinance incident is recorded; the 2024 Al Jazeera law is not), and Poland 2015-2023 beyond
+    the already-recorded 2015 and 2021 incidents. This session added Azerbaijan, Vietnam, Eritrea,
+    North Korea, Kazakhstan and the Philippines' Duterte era, which the prior session's TODO had also
+    listed as missing.
+20. Seven pre-existing outlets had a `kind` value in seed-v2/outlets.json ("publisher") that the live
+    records do not use; fixed locally to match live (new-york-times and novaya-gazeta: newspaper;
+    washington-post, wikileaks, the-guardian, cambodia-daily, harakah: other) so a future load-seed.py
+    run does not fail validation on any of them.
+21. New sources from this session (69 of them) have no Wayback snapshot beyond the 10-failure batch
+    already attempted; retry ops/wayback.py once web.archive.org's save endpoint recovers.
