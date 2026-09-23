@@ -316,3 +316,62 @@ incidents met.
     case link was attached for these. Provide full case data to link them.
 15. terms.md and privacy.md are legal-review drafts (the "Draft for legal review" marker was intentionally not put
     on the live pages, only recorded here); do not treat them as final until reviewed.
+
+## 2026-09-22, v3 ladder reframe (lead implementer), per v3-ladder-brief-2026-09-22.md
+
+Commits 05e5f65 (step 1) to the step 6 commit; details in site/NOTES.md "v3".
+
+- Step 1: migration 0005 live (incidents.stage, ladder_note). `POST /admin/incidents/:slug/ladder` (set or append). Stage
+  backfilled on all 128 incidents by tools/stage-backfill.py (tactic rule plus 45 reviewed overrides, 21 of which differ
+  from the tactic rule): restrict 20, pressure 28, punish 40, silence 31, eliminate 9. United States rows reach punish
+  and silence (VOA shutdown, Near v. Minnesota, Pentagon Papers injunction, 1917 mail bans); none reach eliminate.
+- Step 2: RSF 2026 ranks for 45 countries (43 from verification/rsf-2026-ranks.json; El Salvador 143 and Czechia 11 read
+  from rsf.org country pages because the record holds them and the file did not). US 64th confirmed on rsf.org.
+- Steps 3-4: /ladders, /ladders/<tactic>, /united-states live in HTML, .md, .json and CSV; /compare 301; every
+  per-country count ranking removed; caveat on the pages the brief names; nav "United States" and "Ladders";
+  /countries/us links the chapter.
+- Step 5: corrections from verification/perplexity-v2-2026-09-22.md. Applied (claim plus is_correction revision, source
+  added and attached): #13 Tut.by 2021-05-19 -> 05-18 (CPJ); #14 Nicaragua 2023-02-16 -> 02-15 (Al Jazeera, already
+  cited: "on Wednesday"); #12 NYT suit 2025-09-16 -> 09-15 (Clearinghouse docket, already cited; nytco.com gives no filing
+  date); #10 FCC complaints 2025-01-29 -> 01-22 (U.S. Press Freedom Tracker, already cited; communicationsdaily.com
+  unreachable, TLS name mismatch, paywalled); #11 CPB outcome 2025-07-18 -> 07-24 (Public Law 119-28, govinfo.gov);
+  #9 Portland 2020-07-16 -> 07-23, occurred_on and outcome_on (ACLU of Oregon release of 2020-07-23; claim 331 refiled
+  as a status claim for the police injunction); #7 Ecuador outcome 2018-07-24 -> 2019-02-20 (ARCOTEL citing Registro
+  Oficial 432); #15 Slovakia outcome 2024-07-04 -> 07-01 (European Audiovisual Observatory, IRIS 2024-8:1/24); note:
+  Smethurst outcome_note now says the seized material was not ordered returned or destroyed (ABC, already cited).
+  Also brought the AP, Pentagon and Louisiana lead dates in line with the earlier corrections (the editorial-v2 rewrite
+  had reintroduced the old dates).
+- Step 6: MCP ladder and get_united_states_chapter live (mcp-smoke 18/18); llms.txt, sitemaps (pages plus 13 ladders),
+  home copy; /timeline 500 fixed (D1 100-parameter limit). verify-v3.sh live: 0 failures; verify-v2.sh live: 0 failures;
+  check-no-count-ranking.py: no findings on /, /countries, /continents (7 pages), /search (3 views), /incidents, /leaders,
+  /ladders, /tactics, the chapter.
+
+### TODO (v3)
+
+1. Corrections not applied (reasons in tools/apply-corrections-v2-2026-09-22.py SKIPPED): #1 Grenada outcome_on (two
+   candidate dates, no document address), #2 Haiti 1980-11-28 (amnesty.org, no address; RSF in the record says 1981),
+   #3 and #4 South Africa 1950 act dates (wikisource not accepted; sabctrc.saha.org.za page not found), #5 Politkovskaya
+   (no change needed; live record already correct), #6 Hungary 2010-12-20 (europarl, loc.gov refuse fetches), #8 Serbia
+   outcome 2000-10 (state.gov archive returns an error page). Zimbabwe note not loaded (not an outcome field). Each needs a
+   fetchable primary or journalistic source.
+2. Stage choices to review editorially: criminal speech and secrets laws counted as punish even where no one was yet
+   prosecuted (Pakistan PECA, Zimbabwe Patriotic Act, Hungary 2020, Russia 2022); licence requirements and public-media
+   restructuring as pressure (AIPPA, Tanzania 2018, Slovakia, Poland); Germany 1933 and Spain 1938 as silence; HHS/CDC
+   2020 as restrict; DOJ 2025 rescission as pressure. Change with POST /admin/incidents/:slug/ladder or in
+   stage-backfill.py REVIEWED and re-run.
+3. Ladder notes exist on 2 incidents only (Politkovskaya, Reuters Myanmar). Researchers should add them where a rung needs
+   context, and set `stage` on every new incident (publish now refuses an incident without one; tools/load-seed.py does
+   not send stage yet).
+4. Comparator research from the brief not yet in the record: Azerbaijan, Cuba, Vietnam, Eritrea, North Korea, Uganda,
+   Syria, Afghanistan, Algeria, Kazakhstan, Uzbekistan, Tajikistan (and Philippines Duterte era, Israel Al Jazeera law,
+   Poland 2015-2023 beyond the 2015 law). Several ladders have few rungs above the US rows; the eliminate stage holds 8
+   incidents in 8 countries.
+5. RSF links point at rsf.org/en/index (the verification's source) for 43 countries; per-country RSF pages would be more
+   precise. Russia's and Czechia's current ranks appear beside USSR (1922) and Czechoslovakia (1968) entries.
+6. Wording artifacts from the earlier lint pass ("press press controls", "press controls of the press") in 9 fields of the
+   Czechoslovakia 1968, Portugal 1933, Burma 1988 and India 1975 entries; editorial fix needed.
+7. The stage backfill and corrections added about 140 record_revised rows to the public /changes ledger (batch labels
+   v3-stage-backfill-2026-09-22 and corrections-v2-2026-09-22).
+8. New sources 327 to 334 (RSF, CPJ, govinfo, ACLU of Oregon, ARCOTEL, IRIS Merlin) have no link check or Wayback snapshot.
+9. Design pass: new classes are unstyled (rsf, rsf-rank, rsf-line, focal-case, counts-caveat, ladder-note,
+   stage-definition); home "Latest incidents" cards do not show RSF ranks.
