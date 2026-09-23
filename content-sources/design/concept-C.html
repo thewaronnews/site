@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The War On News</title>
+<!--
+  Concept C: "Dossier". Static mockup, 2026-09-22.
+  Real data (from thewaronnews.com JSON, 2026-09-22): the focal incident (White House ban of CNN, MS NOW, Politico),
+  its case (1:26-cv-03287), the WHCA quote, 11 sources count, the Jimmy Lai incident and its sources, and every clipping headline.
+  PLACEHOLDER DATA (plausible, derived from history, to be replaced by researched and sourced rows):
+    - all counts: 128 entries, 41 countries, continent, tactic and decade counts
+    - spine anchors 1900s to 2010s (1908 India Tilak, 1911 UK Official Secrets Act, 1917 US Espionage Act, 1926 Italy,
+      1933 Germany Editors Law, 1940 Canada Defence of Canada Regulations, 1956 Hungary, 1962 West Germany Spiegel affair,
+      1971 US Pentagon Papers, 1975 India Emergency, 1988 UK broadcasting ban, 1998 Serbia Public Information Law, 2001 Russia NTV,
+      2017 Cambodia Daily, 2021 Hong Kong Apple Daily)
+    - ledger cells other than the real v1 incidents (US 2026, US 2025 AP, US 2025 NPR/PBS, US 2013, HU 2023, RU 2026, HK 2025)
+    - outcomes and leader names on placeholder rows
+    - entry id, revision number and the superseded note on the specimen entry
+    - the "archived copy" state on the HKFP source
+    - the 1,140 sources total
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --desk:#EAE3D4; --paper:#F7F3EA; --sheet:#FFFDF8; --folder:#DCCFB4; --ink:#1F1B16; --ink-2:#554C3E; --rule:#B5A88E; --rule-2:#D9CFBC;
+  --stamp:#A3231B; --stamp-bg:#F7E6E1; --grey:#5B564D;
+  --serif:"IBM Plex Serif", Georgia, serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --gutter:16px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.55}
+a{color:inherit;text-decoration-color:var(--rule);text-underline-offset:3px}
+a:hover{color:var(--stamp);text-decoration-color:var(--stamp)}
+.wrap{max-width:1260px;margin:0 auto;padding:0 var(--gutter);width:100%}
+@media (min-width:900px){:root{--gutter:40px}}
+.mono{font-family:var(--mono)}
+.label{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+h1,h2,h3{margin:0;line-height:1.15;text-wrap:balance;font-weight:700}
+.stamp{display:inline-block;font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--stamp);border:2px solid var(--stamp);padding:3px 8px 2px;border-radius:3px;transform:rotate(-3deg);background:rgba(255,253,248,.6);white-space:nowrap}
+.stamp.grey{color:var(--grey);border-color:var(--grey)}
+.stamp.sm{font-size:11px;padding:1px 6px;border-width:1.5px;transform:rotate(-2deg)}
+
+/* Header */
+.filehead{border-bottom:1px solid var(--rule);padding:14px 0 0;background:var(--desk)}
+.fileline{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 20px;font-family:var(--mono);font-size:12.5px;color:var(--ink-2)}
+.title{display:grid;grid-template-columns:minmax(0,1fr);gap:10px 32px;align-items:end;padding:26px 0 22px}
+@media (min-width:900px){.title{grid-template-columns:minmax(0,1fr) auto}}
+.title h1{font-size:clamp(40px,6vw,76px);letter-spacing:-.015em;line-height:1}
+.title p{margin:10px 0 0;font-size:clamp(17px,1.8vw,21px);font-style:italic;color:var(--ink);max-width:48ch}
+.title .count{font-family:var(--mono);font-size:13px;line-height:1.7;border-left:2px solid var(--ink);padding-left:14px;color:var(--ink)}
+.title .count b{font-weight:600}
+.tabs{display:flex;gap:4px;list-style:none;margin:0;padding:0;overflow:hidden;flex-wrap:wrap}
+.tabs a{display:block;font-family:var(--mono);font-size:13.5px;font-weight:500;text-decoration:none;padding:8px 14px 7px;background:var(--folder);border:1px solid var(--rule);border-bottom:0;border-radius:6px 6px 0 0}
+.tabs li:first-child a{background:var(--paper);font-weight:600}
+@media (max-width:700px){.tabs{display:grid;grid-template-columns:repeat(4,1fr)}.tabs a{padding:7px 2px;text-align:center;font-size:12.5px}}
+
+/* Query */
+.query{margin:26px 0 0;border:1px solid var(--rule);background:var(--sheet);padding:18px}
+.query label{display:block;font-weight:700;font-size:20px;margin-bottom:10px}
+.qf{display:flex;border:1.5px solid var(--ink);background:#fff}
+.qf input{flex:1;min-width:0;border:0;padding:13px 14px;font-family:var(--mono);font-size:16px;background:transparent;color:var(--ink)}
+.qf input::placeholder{color:#6B6254}
+.qf button{border:0;background:var(--ink);color:var(--sheet);font-family:var(--mono);font-weight:600;font-size:14px;letter-spacing:.08em;padding:0 18px;text-transform:uppercase}
+.facets{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0;padding:0;list-style:none}
+.facets a{font-family:var(--mono);font-size:13px;text-decoration:none;border:1px dashed var(--rule);padding:3px 9px;background:var(--paper)}
+.facets a b{font-weight:600;color:var(--ink-2)}
+
+/* Spine hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr);gap:32px;margin-top:34px}
+@media (min-width:1000px){.hero{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:44px}}
+.hero h2{font-size:clamp(28px,3.2vw,40px)}
+.hero .sub{margin:6px 0 18px;color:var(--ink-2);font-size:16px}
+.spine{list-style:none;margin:0;padding:0;position:relative}
+.spine::before{content:"";position:absolute;left:92px;top:8px;bottom:8px;width:3px;background:var(--ink)}
+.spine>li{display:grid;grid-template-columns:78px 30px minmax(0,1fr);align-items:start;padding:0 0 14px}
+.spine .dec{font-family:var(--mono);font-weight:600;font-size:17px;text-align:right;padding-right:6px;line-height:1.4}
+.spine .dec small{display:block;font-weight:400;font-size:12px;color:var(--ink-2)}
+.spine .node{width:15px;height:15px;border-radius:50%;background:var(--paper);border:3px solid var(--ink);margin:4px 0 0 7px;position:relative;z-index:1}
+.spine li.now .node{background:var(--stamp);border-color:var(--stamp);width:21px;height:21px;margin:2px 0 0 4px}
+.spine .entries{border-top:1px solid var(--rule-2);padding-top:4px}
+.spine li:first-child .entries{border-top:0}
+.entry{display:grid;grid-template-columns:54px minmax(0,1fr);gap:0 10px;text-decoration:none;padding:3px 0;font-size:15.5px;line-height:1.4}
+.entry .y{font-family:var(--mono);font-size:14px;font-weight:600;padding-top:1px}
+.entry .c{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);display:block}
+.spine li.now .entry .t{font-weight:600}
+@media (max-width:600px){.spine::before{left:66px}.spine>li{grid-template-columns:54px 26px minmax(0,1fr)}.spine .dec{font-size:15px}.spine .node{margin-left:5px}.spine li.now .node{margin-left:2px}.entry{grid-template-columns:44px minmax(0,1fr);font-size:15px}}
+
+/* Current chapter sheet */
+.sheet{background:var(--sheet);border:1px solid var(--rule);box-shadow:0 1px 0 var(--rule-2),6px 6px 0 var(--folder);position:relative;padding:22px 22px 20px 30px}
+.sheet::before{content:"";position:absolute;left:14px;top:0;bottom:0;border-left:1px solid #E3B8B2}
+.sheet .docket{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-family:var(--mono);font-size:12.5px;color:var(--ink-2);border-bottom:1px solid var(--rule-2);padding-bottom:8px;margin-bottom:12px}
+.sheet h3{font-size:clamp(24px,2.4vw,30px);margin:6px 0 10px}
+.sheet p{margin:0 0 11px;font-size:16px}
+.sheet blockquote{margin:12px 0;padding:8px 0 8px 14px;border-left:3px solid var(--ink);font-style:italic;font-size:16px}
+.sheet blockquote cite{display:block;font-style:normal;font-family:var(--mono);font-size:12px;color:var(--ink-2);margin-top:6px;line-height:1.5}
+.sheet .stamps{position:absolute;right:18px;top:56px;display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.kv{display:grid;grid-template-columns:minmax(0,1fr);gap:0;margin:14px 0 0;border-top:1px solid var(--ink)}
+.kv div{display:grid;grid-template-columns:128px minmax(0,1fr);gap:10px;padding:7px 0;border-bottom:1px solid var(--rule-2)}
+.kv dt{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);padding-top:2px}
+.kv dd{margin:0;font-size:15px}
+.kv .mono{font-size:13.5px}
+@media (max-width:600px){.kv div{grid-template-columns:1fr;gap:2px}.sheet{padding:18px 16px 16px 24px}.sheet::before{left:10px}.sheet .stamps{position:static;flex-direction:row;margin:0 0 10px;align-items:center}}
+
+/* Clippings */
+.clips{margin-top:28px}
+.clips h3{font-size:22px;margin-bottom:4px}
+.clips ol{list-style:none;margin:8px 0 0;padding:0;border-top:1px solid var(--ink)}
+.clips li{display:grid;grid-template-columns:78px minmax(0,1fr);gap:10px;padding:9px 0;border-bottom:1px solid var(--rule-2)}
+.clips .d{font-family:var(--mono);font-size:12.5px;color:var(--ink-2);padding-top:3px}
+.clips a{font-weight:600;font-size:16px;line-height:1.3;text-decoration:none;display:block}
+.clips .p{font-family:var(--mono);font-size:12px;color:var(--ink-2);margin-top:3px}
+
+/* Section head */
+.shead{display:flex;justify-content:space-between;align-items:baseline;gap:8px 20px;flex-wrap:wrap;border-top:3px double var(--ink);padding-top:12px;margin-top:48px;margin-bottom:16px}
+.shead h2{font-size:clamp(26px,2.8vw,36px)}
+.shead .label a{color:var(--stamp)}
+
+/* Index cards */
+.cards{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+@media (min-width:1000px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.icard{background:var(--sheet);border:1px solid var(--rule);position:relative;padding:18px 18px 16px;margin-top:22px}
+.icard .tab{position:absolute;top:-24px;left:-1px;font-family:var(--mono);font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:var(--folder);border:1px solid var(--rule);border-bottom:0;padding:3px 12px;border-radius:5px 5px 0 0}
+.icard h3{font-size:22px}
+.icard p.s{margin:2px 0 10px;font-size:14.5px;color:var(--ink-2)}
+.icard ul{list-style:none;margin:0;padding:0;background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 33px,var(--rule-2) 33px,var(--rule-2) 34px)}
+.icard li a{display:flex;justify-content:space-between;gap:10px;text-decoration:none;font-size:15.5px;line-height:34px;height:34px;overflow:hidden}
+.icard li a span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.icard li .n{font-family:var(--mono);font-weight:600;font-size:14px}
+.icard .more{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:13px;font-weight:600;color:var(--stamp)}
+
+/* Ledger */
+.ledger-wrap{background:var(--sheet);border:1px solid var(--rule);padding:6px 16px 14px}
+.ledger{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:13px;line-height:1.4}
+.ledger th,.ledger td{text-align:left;vertical-align:top;padding:8px 8px;border-bottom:1px solid var(--rule-2)}
+.ledger thead th{font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;border-bottom:2px solid var(--ink);color:var(--ink)}
+.ledger thead th span{display:block;font-weight:400;text-transform:none;letter-spacing:0;color:var(--ink-2)}
+.ledger tbody th{font-family:var(--serif);font-size:15px;font-weight:600;width:17%}
+.ledger td{width:13.8%}
+.ledger td.x{color:#6B6254}
+.ledger .r{display:block;text-decoration:none;margin-bottom:6px}
+.ledger .r:last-child{margin-bottom:0}
+.ledger .r b{font-weight:600}
+.ledger .r i{font-style:normal;color:var(--ink-2)}
+.oc{display:inline-block;min-width:18px;text-align:center;font-weight:600;font-size:11.5px;border:1.5px solid currentColor;border-radius:2px;margin-left:4px;line-height:1.3}
+.oc.O{color:var(--stamp)} .oc.R{color:#1F5B3A} .oc.S,.oc.U{color:var(--grey)}
+.ledger td.cur{background:var(--stamp-bg)}
+.key{display:flex;flex-wrap:wrap;gap:6px 18px;font-family:var(--mono);font-size:12.5px;color:var(--ink-2);margin:12px 0 0}
+@media (max-width:820px){
+  .ledger,.ledger tbody,.ledger tr,.ledger th,.ledger td{display:block;width:100%!important}
+  .ledger thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .ledger tbody th{border-bottom:1.5px solid var(--ink);padding:14px 0 6px}
+  .ledger td{display:grid;grid-template-columns:112px minmax(0,1fr);gap:0 10px;padding:7px 0}
+  .ledger td::before{content:attr(data-cc);grid-row:1 / span 4;font-weight:600;font-size:12.5px}
+  .ledger td .r{grid-column:2}
+  .ledger td.x{display:none}
+}
+
+/* Specimen */
+.spec{display:grid;grid-template-columns:minmax(0,1fr);gap:24px}
+@media (min-width:1000px){.spec{grid-template-columns:minmax(0,8fr) minmax(0,4fr)}}
+.doc h3{font-size:clamp(23px,2.4vw,30px);margin:4px 0 10px;padding-right:120px}
+@media (max-width:600px){.doc h3{padding-right:0}}
+.doc .tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0 0 12px;padding:0}
+.doc .tags li{font-family:var(--mono);font-size:12px;border:1px solid var(--ink);padding:1px 7px}
+.doc .tags li.p{background:var(--ink);color:var(--sheet)}
+.srcs{margin-top:14px;border-top:1px solid var(--ink)}
+.srcs h4{margin:8px 0 4px}
+.srcs ol{list-style:none;margin:0;padding:0;counter-reset:n}
+.srcs li{counter-increment:n;display:grid;grid-template-columns:34px minmax(0,1fr);gap:6px;padding:8px 0;border-bottom:1px solid var(--rule-2);font-size:15.5px}
+.srcs li::before{content:"[" counter(n) "]";font-family:var(--mono);font-size:13px;color:var(--ink-2);padding-top:2px}
+.srcs .t{font-weight:600}
+.srcs .m{display:block;font-family:var(--mono);font-size:12.5px;color:var(--ink-2);margin-top:2px}
+.srcs .arch{color:var(--stamp);font-weight:600}
+.super{margin-top:14px;padding:10px 12px;background:var(--paper);border:1px dashed var(--rule);font-size:14.5px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:start}
+.super s{color:var(--grey)}
+.std h3{font-size:22px;margin-bottom:8px}
+.std p{font-size:15.5px;margin:0 0 10px}
+.std ol{margin:0;padding-left:0;list-style:none;font-family:var(--mono);font-size:13.5px}
+.std li{padding:6px 0;border-bottom:1px solid var(--rule-2)}
+
+/* Footer */
+footer{margin-top:56px;background:var(--desk);border-top:1px solid var(--rule);padding:22px 0 36px}
+footer .end{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);text-align:center;margin:0 0 18px}
+footer .pub{font-size:19px;font-weight:600;margin:0 0 6px}
+footer .lic{font-size:15px;color:var(--ink-2);margin:0 0 14px;max-width:80ch}
+footer ul{list-style:none;margin:0;padding:12px 0 0;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:13.5px}
+footer a{text-decoration:none}
+@media (max-width:700px){footer ul{display:grid;grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header class="filehead">
+  <div class="wrap">
+    <div class="fileline"><span>RECORD: GOVERNMENTS AND THE PRESS</span><span>OPENED 1900 · LAST ENTRY 22 SEP 2026</span></div>
+    <div class="title">
+      <div>
+        <h1>The War On News</h1>
+        <p>Government restrictions on journalists, 1900 to today, by country, tactic and time</p>
+      </div>
+      <div class="count"><b>128</b> entries<br><b>41</b> countries<br><b>13</b> tactics<br><b>1,140</b> sources</div>
+    </div>
+    <ul class="tabs" aria-label="Sections">
+      <li><a href="/">Index</a></li><li><a href="/countries">Countries</a></li><li><a href="/tactics">Tactics</a></li><li><a href="/eras/1900s">Timeline</a></li><li><a href="/compare">Compare</a></li><li><a href="/coverage">Coverage</a></li><li><a href="/cases">Cases</a></li><li><a href="/about">About</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="wrap">
+<form class="query" action="/search" role="search">
+  <label for="q">Search the record</label>
+  <div class="qf"><input id="q" name="q" type="search" placeholder="law, outlet, leader, year"><button type="submit">Search</button></div>
+  <ul class="facets" aria-label="Filter examples">
+    <li><a href="/search?country=HU"><b>country:</b> Hungary</a></li>
+    <li><a href="/search?continent=africa"><b>continent:</b> Africa</a></li>
+    <li><a href="/search?tactic=prior_restraint"><b>tactic:</b> prior restraint</a></li>
+    <li><a href="/search?from=1970&amp;to=1979"><b>years:</b> 1970 to 1979</a></li>
+    <li><a href="/search?leader=indira-gandhi"><b>leader:</b> Indira Gandhi</a></li>
+    <li><a href="/search?outcome=reversed"><b>outcome:</b> reversed</a></li>
+  </ul>
+</form>
+
+<div class="hero">
+  <section aria-labelledby="spine-h">
+    <h2 id="spine-h">The record, 1900 to today</h2>
+    <p class="sub">One anchor entry per decade and region from 1900; every sourced entry from 2020.</p>
+    <ol class="spine">
+      <li><span class="dec">1900s<small>3</small></span><span class="node"></span><div class="entries">
+        <a class="entry" href="#"><span class="y">1908</span><span><span class="c">India (British rule)</span><span class="t">Bal Gangadhar Tilak jailed for sedition over articles in Kesari</span></span></a></div></li>
+      <li><span class="dec">1910s<small>5</small></span><span class="node"></span><div class="entries">
+        <a class="entry" href="#"><span class="y">1911</span><span><span class="c">United Kingdom</span><span class="t">Official Secrets Act passed</span></span></a>
+        <a class="entry" href="#"><span class="y">1917</span><span><span class="c">United States</span><span class="t">Espionage Act, a law against disclosing defence information</span></span></a></div></li>
+      <li><span class="dec">1920s<small>4</small></span><span class="node"></span><div class="entries">
+        <a class="entry" href="#"><span class="y">1926</span><span><span class="c">Italy</span><span class="t">Opposition newspapers closed under Mussolini's emergency laws</span></span></a></div></li>
+      <li><span class="dec">1930s<small>6</small></span><span class="node"></span><div class="entries">
+        <a class="entry" href="#"><span class="y">1933</span><span><span class="c">Germany</span><span class="t">Editors Law makes journalism a licensed, state-registered trade</span></span></a></div></li>
+      <li><span class="dec">1940s<small>5</small></span><span class="node"></span><div class="entries">
+        <a class="entry" href="#"><span class="y">1940</span><span><span class="c">Canada</span><span class="t">Newspapers banned under the Defence of Canada Regulations</span></span></a></div></li>
+      <li><span class="dec">1950s<small>4</small></span><span class="node"></span><div class="entries">
+        <a class="entry" href="#"><span class="y">1956</span><span><span class="c">Hungary</span><span class="t">Revolutionary newspapers shut after the uprising</span></span></a></div></li>
+      <li><span class="dec">1960s<small>5</small></span><span class="node"></span><div class="entries">
+        <a class="entry" href="#"><span class="y">1962</span><span><span class="c">West Germany</span><span class="t">Der Spiegel editors arrested over a defence report</span></span></a></div></li>
+      <li><span class="dec">1970s<small>8</small></span><span class="node"></span><div class="entries">
+        <a class="entry" href="#"><span class="y">1971</span><span><span class="c">United States</span><span class="t">Injunction halts Pentagon Papers stories; lifted by the Supreme Court</span></span></a>
+        <a class="entry" href="#"><span class="y">1975</span><span><span class="c">India</span><span class="t">Press censorship under the Emergency</span></span></a></div></li>
+      <li><span class="dec">1980s<small>6</small></span><span class="node"></span><div class="entries">
+        <a class="entry" href="#"><span class="y">1988</span><span><span class="c">United Kingdom</span><span class="t">Broadcasting ban on the voices of Sinn Féin members</span></span></a></div></li>
+      <li><span class="dec">1990s<small>5</small></span><span class="node"></span><div class="entries">
+        <a class="entry" href="#"><span class="y">1998</span><span><span class="c">Serbia</span><span class="t">Public Information Law fines independent newspapers</span></span></a></div></li>
+      <li><span class="dec">2000s<small>6</small></span><span class="node"></span><div class="entries">
+        <a class="entry" href="#"><span class="y">2001</span><span><span class="c">Russia</span><span class="t">NTV television taken over by Gazprom-Media</span></span></a></div></li>
+      <li><span class="dec">2010s<small>9</small></span><span class="node"></span><div class="entries">
+        <a class="entry" href="#"><span class="y">2017</span><span><span class="c">Cambodia</span><span class="t">The Cambodia Daily closed over a disputed tax bill</span></span></a></div></li>
+      <li class="now"><span class="dec">2020s<small>62</small></span><span class="node"></span><div class="entries">
+        <a class="entry" href="#"><span class="y">2021</span><span><span class="c">Hong Kong (China)</span><span class="t">Apple Daily forced to close</span></span></a>
+        <a class="entry" href="/incidents/2023-hungary-sovereignty-protection-act"><span class="y">2023</span><span><span class="c">Hungary</span><span class="t">Sovereignty Protection Act</span></span></a>
+        <a class="entry" href="/incidents/2026-russia-new-law-targets-exiled-journalists-assets"><span class="y">2026</span><span><span class="c">Russia</span><span class="t">Assets of exiled "foreign agent" journalists frozen</span></span></a>
+        <a class="entry" href="/incidents/2026-white-house-bans-cnn-msnow-politico"><span class="y">2026</span><span><span class="c">United States</span><span class="t">CNN, MS NOW and Politico barred from the White House</span></span></a></div></li>
+    </ol>
+  </section>
+
+  <div>
+    <article class="sheet" aria-labelledby="cur-h">
+      <div class="docket"><span>CURRENT CHAPTER</span><span>US · 2026-09-18 · ACCESS BAN</span></div>
+      <div class="stamps"><span class="stamp">Sourced</span></div>
+      <p class="label" style="margin:0">United States · Americas</p>
+      <h3 id="cur-h">The White House bars reporters from CNN, MS NOW and Politico</h3>
+      <p>Donald Trump, the president of the United States, announced on 18 September 2026 that three news organisations would be barred from the White House, the president's official residence and office. The next day the Secret Service, the federal agency that protects the president, deactivated the outlets' hard passes (the standing credential that lets a reporter enter the White House press area) and turned their reporters away at the gates.</p>
+      <p>The president called the outlets' coverage "FICTION and LIES". The White House has not said which story prompted the ban.</p>
+      <blockquote>"The Constitution's press protections do not depend on whether the president likes a news organization's coverage."<cite>White House Correspondents' Association, the organisation of reporters who cover the president · 18 Sep 2026</cite></blockquote>
+      <dl class="kv">
+        <div><dt>Tactic</dt><dd>Access ban; credential control</dd></div>
+        <div><dt>Head of gov.</dt><dd>Donald Trump, president of the United States</dd></div>
+        <div><dt>Issue of the day</dt><dd>Not stated by the White House</dd></div>
+        <div><dt>Outcome</dt><dd><span class="oc O">O</span> Ongoing</dd></div>
+        <div><dt>Court</dt><dd>CNN v. Trump, U.S. District Court for the District of Columbia (a federal trial court in the capital of the United States) · <span class="mono">1:26-cv-03287</span> · filed 21 Sep 2026 · hearing 23 Sep</dd></div>
+        <div><dt>Precedent</dt><dd><a href="/incidents/2018-white-house-revokes-acosta-press-pass">2018, United States: CNN reporter Jim Acosta's pass revoked, restored by court order</a></dd></div>
+      </dl>
+    </article>
+
+    <section class="clips" aria-labelledby="clip-h">
+      <h3 id="clip-h">Recent coverage</h3>
+      <p class="label" style="margin:0">Headlines from other newsrooms</p>
+      <ol>
+        <li><span class="d">22 SEP 2026</span><div><a href="#">Judge sets hearing in CNN, MS NOW, Politico lawsuit over Trump ban</a><div class="p">Associated Press · United States</div></div></li>
+        <li><span class="d">21 SEP 2026</span><div><a href="#">Did Biden cut off 440 reporters' credentials? PolitiFact rates a viral claim</a><div class="p">PolitiFact · United States</div></div></li>
+        <li><span class="d">20 SEP 2026</span><div><a href="#">Other networks decline to fill CNN's White House pool slot</a><div class="p">CNN Business · United States</div></div></li>
+        <li><span class="d">29 JUL 2026</span><div><a href="#">Russia: new law expands Kremlin's legal persecution of exiled journalists</a><div class="p">Reporters Without Borders · Russia</div></div></li>
+        <li><span class="d">08 MAY 2026</span><div><a href="#">Bukele administration freezes Salvadoran news outlet's assets in latest act of retaliation</a><div class="p">Committee to Protect Journalists · El Salvador</div></div></li>
+      </ol>
+      <p class="label" style="margin-top:10px"><a href="/coverage" style="color:var(--stamp)">All recent coverage</a></p>
+    </section>
+  </div>
+</div>
+
+<div class="shead"><h2>Three ways in</h2><span class="label">Every view has its own address, CSV and JSON</span></div>
+<div class="cards">
+  <section class="icard" aria-labelledby="c1"><span class="tab">I · Place</span>
+    <h3 id="c1">By country and continent</h3><p class="s">41 countries in 5 continents</p>
+    <ul>
+      <li><a href="/continents/americas"><span>Americas · United States, El Salvador</span><span class="n">38</span></a></li>
+      <li><a href="/continents/asia"><span>Asia · India, Hong Kong, Türkiye</span><span class="n">36</span></a></li>
+      <li><a href="/continents/europe"><span>Europe · Russia, Hungary</span><span class="n">30</span></a></li>
+      <li><a href="/continents/africa"><span>Africa · Egypt, Ethiopia</span><span class="n">18</span></a></li>
+      <li><a href="/continents/oceania"><span>Oceania · Australia, Fiji</span><span class="n">6</span></a></li>
+    </ul>
+    <a class="more" href="/countries">All countries</a>
+  </section>
+  <section class="icard" aria-labelledby="c2"><span class="tab">II · Tactic</span>
+    <h3 id="c2">By tactic</h3><p class="s">13 tactics, one primary per entry</p>
+    <ul>
+      <li><a href="/tactics/detention_and_violence"><span>Detention and violence</span><span class="n">15</span></a></li>
+      <li><a href="/tactics/access_ban"><span>Access bans</span><span class="n">14</span></a></li>
+      <li><a href="/tactics/prior_restraint"><span>Prior restraint</span><span class="n">13</span></a></li>
+      <li><a href="/tactics/outlet_licensing"><span>Outlet licensing and closure</span><span class="n">12</span></a></li>
+      <li><a href="/tactics/insult_and_defamation_laws"><span>Insult and defamation laws</span><span class="n">11</span></a></li>
+    </ul>
+    <a class="more" href="/tactics">All 13 tactics</a>
+  </section>
+  <section class="icard" aria-labelledby="c3"><span class="tab">III · Time</span>
+    <h3 id="c3">By era</h3><p class="s">Computed from each entry's date</p>
+    <ul>
+      <li><a href="/eras/1900s"><span>1900 to 1949 · wars and sedition</span><span class="n">23</span></a></li>
+      <li><a href="/eras/1950s"><span>1950 to 1989 · Cold War, emergencies</span><span class="n">23</span></a></li>
+      <li><a href="/eras/1990s"><span>1990 to 2019 · owners and licences</span><span class="n">20</span></a></li>
+      <li><a href="/eras/2020s"><span>2020 to today · every entry</span><span class="n">62</span></a></li>
+    </ul>
+    <a class="more" href="/eras/2020s">Open the timeline</a>
+  </section>
+</div>
+
+<div class="shead"><h2>Ledger: who did what, when</h2><span class="label"><a href="/compare">Full comparison</a></span></div>
+<div class="ledger-wrap">
+  <table class="ledger">
+    <thead><tr><th scope="col">Tactic</th><th scope="col">US<span>United States</span></th><th scope="col">GB<span>United Kingdom</span></th><th scope="col">IN<span>India</span></th><th scope="col">RU<span>Russia</span></th><th scope="col">HU<span>Hungary</span></th><th scope="col">HK<span>Hong Kong (China)</span></th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Access bans</th>
+        <td class="cur" data-cc="United States"><a class="r" href="#"><b>2026</b> <i>Trump</i> <span class="oc O">O</span></a><a class="r" href="#"><b>2025</b> <i>Trump</i> <span class="oc O">O</span></a><a class="r" href="#"><b>2018</b> <i>Trump</i> <span class="oc R">R</span></a></td>
+        <td data-cc="United Kingdom"><a class="r" href="#"><b>1914</b> <i>Asquith</i> <span class="oc R">R</span></a></td>
+        <td data-cc="India"><a class="r" href="#"><b>2019</b> <i>Modi</i> <span class="oc S">S</span></a></td>
+        <td class="x" data-cc="Russia">·</td><td class="x" data-cc="Hungary">·</td><td class="x" data-cc="Hong Kong (China)">·</td></tr>
+      <tr><th scope="row">Secrets and espionage laws</th>
+        <td data-cc="United States"><a class="r" href="#"><b>1917</b> <i>Wilson</i> <span class="oc S">S</span></a><a class="r" href="#"><b>2013</b> <i>Obama</i> <span class="oc S">S</span></a></td>
+        <td data-cc="United Kingdom"><a class="r" href="#"><b>1911</b> <i>Asquith</i> <span class="oc S">S</span></a></td>
+        <td data-cc="India"><a class="r" href="#"><b>1923</b> <i>Lord Reading</i> <span class="oc S">S</span></a></td>
+        <td class="x" data-cc="Russia">·</td><td class="x" data-cc="Hungary">·</td>
+        <td data-cc="Hong Kong (China)"><a class="r" href="#"><b>2025</b> <i>John Lee</i> <span class="oc S">S</span></a></td></tr>
+      <tr><th scope="row">Prior restraint</th>
+        <td data-cc="United States"><a class="r" href="#"><b>1971</b> <i>Nixon</i> <span class="oc R">R</span></a></td>
+        <td data-cc="United Kingdom"><a class="r" href="#"><b>1987</b> <i>Thatcher</i> <span class="oc R">R</span></a><a class="r" href="#"><b>1988</b> <i>Thatcher</i> <span class="oc R">R</span></a></td>
+        <td data-cc="India"><a class="r" href="#"><b>1975</b> <i>Indira Gandhi</i> <span class="oc R">R</span></a></td>
+        <td data-cc="Russia"><a class="r" href="#"><b>2022</b> <i>Putin</i> <span class="oc O">O</span></a></td>
+        <td class="x" data-cc="Hungary">·</td><td class="x" data-cc="Hong Kong (China)">·</td></tr>
+      <tr><th scope="row">Outlet licensing and closure</th>
+        <td class="x" data-cc="United States">·</td>
+        <td data-cc="United Kingdom"><a class="r" href="#"><b>1915</b> <i>Asquith</i> <span class="oc R">R</span></a></td>
+        <td data-cc="India"><a class="r" href="#"><b>1908</b> <i>Lord Minto</i> <span class="oc R">R</span></a></td>
+        <td data-cc="Russia"><a class="r" href="#"><b>2022</b> <i>Putin</i> <span class="oc U">U</span></a></td>
+        <td class="x" data-cc="Hungary">·</td>
+        <td data-cc="Hong Kong (China)"><a class="r" href="#"><b>2021</b> <i>Carrie Lam</i> <span class="oc S">S</span></a></td></tr>
+      <tr><th scope="row">Funding and ownership pressure</th>
+        <td data-cc="United States"><a class="r" href="#"><b>2025</b> <i>Trump</i> <span class="oc O">O</span></a></td>
+        <td class="x" data-cc="United Kingdom">·</td><td class="x" data-cc="India">·</td>
+        <td data-cc="Russia"><a class="r" href="#"><b>2001</b> <i>Putin</i> <span class="oc S">S</span></a></td>
+        <td data-cc="Hungary"><a class="r" href="#"><b>2018</b> <i>Orbán</i> <span class="oc S">S</span></a></td>
+        <td class="x" data-cc="Hong Kong (China)">·</td></tr>
+      <tr><th scope="row">Disinformation labelling</th>
+        <td class="x" data-cc="United States">·</td><td class="x" data-cc="United Kingdom">·</td><td class="x" data-cc="India">·</td>
+        <td data-cc="Russia"><a class="r" href="#"><b>2012</b> <i>Putin</i> <span class="oc S">S</span></a><a class="r" href="#"><b>2026</b> <i>Putin</i> <span class="oc O">O</span></a></td>
+        <td data-cc="Hungary"><a class="r" href="#"><b>2023</b> <i>Orbán</i> <span class="oc O">O</span></a></td>
+        <td class="x" data-cc="Hong Kong (China)">·</td></tr>
+    </tbody>
+  </table>
+  <p class="key"><span><span class="oc O">O</span> ongoing</span><span><span class="oc R">R</span> reversed</span><span><span class="oc U">U</span> upheld by a court</span><span><span class="oc S">S</span> sustained</span><span>· none recorded</span><span>Names: head of government at the time</span></p>
+</div>
+
+<div class="shead"><h2>Specimen entry</h2><span class="label">How every entry cites its sources</span></div>
+<div class="spec">
+  <article class="sheet doc" aria-labelledby="doc-h">
+    <div class="docket"><span>ENTRY 2025-12-15-HK · REV. 4</span><span>REVIEWED 22 SEP 2026</span></div>
+    <div class="stamps"><span class="stamp">Sourced</span><span class="stamp grey sm">Rev. 4</span></div>
+    <p class="label" style="margin:0">Hong Kong (China) · Asia · 15 December 2025</p>
+    <h3 id="doc-h">Hong Kong convicts Apple Daily founder Jimmy Lai under the National Security Law</h3>
+    <ul class="tags"><li class="p">detention_and_violence</li><li>secrets_and_espionage_laws</li><li>outlet_licensing</li></ul>
+    <p>Jimmy Lai, the Hong Kong media owner who founded the Apple Daily newspaper, was convicted on national-security charges on 15 December 2025 and sentenced to 20 years in prison on 8 February 2026. He was charged under the National Security Law, a 2020 law imposed on Hong Kong by China's national legislature.</p>
+    <dl class="kv">
+      <div><dt>Head of gov.</dt><dd>John Lee, Chief Executive of Hong Kong</dd></div>
+      <div><dt>Acting authority</dt><dd>Hong Kong Department of Justice</dd></div>
+      <div><dt>Outcome</dt><dd><span class="oc S">S</span> Sustained</dd></div>
+    </dl>
+    <div class="srcs">
+      <h4 class="label">Sources</h4>
+      <ol>
+        <li><span><a class="t" href="#">Hong Kong's Jimmy Lai sentenced to 20 years in prison</a><span class="m">CNN · 8 Feb 2026</span></span></li>
+        <li><span><a class="t" href="#">Hong Kong: Jimmy Lai convicted on bogus national security charges</a><span class="m">Human Rights Watch · 15 Dec 2025</span></span></li>
+        <li><span><a class="t" href="#">Explainer: the decline of Hong Kong's press freedom under the National Security Law</a><span class="m">Hong Kong Free Press · 3 May 2026 · <a class="arch" href="#">archived copy</a> <span class="stamp sm" style="margin-left:6px">Archived</span></span></span></li>
+      </ol>
+    </div>
+    <div class="super"><span class="stamp grey sm">Superseded</span><span><s>Sentencing expected in early 2026.</s> Replaced in revision 3 by the sentencing date, 8 February 2026 [1].</span></div>
+  </article>
+  <aside class="std">
+    <h3>Sources and standards</h3>
+    <p>Evidence comes first from court records and primary documents, then from reporting by established news organisations, then from reports by press-freedom organisations.</p>
+    <p>Corrections are kept, not erased: a superseded statement stays visible, struck through, with the date it changed. Where an original page no longer loads, an archived copy is linked beside it.</p>
+    <ol><li><a href="/sources-and-standards">Sources and standards</a></li><li><a href="/corrections">Corrections</a></li><li><a href="/data">Data and licence</a></li></ol>
+  </aside>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="end">End of index · 22 September 2026</p>
+    <p class="pub">The War On News is published by <a href="/about">Peter Benes</a>.</p>
+    <p class="lic">© 2026 Peter Benes. Text and data are licensed CC BY 4.0 unless noted; quotations remain the property of their sources.</p>
+    <ul>
+      <li><a href="/terms">Terms of use</a></li><li><a href="/privacy">Privacy</a></li><li><a href="/corrections">Corrections</a></li><li><a href="/sources-and-standards">Sources and standards</a></li><li><a href="/contact">Contact</a></li><li><a href="/data">Data</a></li><li><a href="/mcp">MCP</a></li><li><a href="/feeds">Feeds</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

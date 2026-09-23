@@ -1,0 +1,68 @@
+[
+  {
+    "correction_id": 1,
+    "incident_slug": "1983-us-grenada-press-exclusion",
+    "field": "outcome_on",
+    "new_value": "1984-08-23",
+    "url": "https://apps.dtic.mil/sti/tr/pdf/ADA225841.pdf",
+    "title": "Media Access to United States Military Operations: Grenada and Beyond",
+    "publisher": "Defense Technical Information Center (DTIC)",
+    "published_on": "1984-08-23",
+    "evidence_quote": "The report was reviewed by chief Pentagon spokesman Michael Burch and Secretary of Defense Weinberger before its release on August 23, 1984."
+  },
+  {
+    "correction_id": 2,
+    "incident_slug": "1981-haiti-duvalier-radio-haiti-inter-exile",
+    "field": "occurred_on",
+    "new_value": "1980-11-28",
+    "url": "https://www.amnesty.org/en/wp-content/uploads/2021/06/amr360012002en.pdf",
+    "title": "HAITI (Amnesty International report)",
+    "publisher": "Amnesty International",
+    "published_on": "2002",
+    "evidence_quote": "Radio Haïti Inter was raided by the Duvalier security forces on 28 November 1980. They destroyed equipment and arrested Jean's wife and daughters"
+  },
+  {
+    "correction_id": 3,
+    "incident_slug": "1950-south-africa-suppression-of-communism-act",
+    "field": "occurred_on",
+    "new_value": "1950-07-17",
+    "url": "https://sabctrc.saha.org.za/originals/finalreport/volume1/chapters/volume1_ch30.pdf",
+    "title": "Chronology of Apartheid Legislation (TRC Final Report, Vol. 1, Ch. 13)",
+    "publisher": "South African Truth and Reconciliation Commission / SAHA",
+    "published_on": "1998",
+    "evidence_quote": "1950 Internal Security Act (Suppression of Communism Act) No 44: Prohibited certain (listed) organisations and persons from promoting 'communism', which was broadly defined. Commenced: 17 July 1950"
+  },
+  {
+    "correction_id": 4,
+    "incident_slug": "1950-south-africa-suppression-of-communism-act",
+    "field": "outcome_on",
+    "new_value": "1991-07-31",
+    "url": "https://omalley.nelsonmandela.org/cis/omalley/OMalleyWeb/03lv02039/04lv02040/05lv02042.htm",
+    "title": "1991 (Chronology, O'Malley Archive)",
+    "publisher": "Nelson Mandela Foundation / O'Malley Archives",
+    "published_on": "1991",
+    "evidence_quote": "31 July 1991 Internal Security and Intimidation Amendment Act No 138: Abolished s 55, which had prohibited the furthering of the aims of communism"
+  },
+  {
+    "correction_id": 6,
+    "incident_slug": "2010-hungary-media-law-content-authority",
+    "field": "occurred_on",
+    "new_value": "2010-12-20",
+    "url": "https://www.loc.gov/item/global-legal-monitor/2011-01-07/hungary-controversial-new-media-law-defended-by-government/",
+    "title": "Hungary: Controversial New Media Law Defended by Government",
+    "publisher": "Library of Congress (Global Legal Monitor)",
+    "published_on": "2011-01-07",
+    "evidence_quote": "Hungary's Parliament passed a new media law on December 20, 2010, that has been harshly criticized by members of the country's media, other European governments, and the intergovernmental Organization for Security and Co-operation in Europe (OSCE)."
+  },
+  {
+    "correction_id": 8,
+    "incident_slug": "1998-serbia-public-information-act-fines",
+    "field": "outcome_on",
+    "new_value": "2000-10",
+    "url": "https://2009-2017.state.gov/j/drl/rls/hrrpt/2002/18401.htm",
+    "title": "Yugoslavia, Federal Republic of - Country Reports on Human Rights Practices",
+    "publisher": "U.S. Department of State",
+    "published_on": "2002",
+    "evidence_quote": "In October 2000, the Government abolished the Law on Public Information, which former President Milosevic used to silence the independent media during the Kosovo crisis."
+  }
+]

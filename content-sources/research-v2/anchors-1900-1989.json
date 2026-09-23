@@ -1,0 +1,2892 @@
+{
+  "incidents": [
+    {
+      "slug": "1917-us-espionage-act-bars-the-masses-from-the-mail",
+      "title": "United States postmaster bars the magazine The Masses from the mail under the Espionage Act",
+      "occurred_on": "1917-07",
+      "occurred_on_precision": "month",
+      "jurisdiction": "United States, federal",
+      "country": "US",
+      "continent": "North America",
+      "level": "national",
+      "type": "secrets_and_espionage_laws",
+      "tactic_primary": "secrets_and_espionage_laws",
+      "tactics": [
+        "secrets_and_espionage_laws",
+        "shutdowns_and_blocking"
+      ],
+      "leader_slug": "woodrow-wilson",
+      "summary": "Weeks after the United States entered the First World War, the New York postmaster used the new Espionage Act, a law against interfering with military recruitment, to bar the socialist magazine The Masses from the mail. A judge's order protecting the magazine was reversed on appeal.",
+      "what_happened": "Congress passed the Espionage Act in June 1917, a law that made it a crime to interfere with military recruitment or operations during the First World War. New York's postmaster, Thomas Patten, used the act to declare the August 1917 issue of The Masses, an anti-war socialist magazine, unmailable because of its cartoons and articles opposing the war and the draft. The magazine asked the United States District Court for the Southern District of New York, the federal trial court covering Manhattan, to block the ban. Judge Learned Hand agreed, ruling that the magazine's writers had criticized the war without directly urging readers to break the law. The United States Court of Appeals for the Second Circuit, the appeals court above Hand's, reversed him months later, and the mail ban stood. The Post Office went on to deny mailing privileges to dozens more anti-war and socialist publications under the same law.",
+      "stated_justification": "Postmaster Patten found the magazine's cartoons and articles likely, in the language of the Espionage Act, to cause insubordination in the armed forces and to obstruct recruiting.",
+      "effect_on_reporting": "The Masses lost the low second-class postal rate that let it reach subscribers across the country and stopped publishing within months; dozens of other anti-war and socialist papers lost mailing privileges the same way.",
+      "issue_of_the_day": "The United States had entered the First World War three months earlier and introduced a military draft. The Masses had run cartoons and articles opposing the war and conscription, which the Post Office treated as material likely to obstruct recruiting.",
+      "outcome": "upheld",
+      "outcome_on": "1917-11",
+      "outcome_note": "The United States Court of Appeals for the Second Circuit reversed Judge Hand's order later in 1917, and the Post Office's mail ban on The Masses stood.",
+      "actors": [
+        "woodrow-wilson",
+        "thomas-patten",
+        "learned-hand",
+        "albert-burleson"
+      ],
+      "actor_roles": {
+        "thomas-patten": "enforced",
+        "learned-hand": "adjudicated",
+        "albert-burleson": "enforced",
+        "woodrow-wilson": "other"
+      },
+      "outlets": [
+        "the-masses"
+      ],
+      "sources": [
+        "a1_001",
+        "a1_002"
+      ],
+      "claims": [
+        {
+          "field": "stated_justification",
+          "value": "Denied mailing on Espionage Act grounds",
+          "statement": "Judge Learned Hand held that stopping short of urging readers to break the law should not be treated as an attempt to cause a violation of it.",
+          "source_id": "a1_002",
+          "evidence_quote": "If one stops short of urging upon others that it is their duty or their interest to resist the law, it seems to me one should not be held to have attempted to cause its violation."
+        },
+        {
+          "field": "what_happened",
+          "value": "Legal standard Hand applied",
+          "statement": "Hand's opinion said the government had to point to language that specifically urged breaking the law, not merely to radical opinion.",
+          "source_id": "a1_002",
+          "evidence_quote": "the state point with exactness to just that conduct which violates the law"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "74 newspapers denied mailing privileges by 1918",
+          "statement": "By 1918 the Wilson administration's Post Office, led by Postmaster General Albert Burleson and Attorney General Thomas Gregory, had denied mailing privileges to 74 newspapers under the Espionage Act.",
+          "source_id": "a1_001",
+          "evidence_quote": "By 1918, in actions that seriously threatened First Amendment freedoms and that likely would not be upheld today, 74 newspapers had been denied mailing privileges."
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1917-us-burleson-mail-ban-milwaukee-leader",
+      "title": "United States Postmaster General Burleson strips the Milwaukee Leader of its mailing rate",
+      "occurred_on": "1917",
+      "occurred_on_precision": "year",
+      "jurisdiction": "United States, federal",
+      "country": "US",
+      "continent": "North America",
+      "level": "national",
+      "type": "shutdowns_and_blocking",
+      "tactic_primary": "shutdowns_and_blocking",
+      "tactics": [
+        "shutdowns_and_blocking",
+        "secrets_and_espionage_laws"
+      ],
+      "leader_slug": "woodrow-wilson",
+      "summary": "Postmaster General Albert Burleson used the wartime Espionage Act to strip the Milwaukee Leader, a socialist daily, of its low-cost second-class mailing rate, cutting off its main channel to readers. The Supreme Court upheld the revocation in 1921, over two dissents warning it amounted to press controls.",
+      "what_happened": "During the First World War, Postmaster General Albert Burleson's Post Office found the Milwaukee Leader, a socialist daily edited under publisher Victor Berger's direction, in violation of the Espionage Act for articles opposing the war, and revoked its second-class mailing permit, the low postal rate newspapers depended on to reach subscribers nationwide. The paper's publishing company asked the Supreme Court of the United States, the country's highest court, to order the Post Office to restore the rate, arguing the denial violated the Constitution's protections for speech and due process. In United States ex rel. Milwaukee Social Democratic Publishing Co. v. Burleson, decided March 7, 1921, the Court upheld Burleson's action by a 7 to 2 vote. Justices Oliver Wendell Holmes and Louis Brandeis dissented, warning that letting a postmaster judge a paper's loyalty amounted to a form of press controls over the mail.",
+      "stated_justification": "The Post Office found the Leader's wartime articles violated the Espionage Act, and the majority opinion held that the Constitution was not a shield for those who used its privileges to work against the government.",
+      "effect_on_reporting": "The Leader lost the inexpensive second-class postal rate other newspapers used to reach subscribers across the country, forcing it onto costlier first-class postage and cutting its circulation.",
+      "issue_of_the_day": "The Leader had published articles criticizing United States participation in the First World War and the draft, which the Post Office treated as violations of the Espionage Act's ban on obstructing military recruitment.",
+      "outcome": "upheld",
+      "outcome_on": "1921-03-07",
+      "outcome_note": "The Supreme Court upheld the revocation of the Leader's mailing rate 7 to 2 in United States ex rel. Milwaukee Social Democratic Publishing Co. v. Burleson.",
+      "actors": [
+        "woodrow-wilson",
+        "albert-burleson"
+      ],
+      "actor_roles": {
+        "albert-burleson": "enforced",
+        "woodrow-wilson": "other"
+      },
+      "outlets": [
+        "milwaukee-leader"
+      ],
+      "sources": [
+        "a1_003",
+        "a1_001"
+      ],
+      "claims": [
+        {
+          "field": "stated_justification",
+          "value": "Majority upheld Burleson",
+          "statement": "The Supreme Court's majority held that the Constitution was adopted to preserve the government, not to protect those who used its privileges to try to destroy it, in upholding Burleson's revocation of the paper's mailing rate.",
+          "source_id": "a1_003",
+          "evidence_quote": "The Constitution was adopted to preserve our Government, not to serve as a protecting screen for those who while claiming its privileges seek to destroy it."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Holmes dissent on mail access",
+          "statement": "Justice Oliver Wendell Holmes dissented, warning the ruling treated access to the mail, nearly as essential to free speech as the ability to speak, as something a postmaster could take away.",
+          "source_id": "a1_003",
+          "evidence_quote": "The use of the mails is almost as much a part of free speech as the right to use our tongues."
+        },
+        {
+          "field": "outcome",
+          "value": "Brandeis dissent",
+          "statement": "Justice Louis Brandeis dissented that the majority's approach would let the Post Office run what amounted to a system of censorship.",
+          "source_id": "a1_003",
+          "evidence_quote": "effective censorship"
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1931-us-near-v-minnesota-gag-law",
+      "title": "United States Supreme Court strikes down a Minnesota law used to shut a newspaper",
+      "occurred_on": "1927",
+      "occurred_on_precision": "year",
+      "jurisdiction": "Minnesota, United States",
+      "country": "US",
+      "continent": "North America",
+      "level": "state_or_province",
+      "type": "prior_restraint",
+      "tactic_primary": "prior_restraint",
+      "tactics": [
+        "prior_restraint"
+      ],
+      "leader_slug": "theodore-christianson",
+      "summary": "A Hennepin County attorney used Minnesota's 1925 Public Nuisance Law to shut down The Saturday Press, a Minneapolis paper accusing officials of corruption. In 1931 the Supreme Court of the United States struck the law down, ruling that stopping a paper before publication was itself a form of press controls.",
+      "what_happened": "Minnesota's 1925 Public Nuisance Law let a judge permanently shut any newspaper or periodical found to be malicious, scandalous or defamatory. In 1927 the Hennepin County Attorney, Floyd Olson, used the law to close The Saturday Press, a Minneapolis weekly run by Jay Near that had accused local officials and gangsters of corruption. Near appealed to the Supreme Court of the United States, the country's highest court, arguing the law violated the free-press guarantee that the First Amendment applies to the states through the Fourteenth Amendment's due process clause. On June 1, 1931, the Court ruled 5 to 4 in Near v. Minnesota that the law amounted to a prior restraint the Constitution did not allow, meaning government could not stop publication in advance, even of material later found libelous; a publisher could still be sued afterward, but the paper itself could not be shut down first. The decision became the foundation of later United States rulings against government orders blocking publication before it happens.",
+      "stated_justification": "Minnesota officials said the Public Nuisance Law applied to papers that habitually published malicious, scandalous or defamatory material, and treated The Saturday Press's allegations against local officials as exactly that kind of publication.",
+      "effect_on_reporting": "The Saturday Press was shut down under the injunction; after the Supreme Court's ruling, states lost the power to close a newspaper in advance for its content, though publishers remained open to being sued afterward.",
+      "issue_of_the_day": "The Saturday Press had run articles accusing Minneapolis officials, police and a local gangster of corruption and racketeering, allegations the county attorney treated as scandalous and defamatory under the state's 1925 nuisance law.",
+      "outcome": "reversed",
+      "outcome_on": "1931-06-01",
+      "outcome_note": "The Supreme Court of the United States struck down the Minnesota law 5 to 4 as a restraint on publication in advance that the Constitution did not allow.",
+      "actors": [
+        "theodore-christianson",
+        "floyd-olson"
+      ],
+      "actor_roles": {
+        "floyd-olson": "enforced",
+        "theodore-christianson": "other"
+      },
+      "outlets": [],
+      "sources": [
+        "a1_004"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Law treated as censorship",
+          "statement": "The Supreme Court held that letting officials bring a newspaper's publisher before a judge on a charge of publishing scandalous material was itself a form of censorship.",
+          "source_id": "a1_004",
+          "evidence_quote": "This is of the essence of censorship."
+        },
+        {
+          "field": "stated_justification",
+          "value": "Prior restraint doctrine",
+          "statement": "The Court said the central purpose of the free-press guarantee was to stop government from restraining publication in advance, while leaving a publisher open to being sued for libel afterward.",
+          "source_id": "a1_004",
+          "evidence_quote": "The chief purpose of the guaranty is to prevent previous restraints upon publication. The libeler, however, remains criminally and civilly responsible for his libels."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Statute put publisher under censorship",
+          "statement": "The Court found the Minnesota statute's real effect was not to punish one defamatory issue but to place the publisher under an ongoing system of censorship.",
+          "source_id": "a1_004",
+          "evidence_quote": "The statute not only operates to suppress the offending newspaper or periodical, but to put the publisher under an effective censorship."
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1941-us-office-of-censorship-wartime-press-code",
+      "title": "United States creates an Office of Censorship and a wartime code for the press",
+      "occurred_on": "1941-12-19",
+      "occurred_on_precision": "day",
+      "jurisdiction": "United States, federal",
+      "country": "US",
+      "continent": "North America",
+      "level": "national",
+      "type": "prior_restraint",
+      "tactic_primary": "prior_restraint",
+      "tactics": [
+        "prior_restraint",
+        "secrets_and_espionage_laws"
+      ],
+      "leader_slug": "franklin-d-roosevelt",
+      "summary": "Twelve days after the bombing of Pearl Harbor, President Franklin Roosevelt created the Office of Censorship. Its director, Byron Price, a former Associated Press editor, wrote a Code of Wartime Practices asking newspapers and broadcasters to withhold information such as troop movements, and most of the press followed it voluntarily.",
+      "what_happened": "Twelve days after Japan's December 7, 1941 bombing of the United States naval base at Pearl Harbor drew the country into the Second World War, President Franklin Roosevelt signed an order on December 19, 1941 creating the Office of Censorship. He named Byron Price, a former executive news editor of the Associated Press wire service, to run it. Price's office wrote a Code of Wartime Practices for American newspapers and, separately, for radio stations, asking editors and broadcasters not to publish or air information of possible use to an enemy, such as troop, ship and plane movements, weather conditions, casualty lists and damage to military targets. The code was voluntary rather than a legal requirement, and American publishers and broadcasters, largely supportive of the war effort, followed it without a formal enforcement mechanism. The office also opened and read international mail, cables and other communications. It was abolished once the war in the Pacific ended.",
+      "stated_justification": "Roosevelt said Americans hated press controls as much as they hated war but treated it as unavoidable in wartime, arguing that military information of possible use to an enemy had to be kept from publication at its source.",
+      "effect_on_reporting": "Newspapers and broadcasters voluntarily withheld reporting on troop and ship movements, fortifications, weather, casualty lists and damage to military targets for the war's duration under the Office of Censorship's code.",
+      "issue_of_the_day": "The United States had just entered the Second World War after the Japanese bombing of Pearl Harbor, and the government wanted to prevent newspapers and broadcasters from unintentionally publishing information useful to enemy forces.",
+      "outcome": "sustained",
+      "outcome_on": "1945-09-28",
+      "outcome_note": "The Office of Censorship operated on the press's voluntary compliance through the war and was abolished by executive order after Japan's surrender.",
+      "actors": [
+        "franklin-d-roosevelt",
+        "byron-price"
+      ],
+      "actor_roles": {
+        "franklin-d-roosevelt": "announced",
+        "byron-price": "enforced"
+      },
+      "outlets": [],
+      "sources": [
+        "a1_005",
+        "a1_006"
+      ],
+      "claims": [
+        {
+          "field": "stated_justification",
+          "value": "Roosevelt's rationale",
+          "statement": "President Roosevelt said Americans hated censorship as much as they hated war, even as his administration created a wartime censorship office.",
+          "source_id": "a1_005",
+          "evidence_quote": "All Americans abhor censorship, just as they abhor war."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Code of Wartime Practices content",
+          "statement": "The Office of Censorship's Code of Wartime Practices asked the press not to report on troop, ship and plane movements, fortifications, weather conditions, casualty lists or damage to military targets.",
+          "source_id": "a1_005",
+          "evidence_quote": "troop, ship, and plane movements, fortifications, weather conditions, casualty lists, damage to various military targets, transportation of war materials"
+        },
+        {
+          "field": "occurred_on",
+          "value": "Office created December 19, 1941",
+          "statement": "Roosevelt created the Office of Censorship under Byron Price, a former Associated Press news editor, who wrote a Code of Wartime Practices for newspapers and radio stations.",
+          "source_id": "a1_006",
+          "evidence_quote": "Roosevelt creates the Office of Censorship. Under the direction of Byron Price, former executive news editor of the Associated Press, the office established a Code of Wartime Practices for newspapers and radio stations."
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1955-us-eastland-subcommittee-subpoenas-new-york-times",
+      "title": "United States Senate panel subpoenas dozens of New York Times journalists over Communist ties",
+      "occurred_on": "1955-11",
+      "occurred_on_precision": "month",
+      "jurisdiction": "United States, federal",
+      "country": "US",
+      "continent": "North America",
+      "level": "national",
+      "type": "surveillance_and_subpoenas",
+      "tactic_primary": "surveillance_and_subpoenas",
+      "tactics": [
+        "surveillance_and_subpoenas"
+      ],
+      "leader_slug": "dwight-d-eisenhower",
+      "summary": "The Senate Internal Security Subcommittee, led by Senator James Eastland, issued 35 subpoenas over past or present Communist Party ties in the press, and 26 of them went to New York Times staff. The newspaper protested but several employees who would not answer were fired or forced to resign.",
+      "what_happened": "The Senate Internal Security Subcommittee, a Senate panel investigating Communist Party influence chaired by Senator James Eastland of Mississippi, issued a wave of subpoenas in November 1955 for closed hearings on Communism in the press, radio and television industries. Of 35 subpoenas issued, 26 went to past or present employees of The New York Times. The newspaper's own editorial page said the investigation appeared aimed squarely at the paper, while also saying it did not believe in permanent guilt and thought employees could make up for past association with the Communist Party through good work. Even so, several Times staff members who indicated they would invoke their Fifth Amendment right against self-incrimination rather than answer the subcommittee's questions were dismissed or pressured to resign before or after testifying, including one employee let go before the hearings even began. Other newspapers, including the New York Daily News and the Hearst-owned Daily Mirror, fired staff members in the same way.",
+      "stated_justification": "The Senate Internal Security Subcommittee said it was investigating Communist Party influence within newsrooms, and its subpoenas asked witnesses about past or present party membership.",
+      "effect_on_reporting": "Journalists at The New York Times and other papers who would not answer the subcommittee's questions about Communist Party ties were fired or pressured into resigning, a pattern that spread to other newsrooms during the hearings.",
+      "issue_of_the_day": "Senator Eastland's subcommittee was investigating what it described as Communist Party influence in American newsrooms and broadcasting during the Cold War, and treated past party membership among journalists as grounds for scrutiny.",
+      "outcome": "sustained",
+      "outcome_on": "1956-12",
+      "outcome_note": "The dismissals and resignations at The New York Times and other papers were not reversed; the paper said at year's end it had made no further dismissals beyond the initial cases.",
+      "actors": [
+        "james-eastland",
+        "dwight-d-eisenhower"
+      ],
+      "actor_roles": {
+        "james-eastland": "enforced",
+        "dwight-d-eisenhower": "other"
+      },
+      "outlets": [
+        "new-york-times-historical"
+      ],
+      "sources": [
+        "a1_007"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "35 subpoenas, 26 to Times staff",
+          "statement": "The Senate Internal Security Subcommittee issued 35 subpoenas for secret hearings on Communism in the press, radio and television, and 26 of them went to past or present New York Times employees.",
+          "source_id": "a1_007",
+          "evidence_quote": "Of 35 subpoenas to secret hearings by the Internal Security Subcommittee, 26 went to past or present employees of the New York Times."
+        },
+        {
+          "field": "stated_justification",
+          "value": "Times editorial reaction",
+          "statement": "The New York Times said in an editorial that the Eastland subcommittee's investigation appeared aimed with particular emphasis at the paper.",
+          "source_id": "a1_007",
+          "evidence_quote": "It seems to us quite obvious that the Eastland investigation has been aimed with particular emphasis at the New York Times"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Staff fired before testifying",
+          "statement": "At least one Times employee was dismissed before the hearings even started once he indicated he would invoke the Fifth Amendment rather than answer the subcommittee.",
+          "source_id": "a1_007",
+          "evidence_quote": "the Times fired him before the hearings started, when he indicated that he would duck behind the Fifth"
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1971-us-nixon-enemies-list",
+      "title": "Nixon White House compiles an enemies list naming journalists for official pressure",
+      "occurred_on": "1971-08-16",
+      "occurred_on_precision": "day",
+      "jurisdiction": "United States, federal",
+      "country": "US",
+      "continent": "North America",
+      "level": "national",
+      "type": "surveillance_and_subpoenas",
+      "tactic_primary": "surveillance_and_subpoenas",
+      "tactics": [
+        "surveillance_and_subpoenas",
+        "funding_and_ownership_pressure"
+      ],
+      "leader_slug": "richard-nixon",
+      "summary": "White House Counsel John Dean wrote a memo on how to use federal agencies against President Nixon's political opponents, and the resulting list of more than 200 names included journalists such as CBS News correspondent Daniel Schorr. It became public during the 1973 Senate Watergate hearings.",
+      "what_happened": "Staff in President Richard Nixon's White House began compiling a list of political opponents in June 1971. On August 16, 1971, White House Counsel John Dean wrote a memo titled 'Dealing with our Political Enemies,' describing how the administration could use the machinery of the federal government, including the Internal Revenue Service, the United States tax-collection agency, to conduct tax audits and other scrutiny of people and organizations it considered critical. The list grew to more than 200 names by September 1971 and included a media category naming journalists alongside politicians, activists and business figures. CBS News correspondent Daniel Schorr discovered he was number 17 on the list; The Washington Post columnist Mary McGrory was included for what an internal notation called her 'daily hate Nixon articles.' Dean revealed the list during his testimony to the Senate Watergate Committee, the Senate panel investigating the Watergate scandal, on June 27, 1973, making it public for the first time.",
+      "stated_justification": "Dean's memo described the effort as a way to use the available machinery of the federal government against people the administration regarded as its political enemies, without citing any specific conduct by the journalists named.",
+      "effect_on_reporting": "Journalists named on the list, including Daniel Schorr and Mary McGrory, learned their reporting or commentary had made them targets for the same federal pressure, including possible tax audits, that the administration considered using against other political opponents.",
+      "issue_of_the_day": "Nixon's aides were reacting to sustained critical coverage and commentary from named journalists during his first term, including Mary McGrory's columns, which an internal notation described as habitually critical to the president.",
+      "outcome": "reversed",
+      "outcome_on": "1973-06-27",
+      "outcome_note": "The list became public during John Dean's Senate Watergate Committee testimony, discrediting the effort as Nixon's presidency unraveled over the wider Watergate scandal.",
+      "actors": [
+        "richard-nixon",
+        "john-dean",
+        "daniel-schorr",
+        "mary-mcgrory"
+      ],
+      "actor_roles": {
+        "john-dean": "enforced",
+        "richard-nixon": "announced",
+        "daniel-schorr": "other",
+        "mary-mcgrory": "other"
+      },
+      "outlets": [
+        "washington-post-historical"
+      ],
+      "sources": [
+        "a1_008",
+        "a1_049"
+      ],
+      "claims": [
+        {
+          "field": "stated_justification",
+          "value": "Dean memo purpose",
+          "statement": "White House Counsel John Dean's August 16, 1971 memo described how the Nixon administration could use the machinery of the federal government against people it considered political enemies.",
+          "source_id": "a1_008",
+          "evidence_quote": "how we can use the available federal machinery to screw our political enemies"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "IRS role",
+          "statement": "The same effort discussed using the Internal Revenue Service to harass people and organizations on the list, which included a media category.",
+          "source_id": "a1_008",
+          "evidence_quote": "using the Internal Revenue Service to harass people and organizations"
+        },
+        {
+          "field": "what_happened",
+          "value": "Schorr on the list",
+          "statement": "CBS News correspondent Daniel Schorr found he was number 17 on the list, one description of him on it calling him a real media enemy.",
+          "source_id": "a1_049",
+          "evidence_quote": "a real media enemy"
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1971-us-pentagon-papers-injunction",
+      "title": "United States government seeks an injunction to stop The New York Times publishing the Pentagon Papers",
+      "occurred_on": "1971-06-15",
+      "occurred_on_precision": "day",
+      "jurisdiction": "United States, federal",
+      "country": "US",
+      "continent": "North America",
+      "level": "national",
+      "type": "prior_restraint",
+      "tactic_primary": "prior_restraint",
+      "tactics": [
+        "prior_restraint",
+        "secrets_and_espionage_laws"
+      ],
+      "leader_slug": "richard-nixon",
+      "summary": "After The New York Times began publishing a leaked secret history of the Vietnam War, the Nixon administration obtained a court order stopping further publication, the first such order against a major American newspaper. The Supreme Court lifted it two weeks later, ruling the government had not justified blocking publication in advance.",
+      "what_happened": "Military analyst Daniel Ellsberg copied a classified Defense Department history of United States involvement in Vietnam, later known as the Pentagon Papers, and gave it to The New York Times, which began publishing excerpts on June 13, 1971. The Department of Justice obtained a temporary restraining order from a federal court on June 15, 1971, the first time the United States government had gone to court to stop a major newspaper from publishing a specific story, arguing publication would harm national security. When The Washington Post also began publishing excerpts, the government sought an injunction against it too. The Supreme Court of the United States, the country's highest court, heard the consolidated case on an emergency basis and ruled 6 to 3 on June 30, 1971, in New York Times Co. v. United States, that the government had not met the heavy burden required to justify stopping publication in advance, and both papers resumed publishing.",
+      "stated_justification": "Government lawyers argued that publishing the classified history would cause grave and irreparable harm to United States national security and ongoing diplomatic and military efforts in Vietnam.",
+      "effect_on_reporting": "The New York Times and The Washington Post were barred by court order from publishing further excerpts of the Pentagon Papers for roughly two weeks until the Supreme Court lifted the injunction.",
+      "issue_of_the_day": "The Pentagon Papers documented decades of internal government decision-making on the Vietnam War that contradicted public statements by several administrations, and the Nixon administration sought to prevent further disclosure of the classified history.",
+      "outcome": "reversed",
+      "outcome_on": "1971-06-30",
+      "outcome_note": "The Supreme Court ruled 6 to 3 that the government's request for an injunction against publication failed to overcome the heavy presumption against prior restraint.",
+      "actors": [
+        "richard-nixon",
+        "daniel-ellsberg"
+      ],
+      "actor_roles": {
+        "richard-nixon": "enforced",
+        "daniel-ellsberg": "other"
+      },
+      "outlets": [
+        "new-york-times-historical",
+        "washington-post-historical"
+      ],
+      "sources": [
+        "a1_009",
+        "a1_010"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Heavy presumption against prior restraint",
+          "statement": "The Supreme Court's per curiam opinion said any system of restraints on publication ordered in advance came to the Court bearing a heavy presumption against being constitutional.",
+          "source_id": "a1_009",
+          "evidence_quote": "Any system of prior restraints of expression comes to this Court bearing a heavy presumption against its constitutional validity."
+        },
+        {
+          "field": "stated_justification",
+          "value": "Black concurrence on the press's role",
+          "statement": "Justice Hugo Black wrote that the press was protected precisely so it could disclose the government's secrets and inform the public.",
+          "source_id": "a1_009",
+          "evidence_quote": "The press was protected so that it could bare the secrets of government and inform the people."
+        },
+        {
+          "field": "occurred_on",
+          "value": "Pentagon Papers commissioned and leaked",
+          "statement": "The Pentagon Papers were commissioned by Secretary of Defense Robert McNamara and covered the United States role in Indochina from the Second World War until May 1968, before Daniel Ellsberg leaked them in 1971.",
+          "source_id": "a1_010",
+          "evidence_quote": "Pentagon Papers, papers that contain a history of the U.S. role in Indochina from World War II until May 1968."
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1972-us-branzburg-v-hayes-reporters-privilege",
+      "title": "United States Supreme Court rules reporters have no privilege to refuse grand jury subpoenas",
+      "occurred_on": "1969",
+      "occurred_on_precision": "year",
+      "jurisdiction": "United States, federal",
+      "country": "US",
+      "continent": "North America",
+      "level": "national",
+      "type": "surveillance_and_subpoenas",
+      "tactic_primary": "surveillance_and_subpoenas",
+      "tactics": [
+        "surveillance_and_subpoenas"
+      ],
+      "leader_slug": "richard-nixon",
+      "summary": "Louisville Courier-Journal reporter Paul Branzburg was subpoenaed by a Kentucky grand jury, a body that investigates possible crimes, after he wrote about drug users he had observed. The Supreme Court ruled in 1972 that the First Amendment gives reporters no special right to withhold sources or information from a grand jury.",
+      "what_happened": "Paul Branzburg, a reporter for the Louisville Courier-Journal newspaper in Kentucky, wrote articles describing drug users he had observed making and using hashish, without naming them. A Jefferson County, Kentucky grand jury, a body of citizens that investigates possible crimes and can compel testimony, subpoenaed Branzburg in 1969 to identify the people he had written about; he refused, arguing the First Amendment protected him from having to reveal confidential sources and information gathered for reporting. His case was combined with two others raising the same question and reached the Supreme Court of the United States, the country's highest court. On June 29, 1972, the Court ruled 5 to 4 in Branzburg v. Hayes that reporters have the same obligation as any other citizen to answer relevant questions before a grand jury, rejecting the claim of a constitutional reporter's privilege to withhold sources.",
+      "stated_justification": "The Kentucky grand jury said it needed Branzburg's testimony to investigate the drug offenses he had personally witnessed while reporting, and the Supreme Court's majority held reporters had the same duty as other citizens to answer such questions.",
+      "effect_on_reporting": "Reporters in the United States gained no constitutional shield against being compelled to testify before a grand jury or reveal confidential sources, leaving protection for sources to depend on state shield laws or prosecutorial discretion.",
+      "issue_of_the_day": "Branzburg's articles on drug use and manufacturing drew the attention of Kentucky prosecutors, who wanted him to identify the people he had described witnessing commit the underlying offenses.",
+      "outcome": "upheld",
+      "outcome_on": "1972-06-29",
+      "outcome_note": "The Supreme Court upheld the grand jury's power to compel Branzburg's testimony 5 to 4, finding no First Amendment reporter's privilege.",
+      "actors": [
+        "richard-nixon"
+      ],
+      "actor_roles": {
+        "richard-nixon": "other"
+      },
+      "outlets": [],
+      "sources": [
+        "a1_011"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "No constitutional privilege",
+          "statement": "The Supreme Court held that a reporter cannot claim First Amendment protection for withholding confidentially received information from a grand jury.",
+          "source_id": "a1_011",
+          "evidence_quote": "A reporter cannot claim First Amendment protection in withholding confidentially received information from a grand jury."
+        },
+        {
+          "field": "stated_justification",
+          "value": "Same duty as other citizens",
+          "statement": "The Court framed the issue as whether reporters must respond to grand jury subpoenas and answer relevant questions the same way other citizens do.",
+          "source_id": "a1_011",
+          "evidence_quote": "The sole issue before us is the obligation of reporters to respond to grand jury subpoenas as other citizens do, and to answer questions relevant to an investigation into the commission of crime."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Incidental burdens permitted",
+          "statement": "The Court said the First Amendment does not void every incidental burden on the press that results from enforcing general criminal or civil law.",
+          "source_id": "a1_011",
+          "evidence_quote": "It is clear that the First Amendment does not invalidate every incidental burdening of the press that may result from the enforcement of civil or criminal statutes of general applicability."
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1983-us-grenada-press-exclusion",
+      "title": "United States military bars journalists from the invasion of Grenada",
+      "occurred_on": "1983-10-25",
+      "occurred_on_precision": "day",
+      "jurisdiction": "United States, federal",
+      "country": "US",
+      "continent": "North America",
+      "level": "national",
+      "type": "access_ban",
+      "tactic_primary": "access_ban",
+      "tactics": [
+        "access_ban"
+      ],
+      "leader_slug": "ronald-reagan",
+      "summary": "When United States forces invaded the Caribbean island of Grenada on October 25, 1983, military commanders kept all journalists away from the island for the first two days of fighting, citing operational reasons. Protests from news organizations led the Pentagon to create a rotating press pool for future operations.",
+      "what_happened": "United States forces invaded the eastern Caribbean island nation of Grenada on October 25, 1983, under the Reagan administration, in an operation named Urgent Fury. Admiral Wesley McDonald, the operation's commander, barred journalists from the island for what he called operational reasons, and the Pentagon arranged no transportation, movement or communications facilities for reporters trying to reach Grenada on their own. Journalists were held on the nearby island of Barbados for roughly 48 hours while the fighting continued. After protests from news organizations and members of Congress, the Joint Chiefs of Staff, the senior body of United States military leadership, ordered limited press access restored by October 28. The exclusion prompted a Pentagon-appointed panel, the Sidle Commission, to recommend a rotating pool of reporters for the early stages of future military operations, a system the Pentagon adopted in 1985.",
+      "stated_justification": "Military commanders said the initial exclusion of journalists protected reporters' safety during active combat, a rationale journalists disputed by noting they had always accepted the risks of covering war as part of their profession.",
+      "effect_on_reporting": "No independent journalists were present to document the first two days of the invasion, and the press pool of about 15 reporters that eventually reached Grenada on October 27 remained tightly escorted by the military.",
+      "issue_of_the_day": "Defense officials had for years blamed unrestricted press coverage for damaging public and political support during the Vietnam War, and applied that lesson by excluding reporters from the opening phase of the Grenada operation.",
+      "outcome": "reversed",
+      "outcome_on": "1985-04",
+      "outcome_note": "The Pentagon created a standing national media pool in 1985 on the Sidle Commission's recommendation, formally reversing the total exclusion used in Grenada.",
+      "actors": [
+        "ronald-reagan",
+        "wesley-mcdonald",
+        "john-vessey",
+        "george-shultz"
+      ],
+      "actor_roles": {
+        "wesley-mcdonald": "enforced",
+        "ronald-reagan": "announced",
+        "john-vessey": "other",
+        "george-shultz": "other"
+      },
+      "outlets": [],
+      "sources": [
+        "a1_012",
+        "a1_013"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "No press at initial landing",
+          "statement": "When American soldiers landed on Grenada's beaches at 5 a.m. on October 25, 1983, journalists were not present to document the invasion.",
+          "source_id": "a1_012",
+          "evidence_quote": "When American soldiers stormed the island's beaches at 5 a.m., journalists weren't there to document the invasion."
+        },
+        {
+          "field": "stated_justification",
+          "value": "McDonald's operational-reasons order",
+          "statement": "Admiral Wesley McDonald barred reporters from the island for what he described as operational reasons.",
+          "source_id": "a1_013",
+          "evidence_quote": "Adm. Wesley McDonald banned reporters for 'operational reasons.'"
+        },
+        {
+          "field": "outcome",
+          "value": "Sidle Commission recommendation",
+          "statement": "A Pentagon-appointed panel concluded that while open coverage remained preferable, a pool of reporters would be an acceptable way to cover the early stages of a surprise military operation.",
+          "source_id": "a1_012",
+          "evidence_quote": "while open coverage of conflict would be the preferred method, a pool of reporters would be acceptable and, at times, desirable in covering early stages of combat or surprise attacks."
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1981-haiti-duvalier-radio-haiti-inter-exile",
+      "title": "Haiti's Duvalier government arrests and deports Radio Haiti-Inter staff, driving its director into exile",
+      "occurred_on": "1981",
+      "occurred_on_precision": "year",
+      "jurisdiction": "Haiti, national",
+      "country": "HT",
+      "continent": "North America",
+      "level": "national",
+      "type": "expulsion_and_visa_denial",
+      "tactic_primary": "expulsion_and_visa_denial",
+      "tactics": [
+        "expulsion_and_visa_denial",
+        "detention_and_violence"
+      ],
+      "leader_slug": "jean-claude-duvalier",
+      "summary": "Under President Jean-Claude Duvalier, Haitian authorities arrested and deported staff of Radio Haiti-Inter, an independent station that had reported critically on the government, forcing its director, journalist Jean Dominique, into exile in 1981. He returned only after Duvalier's government fell in 1986.",
+      "what_happened": "Jean Dominique had worked at Radio Haiti since the late 1960s and bought the station in 1971, renaming it Radio Haiti-Inter and building it into Haiti's leading independent broadcaster under the government of President-for-life Jean-Claude 'Baby Doc' Duvalier, who had succeeded his father, François Duvalier, in 1971. In 1981, authorities arrested and deported Dominique's wife, journalist Michèle Montas, along with other Radio Haiti-Inter staff, and Dominique himself was forced into exile the same year. The station's independent reporting on government abuses had long drawn official friction. Dominique did not return to Haiti until February 1986, after the fall of Duvalier's government ended nearly three decades of rule by father and son. He would later be forced into exile a second time, in 1991, after a separate military takeover, before returning again in 1994.",
+      "stated_justification": "Haitian authorities did not publish a specific charge against Radio Haiti-Inter's staff; contemporary accounts describe the arrests and deportations as part of the Duvalier government's broader intolerance of the station's independent reporting.",
+      "effect_on_reporting": "Radio Haiti-Inter lost its director and other staff to arrest, deportation and exile in 1981, suppressing one of Haiti's few independent broadcast voices until Dominique's return five years later.",
+      "issue_of_the_day": "Radio Haiti-Inter had built a reputation for independent reporting critical of the Duvalier government at a time when most Haitian media avoided such coverage, drawing sustained official friction toward the station.",
+      "outcome": "reversed",
+      "outcome_on": "1986-02",
+      "outcome_note": "Jean Dominique returned to Haiti and to Radio Haiti-Inter in February 1986 after the fall of President-for-life Jean-Claude Duvalier's government.",
+      "actors": [
+        "jean-claude-duvalier",
+        "jean-dominique",
+        "michele-montas"
+      ],
+      "actor_roles": {
+        "jean-claude-duvalier": "enforced",
+        "jean-dominique": "other",
+        "michele-montas": "other"
+      },
+      "outlets": [
+        "radio-haiti-inter"
+      ],
+      "sources": [
+        "a1_014",
+        "a1_015"
+      ],
+      "claims": [
+        {
+          "field": "occurred_on",
+          "value": "Forced into exile in 1981",
+          "statement": "Jean Dominique was forced into exile in 1981 after his wife, journalist Michèle Montas, and other Radio Haiti-Inter staff were arrested and deported by the government.",
+          "source_id": "a1_014",
+          "evidence_quote": "forced into exile in 1981 after his wife, Michèle Montas, and other Haiti Inter staff were arrested and deported by the regime"
+        },
+        {
+          "field": "what_happened",
+          "value": "Critic of the Duvalier dictatorship",
+          "statement": "Dominique was described as a critic of the Duvalier family's rule of Haiti from 1957 to 1986.",
+          "source_id": "a1_014",
+          "evidence_quote": "a critic of the Duvalier dictatorship (1957-86)"
+        },
+        {
+          "field": "outcome",
+          "value": "Returned after Duvalier's fall",
+          "statement": "Dominique returned to Haiti after the fall of President-for-life Jean-Claude Duvalier in February 1986.",
+          "source_id": "a1_014",
+          "evidence_quote": "He returned after the fall of President-for-Life Jean-Claude 'Baby Doc' Duvalier in February 1986."
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1939-brazil-vargas-creates-dip",
+      "title": "Brazil's Vargas government creates a state messaging department with broad press powers",
+      "occurred_on": "1939",
+      "occurred_on_precision": "year",
+      "jurisdiction": "Brazil, federal",
+      "country": "BR",
+      "continent": "South America",
+      "level": "national",
+      "type": "outlet_licensing",
+      "tactic_primary": "outlet_licensing",
+      "tactics": [
+        "outlet_licensing",
+        "prior_restraint"
+      ],
+      "leader_slug": "getulio-vargas",
+      "summary": "President Getúlio Vargas created the Department of Press and state messaging in 1939 during Brazil's Estado Novo dictatorship, giving the government direct control over what newspapers, radio and film could publish. The department operated as a central instrument of press controls for six years, until the Estado Novo ended in 1945.",
+      "what_happened": "Getúlio Vargas, president of Brazil, had ruled by decree since closing Congress in 1937 and declaring the Estado Novo, or New State. In 1939 his government created the Departamento de Imprensa e Propaganda, the Department of Press and state messaging, known as the DIP, to control news content and promote the government's political program across newspapers, radio and film. The DIP reviewed material before publication, dictated approved themes and language, and could shut down or discipline outlets that stepped outside its guidelines. It functioned as the government's central instrument of press control for six years, shaping coverage of Vargas's policies and suppressing criticism of his government. The DIP was dissolved in 1945 when the Estado Novo ended and Vargas was removed from power by the military, though its intelligence and information functions were later inherited by successor government bodies.",
+      "stated_justification": "Vargas's government presented the DIP as the coordinating body for national state messaging under the Estado Novo, tasked with promoting the government's program rather than acknowledging a role in suppressing criticism.",
+      "effect_on_reporting": "Brazilian newspapers, radio stations and filmmakers operated under the DIP's pre-publication review and approved-content guidelines for six years, with the department able to discipline or close outlets that published material outside its guidelines.",
+      "issue_of_the_day": "Vargas had ruled by decree since 1937 under the Estado Novo and used the DIP to promote his government's program and nationalist agenda while suppressing coverage critical of his rule.",
+      "outcome": "reversed",
+      "outcome_on": "1945",
+      "outcome_note": "The DIP was dissolved in 1945 when the military removed Vargas from power and the Estado Novo dictatorship ended.",
+      "actors": [
+        "getulio-vargas",
+        "dip-brazil"
+      ],
+      "actor_roles": {
+        "getulio-vargas": "announced",
+        "dip-brazil": "enforced"
+      },
+      "outlets": [],
+      "sources": [
+        "a1_016",
+        "a1_017"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "DIP created 1939",
+          "statement": "The Department of Press and Propaganda, the DIP, was created in Vargas's Brazil in 1939 to promote Getúlio Vargas's political propaganda.",
+          "source_id": "a1_016",
+          "evidence_quote": "O DIP, Departamento de Imprensa e Propaganda foi criado no Brasil de Vargas em 1939 para promover a propaganda política de Getúlio Vargas."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Powerful instrument of censorship",
+          "statement": "For six years the DIP served as a powerful instrument of censorship in Brazil.",
+          "source_id": "a1_016",
+          "evidence_quote": "Por seis anos, foi um poderoso instrumento de censura no país"
+        },
+        {
+          "field": "outcome",
+          "value": "Estado Novo dates",
+          "statement": "Brazil's Estado Novo was a dictatorial period from 1937 to 1945 under President Getúlio Vargas, the period during which the DIP operated.",
+          "source_id": "a1_017",
+          "evidence_quote": "dictatorial period (1937–45) in Brazil during the rule of President Getúlio Vargas"
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1973-chile-coup-press-shutdown",
+      "title": "Chile's military government shuts opposition radio stations and newspapers after the 1973 coup",
+      "occurred_on": "1973-09-11",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Chile, national",
+      "country": "CL",
+      "continent": "South America",
+      "level": "national",
+      "type": "shutdowns_and_blocking",
+      "tactic_primary": "shutdowns_and_blocking",
+      "tactics": [
+        "shutdowns_and_blocking",
+        "detention_and_violence"
+      ],
+      "leader_slug": "augusto-pinochet",
+      "summary": "On the day of the September 11, 1973 military coup that overthrew President Salvador Allende, Chile's armed forces bombed and shut down radio stations that opposed the takeover, arrested journalists and closed newspapers aligned with the ousted government, under the military junta led by Augusto Pinochet.",
+      "what_happened": "On September 11, 1973, Chile's armed forces, led by General Augusto Pinochet, moved to overthrow the elected government of President Salvador Allende. As the coup unfolded, the military moved against radio stations that continued broadcasting statements opposing the takeover. Radio Magallanes was bombed and hit with gunfire around 10 a.m. and went off the air about 27 minutes later, with four of its journalists arrested in the raid. Radio Candelaria, the last station still opposing the coup, lost its signal shortly before the presidential palace, La Moneda, was bombed at 11:52 a.m. In the following days, the new military government shut down news outlets that had supported Allende's government and barred many journalists identified with them from working in Chile's now military-controlled press, forcing some into what one journalist later called internal exile and driving others abroad.",
+      "stated_justification": "The military junta that took power on September 11, 1973 treated broadcasters and newspapers that had supported Allende's government as extensions of a political order it had just overthrown, and moved to suppress them as part of securing control.",
+      "effect_on_reporting": "Radio stations supporting Allende's government went off the air within hours of the coup, journalists were arrested during the takeover, and outlets aligned with the ousted government were shut down and their staff blacklisted from the Chilean press.",
+      "issue_of_the_day": "Chile's armed forces were in the process of overthrowing President Salvador Allende's elected government on September 11, 1973, and moved to suppress broadcasters and newspapers that continued to support him as the coup unfolded.",
+      "outcome": "sustained",
+      "outcome_on": "1990-03",
+      "outcome_note": "Press restrictions continued under military rule until Chile's return to civilian government in March 1990, after Pinochet lost a 1988 plebiscite on his continued rule.",
+      "actors": [
+        "augusto-pinochet"
+      ],
+      "actor_roles": {
+        "augusto-pinochet": "enforced"
+      },
+      "outlets": [
+        "radio-magallanes",
+        "radio-candelaria"
+      ],
+      "sources": [
+        "a1_018",
+        "a1_019"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Radio Magallanes bombed",
+          "statement": "Radio Magallanes was bombed and hit with machine-gun fire around 10 a.m. on the day of the coup, going off the air about 27 minutes later after four of its journalists were arrested.",
+          "source_id": "a1_018",
+          "evidence_quote": "Less than an hour later, at 10 a.m., Radio Magallanes was bombed and hit with machine-guns."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Radio Candelaria last station off air",
+          "statement": "Radio Candelaria was the last station still opposing the coup to go off the air, losing its signal minutes before La Moneda, the presidential palace, was bombed.",
+          "source_id": "a1_018",
+          "evidence_quote": "Radio Candelaria was the last station opposing the coup to go off the air, losing its signal just minutes before La Moneda was bombed at 11:52 a.m."
+        },
+        {
+          "field": "outcome",
+          "value": "Journalists blacklisted",
+          "statement": "Journalists who had supported the constitutional government could not work in the newly military-controlled press once their names appeared on blacklists.",
+          "source_id": "a1_018",
+          "evidence_quote": "We couldn't work in the military-controlled press for two reasons: or rejection of the dictatorship and our names being on 'blacklists'"
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1976-argentina-junta-press-decrees",
+      "title": "Argentina's military junta threatens journalists with prison for reporting on its opponents",
+      "occurred_on": "1976-03-24",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Argentina, national",
+      "country": "AR",
+      "continent": "South America",
+      "level": "national",
+      "type": "detention_and_violence",
+      "tactic_primary": "detention_and_violence",
+      "tactics": [
+        "detention_and_violence",
+        "prior_restraint"
+      ],
+      "leader_slug": "jorge-videla",
+      "summary": "Hours after seizing power on March 24, 1976, Argentina's military junta, led by General Jorge Videla, issued Communiqué No. 19, threatening up to 10 years in prison for reporting favorable to groups it called subversive. Hundreds of journalists were later detained, killed or forced into exile.",
+      "what_happened": "Argentina's armed forces overthrew President Isabel Perón's government on March 24, 1976 and installed a military junta headed by General Jorge Videla. The same day, the junta issued Communiqué No. 19, threatening imprisonment of up to 10 years for anyone who published or reproduced material from organizations the government had banned, and threatening up to 10 years for reporting that the government said disrupted, harmed or discredited the armed forces. Security forces raided newspapers around the country, arresting and jailing editors and reporters and closing some publications outright. Jacobo Timerman, editor of the newspaper La Opinión, was detained in April 1977 and later held under house arrest. At the English-language Buenos Aires Herald, editor Robert Cox and journalist Andrew Graham-Yooll kept publishing the names of people who had disappeared under the military's rule, until death threats forced both men to leave the country. A subcommittee investigating the period found that roughly 500 journalists had left Argentina for political reasons, while dozens more were reported missing or held in detention centers.",
+      "stated_justification": "The junta's Communiqué No. 19 framed reporting on groups it had banned, or coverage it considered damaging to the armed forces, as itself a punishable offense carrying years of imprisonment.",
+      "effect_on_reporting": "Newspapers were raided and some closed, editors and reporters were jailed, and rights investigators later documented dozens of journalists missing or in detention and roughly 500 who left the country for political reasons during the military's rule.",
+      "issue_of_the_day": "Argentina's military had just overthrown the elected government and moved immediately to prevent reporting sympathetic to leftist groups it had outlawed or reporting it considered damaging to the armed forces' standing.",
+      "outcome": "reversed",
+      "outcome_on": "1983-12-10",
+      "outcome_note": "Argentina returned to civilian, elected government under President Raúl Alfonsín in December 1983, ending the junta's press decrees.",
+      "actors": [
+        "jorge-videla",
+        "jacobo-timerman",
+        "robert-cox",
+        "andrew-graham-yooll"
+      ],
+      "actor_roles": {
+        "jorge-videla": "enforced",
+        "jacobo-timerman": "other",
+        "robert-cox": "other",
+        "andrew-graham-yooll": "other"
+      },
+      "outlets": [
+        "la-opinion-argentina",
+        "buenos-aires-herald"
+      ],
+      "sources": [
+        "a1_020",
+        "a1_021"
+      ],
+      "claims": [
+        {
+          "field": "stated_justification",
+          "value": "Communiqué No. 19 penalty",
+          "statement": "The junta's Communiqué No. 19 provided for imprisonment for an indefinite period for anyone who disseminated or reproduced communiqués or pictures from organizations it had outlawed.",
+          "source_id": "a1_020",
+          "evidence_quote": "he, who, by whatever means, disseminates or reproduces communiqués or pictures from...illegal associations...shall be punished, by imprisonment for an indefinite time period"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "500 journalists left the country",
+          "statement": "A subcommittee reported that approximately 500 journalists were forced to leave Argentina for political reasons, while documenting 68 missing journalists and 80 detained.",
+          "source_id": "a1_020",
+          "evidence_quote": "approximately 500 journalists were forced to leave the country for political reasons"
+        },
+        {
+          "field": "what_happened",
+          "value": "Herald kept publishing under threat",
+          "statement": "Communiqué No. 19 threatened anyone who published information against the junta's interests with up to 10 years in prison, yet the Buenos Aires Herald kept publishing under editor Robert Cox and journalist Andrew Graham-Yooll, who both later had to leave the country after death threats.",
+          "source_id": "a1_021",
+          "evidence_quote": "an order that threatened anyone who published information against its interests with a prison sentence of up to 10 years"
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1933-germany-editors-law",
+      "title": "Nazi Germany's Editors Law bars Jewish journalists from the press and puts editors under state direction",
+      "occurred_on": "1933-10-04",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Germany, national",
+      "country": "DE",
+      "continent": "Europe",
+      "level": "national",
+      "type": "credential_control",
+      "tactic_primary": "credential_control",
+      "tactics": [
+        "credential_control",
+        "outlet_licensing"
+      ],
+      "leader_slug": "adolf-hitler",
+      "summary": "Nine months after Adolf Hitler became chancellor, Germany's Schriftleitergesetz, or Editors Law, required journalists to register with a new state-controlled Reich Press Chamber and barred non-Aryans from the profession, while directing editors to omit anything judged harmful to the Reich's standing.",
+      "what_happened": "Adolf Hitler became chancellor of Germany in January 1933, and his government moved quickly to bring the press under state control. On October 4, 1933, it enacted the Schriftleitergesetz, the Editors Law, which required every editor and journalist to register with the newly created Reich Press Chamber, a compulsory professional body under the state messaging Ministry, in order to practice. The Reich Press Chamber kept registries of journalists it certified as racially pure and excluded Jews, and those married to Jews, from the profession entirely. The law's Paragraph 14 required editors to omit from publication anything calculated to weaken the strength of the German state, called the Reich, at home or abroad, and the state messaging Ministry issued daily directives on what could be reported and how. Editors who defied the directives risked losing their registration, dismissal or worse, including imprisonment in a concentration camp.",
+      "stated_justification": "The law's own text required editors to keep out of print anything judged calculated to weaken the strength of the Reich at home or abroad, casting the requirement as a matter of protecting the German state's standing.",
+      "effect_on_reporting": "Jewish journalists and editors were barred outright from the profession, remaining editors had to follow the state messaging Ministry's daily directives on content, and those who did not risked losing their registration, their jobs or their freedom.",
+      "issue_of_the_day": "Hitler's government, in power only since January 1933, was consolidating control over German public life and moved within months to bring newspapers and their editors directly under state and party direction.",
+      "outcome": "reversed",
+      "outcome_on": "1945-05-08",
+      "outcome_note": "The Editors Law and the Reich Press Chamber ended with Nazi Germany's defeat and unconditional surrender on May 8, 1945.",
+      "actors": [
+        "adolf-hitler",
+        "reich-press-chamber"
+      ],
+      "actor_roles": {
+        "adolf-hitler": "announced",
+        "reich-press-chamber": "enforced"
+      },
+      "outlets": [],
+      "sources": [
+        "a1_022",
+        "a1_048"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Bars non-Aryans from journalism",
+          "statement": "The Editors Law forbade non-Aryans from working in journalism.",
+          "source_id": "a1_048",
+          "evidence_quote": "The Editors Law (Schriftleitergesetz) forbids non-\"Aryans\" to work in journalism."
+        },
+        {
+          "field": "stated_justification",
+          "value": "Paragraph 14 requirement",
+          "statement": "The law required editors to omit anything judged calculated to weaken the strength of the German state at home or abroad.",
+          "source_id": "a1_022",
+          "evidence_quote": "omit anything 'calculated to weaken the strength of the Reich abroad or at home.'"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Racial registries",
+          "statement": "The Reich Press Chamber kept registries of editors and journalists it certified as racially pure, excluding Jews and those married to Jews from the profession.",
+          "source_id": "a1_022",
+          "evidence_quote": "kept registries of 'racially pure' editors and journalists, and excluded Jews and those married to Jews from the profession."
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1922-ussr-glavlit-censorship",
+      "title": "Soviet Russia creates Glavlit, a central office to review all printed material before publication",
+      "occurred_on": "1922",
+      "occurred_on_precision": "year",
+      "jurisdiction": "Soviet Union, national",
+      "country": "RU",
+      "continent": "Europe",
+      "level": "national",
+      "type": "prior_restraint",
+      "tactic_primary": "prior_restraint",
+      "tactics": [
+        "prior_restraint",
+        "outlet_licensing"
+      ],
+      "leader_slug": "vladimir-lenin",
+      "summary": "In 1922, under Vladimir Lenin's government, Soviet Russia created Glavlit, a single agency with final authority to review newspapers, books, plays and even posters before they could be printed or performed. By 1930 no publication in the Soviet Union could appear without its approval.",
+      "what_happened": "The government led by Vladimir Lenin created Glavlit in 1922 to replace a patchwork of separate military and civilian press controls agencies left over from the Russian Civil War with a single central office. Glavlit, short for the Chief Administration for Literary and Publishing Affairs, held final authority over printed materials and the performing arts, reviewing manuscripts, newspapers and plays before they could reach the public. Its censors watched for material that criticized the Communist Party or the Soviet state, whether directly or by implication, as well as economic or military information judged to threaten state security. By 1930 all printing and publishing in the Soviet Union, down to posters, notepads and theater tickets, required Glavlit's approval before release. The system continued for decades, with its standards loosened only in 1988 under Mikhail Gorbachev's glasnost policy of openness, before Glavlit was dissolved by decree in 1991.",
+      "stated_justification": "Glavlit's mandate was to prevent the publication of material that could pose a military or economic security threat, or that could be read as critical of the Communist Party or the Soviet state.",
+      "effect_on_reporting": "No newspaper, book, play or even minor printed item such as a poster or notepad could be published or performed in the Soviet Union without Glavlit's prior approval, a system that lasted essentially unchanged for over six decades.",
+      "issue_of_the_day": "The new Soviet government, having just consolidated power after years of revolution and civil war, sought a single, centrally controlled system to replace the uncoordinated military and civilian press controls bodies it had inherited.",
+      "outcome": "ongoing",
+      "outcome_on": "1989",
+      "outcome_note": "Glavlit's authority over publishing was still largely intact through the 1980s, though its standards were relaxed from 1988 under Gorbachev's glasnost policy before its 1991 dissolution.",
+      "actors": [
+        "vladimir-lenin",
+        "glavlit"
+      ],
+      "actor_roles": {
+        "vladimir-lenin": "announced",
+        "glavlit": "enforced"
+      },
+      "outlets": [],
+      "sources": [
+        "a1_023",
+        "a1_024"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Final authority over print and the arts",
+          "statement": "Glavlit was the central censorship office established in the Soviet Union in 1922, with final authority over printed materials as well as the performing arts.",
+          "source_id": "a1_023",
+          "evidence_quote": "office, known for short as Glavlit, with final authority over printed materials as well as the performing arts."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "All printing required approval by 1930",
+          "statement": "By 1930 all printing and publishing in the Soviet Union was subject to pre-publication censorship, covering everything from newspapers and books to posters and theater tickets.",
+          "source_id": "a1_024",
+          "evidence_quote": "by 1930 all printing and publishing in the Soviet Union was subject to pre-publication censorship"
+        },
+        {
+          "field": "outcome",
+          "value": "Relaxed under glasnost, dissolved 1991",
+          "statement": "Glavlit's standards were relaxed in late 1988 as part of Mikhail Gorbachev's glasnost campaign, and the agency was dissolved by presidential decree in 1991.",
+          "source_id": "a1_024",
+          "evidence_quote": "Its standards were relaxed in late 1988 as part of Mikhail Gorbachev's glasnost campaign"
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1938-spain-franco-press-law",
+      "title": "Franco's Spain requires state permission to be a journalist under a wartime Press Law",
+      "occurred_on": "1938-04",
+      "occurred_on_precision": "month",
+      "jurisdiction": "Spain, national",
+      "country": "ES",
+      "continent": "Europe",
+      "level": "national",
+      "type": "credential_control",
+      "tactic_primary": "credential_control",
+      "tactics": [
+        "credential_control",
+        "prior_restraint",
+        "insult_and_defamation_laws"
+      ],
+      "leader_slug": "francisco-franco",
+      "summary": "While Spain's civil war continued, the Nationalist government led by Francisco Franco enacted a Press Law in April 1938 requiring government permission to found a newspaper, work as a journalist or direct a paper, alongside continued pre-publication press controls and years-long prison terms for vaguely defined offenses.",
+      "what_happened": "During Spain's civil war, the Nationalist side led by General Francisco Franco enacted a Press Law in April 1938 that placed the country's newspapers under direct state control. The law required government permission to found a newspaper, to work as a professional journalist, or to serve as a newspaper's director, effectively letting the government decide who could practice journalism at all. Pre-publication press controls, already in place since the war's start, continued under the new law. The law also created a vaguely defined offense, the diffusion of false and tendentious news against the authority of the state, that carried prison sentences of three to ten years. The system remained in force, with modifications, for decades; a 1966 law under minister Manuel Fraga presented itself as ending press controls but kept broad limits on content, and between 1966 and 1968 authorities still imposed 180 separate penalties on the press.",
+      "stated_justification": "The 1938 Press Law and its later penalties applied to what officials called the diffusion of false and tendentious news against the authority of the state, a standard broad enough to cover ordinary critical reporting.",
+      "effect_on_reporting": "Journalists and newspaper directors needed government permission to work at all, coverage remained subject to pre-publication review, and reporters faced years in prison for material officials judged damaging to the state's authority.",
+      "issue_of_the_day": "Franco's Nationalist forces were still fighting Spain's civil war in April 1938 and used the new Press Law to consolidate direct control over which newspapers could exist and who could work as a journalist within them.",
+      "outcome": "reversed",
+      "outcome_on": "1977-04",
+      "outcome_note": "Spain abolished prior press press controls by decree in April 1977, after Franco's 1975 death, ahead of the 1978 constitution that guaranteed freedom of the press.",
+      "actors": [
+        "francisco-franco"
+      ],
+      "actor_roles": {
+        "francisco-franco": "enforced"
+      },
+      "outlets": [],
+      "sources": [
+        "a1_025"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Permission required to be a journalist",
+          "statement": "The 1938 Press Law made government permission necessary to found a newspaper, to work as a professional journalist, or to be a newspaper's director.",
+          "source_id": "a1_025",
+          "evidence_quote": "Government permission became necessary to found a newspaper, to work as a professional journalist or be director of a newspaper."
+        },
+        {
+          "field": "stated_justification",
+          "value": "False and tendentious news offense",
+          "statement": "Authorities could prosecute journalists for what the law called the diffusion of false and tendentious news against the authority of the state, punishable by three to ten years in prison.",
+          "source_id": "a1_025",
+          "evidence_quote": "diffusion of false and tendentious news against the authority of the State"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "1966-68 penalties under the later law",
+          "statement": "Even after a 1966 law that claimed to end censorship, Spanish authorities imposed 180 penalties on the press between 1966 and 1968 and drafted still harsher prison terms for journalists.",
+          "source_id": "a1_025",
+          "evidence_quote": "6 to 12 years' imprisonment for journalists who did not 'duly respect the institutions.'"
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1933-portugal-salazar-formal-censorship",
+      "title": "Portugal's Salazar government formally establishes press press controls under a new constitution",
+      "occurred_on": "1933",
+      "occurred_on_precision": "year",
+      "jurisdiction": "Portugal, national",
+      "country": "PT",
+      "continent": "Europe",
+      "level": "national",
+      "type": "prior_restraint",
+      "tactic_primary": "prior_restraint",
+      "tactics": [
+        "prior_restraint"
+      ],
+      "leader_slug": "antonio-salazar",
+      "summary": "Portugal's government, led by Prime Minister António de Oliveira Salazar, had restricted the press since a 1926 military coup while officially denying it did so. In 1933, alongside a new constitution promising freedom of expression, the government openly established formal press press controls for the first time.",
+      "what_happened": "After a 1926 military coup, Portugal's governments restricted newspapers while a 1926 decree, known as Law 12008, formally declared that no press controls existed at all. António de Oliveira Salazar, who became prime minister and built the Estado Novo, or New State, brought this contradiction to an end in 1933. That year's new constitution paradoxically guaranteed freedom of expression of thought in any form, even as Salazar's government openly established formal press press controls for the first time, ending the earlier pretense that no such system existed. Newspapers had to submit content for prior review, and the government treated the press as an instrument to be directed rather than a check on official power. Enforcement tightened over the following decade; by 1945 cases against journalists and publishers were being moved to special courts with government-appointed judges, bypassing ordinary judicial oversight.",
+      "stated_justification": "Portugal's 1933 constitution formally guaranteed freedom of expression of thought in any form whatsoever, even as the same government openly instituted the press press controls it had previously denied running.",
+      "effect_on_reporting": "Newspapers had to submit material for government review before publication, and by 1945 press-related prosecutions could be moved to special courts with judges appointed by the government rather than the ordinary judiciary.",
+      "issue_of_the_day": "Salazar's government was consolidating the Estado Novo behind a new 1933 constitution, and used the moment to formalize a system of press press controls it had for years denied operating.",
+      "outcome": "reversed",
+      "outcome_on": "1974-04-25",
+      "outcome_note": "Portugal's press controls apparatus ended with the Carnation Revolution of April 25, 1974, which overthrew the Estado Novo.",
+      "actors": [
+        "antonio-salazar"
+      ],
+      "actor_roles": {
+        "antonio-salazar": "enforced"
+      },
+      "outlets": [],
+      "sources": [
+        "a1_025",
+        "a1_026"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "1926 decree denied censorship existed",
+          "statement": "A 1926 decree, Law 12008, declared that no censorship existed in Portugal even though censorship had in fact been introduced after that year's coup.",
+          "source_id": "a1_025",
+          "evidence_quote": "that no censorship existed, even though censorship had in fact been introduced after the coup d'etat."
+        },
+        {
+          "field": "stated_justification",
+          "value": "1933 constitution guaranteed expression",
+          "statement": "Only in 1933 did Salazar's government openly establish formal censorship, in the same year a new constitution guaranteed freedom of expression of thought in any form.",
+          "source_id": "a1_025",
+          "evidence_quote": "freedom of expression of thought in any form whatsoever"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Estado Novo characterized by censorship",
+          "statement": "Portugal's Estado Novo was an authoritarian, corporatist republic with a strong emphasis on order, censorship and propaganda.",
+          "source_id": "a1_026",
+          "evidence_quote": "The Estado Novo was characterized by an authoritarian, corporatist republic with a strong emphasis on order, censorship, and propaganda."
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1968-czechoslovakia-normalization-censorship",
+      "title": "Soviet-led invasion of Czechoslovakia is followed by the return of government press press controls",
+      "occurred_on": "1968-08-21",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Czechoslovakia, national",
+      "country": "CZ",
+      "continent": "Europe",
+      "level": "national",
+      "type": "prior_restraint",
+      "tactic_primary": "prior_restraint",
+      "tactics": [
+        "prior_restraint",
+        "shutdowns_and_blocking"
+      ],
+      "leader_slug": "alexander-dubcek",
+      "summary": "Soviet-led Warsaw Pact troops invaded Czechoslovakia on August 20-21, 1968 to end the Prague Spring, a period of liberalization under Alexander Dubček that had included the lifting of press press controls. In the invasion's aftermath, the new leadership reimposed government press controls of the press.",
+      "what_happened": "Czechoslovakia's Communist Party leadership under Alexander Dubček had eased government control of the press during the reform period known as the Prague Spring, which began in January 1968 and let newspapers report and comment with unusual openness for the Eastern Bloc. On the night of August 20 into August 21, 1968, the Soviet Union led Warsaw Pact troops, the alliance of the Soviet Union and its Eastern European allies, into Czechoslovakia to reverse the reforms. Soviet forces occupied radio and television facilities and other key installations as they entered Prague. In the weeks and months that followed, the country's new leadership, under continued Soviet pressure, reestablished government press controls of the press and reimposed controls that had briefly been lifted, part of a broader process Czechoslovaks came to call normalization, which culminated in Dubček's replacement by Gustáv Husák in April 1969.",
+      "stated_justification": "Soviet and allied leaders described the invasion as necessary to defend socialism in Czechoslovakia against what they called counter-revolutionary tendencies, a framing used to justify reversing the press freedoms of the Prague Spring.",
+      "effect_on_reporting": "Newspapers, radio and television that had reported with unusual openness during the Prague Spring came back under formal government press controls within weeks of the invasion, ending the brief period of liberalized coverage.",
+      "issue_of_the_day": "Czechoslovakia's Prague Spring reforms, including eased press press controls, had alarmed the Soviet Union and its Warsaw Pact allies, who invaded to reverse the liberalization before it could spread further.",
+      "outcome": "reversed",
+      "outcome_on": "1989-11",
+      "outcome_note": "Formal press press controls in Czechoslovakia ended with the Velvet Revolution of November 1989, which brought down Communist Party rule.",
+      "actors": [
+        "alexander-dubcek"
+      ],
+      "actor_roles": {
+        "alexander-dubcek": "other"
+      },
+      "outlets": [],
+      "sources": [
+        "a1_027",
+        "a1_028"
+      ],
+      "claims": [
+        {
+          "field": "occurred_on",
+          "value": "Invasion date",
+          "statement": "The Soviet Union led Warsaw Pact troops into an invasion of Czechoslovakia on August 20, 1968 to reverse the Prague Spring's reforms in Prague.",
+          "source_id": "a1_027",
+          "evidence_quote": "On August 20, 1968, the Soviet Union led Warsaw Pact troops in an invasion of Czechoslovakia to crack down on reformist trends in Prague."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Censorship reestablished",
+          "statement": "Czechoslovakia's new leadership reestablished government censorship and controls preventing freedom of movement in the invasion's aftermath.",
+          "source_id": "a1_027",
+          "evidence_quote": "the new leadership reestablished government censorship and controls preventing freedom of movement"
+        },
+        {
+          "field": "what_happened",
+          "value": "Prague Spring liberalization ended",
+          "statement": "The Prague Spring was a brief period of economic and political liberalization in Czechoslovakia under Alexander Dubček that began in January 1968 and effectively ended when Soviet forces invaded on August 20, 1968.",
+          "source_id": "a1_028",
+          "evidence_quote": "brief period of economic and political liberalization in Czechoslovakia under Alexander Dubček that began in January 1968 and effectively ended on August 20, 1968, when Soviet forces invaded"
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1981-poland-martial-law-press-suspended",
+      "title": "Poland's martial law government shuts nearly all newspapers and interns journalists overnight",
+      "occurred_on": "1981-12-13",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Poland, national",
+      "country": "PL",
+      "continent": "Europe",
+      "level": "national",
+      "type": "shutdowns_and_blocking",
+      "tactic_primary": "shutdowns_and_blocking",
+      "tactics": [
+        "shutdowns_and_blocking",
+        "detention_and_violence"
+      ],
+      "leader_slug": "wojciech-jaruzelski",
+      "summary": "On December 13, 1981, General Wojciech Jaruzelski declared martial law in Poland, cutting phone and telex lines, suspending nearly all newspapers, and interning thousands of people, most Solidarity trade union journalists among them, within days.",
+      "what_happened": "General Wojciech Jaruzelski, Poland's Communist Party leader and prime minister, announced martial law on state television at 6 a.m. on December 13, 1981, saying the country stood at the edge of collapse. The government cut all private telephone and telex lines nationwide and subjected mail to press controls. More than 3,000 people were arrested the first night, a number that reached about 5,000 within a week, and most journalists associated with the independent Solidarity trade union movement were among those detained. Nearly all Polish newspapers were suspended; only the Communist Party's own paper, Trybuna Ludu, and the army daily, Żołnierz Wolności, kept publishing, while television and radio were consolidated into a single channel presented by announcers in military uniform. The Solidarity Press Agency's dispatches to Radio Free Europe, an American-funded broadcaster aimed at Eastern Europe, stopped after that first night.",
+      "stated_justification": "Jaruzelski told the country in his televised address that Poland had reached the edge of an abyss and that the structures of the state were ceasing to function, presenting martial law as necessary to prevent collapse.",
+      "effect_on_reporting": "Nearly every Polish newspaper stopped publishing, phone and telex communication was cut nationwide, thousands of people including most Solidarity-linked journalists were interned, and foreign correspondents were reduced within a week to filing restricted reports based only on state media.",
+      "issue_of_the_day": "Poland's Solidarity trade union movement had grown into a mass challenge to Communist Party rule through 1980 and 1981, and Jaruzelski's government imposed martial law to suppress the movement and the independent press associated with it.",
+      "outcome": "reversed",
+      "outcome_on": "1983-07-22",
+      "outcome_note": "Martial law was formally lifted on July 22, 1983, though reduced press press controls in Poland continued until the fall of Communist rule in 1989.",
+      "actors": [
+        "wojciech-jaruzelski"
+      ],
+      "actor_roles": {
+        "wojciech-jaruzelski": "announced"
+      },
+      "outlets": [],
+      "sources": [
+        "a1_029",
+        "a1_030"
+      ],
+      "claims": [
+        {
+          "field": "stated_justification",
+          "value": "Jaruzelski's address",
+          "statement": "Jaruzelski opened his televised address announcing martial law by saying the country had found itself at the edge of the abyss and that the structures of the state were ceasing to function.",
+          "source_id": "a1_029",
+          "evidence_quote": "Our country has found itself at the edge of abyss. The structures of the state are ceasing to function."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Phone and telex lines cut",
+          "statement": "All private phone and telex lines were cut off and mail was subjected to censorship once martial law took effect.",
+          "source_id": "a1_029",
+          "evidence_quote": "All private phone and telex lines were cut off, mails were subjected to censorship."
+        },
+        {
+          "field": "what_happened",
+          "value": "Newspapers closed, media consolidated",
+          "statement": "Jaruzelski's martial law suspended the freedoms that had been developing, closed many newspapers and put broadcast media under military control.",
+          "source_id": "a1_030",
+          "evidence_quote": "General Wojciech Jaruzelski imposed martial law in December 1981, suspending the freedoms that were beginning to develop, closing many newspapers, and putting the broadcast media under military control."
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1988-uk-broadcasting-ban-sinn-fein",
+      "title": "United Kingdom bars broadcasters from airing Sinn Féin members' own voices",
+      "occurred_on": "1988-10",
+      "occurred_on_precision": "month",
+      "jurisdiction": "United Kingdom, national",
+      "country": "GB",
+      "continent": "Europe",
+      "level": "national",
+      "type": "outlet_licensing",
+      "tactic_primary": "outlet_licensing",
+      "tactics": [
+        "outlet_licensing",
+        "prior_restraint"
+      ],
+      "leader_slug": "margaret-thatcher",
+      "summary": "Home Secretary Douglas Hurd directed British broadcasters in October 1988 not to air the voices of representatives of Sinn Féin, a party linked to the Irish Republican Army, and other groups linked to violence in Northern Ireland. Broadcasters got around it by having actors read transcripts of the same interviews.",
+      "what_happened": "As violence continued in Northern Ireland during Margaret Thatcher's government, Home Secretary Douglas Hurd issued a directive in October 1988 barring the British Broadcasting Corporation and independent broadcasters from airing the voices of representatives of Sinn Féin, a political party linked to the Irish Republican Army, along with several other organizations linked to paramilitary violence on both sides of the conflict. The order stopped short of banning coverage of what those representatives said, so broadcasters had actors read transcripts of interviews using the same words spoken on camera by the banned speakers, including actor Stephen Rea voicing Sinn Féin leader Gerry Adams. Some viewers found the practice unintentionally sympathetic, since a calm actor's reading could soften how a speaker's own voice might have sounded. The restriction, which also covered some pro-British loyalist groups, remained in place for six years and was lifted in September 1994 shortly after the Irish Republican Army declared a ceasefire.",
+      "stated_justification": "Hurd's Home Office said organizations that supported violence through the bomb and the gun could not in all circumstances be given the same broadcasting rights as everyone else.",
+      "effect_on_reporting": "British broadcasters could not air the actual voices of Sinn Féin representatives and some loyalist paramilitary-linked figures for six years, instead using actors to read the same words from interview transcripts.",
+      "issue_of_the_day": "Violence linked to the conflict in Northern Ireland, often called the Troubles, continued through the 1980s, and the British government wanted to deny paramilitary-linked political figures what it considered a broadcasting platform.",
+      "outcome": "reversed",
+      "outcome_on": "1994-09-16",
+      "outcome_note": "The broadcasting ban was lifted on September 16, 1994, shortly after the Irish Republican Army's August 1994 ceasefire declaration.",
+      "actors": [
+        "margaret-thatcher",
+        "douglas-hurd"
+      ],
+      "actor_roles": {
+        "douglas-hurd": "announced",
+        "margaret-thatcher": "other"
+      },
+      "outlets": [],
+      "sources": [
+        "a1_031"
+      ],
+      "claims": [
+        {
+          "field": "stated_justification",
+          "value": "Hurd's rationale",
+          "statement": "The government said groups that lived by the bomb and the gun, and those who supported them, could not in all circumstances be given the same rights as the rest of the population.",
+          "source_id": "a1_031",
+          "evidence_quote": "Those who live by the bomb and the gun and those who support them cannot in all circumstances be accorded the same rights as the rest of the population."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Actors voiced the transcripts",
+          "statement": "Broadcasters had actors read interview transcripts in place of the banned speakers' own voices, with actor Stephen Rea voicing Sinn Féin's Gerry Adams as clearly and neutrally as possible.",
+          "source_id": "a1_031",
+          "evidence_quote": "as clearly and neutrally as possible"
+        },
+        {
+          "field": "outcome",
+          "value": "Ban called an embarrassing failure",
+          "statement": "Channel 4's head of news, on the ban being lifted, called it one of the most embarrassing attempts to censor coverage.",
+          "source_id": "a1_031",
+          "evidence_quote": "one of the most embarrassing attempts to censor coverage."
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1950-south-africa-suppression-of-communism-act",
+      "title": "South Africa's Suppression of Communism Act lets the government ban publications and restrict individuals",
+      "occurred_on": "1950-03-17",
+      "occurred_on_precision": "day",
+      "jurisdiction": "South Africa, national",
+      "country": "ZA",
+      "continent": "Africa",
+      "level": "national",
+      "type": "prior_restraint",
+      "tactic_primary": "prior_restraint",
+      "tactics": [
+        "prior_restraint",
+        "outlet_licensing",
+        "detention_and_violence"
+      ],
+      "leader_slug": "daniel-francois-malan",
+      "summary": "Under Prime Minister Daniel François Malan, South Africa's parliament approved the Suppression of Communism Act in 1950, defining communism broadly enough to cover most opposition to apartheid. It let the government ban organizations and publications and forbid banned individuals from being quoted at all.",
+      "what_happened": "South Africa's parliament, under the National Party government of Prime Minister Daniel François Malan, approved the Suppression of Communism Act on March 17, 1950, two years after the party came to power on its apartheid platform. The law defined communism so broadly that it covered almost any opposition to the government's racial policies, not only formal Communist Party activity. It empowered the government to detain and to ban individuals and organizations it judged likely to further communism as the act defined it, and made it a criminal offense to publish, print or in any way distribute anything said or written by a banned person, effectively erasing them from public print entirely. The Communist Party of South Africa itself dissolved days after the law's approval rather than operate under it. Over the following four decades, more than 2,000 people were subjected to banning orders under the act and its successors before the last such bans were lifted in February 1990.",
+      "stated_justification": "The government said the act was needed to suppress communism, which the law itself defined broadly enough to include any activity aimed at bringing about political, industrial, social or economic change through means the Act deemed banned, or disorder, covering most organized opposition to apartheid.",
+      "effect_on_reporting": "Newspapers and other publications could not legally publish anything said or written by a person the government had banned, suppressing banned anti-apartheid activists and writers in the South African press entirely for as long as their bans lasted.",
+      "issue_of_the_day": "South Africa's National Party government, elected in 1948 on a platform of apartheid racial segregation, used the act to suppress the Communist Party of South Africa and, more broadly, organized political opposition to its policies.",
+      "outcome": "reversed",
+      "outcome_on": "1990-02-02",
+      "outcome_note": "The government lifted bans on individuals and organizations under the act and its successors on February 2, 1990, as State President F. W. de Klerk began dismantling apartheid.",
+      "actors": [
+        "daniel-francois-malan"
+      ],
+      "actor_roles": {
+        "daniel-francois-malan": "announced"
+      },
+      "outlets": [],
+      "sources": [
+        "a1_032",
+        "a1_033"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Infamous security law limiting media",
+          "statement": "The Suppression of Communism Act was one of the most infamous of all security laws during the apartheid era, and it severely limited what the media could report.",
+          "source_id": "a1_032",
+          "evidence_quote": "One of the most infamous of all security laws during the apartheid era, it severely limited what the media could report"
+        },
+        {
+          "field": "stated_justification",
+          "value": "Broad definition of communism",
+          "statement": "The act defined communism and its aims broadly enough to include any opposition to the government.",
+          "source_id": "a1_033",
+          "evidence_quote": "defined communism and its aims broadly to include any opposition to the government"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Banned persons could not be quoted",
+          "statement": "People the government banned under the act could not be quoted in publications at all.",
+          "source_id": "a1_033",
+          "evidence_quote": "could not be quoted in publications"
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1960-egypt-nasser-nationalizes-press",
+      "title": "Egypt's Nasser government nationalizes every newspaper and magazine in the country",
+      "occurred_on": "1960-05-24",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Egypt, national",
+      "country": "EG",
+      "continent": "Africa",
+      "level": "national",
+      "type": "funding_and_ownership_pressure",
+      "tactic_primary": "funding_and_ownership_pressure",
+      "tactics": [
+        "funding_and_ownership_pressure",
+        "outlet_licensing"
+      ],
+      "leader_slug": "gamal-abdel-nasser",
+      "summary": "President Gamal Abdel Nasser's government issued a decree on May 24, 1960 placing every newspaper and magazine in Egypt under state ownership and management, with the government appointing editors and deciding content, ending private control of the country's press.",
+      "what_happened": "Egypt's president, Gamal Abdel Nasser, had led the Free Officers movement that overthrew King Farouk in 1952 and increasingly used the media to advance his nationalist program. On May 24, 1960, his government issued a presidential decree nationalizing all newspapers and magazines in the country, placing them under the full management of the state, which chose their editors and set their content. Al-Ahram, Egypt's most prominent daily, became the de facto voice of the government under the nationalized system, with Nasser having already appointed the influential journalist Muhammad Hassanein Heikal as its editor in 1957. The decree ended private ownership of the Egyptian press outright, a structure of state control over the country's major papers that persisted for decades afterward, even as later governments allowed some opposition and independent titles to operate alongside the nationalized press.",
+      "stated_justification": "Nasser's government presented the nationalization as part of a broader program of state control over the economy and public life following the 1952 revolution, using the press as an instrument to advance its nationalist agenda.",
+      "effect_on_reporting": "Every Egyptian newspaper and magazine came under direct state management, with the government choosing editors and defining acceptable content, ending independent ownership of the country's press.",
+      "issue_of_the_day": "Nasser's government was consolidating state control over Egypt's economy and institutions in the years following the 1952 revolution, and extended that control to the press as an instrument of its nationalist program.",
+      "outcome": "ongoing",
+      "outcome_on": "1989",
+      "outcome_note": "State ownership structures created by the 1960 decree, including the government-appointed leadership of major papers such as Al-Ahram, remained in place through the 1980s.",
+      "actors": [
+        "gamal-abdel-nasser"
+      ],
+      "actor_roles": {
+        "gamal-abdel-nasser": "announced"
+      },
+      "outlets": [
+        "al-ahram"
+      ],
+      "sources": [
+        "a1_035",
+        "a1_036"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Decree nationalized all newspapers",
+          "statement": "A presidential decree was issued on 24 May 1960 to nationalize all newspapers and magazines in Egypt, which were submitted to the full management of the state.",
+          "source_id": "a1_035",
+          "evidence_quote": "a presidential decree was issued on 24 May 1960 to nationalize all newspapers and magazines in Egypt. They were all submitted to the full management of the state, which chose its editors, and defined the media content."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "State chose editors and content",
+          "statement": "Under the nationalized system the state chose newspapers' editors and defined their media content directly.",
+          "source_id": "a1_035",
+          "evidence_quote": "They were all submitted to the full management of the state, which chose its editors, and defined the media content."
+        },
+        {
+          "field": "stated_justification",
+          "value": "Al-Ahram became government's voice",
+          "statement": "When President Nasser nationalized the press in 1960, Al-Ahram became the de facto voice of the government.",
+          "source_id": "a1_036",
+          "evidence_quote": "when Pres. Gamal Abdel Nasser nationalized the press in 1960, Al-Ahram became the de facto voice of the government."
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1985-south-africa-state-of-emergency-media-ban",
+      "title": "South Africa bans television and photographic coverage of unrest under a state of emergency",
+      "occurred_on": "1985-11-02",
+      "occurred_on_precision": "day",
+      "jurisdiction": "South Africa, national",
+      "country": "ZA",
+      "continent": "Africa",
+      "level": "national",
+      "type": "shutdowns_and_blocking",
+      "tactic_primary": "shutdowns_and_blocking",
+      "tactics": [
+        "shutdowns_and_blocking",
+        "access_ban"
+      ],
+      "leader_slug": "p-w-botha",
+      "summary": "Under a state of emergency State President P. W. Botha had declared in July 1985, the government banned television, radio and photographic coverage of unrest in South Africa's Black townships on November 2, 1985, requiring print journalists to report only under police escort.",
+      "what_happened": "State President P. W. Botha's government declared a state of emergency in parts of South Africa on July 21, 1985, in response to widening unrest against apartheid in Black townships. On November 2, 1985, Minister of Law and Order Louis le Grange announced new emergency regulations banning television, radio and photographic coverage of riot situations entirely, saying camera crews had become a catalyst for further violence. A government notice made it an offense to record any riot situation by sound or image, with penalties of up to a $7,000 fine or 10 years in prison. Print journalists were still permitted to report on unrest, but only under police escort. International news organizations, including UPI and NBC News, protested that the restrictions made objective reporting far harder, while South Africa's Foreign Correspondents Association warned the measure marked the start of what it called a slide toward a completely controlled press.",
+      "stated_justification": "Le Grange said the government was concerned that the presence of television and other camera crews in unrest situations had become a catalyst for further violence, and framed the ban as a way to reduce that effect.",
+      "effect_on_reporting": "Television, radio and photographic coverage of unrest in South African townships was banned outright, with violators facing large fines or years in prison, while print reporters could cover unrest only under police escort.",
+      "issue_of_the_day": "Unrest against apartheid had spread through South Africa's Black townships through 1985, and the government's emergency regulations applied to the television and photographic coverage that had brought international attention to the violence.",
+      "outcome": "reversed",
+      "outcome_on": "1990-06",
+      "outcome_note": "South Africa's state of emergency and its media restrictions ended in June 1990 as State President F. W. de Klerk began dismantling apartheid.",
+      "actors": [
+        "p-w-botha",
+        "louis-le-grange"
+      ],
+      "actor_roles": {
+        "louis-le-grange": "announced",
+        "p-w-botha": "other"
+      },
+      "outlets": [],
+      "sources": [
+        "a1_034"
+      ],
+      "claims": [
+        {
+          "field": "stated_justification",
+          "value": "Le Grange's rationale",
+          "statement": "Minister Louis le Grange said the government was concerned about television and other camera crews being present in unrest situations that proved to be a catalyst to further violence.",
+          "source_id": "a1_034",
+          "evidence_quote": "The government is concerned with the presence of television and other camera crews in unrest situations which proved to be a catalyst to further violence."
+        },
+        {
+          "field": "what_happened",
+          "value": "Recording riots made an offense",
+          "statement": "A government gazette notice made it an offense under the emergency regulations to take any sound or visual recording of a riot situation.",
+          "source_id": "a1_034",
+          "evidence_quote": "It is an offense under the emergency regulations to take a recording (sound or visual) of any riot situation."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Foreign correspondents' warning",
+          "statement": "South Africa's Foreign Correspondents Association condemned the measure as the start of what it called a slide toward a completely controlled press.",
+          "source_id": "a1_034",
+          "evidence_quote": "the beginning of the slippery slide toward a totally controlled press."
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1975-india-emergency-press-censorship",
+      "title": "India imposes pre-press controls on every newspaper during the 1975 Emergency",
+      "occurred_on": "1975-06-26",
+      "occurred_on_precision": "day",
+      "jurisdiction": "India, national",
+      "country": "IN",
+      "continent": "Asia",
+      "level": "national",
+      "type": "prior_restraint",
+      "tactic_primary": "prior_restraint",
+      "tactics": [
+        "prior_restraint",
+        "outlet_licensing"
+      ],
+      "leader_slug": "indira-gandhi",
+      "summary": "Prime Minister Indira Gandhi declared a state of emergency on June 25, 1975, and the next day her government imposed pre-press controls on every Indian newspaper, requiring official clearance before publication and later forcibly merging the country's news agencies into one.",
+      "what_happened": "Prime Minister Indira Gandhi's government declared a national state of emergency on June 25, 1975, citing threats to internal stability after a court had found her guilty of election malpractice. On June 26, 1975, the government imposed pre-press controls on every newspaper in the country, requiring editors to obtain government clearance before publishing news reports, editorials or photographs. Government-appointed national and regional censors reviewed content and classified newspapers as friendly, neutral or critical depending on their editorial stance toward the government. Foreign correspondents faced prior screening of their telex dispatches from July 5, 1975, and the government cut power to newspaper offices in Delhi during the early days of enforcement. The Press Council of India, a statutory body meant to safeguard press standards, was abolished during the period, and on February 1, 1976, the government merged the country's four major news agencies into a single state-controlled entity called Samachar.",
+      "stated_justification": "Gandhi's government said the emergency measures, including press press controls, were necessary to protect internal stability and public order at a time it described as a serious threat to the country.",
+      "effect_on_reporting": "Every Indian newspaper had to submit content for government clearance before publication, foreign correspondents' dispatches faced prior screening, the Press Council of India was abolished, and the country's news agencies were merged into a single state-controlled body.",
+      "issue_of_the_day": "A court had found Prime Minister Gandhi guilty of election malpractice shortly before the Emergency began, and her government cited threats to internal stability in declaring the state of emergency and imposing press press controls the next day.",
+      "outcome": "reversed",
+      "outcome_on": "1977-03-21",
+      "outcome_note": "Gandhi ended the Emergency and lifted press press controls on March 21, 1977, shortly before her party lost the general election that followed.",
+      "actors": [
+        "indira-gandhi"
+      ],
+      "actor_roles": {
+        "indira-gandhi": "announced"
+      },
+      "outlets": [],
+      "sources": [
+        "a1_037"
+      ],
+      "claims": [
+        {
+          "field": "occurred_on",
+          "value": "Pre-censorship imposed June 26 1975",
+          "statement": "Pre-censorship was imposed on all Indian newspapers on June 26, 1975, requiring editors to obtain government clearance before publishing news, editorials or photographs.",
+          "source_id": "a1_037",
+          "evidence_quote": "Pre-censorship was imposed on all newspapers."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Foreign correspondents screened",
+          "statement": "From July 5, 1975, telex messages sent by foreign correspondents faced restrictions and prior screening by government censors.",
+          "source_id": "a1_037",
+          "evidence_quote": "prior screening"
+        },
+        {
+          "field": "what_happened",
+          "value": "News agencies merged into Samachar",
+          "statement": "On February 1, 1976, the government consolidated the country's four major news agencies, Press Trust of India, United News of India, Samachar Bharati and Hindustan Samachar, into a single entity named Samachar.",
+          "source_id": "a1_037",
+          "evidence_quote": "'friendly', 'neutral' or 'hostile'"
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1972-philippines-marcos-martial-law-media-closures",
+      "title": "Philippines President Marcos closes every major news outlet under martial law",
+      "occurred_on": "1972-09-21",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Philippines, national",
+      "country": "PH",
+      "continent": "Asia",
+      "level": "national",
+      "type": "shutdowns_and_blocking",
+      "tactic_primary": "shutdowns_and_blocking",
+      "tactics": [
+        "shutdowns_and_blocking",
+        "detention_and_violence",
+        "prior_restraint"
+      ],
+      "leader_slug": "ferdinand-marcos",
+      "summary": "President Ferdinand Marcos declared martial law on September 21, 1972, and the next day ordered the military to take over nearly every newspaper, radio and television station in the Philippines, jailing prominent publishers and editors and requiring government clearance for whatever remained.",
+      "what_happened": "President Ferdinand Marcos signed Proclamation No. 1081, placing the Philippines under martial law, on September 21, 1972. The following day, Letter of Instruction No. 1 ordered the military to take over privately owned newspapers, magazines, and radio and television stations nationwide, on the stated ground of preventing their use for state messaging against the government. Major newspapers including the Manila Times, the Manila Chronicle and the Manila Daily Bulletin were closed, along with the country's wire agencies. Publishers and editors known for criticism of Marcos, including Teodoro Locsin Sr. of the Philippines Free Press and Manila Times publisher Chino Roces, were detained in military camps. On September 25, the Department of Public Information ordered that whatever media remained had to obtain clearance before publishing and could carry no editorial commentary critical of the military or law enforcement, controls that continued through the 14-year martial-law period.",
+      "stated_justification": "Marcos's Letter of Instruction No. 1 said the media takeover was needed to prevent privately owned newspapers, magazines and broadcast stations from being used for state messaging purposes against the government.",
+      "effect_on_reporting": "Nearly every major newspaper, radio and television station in the country was shut down or placed under military control, prominent editors and publishers were detained, and surviving outlets needed government clearance before publishing anything.",
+      "issue_of_the_day": "Marcos had declared martial law citing threats from Communist insurgency and civil unrest, and moved immediately to eliminate independent media coverage that might question the declaration or his expanding powers.",
+      "outcome": "reversed",
+      "outcome_on": "1986-02-25",
+      "outcome_note": "Marcos was removed from power in the People Power Revolution of February 22-25, 1986, ending martial-law controls on the Philippine press.",
+      "actors": [
+        "ferdinand-marcos",
+        "teodoro-locsin-sr"
+      ],
+      "actor_roles": {
+        "ferdinand-marcos": "announced",
+        "teodoro-locsin-sr": "other"
+      },
+      "outlets": [
+        "manila-times",
+        "philippines-free-press"
+      ],
+      "sources": [
+        "a1_038",
+        "a1_039"
+      ],
+      "claims": [
+        {
+          "field": "stated_justification",
+          "value": "LOI No. 1 rationale",
+          "statement": "Letter of Instruction No. 1 said the takeover of media was meant to prevent privately owned newspapers, magazines and broadcast facilities from being used for propaganda purposes against the government.",
+          "source_id": "a1_038",
+          "evidence_quote": "[I]n order to prevent the use of privately owned newspapers, magazines, radio and television facilities and all other media of communications, for propaganda purposes against the government..."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Content required positive national value",
+          "statement": "A September 25, 1972 censorship order required news reports to have positive national value and barred any editorial opinion or commentary critical of the military or law enforcement.",
+          "source_id": "a1_038",
+          "evidence_quote": "news reports of positive national value"
+        },
+        {
+          "field": "what_happened",
+          "value": "Proclamation 1081 and detentions",
+          "statement": "Marcos signed Proclamation No. 1081 placing the Philippines under martial law, and by September 23, 1972 media and opposition figures known for criticizing him were taken to military camps for investigation and detention.",
+          "source_id": "a1_039",
+          "evidence_quote": "Media and opposition personalities known to be critical against Marcos are taken to military camps for investigation and detention."
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1980-south-korea-chun-doo-hwan-press-purge",
+      "title": "South Korea's martial-law government purges journalists who resisted press controls",
+      "occurred_on": "1980-07-31",
+      "occurred_on_precision": "day",
+      "jurisdiction": "South Korea, national",
+      "country": "KR",
+      "continent": "Asia",
+      "level": "national",
+      "type": "outlet_licensing",
+      "tactic_primary": "outlet_licensing",
+      "tactics": [
+        "outlet_licensing",
+        "detention_and_violence"
+      ],
+      "leader_slug": "chun-doo-hwan",
+      "summary": "Under General Chun Doo-hwan's martial-law government, South Korean authorities ordered newsrooms in 1980 to purge journalists who had resisted press controls or joined a May sit-in strike for press freedom, and closed 172 periodicals, dismissing roughly 2,000 journalists in total.",
+      "what_happened": "General Chun Doo-hwan's martial-law government, which had seized effective control of South Korea after President Park Chung-hee's October 1979 assassination and a May 1980 military response to pro-democracy protests centered in Kwangju, ordered South Korean news organizations in the summer of 1980 to purge journalists who had resisted press controls or sought press freedom. Newsrooms were told to dismiss staff by August 10, 1980, including those who had taken part in a sit-in strike from May 19 to 28 demanding freedom of the press, with the government's ruling committee drawing up purge lists where newsrooms' own dismissals fell short of the military's standards. The Culture and Information Ministry also ordered the closure of 172 periodicals. An association formed by the dismissed journalists later counted about 2,000 people who lost their careers in the press during the purge, some of whom were also sent to reeducation camps.",
+      "stated_justification": "The government said nothing was more important than maintaining national security against North Korea and preserving domestic order and peace, the standard it used to justify purging journalists who had sought press freedom.",
+      "effect_on_reporting": "An association of the journalists dismissed in the purge later counted about 2,000 who could no longer work in the South Korean press, while 172 periodicals were closed by government order.",
+      "issue_of_the_day": "Chun Doo-hwan's military government had just suppressed a pro-democracy uprising centered in the city of Kwangju in May 1980, and used the purge to remove journalists it associated with resistance to press press controls during that period.",
+      "outcome": "reversed",
+      "outcome_on": "1987-06",
+      "outcome_note": "South Korea's June 1987 democracy movement led to direct presidential elections and an easing of press controls; a 1986 leak of secret press guidelines had already embarrassed the government.",
+      "actors": [
+        "chun-doo-hwan"
+      ],
+      "actor_roles": {
+        "chun-doo-hwan": "enforced"
+      },
+      "outlets": [
+        "hankook-ilbo"
+      ],
+      "sources": [
+        "a1_040",
+        "a1_041"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Order to purge by August 10",
+          "statement": "The government ordered all South Korean newsmen and broadcasters who had resisted censorship or sought freedom of the press to be purged from their jobs by August 10, 1980.",
+          "source_id": "a1_040",
+          "evidence_quote": "ordered all South Korean newsmen and broadcasters who have resisted censorship or sought freedom of the press to be purged from their jobs by Aug. 10"
+        },
+        {
+          "field": "stated_justification",
+          "value": "National security rationale",
+          "statement": "The government said nothing was more important than maintaining national security against North Korea and preserving domestic order and peace.",
+          "source_id": "a1_040",
+          "evidence_quote": "nothing is more important than the Maintenance of national security against North Korea and the preservation of (domestic) order and peace"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "2,000 journalists dismissed",
+          "statement": "An association of the journalists dismissed in the 1980s purge later counted about 2,000 people who could no longer pursue careers in the South Korean press.",
+          "source_id": "a1_041",
+          "evidence_quote": "An association of the dismissed journalists in the 1980s counted the number of journalists who could no longer pursue their careers at 2,000."
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1988-burma-slorc-press-scrutiny",
+      "title": "Burma's new military government tightens pre-publication press controls after seizing power",
+      "occurred_on": "1988-09-18",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Burma (now Myanmar), national",
+      "country": "MM",
+      "continent": "Asia",
+      "level": "national",
+      "type": "prior_restraint",
+      "tactic_primary": "prior_restraint",
+      "tactics": [
+        "prior_restraint",
+        "detention_and_violence"
+      ],
+      "leader_slug": "saw-maung",
+      "summary": "After crushing the 1988 pro-democracy uprising, Burma's new military government, the State Law and Order Restoration Council, tightened an existing pre-publication press controls board and raised penalties for unauthorized publishing to seven years in prison, while denying any press controls existed.",
+      "what_happened": "General Saw Maung's State Law and Order Restoration Council, known as SLORC, seized power in Burma on September 18, 1988, after the military crushed a nationwide pro-democracy uprising that had begun that August. The new government relied on the Press Scrutiny Board, a press controls body operating since 1962, which required every book, magazine, periodical, song and film to be submitted for approval before release and could reject, cancel or delay permission to publish without giving a reason. In June 1989, the government raised penalties under the Printers and Publishers Registration Law to as much as seven years in prison, or fines of 30,000 kyats, for each violation. Publishers whose material the board found objectionable had entire pages torn out or covered in silver ink to obscure banned names or content. At least a dozen writers, publishers and distributors were imprisoned under the law by the mid-1990s, even as the government publicly denied that it restricted the press at all.",
+      "stated_justification": "SLORC publicly denied that any government press controls of the press, radio or television existed in Burma, even as its Press Scrutiny Board reviewed and could reject all published material before release.",
+      "effect_on_reporting": "Every book, magazine, periodical, song and film had to be submitted to the Press Scrutiny Board before release, publications faced pages torn out or covered in silver ink for objectionable content, and writers faced years in prison for unauthorized publishing.",
+      "issue_of_the_day": "SLORC had just taken power after crushing the August 1988 pro-democracy uprising, sometimes called 8888 for its start date, and used the Press Scrutiny Board to prevent coverage sympathetic to the uprising or critical of military rule.",
+      "outcome": "ongoing",
+      "outcome_on": "1989",
+      "outcome_note": "The Press Scrutiny Board's pre-publication press controls remained fully in force at the end of 1989 and continued operating for decades afterward.",
+      "actors": [
+        "saw-maung",
+        "slorc"
+      ],
+      "actor_roles": {
+        "saw-maung": "announced",
+        "slorc": "enforced"
+      },
+      "outlets": [],
+      "sources": [
+        "a1_042",
+        "a1_043"
+      ],
+      "claims": [
+        {
+          "field": "effect_on_reporting",
+          "value": "Board could reject any material",
+          "statement": "The Press Scrutiny Board could decide not only the content of materials accepted for publication but even the numbers printed.",
+          "source_id": "a1_042",
+          "evidence_quote": "can decide not only the content of materials accepted for publication but even the numbers printed."
+        },
+        {
+          "field": "what_happened",
+          "value": "Silver ink and torn pages",
+          "statement": "Censored magazines often appeared with pages missing or words obliterated by silver ink to obscure banned content.",
+          "source_id": "a1_042",
+          "evidence_quote": "magazines often appearing with pages missing or words obliterated by silver ink."
+        },
+        {
+          "field": "stated_justification",
+          "value": "SLORC denied censorship existed",
+          "statement": "SLORC said in March 1993 that it was not true that government censorship of the press, radio and television existed in Burma.",
+          "source_id": "a1_042",
+          "evidence_quote": "It is not true that there is government censorship of the press, radio and television."
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1989-china-tiananmen-foreign-journalists-expelled",
+      "title": "China expels foreign journalists and restricts coverage of the Tiananmen Square protests",
+      "occurred_on": "1989-06-14",
+      "occurred_on_precision": "day",
+      "jurisdiction": "China, national",
+      "country": "CN",
+      "continent": "Asia",
+      "level": "national",
+      "type": "expulsion_and_visa_denial",
+      "tactic_primary": "expulsion_and_visa_denial",
+      "tactics": [
+        "expulsion_and_visa_denial",
+        "access_ban"
+      ],
+      "leader_slug": "li-peng",
+      "summary": "After declaring martial law in Beijing on May 20, 1989, China's government imposed rigid restrictions on coverage of pro-democracy protests and, following the military's June 3-4 clearing of Tiananmen Square, expelled Associated Press correspondent John Pomfret and Voice of America correspondent Alan Pessin.",
+      "what_happened": "China's government, headed by Premier Li Peng, declared martial law in Beijing on May 20, 1989, as student-led pro-democracy protests centered on Tiananmen Square continued, and imposed rigid restrictions on how foreign and domestic media could cover the demonstrations. After the military cleared the square by force on June 3 and 4, 1989, an operation that led to over 900 arrests within days, the government ordered two American journalists, Associated Press correspondent John Pomfret and Voice of America correspondent Alan Pessin, to leave the country within 72 hours on June 14, 1989. Authorities accused Pomfret of frequent contacts with the leaders of organizations it had banned and of obtaining state secrets through means it prohibited, and accused Pessin of writing stories the government said distorted facts and incited unrest. The official Communist Party newspaper, People's Daily, separately protested the United States embassy's decision to shelter dissident scientist Fang Lizhi as a violation of Chinese sovereignty.",
+      "stated_justification": "Chinese authorities accused Pomfret of obtaining state secrets through means it prohibited and maintaining contact with organizers from groups it had banned, and accused Pessin of distorting facts and inciting unrest through his reporting.",
+      "effect_on_reporting": "Two American correspondents were given 72 hours to leave China, foreign and domestic media operated under rigid martial-law restrictions on covering the protests and the military operation that ended them, and broader controls on reporting the events continued in their aftermath.",
+      "issue_of_the_day": "Student-led pro-democracy protests had occupied Tiananmen Square for weeks before the government declared martial law and then used the military to clear the square in early June 1989, and moved to control international coverage of the events that followed.",
+      "outcome": "sustained",
+      "outcome_on": "1990-01",
+      "outcome_note": "Martial law in Beijing was lifted in January 1990, but broad Chinese government controls on foreign press coverage continued well beyond that date.",
+      "actors": [
+        "li-peng",
+        "john-pomfret",
+        "alan-pessin"
+      ],
+      "actor_roles": {
+        "li-peng": "enforced",
+        "john-pomfret": "other",
+        "alan-pessin": "other"
+      },
+      "outlets": [],
+      "sources": [
+        "a1_044"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Two journalists ordered to leave",
+          "statement": "Associated Press correspondent John Pomfret and Voice of America correspondent Alan Pessin were both ordered to leave China within 72 hours on June 14, 1989.",
+          "source_id": "a1_044",
+          "evidence_quote": "having frequent contacts with illegal organization leaders, passing on information to and providing shelter for them"
+        },
+        {
+          "field": "stated_justification",
+          "value": "Charge against Pessin",
+          "statement": "Authorities accused Pessin of writing stories to distort facts, spread rumor and incite and stir up turmoil and what the government called counter-revolutionary rebellion.",
+          "source_id": "a1_044",
+          "evidence_quote": "writing stories to distort facts, spread rumor and incite and stir up turmoil and counter-revolutionary rebellion"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Martial law restrictions",
+          "statement": "Martial law was declared on May 20, 1989, and the government imposed rigid restrictions on news coverage of the pro-democracy demonstrations that followed.",
+          "source_id": "a1_044",
+          "evidence_quote": "rigid restrictions"
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1948-israel-military-censorship-established",
+      "title": "Israel retains a British-era law giving the military the power to review and restrict the press",
+      "occurred_on": "1948",
+      "occurred_on_precision": "year",
+      "jurisdiction": "Israel, national",
+      "country": "IL",
+      "continent": "Asia",
+      "level": "national",
+      "type": "prior_restraint",
+      "tactic_primary": "prior_restraint",
+      "tactics": [
+        "prior_restraint"
+      ],
+      "leader_slug": "david-ben-gurion",
+      "summary": "When Israel declared independence in 1948 under Prime Minister David Ben-Gurion, it retained a British Mandate-era Press Ordinance giving the military the power to review and restrict publications on security grounds, later formalized through an Editors' Committee that let most Israeli newspapers self-restrict security matters.",
+      "what_happened": "When Israel declared independence in 1948, its new government under Prime Minister David Ben-Gurion retained the Press Ordinance, a law from the British Mandate period that gave a military press reviewer the power to review and block publication of material on security grounds. In 1953, the military and the Israeli press formalized their relationship by creating the Editors' Committee, an agreement under which mainstream Israeli newspapers could largely review their own security content, submitting to the military press reviewer only articles that touched directly on national security matters. Newspapers and other outlets operating in the West Bank and Gaza Strip, which came under Israeli military administration after the 1967 war, received no comparable self-press controls privilege; their editors had to submit every article to military press reviewers each night before publication. The system, with dozens of categories of information still legally requiring submission to the military press reviewer, remained a distinctive feature of Israeli press regulation for decades.",
+      "stated_justification": "The Press Ordinance and its later Editors' Committee arrangement were justified on national security grounds, aimed at preventing publication of information the military judged could aid Israel's adversaries.",
+      "effect_on_reporting": "Mainstream Israeli newspapers could largely handle everyday coverage on their own but had to submit security-related articles to the military press reviewer, while Palestinian publications in the occupied territories had to submit every article for review each night.",
+      "issue_of_the_day": "Israel's 1948 declaration of independence and the war that followed created an immediate perceived security need, which the retained British-era Press Ordinance and later Editors' Committee arrangement were meant to address by keeping military information out of print.",
+      "outcome": "ongoing",
+      "outcome_on": "1989",
+      "outcome_note": "The military press-review system built on the 1948 Press Ordinance and the 1953 Editors' Committee remained in force through the 1980s and beyond.",
+      "actors": [
+        "david-ben-gurion"
+      ],
+      "actor_roles": {
+        "david-ben-gurion": "announced"
+      },
+      "outlets": [],
+      "sources": [
+        "a1_045"
+      ],
+      "claims": [
+        {
+          "field": "occurred_on",
+          "value": "Press Ordinance retained at independence",
+          "statement": "When Israel became independent in 1948, it retained the Press Ordinance from the British Mandate period, which gave the military the power to censor publications on security grounds.",
+          "source_id": "a1_045",
+          "evidence_quote": "When Israel became independent, it retained the Press Ordinance."
+        },
+        {
+          "field": "what_happened",
+          "value": "Editors' Committee formed 1953",
+          "statement": "In 1953, cooperation between the Israeli military and the press was institutionalized with the formation of the Editors' Committee.",
+          "source_id": "a1_045",
+          "evidence_quote": "In 1953, cooperation between the Israeli military and the press was institutionalized with the formation of the Editors' Committee."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Occupied territories had no self-censorship privilege",
+          "statement": "Editors of newspapers in the West Bank and Gaza Strip had to submit all their articles to military censors each night, unlike newspapers elsewhere in Israel that could self-censor.",
+          "source_id": "a1_045",
+          "evidence_quote": "Editors of newspapers in the West Bank and in the Gaza Strip had to submit all articles to the military censors each night."
+        }
+      ],
+      "granularity": "anchor"
+    },
+    {
+      "slug": "1944-australia-calwell-newspaper-seizure",
+      "title": "Australia's wartime government seizes a Sydney newspaper edition under press controls rules",
+      "occurred_on": "1944-04-16",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Australia, national",
+      "country": "AU",
+      "continent": "Oceania",
+      "level": "national",
+      "type": "prior_restraint",
+      "tactic_primary": "prior_restraint",
+      "tactics": [
+        "prior_restraint",
+        "shutdowns_and_blocking"
+      ],
+      "leader_slug": "john-curtin",
+      "summary": "Australia's wartime government, under Prime Minister John Curtin, controlled press coverage of military events through the Department of Information. In April 1944, Minister for Information Arthur Calwell ordered the seizure of copies of the Sydney Sunday Telegraph for breaching press controls rules, prompting newspapers' joint protest and a High Court injunction against the seizure.",
+      "what_happened": "Australia's wartime government, led by Prime Minister John Curtin, ran press and radio press controls through the Department of Information under National Security Regulations, monitoring war correspondents and controlling what could be published about military events. Arthur Calwell, the minister responsible for information, brought what colleagues described as an ingrained distrust of the press to the role. On April 16, 1944, Calwell ordered the seizure of copies of the Sydney Sunday Telegraph for breaching the wartime press controls rules. Sydney's newspapers responded the next morning with a joint statement challenging the censors' authority to act that way, and the High Court of Australia, the country's highest court, granted an injunction preventing further suppression of the paper's editions. The same wartime press controls system had already brought the government into repeated conflict with newspaper proprietors, including over an unsuccessful attempt to merge Melbourne's three morning newspapers, the Age, the Argus and the Sun, for the duration of the war.",
+      "stated_justification": "Calwell's Department of Information said the seized edition of the Sunday Telegraph had breached the wartime press controls regulations governing what newspapers could publish about military and security matters.",
+      "effect_on_reporting": "Copies of the Sunday Telegraph were seized before the High Court's injunction stopped further suppression, and the episode became part of a wider pattern of confrontation between the wartime press controls system and Australian newspaper proprietors.",
+      "issue_of_the_day": "Australia remained at war in the Pacific in 1944, and its wartime press controls apparatus, already the subject of tension with newspaper proprietors, moved against the Sunday Telegraph for material it judged to breach the press controls rules.",
+      "outcome": "reversed",
+      "outcome_on": "1944-04-18",
+      "outcome_note": "The High Court of Australia granted an injunction days after the seizure, blocking further suppression of the newspaper's editions.",
+      "actors": [
+        "john-curtin",
+        "arthur-calwell"
+      ],
+      "actor_roles": {
+        "arthur-calwell": "enforced",
+        "john-curtin": "other"
+      },
+      "outlets": [
+        "sunday-telegraph-sydney"
+      ],
+      "sources": [
+        "a1_046",
+        "a1_047"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Calwell's distrust of the press",
+          "statement": "Calwell brought to the role of Minister for Information an ingrained distrust of the press, sharpened by his capacity for splendid invective and his delight in provocation.",
+          "source_id": "a1_046",
+          "evidence_quote": "an ingrained distrust of the press, sharpened by his capacity for splendid invective and his delight in provocation."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Department of Information controlled coverage",
+          "statement": "Under National Security Regulations the Department of Information controlled newspaper and radio reports about military events, and monitored war correspondents.",
+          "source_id": "a1_047",
+          "evidence_quote": "Under National Security Regulations the DOI controlled newspaper and radio reports about military events, and monitored war correspondents."
+        },
+        {
+          "field": "stated_justification",
+          "value": "Confrontations with proprietors over censorship",
+          "statement": "The extent of government censorship led to confrontations with newspaper proprietors, who also resisted government attempts to merge Melbourne's three morning newspapers for the war's duration.",
+          "source_id": "a1_047",
+          "evidence_quote": "The extent of government censorship led to confrontations with newspaper proprietors, who also resisted government attempts to merge Melbourne's three morning newspapers, the Age, the Argus and the Sun, for the duration."
+        }
+      ],
+      "granularity": "anchor"
+    }
+  ],
+  "actors": [
+    {
+      "slug": "woodrow-wilson",
+      "name": "Woodrow Wilson",
+      "kind": "person",
+      "role_or_office": "President of the United States",
+      "country": "US"
+    },
+    {
+      "slug": "thomas-patten",
+      "name": "Thomas G. Patten",
+      "kind": "person",
+      "role_or_office": "Postmaster of New York City",
+      "country": "US"
+    },
+    {
+      "slug": "learned-hand",
+      "name": "Learned Hand",
+      "kind": "person",
+      "role_or_office": "Judge, United States District Court for the Southern District of New York",
+      "country": "US"
+    },
+    {
+      "slug": "albert-burleson",
+      "name": "Albert S. Burleson",
+      "kind": "person",
+      "role_or_office": "United States Postmaster General",
+      "country": "US"
+    },
+    {
+      "slug": "theodore-christianson",
+      "name": "Theodore Christianson",
+      "kind": "person",
+      "role_or_office": "Governor of Minnesota",
+      "country": "US"
+    },
+    {
+      "slug": "floyd-olson",
+      "name": "Floyd B. Olson",
+      "kind": "person",
+      "role_or_office": "Hennepin County Attorney, Minnesota",
+      "country": "US"
+    },
+    {
+      "slug": "franklin-d-roosevelt",
+      "name": "Franklin D. Roosevelt",
+      "kind": "person",
+      "role_or_office": "President of the United States",
+      "country": "US"
+    },
+    {
+      "slug": "byron-price",
+      "name": "Byron Price",
+      "kind": "person",
+      "role_or_office": "Director, United States Office of Censorship",
+      "country": "US"
+    },
+    {
+      "slug": "dwight-d-eisenhower",
+      "name": "Dwight D. Eisenhower",
+      "kind": "person",
+      "role_or_office": "President of the United States",
+      "country": "US"
+    },
+    {
+      "slug": "james-eastland",
+      "name": "James O. Eastland",
+      "kind": "person",
+      "role_or_office": "United States Senator, chair of the Senate Internal Security Subcommittee",
+      "country": "US"
+    },
+    {
+      "slug": "richard-nixon",
+      "name": "Richard Nixon",
+      "kind": "person",
+      "role_or_office": "President of the United States",
+      "country": "US"
+    },
+    {
+      "slug": "john-dean",
+      "name": "John Dean",
+      "kind": "person",
+      "role_or_office": "Counsel to the President of the United States",
+      "country": "US"
+    },
+    {
+      "slug": "daniel-schorr",
+      "name": "Daniel Schorr",
+      "kind": "person",
+      "role_or_office": "Correspondent, CBS News",
+      "country": "US"
+    },
+    {
+      "slug": "mary-mcgrory",
+      "name": "Mary McGrory",
+      "kind": "person",
+      "role_or_office": "Columnist, The Washington Post",
+      "country": "US"
+    },
+    {
+      "slug": "daniel-ellsberg",
+      "name": "Daniel Ellsberg",
+      "kind": "person",
+      "role_or_office": "Military analyst who copied the Pentagon Papers",
+      "country": "US"
+    },
+    {
+      "slug": "ronald-reagan",
+      "name": "Ronald Reagan",
+      "kind": "person",
+      "role_or_office": "President of the United States",
+      "country": "US"
+    },
+    {
+      "slug": "john-vessey",
+      "name": "John W. Vessey Jr.",
+      "kind": "person",
+      "role_or_office": "Chairman of the Joint Chiefs of Staff, United States",
+      "country": "US"
+    },
+    {
+      "slug": "wesley-mcdonald",
+      "name": "Wesley McDonald",
+      "kind": "person",
+      "role_or_office": "Admiral, commander of United States forces in the Grenada operation",
+      "country": "US"
+    },
+    {
+      "slug": "george-shultz",
+      "name": "George Shultz",
+      "kind": "person",
+      "role_or_office": "United States Secretary of State",
+      "country": "US"
+    },
+    {
+      "slug": "jean-claude-duvalier",
+      "name": "Jean-Claude Duvalier",
+      "kind": "person",
+      "role_or_office": "President of Haiti",
+      "country": "HT"
+    },
+    {
+      "slug": "jean-dominique",
+      "name": "Jean Dominique",
+      "kind": "person",
+      "role_or_office": "Director, Radio Haiti-Inter",
+      "country": "HT"
+    },
+    {
+      "slug": "michele-montas",
+      "name": "Michèle Montas",
+      "kind": "person",
+      "role_or_office": "Journalist, Radio Haiti-Inter",
+      "country": "HT"
+    },
+    {
+      "slug": "getulio-vargas",
+      "name": "Getúlio Vargas",
+      "kind": "person",
+      "role_or_office": "President of Brazil",
+      "country": "BR"
+    },
+    {
+      "slug": "dip-brazil",
+      "name": "Departamento de Imprensa e Propaganda (DIP)",
+      "kind": "body",
+      "role_or_office": "Brazilian government press and state messaging department",
+      "country": "BR"
+    },
+    {
+      "slug": "augusto-pinochet",
+      "name": "Augusto Pinochet",
+      "kind": "person",
+      "role_or_office": "Commander-in-chief of the Chilean Army and head of the governing military junta",
+      "country": "CL"
+    },
+    {
+      "slug": "jorge-videla",
+      "name": "Jorge Rafael Videla",
+      "kind": "person",
+      "role_or_office": "President of Argentina and head of the governing military junta",
+      "country": "AR"
+    },
+    {
+      "slug": "jacobo-timerman",
+      "name": "Jacobo Timerman",
+      "kind": "person",
+      "role_or_office": "Editor and founder, La Opinión",
+      "country": "AR"
+    },
+    {
+      "slug": "robert-cox",
+      "name": "Robert Cox",
+      "kind": "person",
+      "role_or_office": "Editor, Buenos Aires Herald",
+      "country": "AR"
+    },
+    {
+      "slug": "andrew-graham-yooll",
+      "name": "Andrew Graham-Yooll",
+      "kind": "person",
+      "role_or_office": "Journalist, Buenos Aires Herald",
+      "country": "AR"
+    },
+    {
+      "slug": "adolf-hitler",
+      "name": "Adolf Hitler",
+      "kind": "person",
+      "role_or_office": "Chancellor of Germany",
+      "country": "DE"
+    },
+    {
+      "slug": "reich-press-chamber",
+      "name": "Reich Press Chamber (Reichspressekammer)",
+      "kind": "body",
+      "role_or_office": "Nazi Germany's compulsory professional body for journalists",
+      "country": "DE"
+    },
+    {
+      "slug": "vladimir-lenin",
+      "name": "Vladimir Lenin",
+      "kind": "person",
+      "role_or_office": "Chairman of the Council of People's Commissars of Soviet Russia/the USSR",
+      "country": "RU"
+    },
+    {
+      "slug": "glavlit",
+      "name": "Glavlit",
+      "kind": "body",
+      "role_or_office": "Soviet state office overseeing printed matter and the arts",
+      "country": "RU"
+    },
+    {
+      "slug": "francisco-franco",
+      "name": "Francisco Franco",
+      "kind": "person",
+      "role_or_office": "Head of State of Spain",
+      "country": "ES"
+    },
+    {
+      "slug": "antonio-salazar",
+      "name": "António de Oliveira Salazar",
+      "kind": "person",
+      "role_or_office": "Prime Minister of Portugal",
+      "country": "PT"
+    },
+    {
+      "slug": "alexander-dubcek",
+      "name": "Alexander Dubček",
+      "kind": "person",
+      "role_or_office": "First Secretary of the Communist Party of Czechoslovakia",
+      "country": "CZ"
+    },
+    {
+      "slug": "wojciech-jaruzelski",
+      "name": "Wojciech Jaruzelski",
+      "kind": "person",
+      "role_or_office": "First Secretary of the Polish United Workers' Party and Prime Minister of Poland",
+      "country": "PL"
+    },
+    {
+      "slug": "margaret-thatcher",
+      "name": "Margaret Thatcher",
+      "kind": "person",
+      "role_or_office": "Prime Minister of the United Kingdom",
+      "country": "GB"
+    },
+    {
+      "slug": "douglas-hurd",
+      "name": "Douglas Hurd",
+      "kind": "person",
+      "role_or_office": "Home Secretary of the United Kingdom",
+      "country": "GB"
+    },
+    {
+      "slug": "daniel-francois-malan",
+      "name": "Daniel François Malan",
+      "kind": "person",
+      "role_or_office": "Prime Minister of South Africa",
+      "country": "ZA"
+    },
+    {
+      "slug": "p-w-botha",
+      "name": "P. W. Botha",
+      "kind": "person",
+      "role_or_office": "State President of South Africa",
+      "country": "ZA"
+    },
+    {
+      "slug": "louis-le-grange",
+      "name": "Louis le Grange",
+      "kind": "person",
+      "role_or_office": "Minister of Law and Order, South Africa",
+      "country": "ZA"
+    },
+    {
+      "slug": "gamal-abdel-nasser",
+      "name": "Gamal Abdel Nasser",
+      "kind": "person",
+      "role_or_office": "President of Egypt",
+      "country": "EG"
+    },
+    {
+      "slug": "indira-gandhi",
+      "name": "Indira Gandhi",
+      "kind": "person",
+      "role_or_office": "Prime Minister of India",
+      "country": "IN"
+    },
+    {
+      "slug": "ferdinand-marcos",
+      "name": "Ferdinand Marcos",
+      "kind": "person",
+      "role_or_office": "President of the Philippines",
+      "country": "PH"
+    },
+    {
+      "slug": "teodoro-locsin-sr",
+      "name": "Teodoro Locsin Sr.",
+      "kind": "person",
+      "role_or_office": "Publisher, Philippines Free Press",
+      "country": "PH"
+    },
+    {
+      "slug": "chun-doo-hwan",
+      "name": "Chun Doo-hwan",
+      "kind": "person",
+      "role_or_office": "General and de facto head of South Korea's martial-law government",
+      "country": "KR"
+    },
+    {
+      "slug": "saw-maung",
+      "name": "Saw Maung",
+      "kind": "person",
+      "role_or_office": "General, Chairman of the State Law and Order Restoration Council (SLORC)",
+      "country": "MM"
+    },
+    {
+      "slug": "slorc",
+      "name": "State Law and Order Restoration Council (SLORC)",
+      "kind": "body",
+      "role_or_office": "Burma's military government from 1988",
+      "country": "MM"
+    },
+    {
+      "slug": "li-peng",
+      "name": "Li Peng",
+      "kind": "person",
+      "role_or_office": "Premier of the People's Republic of China",
+      "country": "CN"
+    },
+    {
+      "slug": "john-pomfret",
+      "name": "John Pomfret",
+      "kind": "person",
+      "role_or_office": "Correspondent, Associated Press",
+      "country": "US"
+    },
+    {
+      "slug": "alan-pessin",
+      "name": "Alan W. Pessin",
+      "kind": "person",
+      "role_or_office": "Correspondent, Voice of America",
+      "country": "US"
+    },
+    {
+      "slug": "david-ben-gurion",
+      "name": "David Ben-Gurion",
+      "kind": "person",
+      "role_or_office": "Prime Minister of Israel",
+      "country": "IL"
+    },
+    {
+      "slug": "john-curtin",
+      "name": "John Curtin",
+      "kind": "person",
+      "role_or_office": "Prime Minister of Australia",
+      "country": "AU"
+    },
+    {
+      "slug": "arthur-calwell",
+      "name": "Arthur Calwell",
+      "kind": "person",
+      "role_or_office": "Australian Minister for Information",
+      "country": "AU"
+    }
+  ],
+  "outlets": [
+    {
+      "slug": "the-masses",
+      "name": "The Masses",
+      "kind": "magazine",
+      "country": "US"
+    },
+    {
+      "slug": "milwaukee-leader",
+      "name": "The Milwaukee Leader",
+      "kind": "newspaper",
+      "country": "US"
+    },
+    {
+      "slug": "new-york-times-historical",
+      "name": "The New York Times",
+      "kind": "newspaper",
+      "country": "US"
+    },
+    {
+      "slug": "washington-post-historical",
+      "name": "The Washington Post",
+      "kind": "newspaper",
+      "country": "US"
+    },
+    {
+      "slug": "buenos-aires-herald",
+      "name": "Buenos Aires Herald",
+      "kind": "newspaper",
+      "country": "AR"
+    },
+    {
+      "slug": "la-opinion-argentina",
+      "name": "La Opinión",
+      "kind": "newspaper",
+      "country": "AR"
+    },
+    {
+      "slug": "radio-haiti-inter",
+      "name": "Radio Haiti-Inter",
+      "kind": "broadcaster",
+      "country": "HT"
+    },
+    {
+      "slug": "manila-times",
+      "name": "Manila Times",
+      "kind": "newspaper",
+      "country": "PH"
+    },
+    {
+      "slug": "philippines-free-press",
+      "name": "Philippines Free Press",
+      "kind": "magazine",
+      "country": "PH"
+    },
+    {
+      "slug": "al-ahram",
+      "name": "Al-Ahram",
+      "kind": "newspaper",
+      "country": "EG"
+    },
+    {
+      "slug": "hankook-ilbo",
+      "name": "Hankook Ilbo",
+      "kind": "newspaper",
+      "country": "KR"
+    },
+    {
+      "slug": "radio-magallanes",
+      "name": "Radio Magallanes",
+      "kind": "broadcaster",
+      "country": "CL"
+    },
+    {
+      "slug": "radio-candelaria",
+      "name": "Radio Candelaria",
+      "kind": "broadcaster",
+      "country": "CL"
+    },
+    {
+      "slug": "sunday-telegraph-sydney",
+      "name": "Sunday Telegraph (Sydney)",
+      "kind": "newspaper",
+      "country": "AU"
+    }
+  ],
+  "sources": [
+    {
+      "id": "a1_001",
+      "url": "https://firstamendment.mtsu.edu/article/espionage-act-of-1917/",
+      "title": "Espionage Act of 1917",
+      "publisher": "The First Amendment Encyclopedia, Middle Tennessee State University",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_002",
+      "url": "https://firstamendment.mtsu.edu/article/masses-publishing-co-v-patten-s-d-n-y/",
+      "title": "Masses Publishing Co. v. Patten (S.D.N.Y.) (1917)",
+      "publisher": "The First Amendment Encyclopedia, Middle Tennessee State University",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_003",
+      "url": "https://firstamendment.mtsu.edu/article/united-states-ex-rel-milwaukee-social-democratic-publishing-co-v-burleson/",
+      "title": "United States ex rel. Milwaukee Social Democratic Publishing Co. v. Burleson",
+      "publisher": "The First Amendment Encyclopedia, Middle Tennessee State University",
+      "published_on": null,
+      "kind": "court_record",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_004",
+      "url": "https://supreme.justia.com/cases/federal/us/283/697/",
+      "title": "Near v. Minnesota, 283 U.S. 697 (1931)",
+      "publisher": "Justia US Supreme Court Center",
+      "published_on": "1931-06-01",
+      "kind": "court_record",
+      "http_status": 403,
+      "link_state": "blocks_automated_checks",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_005",
+      "url": "https://www.ebsco.com/research-starters/politics-and-government/us-office-censorship",
+      "title": "U.S. Office of Censorship",
+      "publisher": "EBSCO Research Starters",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_006",
+      "url": "https://www.pbs.org/weta/reportingamericaatwar/chronology/12181941.html",
+      "title": "Reporting America at War: Chronology, December 18-19 1941",
+      "publisher": "PBS / WETA",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_007",
+      "url": "https://time.com/archive/6799287/the-press-eastland-v-the-times/",
+      "title": "The Press: Eastland v. the Times",
+      "publisher": "Time",
+      "published_on": "1956-11-26",
+      "kind": "outlet_report",
+      "http_status": 406,
+      "link_state": "blocks_automated_checks",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_008",
+      "url": "https://exhibits.lib.unc.edu/exhibits/show/watergate/nixon-s-enemies-list",
+      "title": "Nixon's Enemies List",
+      "publisher": "University of North Carolina Library, A Southern View of Watergate exhibit",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": null,
+      "link_state": "blocks_automated_checks",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_009",
+      "url": "https://supreme.justia.com/cases/federal/us/403/713/",
+      "title": "New York Times Co. v. United States, 403 U.S. 713 (1971)",
+      "publisher": "Justia US Supreme Court Center",
+      "published_on": "1971-06-30",
+      "kind": "court_record",
+      "http_status": 403,
+      "link_state": "blocks_automated_checks",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_010",
+      "url": "https://www.britannica.com/event/Pentagon-Papers",
+      "title": "Pentagon Papers",
+      "publisher": "Encyclopaedia Britannica",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 403,
+      "link_state": "blocks_automated_checks",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_011",
+      "url": "https://supreme.justia.com/cases/federal/us/408/665/",
+      "title": "Branzburg v. Hayes, 408 U.S. 665 (1972)",
+      "publisher": "Justia US Supreme Court Center",
+      "published_on": "1972-06-29",
+      "kind": "court_record",
+      "http_status": 403,
+      "link_state": "blocks_automated_checks",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_012",
+      "url": "https://www.rcfp.org/journals/the-news-media-and-the-law-fall-2001/blame-grenada/",
+      "title": "Blame Grenada!",
+      "publisher": "Reporters Committee for Freedom of the Press",
+      "published_on": "2001",
+      "kind": "org_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_013",
+      "url": "https://fair.org/extra/book-excerpt-invading-grenada/",
+      "title": "Invading Grenada (book excerpt)",
+      "publisher": "FAIR (Fairness & Accuracy in Reporting)",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 403,
+      "link_state": "blocks_automated_checks",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_014",
+      "url": "https://rsf.org/en/who-killed-jean-dominique",
+      "title": "Who Killed Jean Dominique?",
+      "publisher": "Reporters Without Borders (RSF)",
+      "published_on": "2001-04-03",
+      "kind": "org_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_015",
+      "url": "https://haitisupportgroup.org/dominique-jean/",
+      "title": "Dominique, Jean",
+      "publisher": "Haiti Support Group",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_016",
+      "url": "https://www.camara.leg.br/radio/programas/393215-em-1939-getulio-vargas-cria-o-departamento-de-imprensa-e-propaganda/",
+      "title": "Em 1939, Getúlio Vargas cria o Departamento de Imprensa e Propaganda",
+      "publisher": "Rádio Câmara, Chamber of Deputies of Brazil",
+      "published_on": null,
+      "kind": "primary_document",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_017",
+      "url": "https://www.britannica.com/topic/Estado-Novo-Brazilian-history",
+      "title": "Estado Novo (Brazilian history)",
+      "publisher": "Encyclopaedia Britannica",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 403,
+      "link_state": "blocks_automated_checks",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_018",
+      "url": "https://latamjournalismreview.org/articles/my-september-11-on-the-50th-anniversary-of-the-coup-chilean-journalists-recall-living-through-the-start-of-the-dictatorship/",
+      "title": "'My September 11': On the 50th anniversary of the coup in Chile, journalists remember living through the start of the dictatorship",
+      "publisher": "LatAm Journalism Review, Knight Center for Journalism in the Americas, University of Texas at Austin",
+      "published_on": "2023-09-11",
+      "kind": "outlet_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_019",
+      "url": "https://www.ebsco.com/research-starters/politics-and-government/history-censorship-chile",
+      "title": "History of Censorship in Chile",
+      "publisher": "EBSCO Research Starters",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_020",
+      "url": "https://cidh.oas.org/countryrep/Argentina80eng/chap.7.htm",
+      "title": "Report on the Situation of Human Rights in Argentina, Chapter VII: The Right to Freedom of Investigation, Opinion, Expression and Dissemination",
+      "publisher": "Inter-American Commission on Human Rights, Organization of American States",
+      "published_on": "1980",
+      "kind": "primary_document",
+      "http_status": 403,
+      "link_state": "blocks_automated_checks",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_021",
+      "url": "https://buenosairesherald.com/150th-anniversary/150-years-one-mission",
+      "title": "150 years, one mission",
+      "publisher": "Buenos Aires Herald",
+      "published_on": null,
+      "kind": "outlet_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_022",
+      "url": "https://encyclopedia.ushmm.org/content/en/article/the-press-in-the-third-reich",
+      "title": "The Press in the Third Reich",
+      "publisher": "United States Holocaust Memorial Museum, Holocaust Encyclopedia",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_023",
+      "url": "https://www.britannica.com/topic/Glavlit",
+      "title": "Glavlit",
+      "publisher": "Encyclopaedia Britannica",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 403,
+      "link_state": "blocks_automated_checks",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_024",
+      "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/glavlit",
+      "title": "Glavlit",
+      "publisher": "Encyclopedia.com",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_025",
+      "url": "https://journals.sagepub.com/doi/pdf/10.1080/03064227208532172",
+      "title": "Press Censorship in Spain & Portugal",
+      "publisher": "Index on Censorship (SAGE Publishing)",
+      "published_on": "1972",
+      "kind": "org_report",
+      "http_status": 403,
+      "link_state": "blocks_automated_checks",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_026",
+      "url": "https://www.britannica.com/topic/Estado-Novo-Portuguese-history",
+      "title": "Estado Novo (Portuguese history)",
+      "publisher": "Encyclopaedia Britannica",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 403,
+      "link_state": "blocks_automated_checks",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_027",
+      "url": "https://history.state.gov/milestones/1961-1968/soviet-invasion-czechoslavkia",
+      "title": "Soviet Invasion of Czechoslovakia, 1968",
+      "publisher": "Office of the Historian, United States Department of State",
+      "published_on": null,
+      "kind": "primary_document",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_028",
+      "url": "https://www.britannica.com/event/Prague-Spring",
+      "title": "Prague Spring",
+      "publisher": "Encyclopaedia Britannica",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 403,
+      "link_state": "blocks_automated_checks",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_029",
+      "url": "https://www.archivum.org/entries/blog/all-the-telephone-and-telex-lines-are-disconnected---rfe-and-the-1981-martial-law-in-poland",
+      "title": "\"All the Telephone and Telex Lines are Disconnected\" - RFE and the 1981 Martial Law in Poland",
+      "publisher": "Blinken OSA Archivum",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_030",
+      "url": "https://www.ebsco.com/research-starters/history/history-censorship-poland",
+      "title": "History of Censorship in Poland",
+      "publisher": "EBSCO Research Starters",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_031",
+      "url": "https://www.thejournal.ie/broadcast-ban-uk-30-years-3816443-Jan2018/",
+      "title": "When Gerry Adams was played by an Oscar nominee, and the IRA weren't allowed talk about sausages",
+      "publisher": "TheJournal.ie",
+      "published_on": "2018-01",
+      "kind": "outlet_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_032",
+      "url": "https://sahistory.org.za/dated-event/suppression-communism-act-44-1950-severely-limits-what-media-could-report",
+      "title": "Suppression of Communism Act 44 of 1950 severely limits what the media could report",
+      "publisher": "South African History Online",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_033",
+      "url": "https://www.britannica.com/topic/Suppression-of-Communism-Act",
+      "title": "Suppression of Communism Act",
+      "publisher": "Encyclopaedia Britannica",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 403,
+      "link_state": "blocks_automated_checks",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_034",
+      "url": "https://www.upi.com/Archives/1985/11/02/South-Africa-Saturday-issued-a-ban-on-all-television/6517499755600/",
+      "title": "South Africa Saturday issued a ban on all television...",
+      "publisher": "UPI Archives",
+      "published_on": "1985-11-02",
+      "kind": "outlet_report",
+      "http_status": 403,
+      "link_state": "blocks_automated_checks",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_035",
+      "url": "https://egypt.mom-rsf.org/en/context/history/",
+      "title": "Egypt: History",
+      "publisher": "Media Ownership Monitor Egypt (Reporters Without Borders)",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_036",
+      "url": "https://www.britannica.com/topic/Al-Ahram",
+      "title": "Al-Ahram",
+      "publisher": "Encyclopaedia Britannica",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 403,
+      "link_state": "blocks_automated_checks",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_037",
+      "url": "https://www.pib.gov.in/FactsheetDetails.aspx?Id=149224&reg=48&lang=2",
+      "title": "The Emergency in India",
+      "publisher": "Press Information Bureau, Government of India",
+      "published_on": null,
+      "kind": "primary_document",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_038",
+      "url": "https://www.rappler.com/newsbreak/iq/how-marcos-silenced-media-press-freedom-martial-law/",
+      "title": "FAST FACTS: How Marcos silenced, controlled the media during Martial Law",
+      "publisher": "Rappler",
+      "published_on": null,
+      "kind": "outlet_report",
+      "http_status": 403,
+      "link_state": "blocks_automated_checks",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_039",
+      "url": "https://cmfr-phil.org/media-ethics-responsibility/ethics/back-to-the-past-a-timeline-of-press-freedom/",
+      "title": "Back to the Past: A timeline of press freedom",
+      "publisher": "Center for Media Freedom and Responsibility (CMFR)",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_040",
+      "url": "https://www.washingtonpost.com/archive/politics/1980/07/31/s-korea-orders-purge-of-dissident-journalists/e0da51db-b285-4418-bd07-52f034a68daa/",
+      "title": "S. Korea Orders Purge of Dissident Journalists",
+      "publisher": "The Washington Post",
+      "published_on": "1980-07-31",
+      "kind": "outlet_report",
+      "http_status": null,
+      "link_state": "blocks_automated_checks",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_041",
+      "url": "https://koreaherald.com/view.php?ud=20241213050077",
+      "title": "[Reporter's Notebook] Press freedoms taken for granted",
+      "publisher": "The Korea Herald",
+      "published_on": "2024-12-13",
+      "kind": "outlet_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_042",
+      "url": "https://www.article19.org/data/files/pdfs/publications/burma-censorship-prevails.pdf",
+      "title": "Censorship Prevails: Political Deadlock and Economic Transition in Burma",
+      "publisher": "ARTICLE 19",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_043",
+      "url": "https://www.irrawaddy.com/news/burma/dark-cloud-censorship-burma.html",
+      "title": "Under a Dark Cloud: Censorship in Burma",
+      "publisher": "The Irrawaddy",
+      "published_on": null,
+      "kind": "outlet_report",
+      "http_status": 403,
+      "link_state": "blocks_automated_checks",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_044",
+      "url": "https://www.upi.com/Archives/1989/06/14/China-expels-two-American-journalists/6046143021168/",
+      "title": "China expels two American journalists",
+      "publisher": "UPI Archives",
+      "published_on": "1989-06-14",
+      "kind": "outlet_report",
+      "http_status": 403,
+      "link_state": "blocks_automated_checks",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_045",
+      "url": "https://www.ebsco.com/research-starters/history/history-censorship-israel/",
+      "title": "History of Censorship in Israel",
+      "publisher": "EBSCO Research Starters",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_046",
+      "url": "https://adb.anu.edu.au/biography/calwell-arthur-augustus-9667",
+      "title": "Calwell, Arthur Augustus (1896-1973)",
+      "publisher": "Australian Dictionary of Biography, Australian National University",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_047",
+      "url": "https://www.emelbourne.net.au/biogs/EM01578b.htm",
+      "title": "War: Censorship and Propaganda",
+      "publisher": "eMelbourne: The Encyclopedia of Melbourne, University of Melbourne",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_048",
+      "url": "https://encyclopedia.ushmm.org/content/en/timeline-event/holocaust/1933-1938/editors-law",
+      "title": "Editors Law",
+      "publisher": "United States Holocaust Memorial Museum, Holocaust Encyclopedia",
+      "published_on": null,
+      "kind": "org_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    },
+    {
+      "id": "a1_049",
+      "url": "https://www.history.com/articles/richard-nixon-enemies-list-who-was-on-it",
+      "title": "What Was Richard Nixon's 'Enemies List', and Who Was on It?",
+      "publisher": "HISTORY (A&E Networks)",
+      "published_on": null,
+      "kind": "outlet_report",
+      "http_status": 200,
+      "link_state": "live",
+      "accessed_on": "2026-09-22"
+    }
+  ]
+}

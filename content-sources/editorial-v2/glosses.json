@@ -1,0 +1,397 @@
+[
+  {
+    "term": "White House",
+    "gloss": "the office and residence of the president of the United States, in Washington, D.C.",
+    "glossary_slug": null
+  },
+  {
+    "term": "Oval Office",
+    "gloss": "the president's office in the White House",
+    "glossary_slug": null
+  },
+  {
+    "term": "Air Force One",
+    "gloss": "the aircraft that carries the president of the United States",
+    "glossary_slug": null
+  },
+  {
+    "term": "Mar-a-Lago",
+    "gloss": "Donald Trump's private estate in Florida",
+    "glossary_slug": null
+  },
+  {
+    "term": "Truth Social",
+    "gloss": "a social media platform on which Donald Trump publishes statements",
+    "glossary_slug": null
+  },
+  {
+    "term": "White House Press Office",
+    "gloss": "the office of the White House press secretary, which runs briefings and press access",
+    "glossary_slug": null
+  },
+  {
+    "term": "White House Correspondents' Association (WHCA)",
+    "gloss": "the organization of reporters who cover the president of the United States",
+    "glossary_slug": "whca"
+  },
+  {
+    "term": "hard pass",
+    "gloss": "the standing credential that lets a reporter enter the White House press area without applying each day",
+    "glossary_slug": "hard-pass"
+  },
+  {
+    "term": "day pass",
+    "gloss": "a credential that admits a reporter to the White House for a single day",
+    "glossary_slug": "day-pass"
+  },
+  {
+    "term": "press pool",
+    "gloss": "the small rotating group of reporters who cover the president of the United States in spaces too small for the full press corps and share what they gather with other outlets",
+    "glossary_slug": "press-pool"
+  },
+  {
+    "term": "pool report",
+    "gloss": "the account a pool reporter sends to the rest of the press corps after covering a limited-access event",
+    "glossary_slug": "pool-report"
+  },
+  {
+    "term": "credentialing",
+    "gloss": "the process by which an institution decides which journalists receive access passes",
+    "glossary_slug": "credentialing"
+  },
+  {
+    "term": "Federal Communications Commission (FCC)",
+    "gloss": "the United States regulator of broadcasting and telecommunications, which licenses radio and television stations",
+    "glossary_slug": "federal-communications-commission"
+  },
+  {
+    "term": "FCC news distortion policy",
+    "gloss": "a rule under which the Federal Communications Commission can act against a broadcaster for deliberately falsifying news",
+    "glossary_slug": "fcc-news-distortion-policy"
+  },
+  {
+    "term": "Corporation for Public Broadcasting (CPB)",
+    "gloss": "a private non-profit corporation created by the United States Congress in 1967 to distribute federal money to public radio and television",
+    "glossary_slug": "corporation-for-public-broadcasting"
+  },
+  {
+    "term": "Voice of America (VOA)",
+    "gloss": "the United States government's international broadcaster, funded by Congress",
+    "glossary_slug": "voice-of-america"
+  },
+  {
+    "term": "U.S. Agency for Global Media (USAGM)",
+    "gloss": "the United States federal agency that oversees Voice of America",
+    "glossary_slug": "us-agency-for-global-media"
+  },
+  {
+    "term": "Department of Justice (DOJ)",
+    "gloss": "the United States federal department that enforces federal law and prosecutes federal crimes",
+    "glossary_slug": "us-department-of-justice"
+  },
+  {
+    "term": "Attorney General of the United States",
+    "gloss": "the head of the United States Department of Justice",
+    "glossary_slug": "us-department-of-justice"
+  },
+  {
+    "term": "Secret Service",
+    "gloss": "the United States federal agency responsible for protecting the president and other national leaders",
+    "glossary_slug": "secret-service"
+  },
+  {
+    "term": "Department of Defense",
+    "gloss": "the United States federal department that provides the country's military forces",
+    "glossary_slug": "us-department-of-defense"
+  },
+  {
+    "term": "Pentagon",
+    "gloss": "the headquarters building of the United States Department of Defense",
+    "glossary_slug": "us-department-of-defense"
+  },
+  {
+    "term": "Secretary of Defense",
+    "gloss": "the head of the United States Department of Defense",
+    "glossary_slug": "us-department-of-defense"
+  },
+  {
+    "term": "Department of Homeland Security (DHS)",
+    "gloss": "the United States federal department responsible for border, customs and immigration enforcement and emergency response",
+    "glossary_slug": "us-department-of-homeland-security"
+  },
+  {
+    "term": "Immigration and Customs Enforcement (ICE)",
+    "gloss": "a United States federal agency that enforces laws on border control, customs, trade and immigration",
+    "glossary_slug": "immigration-and-customs-enforcement"
+  },
+  {
+    "term": "Internal Revenue Service (IRS)",
+    "gloss": "the United States federal tax agency",
+    "glossary_slug": null
+  },
+  {
+    "term": "White House Counsel",
+    "gloss": "the lawyer who advises the president of the United States on official matters",
+    "glossary_slug": null
+  },
+  {
+    "term": "Congress",
+    "gloss": "the national legislature of the United States, made up of the Senate and the House of Representatives",
+    "glossary_slug": "us-congress"
+  },
+  {
+    "term": "executive order",
+    "gloss": "a written directive through which the president of the United States manages the operations of the federal government",
+    "glossary_slug": "executive-order"
+  },
+  {
+    "term": "Public Broadcasting Act of 1967",
+    "gloss": "the United States law that created the Corporation for Public Broadcasting",
+    "glossary_slug": "corporation-for-public-broadcasting"
+  },
+  {
+    "term": "Supreme Court of the United States",
+    "gloss": "the highest court in the United States for cases arising under its constitution and federal laws",
+    "glossary_slug": "supreme-court-of-the-united-states"
+  },
+  {
+    "term": "D.C. Circuit",
+    "gloss": "the United States Court of Appeals for the District of Columbia Circuit, one of 13 federal appeals courts below the Supreme Court of the United States",
+    "glossary_slug": "dc-circuit"
+  },
+  {
+    "term": "Fifth Circuit",
+    "gloss": "the United States Court of Appeals for the Fifth Circuit, a federal appeals court based in New Orleans",
+    "glossary_slug": "fifth-circuit"
+  },
+  {
+    "term": "United States District Court for the District of Columbia (D.D.C.)",
+    "gloss": "the federal trial court in Washington, D.C.",
+    "glossary_slug": "us-district-court-dc"
+  },
+  {
+    "term": "United States district court",
+    "gloss": "a federal trial court, one of 94 in the United States",
+    "glossary_slug": "us-district-court"
+  },
+  {
+    "term": "First Amendment",
+    "gloss": "the part of the United States Constitution that bars Congress from making laws abridging freedom of speech or of the press",
+    "glossary_slug": "first-amendment"
+  },
+  {
+    "term": "Fifth Amendment",
+    "gloss": "the part of the United States Constitution that, among other protections, guarantees due process of law",
+    "glossary_slug": "fifth-amendment"
+  },
+  {
+    "term": "due process",
+    "gloss": "the fair procedure, such as notice and a chance to respond, that a government must follow before taking away a right",
+    "glossary_slug": "due-process"
+  },
+  {
+    "term": "Sherrill v. Knight",
+    "gloss": "a 1977 decision of the D.C. Circuit that a White House press pass may not be denied without notice, a chance to respond and written reasons",
+    "glossary_slug": "sherrill-v-knight-standard"
+  },
+  {
+    "term": "Espionage Act",
+    "gloss": "a 1917 United States law against disclosing defence information",
+    "glossary_slug": "espionage-act"
+  },
+  {
+    "term": "temporary restraining order",
+    "gloss": "a short-term court order made before a full hearing to prevent immediate harm",
+    "glossary_slug": "temporary-restraining-order"
+  },
+  {
+    "term": "preliminary injunction",
+    "gloss": "a court order that keeps the situation as it is while a lawsuit is decided",
+    "glossary_slug": "preliminary-injunction"
+  },
+  {
+    "term": "en banc",
+    "gloss": "heard by all the judges of an appeals court rather than a panel",
+    "glossary_slug": "en-banc"
+  },
+  {
+    "term": "viewpoint discrimination",
+    "gloss": "treating speech differently because of the opinion it expresses",
+    "glossary_slug": "viewpoint-discrimination"
+  },
+  {
+    "term": "public forum doctrine",
+    "gloss": "the body of United States law on how far the government may restrict speech on public property",
+    "glossary_slug": "public-forum-doctrine"
+  },
+  {
+    "term": "prior restraint",
+    "gloss": "a government action that stops publication before it happens",
+    "glossary_slug": "prior-restraint"
+  },
+  {
+    "term": "subpoena",
+    "gloss": "a legal order that compels a person to testify or hand over records",
+    "glossary_slug": "subpoena"
+  },
+  {
+    "term": "leak investigation",
+    "gloss": "a government inquiry into the unauthorized disclosure of information to the press",
+    "glossary_slug": "leak-investigation"
+  },
+  {
+    "term": "shield law",
+    "gloss": "a law that lets journalists refuse to reveal confidential sources in legal proceedings",
+    "glossary_slug": "shield-law"
+  },
+  {
+    "term": "Freedom of Information Act (FOIA)",
+    "gloss": "a 1966 United States law that lets the public request records from federal agencies",
+    "glossary_slug": "foia"
+  },
+  {
+    "term": "SLAPP",
+    "gloss": "a strategic lawsuit against public participation, filed to burden a critic with the cost of defending it",
+    "glossary_slug": "slapp"
+  },
+  {
+    "term": "actual malice",
+    "gloss": "the United States standard requiring a public figure suing for defamation to prove a statement was published knowing it was false or with reckless disregard for the truth",
+    "glossary_slug": "actual-malice"
+  },
+  {
+    "term": "National Security Law (Hong Kong)",
+    "gloss": "a law that China's central government imposed on Hong Kong in 2020, creating offences including collusion with foreign forces",
+    "glossary_slug": "national-security-law-hong-kong"
+  },
+  {
+    "term": "Hong Kong",
+    "gloss": "a special administrative region of China with its own courts and legal system",
+    "glossary_slug": null
+  },
+  {
+    "term": "Chief Executive of Hong Kong",
+    "gloss": "the head of Hong Kong's government",
+    "glossary_slug": "hong-kong-chief-executive"
+  },
+  {
+    "term": "foreign agent (Russia)",
+    "gloss": "a Russian legal designation that puts a person or organization on a government register and subjects them to added restrictions",
+    "glossary_slug": "foreign-agent-law"
+  },
+  {
+    "term": "undesirable organization (Russia)",
+    "gloss": "a Russian legal designation under which cooperating with the named organization can be prosecuted",
+    "glossary_slug": "undesirable-organization"
+  },
+  {
+    "term": "State Duma",
+    "gloss": "the lower house of Russia's parliament, the Federal Assembly",
+    "glossary_slug": "state-duma"
+  },
+  {
+    "term": "Roskomnadzor",
+    "gloss": "Russia's federal regulator of communications, information technology and mass media",
+    "glossary_slug": "roskomnadzor"
+  },
+  {
+    "term": "RTÜK",
+    "gloss": "the Radio and Television Supreme Council (Radyo ve Televizyon Üst Kurulu), Türkiye's broadcasting regulator",
+    "glossary_slug": "rtuk"
+  },
+  {
+    "term": "Ofcom",
+    "gloss": "the Office of Communications, the United Kingdom's regulator of broadcasting and communications",
+    "glossary_slug": "ofcom"
+  },
+  {
+    "term": "CRTC",
+    "gloss": "the Canadian Radio-television and Telecommunications Commission, Canada's regulator of broadcasting and telecommunications",
+    "glossary_slug": "crtc"
+  },
+  {
+    "term": "National Assembly (Hungary)",
+    "gloss": "Hungary's national parliament",
+    "glossary_slug": "national-assembly-of-hungary"
+  },
+  {
+    "term": "Sovereignty Protection Office (Hungary)",
+    "gloss": "a Hungarian state office created in 2023 to investigate organizations for foreign influence and abolished on June 30, 2026",
+    "glossary_slug": "sovereignty-protection-office"
+  },
+  {
+    "term": "criminal defamation",
+    "gloss": "an offence under which a statement that damages someone's reputation can lead to a fine or prison sentence",
+    "glossary_slug": "criminal-defamation"
+  },
+  {
+    "term": "Gaza Strip",
+    "gloss": "the Palestinian territory on the Mediterranean coast between Israel and Egypt",
+    "glossary_slug": null
+  },
+  {
+    "term": "Committee to Protect Journalists (CPJ)",
+    "gloss": "a non-profit organization in New York that documents cases of journalists imprisoned or killed worldwide",
+    "glossary_slug": "committee-to-protect-journalists"
+  },
+  {
+    "term": "Reporters Without Borders (RSF)",
+    "gloss": "an international organization based in Paris that publishes the annual World Press Freedom Index",
+    "glossary_slug": "reporters-without-borders"
+  },
+  {
+    "term": "Freedom of the Press Foundation",
+    "gloss": "a United States non-profit that builds secure communication tools for journalists and runs the U.S. Press Freedom Tracker",
+    "glossary_slug": "freedom-of-the-press-foundation"
+  },
+  {
+    "term": "Reporters Committee for Freedom of the Press",
+    "gloss": "a United States non-profit that provides legal help to journalists",
+    "glossary_slug": "reporters-committee-for-freedom-of-the-press"
+  },
+  {
+    "term": "Knight First Amendment Institute",
+    "gloss": "an institute at Columbia University in New York that litigates and researches freedom of speech and of the press",
+    "glossary_slug": "knight-first-amendment-institute"
+  },
+  {
+    "term": "U.S. Press Freedom Tracker",
+    "gloss": "a database of press freedom incidents in the United States",
+    "glossary_slug": "us-press-freedom-tracker"
+  },
+  {
+    "term": "Freedom House",
+    "gloss": "a United States-based organization that publishes annual ratings of political rights and civil liberties by country",
+    "glossary_slug": "freedom-house"
+  },
+  {
+    "term": "CIVICUS Monitor",
+    "gloss": "a research project of the global civil society alliance CIVICUS that tracks civic freedoms by country",
+    "glossary_slug": "civicus-monitor"
+  },
+  {
+    "term": "Human Rights Watch",
+    "gloss": "an international organization that investigates and reports on human rights abuses",
+    "glossary_slug": "human-rights-watch"
+  },
+  {
+    "term": "International Consortium of Investigative Journalists (ICIJ)",
+    "gloss": "an international network of investigative reporters",
+    "glossary_slug": null
+  },
+  {
+    "term": "American Civil Liberties Union (ACLU)",
+    "gloss": "a United States civil liberties organization",
+    "glossary_slug": null
+  },
+  {
+    "term": "Project On Government Oversight (POGO)",
+    "gloss": "a United States non-profit that investigates the federal government",
+    "glossary_slug": null
+  },
+  {
+    "term": "American Federation of Government Employees (AFGE)",
+    "gloss": "a union of United States federal government employees",
+    "glossary_slug": null
+  }
+]

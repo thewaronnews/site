@@ -1,0 +1,525 @@
+[
+ {
+  "slug": "betsy-klein",
+  "name": "Betsy Klein",
+  "outlet": "cnn",
+  "role": "White House reporter",
+  "sources": [
+   "s004",
+   "s001"
+  ]
+ },
+ {
+  "slug": "akayla-gardner",
+  "name": "Akayla Gardner",
+  "outlet": "ms-now",
+  "role": "White House correspondent",
+  "sources": [
+   "s001",
+   "s004"
+  ]
+ },
+ {
+  "slug": "cheyenne-haslett",
+  "name": "Cheyenne Haslett",
+  "outlet": "politico",
+  "role": "White House reporter",
+  "sources": [
+   "s001",
+   "s004"
+  ]
+ },
+ {
+  "slug": "jim-acosta",
+  "name": "Jim Acosta",
+  "outlet": "cnn",
+  "role": "Chief White House correspondent (2018)",
+  "sources": [
+   "s046",
+   "s086",
+   "s088"
+  ]
+ },
+ {
+  "slug": "jimmy-lai",
+  "name": "Jimmy Lai",
+  "outlet": "apple-daily",
+  "role": "Founder and publisher",
+  "sources": [
+   "s084",
+   "s085"
+  ]
+ },
+ {
+  "slug": "mark-lowen",
+  "name": "Mark Lowen",
+  "outlet": "bbc",
+  "role": "Correspondent, deported from Turkiye while covering protests",
+  "sources": [
+   "s081"
+  ]
+ },
+ {
+  "slug": "ravi-nair",
+  "name": "Ravi Nair",
+  "outlet": "indian-express",
+  "role": "Investigative journalist",
+  "sources": [
+   "s057"
+  ]
+ },
+ {
+  "slug": "omar-jimenez",
+  "name": "Omar Jimenez",
+  "outlet": "cnn",
+  "role": "Reporter"
+ },
+ {
+  "slug": "leonel-mendez",
+  "name": "Leonel Mendez",
+  "outlet": "cnn",
+  "role": "Reporter"
+ },
+ {
+  "slug": "bill-kirkos",
+  "name": "Bill Kirkos",
+  "outlet": "cnn",
+  "role": "Reporter"
+ },
+ {
+  "slug": "linda-tirado",
+  "name": "Linda Tirado",
+  "outlet": null,
+  "role": "Reporter"
+ },
+ {
+  "slug": "james-okeefe",
+  "name": "James O'Keefe",
+  "outlet": "project-veritas",
+  "role": "Reporter"
+ },
+ {
+  "slug": "max-blumenthal",
+  "name": "Max Blumenthal",
+  "outlet": "the-grayzone",
+  "role": "Reporter"
+ },
+ {
+  "slug": "lauren-tomasi",
+  "name": "Lauren Tomasi",
+  "outlet": "nine-news-australia",
+  "role": "Reporter"
+ },
+ {
+  "slug": "bill-owens",
+  "name": "Bill Owens",
+  "outlet": "cbs-news",
+  "role": "Reporter"
+ },
+ {
+  "slug": "eric-meyer",
+  "name": "Eric Meyer",
+  "outlet": "marion-county-record",
+  "role": "Reporter"
+ },
+ {
+  "slug": "joan-meyer",
+  "name": "Joan Meyer",
+  "outlet": "marion-county-record",
+  "role": "Reporter"
+ },
+ {
+  "slug": "jose-ruben-zamora",
+  "name": "Jose Ruben Zamora",
+  "outlet": "el-periodico",
+  "role": "Reporter"
+ },
+ {
+  "slug": "chung-pui-kuen",
+  "name": "Chung Pui-kuen",
+  "outlet": "stand-news",
+  "role": "Reporter"
+ },
+ {
+  "slug": "patrick-lam",
+  "name": "Patrick Lam",
+  "outlet": "stand-news",
+  "role": "Reporter"
+ },
+ {
+  "slug": "annika-smethurst",
+  "name": "Annika Smethurst",
+  "outlet": null,
+  "role": "Reporter"
+ },
+ {
+  "slug": "carlos-fernando-chamorro",
+  "name": "Carlos Fernando Chamorro",
+  "outlet": "la-prensa",
+  "role": "Reporter"
+ },
+ {
+  "slug": "judit-presinszky",
+  "name": "Judit Presinszky",
+  "outlet": "telex",
+  "role": "Correspondent"
+ },
+ {
+  "slug": "nora-siteri",
+  "name": "Nora Siteri",
+  "outlet": "telex",
+  "role": "Camera operator"
+ },
+ {
+  "slug": "josh-chin",
+  "name": "Josh Chin",
+  "outlet": "wall-street-journal",
+  "role": "Deputy bureau chief"
+ },
+ {
+  "slug": "chao-deng",
+  "name": "Chao Deng",
+  "outlet": "wall-street-journal",
+  "role": "Reporter"
+ },
+ {
+  "slug": "philip-wen",
+  "name": "Philip Wen",
+  "outlet": "wall-street-journal",
+  "role": "Reporter"
+ },
+ {
+  "slug": "pia-ranada",
+  "name": "Pia Ranada",
+  "outlet": "rappler",
+  "role": "Reporter"
+ },
+ {
+  "slug": "maria-ressa",
+  "name": "Maria Ressa",
+  "outlet": "rappler",
+  "role": "Chief executive officer and executive editor"
+ },
+ {
+  "slug": "canan-coskun",
+  "name": "Canan Coskun",
+  "outlet": "",
+  "role": "Journalist"
+ },
+ {
+  "slug": "fatih-polat",
+  "name": "Fatih Polat",
+  "outlet": "evrensel",
+  "role": "Journalist"
+ },
+ {
+  "slug": "mehves-evin",
+  "name": "Mehves Evin",
+  "outlet": "",
+  "role": "Journalist"
+ },
+ {
+  "slug": "andras-arato",
+  "name": "Andras Arato",
+  "outlet": "klubradio",
+  "role": "Owner"
+ },
+ {
+  "slug": "ananth-baliga",
+  "name": "Ananth Baliga",
+  "outlet": "voice-of-democracy",
+  "role": "Associate editor"
+ },
+ {
+  "slug": "aluf-benn",
+  "name": "Aluf Benn",
+  "outlet": "haaretz",
+  "role": "Editor-in-chief"
+ },
+ {
+  "slug": "nora-younis",
+  "name": "Nora Younis",
+  "outlet": "al-manassa",
+  "role": "Editor"
+ },
+ {
+  "slug": "ivan-safronov",
+  "name": "Ivan Safronov",
+  "outlet": "kommersant",
+  "role": "Former military correspondent"
+ },
+ {
+  "slug": "pham-doan-trang",
+  "name": "Pham Doan Trang",
+  "outlet": "the-vietnamese",
+  "role": "Founding editor"
+ },
+ {
+  "slug": "niloofar-hamedi",
+  "name": "Niloofar Hamedi",
+  "outlet": "shargh",
+  "role": "Journalist"
+ },
+ {
+  "slug": "elahe-mohammadi",
+  "name": "Elahe Mohammadi",
+  "outlet": "ham-mihan",
+  "role": "Journalist"
+ },
+ {
+  "slug": "dong-yuyu",
+  "name": "Dong Yuyu",
+  "outlet": "guangming-daily",
+  "role": "Editor and columnist"
+ },
+ {
+  "slug": "laura-ling",
+  "name": "Laura Ling",
+  "outlet": "current-tv",
+  "role": "Journalist"
+ },
+ {
+  "slug": "euna-lee",
+  "name": "Euna Lee",
+  "outlet": "current-tv",
+  "role": "Journalist"
+ },
+ {
+  "slug": "sedef-kabas",
+  "name": "Sedef Kabas",
+  "outlet": "",
+  "role": "Journalist"
+ },
+ {
+  "slug": "somyot-prueksakasemsuk",
+  "name": "Somyot Prueksakasemsuk",
+  "outlet": "oy-magazine",
+  "role": "Magazine editor"
+ },
+ {
+  "slug": "jakrapob-penkair",
+  "name": "Jakrapob Penkair",
+  "outlet": "oy-magazine",
+  "role": "Former government spokesman"
+ },
+ {
+  "slug": "maria-ponomarenko",
+  "name": "Maria Ponomarenko",
+  "outlet": "rusnews",
+  "role": "Correspondent"
+ },
+ {
+  "slug": "andrzej-poczobut",
+  "name": "Andrzej Poczobut",
+  "outlet": "belsat-tv",
+  "role": "Correspondent for Gazeta Wyborcza and political commentator"
+ },
+ {
+  "slug": "szabolcs-panyi",
+  "name": "Szabolcs Panyi",
+  "outlet": "direkt36",
+  "role": "Investigative journalist"
+ },
+ {
+  "slug": "omar-radi",
+  "name": "Omar Radi",
+  "outlet": "le-desk",
+  "role": "Investigative journalist"
+ },
+ {
+  "slug": "imad-stitou",
+  "name": "Imad Stitou",
+  "outlet": "",
+  "role": "Journalist"
+ },
+ {
+  "slug": "omar-abdulaziz",
+  "name": "Omar Abdulaziz",
+  "outlet": "",
+  "role": "Dissident and associate of journalist Jamal Khashoggi"
+ },
+ {
+  "slug": "jamal-khashoggi",
+  "name": "Jamal Khashoggi",
+  "outlet": "washington-post",
+  "role": "Journalist"
+ },
+ {
+  "slug": "carmen-aristegui",
+  "name": "Carmen Aristegui",
+  "outlet": "aristegui-noticias",
+  "role": "Investigative journalist"
+ },
+ {
+  "slug": "carlos-loret-de-mola",
+  "name": "Carlos Loret de Mola",
+  "outlet": "",
+  "role": "Investigative journalist"
+ },
+ {
+  "slug": "cheung-kim-hung",
+  "name": "Cheung Kim Hung",
+  "outlet": "apple-daily",
+  "role": "Former chief executive"
+ },
+ {
+  "slug": "ryan-law-wai-kwong",
+  "name": "Ryan Law Wai-kwong",
+  "outlet": "apple-daily",
+  "role": "Former editor-in-chief"
+ },
+ {
+  "slug": "szabolcs-dull",
+  "name": "Szabolcs Dull",
+  "outlet": "index-hu",
+  "sources": [],
+  "role": "Editor-in-chief"
+ },
+ {
+  "slug": "sevgi-akarcesme",
+  "name": "Sevgi Akarcesme",
+  "outlet": "todays-zaman",
+  "sources": [],
+  "role": "Editor"
+ },
+ {
+  "slug": "celil-sagir",
+  "name": "Celil Sagir",
+  "outlet": "zaman",
+  "sources": [],
+  "role": "Journalist"
+ },
+ {
+  "slug": "tom-gardner",
+  "name": "Tom Gardner",
+  "outlet": "the-economist",
+  "sources": [],
+  "role": "Correspondent"
+ },
+ {
+  "slug": "simon-marks",
+  "name": "Simon Marks",
+  "outlet": "new-york-times",
+  "sources": [],
+  "role": "Correspondent"
+ },
+ {
+  "slug": "carl-david-goette-luciak",
+  "name": "Carl David Goette-Luciak",
+  "outlet": null,
+  "sources": [],
+  "role": "Freelance correspondent"
+ },
+ {
+  "slug": "ans-boersma",
+  "name": "Ans Boersma",
+  "outlet": null,
+  "sources": [],
+  "role": "Freelance journalist"
+ },
+ {
+  "slug": "aatish-taseer",
+  "name": "Aatish Taseer",
+  "outlet": "time-magazine",
+  "sources": [],
+  "role": "Writer and journalist"
+ },
+ {
+  "slug": "aung-marm-oo",
+  "name": "Aung Marm Oo",
+  "outlet": null,
+  "sources": [],
+  "role": "Editor"
+ },
+ {
+  "slug": "maya-misikir",
+  "name": "Maya Misikir",
+  "outlet": null,
+  "sources": [],
+  "role": "Journalist"
+ },
+ {
+  "slug": "mohammad-mosaed",
+  "name": "Mohammad Mosaed",
+  "outlet": null,
+  "sources": [],
+  "role": "Journalist"
+ },
+ {
+  "slug": "zhang-zhan",
+  "name": "Zhang Zhan",
+  "outlet": null,
+  "sources": [],
+  "role": "Citizen journalist"
+ },
+ {
+  "slug": "anastasia-sharkevich",
+  "name": "Anastasia Sharkevich",
+  "outlet": null,
+  "sources": [],
+  "role": "Journalist"
+ },
+ {
+  "slug": "evan-gershkovich",
+  "name": "Evan Gershkovich",
+  "outlet": "wall-street-journal",
+  "sources": [],
+  "role": "Correspondent"
+ },
+ {
+  "slug": "alsu-kurmasheva",
+  "name": "Alsu Kurmasheva",
+  "outlet": "radio-free-europe-radio-liberty",
+  "sources": [],
+  "role": "Editor"
+ },
+ {
+  "slug": "khadija-ismayilova",
+  "name": "Khadija Ismayilova",
+  "outlet": null,
+  "sources": [],
+  "role": "Investigative journalist"
+ },
+ {
+  "slug": "reynaldo-santos-jr",
+  "name": "Reynaldo Santos Jr.",
+  "outlet": "rappler",
+  "sources": [],
+  "role": "Researcher"
+ },
+ {
+  "slug": "dawit-isaac",
+  "name": "Dawit Isaac",
+  "outlet": "setit",
+  "sources": [],
+  "role": "Journalist and co-owner"
+ },
+ {
+  "slug": "daphne-caruana-galizia",
+  "name": "Daphne Caruana Galizia",
+  "outlet": null,
+  "sources": [],
+  "role": "Investigative journalist"
+ },
+ {
+  "slug": "azamat-omarov",
+  "name": "Azamat Omarov",
+  "outlet": null,
+  "sources": [],
+  "role": "Journalist"
+ },
+ {
+  "slug": "diana-okremova",
+  "name": "Diana Okremova",
+  "outlet": null,
+  "sources": [],
+  "role": "Journalist"
+ },
+ {
+  "slug": "aleh-hruzdzilovich",
+  "name": "Aleh Hruzdzilovich",
+  "outlet": "radio-free-europe-radio-liberty",
+  "sources": [],
+  "role": "Former correspondent"
+ }
+]

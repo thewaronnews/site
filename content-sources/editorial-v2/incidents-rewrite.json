@@ -1,0 +1,1534 @@
+[
+  {
+    "slug": "2026-white-house-bans-cnn-msnow-politico",
+    "title": "United States: White House hard-pass deactivations for CNN, MS NOW and Politico reporters, September 2026",
+    "summary": "On September 18, 2026, the president of the United States, Donald Trump, announced on Truth Social, a social media platform, and in the Oval Office that CNN, MS NOW and Politico would be banned from the White House, the president's office and residence in Washington, D.C. He described the outlets' coverage as \"FICTION and LIES.\" On September 19, 2026, the outlets' reporters were denied entry at the White House gates after their hard passes, the standing credentials that let reporters enter the White House press area without applying each day, were deactivated. The outlets sued on September 21, 2026, and the case is pending as of 2026-09-22.",
+    "what_happened": "On September 18, 2026, the president of the United States, Donald Trump, announced on Truth Social and during an appearance in the Oval Office, the president's office in the White House, that CNN, MS NOW and Politico would be banned from the White House. He cited accumulated coverage that he called \"FICTION and LIES.\"\n\nThe same day, the White House Correspondents' Association (WHCA), the organization of reporters who cover the president of the United States, then led by Jacqui Heinrich, said the Constitution's press protections \"do not depend on whether the president likes a news organization's coverage.\"\n\nOn September 19, 2026, the Secret Service, the United States federal agency responsible for protecting the president, turned away CNN's Betsy Klein, MS NOW's Akayla Gardner and Politico's Cheyenne Haslett at the White House gates. One of the reporters said she was told \"they had to take my badge because it was disabled.\"\n\nOn September 20, 2026, the other television networks in the White House press pool, the small rotating group of reporters who cover the president in spaces too small for the full press corps and share what they gather with other outlets, declined to fill CNN's rotating slot in solidarity, according to the Associated Press. News outlets then published explainers on how the White House press pool works.",
+    "stated_justification": "In his announcement on September 18, 2026, Trump described the outlets' coverage as \"FICTION and LIES.\" The same day he told a Bloomberg reporter, \"I dislike dishonest press, like you. I think you're terrible.\" The White House has not identified a specific story that prompted the decision (as of 2026-09-22).",
+    "effect_on_reporting": "Reporters from CNN, MS NOW and Politico can no longer enter the White House grounds with their hard passes, which were deactivated on September 19, 2026 (as of 2026-09-22). On September 20, 2026, the other networks in the White House press pool declined to fill CNN's rotating slot, so no replacement crew covered it for the shared pool feed that other outlets use.",
+    "status": "Status as of 2026-09-22: In effect. Challenged in Cable News Network, Inc. v. Trump, No. 1:26-cv-03287, in the United States District Court for the District of Columbia, the federal trial court in Washington, D.C. (filed 2026-09-21; pending; hearing scheduled for 2026-09-23).",
+    "what_we_dont_know": "The White House has not said which story or stories prompted the decision (as of 2026-09-22).",
+    "occurred_on": "2026-09-18",
+    "occurred_on_precision": "day",
+    "country": "US",
+    "jurisdiction": "United States, federal",
+    "level": "national",
+    "continent": "north-america",
+    "tactic_primary": "access_ban",
+    "tactics": [
+      "access_ban",
+      "credential_control"
+    ],
+    "leader_slug": "donald-trump",
+    "issue_of_the_day": null,
+    "outcome": "ongoing",
+    "outcome_on": "2026-09-21",
+    "outcome_note": "Cable News Network, Inc. v. Trump (D.D.C. No. 1:26-cv-03287) was filed on 2026-09-21 and is pending; a hearing is scheduled for 2026-09-23.",
+    "granularity": "granular",
+    "sources": [
+      "s001",
+      "s002",
+      "s003",
+      "s004",
+      "s005",
+      "s006",
+      "s007",
+      "s016",
+      "s111",
+      "s113"
+    ],
+    "claims": [
+      {
+        "field": "occurred_on",
+        "value": "2026-09-18",
+        "statement": "Trump announced via Truth Social and at an Oval Office appearance that CNN, MS NOW and Politico would be banned from the White House.",
+        "source_id": "s001",
+        "evidence_quote": "No, no, no, no. I dislike dishonest press, like you. I think you're terrible"
+      },
+      {
+        "field": "stated_justification",
+        "value": "\"FICTION and LIES\"",
+        "statement": "Trump described the outlets' coverage as \"FICTION and LIES\" as his stated reason for the ban.",
+        "source_id": "s001",
+        "evidence_quote": "FICTION and LIES"
+      },
+      {
+        "field": "effect_on_reporting",
+        "value": "Hard passes deactivated; reporters denied entry on 2026-09-19",
+        "statement": "CNN's, MS NOW's and Politico's White House hard passes were deactivated and their reporters turned away at the gates.",
+        "source_id": "s004",
+        "evidence_quote": "they said they weren't sure what was going on, but at the end of the day they had to take my badge because it was disabled."
+      },
+      {
+        "field": "status",
+        "value": "Lawsuit filed 2026-09-21; hearing reported for 2026-09-23",
+        "statement": "CNN, MS NOW and Politico filed suit against the White House and the President, seeking a declaration that the ban violates the Constitution and an injunction restoring access.",
+        "source_id": "s010",
+        "evidence_quote": "filing a lawsuit today to protect our First Amendment rights and defend the principle that the government does not decide what the press reports or publishes."
+      },
+      {
+        "field": "action",
+        "value": "WHCA statement, 2026-09-18",
+        "statement": "The White House Correspondents' Association said the Constitution's press protections apply regardless of the president's approval of coverage.",
+        "source_id": "s003",
+        "evidence_quote": "The Constitution protects the freedom of the press from government interference."
+      },
+      {
+        "field": "scope_of_action",
+        "value": "Networks decline replacement pool, 2026-09-20",
+        "statement": "Other television networks declined to put a replacement pool crew in CNN's place after CNN's access was revoked.",
+        "source_id": "s111",
+        "evidence_quote": "There will be no replacement pool put in place."
+      },
+      {
+        "field": "outlet_affected",
+        "value": "Hearing scheduled, 2026-09-23",
+        "statement": "A federal judge set an initial hearing for September 23, 2026 in the lawsuit CNN, MS NOW and Politico filed against Trump.",
+        "source_id": "s113",
+        "evidence_quote": "A federal judge set an initial court hearing for Wednesday, Sept. 23 in the lawsuit CNN, MS NOW and Politico filed against President Donald Trump"
+      }
+    ],
+    "editor_notes": [
+      "The WHCA quotation \"do not depend on whether the president likes a news organization's coverage\" is carried from the v1 text; its claim row (s003) quotes a different sentence. Add a claim row for it.",
+      "\"in solidarity\" follows the Associated Press headline (s111, \"stand with CNN\"); the claim row quotes \"There will be no replacement pool put in place.\""
+    ]
+  },
+  {
+    "slug": "2025-white-house-bars-ap-gulf-of-america",
+    "title": "United States: White House exclusion of the Associated Press from the Oval Office and Air Force One, February 2025",
+    "summary": "On February 16, 2025, the White House, the office of the president of the United States, began barring journalists from the Associated Press (AP), a United States news agency, from the Oval Office and Air Force One, the aircraft that carries the president. The exclusion followed AP's decision to keep using the name \"Gulf of Mexico\" after an executive order of the president, Donald Trump, renamed the body of water the \"Gulf of America\" for United States federal purposes. Trump told reporters, \"We're going to keep them out until such time as they agree that it's the Gulf of America,\" according to NPR. AP sued on February 21, 2025; as of 2026-09-22, a partial stay by a federal appeals court leaves AP excluded from the Oval Office and Air Force One.",
+    "what_happened": "On February 16, 2025, the White House began excluding Associated Press journalists from the Oval Office, the president's office, and from Air Force One, the president's aircraft. AP's style guide had continued to use the name \"Gulf of Mexico\" after an executive order, a written directive of the president of the United States, Donald Trump, renamed it the \"Gulf of America\" for United States federal purposes. AP said it would keep using the historical name while noting the new one.\n\nOn February 21, 2025, AP sued White House officials, including Taylor Budowich, the White House deputy chief of staff, in the United States District Court for the District of Columbia, the federal trial court in Washington, D.C. (Associated Press v. Budowich, No. 1:25-cv-00532). The complaint alleges \"First Amendment retaliation,\" a claim under the part of the United States Constitution that protects freedom of the press.\n\nOn February 25, 2025, a federal judge declined to order AP's access restored immediately while the case proceeded, according to Euronews. The case later produced a preliminary injunction, a partial stay by the D.C. Circuit, the federal appeals court for Washington, D.C., and a refusal by the full appeals court to rehear the case (see the case page).",
+    "stated_justification": "Trump told reporters in February 2025, \"We're going to keep them out until such time as they agree that it's the Gulf of America,\" according to NPR. The White House tied AP's access to its use of the name set by the executive order.",
+    "effect_on_reporting": "AP reporters and photographers lost access to the Oval Office and Air Force One, small spaces where the news agency had held a regular place in the rotating press pool that covers the president. Trump and his aides barred AP's White House reporters from \"dozens of events since February,\" including events limited to the pool, according to NPR.",
+    "status": "Status as of 2026-09-22: Partly in effect. Under a partial stay granted 2 to 1 by the D.C. Circuit on 2025-06-06, AP remains excluded from the Oval Office, Air Force One, Mar-a-Lago and the Cabinet Room and keeps access to the East Room. See Associated Press v. Budowich.",
+    "what_we_dont_know": "",
+    "occurred_on": "2025-02-16",
+    "occurred_on_precision": "day",
+    "country": "US",
+    "jurisdiction": "United States, federal",
+    "level": "national",
+    "continent": "north-america",
+    "tactic_primary": "access_ban",
+    "tactics": [
+      "access_ban"
+    ],
+    "leader_slug": "donald-trump",
+    "issue_of_the_day": "AP's continued use of the name \"Gulf of Mexico\" after an executive order of the president of the United States renamed the body of water the \"Gulf of America\" for federal purposes.",
+    "outcome": "ongoing",
+    "outcome_on": "2025-07-22",
+    "outcome_note": "The D.C. Circuit's partial stay of 2025-06-06 keeps AP out of the Oval Office, Air Force One, Mar-a-Lago and the Cabinet Room and admits it to the East Room; the full court denied rehearing en banc on 2025-07-22. The appeal is pending.",
+    "granularity": "granular",
+    "sources": [
+      "s019",
+      "s020",
+      "s021",
+      "s024",
+      "s025"
+    ],
+    "claims": [
+      {
+        "field": "occurred_on",
+        "value": "2025-02-16",
+        "statement": "The White House began barring AP from the Oval Office and Air Force One.",
+        "source_id": "s019",
+        "evidence_quote": "The Trump administration has indefinitely barred The Associated Press (AP) from the Oval Office and Air Force One after the news agency refused to use the new name “Gulf of America” for the Gulf of Mexico."
+      },
+      {
+        "field": "stated_justification",
+        "value": "AP's refusal to adopt \"Gulf of America\" styling",
+        "statement": "Access was conditioned on AP adopting the administration's preferred name for the Gulf of Mexico.",
+        "source_id": "s020",
+        "evidence_quote": "We're going to keep them out until such time as they agree that it's the Gulf of America."
+      },
+      {
+        "field": "effect_on_reporting",
+        "value": "AP excluded from Oval Office and Air Force One pool coverage",
+        "statement": "AP journalists lost access to two of the venues most central to day-to-day presidential coverage.",
+        "source_id": "s024",
+        "evidence_quote": "Trump and his aides have barred the news service's White House reporters from dozens of events since February, including events limited to the reporting pool"
+      },
+      {
+        "field": "status",
+        "value": "Partial stay in place since 2025-06-06",
+        "statement": "The D.C. Circuit's partial stay leaves the Oval Office, Air Force One, Mar-a-Lago and Cabinet Room off-limits to AP while preserving its East Room access.",
+        "source_id": "s025",
+        "evidence_quote": "On June 6, 2025, a panel of the U.S. Court of Appeals for the Circuit of the District of Columbia, composed of judges Cornelia Pillard, Gregory G. Katsas, and Neomi Rao, granted in part a stay pending appeal, in a 2-1 decision."
+      }
+    ],
+    "editor_notes": [
+      "Trump's quotation and its speaker come from s020 (NPR, 2025-02-21: \"On Tuesday, Trump told reporters\"); the existing claim row quotes the words without the speaker.",
+      "\"dozens of events since February\" is an exact fragment of the s024 claim quotation."
+    ]
+  },
+  {
+    "slug": "2025-pentagon-issues-new-press-credentialing-rules",
+    "title": "United States: Department of Defense press credential rules requiring approval before release of information, September 2025",
+    "summary": "On September 21, 2025, the United States Department of Defense, the federal department that provides the country's military forces, issued new credential rules for reporters at the Pentagon, its headquarters building, under the Secretary of Defense, Pete Hegseth. The rules require that information be approved for public release by an authorizing official \"before it is released, even if it is unclassified,\" and require accredited reporters to pledge not to solicit or publish such information without approval or lose their badges. The Pentagon called the rules \"an important step in preventing leaks that damage operational security and national security.\" A federal judge ruled against the rules in March and April 2026, and the department has appealed (as of 2026-09-22).",
+    "what_happened": "On September 21, 2025, the Department of Defense of the United States, under the Secretary of Defense, Pete Hegseth, issued press credential rules that require accredited reporters to sign a pledge not to solicit or publish unclassified but sensitive information without authorization from an appropriate Pentagon official. The rules also restrict reporters' movement inside the Pentagon, the department's headquarters, without an escort.\n\nHegseth said, \"The press is no longer allowed to roam the halls of a secure facility. Wear a badge and follow the rules,\" and added, \"or go home.\"\n\nMilitary Times and Defense News, two publications that cover the United States armed forces, said the policy \"threatens to punish reporters who ask legitimate questions in the course of their daily work.\" Most reporters with Pentagon credentials declined to sign and turned in their badges in October 2025 (see the October 2025 entry).",
+    "stated_justification": "The Department of Defense said the rules were \"an important step in preventing leaks that damage operational security and national security.\"",
+    "effect_on_reporting": "Reporters who declined to sign the pledge lost their Pentagon credentials and building access. Reporters who sign may not solicit or publish sensitive unclassified information unless a Pentagon official has approved its release.",
+    "status": "Status as of 2026-09-22: Partly in effect. On March 20, 2026, United States District Judge Paul Friedman ruled that the rules' credential-revocation provisions violated constitutional protections and ordered credentials restored for seven New York Times journalists. The department issued revised restrictions on March 23, 2026, which the Pentagon Press Association called \"a clear violation of the letter and spirit\" of the ruling. On April 9, 2026, Friedman wrote that the department \"simply cannot reinstate an unlawful policy under the guise of taking 'new' action,\" and the department appealed. Most major outlets work without Pentagon building credentials.",
+    "what_we_dont_know": "The Department of Defense has not published a list of what counts as \"sensitive but unclassified\" information under the rules (as of 2026-09-22).",
+    "occurred_on": "2025-09-21",
+    "occurred_on_precision": "day",
+    "country": "US",
+    "jurisdiction": "United States, federal",
+    "level": "national",
+    "continent": "north-america",
+    "tactic_primary": "credential_control",
+    "tactics": [
+      "credential_control",
+      "prior_restraint",
+      "access_ban"
+    ],
+    "leader_slug": "donald-trump",
+    "issue_of_the_day": null,
+    "outcome": "ongoing",
+    "outcome_on": "2026-04-09",
+    "outcome_note": "Judge Paul Friedman ruled against the credential-revocation provisions on 2026-03-20 and against the revised policy on 2026-04-09; the Department of Defense appealed.",
+    "granularity": "granular",
+    "sources": [
+      "s029",
+      "s030",
+      "s031",
+      "s103"
+    ],
+    "claims": [
+      {
+        "field": "occurred_on",
+        "value": "2025-09-21",
+        "statement": "The Pentagon issued the new press-credentialing rules.",
+        "source_id": "s029",
+        "evidence_quote": "Information must be approved for public release by an appropriate authorizing official before it is released, even if it is unclassified."
+      },
+      {
+        "field": "stated_justification",
+        "value": "Preventing leaks that damage operational and national security",
+        "statement": "The Pentagon framed the rules as a leak-prevention measure.",
+        "source_id": "s031",
+        "evidence_quote": "an important step in preventing leaks that damage operational security and national security"
+      },
+      {
+        "field": "effect_on_reporting",
+        "value": "Reporters required to sign a pledge or lose access",
+        "statement": "Reporters faced a choice between signing the pledge or forfeiting Pentagon press credentials.",
+        "source_id": "s031",
+        "evidence_quote": "The press is no longer allowed to roam the halls of a secure facility. Wear a badge and follow the rules — or go home."
+      },
+      {
+        "field": "status",
+        "value": "Rules struck down in part, revised, struck down again; Pentagon appealed",
+        "statement": "A federal judge ruled the credentialing rules violated constitutional protections in March 2026 and found the Pentagon's revised version was, in his words, \"an unlawful policy,\" again in April 2026; the Pentagon has appealed.",
+        "source_id": "s103",
+        "evidence_quote": "The department simply cannot reinstate an unlawful policy under the guise of taking 'new' action and expect the court to look the other way,"
+      }
+    ],
+    "editor_notes": [
+      "Hegseth's quotation is split around the dash in the source (s031) rather than retyped with \"--\"; the words are unchanged.",
+      "The status facts (2026-03-20 ruling, 2026-03-23 revision, Pentagon Press Association quotation) rest on s101, s102 and s103; only s103 is in this incident's source list. Add s101 and s102."
+    ]
+  },
+  {
+    "slug": "2025-pentagon-press-corps-forfeits-badges",
+    "title": "United States: News organizations turn in their Pentagon press credentials, October 2025",
+    "summary": "Beginning on October 15, 2025, reporters from at least 30 news organizations vacated the press workspace at the Pentagon, the headquarters of the United States Department of Defense, rather than sign the department's new credential pledge, with a deadline of October 17 to remove their belongings. They included ABC News, NBC News, CBS News, Fox News, CNN, the Associated Press, Reuters, Bloomberg News, The New York Times, The Washington Post, The Wall Street Journal, NPR and Politico. One America News Network said it would sign. As of 2026-09-22, most of these outlets cover the Pentagon from outside the building.",
+    "what_happened": "Beginning on October 15, 2025, reporters from at least 30 news organizations began vacating the press room at the Pentagon, the headquarters of the United States Department of Defense, removing equipment and furniture rather than sign the credential pledge the department issued on September 21, 2025. The deadline to remove belongings was October 17, 2025.\n\nThe outlets that declined included ABC News, NBC News, CBS News, Fox News, CNN, the Associated Press, Reuters, Bloomberg News, The New York Times, The Washington Post, The Wall Street Journal, NPR and Politico. One America News Network was reported as the only major outlet to accept the terms.\n\nMilitary Times and Defense News, two publications that cover the United States armed forces and were among the outlets that declined, said the policy \"threatens to punish reporters who ask legitimate questions in the course of their daily work.\"",
+    "stated_justification": "The Department of Defense gave no separate reason for requiring the pledge as a condition of the badge. It described the underlying rules as \"an important step in preventing leaks that damage operational security and national security.\"",
+    "effect_on_reporting": "Reporters from most major news organizations lost routine access to the Pentagon building and its press workspace, and cover the department from outside it (as of 2026-09-22).",
+    "status": "Status as of 2026-09-22: Partly in effect. The New York Times sued the Department of Defense on December 4, 2025. On March 20, 2026, United States District Judge Paul Friedman ruled that the credential-revocation provisions violated constitutional protections and ordered credentials restored for seven Times journalists. After the department issued revised restrictions, Friedman wrote on April 9, 2026 that it \"simply cannot reinstate an unlawful policy under the guise of taking 'new' action,\" and the department appealed. Most other outlets cover the Pentagon from outside the building.",
+    "what_we_dont_know": "",
+    "occurred_on": "2025-10-15",
+    "occurred_on_precision": "day",
+    "country": "US",
+    "jurisdiction": "United States, federal",
+    "level": "national",
+    "continent": "north-america",
+    "tactic_primary": "credential_control",
+    "tactics": [
+      "credential_control",
+      "access_ban"
+    ],
+    "leader_slug": "donald-trump",
+    "issue_of_the_day": null,
+    "outcome": "ongoing",
+    "outcome_on": "2026-04-09",
+    "outcome_note": "Credentials were ordered restored for seven New York Times journalists on 2026-03-20; the ruling against the revised policy on 2026-04-09 is on appeal. Most other outlets remain outside the building.",
+    "granularity": "granular",
+    "sources": [
+      "s030",
+      "s031"
+    ],
+    "claims": [
+      {
+        "field": "occurred_on",
+        "value": "2025-10-15",
+        "statement": "Reporters began vacating the Pentagon press workspace rather than sign the new rules, with a deadline of 2025-10-17 to remove belongings.",
+        "source_id": "s031",
+        "evidence_quote": "On October 15, reporters began vacating the press room at the Pentagon removing computer servers, furniture, television screens, soundproofing equipment and other items."
+      },
+      {
+        "field": "effect_on_reporting",
+        "value": "At least 30 outlets lost Pentagon building credentials",
+        "statement": "Nearly all major U.S. news organizations forfeited their Pentagon badges rather than sign the pledge.",
+        "source_id": "s031",
+        "evidence_quote": "This policy threatens to punish reporters who ask legitimate questions in the course of their daily work."
+      },
+      {
+        "field": "status",
+        "value": "Unresolved as of this writing",
+        "statement": "No mass reinstatement of Pentagon credentials has been reported.",
+        "source_id": "s031",
+        "evidence_quote": "The court imposed a permanent injunction, and ordered the restoration of press credentials and access for the New York Times journalists."
+      }
+    ],
+    "editor_notes": [
+      "The summary's \"One America News Network said it would sign\" follows s031 (\"One America News said that it would sign the agreement\"); the v1 wording (\"reported as the only major outlet to accept\") is kept in what_happened.",
+      "The status facts rest on s101 to s103, which are not in this incident's source list; the claim row for status quotes a different fact. Add them."
+    ]
+  },
+  {
+    "slug": "2025-whca-loses-control-of-press-pool",
+    "title": "United States: White House takes over selection of the presidential press pool, February 2025",
+    "summary": "On February 25, 2025, the White House announced that it would decide which journalists join the press pool, the small rotating group of reporters who cover the president of the United States in spaces such as the Oval Office and Air Force One and share what they gather with other outlets. The White House Correspondents' Association (WHCA), the organization of reporters who cover the president, said that for more than a century \"working journalists\" and \"not government officials\" had \"determined pool rotation procedures.\" As of 2026-09-22, the White House selects the pool, according to the Associated Press.",
+    "what_happened": "On February 25, 2025, the White House announced that it would select the journalists who join the limited-space press pool that covers the president of the United States in the Oval Office, on Air Force One and at other small venues. The White House Correspondents' Association (WHCA), the organization of reporters who cover the president, and its member outlets had managed the rotation for more than a century.\n\nThe WHCA president, Eugene Daniels, said the association had not been consulted and that the change \"suggests the government will choose the journalists who cover the president.\" The WHCA said it would continue to press for comprehensive access and full transparency.\n\nThe announcement came nine days after the White House began excluding the Associated Press from the Oval Office and Air Force One (see the February 2025 entry).",
+    "stated_justification": "The White House asserted its authority over access to spaces such as the Oval Office and Air Force One. It has not given a further reason for taking over pool selection (as of 2026-09-22).",
+    "effect_on_reporting": "The White House, rather than the working press corps, decides which outlets rotate into the pool that covers the president in small venues, and the pool has included outlets that were not part of the previous rotation (as of 2026-09-22).",
+    "status": "Status as of 2026-09-22: In effect. The White House \"now picks and chooses which members of the media make up the pool,\" according to the Associated Press.",
+    "what_we_dont_know": "",
+    "occurred_on": "2025-02-25",
+    "occurred_on_precision": "day",
+    "country": "US",
+    "jurisdiction": "United States, federal",
+    "level": "national",
+    "continent": "north-america",
+    "tactic_primary": "access_ban",
+    "tactics": [
+      "access_ban",
+      "credential_control"
+    ],
+    "leader_slug": "donald-trump",
+    "issue_of_the_day": null,
+    "outcome": "sustained",
+    "outcome_on": "2026-09-22",
+    "outcome_note": "The White House selects the pool as of 2026-09-22, according to the Associated Press (s104).",
+    "granularity": "granular",
+    "sources": [
+      "s075",
+      "s033",
+      "s104"
+    ],
+    "claims": [
+      {
+        "field": "occurred_on",
+        "value": "2025-02-25",
+        "statement": "The White House announced it would take over press pool selection.",
+        "source_id": "s075",
+        "evidence_quote": "This move tears at the independence of a free press in the United States. It suggests the government will choose the journalists who cover the president."
+      },
+      {
+        "field": "effect_on_reporting",
+        "value": "White House now selects pool rotation",
+        "statement": "Pool composition, previously set by the WHCA board, is now set by the White House.",
+        "source_id": "s075",
+        "evidence_quote": "for over a century, working journalists—not government officials—have determined pool rotation procedures"
+      },
+      {
+        "field": "status",
+        "value": "Ongoing as of 2026-09-22",
+        "statement": "The change in pool control has not been reversed; the White House continued to select the pool as of September 2026.",
+        "source_id": "s104",
+        "evidence_quote": "Last year, the Trump White House upended a decades-long tradition of an independent association of journalists selecting members of the pool. The White House now picks and chooses which members of the media make up the pool."
+      }
+    ],
+    "editor_notes": [
+      "The WHCA quotation contains an em dash in the source (s075); it is quoted as three fragments around the dash, words unchanged.",
+      "Cut from v1: \"widely described as connected to\" the AP litigation (vague sourcing) and \"conservative and partisan\" (characterization without a named source). Replaced by the dated sequence of the two events."
+    ]
+  },
+  {
+    "slug": "2025-fcc-pressure-precedes-kimmel-suspension",
+    "title": "United States: Federal Communications Commission chairman's remarks and the suspension of Jimmy Kimmel Live!, September 2025",
+    "summary": "On September 17, 2025, the chairman of the Federal Communications Commission (FCC), the United States regulator of broadcasting, Brendan Carr, said broadcasters could \"do this the easy way or the hard way\" over remarks by the television host Jimmy Kimmel, and warned of \"additional work for the FCC ahead.\" Within hours, the station owners Nexstar and Sinclair said they would pull Jimmy Kimmel Live! from their stations, and ABC, the network that airs it, did the same, according to NPR. ABC announced that the show would return on September 23, 2025, according to Al Jazeera.",
+    "what_happened": "On September 17, 2025, the chairman of the Federal Communications Commission (FCC), the United States regulator that licenses radio and television stations, Brendan Carr, spoke publicly about broadcasters that carried Jimmy Kimmel Live! Kimmel had spoken on air about speculation by some of Donald Trump's supporters over the motives of the person who killed Charlie Kirk, according to NPR.\n\nCarr said, \"We can do this the easy way or the hard way. These companies can find ways to change conduct to take action on Kimmel or, you know, there's going to be additional work for the FCC ahead.\" NPR reported that the show was pulled \"hours after the U.S. government threatened to cancel broadcasting licenses.\"\n\nNexstar and Sinclair, companies that own many local television stations affiliated with ABC, announced they would pull the show indefinitely. ABC, the network that airs it, then did the same, according to NPR.",
+    "stated_justification": "Carr said, \"We can do this the easy way or the hard way. These companies can find ways to change conduct to take action on Kimmel or, you know, there's going to be additional work for the FCC ahead.\"",
+    "effect_on_reporting": "Jimmy Kimmel Live! went off the air on ABC and on stations owned by Nexstar and Sinclair from September 17, 2025, until ABC returned it to its schedule after \"a weeklong impasse,\" according to Al Jazeera.",
+    "status": "Status as of 2026-09-22: Ended. ABC announced that Jimmy Kimmel Live! would return on September 23, 2025, according to Al Jazeera.",
+    "what_we_dont_know": "The FCC, ABC, Nexstar and Sinclair have not made public any private communications between them about the suspension (as of 2026-09-22).",
+    "occurred_on": "2025-09-17",
+    "occurred_on_precision": "day",
+    "country": "US",
+    "jurisdiction": "United States, federal",
+    "level": "national",
+    "continent": "north-america",
+    "tactic_primary": "funding_and_ownership_pressure",
+    "tactics": [
+      "funding_and_ownership_pressure",
+      "outlet_licensing"
+    ],
+    "leader_slug": "donald-trump",
+    "issue_of_the_day": "Jimmy Kimmel's on-air remarks about speculation over the motives of the person who killed Charlie Kirk, according to NPR.",
+    "outcome": "reversed",
+    "outcome_on": "2025-09-23",
+    "outcome_note": "ABC announced the show's return for 2025-09-23 after about a week off the air, according to Al Jazeera (s112).",
+    "granularity": "granular",
+    "sources": [
+      "s028",
+      "s112"
+    ],
+    "claims": [
+      {
+        "field": "occurred_on",
+        "value": "2025-09-17",
+        "statement": "ABC suspended Jimmy Kimmel Live! the same day as Carr's remarks.",
+        "source_id": "s028",
+        "evidence_quote": "Kimmel's late-night show was pulled from the air on September 17 hours after the U.S. government threatened to cancel broadcasting licenses"
+      },
+      {
+        "field": "stated_justification",
+        "value": "Threat of FCC \"additional work\" for broadcasters",
+        "statement": "Carr framed the choice for broadcasters as cooperating on Kimmel or facing further FCC scrutiny.",
+        "source_id": "s028",
+        "evidence_quote": "We can do this the easy way or the hard way. These companies can find ways to change conduct to take action on Kimmel or, you know, there's going to be additional work for the FCC ahead."
+      },
+      {
+        "field": "effect_on_reporting",
+        "value": "Show suspended by ABC, Nexstar and Sinclair",
+        "statement": "ABC and two large affiliate groups pulled or preempted the program within hours of Carr's remarks.",
+        "source_id": "s028",
+        "evidence_quote": "Nexstar and Sinclair Broadcast Group...announced they would pull Kimmel's show indefinitely. Then, so did ABC."
+      },
+      {
+        "field": "status",
+        "value": "Show later reinstated on ABC",
+        "statement": "Jimmy Kimmel Live! returned to ABC's schedule after the suspension.",
+        "source_id": "s112",
+        "evidence_quote": "Kimmel's show is set to return on Tuesday night, after a weeklong impasse"
+      }
+    ],
+    "editor_notes": [
+      "Order of events follows the claim quotation (s028: Nexstar and Sinclair announced first, \"Then, so did ABC\"); v1 text had ABC first.",
+      "Cut from v1: commentators' and some FCC commissioners' characterizations, and \"widely cited\" as a precedent; neither names a source. Restore only with named, sourced quotations.",
+      "The issue-of-the-day wording comes from s028 (\"Kimmel's remarks over speculation by some of the president's supporters about the ideological motivations of the murderer of Charlie Kirk\"); no claim row yet."
+    ]
+  },
+  {
+    "slug": "2025-paramount-cbs-settle-60-minutes-suit",
+    "title": "United States: Paramount settlement of Donald Trump's lawsuit over a 60 Minutes interview, July 2025",
+    "summary": "On July 1, 2025, Paramount, the parent company of the United States broadcaster CBS News, announced that it would settle for US$16 million a lawsuit brought by Donald Trump, the president of the United States, over how the CBS program 60 Minutes edited a 2024 interview with Kamala Harris, then vice-president. The money goes to Trump's future presidential library and the plaintiffs' fees and costs, and 60 Minutes will release transcripts of future interviews with presidential candidates, \"subject to redactions as required for legal or national security concerns.\" Paramount \"has maintained that the lawsuit was completely without merit,\" according to CBS News.",
+    "what_happened": "Donald Trump sued CBS News' parent company, Paramount, over 60 Minutes' editing of a 2024 interview with Kamala Harris, then vice-president of the United States. The lawsuit alleged that the network aired two differently edited excerpts of the same answer, on Face the Nation and on 60 Minutes, in a deceptive way. Ronny Jackson was a co-plaintiff.\n\nOn July 1, 2025, Paramount announced a US$16 million settlement, reached with a mediator. The money goes to Trump's future presidential library and the plaintiffs' fees and costs rather than to Trump or Jackson personally. Paramount said the lawsuit was without merit and that the editing followed standard practice.\n\nUnder the settlement, 60 Minutes will release transcripts of interviews with presidential candidates, subject to redactions for legal or national security reasons.",
+    "stated_justification": "Trump's lawsuit alleged that CBS aired two differently edited excerpts of the same answer from the Harris interview in a deceptive way. Paramount \"has maintained that the lawsuit was completely without merit,\" according to CBS News.",
+    "effect_on_reporting": "Under the settlement announced on July 1, 2025, 60 Minutes will release transcripts of its interviews with presidential candidates, \"subject to redactions as required for legal or national security concerns.\"",
+    "status": "Status as of 2026-09-22: Settled. The lawsuit ended with the settlement announced on July 1, 2025.",
+    "what_we_dont_know": "Paramount has not said whether its pending merger with Skydance Media, which awaited approval from United States regulators, bore on its decision to settle (as of 2026-09-22).",
+    "occurred_on": "2025-07-01",
+    "occurred_on_precision": "day",
+    "country": "US",
+    "jurisdiction": "United States, federal",
+    "level": "national",
+    "continent": "north-america",
+    "tactic_primary": "lawsuits_against_press",
+    "tactics": [
+      "lawsuits_against_press"
+    ],
+    "leader_slug": "donald-trump",
+    "issue_of_the_day": "60 Minutes' editing of a 2024 interview with Kamala Harris, then vice-president of the United States.",
+    "outcome": "sustained",
+    "outcome_on": "2025-07-01",
+    "outcome_note": "Settled on 2025-07-01: US$16 million to Trump's future presidential library and the plaintiffs' fees and costs; 60 Minutes to release transcripts of presidential-candidate interviews. The outcome enum has no value for a settlement; \"sustained\" records that the settlement terms stand.",
+    "granularity": "granular",
+    "sources": [
+      "s082"
+    ],
+    "claims": [
+      {
+        "field": "occurred_on",
+        "value": "2025-07-01",
+        "statement": "Paramount announced the $16 million settlement.",
+        "source_id": "s082",
+        "evidence_quote": "Paramount will settle President Trump's lawsuit over a \"60 Minutes\" interview with Kamala Harris for $16 million, the company announced late Tuesday."
+      },
+      {
+        "field": "stated_justification",
+        "value": "Not stated in the sources reviewed",
+        "statement": "Paramount maintained the underlying lawsuit was without merit rather than conceding to a stated justification.",
+        "source_id": "s082",
+        "evidence_quote": "has maintained that the lawsuit was completely without merit"
+      },
+      {
+        "field": "effect_on_reporting",
+        "value": "60 Minutes to release presidential-candidate interview transcripts",
+        "statement": "The settlement obligates 60 Minutes to publish transcripts of future presidential-candidate interviews, subject to redactions.",
+        "source_id": "s082",
+        "evidence_quote": "Paramount also agreed that \"60 Minutes\" will release transcripts of interviews with presidential candidates in the future, \"subject to redactions as required for legal or national security concerns,\" the statement said."
+      },
+      {
+        "field": "status",
+        "value": "Settled 2025-07-01",
+        "statement": "The lawsuit concluded with the $16 million settlement.",
+        "source_id": "s082",
+        "evidence_quote": "CBS News' parent company worked with a mediator to resolve the lawsuit. Under the agreement, $16 million will be allocated to Mr. Trump's future presidential library and the plaintiffs' fees and costs."
+      }
+    ],
+    "editor_notes": [
+      "Cut from v1: \"press-freedom groups said\" the pending merger created settlement pressure (no named group). The merger fact is kept in what_we_dont_know; it needs a claim row and source.",
+      "Trump filed the suit before taking office in 2025; the record does not state the filing date. Add it so the entry shows whether he sued as a candidate or as president."
+    ]
+  },
+  {
+    "slug": "2025-trump-order-ends-cpb-funding-npr-pbs",
+    "title": "United States: Executive Order 14290 directing an end to federal funding for NPR and PBS, May 2025",
+    "summary": "On May 1, 2025, the president of the United States, Donald Trump, signed Executive Order 14290, \"Ending Taxpayer Subsidization of Biased Media.\" It directs the Corporation for Public Broadcasting (CPB), a private non-profit corporation created by the United States Congress in 1967 to distribute federal money to public radio and television, and federal agencies to stop funding NPR and PBS, the country's non-profit public radio and television networks. The order says public funding for news is \"not only outdated and unnecessary but corrosive to the appearance of journalistic independence.\" NPR and PBS said the president cannot cut funding that Congress has appropriated to CPB.",
+    "what_happened": "On May 1, 2025, the president of the United States, Donald Trump, signed Executive Order 14290, titled \"Ending Taxpayer Subsidization of Biased Media.\" An executive order is a written directive through which the president manages the federal government. The order directs the Corporation for Public Broadcasting (CPB) and federal agencies to end direct and indirect funding of NPR and PBS. It says the two networks violate the requirement of balanced coverage in the Public Broadcasting Act of 1967, the United States law that created CPB.\n\nNPR and PBS said CPB is a private, congressionally chartered non-profit and that decisions on federal funding rest with Congress, the national legislature, not with the president. Both said they would contest the order rather than comply voluntarily.\n\nLater in 2025, Congress took separate action on public broadcasting funds, including moves to take back money it had already appropriated to CPB.",
+    "stated_justification": "The order says public funding for news programming is \"not only outdated and unnecessary but corrosive to the appearance of journalistic independence.\" The accompanying White House fact sheet said, \"Neither entity presents a fair, accurate or unbiased portrayal of current events to tax-paying citizens.\"",
+    "effect_on_reporting": "The order directs CPB and federal agencies to stop funding NPR and PBS, whose member stations include smaller rural and tribal stations that rely most heavily on CPB grants for their operating budgets.",
+    "status": "Status as of 2026-09-22: In effect. NPR and PBS say the order is not self-executing and have contested it; disputes over CPB funding continued through 2025 through separate action by Congress.",
+    "what_we_dont_know": "The sources cited do not state the order's effect in dollars on individual member stations or the outcome of NPR's and PBS's legal response (as of 2026-09-22).",
+    "occurred_on": "2025-05-01",
+    "occurred_on_precision": "day",
+    "country": "US",
+    "jurisdiction": "United States, federal",
+    "level": "national",
+    "continent": "north-america",
+    "tactic_primary": "funding_and_ownership_pressure",
+    "tactics": [
+      "funding_and_ownership_pressure"
+    ],
+    "leader_slug": "donald-trump",
+    "issue_of_the_day": null,
+    "outcome": "unknown",
+    "outcome_on": null,
+    "outcome_note": "No court ruling on Executive Order 14290 and no final funding figure appears in the sources cited (as of 2026-09-22).",
+    "granularity": "granular",
+    "sources": [
+      "s032",
+      "s080",
+      "s083"
+    ],
+    "claims": [
+      {
+        "field": "occurred_on",
+        "value": "2025-05-01",
+        "statement": "Trump signed Executive Order 14290.",
+        "source_id": "s080",
+        "evidence_quote": "Executive Order 14290, titled \"Ending Taxpayer Subsidization of Biased Media\", is an executive order signed by U.S. president Donald Trump on May 1, 2025"
+      },
+      {
+        "field": "stated_justification",
+        "value": "Order alleges biased coverage by NPR and PBS",
+        "statement": "The order and White House fact sheet said funding was \"corrosive to the appearance of journalistic independence\" and that NPR and PBS present coverage that is not \"fair, accurate or unbiased.\"",
+        "source_id": "s080",
+        "evidence_quote": "not only outdated and unnecessary but corrosive to the appearance of journalistic independence"
+      },
+      {
+        "field": "effect_on_reporting",
+        "value": "CPB funding to NPR and PBS targeted for elimination",
+        "statement": "The order directs agencies and CPB to stop funding NPR and PBS.",
+        "source_id": "s083",
+        "evidence_quote": "Neither entity presents a fair, accurate or unbiased portrayal of current events to tax-paying citizens"
+      },
+      {
+        "field": "status",
+        "value": "Contested by NPR and PBS",
+        "statement": "NPR and PBS said the president cannot unilaterally cut CPB's congressionally appropriated funding.",
+        "source_id": "s083",
+        "evidence_quote": "CPB is not a federal executive agency subject to the President's authority. Congress directly authorized and funded CPB to be a private nonprofit corporation wholly independent of the federal government."
+      }
+    ],
+    "editor_notes": [
+      "Cut from v1: \"compounding the effect of the executive order on member-station budgets nationwide\" (unsourced characterization).",
+      "The date of Congress's clawback is not established (seed-notes item 3). The claim row for occurred_on cites Wikipedia (s080, kind \"other\"); the brief does not accept it as evidence. Replace with the Federal Register text of the order."
+    ]
+  },
+  {
+    "slug": "2025-usagm-moves-to-shut-down-voice-of-america",
+    "title": "United States: U.S. Agency for Global Media action to shut down Voice of America operations, March 2025",
+    "summary": "Beginning on March 15, 2025, the U.S. Agency for Global Media (USAGM), the United States federal agency that oversees the government's international broadcasters, placed most of its staff on paid administrative leave and moved to shut down the operations of Voice of America (VOA), the United States government's international broadcaster. Kari Lake, a senior advisor at USAGM, carried out the action under an executive order of the president of the United States, Donald Trump, to reduce the federal bureaucracy. VOA journalists sued on March 21, 2025, and on March 28, 2025, a federal judge issued a temporary restraining order, a short-term order made before a full hearing, that barred the agency from reducing its workforce.",
+    "what_happened": "In March 2025, the president of the United States, Donald Trump, signed an executive order directing federal agencies to reduce their workforce. Kari Lake, installed as a senior advisor at the U.S. Agency for Global Media (USAGM), the federal agency that oversees Voice of America (VOA), moved to shut down VOA's operations. The agency cancelled leases and placed nearly all VOA staff on administrative leave beginning on March 15, 2025.\n\nOn March 21, 2025, VOA and USAGM journalists, represented in part by the American Federation of Government Employees (AFGE), a union of United States federal employees, sued the Trump administration and Lake. They argued that the shutdown violated the law that establishes VOA's editorial independence.\n\nOn March 28, 2025, a federal judge issued a temporary restraining order requiring the agency to restore operations, in Widakuswara v. Lake. Further staff cuts and litigation continued into 2026, including a March 2026 order returning about 1,000 VOA staff to work.",
+    "stated_justification": "USAGM said it was complying with the executive order to \"reduce the federal bureaucracy\" and cutting costs, including by cancelling what it called an \"obscenely expensive 15-year lease.\"",
+    "effect_on_reporting": "VOA broadcasts to audiences in countries including Iran, China and Russia were interrupted, and hundreds of journalists were placed on leave or laid off.",
+    "status": "Status as of 2026-09-22: Partly in effect. Litigation over VOA's staffing and operations continued into 2026, with courts repeatedly ordering the agency to restore staff and functions.",
+    "what_we_dont_know": "The sources cited do not state the final outcome of the lawsuit or USAGM's long-term staffing plan for VOA (as of 2026-09-22).",
+    "occurred_on": "2025-03-15",
+    "occurred_on_precision": "day",
+    "country": "US",
+    "jurisdiction": "United States, federal",
+    "level": "national",
+    "continent": "north-america",
+    "tactic_primary": "funding_and_ownership_pressure",
+    "tactics": [
+      "funding_and_ownership_pressure"
+    ],
+    "leader_slug": "donald-trump",
+    "issue_of_the_day": null,
+    "outcome": "ongoing",
+    "outcome_on": "2025-03-28",
+    "outcome_note": "A temporary restraining order of 2025-03-28 barred USAGM from reducing its workforce; litigation continued into 2026.",
+    "granularity": "granular",
+    "sources": [
+      "s022",
+      "s023",
+      "s106",
+      "s107",
+      "s108"
+    ],
+    "claims": [
+      {
+        "field": "occurred_on",
+        "value": "2025-03-15",
+        "statement": "USAGM began winding down VOA operations and placing staff on leave.",
+        "source_id": "s022",
+        "evidence_quote": "Most USAGM staff affected by this action will be placed on paid-administrative leave beginning Saturday, March 15, 2025, and remain on leave until further notice."
+      },
+      {
+        "field": "stated_justification",
+        "value": "Reducing the federal bureaucracy",
+        "statement": "USAGM said the actions complied with a presidential executive order to shrink the federal bureaucracy.",
+        "source_id": "s022",
+        "evidence_quote": "Obscene over-spending including a nearly quarter-of-a-million-dollar lease for a Pennsylvania Avenue high-rise that has no broadcasting facilities to meet the needs of the agency"
+      },
+      {
+        "field": "effect_on_reporting",
+        "value": "VOA broadcasts disrupted; staff placed on leave",
+        "statement": "VOA's programming to audiences abroad was interrupted as most staff were placed on administrative leave.",
+        "source_id": "s023",
+        "evidence_quote": "today's action will leave Voice of America unable to carry out its vital mission. That mission is especially critical today, when America's adversaries, like Iran, China, and Russia, are sinking billions of dollars into creating false narratives to discredit the United States."
+      },
+      {
+        "field": "status",
+        "value": "Court ordered operations restored, 2025-03-22",
+        "statement": "A federal judge invalidated the shutdown attempt and ordered VOA operations restored pending litigation.",
+        "source_id": "s023",
+        "evidence_quote": "temporarily enjoined defendants from taking actions to reduce USAGM's workforce (whether employees, contractors, or grantees)"
+      }
+    ],
+    "editor_notes": [
+      "The March 2026 order returning about 1,000 VOA staff is carried from v1 but no listed source (s022, s023, s106, s107, s108; all 2025) supports it. Add a 2026 source or cut.",
+      "v1 said VOA serves \"countries with restricted domestic press\"; cut as a characterization. The country list comes from the s023 claim quotation (AFGE).",
+      "The quotations \"reduce the federal bureaucracy\" and \"obscenely expensive 15-year lease\" are carried from v1; the claim row quotes different USAGM words. Match them to s106."
+    ]
+  },
+  {
+    "slug": "2025-doj-rescinds-media-subpoena-guidelines",
+    "title": "United States: Department of Justice rescission of rules limiting subpoenas of journalists, April 2025",
+    "summary": "On April 25, 2025, the Attorney General of the United States, Pam Bondi, head of the Department of Justice, the federal department that prosecutes federal crimes, rescinded rules adopted in 2021 and 2022 under her predecessor, Merrick Garland, that barred prosecutors from seeking reporters' records or testimony to identify the sources of leaks. Bondi's memo said leaks of sensitive information to the media undermine the department's ability \"to uphold the rule of law, protect civil rights, and keep America safe.\" The department returned to a test that weighs law enforcement interests against press freedom, according to the Reporters Committee for Freedom of the Press, a United States non-profit that provides legal help to journalists.",
+    "what_happened": "On April 25, 2025, the Attorney General of the United States, Pam Bondi, issued a memo rescinding Department of Justice rules, adopted in a 2021 memo and a 2022 rewrite of the department's media guidelines under Attorney General Merrick Garland, that set a firm rule against subpoenaing journalists' records or compelling their testimony to identify the sources of unauthorized leaks. A subpoena is a legal order that compels a person to testify or hand over records.\n\nThe rescission returned the department to a pre-2022 balancing test that weighs law enforcement interests against press freedom. The earlier rules had been adopted after it became known that the Department of Justice, during Trump's first term as president and later under President Joe Biden, had secretly obtained reporters' phone and email records.\n\nThe Reporters Committee for Freedom of the Press, a United States non-profit that provides legal help to journalists, said leak investigations \"chill newsgathering and reporting in the public interest.\"",
+    "stated_justification": "A Department of Justice memo said, \"Federal government employees intentionally leaking sensitive information to the media undermines the ability of the Department of Justice to uphold the rule of law, protect civil rights, and keep America safe.\"",
+    "effect_on_reporting": "Journalists who cover national security and law enforcement in the United States can again be subpoenaed for records or compelled to testify in leak investigations, which the 2021 and 2022 rules had been written to prevent.",
+    "status": "Status as of 2026-09-22: In effect. The sources cited report no restoration of the 2021 and 2022 rules.",
+    "what_we_dont_know": "The sources cited do not state whether the Department of Justice has subpoenaed a journalist under the restored balancing test (as of 2026-09-22).",
+    "occurred_on": "2025-04-25",
+    "occurred_on_precision": "day",
+    "country": "US",
+    "jurisdiction": "United States, federal",
+    "level": "national",
+    "continent": "north-america",
+    "tactic_primary": "surveillance_and_subpoenas",
+    "tactics": [
+      "surveillance_and_subpoenas"
+    ],
+    "leader_slug": "donald-trump",
+    "issue_of_the_day": null,
+    "outcome": "sustained",
+    "outcome_on": "2025-04-25",
+    "outcome_note": "In effect since 2025-04-25; the sources cited report no restoration of the earlier rules (as of 2026-09-22).",
+    "granularity": "granular",
+    "sources": [
+      "s027"
+    ],
+    "claims": [
+      {
+        "field": "occurred_on",
+        "value": "2025-04-25",
+        "statement": "Attorney General Bondi rescinded the Biden-era media guidelines.",
+        "source_id": "s027",
+        "evidence_quote": "On April 25, Attorney General Pam Bondi issued a memorandum to all U.S. Department of Justice employees titled '[Updated Policy Regarding Obtaining Information From, or Records of, Members of the News Media]"
+      },
+      {
+        "field": "stated_justification",
+        "value": "Leaks undermine DOJ's ability to enforce the law and protect national security",
+        "statement": "A DOJ memo framed the rescission as necessary to combat leaks.",
+        "source_id": "s027",
+        "evidence_quote": "Federal government employees intentionally leaking sensitive information to the media undermines the ability of the Department of Justice to uphold the rule of law, protect civil rights, and keep America safe."
+      },
+      {
+        "field": "effect_on_reporting",
+        "value": "Reporters again subject to subpoenas/compelled testimony in leak probes",
+        "statement": "The rescission reopened the door to compelling journalists' testimony and records in leak investigations.",
+        "source_id": "s027",
+        "evidence_quote": "By their nature, leak investigations chill newsgathering and reporting in the public interest."
+      },
+      {
+        "field": "status",
+        "value": "In effect",
+        "statement": "The rescission remains in force as of this writing.",
+        "source_id": "s027",
+        "evidence_quote": "The text of the revised regulation confirms that Bondi has rescinded the reforms implemented by former Attorney General Merrick Garland in a 2021 memo and the 2022 rewrite of the 50.10 guidelines."
+      }
+    ],
+    "editor_notes": [
+      "\"Biden-era guidelines\" (v1) replaced by the claim quotation's own description (Garland's 2021 memo and the 2022 rewrite).",
+      "Cut from v1: the earlier rules \"had been credited by press-freedom groups with sharply reducing such seizures\" (no named group).",
+      "Only one source (s027, RCFP analysis). The inclusion threshold needs the memo itself or a second independent report."
+    ]
+  },
+  {
+    "slug": "2018-white-house-revokes-acosta-press-pass",
+    "title": "United States: White House suspension of CNN correspondent Jim Acosta's hard pass, November 2018",
+    "summary": "On November 7, 2018, the White House suspended the hard pass of CNN's White House correspondent, Jim Acosta, after what Gulf News called a \"heated confrontation\" between Acosta and the president of the United States, Donald Trump, at a news conference after the country's midterm elections. A hard pass is the standing credential that lets a reporter enter the White House press area without applying each day. On November 16, 2018, a federal judge granted CNN a temporary restraining order requiring the pass to be reinstated, and the White House restored it on November 19, 2018, after which CNN dropped its lawsuit.",
+    "what_happened": "On November 7, 2018, after an exchange between CNN correspondent Jim Acosta and the president of the United States, Donald Trump, at a news conference following the midterm elections, the White House revoked Acosta's hard pass, the credential that gave him routine access to the White House grounds.\n\nCNN sued. On November 16, 2018, Judge Timothy J. Kelly of the United States District Court for the District of Columbia, the federal trial court in Washington, D.C., granted a temporary restraining order, a short-term order made before a full hearing, requiring that the pass be reinstated. He applied the due process framework of Sherrill v. Knight, a 1977 appeals court decision that a White House press pass may not be denied without notice, a chance to respond and written reasons.\n\nThe White House restored Acosta's pass on November 19, 2018, and CNN dropped its suit. The White House then issued written rules for reporters' conduct when asking questions at news conferences.",
+    "stated_justification": "The White House said Acosta had placed his hands on \"a young woman just trying to do her job as a White House intern\" when she tried to take the microphone from him. CNN disputed that account.",
+    "effect_on_reporting": "Acosta could not enter the White House grounds with his hard pass from November 7 to November 19, 2018. After the case, the White House issued its first written rules for reporters' conduct at news conferences.",
+    "status": "Status as of 2026-09-22: Ended. The pass was restored on November 19, 2018, and CNN dropped its lawsuit, Cable News Network, Inc. v. Trump, No. 1:18-cv-02610 (D.D.C.).",
+    "what_we_dont_know": "",
+    "occurred_on": "2018-11-07",
+    "occurred_on_precision": "day",
+    "country": "US",
+    "jurisdiction": "United States, federal",
+    "level": "national",
+    "continent": "north-america",
+    "tactic_primary": "credential_control",
+    "tactics": [
+      "credential_control",
+      "access_ban"
+    ],
+    "leader_slug": "donald-trump",
+    "issue_of_the_day": "An exchange between Acosta and Trump at a White House news conference on November 7, 2018, after the United States midterm elections.",
+    "outcome": "reversed",
+    "outcome_on": "2018-11-19",
+    "outcome_note": "A temporary restraining order of 2018-11-16 required reinstatement; the White House restored the pass on 2018-11-19 and CNN dropped the suit.",
+    "granularity": "anchor",
+    "sources": [
+      "s046",
+      "s047",
+      "s048",
+      "s086",
+      "s087",
+      "s088",
+      "s109",
+      "s110"
+    ],
+    "claims": [
+      {
+        "field": "effect_on_reporting",
+        "value": "Acosta lost White House access for about ten days",
+        "statement": "Acosta could not access the White House grounds under his usual credential until the pass was restored.",
+        "source_id": "s048",
+        "evidence_quote": "your hard pass is restored,"
+      },
+      {
+        "field": "status",
+        "value": "Pass restored 2018-11-19; suit dropped",
+        "statement": "The White House restored Acosta's pass and CNN dropped its lawsuit.",
+        "source_id": "s048",
+        "evidence_quote": "lawsuit is no longer necessary"
+      },
+      {
+        "field": "occurred_on",
+        "value": "2018-11-07",
+        "statement": "The White House revoked Acosta's hard pass following the press-conference exchange.",
+        "source_id": "s109",
+        "evidence_quote": "The White House on Wednesday suspended the press pass of CNN correspondent Jim Acosta after he and President Donald Trump had a heated confrontation during a news conference."
+      },
+      {
+        "field": "stated_justification",
+        "value": "Alleged physical contact with a White House intern",
+        "statement": "The White House said Acosta placed his hands on an intern during the exchange, a characterization CNN disputed.",
+        "source_id": "s110",
+        "evidence_quote": "placing his hands on a young woman just trying to do her job as a White House intern"
+      }
+    ],
+    "editor_notes": [
+      "Sources differ on the verb: NPR (s086) and CNN (s088) say \"revoked\"; Gulf News (s109) and Al Jazeera (s110) say \"suspended\", and the occurred_on claim quotes \"suspended\". The title follows the claim; what_happened keeps v1's \"revoked\". Pick one verb at review.",
+      "Cut from v1: video \"disputed by ... independent analysts\" (unnamed)."
+    ]
+  },
+  {
+    "slug": "2024-louisiana-enacts-police-buffer-zone-law",
+    "title": "United States (Louisiana): 25-foot buffer zone law around police officers, May 2024",
+    "summary": "On May 28, 2024, the governor of Louisiana, a state in the southern United States, Jeff Landry, signed a law that makes it a crime to stay within 25 feet (about 7.6 metres) of a working law enforcement officer after the officer has told a person to step back. The law applies to everyone, including journalists. Supporters described it as protecting officers' safety while they work. On January 31, 2025, a federal judge blocked its enforcement while a challenge to it is decided.",
+    "what_happened": "On May 28, 2024, the governor of Louisiana, Jeff Landry, signed a law creating a 25-foot (7.6-metre) zone around working law enforcement officers. Once an officer gives a verbal warning, anyone who stays within that distance commits a crime and can face jail.\n\nNieman Lab, a publication about journalism, reported in August 2024 that the law limits the ability of journalists and bystanders to film police activity, including alleged misconduct, because 25 feet is farther than the distance from which most phone and body-worn video of police encounters is recorded. The Reporters Committee for Freedom of the Press, a United States non-profit that provides legal help to journalists, added Louisiana guidance to its guide to recording laws.\n\nJournalists and civil rights observers challenged the law in federal court.",
+    "stated_justification": "Supporters described the law as protecting officers' safety while they perform their duties. Landry said on signing it, \"This is part of our continued pledge to address public safety.\"",
+    "effect_on_reporting": "Journalists and others filming police in Louisiana had to stay at least 25 feet (7.6 metres) away once warned, or face jail, until a federal judge blocked enforcement on January 31, 2025.",
+    "status": "Status as of 2026-09-22: Suspended by court order. A federal judge's preliminary injunction of January 31, 2025, an order that keeps the situation as it is while a case is decided, blocks enforcement (see the January 2025 entry). Louisiana's appeal was reported pending as of mid-2026.",
+    "what_we_dont_know": "",
+    "occurred_on": "2024-05-28",
+    "occurred_on_precision": "day",
+    "country": "US",
+    "jurisdiction": "Louisiana, United States",
+    "level": "state_or_province",
+    "continent": "north-america",
+    "tactic_primary": "access_ban",
+    "tactics": [
+      "access_ban"
+    ],
+    "leader_slug": "jeff-landry",
+    "issue_of_the_day": null,
+    "outcome": "ongoing",
+    "outcome_on": "2025-01-31",
+    "outcome_note": "Enforcement blocked by a preliminary injunction on 2025-01-31 while the case is pending; Louisiana's appeal was reported pending as of mid-2026.",
+    "granularity": "granular",
+    "sources": [
+      "s036",
+      "s037",
+      "s077",
+      "s038",
+      "s078"
+    ],
+    "claims": [
+      {
+        "field": "occurred_on",
+        "value": "2024-05-29",
+        "statement": "Louisiana's 25-foot police buffer zone law took effect.",
+        "source_id": "s077",
+        "evidence_quote": "The bill to create such buffer zones around LEOs was signed into law Tuesday (May 28) by Republican Gov. Jeff Landry."
+      },
+      {
+        "field": "stated_justification",
+        "value": "Officer safety",
+        "statement": "The law was framed as protecting officers performing their duties.",
+        "source_id": "s036",
+        "evidence_quote": "that person can't spit in my face when I'm making an arrest."
+      },
+      {
+        "field": "effect_on_reporting",
+        "value": "25-foot minimum distance for filming police",
+        "statement": "People, including journalists, who remain within 25 feet of a working law-enforcement officer after being told to back up can face jail time under the law.",
+        "source_id": "s077",
+        "evidence_quote": "People can now face jail time in Louisiana for being within 25 feet of a working law enforcement officer who has asked or ordered them to back up."
+      },
+      {
+        "field": "status",
+        "value": "Blocked by federal court pending appeal",
+        "statement": "A federal judge later blocked enforcement of the law.",
+        "source_id": "s038",
+        "evidence_quote": "The preliminary injunction will be effective while the case is pending."
+      }
+    ],
+    "editor_notes": [
+      "Landry's quotation is new in v2, verbatim from s077 (WVUE Fox 8, 2024-05-29). Add a claim row. The existing justification claim quotes an unnamed speaker (s036); name the speaker or replace it.",
+      "Metric conversion added for readers outside the United States (25 feet = 7.62 m).",
+      "Cut from v1: \"quickly\" challenged. The Nieman Lab reasoning about filming distance is attributed to Nieman Lab; s036 returns only a stub to automated checks, so confirm the wording by hand."
+    ]
+  },
+  {
+    "slug": "2025-federal-judge-blocks-louisiana-buffer-law",
+    "title": "United States (Louisiana): Federal court order blocking enforcement of the police buffer zone law, January 2025",
+    "summary": "On January 31, 2025, Judge John W. deGravelles of the United States District Court for the Middle District of Louisiana, a federal trial court, blocked enforcement of the state's 25-foot (7.6-metre) police buffer zone law with a preliminary injunction, an order that keeps the situation as it is while a case is decided. He wrote that \"the distance required is likely to impede Plaintiffs' non-obstructive newsgathering\" and that \"the Act has a chilling effect on Plaintiffs' First Amendment rights.\" The plaintiffs included journalists and civil rights observers. Louisiana was reported to be appealing the order.",
+    "what_happened": "On January 31, 2025, Judge John W. deGravelles of the United States District Court for the Middle District of Louisiana blocked enforcement of the state's 25-foot police buffer zone law. He ruled that the plaintiffs, including journalists and civil rights observers, were likely to succeed on their claim that the distance requirement would impede newsgathering that does not obstruct police, in breach of the First Amendment, the part of the United States Constitution that protects freedom of speech and of the press.\n\nThe challenge argued that the law made routine filming of police from a normal observing distance a crime and gave officers broad discretion to order bystanders back whether or not they were interfering. Louisiana defended the law as an officer-safety measure and was reported to be appealing the injunction to the Fifth Circuit, the federal appeals court based in New Orleans.",
+    "stated_justification": "Louisiana defended the law in court as an officer-safety measure.",
+    "effect_on_reporting": "While the injunction is in place, journalists and the public in Louisiana may film police from ordinary distances.",
+    "status": "Status as of 2026-09-22: Suspended by court order. The injunction remains in place while the case is pending; Louisiana's appeal was reported pending as of mid-2026.",
+    "what_we_dont_know": "No ruling on Louisiana's appeal appears in the sources cited (as of 2026-09-22).",
+    "occurred_on": "2025-01-31",
+    "occurred_on_precision": "day",
+    "country": "US",
+    "jurisdiction": "Louisiana, United States",
+    "level": "state_or_province",
+    "continent": "north-america",
+    "tactic_primary": "access_ban",
+    "tactics": [
+      "access_ban"
+    ],
+    "leader_slug": "jeff-landry",
+    "issue_of_the_day": null,
+    "outcome": "ongoing",
+    "outcome_on": "2025-01-31",
+    "outcome_note": "Preliminary injunction granted 2025-01-31; Louisiana's appeal was reported pending as of mid-2026.",
+    "granularity": "granular",
+    "sources": [
+      "s038",
+      "s078"
+    ],
+    "claims": [
+      {
+        "field": "occurred_on",
+        "value": "2025-01-31",
+        "statement": "Judge deGravelles issued the order blocking enforcement of the buffer-zone law.",
+        "source_id": "s078",
+        "evidence_quote": "The preliminary injunction will be effective while the case is pending."
+      },
+      {
+        "field": "effect_on_reporting",
+        "value": "Buffer-zone law enforcement blocked",
+        "statement": "Journalists and the public may film police from ordinary distances while the injunction remains in place.",
+        "source_id": "s038",
+        "evidence_quote": "The distance required is likely to impede Plaintiffs' non-obstructive newsgathering. … Therefore, the Act has a chilling effect on Plaintiffs' First Amendment rights."
+      },
+      {
+        "field": "status",
+        "value": "Injunction in effect; appeal pending",
+        "statement": "The block on enforcement remained in place while Louisiana pursued an appeal.",
+        "source_id": "s078",
+        "evidence_quote": "The preliminary injunction will be effective while the case is pending."
+      }
+    ],
+    "editor_notes": [
+      "This record is a court ruling on the law in the May 2024 entry, not a separate restriction. Consider folding it into that entry as a dated event. The seed type (lawsuit_against_press) does not fit; tactic set to access_ban, the tactic of the underlying law.",
+      "The judge's quotation joins two sentences that the claim quotation separates with an ellipsis; each is quoted separately here, and the capital \"The\" is set in lower case after \"that\". Check against s038.",
+      "leader_slug jeff-landry: s077 establishes Landry as governor in May 2024; no source in this entry names him for January 2025."
+    ]
+  },
+  {
+    "slug": "2025-florida-halo-law-takes-effect",
+    "title": "United States (Florida): Halo Law buffer zone around first responders, January 2025",
+    "summary": "On January 1, 2025, the \"Halo Law\" took effect in Florida, a state in the south-eastern United States. It creates a 25-foot (7.6-metre) buffer zone around first responders, such as police officers, firefighters and paramedics, while they are performing their duties, and anyone who enters the zone \"to 'harass, impede or threaten' first responders after receiving a warning\" faces up to 60 days in prison and a fine of US$500. The law applies to journalists as well as the public. The governor of Florida, Ron DeSantis, signed it in 2024.",
+    "what_happened": "Florida's \"Halo Law,\" signed by the governor of Florida, Ron DeSantis, in 2024, took effect on January 1, 2025. Like Louisiana's buffer zone law of the same year, it sets a minimum distance that the public, including journalists, must keep from first responders performing official duties once warned to step back, and treats a violation as a crime.\n\nThe law firm Phelps Dunbar grouped Florida's law with Louisiana's as two state laws raising First Amendment concerns for reporters covering police. It noted that both leave anyone recording police to judge a safe distance on the spot or risk arrest.\n\nUnlike Louisiana's law, Florida's had not been blocked by a court as of the sources cited.",
+    "stated_justification": "The law was presented as protecting first responders at active scenes. It applies \"anywhere that first responders are actively performing their duties by creating a 25-foot buffer zone to allow them to carry on their duties,\" according to Fire Law Blog.",
+    "effect_on_reporting": "Journalists covering police, fire and ambulance services in Florida must keep a 25-foot (7.6-metre) distance once warned, which limits their ability to document first responders' conduct at close range.",
+    "status": "Status as of 2026-09-22: In effect. The sources cited report no court order blocking it.",
+    "what_we_dont_know": "The sources cited do not state whether the Halo Law has been challenged in court (as of 2026-09-22).",
+    "occurred_on": "2025-01-01",
+    "occurred_on_precision": "day",
+    "country": "US",
+    "jurisdiction": "Florida, United States",
+    "level": "state_or_province",
+    "continent": "north-america",
+    "tactic_primary": "access_ban",
+    "tactics": [
+      "access_ban"
+    ],
+    "leader_slug": "ron-desantis",
+    "issue_of_the_day": null,
+    "outcome": "sustained",
+    "outcome_on": "2025-01-01",
+    "outcome_note": "In effect from 2025-01-01; the sources cited report no court order blocking it (as of 2026-09-22).",
+    "granularity": "granular",
+    "sources": [
+      "s039",
+      "s079"
+    ],
+    "claims": [
+      {
+        "field": "occurred_on",
+        "value": "2025-01-01",
+        "statement": "Florida's Halo Law took effect.",
+        "source_id": "s079",
+        "evidence_quote": "The law goes into effect today, January 1, 2025."
+      },
+      {
+        "field": "stated_justification",
+        "value": "First-responder safety",
+        "statement": "The law was framed as protecting first responders at active scenes.",
+        "source_id": "s079",
+        "evidence_quote": "The Halo Law applies anywhere that first responders are actively performing their duties by creating a 25-foot buffer zone to allow them to carry on their duties."
+      },
+      {
+        "field": "effect_on_reporting",
+        "value": "Buffer distance required around first responders",
+        "statement": "The law requires the public and journalists to keep a set distance from first responders once warned.",
+        "source_id": "s039",
+        "evidence_quote": "anyone who enters the area to 'harass, impede or threaten' first responders after receiving a warning will face up to 60 days in prison and a $500 fine"
+      },
+      {
+        "field": "status",
+        "value": "In effect",
+        "statement": "No reversal or injunction against Florida's law was identified.",
+        "source_id": "s039",
+        "evidence_quote": "In Florida, the law goes into effect on January 1, 2025."
+      }
+    ],
+    "editor_notes": [
+      "Neither s079 nor s039 names DeSantis, as fetched on 2026-09-22; the actor record cites s079. Add a source for the signing (date and governor), or leave leader_slug unset.",
+      "s079 (Fire Law Blog) is a blog. The brief accepts blogs only as the subject of an incident, not as its evidence. Replace it with the statute text or a news report.",
+      "Metric conversion and currency label added for readers outside the United States."
+    ]
+  },
+  {
+    "slug": "1971-nixon-white-house-compiles-enemies-list",
+    "title": "United States: Nixon White House \"enemies list\" naming journalists, September 1971",
+    "summary": "On September 9, 1971, the office of Charles Colson, special counsel to the president of the United States, Richard Nixon, sent White House Counsel John Dean, the president's lawyer on official matters, a memorandum naming 20 people as an initial \"enemies list.\" The list named political opponents, including journalists, for possible action through federal agencies, such as tax audits by the Internal Revenue Service (IRS), the United States federal tax agency. The IRS commissioner, Donald C. Alexander, refused to launch audits of the people on the list. The lists became public during the Watergate investigations into Nixon's White House.",
+    "what_happened": "On September 9, 1971, the office of Charles Colson, special counsel to the president of the United States, Richard Nixon, sent White House Counsel John Dean a memorandum, drafted by the aide George T. Bell, naming 20 people as an initial \"enemies list.\" A longer master list of hundreds of names was compiled over the following years.\n\nOn August 16, 1971, Dean had written a memo about \"how we can use the available federal machinery to screw our political enemies,\" including through tax audits, denial of federal grants and contracts, and litigation.\n\nJournalists were among the people named on the versions of the list, including the CBS News correspondent Daniel Schorr. The IRS commissioner, Donald C. Alexander, refused to launch audits of the people on the list. The lists became public during the Watergate investigations.",
+    "stated_justification": "No public justification was issued. An internal White House memo by Dean described the purpose as \"how we can use the available federal machinery to screw our political enemies.\"",
+    "effect_on_reporting": "Journalists named on the list faced possible federal scrutiny, including tax audits. The IRS did not carry out the audits on the people listed.",
+    "status": "Status as of 2026-09-22: Ended. The lists became public during the Watergate investigations and are part of the historical record.",
+    "what_we_dont_know": "The sources cited do not give the complete roster of journalists on every version of the list, or whether any individual reporter was audited because of it.",
+    "occurred_on": "1971-09-09",
+    "occurred_on_precision": "day",
+    "country": "US",
+    "jurisdiction": "United States, federal",
+    "level": "national",
+    "continent": "north-america",
+    "tactic_primary": "surveillance_and_subpoenas",
+    "tactics": [
+      "surveillance_and_subpoenas"
+    ],
+    "leader_slug": "richard-nixon",
+    "issue_of_the_day": null,
+    "outcome": "unknown",
+    "outcome_on": null,
+    "outcome_note": "No ruling or formal rescission applies; the lists became public during the Watergate investigations of 1973 to 1974.",
+    "granularity": "anchor",
+    "sources": [
+      "s041",
+      "s042"
+    ],
+    "claims": [
+      {
+        "field": "occurred_on",
+        "value": "1971-09-09",
+        "statement": "Colson's office sent the initial enemies-list memorandum to John Dean.",
+        "source_id": "s041",
+        "evidence_quote": "sent in memorandum form to John Dean on September 9, 1971"
+      },
+      {
+        "field": "stated_justification",
+        "value": "Not stated in the sources reviewed",
+        "statement": "No public justification was issued; internal memos described the intent privately.",
+        "source_id": "s041",
+        "evidence_quote": "how we can use the available federal machinery to screw our political enemies"
+      },
+      {
+        "field": "effect_on_reporting",
+        "value": "Journalists named for potential federal scrutiny",
+        "statement": "Journalists were among the political opponents named for potential tax audits and other federal action.",
+        "source_id": "s041",
+        "evidence_quote": "Daniel Schorr, journalist"
+      },
+      {
+        "field": "status",
+        "value": "Historical; documented via Watergate investigations",
+        "statement": "The lists are part of the public historical record from the Watergate era.",
+        "source_id": "s041",
+        "evidence_quote": "sent in memorandum form to John Dean on September 9, 1971"
+      }
+    ],
+    "editor_notes": [
+      "The v1 summary said the list was compiled by \"White House Counsel John Dean's office\"; what_happened and the claim (s041) say Colson's office sent it to Dean. v2 follows the claim.",
+      "Cut from v1: the list's \"lasting symbol of the Nixon White House's adversarial approach to the press\" (characterization).",
+      "Taxonomy gap: no tactic covers tax audits or the use of state agencies against named journalists. surveillance_and_subpoenas is the closest fit; consider an \"official_scrutiny\" tactic.",
+      "Both sources are reference works (s041 Wikipedia, s042 MTSU Free Speech Center). An anchor incident needs a primary document (the Senate Watergate committee record) or contemporary reporting.",
+      "Daniel Schorr's name comes from the effect_on_reporting claim quotation (s041); \"CBS News correspondent\" is not in that quotation. Confirm it or cut it."
+    ]
+  },
+  {
+    "slug": "2013-obama-doj-charges-eight-under-espionage-act",
+    "title": "United States: Espionage Act prosecutions of sources for leaks to the press, 2009 to 2013",
+    "summary": "A report by the Committee to Protect Journalists (CPJ), a non-profit organization in New York that documents cases of journalists imprisoned or killed worldwide, published on October 10, 2013, found that since 2009 the United States Department of Justice had brought felony charges against six government employees and two contractors, including Edward Snowden, accused of leaking classified information to the press. The charges were brought under the Espionage Act, a 1917 United States law against disclosing defence information, during the presidency of Barack Obama. The Project On Government Oversight, a United States non-profit that investigates the federal government, said the department under Obama and Attorney General Eric Holder \"has used it more than all prior administrations combined.\"",
+    "what_happened": "On October 10, 2013, the Committee to Protect Journalists published a special report documenting that, since 2009, the Department of Justice of the United States, under the president, Barack Obama, had brought felony charges under the Espionage Act against six government employees and two contractors, including Edward Snowden, for leaking classified information to journalists. Across all earlier United States administrations there had been three such prosecutions.\n\nThe report said the prosecutions, together with the collection of reporters' phone and email records in leak investigations, left sources reluctant to speak to journalists about diplomacy, national security and intelligence. One source told the report's author, \"I worry now about calling somebody because the contact can be found out through a check of phone records or e-mails.\"\n\nThe Freedom of the Press Foundation, a United States non-profit that builds secure communication tools for journalists, later said the pattern set a precedent that later administrations, including Donald Trump's first, could extend.",
+    "stated_justification": "The prosecutions were brought case by case on national security grounds, not under one stated policy. Matthew Miller, then spokesman for Attorney General Eric Holder, told the report's author, \"It was never a conscious decision to bring more of these cases than we ever had. It was a combination of things.\"",
+    "effect_on_reporting": "Journalists and their sources in national security reporting said they avoided contact by phone or email for fear of being identified through records requests, according to the Committee to Protect Journalists.",
+    "status": "Status as of 2026-09-22: Ended. The prosecutions are cited by press freedom organizations, including the Freedom of the Press Foundation, as a precedent for later administrations' use of the Espionage Act against sources.",
+    "what_we_dont_know": "",
+    "occurred_on": "2013-10-10",
+    "occurred_on_precision": "day",
+    "country": "US",
+    "jurisdiction": "United States, federal",
+    "level": "national",
+    "continent": "north-america",
+    "tactic_primary": "secrets_and_espionage_laws",
+    "tactics": [
+      "secrets_and_espionage_laws",
+      "surveillance_and_subpoenas"
+    ],
+    "leader_slug": "barack-obama",
+    "issue_of_the_day": null,
+    "outcome": "unknown",
+    "outcome_on": null,
+    "outcome_note": "The record documents the prosecutions as a group; the outcome of each case is not recorded here.",
+    "granularity": "anchor",
+    "sources": [
+      "s043",
+      "s044",
+      "s045",
+      "s099"
+    ],
+    "claims": [
+      {
+        "field": "occurred_on",
+        "value": "2013-10-10",
+        "statement": "CPJ published its report documenting the Obama-era Espionage Act prosecutions.",
+        "source_id": "s043",
+        "evidence_quote": "Six government employees, plus two contractors including Edward Snowden, have been subjects of felony criminal prosecutions since 2009 under the 1917 Espionage Act, accused of leaking classified information to the press"
+      },
+      {
+        "field": "stated_justification",
+        "value": "Not stated in the sources reviewed as a single policy statement",
+        "statement": "Prosecutions were pursued case by case rather than under one publicly stated blanket policy.",
+        "source_id": "s043",
+        "evidence_quote": "It was never a conscious decision to bring more of these cases than we ever had. It was a combination of things."
+      },
+      {
+        "field": "effect_on_reporting",
+        "value": "Documented chilling effect on sources",
+        "statement": "Sources reported avoiding contact with journalists for fear leak investigations would expose them.",
+        "source_id": "s043",
+        "evidence_quote": "I worry now about calling somebody because the contact can be found out through a check of phone records or e-mails."
+      },
+      {
+        "field": "status",
+        "value": "Historical precedent",
+        "statement": "The Department of Justice under Obama pursued more Espionage Act leak prosecutions than all prior administrations combined, a pattern later assessments compare later administrations against.",
+        "source_id": "s045",
+        "evidence_quote": "The Department of Justice under Obama and Attorney General Eric Holder has used it more than all prior administrations combined."
+      }
+    ],
+    "editor_notes": [
+      "Matthew Miller is named as the speaker from s043 (the claim quotation had no speaker).",
+      "v1 attributed the reluctance finding to \"the report and follow-up commentary from press-freedom groups, including the ACLU and POGO\"; v2 attributes it to the CPJ report, which is the claim source.",
+      "Each prosecution (Drake, Kiriakou, Manning, Snowden and others) could become its own anchor incident with an outcome."
+    ]
+  },
+  {
+    "slug": "2023-hungary-sovereignty-protection-act",
+    "title": "Hungary: National Sovereignty Protection Act and Sovereignty Protection Office, December 2023",
+    "summary": "On December 20, 2023, the president of Hungary, Katalin Novák, promulgated the National Sovereignty Protection Act, passed by the National Assembly, Hungary's parliament, during the government of the prime minister, Viktor Orbán. The law created a Sovereignty Protection Office empowered to investigate organizations, including news outlets, that it determined might be influenced by foreign actors or threaten national sovereignty. A week earlier, ten Hungarian media outlets had said the law \"is capable of severely restricting the freedom of the press.\" After a change of government in 2026, the National Assembly abolished the office on June 30, 2026.",
+    "what_happened": "On December 20, 2023, the president of Hungary, Katalin Novák, promulgated the National Sovereignty Protection Act, which the National Assembly, Hungary's parliament, had passed. The law created a Sovereignty Protection Office with power to investigate organizations, including news outlets, that it determined might be influenced by foreign actors or threaten national sovereignty.\n\nIn a joint evaluation a week before promulgation, ten Hungarian media outlets said the law \"is capable of severely restricting the freedom of the press, potentially making it difficult or even impossible for independent newsrooms, journalists and media companies to operate,\" according to Reporters Without Borders (RSF), an international organization based in Paris.\n\nAfter a change of government in 2026, the National Assembly abolished the Sovereignty Protection Office on June 30, 2026. The Committee to Protect Journalists (CPJ), a non-profit organization in New York, wrote in July 2026 that the office \"had been used to harass and delegitimize independent media by labeling them threats to national sovereignty,\" and described Hungary's initial media reforms as promising but not yet backed by lasting safeguards.",
+    "stated_justification": "The law's sponsors presented it as protecting Hungary's national sovereignty against foreign influence over civil society and the media. Novák said the office would comply with Hungary's Basic Law, its constitution, and have no impact on press freedom, according to RSF.",
+    "effect_on_reporting": "Hungarian news outlets that receive foreign funding could be investigated by the Sovereignty Protection Office from December 2023 until its abolition on June 30, 2026. CPJ wrote in July 2026 that the office \"had been used to harass and delegitimize independent media by labeling them threats to national sovereignty.\"",
+    "status": "Status as of 2026-09-22: Rescinded. The National Assembly abolished the Sovereignty Protection Office on June 30, 2026. CPJ wrote that lasting safeguards for media independence are still needed.",
+    "what_we_dont_know": "",
+    "occurred_on": "2023-12-20",
+    "occurred_on_precision": "day",
+    "country": "HU",
+    "jurisdiction": "Hungary",
+    "level": "national",
+    "continent": "europe",
+    "tactic_primary": "disinformation_labeling",
+    "tactics": [
+      "disinformation_labeling",
+      "funding_and_ownership_pressure"
+    ],
+    "leader_slug": "viktor-orban",
+    "issue_of_the_day": null,
+    "outcome": "reversed",
+    "outcome_on": "2026-06-30",
+    "outcome_note": "The National Assembly abolished the Sovereignty Protection Office on 2026-06-30, according to CPJ (s055).",
+    "granularity": "granular",
+    "sources": [
+      "s054",
+      "s055",
+      "s056"
+    ],
+    "claims": [
+      {
+        "field": "occurred_on",
+        "value": "2023-12-20",
+        "statement": "Hungary's National Sovereignty Protection Act was promulgated.",
+        "source_id": "s054",
+        "evidence_quote": "the National Sovereignty Protection Act was promulgated by Hungarian President Katalin Novak yesterday (20 December)"
+      },
+      {
+        "field": "stated_justification",
+        "value": "Protecting national sovereignty from foreign influence",
+        "statement": "The law was framed as a defense against foreign influence over Hungarian institutions, including media.",
+        "source_id": "s054",
+        "evidence_quote": "is capable of severely restricting the freedom of the press, potentially making it difficult or even impossible for independent newsrooms, journalists and media companies to operate."
+      },
+      {
+        "field": "effect_on_reporting",
+        "value": "Independent outlets faced investigation risk under the Sovereignty Protection Office",
+        "statement": "The office created by the law could investigate and stigmatize independent media as sovereignty threats.",
+        "source_id": "s055",
+        "evidence_quote": "harass and delegitimize independent media by labeling them threats to national sovereignty"
+      },
+      {
+        "field": "status",
+        "value": "Sovereignty Protection Office abolished 2026-06-30",
+        "statement": "Hungary's new government abolished the office as part of initial 2026 media reforms.",
+        "source_id": "s055",
+        "evidence_quote": "Hungary has a historic opportunity...to build a pluralistic media system that serves the public and cannot be politically captured again."
+      }
+    ],
+    "editor_notes": [
+      "Attribution corrected against the sources: v1 attributed \"harass and delegitimize independent media by labeling them threats to national sovereignty\" to RSF and the ten outlets in 2023. It is CPJ's July 2026 description (s055), which matches the claim row's source. The 2023 warning is the ten outlets' statement quoted by RSF (s054). Check with the editor as a correction.",
+      "Novák's position is new in v2. It is a paraphrase attributed to RSF (s054), which reports that she \"insisted\" the authority would comply with the Basic Law. Add a claim row.",
+      "v1 said the office \"contributed to journalists' reluctance to publish investigative material, documented over more than a decade of media capture\"; cut (no named source for the effect).",
+      "effect_on_reporting \"receive foreign funding\" follows RSF (s054) on media funded from abroad; check the exact scope in the statute."
+    ]
+  },
+  {
+    "slug": "2026-india-journalist-sentenced-adani-defamation",
+    "title": "India: one-year prison sentence for the journalist Ravi Nair in a criminal defamation case, February 2026",
+    "summary": "On February 10, 2026, a court in India sentenced the investigative journalist Ravi Nair to one year in prison and a fine of 5,000 rupees (about US$55) for criminal defamation, an offence under which a statement that damages someone's reputation can lead to a fine or prison sentence. The case concerned posts on the platform X between October 2020 and July 2021 and articles on Adani Watch, an Australian non-profit investigative site, that criticized the Adani Group, an Indian conglomerate. CIVICUS Monitor, which tracks civic freedoms by country, recorded the sentence among arrests, detentions and police summonses of Indian journalists in the same period.",
+    "what_happened": "On February 10, 2026, the investigative journalist Ravi Nair was sentenced in India to one year's imprisonment and a fine of 5,000 rupees in a criminal defamation case over social media posts and articles critical of the Adani Group, an Indian conglomerate.\n\nCIVICUS Monitor, a research project of the global civil society alliance CIVICUS, recorded the sentence alongside other incidents in the same period: the February 18, 2026 ambush and beating of the journalist Khoirom Loyalakpa in Imphal, the capital of the state of Manipur, and police summonses of Bashaarat Masood of The Indian Express and Ashiq Hussain of Hindustan Times for questioning about their coverage of law enforcement in Kashmir.\n\nCIVICUS also reported proposed information technology rules that would extend the government's system of takedown orders to individual journalists posting on social media, which it said would add to legal pressure on independent reporting.",
+    "stated_justification": "The case was a criminal defamation prosecution over Nair's published statements about the Adani Group. The sources cited record no statement of reason from the government of India.",
+    "effect_on_reporting": "Nair faces a year in prison over his posts and articles about the Adani Group (as of February 2026). CIVICUS wrote that in India \"sedition and anti-terror laws were used to criminalise journalists, comedians, academics and students exercising their right to freedom of expression.\"",
+    "status": "Status as of 2026-09-22: Not publicly stated. Nair was sentenced on February 10, 2026; the sources cited do not state whether he has appealed.",
+    "what_we_dont_know": "The sources cited do not state whether Nair has appealed, or which court sentenced him (as of 2026-09-22).",
+    "occurred_on": "2026-02-10",
+    "occurred_on_precision": "day",
+    "country": "IN",
+    "jurisdiction": "India",
+    "level": "national",
+    "continent": "asia",
+    "tactic_primary": "insult_and_defamation_laws",
+    "tactics": [
+      "insult_and_defamation_laws",
+      "detention_and_violence"
+    ],
+    "leader_slug": "narendra-modi",
+    "issue_of_the_day": null,
+    "outcome": "unknown",
+    "outcome_on": "2026-02-10",
+    "outcome_note": "Sentenced on 2026-02-10; no appeal or ruling on appeal appears in the sources cited.",
+    "granularity": "granular",
+    "sources": [
+      "s057",
+      "s058"
+    ],
+    "claims": [
+      {
+        "field": "occurred_on",
+        "value": "2026-02-10",
+        "statement": "Ravi Nair was sentenced to one year in prison over the defamation case.",
+        "source_id": "s057",
+        "evidence_quote": "investigative journalist Ravi Nair was sentenced to one year's imprisonment for defamation over social media posts critical of the Adani Group."
+      },
+      {
+        "field": "effect_on_reporting",
+        "value": "Documented pattern of arrests and legal pressure on journalists",
+        "statement": "CIVICUS documented the sentencing alongside other arrests and summonses of Indian journalists in the same period.",
+        "source_id": "s057",
+        "evidence_quote": "sedition and anti-terror laws were used to criminalise journalists, comedians, academics and students exercising their right to freedom of expression."
+      },
+      {
+        "field": "status",
+        "value": "Sentence reported February 2026",
+        "statement": "CIVICUS reported the sentencing as of its 2026 monitoring.",
+        "source_id": "s057",
+        "evidence_quote": "convicted Nair and sentenced him to jail and a fine of 5,000 rupees (USD 55) for his posts between October 2020 and July 2021 on the X platform and articles on the Australian nonprofit Adani Watch investigative site."
+      }
+    ],
+    "editor_notes": [
+      "The platform, dates and fine come from the status claim quotation (s057), which is more precise than the v1 text; no fact is added beyond it.",
+      "v1 said the sentence was \"cited as contributing to journalists' reluctance\" (no named source); replaced with CIVICUS's own quoted words.",
+      "Government actor: the complainant is a private company and the actor is a court. The court is not named in the sources. Name it to show that this meets the scope rule.",
+      "leader_slug narendra-modi rests on s057 (\"the government of Prime Minister Narendra Modi\", March 2026).",
+      "The Loyalakpa beating is recorded without a government actor; it belongs in this entry only as CIVICUS's context, not as an incident."
+    ]
+  },
+  {
+    "slug": "2026-israel-maintains-ban-on-foreign-press-access-to-gaza",
+    "title": "Israel: ban on independent entry of foreign journalists into the Gaza Strip, 2023 to 2026",
+    "summary": "Since the war in Gaza began in October 2023, the government of Israel has barred foreign journalists from entering the Gaza Strip, the Palestinian territory on the Mediterranean coast between Israel and Egypt, independently; foreign correspondents have entered only on trips escorted by the Israeli military. On January 7, 2026, Al Jazeera reported that the Foreign Press Association, which represents journalists from international news organizations, had condemned the government's decision to keep the ban. The government had told Israel's Supreme Court that the ban should be maintained due to \"security reasons,\" according to Al Jazeera. On February 25, 2026, the Committee to Protect Journalists reported that the ban was still in place.",
+    "what_happened": "Since the war in Gaza began in October 2023, the government of Israel has barred foreign journalists from entering the Gaza Strip independently. Foreign correspondents have been able to enter only on trips escorted by the Israeli military, which limits their ability to check conditions on the ground for themselves.\n\nOn January 7, 2026, Al Jazeera reported a statement by the Foreign Press Association (FPA), which represents journalists from international news organizations working in Israel and Gaza. The FPA said, \"Instead of presenting a plan for allowing journalists into Gaza independently and letting us work alongside our brave Palestinian colleagues, the government has decided once again to lock us out.\"\n\nOn February 25, 2026, the Committee to Protect Journalists (CPJ), a non-profit organization in New York that documents cases of journalists imprisoned or killed worldwide, published a special report recording 129 media workers killed in 2025 and holding Israel responsible for about two of every three of those deaths. CPJ separately documented what it called a pattern of harm to Palestinian journalists and media workers, and in 2026 published a review of the method it uses to count them.",
+    "stated_justification": "Israeli authorities have cited military security concerns for restricting the movement of foreign journalists in Gaza. In January 2026, the government told Israel's Supreme Court that the ban should be maintained due to \"security reasons\" and that its position was \"based on the position of the defence establishment,\" according to Al Jazeera.",
+    "effect_on_reporting": "International coverage of Gaza has relied on Palestinian journalists working inside the territory, rather than on foreign correspondents reporting independently.",
+    "status": "Status as of 2026-02-25: In effect, according to the Committee to Protect Journalists.",
+    "what_we_dont_know": "The sources cited do not state whether Israel's Supreme Court has ruled on the Foreign Press Association's petition (as of 2026-09-22).",
+    "occurred_on": "2026-01-07",
+    "occurred_on_precision": "day",
+    "country": "IL",
+    "jurisdiction": "Israel / Gaza Strip",
+    "level": "national",
+    "continent": "asia",
+    "tactic_primary": "access_ban",
+    "tactics": [
+      "access_ban",
+      "expulsion_and_visa_denial"
+    ],
+    "leader_slug": null,
+    "issue_of_the_day": "The war in Gaza, which began in October 2023.",
+    "outcome": "sustained",
+    "outcome_on": "2026-02-25",
+    "outcome_note": "In effect as of CPJ's report of 2026-02-25; the government asked Israel's Supreme Court in January 2026 to keep the ban.",
+    "granularity": "granular",
+    "sources": [
+      "s059",
+      "s060",
+      "s061"
+    ],
+    "claims": [
+      {
+        "field": "occurred_on",
+        "value": "2026-01-07",
+        "statement": "A media-freedom body's statement condemning Israel's continued ban on foreign media access to Gaza was reported.",
+        "source_id": "s061",
+        "evidence_quote": "Instead of presenting a plan for allowing journalists into Gaza independently and letting us work alongside our brave Palestinian colleagues, the government has decided once again to lock us out."
+      },
+      {
+        "field": "effect_on_reporting",
+        "value": "Coverage relies on Palestinian journalists working inside Gaza under direct risk",
+        "statement": "With foreign correspondents barred from independent entry, Palestinian journalists carried the bulk of on-the-ground reporting.",
+        "source_id": "s059",
+        "evidence_quote": "ban on independent foreign press access"
+      },
+      {
+        "field": "status",
+        "value": "In effect as of 2026-02-25",
+        "statement": "CPJ's February 2026 report described the access ban as ongoing.",
+        "source_id": "s059",
+        "evidence_quote": "ban on independent foreign press access"
+      }
+    ],
+    "editor_notes": [
+      "leader_slug left unset: no source in this entry names Israel's head of government. Add a source naming the prime minister and add the actor record.",
+      "The government's quoted reasons (\"security reasons\"; \"based on the position of the defence establishment\") and the Supreme Court petition are new in v2, verbatim from s061. Add claim rows. They replace v1's paraphrase, as the voice guide requires the justification to be quoted.",
+      "v1 said international coverage relied \"overwhelmingly\" on Palestinian journalists \"under direct risk\"; the degree words are cut (no source).",
+      "The occurred_on date (2026-01-07) is a report date, not the start of the ban (October 2023). Consider occurred_on 2023-10 with month precision and the January 2026 court submission as an event."
+    ]
+  },
+  {
+    "slug": "2026-russia-new-law-targets-exiled-journalists-assets",
+    "title": "Russia: law on asset freezes and service denials for exiled \"foreign agents\", August 2026",
+    "summary": "On August 4, 2026, the president of Russia, Vladimir Putin, signed a law, adopted unanimously by the Russian parliament on July 24, 2026, that allows the authorities to freeze bank accounts, block property and vehicle sales and deny consular services such as passport renewal to Russians in exile who have been designated \"foreign agents\" or who cooperate with organizations Russia has labelled \"undesirable.\" A \"foreign agent\" is a Russian legal designation that places a person or organization on a government register and subjects them to added restrictions. Of those designated, \"the vast majority are journalists,\" according to Reporters Without Borders (RSF). The law entered into force the same day.",
+    "what_happened": "On August 4, 2026, the president of Russia, Vladimir Putin, signed into law legislation passed by the State Duma, the lower house of Russia's parliament, on July 24, 2026. It applies to Russians living in exile who have been designated \"foreign agents\" or accused of cooperating with organizations Russia has designated \"undesirable,\" a group that Reporters Without Borders (RSF), an international organization based in Paris, says is made up mostly of journalists.\n\nThe law allows the authorities to freeze bank accounts and suspend online banking, ban sales of real estate and vehicles, revoke driving licences, redirect income to state-controlled accounts for seizure, block access to Russia's public services portal and deny consular services, including passport renewal.\n\nRSF said the law adds \"yet another layer to an already extensive legal arsenal aimed at crushing independent journalism.\" RSF and Freedom House, a United States-based organization that rates political rights and civil liberties by country, both described it as part of a series of Russian legal measures since 2012 that use the \"foreign agent\" and \"undesirable organization\" designations to isolate and financially pressure independent and exiled journalists rather than prosecute them for specific reporting.",
+    "stated_justification": "The sources cited give no official reason for the law beyond Russia's \"foreign agent\" and \"undesirable organization\" framework, in place since 2012. RSF and Freedom House describe that framework as treating independent and exiled media as instruments of foreign influence.",
+    "effect_on_reporting": "Exiled Russian journalists designated \"foreign agents\" can lose access to their bank accounts, their right to sell property and consular services such as passport renewal (as of 2026-08-04).",
+    "status": "Status as of 2026-09-22: In effect since August 4, 2026.",
+    "what_we_dont_know": "",
+    "occurred_on": "2026-08-04",
+    "occurred_on_precision": "day",
+    "country": "RU",
+    "jurisdiction": "Russia",
+    "level": "national",
+    "continent": "europe",
+    "tactic_primary": "disinformation_labeling",
+    "tactics": [
+      "disinformation_labeling",
+      "funding_and_ownership_pressure"
+    ],
+    "leader_slug": "vladimir-putin",
+    "issue_of_the_day": null,
+    "outcome": "sustained",
+    "outcome_on": "2026-08-04",
+    "outcome_note": "Signed and in force on 2026-08-04, according to RSF (s062).",
+    "granularity": "granular",
+    "sources": [
+      "s062",
+      "s063",
+      "s064"
+    ],
+    "claims": [
+      {
+        "field": "occurred_on",
+        "value": "2026-08-04",
+        "statement": "The law was signed into force.",
+        "source_id": "s062",
+        "evidence_quote": "Russian President Vladimir Putin signed the law into law on August 4, 2026. It entered into force the same day."
+      },
+      {
+        "field": "effect_on_reporting",
+        "value": "Exiled journalists face frozen assets and denial of consular services",
+        "statement": "The law enables freezing bank accounts, blocking property sales and denying passport renewal to designated exiled journalists.",
+        "source_id": "s062",
+        "evidence_quote": "This new law adds yet another layer to an already extensive legal arsenal aimed at crushing independent journalism."
+      },
+      {
+        "field": "status",
+        "value": "In effect",
+        "statement": "The law took effect upon signing.",
+        "source_id": "s062",
+        "evidence_quote": "Russian President Vladimir Putin signed the law into law on August 4, 2026. It entered into force the same day."
+      },
+      {
+        "field": "stated_justification",
+        "value": "Not stated as a discrete rationale beyond Russia's existing \"foreign agent\" framework",
+        "statement": "No specific stated justification beyond Russia's existing foreign-agent framework was documented.",
+        "source_id": "s062",
+        "evidence_quote": "On 24 July, the Russian parliament unanimously adopted a new law targeting Russians in exile who have been designated as 'foreign agents'"
+      }
+    ],
+    "editor_notes": [
+      "s062 is dated 2026-07-29 but carries an update giving the signing date of 2026-08-04; the published_on field should record the update.",
+      "\"the vast majority are journalists\" and \"yet another layer ... crushing independent journalism\" are verbatim from s062.",
+      "v1's \"financial strangulation\" (effect) is cut as a characterization in the site's voice.",
+      "The characterization of Russia's framework as treating media as \"instruments of foreign influence\" is v1 wording attributed here to RSF and Freedom House; confirm that s062 or s064 says it."
+    ]
+  },
+  {
+    "slug": "2026-el-salvador-freezes-el-faro-shareholder-assets",
+    "title": "El Salvador: freeze on assets of shareholders in El Faro's parent company, February to April 2026",
+    "summary": "Between February and April 2026, the government of El Salvador, headed by the president, Nayib Bukele, placed \"preventative annotations\" on a bank account and real estate belonging to two partners of Trípode S.A. de C.V., the parent company of the investigative news outlet El Faro, according to the Committee to Protect Journalists (CPJ), a non-profit organization in New York. CPJ said on May 8, 2026 that \"the targeting of individual shareholders' personal assets marks a dangerous escalation in the Bukele administration's long-standing effort to dismantle El Faro through administrative harassment.\" The sources cited give no public reason from the Salvadoran government for the measure.",
+    "what_happened": "Between February and April 2026, the government of El Salvador, under the president, Nayib Bukele, froze personal assets of individual shareholders of Trípode S.A. de C.V., the parent company of the investigative outlet El Faro. CPJ reported that the government placed \"preventative annotations\" on a bank account and real estate belonging to two partners of the company.\n\nIn a report published on May 8, 2026, the Committee to Protect Journalists (CPJ) said the freeze \"marks a dangerous escalation in the Bukele administration's long-standing effort to dismantle El Faro through administrative harassment.\" El Faro has operated partly from exile.\n\nThe International Consortium of Investigative Journalists (ICIJ), an international network of investigative reporters, reported that at least 40 Salvadoran journalists had fled into exile fearing imprisonment as of mid-2025. Reporters Without Borders (RSF) has described legal, physical and financial pressure on independent Salvadoran journalism that is pushing it out of the country.",
+    "stated_justification": "The Salvadoran government has not given a public reason for the freeze in the sources cited (as of 2026-05-08). The Bukele administration has described earlier actions affecting critical outlets in terms of tax and regulatory compliance.",
+    "effect_on_reporting": "Two partners in El Faro's parent company had a bank account and real estate placed under \"preventative annotations,\" adding personal financial pressure to years of administrative and legal pressure that CPJ and RSF say has pushed Salvadoran journalists into exile.",
+    "status": "Status as of 2026-05-08: In effect, according to CPJ. No reversal is reported in the sources cited.",
+    "what_we_dont_know": "The sources cited do not state the legal basis Salvadoran authorities gave for the freeze (as of 2026-09-22).",
+    "occurred_on": "2026-04-01",
+    "occurred_on_precision": "month",
+    "country": "SV",
+    "jurisdiction": "El Salvador",
+    "level": "national",
+    "continent": "north-america",
+    "tactic_primary": "funding_and_ownership_pressure",
+    "tactics": [
+      "funding_and_ownership_pressure"
+    ],
+    "leader_slug": "nayib-bukele",
+    "issue_of_the_day": null,
+    "outcome": "sustained",
+    "outcome_on": "2026-05-08",
+    "outcome_note": "In place as reported by CPJ on 2026-05-08; no reversal is reported in the sources cited.",
+    "granularity": "granular",
+    "sources": [
+      "s065",
+      "s066",
+      "s067"
+    ],
+    "claims": [
+      {
+        "field": "occurred_on",
+        "value": "2026-04-01",
+        "statement": "CPJ reported the asset freeze occurred between February and April 2026.",
+        "source_id": "s066",
+        "evidence_quote": "Between February and April 2026, the Salvadoran government placed \"preventative annotations\" on a bank account and real estate property belonging to two partners of Trípode S.A. de C.V."
+      },
+      {
+        "field": "effect_on_reporting",
+        "value": "Shareholders' personal assets frozen",
+        "statement": "CPJ described the freeze as affecting individual shareholders' personal assets.",
+        "source_id": "s066",
+        "evidence_quote": "The targeting of individual shareholders' personal assets marks a dangerous escalation in the Bukele administration's long-standing effort to dismantle El Faro through administrative harassment."
+      },
+      {
+        "field": "status",
+        "value": "Reported as of 2026-05-08; unresolved",
+        "statement": "CPJ's report describing the freeze was published May 8, 2026, with no reported reversal.",
+        "source_id": "s066",
+        "evidence_quote": "Between February and April 2026, the Salvadoran government placed \"preventative annotations\" on a bank account and real estate property belonging to two partners of Trípode S.A. de C.V."
+      },
+      {
+        "field": "stated_justification",
+        "value": "Not stated in the sources reviewed as a specific public rationale",
+        "statement": "No specific public rationale for the freeze was documented in CPJ's report.",
+        "source_id": "s066",
+        "evidence_quote": "Between February and April 2026, the Salvadoran government placed \"preventative annotations\" on a bank account and real estate property belonging to two partners of Trípode S.A. de C.V."
+      }
+    ],
+    "editor_notes": [
+      "The \"preventative annotations\" detail comes from the claim quotations (s066) and replaces v1's broader \"froze the personal assets of individual shareholders\"; the v1 wording is kept once, in what_happened.",
+      "\"The Bukele administration has described earlier actions ... in terms of tax and regulatory compliance\" is carried from v1 without a source. Source it or cut it.",
+      "v1's \"since Salvadoran authorities intensified pressure\" is cut (degree word, no source)."
+    ]
+  },
+  {
+    "slug": "2025-hong-kong-convicts-jimmy-lai-under-national-security-law",
+    "title": "China (Hong Kong): conviction and 20-year sentence of the media owner Jimmy Lai under the National Security Law, 2025 to 2026",
+    "summary": "On December 15, 2025, the High Court of Hong Kong, a special administrative region of China with its own courts, convicted Jimmy Lai, founder of the newspaper Apple Daily, on two counts of \"conspiracy to commit collusion with foreign forces\" under the National Security Law, which China's central government imposed on Hong Kong in 2020, and one count of \"conspiracy to publish seditious publications.\" On February 8, 2026, the court sentenced Lai to 20 years in prison. Apple Daily shut down in June 2021 after its accounts were frozen and much of its top leadership was arrested. Human Rights Watch, an international human rights organization, called the charges \"bogus.\"",
+    "what_happened": "On December 15, 2025, the High Court of Hong Kong convicted the media owner Jimmy Lai on two counts of conspiring to collude with foreign forces under the National Security Law, a law China's central government imposed on Hong Kong in 2020, and one count of conspiracy to publish seditious material under sedition legislation dating from British colonial rule. Hong Kong is a special administrative region of China with its own courts and legal system.\n\nLai, founder of the newspaper Apple Daily and the magazine Next Magazine, had been detained since his arrest in 2020. Apple Daily shut down in June 2021 after its accounts were frozen and much of its top leadership was arrested, and Next Magazine also closed.\n\nOn February 8, 2026, the court sentenced Lai to 20 years in prison. Human Rights Watch called the charges \"bogus,\" and United Nations experts expressed dismay at the conviction.",
+    "stated_justification": "Hong Kong prosecutors alleged that Lai conspired with foreign forces and published seditious material through Apple Daily, and the authorities treated the case as a national security matter under the 2020 law. The court ruled that Lai was the \"mastermind\" of the alleged conspiracies in all three counts.",
+    "effect_on_reporting": "Apple Daily and Next Magazine no longer publish. Apple Daily shut down in June 2021 after its accounts were frozen and much of its top leadership was arrested.",
+    "status": "Status as of 2026-09-22: In effect. Lai is imprisoned following his sentencing on February 8, 2026.",
+    "what_we_dont_know": "The sources cited do not state whether Lai has appealed (as of 2026-09-22).",
+    "occurred_on": "2025-12-15",
+    "occurred_on_precision": "day",
+    "country": "HK",
+    "jurisdiction": "Hong Kong",
+    "level": "state_or_province",
+    "continent": "asia",
+    "tactic_primary": "detention_and_violence",
+    "tactics": [
+      "detention_and_violence",
+      "secrets_and_espionage_laws",
+      "outlet_licensing"
+    ],
+    "leader_slug": "john-lee",
+    "issue_of_the_day": null,
+    "outcome": "sustained",
+    "outcome_on": "2026-02-08",
+    "outcome_note": "Sentenced to 20 years in prison on 2026-02-08; no appeal is recorded in the sources cited.",
+    "granularity": "granular",
+    "sources": [
+      "s068",
+      "s069",
+      "s070",
+      "s084",
+      "s085"
+    ],
+    "claims": [
+      {
+        "field": "occurred_on",
+        "value": "2025-12-14",
+        "statement": "Jimmy Lai was convicted on national-security and sedition charges.",
+        "source_id": "s084",
+        "evidence_quote": "On December 15, 2025, the High Court found Lai, 78, guilty of two counts of 'conspiracy to commit collusion with foreign forces' under the draconian National Security Law, and one count of 'conspiracy to publish seditious publications'"
+      },
+      {
+        "field": "stated_justification",
+        "value": "Alleged collusion with foreign forces and seditious publication",
+        "statement": "Prosecutors framed the charges as a national-security matter tied to Apple Daily's coverage.",
+        "source_id": "s084",
+        "evidence_quote": "The court ruled that Lai was the 'mastermind' of the alleged conspiracies in all three counts."
+      },
+      {
+        "field": "effect_on_reporting",
+        "value": "Apple Daily closed",
+        "statement": "Apple Daily shut down in June 2021 after its accounts were frozen and its leadership arrested.",
+        "source_id": "s068",
+        "evidence_quote": "Apple Daily, says it is shutting down. Its accounts have been frozen and much of its top leadership has been arrested."
+      },
+      {
+        "field": "status",
+        "value": "Sentenced to 20 years, 2026-02-08",
+        "statement": "Lai was sentenced to 20 years in prison and remains imprisoned.",
+        "source_id": "s084",
+        "evidence_quote": "The court ruled that Lai was the 'mastermind' of the alleged conspiracies in all three counts."
+      }
+    ],
+    "editor_notes": [
+      "Country naming: the seed and the countries table give Hong Kong its own code (HK). Titles and first mentions name China, as the brief requires (\"Always name the country and jurisdiction\").",
+      "Level set to state_or_province: the prosecuting authority and court are Hong Kong's, although the law was imposed nationally.",
+      "leader_slug john-lee (Chief Executive of Hong Kong from July 2022, s069). An alternative is China's head of government; the brief does not settle this for special administrative regions.",
+      "v1's \"press-freedom groups say the case has made Hong Kong journalists and foreign correspondents more cautious\" is cut (no named group).",
+      "The status claim quotation (s084) does not support the sentence; s085 (CNN) does. Re-point the claim.",
+      "Tactic: the National Security Law count is classed under secrets_and_espionage_laws as the closest fit; no tactic covers national security and sedition laws specifically."
+    ]
+  },
+  {
+    "slug": "2025-turkiye-detains-and-deports-journalists-covering-protests",
+    "title": "Türkiye: detention, injury and deportation of journalists covering protests, March 2025",
+    "summary": "After the detention of the mayor of Istanbul, Ekrem İmamoğlu, on March 19, 2025, protests spread in Türkiye, and between March 19 and March 28, 2025, the authorities detained at least 13 journalists, according to the Committee to Protect Journalists (CPJ), a non-profit organization in New York. From March 21 to 23, 2025, at least 14 journalists were injured after being beaten or shot with rubber bullets by Istanbul police, and on March 27 police detained the BBC correspondent Mark Lowen and deported him. CPJ said on April 2, 2025 that the authorities \"have since arrested thousands of protesters and have moved aggressively to tamp down media coverage.\"",
+    "what_happened": "On March 19, 2025, Turkish authorities detained the mayor of Istanbul, Ekrem İmamoğlu, whom CPJ described as a potential challenger to the president of Türkiye, Recep Tayyip Erdoğan, in the next presidential election. Protests followed.\n\nBetween March 19 and March 28, 2025, at least 13 journalists were detained, including the reporter İsmail Saymaz, detained at his home in Istanbul on March 19, and the photojournalist Zişan Gür, detained while covering protests on March 23. From March 21 to 23, at least 14 journalists were injured after being beaten or shot with rubber bullets by Istanbul police. On March 27, Istanbul police detained the BBC correspondent Mark Lowen and deported him to London.\n\nIn a report of April 2, 2025, the Committee to Protect Journalists (CPJ), a non-profit organization in New York, said the Turkish authorities \"have since arrested thousands of protesters and have moved aggressively to tamp down media coverage\" of the demonstrations.",
+    "stated_justification": "The authorities cited \"accusations of corruption\" against Istanbul's municipal government, controlled by the opposition Republican People's Party (CHP), as the basis for the action against İmamoğlu. The sources cited give no separate reason for the detentions of journalists.",
+    "effect_on_reporting": "Journalists covering the protests were detained, injured or, in Lowen's case, deported between March 19 and March 28, 2025, which reduced on-the-ground coverage of the demonstrations and their policing.",
+    "status": "Status as of 2025-04-02: Not publicly stated. CPJ described the detentions and restrictions on coverage as continuing amid mass arrests of protesters.",
+    "what_we_dont_know": "The sources cited do not give the legal outcome for each detained journalist (as of 2026-09-22).",
+    "occurred_on": "2025-03-19",
+    "occurred_on_precision": "day",
+    "country": "TR",
+    "jurisdiction": "Turkiye",
+    "level": "national",
+    "continent": "asia",
+    "tactic_primary": "detention_and_violence",
+    "tactics": [
+      "detention_and_violence",
+      "expulsion_and_visa_denial"
+    ],
+    "leader_slug": "recep-tayyip-erdogan",
+    "issue_of_the_day": "The detention of the mayor of Istanbul, Ekrem İmamoğlu, on March 19, 2025, and the protests that followed.",
+    "outcome": "unknown",
+    "outcome_on": "2025-04-02",
+    "outcome_note": "CPJ's report of 2025-04-02 describes the restrictions as continuing; the outcomes for individual journalists are not recorded.",
+    "granularity": "granular",
+    "sources": [
+      "s081"
+    ],
+    "claims": [
+      {
+        "field": "occurred_on",
+        "value": "2025-03-19",
+        "statement": "Restrictions on journalists covering the protests began with Ismail Saymaz's detention.",
+        "source_id": "s081",
+        "evidence_quote": "On March 19, police detained freelance reporter and TV commentator İsmail Saymaz at his house in Istanbul."
+      },
+      {
+        "field": "stated_justification",
+        "value": "Corruption accusations against Istanbul's opposition-led government",
+        "statement": "Authorities cited corruption allegations against the CHP-controlled Istanbul municipality as the basis for the underlying restrictions.",
+        "source_id": "s081",
+        "evidence_quote": "accusations of corruption"
+      },
+      {
+        "field": "effect_on_reporting",
+        "value": "At least 13 journalists detained, 14 injured, 1 deported",
+        "statement": "CPJ documented detentions, beatings and the deportation of BBC's Mark Lowen among journalists covering the protests.",
+        "source_id": "s081",
+        "evidence_quote": "authorities have since arrested thousands of protesters and have moved aggressively to tamp down media coverage"
+      },
+      {
+        "field": "status",
+        "value": "Ongoing as of CPJ's 2025-04-02 report",
+        "statement": "CPJ's report described the restrictions as continuing amid mass arrests of protesters.",
+        "source_id": "s081",
+        "evidence_quote": "press freedom advocates are concerned that authorities are deliberately targeting them to suppress coverage"
+      }
+    ],
+    "editor_notes": [
+      "Attribution of the injuries to Istanbul police, and the London destination of Lowen's deportation, come from s081 (CPJ); v1 did not name who injured the journalists.",
+      "Names are spelled as in s081 (İsmail Saymaz, Zişan Gür, İmamoğlu).",
+      "Only one source (s081). The inclusion threshold needs a second independent report, for example the BBC's own account of Lowen's deportation.",
+      "v1's \"moved to suppress coverage\" in the site's voice is cut; CPJ's words are quoted instead."
+    ]
+  }
+]

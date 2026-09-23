@@ -1,0 +1,207 @@
+[
+  {
+    "slug": "sherrill-v-knight-1977",
+    "name": "Sherrill v. Knight",
+    "court": "United States Court of Appeals for the D.C. Circuit",
+    "docket": "569 F.2d 124 (D.C. Cir. 1977)",
+    "filed_on": null,
+    "decided_on": "1977-12-15",
+    "holding": "The D.C. Circuit held that the protection the First Amendment gives to newsgathering requires that White House press access not be denied arbitrarily or for less than compelling reasons, and that due process requires \"notice of the factual bases for denial, an opportunity for the applicant to respond to these, and a final written statement of the reasons for denial.\"",
+    "status": "Controlling precedent; cited in litigation over the 2026 White House ban of CNN, MS NOW and Politico.",
+    "sources": [
+      "s071",
+      "s072"
+    ],
+    "related_incidents": [
+      "2026-white-house-bans-cnn-msnow-politico",
+      "2018-white-house-revokes-acosta-press-pass"
+    ],
+    "claims": [
+      {
+        "field": "decided_on",
+        "value": "1977-12-15",
+        "statement": "The D.C. Circuit decided Sherrill v. Knight on December 15, 1977.",
+        "source_id": "s072",
+        "evidence_quote": "Decided Dec. 15, 1977"
+      },
+      {
+        "field": "holding",
+        "value": "Due process required before denying a White House press pass",
+        "statement": "The court held that denying a previously issued White House press pass requires notice of the factual basis, an opportunity to respond, and a final written statement of reasons.",
+        "source_id": "s072",
+        "evidence_quote": "notice of the factual bases for denial, an opportunity for the applicant to respond to these, and a final written statement of the reasons for denial"
+      },
+      {
+        "field": "status",
+        "value": "Controlling precedent",
+        "statement": "The court held that denial of a White House press pass implicates First Amendment interests and cannot occur without adequate procedural due process.",
+        "source_id": "s072",
+        "evidence_quote": "denial of a pass potentially infringes upon first amendment guarantees. Such impairment of this interest cannot be permitted to occur in the absence of adequate procedural due process."
+      },
+      {
+        "field": "docket",
+        "value": "569 F.2d 124 (D.C. Cir. 1977)",
+        "statement": "The case is reported as Sherrill v. Knight, 569 F.2d 124 (D.C. Cir. 1977).",
+        "source_id": "s072",
+        "evidence_quote": "Robert Sherrill v. H. Stuart Knight, Director, United States Secret Service, Etal., Appellants, 569 F.2d 124 (D.C. Cir. 1977)"
+      }
+    ],
+    "summary": "Sherrill v. Knight, 569 F.2d 124, is a decision of the United States Court of Appeals for the District of Columbia Circuit (D.C. Circuit), one of 13 federal appeals courts below the Supreme Court of the United States, issued on December 15, 1977. The journalist Robert Sherrill had been denied a White House press pass; the defendant was H. Stuart Knight, director of the Secret Service, the United States federal agency responsible for protecting the president. The court held that \"denial of a pass potentially infringes upon first amendment guarantees\" and that this \"cannot be permitted to occur in the absence of adequate procedural due process.\"",
+    "what_happened": "On December 15, 1977, the D.C. Circuit decided Sherrill v. Knight, a case brought by the journalist Robert Sherrill against H. Stuart Knight, director of the United States Secret Service, over the denial of a White House press pass.\n\nThe court held that denying a White House press pass engages the First Amendment, the part of the United States Constitution that protects freedom of the press, and requires due process, meaning fair procedure. It required \"notice of the factual bases for denial, an opportunity for the applicant to respond to these, and a final written statement of the reasons for denial.\"\n\nThe decision was applied in 2018, when a federal judge ordered CNN correspondent Jim Acosta's hard pass reinstated, and is cited in the 2026 lawsuit by CNN, MS NOW and Politico over their reporters' White House credentials."
+  },
+  {
+    "slug": "cnn-v-trump-2018",
+    "name": "Cable News Network, Inc. v. Trump",
+    "court": "U.S. District Court for the District of Columbia",
+    "docket": "1:18-cv-02610",
+    "filed_on": "2018-11-13",
+    "decided_on": "2018-11-16",
+    "holding": "Judge Timothy J. Kelly granted CNN a temporary restraining order requiring the White House to reinstate Jim Acosta's hard pass, on due process grounds drawn from Sherrill v. Knight. The White House restored the pass and CNN dropped the suit.",
+    "status": "Closed; pass restored, suit dismissed by agreement of the parties.",
+    "sources": [
+      "s046",
+      "s048",
+      "s086",
+      "s087",
+      "s088"
+    ],
+    "related_incidents": [
+      "2018-white-house-revokes-acosta-press-pass"
+    ],
+    "claims": [
+      {
+        "field": "decided_on",
+        "value": "2018-11-16",
+        "statement": "Judge Timothy J. Kelly granted CNN's motion for a temporary restraining order on November 16, 2018.",
+        "source_id": "s046",
+        "evidence_quote": "Federal Judge Timothy Kelly ordered the Trump administration on Friday to temporarily reinstate CNN White House correspondent Jim Acosta's press credentials."
+      },
+      {
+        "field": "holding",
+        "value": "TRO granted requiring reinstatement of Acosta's pass",
+        "statement": "Judge Kelly granted CNN's motion for a temporary restraining order requiring the White House to reinstate Acosta's hard pass.",
+        "source_id": "s046",
+        "evidence_quote": "Timothy Kelly, the federal judge presiding over CNN's case against the president, seemed to accept with that reasoning when he granted CNN's motion for a temporary restraining order on Friday"
+      },
+      {
+        "field": "status",
+        "value": "Closed; pass restored, suit dismissed by agreement",
+        "statement": "The White House told Acosta \"your hard pass is restored,\" and CNN said the lawsuit was \"no longer necessary.\"",
+        "source_id": "s048",
+        "evidence_quote": "your hard pass is restored,"
+      }
+    ],
+    "summary": "Cable News Network, Inc. v. Trump, No. 1:18-cv-02610, was a lawsuit filed by CNN on November 13, 2018 in the United States District Court for the District of Columbia, the federal trial court in Washington, D.C., after the White House suspended the hard pass of its correspondent Jim Acosta. On November 16, 2018, Judge Timothy J. Kelly granted CNN a temporary restraining order, a short-term order made before a full hearing, requiring the pass to be reinstated. The White House told Acosta \"your hard pass is restored,\" and CNN said the lawsuit was \"no longer necessary.\"",
+    "what_happened": "On November 13, 2018, CNN sued the president of the United States, Donald Trump, and White House officials in the United States District Court for the District of Columbia after the White House suspended the hard pass of its correspondent Jim Acosta on November 7, 2018. A hard pass is the standing credential that lets a reporter enter the White House press area without applying each day.\n\nOn November 16, 2018, Judge Timothy J. Kelly granted CNN's motion for a temporary restraining order requiring the White House to reinstate the pass, on due process grounds drawn from Sherrill v. Knight, a 1977 decision of the D.C. Circuit.\n\nThe White House restored the pass on November 19, 2018, and CNN dropped the suit."
+  },
+  {
+    "slug": "ap-v-budowich-2025",
+    "name": "Associated Press v. Budowich",
+    "court": "U.S. District Court for the District of Columbia; U.S. Court of Appeals for the D.C. Circuit",
+    "docket": "1:25-cv-00532 (D.D.C.); No. 25-5109 (D.C. Cir.)",
+    "filed_on": "2025-02-21",
+    "decided_on": "2025-06-06",
+    "holding": "The district court (Judge Trevor N. McFadden, 2025-04-08) granted a preliminary injunction ordering AP's access restored and then stayed it pending appeal. A D.C. Circuit panel (Judges Pillard, Katsas and Rao, 2025-06-06) granted a partial stay, 2 to 1, holding that the Oval Office, Air Force One, Mar-a-Lago and the Cabinet Room are restricted spaces where access is a matter of presidential discretion, and leaving AP's East Room access in place; Judge Pillard dissented. The full D.C. Circuit denied rehearing en banc on 2025-07-22.",
+    "status": "AP retains access to the East Room and general briefing spaces; excluded from the Oval Office, Air Force One, Mar-a-Lago and Cabinet Room pending further proceedings.",
+    "sources": [
+      "s020",
+      "s024",
+      "s025",
+      "s026",
+      "s073",
+      "s074",
+      "s076"
+    ],
+    "related_incidents": [
+      "2025-white-house-bars-ap-gulf-of-america"
+    ],
+    "claims": [
+      {
+        "field": "decided_on",
+        "value": "2025-04-08",
+        "statement": "District Judge Trevor N. McFadden granted a preliminary injunction on April 8, 2025 ordering AP's access restored.",
+        "source_id": "s026",
+        "evidence_quote": "rescind the denial of the AP's access to the Oval Office, Air Force One, and other limited spaces based on the AP's viewpoint when such spaces are made open to other members of the White House press pool."
+      },
+      {
+        "field": "holding",
+        "value": "D.C. Circuit granted a partial stay, 2-1, on June 6, 2025",
+        "statement": "A D.C. Circuit panel granted the government's request for a stay pending appeal in part, in a 2-1 decision, on June 6, 2025.",
+        "source_id": "s025",
+        "evidence_quote": "On June 6, 2025, a panel of the U.S. Court of Appeals for the Circuit of the District of Columbia, composed of judges Cornelia Pillard, Gregory G. Katsas, and Neomi Rao, granted in part a stay pending appeal, in a 2-1 decision."
+      },
+      {
+        "field": "status",
+        "value": "AP retains East Room access; excluded from Oval Office, Air Force One, Mar-a-Lago and Cabinet Room",
+        "statement": "The Court of Appeals left the preliminary injunction in place only as it concerns AP's access to the East Room.",
+        "source_id": "s025",
+        "evidence_quote": "Thus, the U.S. Court of Appeals upheld the preliminary injunction to restore AP access only to the extent concerning the East Room."
+      },
+      {
+        "field": "docket",
+        "value": "No. 25-5109 (D.C. Cir.); 1:25-cv-00532-TNM (D.D.C.)",
+        "statement": "The case is docketed as Associated Press v. Taylor Budowich, No. 25-5109 in the D.C. Circuit and 1:25-cv-00532-TNM in the district court.",
+        "source_id": "s026",
+        "evidence_quote": "Associated Press v. Taylor Budowich, in his official capacity as White House Deputy Chief of Staff, et al."
+      }
+    ],
+    "summary": "Associated Press v. Budowich is a lawsuit filed on February 21, 2025 by the Associated Press (AP), a United States news agency, against White House officials, including Taylor Budowich, the White House deputy chief of staff, over AP's exclusion from the Oval Office and Air Force One. On April 8, 2025, Judge Trevor N. McFadden of the United States District Court for the District of Columbia granted AP a preliminary injunction, an order that keeps the situation as it is while a case is decided. On June 6, 2025, a panel of the D.C. Circuit, the federal appeals court for Washington, D.C., stayed the injunction in part, 2 to 1, leaving AP's access in place only for the East Room. The full court denied rehearing en banc on July 22, 2025.",
+    "what_happened": "On February 21, 2025, the Associated Press sued White House officials, including Taylor Budowich, the White House deputy chief of staff, in the United States District Court for the District of Columbia (No. 1:25-cv-00532). AP had been excluded from the Oval Office and Air Force One since February 16, 2025, after it kept using the name \"Gulf of Mexico.\"\n\nOn April 8, 2025, Judge Trevor N. McFadden granted a preliminary injunction ordering the White House to \"rescind the denial of the AP's access to the Oval Office, Air Force One, and other limited spaces based on the AP's viewpoint when such spaces are made open to other members of the White House press pool.\"\n\nOn June 6, 2025, a panel of the D.C. Circuit (No. 25-5109) made up of Judges Cornelia Pillard, Gregory G. Katsas and Neomi Rao granted the government a stay pending appeal in part, 2 to 1. The panel held that the Oval Office, Air Force One, Mar-a-Lago and the Cabinet Room are restricted spaces where access is a matter of presidential discretion, and left the injunction in place for the East Room; Judge Pillard dissented. On July 22, 2025, the full D.C. Circuit denied AP's petition for rehearing en banc, a hearing by all the court's judges.",
+    "what_we_dont_know": "No ruling on the merits of the appeal appears in the sources cited (as of 2026-09-22)."
+  },
+  {
+    "slug": "cnn-msnow-politico-v-trump-2026",
+    "name": "Cable News Network, Inc. v. Trump",
+    "court": "U.S. District Court for the District of Columbia",
+    "docket": "1:26-cv-03287",
+    "filed_on": "2026-09-21",
+    "decided_on": null,
+    "holding": "Not yet decided.",
+    "status": "Pending; a hearing was scheduled for September 23, 2026. The docket number (1:26-cv-03287) is confirmed against CourtListener's docket page for Cable News Network, Inc. v. Trump; the presiding judge, U.S. District Judge Timothy Kelly, is confirmed by PBS NewsHour's reporting.",
+    "sources": [
+      "s010",
+      "s011",
+      "s012",
+      "s013",
+      "s014",
+      "s015",
+      "s105"
+    ],
+    "related_incidents": [
+      "2026-white-house-bans-cnn-msnow-politico"
+    ],
+    "claims": [
+      {
+        "field": "filed_on",
+        "value": "2026-09-21",
+        "statement": "CNN, MS NOW and Politico sued the Trump administration on September 21, 2026.",
+        "source_id": "s015",
+        "evidence_quote": "CNN, MS NOW and Politico on Monday sued President Donald Trump's administration after they were barred from covering the White House over the weekend"
+      },
+      {
+        "field": "judge",
+        "value": "Timothy Kelly",
+        "statement": "The case was assigned to U.S. District Judge Timothy Kelly.",
+        "source_id": "s013",
+        "evidence_quote": "The case has been assigned to U.S. District Judge Timothy Kelly, whom Trump nominated during his first term in the White House."
+      },
+      {
+        "field": "holding",
+        "value": "Complaint alleges the ban violates the First and Fifth Amendments",
+        "statement": "The complaint states the ban \"could not be a more direct assault on the First Amendment nor a more blatant violation of our most fundamental constitutional principles.\"",
+        "source_id": "s013",
+        "evidence_quote": "This ban could not be a more direct assault on the First Amendment nor a more blatant violation of our most fundamental constitutional principles."
+      },
+      {
+        "field": "docket",
+        "value": "1:26-cv-03287",
+        "statement": "The case is docketed as Cable News Network, Inc. v. Trump, No. 1:26-cv-03287, in the U.S. District Court for the District of Columbia.",
+        "source_id": "s105",
+        "evidence_quote": "CABLE NEWS NETWORK, INC. v. TRUMP, 1:26-cv-03287"
+      }
+    ],
+    "summary": "Cable News Network, Inc. v. Trump, No. 1:26-cv-03287, is a lawsuit filed on September 21, 2026 by CNN, MS NOW and Politico against the president of the United States, Donald Trump, and the White House in the United States District Court for the District of Columbia, the federal trial court in Washington, D.C. It challenges the deactivation of their reporters' White House hard passes on September 19, 2026. The complaint alleges \"First Amendment retaliation,\" viewpoint discrimination and a violation of due process under the Fifth Amendment. The case is assigned to Judge Timothy Kelly; a hearing is scheduled for September 23, 2026.",
+    "what_happened": "On September 21, 2026, CNN, MS NOW and Politico sued the president of the United States, Donald Trump, and the White House, two days after their reporters were denied entry to the White House and their hard passes, the standing credentials that let reporters enter the White House press area, were deactivated.\n\nThe complaint alleges \"First Amendment retaliation\" and viewpoint discrimination, meaning treatment based on the opinions the outlets' coverage expresses, and a violation of the Fifth Amendment's guarantee of due process, the fair procedure the government must follow before taking away a right. It states, \"This ban could not be a more direct assault on the First Amendment nor a more blatant violation of our most fundamental constitutional principles.\" The outlets ask the court to declare that the White House's action violates the First and Fifth Amendments to the United States Constitution and to order their access restored.\n\nThe case is assigned to United States District Judge Timothy Kelly. A judge set an initial hearing for September 23, 2026.",
+    "what_we_dont_know": "The sources cited do not record a response from the White House to the complaint (as of 2026-09-22)."
+  }
+]

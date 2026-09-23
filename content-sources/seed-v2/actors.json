@@ -1,0 +1,2554 @@
+[
+ {
+  "slug": "donald-trump",
+  "name": "Donald Trump",
+  "kind": "person",
+  "role_or_office": "President of the United States",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s001",
+   "s002",
+   "s019",
+   "s080"
+  ]
+ },
+ {
+  "slug": "white-house-press-office",
+  "kind": "office",
+  "name": "White House Press Office",
+  "role_or_office": "Office of the White House Press Secretary",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s003",
+   "s004"
+  ]
+ },
+ {
+  "slug": "white-house-correspondents-association",
+  "name": "White House Correspondents' Association",
+  "kind": "other",
+  "role_or_office": "Professional association of accredited White House reporters",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s003",
+   "s075"
+  ]
+ },
+ {
+  "slug": "jacqui-heinrich",
+  "name": "Jacqui Heinrich",
+  "kind": "person",
+  "role_or_office": "President, White House Correspondents' Association (2026)",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s003"
+  ]
+ },
+ {
+  "slug": "eugene-daniels",
+  "name": "Eugene Daniels",
+  "kind": "person",
+  "role_or_office": "President, White House Correspondents' Association (2025)",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s075"
+  ]
+ },
+ {
+  "slug": "taylor-budowich",
+  "name": "Taylor Budowich",
+  "kind": "person",
+  "role_or_office": "White House Deputy Chief of Staff for Communications",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s025",
+   "s076"
+  ]
+ },
+ {
+  "slug": "trevor-mcfadden",
+  "name": "Trevor N. McFadden",
+  "kind": "court",
+  "role_or_office": "Judge, U.S. District Court for the District of Columbia",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s024",
+   "s025"
+  ]
+ },
+ {
+  "slug": "timothy-j-kelly",
+  "name": "Timothy J. Kelly",
+  "kind": "court",
+  "role_or_office": "Judge, U.S. District Court for the District of Columbia",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s048",
+   "s087"
+  ]
+ },
+ {
+  "slug": "cornelia-pillard",
+  "name": "Cornelia Pillard",
+  "kind": "court",
+  "role_or_office": "Judge, U.S. Court of Appeals for the D.C. Circuit",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s025"
+  ]
+ },
+ {
+  "slug": "gregory-katsas",
+  "name": "Gregory G. Katsas",
+  "kind": "court",
+  "role_or_office": "Judge, U.S. Court of Appeals for the D.C. Circuit",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s025"
+  ]
+ },
+ {
+  "slug": "neomi-rao",
+  "name": "Neomi Rao",
+  "kind": "court",
+  "role_or_office": "Judge, U.S. Court of Appeals for the D.C. Circuit",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s025"
+  ]
+ },
+ {
+  "slug": "pete-hegseth",
+  "name": "Pete Hegseth",
+  "kind": "person",
+  "role_or_office": "United States Secretary of Defense",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s029",
+   "s030",
+   "s031"
+  ]
+ },
+ {
+  "slug": "us-department-of-defense",
+  "name": "United States Department of Defense",
+  "kind": "agency",
+  "role_or_office": "Federal executive department",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s029",
+   "s031"
+  ]
+ },
+ {
+  "slug": "brendan-carr",
+  "name": "Brendan Carr",
+  "kind": "person",
+  "role_or_office": "Chair, Federal Communications Commission",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s028"
+  ]
+ },
+ {
+  "slug": "federal-communications-commission",
+  "name": "Federal Communications Commission",
+  "kind": "agency",
+  "role_or_office": "Independent federal regulatory agency",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s028",
+   "s096"
+  ]
+ },
+ {
+  "slug": "pam-bondi",
+  "name": "Pam Bondi",
+  "kind": "person",
+  "role_or_office": "Attorney General of the United States",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s027"
+  ]
+ },
+ {
+  "slug": "us-department-of-justice",
+  "name": "United States Department of Justice",
+  "kind": "agency",
+  "role_or_office": "Federal executive department",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s027"
+  ]
+ },
+ {
+  "slug": "kari-lake",
+  "name": "Kari Lake",
+  "kind": "person",
+  "role_or_office": "Senior Advisor, U.S. Agency for Global Media",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s022",
+   "s023"
+  ]
+ },
+ {
+  "slug": "us-agency-for-global-media",
+  "name": "U.S. Agency for Global Media",
+  "kind": "agency",
+  "role_or_office": "Federal agency overseeing Voice of America",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s022",
+   "s023"
+  ]
+ },
+ {
+  "slug": "louisiana-legislature",
+  "name": "Louisiana Legislature",
+  "kind": "legislature",
+  "role_or_office": "State legislature",
+  "jurisdiction": "Louisiana, United States",
+  "country": "US",
+  "sources": [
+   "s036",
+   "s077"
+  ]
+ },
+ {
+  "slug": "john-w-degravelles",
+  "name": "John W. deGravelles",
+  "kind": "court",
+  "role_or_office": "Judge, U.S. District Court for the Middle District of Louisiana",
+  "jurisdiction": "Louisiana, United States",
+  "country": "US",
+  "sources": [
+   "s038",
+   "s078"
+  ]
+ },
+ {
+  "slug": "ron-desantis",
+  "name": "Ron DeSantis",
+  "kind": "person",
+  "role_or_office": "Governor of Florida",
+  "jurisdiction": "Florida, United States",
+  "country": "US",
+  "sources": [
+   "s079"
+  ]
+ },
+ {
+  "slug": "richard-nixon",
+  "name": "Richard Nixon",
+  "kind": "person",
+  "role_or_office": "President of the United States (1969-1974)",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s041",
+   "s042"
+  ]
+ },
+ {
+  "slug": "charles-colson",
+  "name": "Charles Colson",
+  "kind": "person",
+  "role_or_office": "Special Counsel to the President (Nixon administration)",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s041"
+  ]
+ },
+ {
+  "slug": "barack-obama",
+  "name": "Barack Obama",
+  "kind": "person",
+  "role_or_office": "President of the United States (2009-2017)",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s043",
+   "s044",
+   "s045"
+  ]
+ },
+ {
+  "slug": "viktor-orban",
+  "name": "Viktor Orban",
+  "kind": "person",
+  "role_or_office": "Prime Minister of Hungary (through 2026)",
+  "jurisdiction": "Hungary",
+  "country": "HU",
+  "sources": [
+   "s054"
+  ]
+ },
+ {
+  "slug": "hungarian-national-assembly",
+  "name": "National Assembly of Hungary",
+  "kind": "legislature",
+  "role_or_office": "National legislature",
+  "jurisdiction": "Hungary",
+  "country": "HU",
+  "sources": [
+   "s054"
+  ]
+ },
+ {
+  "slug": "adani-group",
+  "name": "Adani Group",
+  "kind": "other",
+  "role_or_office": "Private conglomerate; complainant in defamation proceedings against a journalist",
+  "jurisdiction": "India",
+  "country": "IN",
+  "sources": [
+   "s057"
+  ]
+ },
+ {
+  "slug": "government-of-israel",
+  "name": "Government of Israel",
+  "kind": "other",
+  "role_or_office": "National government",
+  "jurisdiction": "Israel",
+  "country": "IL",
+  "sources": [
+   "s059",
+   "s060",
+   "s061"
+  ]
+ },
+ {
+  "slug": "state-duma",
+  "name": "State Duma of Russia",
+  "kind": "legislature",
+  "role_or_office": "Lower house of the Federal Assembly of Russia",
+  "jurisdiction": "Russia",
+  "country": "RU",
+  "sources": [
+   "s062"
+  ]
+ },
+ {
+  "slug": "vladimir-putin",
+  "name": "Vladimir Putin",
+  "kind": "person",
+  "role_or_office": "President of Russia",
+  "jurisdiction": "Russia",
+  "country": "RU",
+  "sources": [
+   "s062"
+  ]
+ },
+ {
+  "slug": "nayib-bukele",
+  "name": "Nayib Bukele",
+  "kind": "person",
+  "role_or_office": "President of El Salvador",
+  "jurisdiction": "El Salvador",
+  "country": "SV",
+  "sources": [
+   "s065",
+   "s066",
+   "s067"
+  ]
+ },
+ {
+  "slug": "hong-kong-department-of-justice",
+  "name": "Hong Kong Department of Justice",
+  "kind": "agency",
+  "role_or_office": "Prosecuting authority, Hong Kong Special Administrative Region",
+  "jurisdiction": "Hong Kong",
+  "country": "HK",
+  "sources": [
+   "s068",
+   "s084",
+   "s085"
+  ]
+ },
+ {
+  "slug": "government-of-turkiye",
+  "name": "Government of Turkiye",
+  "kind": "other",
+  "role_or_office": "National government",
+  "jurisdiction": "Turkiye",
+  "country": "TR",
+  "sources": [
+   "s081"
+  ]
+ },
+ {
+  "slug": "congress-of-the-united-states",
+  "name": "United States Congress",
+  "kind": "legislature",
+  "role_or_office": "Federal legislature",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "s032"
+  ]
+ },
+ {
+  "slug": "jeff-landry",
+  "name": "Jeff Landry",
+  "kind": "person",
+  "role_or_office": "Governor of Louisiana",
+  "jurisdiction": "Louisiana, United States",
+  "country": "US",
+  "sources": [
+   "s077"
+  ]
+ },
+ {
+  "slug": "narendra-modi",
+  "name": "Narendra Modi",
+  "kind": "person",
+  "role_or_office": "Prime Minister of India",
+  "jurisdiction": "India",
+  "country": "IN",
+  "sources": [
+   "s057"
+  ]
+ },
+ {
+  "slug": "recep-tayyip-erdogan",
+  "name": "Recep Tayyip Erdoğan",
+  "kind": "person",
+  "role_or_office": "President of Türkiye",
+  "jurisdiction": "Türkiye",
+  "country": "TR",
+  "sources": [
+   "s081"
+  ]
+ },
+ {
+  "slug": "john-lee",
+  "name": "John Lee",
+  "kind": "person",
+  "role_or_office": "Chief Executive of Hong Kong (from July 2022)",
+  "jurisdiction": "Hong Kong, China",
+  "country": "HK",
+  "sources": [
+   "s069",
+   "s068"
+  ]
+ },
+ {
+  "slug": "woodrow-wilson",
+  "name": "Woodrow Wilson",
+  "kind": "person",
+  "role_or_office": "President of the United States",
+  "country": "US",
+  "jurisdiction": "US"
+ },
+ {
+  "slug": "thomas-patten",
+  "name": "Thomas G. Patten",
+  "kind": "person",
+  "role_or_office": "Postmaster of New York City",
+  "country": "US",
+  "jurisdiction": "US"
+ },
+ {
+  "slug": "learned-hand",
+  "name": "Learned Hand",
+  "kind": "person",
+  "role_or_office": "Judge, United States District Court for the Southern District of New York",
+  "country": "US",
+  "jurisdiction": "US"
+ },
+ {
+  "slug": "albert-burleson",
+  "name": "Albert S. Burleson",
+  "kind": "person",
+  "role_or_office": "United States Postmaster General",
+  "country": "US",
+  "jurisdiction": "US"
+ },
+ {
+  "slug": "theodore-christianson",
+  "name": "Theodore Christianson",
+  "kind": "person",
+  "role_or_office": "Governor of Minnesota",
+  "country": "US",
+  "jurisdiction": "US"
+ },
+ {
+  "slug": "floyd-olson",
+  "name": "Floyd B. Olson",
+  "kind": "person",
+  "role_or_office": "Hennepin County Attorney, Minnesota",
+  "country": "US",
+  "jurisdiction": "US"
+ },
+ {
+  "slug": "franklin-d-roosevelt",
+  "name": "Franklin D. Roosevelt",
+  "kind": "person",
+  "role_or_office": "President of the United States",
+  "country": "US",
+  "jurisdiction": "US"
+ },
+ {
+  "slug": "byron-price",
+  "name": "Byron Price",
+  "kind": "person",
+  "role_or_office": "Director, United States Office of Censorship",
+  "country": "US",
+  "jurisdiction": "US"
+ },
+ {
+  "slug": "dwight-d-eisenhower",
+  "name": "Dwight D. Eisenhower",
+  "kind": "person",
+  "role_or_office": "President of the United States",
+  "country": "US",
+  "jurisdiction": "US"
+ },
+ {
+  "slug": "james-eastland",
+  "name": "James O. Eastland",
+  "kind": "person",
+  "role_or_office": "United States Senator, chair of the Senate Internal Security Subcommittee",
+  "country": "US",
+  "jurisdiction": "US"
+ },
+ {
+  "slug": "john-dean",
+  "name": "John Dean",
+  "kind": "person",
+  "role_or_office": "Counsel to the President of the United States",
+  "country": "US",
+  "jurisdiction": "US"
+ },
+ {
+  "slug": "daniel-schorr",
+  "name": "Daniel Schorr",
+  "kind": "person",
+  "role_or_office": "Correspondent, CBS News",
+  "country": "US",
+  "jurisdiction": "US"
+ },
+ {
+  "slug": "mary-mcgrory",
+  "name": "Mary McGrory",
+  "kind": "person",
+  "role_or_office": "Columnist, The Washington Post",
+  "country": "US",
+  "jurisdiction": "US"
+ },
+ {
+  "slug": "daniel-ellsberg",
+  "name": "Daniel Ellsberg",
+  "kind": "person",
+  "role_or_office": "Military analyst who copied the Pentagon Papers",
+  "country": "US",
+  "jurisdiction": "US"
+ },
+ {
+  "slug": "ronald-reagan",
+  "name": "Ronald Reagan",
+  "kind": "person",
+  "role_or_office": "President of the United States",
+  "country": "US",
+  "jurisdiction": "US"
+ },
+ {
+  "slug": "john-vessey",
+  "name": "John W. Vessey Jr.",
+  "kind": "person",
+  "role_or_office": "Chairman of the Joint Chiefs of Staff, United States",
+  "country": "US",
+  "jurisdiction": "US"
+ },
+ {
+  "slug": "wesley-mcdonald",
+  "name": "Wesley McDonald",
+  "kind": "person",
+  "role_or_office": "Admiral, commander of United States forces in the Grenada operation",
+  "country": "US",
+  "jurisdiction": "US"
+ },
+ {
+  "slug": "george-shultz",
+  "name": "George Shultz",
+  "kind": "person",
+  "role_or_office": "United States Secretary of State",
+  "country": "US",
+  "jurisdiction": "US"
+ },
+ {
+  "slug": "jean-claude-duvalier",
+  "name": "Jean-Claude Duvalier",
+  "kind": "person",
+  "role_or_office": "President of Haiti",
+  "country": "HT",
+  "jurisdiction": "HT"
+ },
+ {
+  "slug": "jean-dominique",
+  "name": "Jean Dominique",
+  "kind": "person",
+  "role_or_office": "Director, Radio Haiti-Inter",
+  "country": "HT",
+  "jurisdiction": "HT"
+ },
+ {
+  "slug": "michele-montas",
+  "name": "Michèle Montas",
+  "kind": "person",
+  "role_or_office": "Journalist, Radio Haiti-Inter",
+  "country": "HT",
+  "jurisdiction": "HT"
+ },
+ {
+  "slug": "getulio-vargas",
+  "name": "Getúlio Vargas",
+  "kind": "person",
+  "role_or_office": "President of Brazil",
+  "country": "BR",
+  "jurisdiction": "BR"
+ },
+ {
+  "slug": "dip-brazil",
+  "name": "Departamento de Imprensa e Propaganda (DIP)",
+  "kind": "body",
+  "role_or_office": "Brazilian government press and state messaging department",
+  "country": "BR",
+  "jurisdiction": "BR"
+ },
+ {
+  "slug": "augusto-pinochet",
+  "name": "Augusto Pinochet",
+  "kind": "person",
+  "role_or_office": "Commander-in-chief of the Chilean Army and head of the governing military junta",
+  "country": "CL",
+  "jurisdiction": "CL"
+ },
+ {
+  "slug": "jorge-videla",
+  "name": "Jorge Rafael Videla",
+  "kind": "person",
+  "role_or_office": "President of Argentina and head of the governing military junta",
+  "country": "AR",
+  "jurisdiction": "AR"
+ },
+ {
+  "slug": "jacobo-timerman",
+  "name": "Jacobo Timerman",
+  "kind": "person",
+  "role_or_office": "Editor and founder, La Opinión",
+  "country": "AR",
+  "jurisdiction": "AR"
+ },
+ {
+  "slug": "robert-cox",
+  "name": "Robert Cox",
+  "kind": "person",
+  "role_or_office": "Editor, Buenos Aires Herald",
+  "country": "AR",
+  "jurisdiction": "AR"
+ },
+ {
+  "slug": "andrew-graham-yooll",
+  "name": "Andrew Graham-Yooll",
+  "kind": "person",
+  "role_or_office": "Journalist, Buenos Aires Herald",
+  "country": "AR",
+  "jurisdiction": "AR"
+ },
+ {
+  "slug": "adolf-hitler",
+  "name": "Adolf Hitler",
+  "kind": "person",
+  "role_or_office": "Chancellor of Germany",
+  "country": "DE",
+  "jurisdiction": "DE"
+ },
+ {
+  "slug": "reich-press-chamber",
+  "name": "Reich Press Chamber (Reichspressekammer)",
+  "kind": "body",
+  "role_or_office": "Nazi Germany's compulsory professional body for journalists",
+  "country": "DE",
+  "jurisdiction": "DE"
+ },
+ {
+  "slug": "vladimir-lenin",
+  "name": "Vladimir Lenin",
+  "kind": "person",
+  "role_or_office": "Chairman of the Council of People's Commissars of Soviet Russia/the USSR",
+  "country": "RU",
+  "jurisdiction": "RU"
+ },
+ {
+  "slug": "glavlit",
+  "name": "Glavlit",
+  "kind": "body",
+  "role_or_office": "Soviet state office overseeing printed matter and the arts",
+  "country": "RU",
+  "jurisdiction": "RU"
+ },
+ {
+  "slug": "francisco-franco",
+  "name": "Francisco Franco",
+  "kind": "person",
+  "role_or_office": "Head of State of Spain",
+  "country": "ES",
+  "jurisdiction": "ES"
+ },
+ {
+  "slug": "antonio-salazar",
+  "name": "António de Oliveira Salazar",
+  "kind": "person",
+  "role_or_office": "Prime Minister of Portugal",
+  "country": "PT",
+  "jurisdiction": "PT"
+ },
+ {
+  "slug": "alexander-dubcek",
+  "name": "Alexander Dubček",
+  "kind": "person",
+  "role_or_office": "First Secretary of the Communist Party of Czechoslovakia",
+  "country": "CZ",
+  "jurisdiction": "CZ"
+ },
+ {
+  "slug": "wojciech-jaruzelski",
+  "name": "Wojciech Jaruzelski",
+  "kind": "person",
+  "role_or_office": "First Secretary of the Polish United Workers' Party and Prime Minister of Poland",
+  "country": "PL",
+  "jurisdiction": "PL"
+ },
+ {
+  "slug": "margaret-thatcher",
+  "name": "Margaret Thatcher",
+  "kind": "person",
+  "role_or_office": "Prime Minister of the United Kingdom",
+  "country": "GB",
+  "jurisdiction": "GB"
+ },
+ {
+  "slug": "douglas-hurd",
+  "name": "Douglas Hurd",
+  "kind": "person",
+  "role_or_office": "Home Secretary of the United Kingdom",
+  "country": "GB",
+  "jurisdiction": "GB"
+ },
+ {
+  "slug": "daniel-francois-malan",
+  "name": "Daniel François Malan",
+  "kind": "person",
+  "role_or_office": "Prime Minister of South Africa",
+  "country": "ZA",
+  "jurisdiction": "ZA"
+ },
+ {
+  "slug": "p-w-botha",
+  "name": "P. W. Botha",
+  "kind": "person",
+  "role_or_office": "State President of South Africa",
+  "country": "ZA",
+  "jurisdiction": "ZA"
+ },
+ {
+  "slug": "louis-le-grange",
+  "name": "Louis le Grange",
+  "kind": "person",
+  "role_or_office": "Minister of Law and Order, South Africa",
+  "country": "ZA",
+  "jurisdiction": "ZA"
+ },
+ {
+  "slug": "gamal-abdel-nasser",
+  "name": "Gamal Abdel Nasser",
+  "kind": "person",
+  "role_or_office": "President of Egypt",
+  "country": "EG",
+  "jurisdiction": "EG"
+ },
+ {
+  "slug": "indira-gandhi",
+  "name": "Indira Gandhi",
+  "kind": "person",
+  "role_or_office": "Prime Minister of India",
+  "country": "IN",
+  "jurisdiction": "IN"
+ },
+ {
+  "slug": "ferdinand-marcos",
+  "name": "Ferdinand Marcos",
+  "kind": "person",
+  "role_or_office": "President of the Philippines",
+  "country": "PH",
+  "jurisdiction": "PH"
+ },
+ {
+  "slug": "teodoro-locsin-sr",
+  "name": "Teodoro Locsin Sr.",
+  "kind": "person",
+  "role_or_office": "Publisher, Philippines Free Press",
+  "country": "PH",
+  "jurisdiction": "PH"
+ },
+ {
+  "slug": "chun-doo-hwan",
+  "name": "Chun Doo-hwan",
+  "kind": "person",
+  "role_or_office": "General and de facto head of South Korea's martial-law government",
+  "country": "KR",
+  "jurisdiction": "KR"
+ },
+ {
+  "slug": "saw-maung",
+  "name": "Saw Maung",
+  "kind": "person",
+  "role_or_office": "General, Chairman of the State Law and Order Restoration Council (SLORC)",
+  "country": "MM",
+  "jurisdiction": "MM"
+ },
+ {
+  "slug": "slorc",
+  "name": "State Law and Order Restoration Council (SLORC)",
+  "kind": "body",
+  "role_or_office": "Burma's military government from 1988",
+  "country": "MM",
+  "jurisdiction": "MM"
+ },
+ {
+  "slug": "li-peng",
+  "name": "Li Peng",
+  "kind": "person",
+  "role_or_office": "Premier of the People's Republic of China",
+  "country": "CN",
+  "jurisdiction": "CN"
+ },
+ {
+  "slug": "john-pomfret",
+  "name": "John Pomfret",
+  "kind": "person",
+  "role_or_office": "Correspondent, Associated Press",
+  "country": "US",
+  "jurisdiction": "US"
+ },
+ {
+  "slug": "alan-pessin",
+  "name": "Alan W. Pessin",
+  "kind": "person",
+  "role_or_office": "Correspondent, Voice of America",
+  "country": "US",
+  "jurisdiction": "US"
+ },
+ {
+  "slug": "david-ben-gurion",
+  "name": "David Ben-Gurion",
+  "kind": "person",
+  "role_or_office": "Prime Minister of Israel",
+  "country": "IL",
+  "jurisdiction": "IL"
+ },
+ {
+  "slug": "john-curtin",
+  "name": "John Curtin",
+  "kind": "person",
+  "role_or_office": "Prime Minister of Australia",
+  "country": "AU",
+  "jurisdiction": "AU"
+ },
+ {
+  "slug": "arthur-calwell",
+  "name": "Arthur Calwell",
+  "kind": "person",
+  "role_or_office": "Australian Minister for Information",
+  "country": "AU",
+  "jurisdiction": "AU"
+ },
+ {
+  "slug": "george-hw-bush",
+  "name": "George H. W. Bush",
+  "kind": "person",
+  "role_or_office": "President of the United States",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "a2_001"
+  ]
+ },
+ {
+  "slug": "pete-williams",
+  "name": "Pete Williams",
+  "kind": "person",
+  "role_or_office": "Assistant Secretary of Defense for Public Affairs",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "a2_001"
+  ]
+ },
+ {
+  "slug": "dick-cheney",
+  "name": "Dick Cheney",
+  "kind": "person",
+  "role_or_office": "Secretary of Defense",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "a2_001"
+  ]
+ },
+ {
+  "slug": "george-w-bush",
+  "name": "George W. Bush",
+  "kind": "person",
+  "role_or_office": "President of the United States",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "a2_003",
+   "a2_004"
+  ]
+ },
+ {
+  "slug": "patrick-fitzgerald",
+  "name": "Patrick Fitzgerald",
+  "kind": "person",
+  "role_or_office": "Special Counsel, U.S. Department of Justice",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "a2_004"
+  ]
+ },
+ {
+  "slug": "thomas-hogan",
+  "name": "Thomas F. Hogan",
+  "kind": "person",
+  "role_or_office": "Judge, U.S. District Court for the District of Columbia",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "a2_004"
+  ]
+ },
+ {
+  "slug": "scooter-libby",
+  "name": "I. Lewis Libby",
+  "kind": "person",
+  "role_or_office": "Chief of Staff to the Vice President",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "a2_004"
+  ]
+ },
+ {
+  "slug": "judith-miller",
+  "name": "Judith Miller",
+  "kind": "person",
+  "role_or_office": "Reporter, The New York Times",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "a2_004",
+   "a2_005"
+  ]
+ },
+ {
+  "slug": "chelsea-manning",
+  "name": "Chelsea Manning",
+  "kind": "person",
+  "role_or_office": "U.S. Army intelligence analyst",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "a2_006"
+  ]
+ },
+ {
+  "slug": "john-kiriakou",
+  "name": "John Kiriakou",
+  "kind": "person",
+  "role_or_office": "Former Central Intelligence Agency officer",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "a2_007"
+  ]
+ },
+ {
+  "slug": "neil-macbride",
+  "name": "Neil MacBride",
+  "kind": "person",
+  "role_or_office": "U.S. Attorney for the Eastern District of Virginia",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "a2_007"
+  ]
+ },
+ {
+  "slug": "leonie-brinkema",
+  "name": "Leonie Brinkema",
+  "kind": "person",
+  "role_or_office": "Judge, U.S. District Court for the Eastern District of Virginia",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "a2_007"
+  ]
+ },
+ {
+  "slug": "eric-holder",
+  "name": "Eric Holder",
+  "kind": "person",
+  "role_or_office": "Attorney General of the United States",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "a2_008",
+   "a2_012"
+  ]
+ },
+ {
+  "slug": "gary-pruitt",
+  "name": "Gary Pruitt",
+  "kind": "person",
+  "role_or_office": "President and Chief Executive, The Associated Press",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "a2_008"
+  ]
+ },
+ {
+  "slug": "james-rosen",
+  "name": "James Rosen",
+  "kind": "person",
+  "role_or_office": "Reporter, Fox News",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "a2_010",
+   "a2_011"
+  ]
+ },
+ {
+  "slug": "stephen-kim",
+  "name": "Stephen Jin-Woo Kim",
+  "kind": "person",
+  "role_or_office": "State Department arms expert",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "a2_010"
+  ]
+ },
+ {
+  "slug": "james-risen",
+  "name": "James Risen",
+  "kind": "person",
+  "role_or_office": "Reporter, The New York Times",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "a2_012",
+   "a2_013"
+  ]
+ },
+ {
+  "slug": "jeffrey-sterling",
+  "name": "Jeffrey Sterling",
+  "kind": "person",
+  "role_or_office": "Former Central Intelligence Agency officer",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "a2_012",
+   "a2_013"
+  ]
+ },
+ {
+  "slug": "sarah-sanders",
+  "name": "Sarah Sanders",
+  "kind": "person",
+  "role_or_office": "White House Press Secretary",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "a2_014"
+  ]
+ },
+ {
+  "slug": "jim-acosta",
+  "name": "Jim Acosta",
+  "kind": "person",
+  "role_or_office": "Correspondent, CNN",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "a2_014",
+   "a2_015"
+  ]
+ },
+ {
+  "slug": "john-demers",
+  "name": "John Demers",
+  "kind": "person",
+  "role_or_office": "Assistant Attorney General for National Security",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "a2_016"
+  ]
+ },
+ {
+  "slug": "julian-assange",
+  "name": "Julian Assange",
+  "kind": "person",
+  "role_or_office": "Founder, WikiLeaks",
+  "jurisdiction": "Australia (national of); detained in the United Kingdom",
+  "country": "AU",
+  "sources": [
+   "a2_016",
+   "a2_017"
+  ]
+ },
+ {
+  "slug": "sani-abacha",
+  "name": "Sani Abacha",
+  "kind": "person",
+  "role_or_office": "Head of State of Nigeria",
+  "jurisdiction": "Nigeria, national",
+  "country": "NG",
+  "sources": [
+   "a2_020"
+  ]
+ },
+ {
+  "slug": "kunle-ajibade",
+  "name": "Kunle Ajibade",
+  "kind": "person",
+  "role_or_office": "Editor, The News magazine",
+  "jurisdiction": "Nigeria, national",
+  "country": "NG",
+  "sources": [
+   "a2_020"
+  ]
+ },
+ {
+  "slug": "chris-anyanwu",
+  "name": "Chris Anyanwu",
+  "kind": "person",
+  "role_or_office": "Editor-in-chief, The Sunday Magazine",
+  "jurisdiction": "Nigeria, national",
+  "country": "NG",
+  "sources": [
+   "a2_020",
+   "a2_021"
+  ]
+ },
+ {
+  "slug": "mahathir-mohamad",
+  "name": "Mahathir Mohamad",
+  "kind": "person",
+  "role_or_office": "Prime Minister of Malaysia",
+  "jurisdiction": "Malaysia, national",
+  "country": "MY",
+  "sources": [
+   "a2_022",
+   "a2_023"
+  ]
+ },
+ {
+  "slug": "anwar-ibrahim",
+  "name": "Anwar Ibrahim",
+  "kind": "person",
+  "role_or_office": "Former Deputy Prime Minister of Malaysia",
+  "jurisdiction": "Malaysia, national",
+  "country": "MY",
+  "sources": [
+   "a2_022"
+  ]
+ },
+ {
+  "slug": "zulkifli-sulong",
+  "name": "Zulkifli Sulong",
+  "kind": "person",
+  "role_or_office": "Editor, Harakah",
+  "jurisdiction": "Malaysia, national",
+  "country": "MY",
+  "sources": [
+   "a2_023"
+  ]
+ },
+ {
+  "slug": "vladimir-gusinsky",
+  "name": "Vladimir Gusinsky",
+  "kind": "person",
+  "role_or_office": "Founder, NTV",
+  "jurisdiction": "Russia, national",
+  "country": "RU",
+  "sources": [
+   "a2_024"
+  ]
+ },
+ {
+  "slug": "yevgeny-kiselyov",
+  "name": "Yevgeny Kiselyov",
+  "kind": "person",
+  "role_or_office": "Managing Director, NTV",
+  "jurisdiction": "Russia, national",
+  "country": "RU",
+  "sources": [
+   "a2_024"
+  ]
+ },
+ {
+  "slug": "robert-mugabe",
+  "name": "Robert Mugabe",
+  "kind": "person",
+  "role_or_office": "President of Zimbabwe",
+  "jurisdiction": "Zimbabwe, national",
+  "country": "ZW",
+  "sources": [
+   "a2_025"
+  ]
+ },
+ {
+  "slug": "anna-politkovskaya",
+  "name": "Anna Politkovskaya",
+  "kind": "person",
+  "role_or_office": "Journalist, Novaya Gazeta",
+  "jurisdiction": "Russia, national",
+  "country": "RU",
+  "sources": [
+   "a2_026",
+   "a2_027"
+  ]
+ },
+ {
+  "slug": "dmitry-pavlyuchenkov",
+  "name": "Dmitry Pavlyuchenkov",
+  "kind": "person",
+  "role_or_office": "Former officer, Moscow police surveillance unit",
+  "jurisdiction": "Russia, national",
+  "country": "RU",
+  "sources": [
+   "a2_028"
+  ]
+ },
+ {
+  "slug": "mahmoud-ahmadinejad",
+  "name": "Mahmoud Ahmadinejad",
+  "kind": "person",
+  "role_or_office": "President of Iran",
+  "jurisdiction": "Iran, national",
+  "country": "IR",
+  "sources": [
+   "a2_029",
+   "a2_030"
+  ]
+ },
+ {
+  "slug": "jon-leyne",
+  "name": "Jon Leyne",
+  "kind": "person",
+  "role_or_office": "Tehran correspondent, BBC",
+  "jurisdiction": "Iran, national",
+  "country": "IR",
+  "sources": [
+   "a2_029"
+  ]
+ },
+ {
+  "slug": "rafael-correa",
+  "name": "Rafael Correa",
+  "kind": "person",
+  "role_or_office": "President of Ecuador",
+  "jurisdiction": "Ecuador, national",
+  "country": "EC",
+  "sources": [
+   "a2_032"
+  ]
+ },
+ {
+  "slug": "lenin-moreno",
+  "name": "Lenin Moreno",
+  "kind": "person",
+  "role_or_office": "President of Ecuador",
+  "jurisdiction": "Ecuador, national",
+  "country": "EC",
+  "sources": [
+   "a2_033"
+  ]
+ },
+ {
+  "slug": "adly-mansour",
+  "name": "Adly Mansour",
+  "kind": "person",
+  "role_or_office": "Interim President of Egypt",
+  "jurisdiction": "Egypt, national",
+  "country": "EG",
+  "sources": [
+   "a2_034"
+  ]
+ },
+ {
+  "slug": "abdel-fattah-el-sisi",
+  "name": "Abdel Fattah el-Sisi",
+  "kind": "person",
+  "role_or_office": "President of Egypt",
+  "jurisdiction": "Egypt, national",
+  "country": "EG",
+  "sources": [
+   "a2_035",
+   "a2_036"
+  ]
+ },
+ {
+  "slug": "peter-greste",
+  "name": "Peter Greste",
+  "kind": "person",
+  "role_or_office": "Correspondent, Al Jazeera English",
+  "jurisdiction": "Egypt, national",
+  "country": "EG",
+  "sources": [
+   "a2_034",
+   "a2_035",
+   "a2_036"
+  ]
+ },
+ {
+  "slug": "mohamed-fahmy",
+  "name": "Mohamed Fahmy",
+  "kind": "person",
+  "role_or_office": "Bureau Chief, Al Jazeera English, Cairo",
+  "jurisdiction": "Egypt, national",
+  "country": "EG",
+  "sources": [
+   "a2_034",
+   "a2_035",
+   "a2_036"
+  ]
+ },
+ {
+  "slug": "baher-mohamed",
+  "name": "Baher Mohamed",
+  "kind": "person",
+  "role_or_office": "Producer, Al Jazeera English, Cairo",
+  "jurisdiction": "Egypt, national",
+  "country": "EG",
+  "sources": [
+   "a2_034",
+   "a2_035",
+   "a2_036"
+  ]
+ },
+ {
+  "slug": "beata-szydlo",
+  "name": "Beata Szydlo",
+  "kind": "person",
+  "role_or_office": "Prime Minister of Poland",
+  "jurisdiction": "Poland, national",
+  "country": "PL",
+  "sources": [
+   "a2_037"
+  ]
+ },
+ {
+  "slug": "andrzej-duda",
+  "name": "Andrzej Duda",
+  "kind": "person",
+  "role_or_office": "President of Poland",
+  "jurisdiction": "Poland, national",
+  "country": "PL",
+  "sources": [
+   "a2_037"
+  ]
+ },
+ {
+  "slug": "hun-sen",
+  "name": "Hun Sen",
+  "kind": "person",
+  "role_or_office": "Prime Minister of Cambodia",
+  "jurisdiction": "Cambodia, national",
+  "country": "KH",
+  "sources": [
+   "a2_039",
+   "a2_040"
+  ]
+ },
+ {
+  "slug": "john-magufuli",
+  "name": "John Magufuli",
+  "kind": "person",
+  "role_or_office": "President of Tanzania",
+  "jurisdiction": "Tanzania, national",
+  "country": "TZ",
+  "sources": [
+   "a2_041"
+  ]
+ },
+ {
+  "slug": "aung-san-suu-kyi",
+  "name": "Aung San Suu Kyi",
+  "kind": "person",
+  "role_or_office": "State Counsellor of Myanmar",
+  "jurisdiction": "Myanmar, national",
+  "country": "MM",
+  "sources": [
+   "a2_043"
+  ]
+ },
+ {
+  "slug": "wa-lone",
+  "name": "Wa Lone",
+  "kind": "person",
+  "role_or_office": "Reporter, Reuters",
+  "jurisdiction": "Myanmar, national",
+  "country": "MM",
+  "sources": [
+   "a2_043",
+   "a2_044"
+  ]
+ },
+ {
+  "slug": "kyaw-soe-oo",
+  "name": "Kyaw Soe Oo",
+  "kind": "person",
+  "role_or_office": "Reporter, Reuters",
+  "jurisdiction": "Myanmar, national",
+  "country": "MM",
+  "sources": [
+   "a2_043",
+   "a2_044"
+  ]
+ },
+ {
+  "slug": "king-salman",
+  "name": "Salman bin Abdulaziz Al Saud",
+  "kind": "person",
+  "role_or_office": "King of Saudi Arabia",
+  "jurisdiction": "Saudi Arabia, national",
+  "country": "SA",
+  "sources": [
+   "a2_047"
+  ]
+ },
+ {
+  "slug": "mohammed-bin-salman",
+  "name": "Mohammed bin Salman",
+  "kind": "person",
+  "role_or_office": "Crown Prince of Saudi Arabia",
+  "jurisdiction": "Saudi Arabia, national",
+  "country": "SA",
+  "sources": [
+   "a2_047",
+   "a2_048"
+  ]
+ },
+ {
+  "slug": "jamal-khashoggi",
+  "name": "Jamal Khashoggi",
+  "kind": "person",
+  "role_or_office": "Columnist, The Washington Post",
+  "jurisdiction": "Saudi Arabia (national of)",
+  "country": "SA",
+  "sources": [
+   "a2_047",
+   "a2_048"
+  ]
+ },
+ {
+  "slug": "nicolas-maduro",
+  "name": "Nicolas Maduro",
+  "kind": "person",
+  "role_or_office": "President of Venezuela",
+  "jurisdiction": "Venezuela, national",
+  "country": "VE",
+  "sources": [
+   "a2_049"
+  ]
+ },
+ {
+  "slug": "scott-morrison",
+  "name": "Scott Morrison",
+  "kind": "person",
+  "role_or_office": "Prime Minister of Australia",
+  "jurisdiction": "Australia, national",
+  "country": "AU",
+  "sources": [
+   "a2_050"
+  ]
+ },
+ {
+  "slug": "dan-oakes",
+  "name": "Dan Oakes",
+  "kind": "person",
+  "role_or_office": "Investigative journalist, ABC",
+  "jurisdiction": "Australia, national",
+  "country": "AU",
+  "sources": [
+   "a2_050",
+   "a2_051"
+  ]
+ },
+ {
+  "slug": "david-cameron",
+  "name": "David Cameron",
+  "kind": "person",
+  "role_or_office": "Prime Minister of the United Kingdom",
+  "jurisdiction": "United Kingdom, national",
+  "country": "GB",
+  "sources": [
+   "a2_052",
+   "a2_053"
+  ]
+ },
+ {
+  "slug": "david-miranda",
+  "name": "David Miranda",
+  "kind": "person",
+  "role_or_office": "Partner of journalist Glenn Greenwald",
+  "jurisdiction": "Brazil (national of)",
+  "country": "BR",
+  "sources": [
+   "a2_052"
+  ]
+ },
+ {
+  "slug": "glenn-greenwald",
+  "name": "Glenn Greenwald",
+  "kind": "person",
+  "role_or_office": "Journalist, The Guardian",
+  "jurisdiction": "United Kingdom, national",
+  "country": "GB",
+  "sources": [
+   "a2_052"
+  ]
+ },
+ {
+  "slug": "alan-rusbridger",
+  "name": "Alan Rusbridger",
+  "kind": "person",
+  "role_or_office": "Editor-in-chief, The Guardian",
+  "jurisdiction": "United Kingdom, national",
+  "country": "GB",
+  "sources": [
+   "a2_053"
+  ]
+ },
+ {
+  "slug": "slobodan-milosevic",
+  "name": "Slobodan Milosevic",
+  "kind": "person",
+  "role_or_office": "President of the Federal Republic of Yugoslavia",
+  "jurisdiction": "Serbia (Federal Republic of Yugoslavia), national",
+  "country": "RS",
+  "sources": [
+   "a2_055"
+  ]
+ },
+ {
+  "slug": "laura-kelly",
+  "name": "Laura Kelly",
+  "kind": "person",
+  "role_or_office": "Governor of Kansas",
+  "jurisdiction": "Kansas, United States",
+  "country": "US",
+  "sources": [
+   "g_009"
+  ]
+ },
+ {
+  "slug": "tim-walz",
+  "name": "Tim Walz",
+  "kind": "person",
+  "role_or_office": "Governor of Minnesota",
+  "jurisdiction": "Minnesota, United States",
+  "country": "US",
+  "sources": [
+   "g_001"
+  ]
+ },
+ {
+  "slug": "minnesota-state-patrol",
+  "name": "Minnesota State Patrol",
+  "kind": "office",
+  "role_or_office": "State police agency",
+  "jurisdiction": "Minnesota, United States",
+  "country": "US",
+  "sources": [
+   "g_001"
+  ]
+ },
+ {
+  "slug": "jacob-frey",
+  "name": "Jacob Frey",
+  "kind": "person",
+  "role_or_office": "Mayor of Minneapolis",
+  "jurisdiction": "Minneapolis, United States",
+  "country": "US",
+  "sources": [
+   "g_029"
+  ]
+ },
+ {
+  "slug": "minneapolis-police-department",
+  "name": "Minneapolis Police Department",
+  "kind": "office",
+  "role_or_office": "Municipal police department",
+  "jurisdiction": "Minneapolis, United States",
+  "country": "US",
+  "sources": [
+   "g_029"
+  ]
+ },
+ {
+  "slug": "us-department-of-homeland-security",
+  "name": "U.S. Department of Homeland Security",
+  "kind": "office",
+  "role_or_office": "Federal department deploying officers to Portland in 2020",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "g_003"
+  ]
+ },
+ {
+  "slug": "us-department-of-health-and-human-services",
+  "name": "U.S. Department of Health and Human Services",
+  "kind": "office",
+  "role_or_office": "Federal health department overseeing the CDC",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "g_005",
+   "g_006"
+  ]
+ },
+ {
+  "slug": "michael-caputo",
+  "name": "Michael Caputo",
+  "kind": "person",
+  "role_or_office": "HHS Assistant Secretary for Public Affairs, 2020",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "g_005"
+  ]
+ },
+ {
+  "slug": "joe-biden",
+  "name": "Joe Biden",
+  "kind": "person",
+  "role_or_office": "President of the United States, 2021-2025",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "g_008"
+  ]
+ },
+ {
+  "slug": "merrick-garland",
+  "name": "Merrick Garland",
+  "kind": "person",
+  "role_or_office": "United States Attorney General, 2021-2025",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "g_007",
+   "g_008"
+  ]
+ },
+ {
+  "slug": "gideon-cody",
+  "name": "Gideon Cody",
+  "kind": "person",
+  "role_or_office": "Chief of Police, Marion, Kansas, 2023",
+  "jurisdiction": "Marion, Kansas, United States",
+  "country": "US",
+  "sources": [
+   "g_009",
+   "g_011"
+  ]
+ },
+ {
+  "slug": "marion-police-department",
+  "name": "Marion Police Department",
+  "kind": "office",
+  "role_or_office": "Municipal police department",
+  "jurisdiction": "Marion, Kansas, United States",
+  "country": "US",
+  "sources": [
+   "g_009"
+  ]
+ },
+ {
+  "slug": "doug-ducey",
+  "name": "Doug Ducey",
+  "kind": "person",
+  "role_or_office": "Governor of Arizona, 2015-2023",
+  "jurisdiction": "Arizona, United States",
+  "country": "US",
+  "sources": [
+   "g_013"
+  ]
+ },
+ {
+  "slug": "arizona-legislature",
+  "name": "Arizona Legislature",
+  "kind": "office",
+  "role_or_office": "State legislature",
+  "jurisdiction": "Arizona, United States",
+  "country": "US",
+  "sources": [
+   "g_013"
+  ]
+ },
+ {
+  "slug": "karen-bass",
+  "name": "Karen Bass",
+  "kind": "person",
+  "role_or_office": "Mayor of Los Angeles",
+  "jurisdiction": "Los Angeles, United States",
+  "country": "US",
+  "sources": [
+   "g_022"
+  ]
+ },
+ {
+  "slug": "los-angeles-police-department",
+  "name": "Los Angeles Police Department",
+  "kind": "office",
+  "role_or_office": "Municipal police department",
+  "jurisdiction": "Los Angeles, United States",
+  "country": "US",
+  "sources": [
+   "g_022"
+  ]
+ },
+ {
+  "slug": "paramount-skydance",
+  "name": "Paramount Skydance",
+  "kind": "other",
+  "role_or_office": "Media company, parent of CBS News",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "g_023",
+   "g_026"
+  ]
+ },
+ {
+  "slug": "karoline-leavitt",
+  "name": "Karoline Leavitt",
+  "kind": "person",
+  "role_or_office": "White House Press Secretary",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "g_027"
+  ]
+ },
+ {
+  "slug": "steven-cheung",
+  "name": "Steven Cheung",
+  "kind": "person",
+  "role_or_office": "White House Communications Director",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "g_027"
+  ]
+ },
+ {
+  "slug": "tom-homan",
+  "name": "Tom Homan",
+  "kind": "person",
+  "role_or_office": "White House Border Czar",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "g_025"
+  ]
+ },
+ {
+  "slug": "u-s-immigration-and-customs-enforcement",
+  "name": "U.S. Immigration and Customs Enforcement",
+  "kind": "office",
+  "role_or_office": "Federal immigration enforcement agency",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "g_025"
+  ]
+ },
+ {
+  "slug": "u-s-customs-and-border-protection",
+  "name": "U.S. Customs and Border Protection",
+  "kind": "office",
+  "role_or_office": "Federal border and customs agency",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "g_032"
+  ]
+ },
+ {
+  "slug": "fbi",
+  "name": "Federal Bureau of Investigation",
+  "kind": "office",
+  "role_or_office": "Federal law enforcement agency",
+  "jurisdiction": "United States, federal",
+  "country": "US",
+  "sources": [
+   "g_031"
+  ]
+ },
+ {
+  "slug": "royal-canadian-mounted-police",
+  "name": "Royal Canadian Mounted Police",
+  "kind": "office",
+  "role_or_office": "Canada's federal police, contracted for provincial policing in British Columbia",
+  "jurisdiction": "British Columbia, Canada",
+  "country": "CA",
+  "sources": [
+   "g_067"
+  ]
+ },
+ {
+  "slug": "john-horgan",
+  "name": "John Horgan",
+  "kind": "person",
+  "role_or_office": "Premier of British Columbia, 2017-2022",
+  "jurisdiction": "British Columbia, Canada",
+  "country": "CA",
+  "sources": [
+   "g_067"
+  ]
+ },
+ {
+  "slug": "min-aung-hlaing",
+  "name": "Min Aung Hlaing",
+  "kind": "person",
+  "role_or_office": "Chairman, Myanmar State Administration Council",
+  "jurisdiction": "Myanmar",
+  "country": "MM",
+  "sources": [
+   "g_036"
+  ]
+ },
+ {
+  "slug": "myanmar-military",
+  "name": "Myanmar military (Tatmadaw)",
+  "kind": "office",
+  "role_or_office": "Armed forces and ruling junta since the February 2021 coup",
+  "jurisdiction": "Myanmar",
+  "country": "MM",
+  "sources": [
+   "g_036",
+   "g_037"
+  ]
+ },
+ {
+  "slug": "alexander-lukashenko",
+  "name": "Alexander Lukashenko",
+  "kind": "person",
+  "role_or_office": "President of Belarus",
+  "jurisdiction": "Belarus",
+  "country": "BY",
+  "sources": [
+   "g_038"
+  ]
+ },
+ {
+  "slug": "belarusian-ministry-of-information",
+  "name": "Belarusian Ministry of Information",
+  "kind": "office",
+  "role_or_office": "Government information ministry",
+  "jurisdiction": "Belarus",
+  "country": "BY",
+  "sources": [
+   "g_038",
+   "g_039"
+  ]
+ },
+ {
+  "slug": "indian-income-tax-department",
+  "name": "Indian Income Tax Department",
+  "kind": "office",
+  "role_or_office": "Tax authority",
+  "jurisdiction": "India",
+  "country": "IN",
+  "sources": [
+   "g_042"
+  ]
+ },
+ {
+  "slug": "ministry-of-electronics-and-information-technology-india",
+  "name": "Ministry of Electronics and Information Technology (India)",
+  "kind": "office",
+  "role_or_office": "Ministry that issued the IT Rules amendment creating the Fact Check Unit",
+  "jurisdiction": "India",
+  "country": "IN",
+  "sources": [
+   "g_043",
+   "g_044"
+  ]
+ },
+ {
+  "slug": "alejandro-giammattei",
+  "name": "Alejandro Giammattei",
+  "kind": "person",
+  "role_or_office": "President of Guatemala, 2020-2024",
+  "jurisdiction": "Guatemala",
+  "country": "GT",
+  "sources": [
+   "g_045"
+  ]
+ },
+ {
+  "slug": "guatemalan-public-ministry",
+  "name": "Guatemalan Public Ministry",
+  "kind": "office",
+  "role_or_office": "Public prosecutor's office",
+  "jurisdiction": "Guatemala",
+  "country": "GT",
+  "sources": [
+   "g_045",
+   "g_046"
+  ]
+ },
+ {
+  "slug": "daniel-ortega",
+  "name": "Daniel Ortega",
+  "kind": "person",
+  "role_or_office": "President of Nicaragua",
+  "jurisdiction": "Nicaragua",
+  "country": "NI",
+  "sources": [
+   "g_047"
+  ]
+ },
+ {
+  "slug": "nicaraguan-court-of-appeals",
+  "name": "Nicaraguan Court of Appeals",
+  "kind": "office",
+  "role_or_office": "Appellate court that issued the citizenship-stripping rulings",
+  "jurisdiction": "Nicaragua",
+  "country": "NI",
+  "sources": [
+   "g_047"
+  ]
+ },
+ {
+  "slug": "robert-fico",
+  "name": "Robert Fico",
+  "kind": "person",
+  "role_or_office": "Prime Minister of Slovakia",
+  "jurisdiction": "Slovakia",
+  "country": "SK",
+  "sources": [
+   "g_049"
+  ]
+ },
+ {
+  "slug": "slovak-parliament",
+  "name": "National Council of the Slovak Republic",
+  "kind": "office",
+  "role_or_office": "National legislature",
+  "jurisdiction": "Slovakia",
+  "country": "SK",
+  "sources": [
+   "g_049"
+  ]
+ },
+ {
+  "slug": "irakli-kobakhidze",
+  "name": "Irakli Kobakhidze",
+  "kind": "person",
+  "role_or_office": "Prime Minister of Georgia",
+  "jurisdiction": "Georgia",
+  "country": "GE",
+  "sources": [
+   "g_050"
+  ]
+ },
+ {
+  "slug": "georgian-parliament",
+  "name": "Parliament of Georgia",
+  "kind": "office",
+  "role_or_office": "National legislature",
+  "jurisdiction": "Georgia",
+  "country": "GE",
+  "sources": [
+   "g_050"
+  ]
+ },
+ {
+  "slug": "hong-kong-district-court",
+  "name": "Hong Kong District Court",
+  "kind": "office",
+  "role_or_office": "Trial court",
+  "jurisdiction": "Hong Kong",
+  "country": "HK",
+  "sources": [
+   "g_051",
+   "g_052"
+  ]
+ },
+ {
+  "slug": "javier-milei",
+  "name": "Javier Milei",
+  "kind": "person",
+  "role_or_office": "President of Argentina",
+  "jurisdiction": "Argentina",
+  "country": "AR",
+  "sources": [
+   "g_053"
+  ]
+ },
+ {
+  "slug": "aleksandar-vucic",
+  "name": "Aleksandar Vucic",
+  "kind": "person",
+  "role_or_office": "President of Serbia",
+  "jurisdiction": "Serbia",
+  "country": "RS",
+  "sources": [
+   "g_054"
+  ]
+ },
+ {
+  "slug": "serbian-ministry-of-interior",
+  "name": "Serbian Ministry of the Interior",
+  "kind": "office",
+  "role_or_office": "Ministry overseeing police",
+  "jurisdiction": "Serbia",
+  "country": "RS",
+  "sources": [
+   "g_054"
+  ]
+ },
+ {
+  "slug": "abiy-ahmed",
+  "name": "Abiy Ahmed",
+  "kind": "person",
+  "role_or_office": "Prime Minister of Ethiopia",
+  "jurisdiction": "Ethiopia",
+  "country": "ET",
+  "sources": [
+   "g_055"
+  ]
+ },
+ {
+  "slug": "ethiopian-media-authority",
+  "name": "Ethiopian Media Authority",
+  "kind": "office",
+  "role_or_office": "Broadcast and media regulator",
+  "jurisdiction": "Ethiopia",
+  "country": "ET",
+  "sources": [
+   "g_055"
+  ]
+ },
+ {
+  "slug": "shehbaz-sharif",
+  "name": "Shehbaz Sharif",
+  "kind": "person",
+  "role_or_office": "Prime Minister of Pakistan",
+  "jurisdiction": "Pakistan",
+  "country": "PK",
+  "sources": [
+   "g_056"
+  ]
+ },
+ {
+  "slug": "parliament-of-pakistan",
+  "name": "Parliament of Pakistan",
+  "kind": "office",
+  "role_or_office": "National legislature",
+  "jurisdiction": "Pakistan",
+  "country": "PK",
+  "sources": [
+   "g_056",
+   "g_057"
+  ]
+ },
+ {
+  "slug": "muhammad-yunus",
+  "name": "Muhammad Yunus",
+  "kind": "person",
+  "role_or_office": "Chief Adviser, interim government of Bangladesh",
+  "jurisdiction": "Bangladesh",
+  "country": "BD",
+  "sources": [
+   "g_058"
+  ]
+ },
+ {
+  "slug": "venezuelan-national-guard",
+  "name": "Venezuelan National Guard (GNB)",
+  "kind": "office",
+  "role_or_office": "Military internal security force",
+  "jurisdiction": "Venezuela",
+  "country": "VE",
+  "sources": [
+   "g_059"
+  ]
+ },
+ {
+  "slug": "turkish-center-for-combating-disinformation",
+  "name": "Turkish Center for Combating Disinformation",
+  "kind": "office",
+  "role_or_office": "Government body that disputes reporting it deems false",
+  "jurisdiction": "Turkiye",
+  "country": "TR",
+  "sources": [
+   "g_061"
+  ]
+ },
+ {
+  "slug": "kais-saied",
+  "name": "Kais Saied",
+  "kind": "person",
+  "role_or_office": "President of Tunisia",
+  "jurisdiction": "Tunisia",
+  "country": "TN",
+  "sources": [
+   "g_063"
+  ]
+ },
+ {
+  "slug": "samia-suluhu-hassan",
+  "name": "Samia Suluhu Hassan",
+  "kind": "person",
+  "role_or_office": "President of Tanzania",
+  "jurisdiction": "Tanzania",
+  "country": "TZ",
+  "sources": [
+   "g_065"
+  ]
+ },
+ {
+  "slug": "tanzania-communications-regulatory-authority",
+  "name": "Tanzania Communications Regulatory Authority",
+  "kind": "office",
+  "role_or_office": "Telecommunications regulator",
+  "jurisdiction": "Tanzania",
+  "country": "TZ",
+  "sources": [
+   "g_066"
+  ]
+ },
+ {
+  "slug": "australian-federal-police",
+  "name": "Australian Federal Police",
+  "kind": "office",
+  "role_or_office": "National police force",
+  "jurisdiction": "Australia",
+  "country": "AU",
+  "sources": [
+   "g_068",
+   "g_069"
+  ]
+ },
+ {
+  "slug": "xi-jinping",
+  "name": "Xi Jinping",
+  "kind": "person",
+  "role_or_office": "President of China",
+  "jurisdiction": "China",
+  "country": "CN",
+  "sources": [
+   "g_070"
+  ]
+ },
+ {
+  "slug": "chinese-ministry-of-foreign-affairs",
+  "name": "Chinese Ministry of Foreign Affairs",
+  "kind": "office",
+  "role_or_office": "Foreign ministry",
+  "jurisdiction": "China",
+  "country": "CN",
+  "sources": [
+   "g_070"
+  ]
+ },
+ {
+  "slug": "emmerson-mnangagwa",
+  "name": "Emmerson Mnangagwa",
+  "kind": "person",
+  "role_or_office": "President of Zimbabwe",
+  "jurisdiction": "Zimbabwe",
+  "country": "ZW",
+  "sources": [
+   "g_071",
+   "g_072"
+  ]
+ },
+ {
+  "slug": "parliament-of-zimbabwe",
+  "name": "Parliament of Zimbabwe",
+  "kind": "office",
+  "role_or_office": "National legislature",
+  "jurisdiction": "Zimbabwe",
+  "country": "ZW",
+  "sources": [
+   "g_071"
+  ]
+ },
+ {
+  "slug": "laszlo-vecsei",
+  "name": "Laszlo Vecsei",
+  "kind": "person",
+  "role_or_office": "Mayor of Csakbereny, Hungary",
+  "jurisdiction": "Hungary",
+  "country": "HU",
+  "sources": [
+   "l1_001"
+  ]
+ },
+ {
+  "slug": "rodrigo-duterte",
+  "name": "Rodrigo Duterte",
+  "kind": "person",
+  "role_or_office": "President of the Philippines",
+  "jurisdiction": "Philippines",
+  "country": "PH",
+  "sources": [
+   "l1_005"
+  ]
+ },
+ {
+  "slug": "kassym-jomart-tokayev",
+  "name": "Kassym-Jomart Tokayev",
+  "kind": "person",
+  "role_or_office": "President of Kazakhstan",
+  "jurisdiction": "Kazakhstan",
+  "country": "KZ",
+  "sources": [
+   "l1_008"
+  ]
+ },
+ {
+  "slug": "hugo-chavez",
+  "name": "Hugo Chavez",
+  "kind": "person",
+  "role_or_office": "President of Venezuela",
+  "jurisdiction": "Venezuela",
+  "country": "VE",
+  "sources": [
+   "l1_012",
+   "l1_013"
+  ]
+ },
+ {
+  "slug": "benjamin-netanyahu",
+  "name": "Benjamin Netanyahu",
+  "kind": "person",
+  "role_or_office": "Prime Minister of Israel",
+  "jurisdiction": "Israel",
+  "country": "IL",
+  "sources": [
+   "l1_019"
+  ]
+ },
+ {
+  "slug": "nguyen-xuan-phuc",
+  "name": "Nguyen Xuan Phuc",
+  "kind": "person",
+  "role_or_office": "Prime Minister of Vietnam",
+  "jurisdiction": "Vietnam",
+  "country": "VN",
+  "sources": [
+   "l1_022"
+  ]
+ },
+ {
+  "slug": "ebrahim-raisi",
+  "name": "Ebrahim Raisi",
+  "kind": "person",
+  "role_or_office": "President of Iran",
+  "jurisdiction": "Iran",
+  "country": "IR",
+  "sources": [
+   "l1_023"
+  ]
+ },
+ {
+  "slug": "kim-jong-il",
+  "name": "Kim Jong Il",
+  "kind": "person",
+  "role_or_office": "Chairman of the National Defence Commission of North Korea",
+  "jurisdiction": "North Korea",
+  "country": "KP",
+  "sources": [
+   "l1_025"
+  ]
+ },
+ {
+  "slug": "yingluck-shinawatra",
+  "name": "Yingluck Shinawatra",
+  "kind": "person",
+  "role_or_office": "Prime Minister of Thailand",
+  "jurisdiction": "Thailand",
+  "country": "TH",
+  "sources": [
+   "l1_028",
+   "l1_029"
+  ]
+ },
+ {
+  "slug": "saadeddine-othmani",
+  "name": "Saadeddine Othmani",
+  "kind": "person",
+  "role_or_office": "Prime Minister of Morocco",
+  "jurisdiction": "Morocco",
+  "country": "MA",
+  "sources": [
+   "l1_034",
+   "l1_035"
+  ]
+ },
+ {
+  "slug": "enrique-pena-nieto",
+  "name": "Enrique Pena Nieto",
+  "kind": "person",
+  "role_or_office": "President of Mexico",
+  "jurisdiction": "Mexico",
+  "country": "MX",
+  "sources": [
+   "l1_038"
+  ]
+ },
+ {
+  "slug": "carrie-lam",
+  "name": "Carrie Lam",
+  "kind": "person",
+  "role_or_office": "Chief Executive of Hong Kong",
+  "jurisdiction": "Hong Kong, China",
+  "country": "HK",
+  "sources": [
+   "l1_011"
+  ]
+ },
+ {
+  "slug": "donald-tusk",
+  "name": "Donald Tusk",
+  "kind": "person",
+  "role_or_office": "Prime Minister of Poland",
+  "jurisdiction": "Poland",
+  "country": "PL",
+  "sources": [
+   "l1_032"
+  ]
+ },
+ {
+  "slug": "jhopee-avancena",
+  "name": "Jhopee Avancena",
+  "kind": "person",
+  "role_or_office": "Head of Malacanang Palace's internal house affairs office",
+  "jurisdiction": "Philippines",
+  "country": "PH",
+  "sources": [
+   "l1_005"
+  ]
+ },
+ {
+  "slug": "harry-roque",
+  "name": "Harry Roque",
+  "kind": "person",
+  "role_or_office": "Presidential spokesperson of the Philippines",
+  "jurisdiction": "Philippines",
+  "country": "PH",
+  "sources": [
+   "l1_005"
+  ]
+ },
+ {
+  "slug": "anatoly-glaz",
+  "name": "Anatoly Glaz",
+  "kind": "person",
+  "role_or_office": "Spokesman for Belarus's Foreign Ministry",
+  "jurisdiction": "Belarus",
+  "country": "BY",
+  "sources": [
+   "l1_004"
+  ]
+ },
+ {
+  "slug": "geng-shuang",
+  "name": "Geng Shuang",
+  "kind": "person",
+  "role_or_office": "Spokesperson for China's Ministry of Foreign Affairs",
+  "jurisdiction": "China",
+  "country": "CN",
+  "sources": [
+   "l1_003"
+  ]
+ },
+ {
+  "slug": "dmitry-muratov",
+  "name": "Dmitry Muratov",
+  "kind": "person",
+  "role_or_office": "Editor of Novaya Gazeta",
+  "jurisdiction": "Russia",
+  "country": "RU",
+  "sources": [
+   "l1_010"
+  ]
+ },
+ {
+  "slug": "hila-gerstl",
+  "name": "Hila Gerstl",
+  "kind": "person",
+  "role_or_office": "Israeli district court judge",
+  "jurisdiction": "Israel",
+  "country": "IL",
+  "sources": [
+   "l1_019"
+  ]
+ },
+ {
+  "slug": "mateusz-morawiecki",
+  "name": "Mateusz Morawiecki",
+  "kind": "person",
+  "role_or_office": "Prime Minister of Poland",
+  "jurisdiction": "Poland",
+  "country": "PL",
+  "sources": []
+ },
+ {
+  "slug": "ilham-aliyev",
+  "name": "Ilham Aliyev",
+  "kind": "person",
+  "role_or_office": "President of Azerbaijan",
+  "jurisdiction": "Azerbaijan",
+  "country": "AZ",
+  "sources": []
+ },
+ {
+  "slug": "isaias-afwerki",
+  "name": "Isaias Afwerki",
+  "kind": "person",
+  "role_or_office": "President of Eritrea",
+  "jurisdiction": "Eritrea",
+  "country": "ER",
+  "sources": []
+ },
+ {
+  "slug": "joseph-muscat",
+  "name": "Joseph Muscat",
+  "kind": "person",
+  "role_or_office": "Prime Minister of Malta",
+  "jurisdiction": "Malta",
+  "country": "MT",
+  "sources": []
+ },
+ {
+  "slug": "nguyen-tan-dung",
+  "name": "Nguyen Tan Dung",
+  "kind": "person",
+  "role_or_office": "Prime Minister of Vietnam",
+  "jurisdiction": "Vietnam",
+  "country": "VN",
+  "sources": []
+ },
+ {
+  "slug": "hassan-rouhani",
+  "name": "Hassan Rouhani",
+  "kind": "person",
+  "role_or_office": "President of Iran",
+  "jurisdiction": "Iran",
+  "country": "IR",
+  "sources": []
+ },
+ {
+  "slug": "kesma",
+  "name": "Central European Press and Media Foundation (KESMA)",
+  "kind": "organization",
+  "role_or_office": "Government-aligned media holding foundation",
+  "jurisdiction": "Hungary",
+  "country": "HU",
+  "sources": []
+ },
+ {
+  "slug": "roskomnadzor",
+  "name": "Roskomnadzor",
+  "kind": "agency",
+  "role_or_office": "Russia's federal media and communications regulator",
+  "jurisdiction": "Russia",
+  "country": "RU",
+  "sources": []
+ },
+ {
+  "slug": "supreme-council-for-media-regulation-egypt",
+  "name": "Supreme Council for Media Regulation",
+  "kind": "agency",
+  "role_or_office": "Egypt's state media regulator",
+  "jurisdiction": "Egypt",
+  "country": "EG",
+  "sources": []
+ },
+ {
+  "slug": "minsk-central-district-court",
+  "name": "Central District Court, Minsk",
+  "kind": "agency",
+  "role_or_office": "Belarusian court that issued the extremist designations",
+  "jurisdiction": "Belarus",
+  "country": "BY",
+  "sources": []
+ },
+ {
+  "slug": "pkn-orlen",
+  "name": "PKN Orlen",
+  "kind": "organization",
+  "role_or_office": "Poland's state-controlled oil and gas company",
+  "jurisdiction": "Poland",
+  "country": "PL",
+  "sources": []
+ },
+ {
+  "slug": "demiroren-holding",
+  "name": "Demiroren Holding",
+  "kind": "organization",
+  "role_or_office": "Turkish conglomerate aligned with the governing party",
+  "jurisdiction": "Turkiye",
+  "country": "TR",
+  "sources": []
+ },
+ {
+  "slug": "ndh-turkish-court-istanbul",
+  "name": "Istanbul court (Feza Media Group case)",
+  "kind": "agency",
+  "role_or_office": "Court that ordered trustees installed at Feza Media Group",
+  "jurisdiction": "Turkiye",
+  "country": "TR",
+  "sources": []
+ }
+]

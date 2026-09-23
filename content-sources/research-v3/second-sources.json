@@ -1,0 +1,1285 @@
+[
+  {
+    "incident_slug": "2026-hungary-mayor-removes-telex-reporters",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/business/media-telecom/journalist-groups-condemn-hungary-over-reporters-removal-campaign-event-2026-03-17/",
+        "title": "Journalist groups condemn Hungary over reporters' removal from campaign event",
+        "publisher": "Reuters",
+        "published_on": "2026-03-17",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      },
+      {
+        "url": "https://telex.hu/english/2026/03/12/we-filed-a-complaint-after-our-colleagues-were-forcibly-removed-from-the-deputy-pm-s-campaign-event",
+        "title": "We filed a complaint after our colleagues were forcibly removed from the Deputy PM's campaign event",
+        "publisher": "Telex",
+        "published_on": "2026-03-12",
+        "kind": "journalistic_or_reference",
+        "evidence_quote": "On March 10, László Vécsei, the mayor of Csákberény used physical force to remove two of our colleagues, Nóra Siteri and Judit Presinszky from a press conference and public forum attended by Deputy Prime Minister Zsolt Semjén.",
+        "quote_missing": false,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2022-russia-bars-entry-foreign-journalists",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/business/media-telecom/russia-closes-moscow-bureau-canadian-broadcaster-cbc-2022-05-18/",
+        "title": "Russia closes Moscow bureau of Canadian broadcaster CBC",
+        "publisher": "Reuters",
+        "published_on": "2022-05-18",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      },
+      {
+        "url": "https://www.reuters.com/world/uk/russia-bans-29-british-journalists-entering-2022-06-14/",
+        "title": "Russia bans 29 British journalists, along with defence figures",
+        "publisher": "Reuters",
+        "published_on": "2022-06-14",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      },
+      {
+        "url": "https://www.reuters.com/world/europe/russia-bans-121-australians-including-journalists-defence-figures-2022-06-16/",
+        "title": "Russia bans 121 Australians including journalists and defence figures",
+        "publisher": "Reuters",
+        "published_on": "2022-06-16",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2020-china-expels-three-wsj-journalists-headline",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/article/world/factbox-foreign-journalists-forced-to-leave-china-as-diplomatic-tensions-worsen-idUSKBN25Z0QL/",
+        "title": "Factbox: Foreign journalists forced to leave China as diplomatic tensions worsen",
+        "publisher": "Reuters",
+        "published_on": "2020-09-08",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      },
+      {
+        "url": "https://apnews.com/general-news-9172fa02618c7df5bc6d8e8f92b31bf6",
+        "title": "China journalist association blasts US visa limits",
+        "publisher": "Associated Press",
+        "published_on": "2020-03-06",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2020-belarus-strips-accreditation-foreign-outlets",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/business/media-telecom/belarus-revokes-accreditations-journalists-covering-protests-foreign-media-2020-08-29/",
+        "title": "Belarus revokes accreditations of journalists covering protests for foreign media",
+        "publisher": "Reuters",
+        "published_on": "2020-08-29",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      },
+      {
+        "url": "https://www.bbc.com/news/world-europe-53924922",
+        "title": "Belarus: Journalists covering protests stripped of accreditation",
+        "publisher": "BBC",
+        "published_on": "2020-08-29",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2018-philippines-bans-rappler-presidential-palace",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/article/world/philippine-leader-bans-news-site-from-covering-his-events-over-fake-news-idUSKCN1G41TZ/",
+        "title": "Philippine leader bans news site from covering his events over 'fake news'",
+        "publisher": "Reuters",
+        "published_on": "2018-02-21",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      },
+      {
+        "url": "https://newsinfo.inquirer.net/1154213/palace-justifies-coverage-ban-vs-rappler-its-a-privilege-not-a-right",
+        "title": "Palace justifies coverage ban vs Rappler: It's a 'privilege not a right'",
+        "publisher": "Philippine Daily Inquirer",
+        "published_on": "2019-08-22",
+        "kind": "wire_or_major_press",
+        "evidence_quote": "Rappler's Malacañang reporter Pia Ranada was first barred from entering Malacañang premises on February 20, 2018.",
+        "quote_missing": false,
+        "supports_field": "occurred_on"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2021-turkiye-press-card-controls-restrictive",
+    "sources": [
+      {
+        "url": "https://www.turkishminute.com/2021/12/18/rt-orders-stay-on-changes-to-press-card-regulation-aiming-to-make-cancellation-easier/",
+        "title": "Court orders stay on changes to press card regulation aiming to make cancellation easier",
+        "publisher": "Turkish Minute",
+        "published_on": "2021-12-18",
+        "kind": "journalistic_or_reference",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened",
+        "note": "no Reuters/AP/BBC/AFP report located; best available independent journalistic source"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2005-zimbabwe-court-refuses-daily-news-accreditation",
+    "sources": [
+      {
+        "url": "https://allafrica.com/stories/200505170875.html",
+        "title": "Zimbabwe: High Court Refuses to Accredit 'Daily News' Journalists",
+        "publisher": "AllAfrica",
+        "published_on": "2005-05-17",
+        "kind": "journalistic_or_reference",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened",
+        "note": "no Reuters/AP/BBC/AFP report located; AllAfrica is a regional news aggregator/wire"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2024-kazakhstan-restrictive-media-accreditation-rules",
+    "sources": [
+      {
+        "url": "https://www.voanews.com/a/kazakh-journalists-worry-as-new-media-rules-come-into-force/7802843.html",
+        "title": "Kazakh journalists worry as new media rules come into force",
+        "publisher": "Voice of America",
+        "published_on": "2024-09",
+        "kind": "journalistic_or_reference",
+        "evidence_quote": "New and proposed amendments to Kazakhstan's accreditation regulations are excessive and open too many doors to censorship.",
+        "quote_missing": false,
+        "supports_field": "occurred_on/new accreditation rules"
+      },
+      {
+        "url": "https://www.rferl.org/a/kazakhstan-cpj-media-accreditation-law/33105583.html",
+        "title": "CPJ Expresses Concerns Over Kazakhstan's New Media Accreditation Regulations",
+        "publisher": "Radio Free Europe/Radio Liberty",
+        "published_on": "2024-09",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "occurred_on/new accreditation rules"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2020-china-press-card-visa-restrictions-us-outlets",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/article/world/factbox-foreign-journalists-forced-to-leave-china-as-diplomatic-tensions-worsen-idUSKBN25Z0QL/",
+        "title": "Foreign journalists forced to leave China as diplomatic tensions worsen",
+        "publisher": "Reuters",
+        "published_on": "2020-09-08",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      },
+      {
+        "url": "https://www.washingtonpost.com/world/asia_pacific/beijing-pulls-credentials-for-journalists-at-three-us-news-outlets-including-the-post/2020/03/17/22a476d6-686f-11ea-b199-3a9799c54512_story.html",
+        "title": "Beijing pulls credentials for journalists at three U.S. news outlets, including The Post",
+        "publisher": "The Washington Post",
+        "published_on": "2020-03-17",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "occurred_on"
+      },
+      {
+        "url": "https://www.latimes.com/world-nation/story/2020-03-17/china-revoke-media-credentials-new-york-times-washington-post",
+        "title": "China to revoke credentials of U.S. journalists from 3 major newspapers",
+        "publisher": "Los Angeles Times",
+        "published_on": "2020-03-17",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "occurred_on"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2022-russia-suspends-novaya-gazeta-license",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/business/media-telecom/russian-court-revokes-newspaper-novaya-gazetas-license-2022-09-05/",
+        "title": "Novaya Gazeta, one of Russia's last independent media, banned after court revokes licence",
+        "publisher": "Reuters",
+        "published_on": "2022-09-05",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2021-hong-kong-apple-daily-forced-closure",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/world/asia-pacific/hong-kong-police-arrest-apple-daily-columnist-under-security-law-media-2021-06-23/",
+        "title": "Hong Kong pro-democracy paper Apple Daily to print last edition on Thursday",
+        "publisher": "Reuters",
+        "published_on": "2021-06-23",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      },
+      {
+        "url": "https://www.bbc.com/news/world-asia-china-57578926",
+        "title": "Apple Daily: Hong Kong pro-democracy paper announces closure",
+        "publisher": "BBC",
+        "published_on": "2021-06-23",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2007-venezuela-rctv-license-not-renewed",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/article/world/factbox-chavezs-thorny-dealings-with-venezuelan-media-idUSN24382984/",
+        "title": "Factbox: Chavez's thorny dealings with Venezuelan media",
+        "publisher": "Reuters",
+        "published_on": "2007-05-24",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2003-zimbabwe-daily-news-shut-down",
+    "sources": [
+      {
+        "url": "https://rsf.org/en/court-orders-authorities-allow-daily-news-reappear",
+        "title": "Court orders authorities to allow Daily News to reappear",
+        "publisher": "RSF",
+        "published_on": "2003-09-22",
+        "kind": "press_freedom_org",
+        "evidence_quote": "Acting without a warrant, police confiscated about 100 computers from the newspaper on 16 and 17 September.",
+        "quote_missing": false,
+        "supports_field": "occurred_on/shutdown and aftermath",
+        "note": "No qualifying Reuters/AP/BBC/AFP/major-newspaper report surfaced in two search passes for this 2003 event; RSF/CPJ/Freedom House are the available record."
+      }
+    ]
+  },
+  {
+    "incident_slug": "2021-hungary-klubradio-loses-broadcast-license",
+    "sources": [
+      {
+        "url": "https://www.euronews.com/2021/02/09/hungary-s-first-independent-radio-station-klubradio-to-go-off-air-on-sunday",
+        "title": "Fresh blow to press freedom in Hungary as Klubrádió forced off the air",
+        "publisher": "Euronews",
+        "published_on": "2021-02-09",
+        "kind": "wire_or_major_press",
+        "evidence_quote": "The National Associated of Hungarian Journalists called Klubradio 'the only remaining public service broadcaster in Hungary whose content is not under government influence'.",
+        "quote_missing": false,
+        "supports_field": "occurred_on/license loss"
+      },
+      {
+        "url": "https://www.euronews.com/2021/04/11/klubradio-frequency-of-hungarian-independent-radio-to-be-taken-over-by-group-close-to-orba",
+        "title": "Klubrádió: Frequency to be taken over by group close to Orbán",
+        "publisher": "Euronews",
+        "published_on": "2021-04-11",
+        "kind": "wire_or_major_press",
+        "evidence_quote": "On March 30, the NMHH awarded the 92.9 FM frequency to Spirit FM, which belongs to a media group close to Orban.",
+        "quote_missing": false,
+        "supports_field": "outcome/frequency reassigned"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2010-israel-prisoner-x-gag-order",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/article/world/israel-publishes-some-details-as-australian-spy-mystery-deepens-idUSBRE91D05P/",
+        "title": "Israel publishes some details as Australian spy mystery deepens",
+        "publisher": "Reuters",
+        "published_on": "2013-02-14",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "outcome"
+      },
+      {
+        "url": "https://www.smh.com.au/national/spies-lies-and-intrigue-life-and-death-of-prisoner-x-20130215-2eih7.html",
+        "title": "Spies, lies and intrigue: life and death of Prisoner X",
+        "publisher": "The Sydney Morning Herald",
+        "published_on": "2013-02-16",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "occurred_on",
+        "note": "identifies gag order issued 2010-03-04"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2023-turkiye-rtuk-fines-earthquake-coverage",
+    "sources": [
+      {
+        "url": "https://www.wionews.com/world/turkey-three-news-outlets-fined-for-their-earthquake-coverage-565075",
+        "title": "Turkey: Three news outlets fined for critical coverage of govt's earthquake response",
+        "publisher": "WION",
+        "published_on": "2023-02-22",
+        "kind": "journalistic_or_reference",
+        "evidence_quote": "All these penalties were based on comments and news after the earthquake. We live in a time when reporting is considered a crime.",
+        "quote_missing": false,
+        "supports_field": "occurred_on/fines and suspensions",
+        "note": "No Reuters/AP/BBC/AFP report found specifically on this RTUK action; WION and IPI are the best available."
+      }
+    ]
+  },
+  {
+    "incident_slug": "2018-egypt-scmr-license-requirement-al-manassa",
+    "sources": [
+      {
+        "url": "https://cpj.org/2020/10/al-manassa-editor-nora-younis-on-censorship-in-egypt/",
+        "title": "Al-Manassa editor Nora Younis on censorship in Egypt",
+        "publisher": "CPJ",
+        "published_on": "2020-10",
+        "kind": "press_freedom_org",
+        "evidence_quote": "Media websites in Egypt are required under this law to obtain a license from the SCMR, which was founded in 2018, while Al-Manassa was founded in 2016.",
+        "quote_missing": false,
+        "supports_field": "occurred_on/license limbo since 2018"
+      },
+      {
+        "url": "https://www.middleeasteye.net/news/egypt-arrests-journalist-amid-media-crackdown",
+        "title": "Egypt arrests another journalist as attacks on independent media continue",
+        "publisher": "Middle East Eye",
+        "published_on": "2020-07",
+        "kind": "journalistic_or_reference",
+        "evidence_quote": "Al-Manassa rejected the charges, saying that it had presented all the necessary documentation for licensing to Egypt's Higher Council for Media in October 2018",
+        "quote_missing": false,
+        "supports_field": "context/outlet's unlicensed status",
+        "note": "No Reuters/AP/BBC/AFP report found specifically on al-Manassa's licensing limbo; Middle East Eye and CPJ used instead."
+      }
+    ]
+  },
+  {
+    "incident_slug": "2022-russia-safronov-treason-sentence",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/business/media-telecom/russian-ex-journalist-safronov-gets-22-years-prison-treason-2022-09-05/",
+        "title": "Russian ex-journalist Safronov gets 22 years in prison for treason",
+        "publisher": "Reuters",
+        "published_on": "2022-09-05",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2023-cambodia-shutters-voice-of-democracy",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/world/asia-pacific/cambodias-hun-sen-orders-shutdown-last-independent-local-news-outlet-2023-02-12/",
+        "title": "Cambodia's Hun Sen orders shutdown of independent local news outlet",
+        "publisher": "Reuters",
+        "published_on": "2023-02-12",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2021-vietnam-pham-doan-trang-nine-year-sentence",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/world/asia-pacific/dissident-journalist-jailed-vietnam-9-years-anti-state-acts-2021-12-14/",
+        "title": "Vietnam jails dissident journalist for 9 yrs over 'anti-state' acts",
+        "publisher": "Reuters",
+        "published_on": "2021-12-14",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2024-china-dong-yuyu-espionage-sentence",
+    "sources": [
+      {
+        "url": "https://www.japantimes.co.jp/news/2024/11/29/asia-pacific/crime-legal/china-journalist-espionage-verdict/",
+        "title": "China court sentences journalist Dong Yuyu to seven years on spy charges, family says",
+        "publisher": "The Japan Times (AP)",
+        "published_on": "2024-11-29",
+        "kind": "wire_or_major_press",
+        "evidence_quote": "A Beijing court sentenced veteran Chinese state media journalist Dong Yuyu on Friday to seven years in prison for espionage, a family member said.",
+        "quote_missing": false,
+        "supports_field": "what_happened"
+      },
+      {
+        "url": "https://www.abc.net.au/news/2024-11-29/chinese-journalist-dong-yuyu-jailed-for-espionage/104667352",
+        "title": "A Chinese journalist has been jailed for spying, prompting an outcry from his family and rights groups",
+        "publisher": "ABC News (Australia)",
+        "published_on": "2024-11-29",
+        "kind": "wire_or_major_press",
+        "evidence_quote": "Sentencing Yuyu to seven years in prison on no evidence declares to the world the bankruptcy of the justice system in China.",
+        "quote_missing": false,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2024-iran-hamedi-mohammadi-sentenced",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/world/middle-east/iran-sentences-two-women-journalists-charges-linked-amini-protests-2023-10-22/",
+        "title": "Iran sentences women journalists on charges over Amini protests",
+        "publisher": "Reuters",
+        "published_on": "2023-10-22",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      },
+      {
+        "url": "https://www.latimes.com/world-nation/story/2023-10-22/iran-sentences-2-journalists-for-allegedly-collaborating-with-u-s-both-covered-mahsa-aminis-death",
+        "title": "Iran sentences 2 journalists for allegedly collaborating with U.S.",
+        "publisher": "Los Angeles Times",
+        "published_on": "2023-10-22",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2009-north-korea-ling-lee-sentenced",
+    "sources": [
+      {
+        "url": "https://apnews.com/today-in-history/june-8",
+        "title": "Today in History: June 8",
+        "publisher": "Associated Press",
+        "published_on": "2022-06-08",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "occurred_on",
+        "note": "retrospective 'today in history' item citing the June 8, 2009 sentence"
+      },
+      {
+        "url": "https://www.bbc.com/news/world-asia-22379241",
+        "title": "US detainees freed by North Korea",
+        "publisher": "BBC",
+        "published_on": "2014-11-08",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2022-turkiye-sedef-kabas-insulting-president",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/world/middle-east/turkish-journalist-arrested-insulting-erdogan-cnn-turk-2022-01-22/",
+        "title": "Turkish journalist arrested on charge of insulting Erdogan -CNN Turk",
+        "publisher": "Reuters",
+        "published_on": "2022-01-22",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2013-thailand-somyot-lese-majeste-sentence",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/article/business/corrected-update-1-thai-magazines-former-editor-jailed-for-insulting-king-idUSL4N0AS2P7/",
+        "title": "Thai magazine's former editor jailed for insulting king",
+        "publisher": "Reuters",
+        "published_on": "2013-01-23",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2023-russia-ponomarenko-fake-news-sentence",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/world/europe/russian-journalist-gets-six-years-accusing-russia-ukraine-theatre-bombing-2023-02-15/",
+        "title": "Russian journalist gets six years for accusing Russia of Ukraine theatre bombing",
+        "publisher": "Reuters",
+        "published_on": "2023-02-15",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2022-turkiye-prosecutes-sedef-kabas",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/world/middle-east/turkish-journalist-arrested-insulting-erdogan-cnn-turk-2022-01-22/",
+        "title": "Turkish journalist arrested on charge of insulting Erdogan -CNN Turk",
+        "publisher": "Reuters",
+        "published_on": "2022-01-22",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2023-belarus-poczobut-eight-year-sentence",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/world/europe/poland-summons-belarusian-envoy-after-journalist-is-jailed-2023-02-08/",
+        "title": "Poland summons Belarusian envoy after journalist is jailed",
+        "publisher": "Reuters",
+        "published_on": "2023-02-08",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2023-belarus-sentences-poczobut",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/world/europe/poland-summons-belarusian-envoy-after-journalist-is-jailed-2023-02-08/",
+        "title": "Poland summons Belarusian envoy after journalist is jailed",
+        "publisher": "Reuters",
+        "published_on": "2023-02-08",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2021-hungary-panyi-pegasus-spyware",
+    "sources": [
+      {
+        "url": "https://www.bbc.com/news/technology-57881364",
+        "title": "Pegasus: Spyware sold to governments 'targets activists'",
+        "publisher": "BBC",
+        "published_on": "2021-07-19",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      },
+      {
+        "url": "https://www.ap.org/media-center/ap-in-the-news/2021/probe-journalists-activists-among-firms-spyware-targets/",
+        "title": "Probe: Journalists, activists among firm's spyware targets",
+        "publisher": "Associated Press",
+        "published_on": "2021-07-18",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2020-morocco-omar-radi-pegasus-and-detention",
+    "sources": [
+      {
+        "url": "https://www.securityweek.com/spyware-israels-nso-used-against-journalist-amnesty/",
+        "title": "Spyware By Israel's NSO Used Against Journalist: Amnesty",
+        "publisher": "SecurityWeek (AFP)",
+        "published_on": "2020-06-22",
+        "kind": "wire_or_major_press",
+        "evidence_quote": "Amnesty said the Moroccan authorities used NSO's Pegasus software to insert spyware onto the cellphone of Omar Radi, a journalist convicted in March",
+        "quote_missing": false,
+        "supports_field": "what_happened"
+      },
+      {
+        "url": "https://www.middleeasteye.net/news/morocco-omar-radi-dissident-reporter-sentenced-prison",
+        "title": "Moroccan court sentences dissident reporter Omar Radi to six years",
+        "publisher": "Middle East Eye",
+        "published_on": "2021-07-19",
+        "kind": "journalistic_or_reference",
+        "evidence_quote": "Radi had been targeted by the Moroccan authorities using spyware produced by the Israeli company NSO Group.",
+        "quote_missing": false,
+        "supports_field": "outcome"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2018-saudi-arabia-pegasus-khashoggi-associate",
+    "sources": [
+      {
+        "url": "https://www.theguardian.com/world/2021/jul/18/nso-spyware-used-to-target-family-of-jamal-khashoggi-leaked-data-shows-saudis-pegasus",
+        "title": "Saudis behind NSO spyware attack on Jamal Khashoggi's family",
+        "publisher": "The Guardian",
+        "published_on": "2021-07-18",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      },
+      {
+        "url": "https://www.ap.org/media-center/ap-in-the-news/2021/probe-journalists-activists-among-firms-spyware-targets/",
+        "title": "Probe: Journalists, activists among firm's spyware targets",
+        "publisher": "Associated Press",
+        "published_on": "2021-07-18",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2017-mexico-aristegui-pegasus-spyware",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/article/world/activists-and-journalists-in-mexico-complain-of-government-spying-idUSKBN19A312/",
+        "title": "Activists and journalists in Mexico complain of government spying",
+        "publisher": "Reuters",
+        "published_on": "2017-06-19",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2018-hungary-kesma-media-merger",
+    "sources": [
+      {
+        "url": "https://www.voanews.com/a/huge-pro-government-media-conglomerate-formed-in-hungary-/4678690.html",
+        "title": "Huge Pro-government Media Conglomerate Formed in Hungary",
+        "publisher": "Voice of America",
+        "published_on": "2018-11-28",
+        "kind": "journalistic_or_reference",
+        "evidence_quote": "From now on, there will be total control over the right-wing media close to the government.",
+        "quote_missing": false,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2020-hungary-index-hu-editor-fired",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/article/technology/website-editors-sacking-deepens-fears-for-media-freedom-in-hungary-idUSKCN24N1DI/",
+        "title": "Website editor's sacking deepens fears for media freedom in Hungary",
+        "publisher": "Reuters",
+        "published_on": "2020-07-22",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      },
+      {
+        "url": "https://www.theguardian.com/world/2020/jul/24/hungarian-journalists-resign-en-masse-after-claims-of-political-interference",
+        "title": "Hungarian journalists resign en masse after claims of political interference",
+        "publisher": "The Guardian",
+        "published_on": "2020-07-24",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2021-poland-orlen-buys-polska-press",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/business/poland-uses-state-owned-refiner-buy-regional-media-firm-2020-12-07/",
+        "title": "Poland uses state-owned refiner to buy regional media firm",
+        "publisher": "Reuters",
+        "published_on": "2020-12-07",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2016-turkiye-zaman-trustees-installed",
+    "sources": [
+      {
+        "url": "https://turkishminute.com/2016/03/05/zaman-daily-editor-in-chief-bilici-todays-zamans-kenes-fired-by-trustees-after-govt-seizure/",
+        "title": "Zaman daily Editor-in-Chief Bilici, Today's Zaman's Keneş fired by trustees after gov't seizure",
+        "publisher": "Turkish Minute",
+        "published_on": "2016-03-05",
+        "kind": "journalistic_or_reference",
+        "evidence_quote": "An İstanbul court appointed trustees over the Feza Media Group, which includes Zaman newspaper, Today's Zaman and the Cihan News Agency on Friday",
+        "quote_missing": false,
+        "supports_field": "what_happened",
+        "note": "no Reuters/AP/BBC/AFP report located for the March 4 2016 trustee takeover itself"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2018-turkiye-dogan-sells-to-demiroren",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/article/world/pro-erdogan-group-agrees-to-buy-owner-of-hurriyet-newspaper-cnn-turk-idUSKBN1GX255/",
+        "title": "Pro-Erdogan group agrees to buy owner of Hurriyet newspaper, CNN Turk",
+        "publisher": "Reuters",
+        "published_on": "2018-03-21",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      },
+      {
+        "url": "https://www.nytimes.com/2018/03/21/world/europe/turkey-media-erdogan-dogan.html",
+        "title": "Turkish Media Group Bought by Pro-Government Conglomerate",
+        "publisher": "The New York Times",
+        "published_on": "2018-03-21",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2022-russia-expels-cbc-cancels-visas",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/business/media-telecom/russia-closes-moscow-bureau-canadian-broadcaster-cbc-2022-05-18/",
+        "title": "Russia closes Moscow bureau of Canadian broadcaster CBC",
+        "publisher": "Reuters",
+        "published_on": "2022-05-18",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "what_happened"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2022-ethiopia-expels-tom-gardner",
+    "sources": [
+      {
+        "url": "https://english.ahram.org.eg/UI/Front/Inner.aspx?NewsContentID=466313",
+        "title": "Ethiopia expels The Economist correspondent - Africa - World",
+        "publisher": "Ahram Online (AFP wire)",
+        "published_on": "2022-05-16",
+        "kind": "wire_or_major_press",
+        "evidence_quote": "On May 13th Ethiopia's government withdrew the press accreditation of Tom Gardner, The Economist's correspondent in Addis Ababa",
+        "quote_missing": false,
+        "supports_field": "occurred_on/expulsion"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2018-nicaragua-expels-goette-luciak",
+    "sources": [
+      {
+        "url": "https://www.hrw.org/report/2019/06/19/crackdown-nicaragua/torture-ill-treatment-and-prosecutions-protesters-and",
+        "title": "Crackdown in Nicaragua",
+        "publisher": "Human Rights Watch",
+        "published_on": "2019-06-19",
+        "kind": "ngo_or_official",
+        "evidence_quote": "Police and armed pro-government groups have harassed, intimidated, assaulted, and detained journalists. Two foreign journalists reporting on the crackdown were deported in August and October.",
+        "quote_missing": false,
+        "supports_field": "context (not a wire/major-newspaper report on this specific case)",
+        "note": "No qualifying Reuters/AP/BBC/AFP/major-newspaper report found specifically on Goette-Luciak's Sept 2018 detention/deportation; HRW report is general Nicaragua crackdown context."
+      }
+    ]
+  },
+  {
+    "incident_slug": "2019-turkiye-deports-ans-boersma",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/article/business/turkey-deported-dutch-journalist-on-suspected-terror-links-official-idUSP8N1XC01I/",
+        "title": "Turkey deported Dutch journalist on suspected terror links",
+        "publisher": "Reuters",
+        "published_on": "2019-01-17",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "occurred_on/deportation"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2019-india-revokes-taseer-oci-status",
+    "sources": [
+      {
+        "url": "https://www.straitstimes.com/asia/south-asia/india-revokes-overseas-citizenship-status-of-writer-who-penned-article-critical-of?ai-allowed=1",
+        "title": "India revokes overseas citizenship status of writer who penned article critical of PM Modi",
+        "publisher": "The Straits Times",
+        "published_on": "2019-11-07",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "occurred_on/OCI revocation"
+      },
+      {
+        "url": "https://time.com/5721667/aatish-taseer-india-oci/",
+        "title": "I am Indian. Why is the Government Sending Me Into Exile?",
+        "publisher": "TIME (Aatish Taseer essay)",
+        "published_on": "2019-11-07",
+        "kind": "journalistic_or_reference",
+        "evidence_quote": "the Central government is of the provisional opinion that the registration as an OCI cardholder granted to Aatish Ali Taseer, may be cancelled",
+        "quote_missing": false,
+        "supports_field": "occurred_on/OCI revocation"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2021-myanmar-military-internet-shutdown",
+    "sources": [
+      {
+        "url": "https://www.bbc.com/news/world-asia-55960284",
+        "title": "Myanmar coup: Internet shutdown as crowds protest against military",
+        "publisher": "BBC",
+        "published_on": "2021-02-06",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "occurred_on/internet shutdown"
+      },
+      {
+        "url": "https://apnews.com/article/military-coup-myanmar-explained-f3e8a294e63e00509ea2865b6e5c342d",
+        "title": "EXPLAINER: Why did the military stage a coup in Myanmar?",
+        "publisher": "Associated Press",
+        "published_on": "2021-02-01",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "occurred_on/coup context"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2020-ethiopia-tigray-internet-blackout",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/world/six-million-silenced-two-year-internet-outage-ethiopia--trfn-2022-09-29/",
+        "title": "Six million silenced: A two-year internet outage in Ethiopia",
+        "publisher": "Reuters",
+        "published_on": "2022-09-29",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "context/duration of Tigray blackout starting Nov 2020"
+      },
+      {
+        "url": "https://apnews.com/article/technology-africa-internet-access-kenya-ethiopia-c4c9ba266cd166ba2aa43d1be6268a6a",
+        "title": "Ethiopia offers no date for end to blackout in Tigray region",
+        "publisher": "Associated Press",
+        "published_on": "2021",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "context/ongoing blackout"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2022-russia-blocks-bbc-dw-meduza",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/business/media-telecom/russia-restricts-access-bbc-russian-service-radio-liberty-ria-2022-03-04/",
+        "title": "Russia blocks access to BBC and Voice of America websites",
+        "publisher": "Reuters",
+        "published_on": "2022-03-04",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "occurred_on/block of BBC, DW"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2019-iran-nationwide-internet-shutdown",
+    "sources": [
+      {
+        "url": "https://www.bbc.com/news/world-middle-east-50459971",
+        "title": "Iran protests: At least 12 killed at unrest over petrol price rise",
+        "publisher": "BBC",
+        "published_on": "2019-11-16",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "occurred_on/fuel-price protests context"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2023-india-blocks-gaon-savera-accounts",
+    "sources": [
+      {
+        "url": "https://cpj.org/2023/08/india-blocks-social-media-accounts-of-gaon-savera-news-outlet-ahead-of-workers-convention/",
+        "title": "India blocks social media accounts of Gaon Savera news outlet",
+        "publisher": "CPJ",
+        "published_on": "2023-08-23",
+        "kind": "press_freedom_org",
+        "evidence_quote": "On Monday, August 21, Gaon Savera's Facebook page became inaccessible in India, and its account on X, formerly known as Twitter, was also blocked the following day",
+        "quote_missing": false,
+        "supports_field": "occurred_on/accounts blocked",
+        "note": "No Reuters/AP/BBC/AFP report found; Perplexity confirmed none exists in searchable record."
+      },
+      {
+        "url": "https://www.newslaundry.com/2023/08/23/gaon-saveras-social-media-handles-blocked-after-correspondence-from-indian-government",
+        "title": "Gaon Savera's social media handles blocked after 'correspondence' from Indian government",
+        "publisher": "Newslaundry (Indian independent outlet)",
+        "published_on": "2023-08-23",
+        "kind": "wire_or_major_press",
+        "evidence_quote": "The social media handles of independent news website Gaon Savera were blocked this week. The website's Twitter account was withheld in India on Tuesday, and its Facebook page has been inaccessible since Monday.",
+        "quote_missing": false,
+        "supports_field": "occurred_on/accounts blocked"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2020-china-arrests-zhang-zhan",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/business/media-telecom/china-jails-citizen-journalist-four-years-over-wuhan-virus-reporting-2020-12-28/",
+        "title": "China jails citizen-journalist for four years over Wuhan virus reporting",
+        "publisher": "Reuters",
+        "published_on": "2020-12-28",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "case/detention arising from May 2020 arrest (article covers the Dec 2020 sentencing, not the arrest itself)"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2024-russia-sentences-gershkovich",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/world/russian-prosecutor-seeks-18-year-sentence-us-journalist-gershkovich-agencies-2024-07-19/",
+        "title": "Russian court jails US reporter Gershkovich for 16 years",
+        "publisher": "Reuters",
+        "published_on": "2024-07-19",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "outcome_on/sentencing"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2015-azerbaijan-sentences-ismayilova",
+    "sources": [
+      {
+        "url": "https://www.bbc.com/news/world-europe-34116812",
+        "title": "Azerbaijan journalist Khadija Ismayilova jailed in Baku",
+        "publisher": "BBC",
+        "published_on": "2015-09-01",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "occurred_on/sentencing"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2019-philippines-arrests-ressa",
+    "sources": [
+      {
+        "url": "https://time.com/5528416/maria-ressa-arrested-cyber-libel/",
+        "title": "Journalist Maria Ressa Arrested for 'Cyber Libel' in the Philippines",
+        "publisher": "TIME",
+        "published_on": "2019-02-13",
+        "kind": "journalistic_or_reference",
+        "evidence_quote": "These are tools that are being used to try to silence us.",
+        "quote_missing": false,
+        "supports_field": "occurred_on/arrest"
+      },
+      {
+        "url": "https://www.latimes.com/world/asia/la-fg-philippines-maria-ressa-20190218-story.html",
+        "title": "Law used against journalist Maria Ressa stirs fears among Filipinos",
+        "publisher": "Los Angeles Times",
+        "published_on": "2019-02-18",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "occurred_on/arrest context"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2001-eritrea-jails-journalists-indefinitely",
+    "sources": [
+      {
+        "url": "https://www.theguardian.com/world/2015/aug/19/eritrea-forgotten-journalists-jailed-pen-international-press-freedom",
+        "title": "'If we don't give them a voice, no one will': Eritrea's forgotten journalists, still jailed after 14 years",
+        "publisher": "The Guardian",
+        "published_on": "2015-08-19",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "occurred_on/ongoing indefinite detention since Sept 2001"
+      },
+      {
+        "url": "https://www.bbc.com/news/articles/cx1l6762jeq4o",
+        "title": "Eritrea's G-15 political prisoners: 'I don't even know if my ...'",
+        "publisher": "BBC",
+        "published_on": "2026",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "occurred_on/ongoing detention since Sept 2001"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2020-philippines-ressa-cyber-libel-conviction",
+    "sources": [
+      {
+        "url": "https://apnews.com/article/manila-journalists-ap-top-news-international-news-philippines-cb026b7094fac489d60cf248eb86bbb2",
+        "title": "Philippine journalist convicted of libel, given 6-year term",
+        "publisher": "Associated Press",
+        "published_on": "2020-06-15",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "occurred_on/conviction"
+      },
+      {
+        "url": "https://www.philstar.com/headlines/2020/06/15/2020473/court-convicts-rapplers-ressa-cyber-libel",
+        "title": "Court convicts Rappler's Ressa on cyber libel",
+        "publisher": "The Philippine Star (national paper of record)",
+        "published_on": "2020-06-15",
+        "kind": "journalistic_or_reference",
+        "evidence_quote": "Judge Rainelda Estacio-Montesa of the Manila Regional Trial Court Branch 46 convicted Ressa and Rappler's former researcher Reynaldo Santos Jr. guilty of violating Section 4(c)(4) of the Cybercrime Prevention Act of 2012, or cyber libel.",
+        "quote_missing": false,
+        "supports_field": "occurred_on/conviction"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2018-russia-fines-the-new-times",
+    "sources": [
+      {
+        "url": "https://meduza.io/en/news/2018/10/27/moscow-court-slaps-independent-magazine-with-crippling-22-million-ruble-fine-for-late-paperwork",
+        "title": "Moscow court slaps independent magazine with crippling 22-million-ruble fine for late paperwork",
+        "publisher": "Meduza",
+        "published_on": "2018-10-27",
+        "kind": "journalistic_or_reference",
+        "evidence_quote": "On October 26, Moscow's Tverskoy District Court fined the independent magazine The New Times and its chief editor, Evgeniya Albats, 22 million rubles ($335,000)",
+        "quote_missing": false,
+        "supports_field": "occurred_on/fine amount (reports ~$335,000, close to $338,000)"
+      },
+      {
+        "url": "https://www.icij.org/inside-icij/2018/11/independent-russian-magazine-spared-extinction-by-readers-covering-mammoth-political-fine/",
+        "title": "Independent Russian magazine spared extinction by readers covering mammoth 'political' fine",
+        "publisher": "ICIJ",
+        "published_on": "2018-11",
+        "kind": "ngo_or_official",
+        "evidence_quote": "The court fined Albats and the online magazine The New Times more than $340,000 for allegedly failing to report donations received from readers",
+        "quote_missing": false,
+        "supports_field": "outcome/fine paid by crowdfunding"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2017-malta-freezes-caruana-galizia-account",
+    "sources": [
+      {
+        "url": "https://daphnecaruanagalizia.com/2017/02/minister-economy-policy-officer-frozen-bank-accounts-statement-issued-media/",
+        "title": "The Minister for the Economy and his 'policy officer' have frozen my bank accounts",
+        "publisher": "Daphne Caruana Galizia (primary, first-person statement)",
+        "published_on": "2017-02",
+        "kind": "primary_source",
+        "evidence_quote": "My bank accounts have consequently been frozen to this amount, and will remain frozen to that amount until the case is concluded many years from now.",
+        "quote_missing": false,
+        "supports_field": "occurred_on/account freeze"
+      },
+      {
+        "url": "https://www.assembly.coe.int/LifeRay/JUR/Pdf/TextesProvisoires/2019/20190529-CaruanaGaliziaAssassination-EN.pdf",
+        "title": "Daphne Caruana Galizia's assassination and the rule of law in Malta (PACE report)",
+        "publisher": "Council of Europe Parliamentary Assembly",
+        "published_on": "2019-05-29",
+        "kind": "ngo_or_official",
+        "evidence_quote": "in February 2017 a court ordered the freezing of Ms Caruana Galizia's bank account; in response, a group of NGOs filed an alert",
+        "quote_missing": false,
+        "supports_field": "occurred_on/account freeze corroboration",
+        "note": "No Reuters/AP/BBC/AFP report specifically on the Feb 2017 freeze was found; using primary source plus official CoE report."
+      }
+    ]
+  },
+  {
+    "incident_slug": "2026-kazakhstan-copyright-claims-against-press",
+    "sources": [
+      {
+        "url": "https://cpj.org/2026/08/from-prosecutions-to-bans-and-spurious-copyright-claims-how-kazakhstans-journalists-are-being-silenced/",
+        "title": "From prosecutions to bans and spurious copyright claims",
+        "publisher": "CPJ",
+        "published_on": "2026-08",
+        "kind": "press_freedom_org",
+        "evidence_quote": "An investigation by Reporters Without Borders has shown that perpetrators used email addresses and posed as representatives of global brands, including L'Oréal and Giorgio Armani, when launching complaints.",
+        "quote_missing": false,
+        "supports_field": "occurred_on/fabricated copyright claims"
+      },
+      {
+        "url": "https://www.occrp.org/en/news/kazakhstans-election-brings-a-new-parliament-and-more-pressure-on-journalists",
+        "title": "Kazakhstan's Election Brings a New Parliament (and more pressure on journalists)",
+        "publisher": "OCCRP",
+        "published_on": "2026-08",
+        "kind": "ngo_or_official",
+        "evidence_quote": "All of these sentences and cases lead to the main goal of the authorities: self-censorship and intimidation of journalists and the media.",
+        "quote_missing": false,
+        "supports_field": "context/pressure on journalists",
+        "note": "No Reuters/AP/BBC/AFP report found on this recent (Aug 2026) item; OCCRP and RFE/RL-sourced coverage used instead."
+      }
+    ]
+  },
+  {
+    "incident_slug": "2019-russia-fake-news-disrespect-law",
+    "sources": [
+      {
+        "url": "https://www.npr.org/2019/03/18/704600310/russia-criminalizes-the-spread-of-online-news-which-disrespects-the-government",
+        "title": "Russia Criminalizes The Spread Of Online News Which 'Disrespects' The Government",
+        "publisher": "NPR",
+        "published_on": "2019-03-18",
+        "kind": "wire_or_major_press",
+        "evidence_quote": "The new rules allow prosecutors to direct complaints about material considered insulting to Russian officials to the government, which can then block websites publishing the information.",
+        "quote_missing": false,
+        "supports_field": "occurred_on/law signed"
+      },
+      {
+        "url": "https://www.themoscowtimes.com/2019/03/07/russia-passes-legislation-banning-disrespect-of-authorities-and-fake-news-a64742",
+        "title": "Russia Passes Legislation Banning 'Disrespect' of Authorities and 'Fake News'",
+        "publisher": "The Moscow Times",
+        "published_on": "2019-03-07",
+        "kind": "wire_or_major_press",
+        "evidence_quote": "Russian lawmakers pushed through a package of bills Thursday seeking to punish internet users and journalists for disrespecting the authorities and spreading fake news.",
+        "quote_missing": false,
+        "supports_field": "occurred_on/legislation passed"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2021-russia-designates-meduza-foreign-agent",
+    "sources": [
+      {
+        "url": "https://www.themoscowtimes.com/2021/04/23/russia-declares-independent-news-site-meduza-a-foreign-agent-a73722",
+        "title": "Russia Declares Independent News Site Meduza a 'Foreign Agent'",
+        "publisher": "The Moscow Times",
+        "published_on": "2021-04-23",
+        "kind": "wire_or_major_press",
+        "evidence_quote": "Russia has declared the leading independent news website Meduza a 'foreign agent,' the Justice Ministry announced Friday",
+        "quote_missing": false,
+        "supports_field": "occurred_on/designation"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2019-egypt-media-law-blocks-al-mashhad",
+    "sources": [
+      {
+        "url": "https://www.dailynewsegypt.com/2019/03/23/supreme-media-council-block-al-mashhad-newspaper/",
+        "title": "Supreme Media Council blocks Al-Mashhad newspaper",
+        "publisher": "Daily News Egypt (national English-language paper)",
+        "published_on": "2019-03-23",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "occurred_on/block and fine"
+      },
+      {
+        "url": "https://cpj.org/2019/05/egypt-tests-new-censorship-law-with-handling-of-al/",
+        "title": "Egypt tests new censorship law with handling of al-Mashhad",
+        "publisher": "CPJ",
+        "published_on": "2019-05",
+        "kind": "press_freedom_org",
+        "evidence_quote": "news outlets it finds in violation of Law No. 180 would see their websites temporarily or indefinitely blocked, and face fines of up to 250,000 Egyptian pounds",
+        "quote_missing": false,
+        "supports_field": "context"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2013-vietnam-decree-72-restricts-blogs",
+    "sources": [
+      {
+        "url": "https://www.reuters.com/article/business/vietnam-rebuffs-criticism-of-misunderstood-web-decree-idUSL4N0G72IA/",
+        "title": "Vietnam rebuffs criticism of 'misunderstood' web decree",
+        "publisher": "Reuters",
+        "published_on": "2013-09-02",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "occurred_on/decree takes effect"
+      },
+      {
+        "url": "https://www.bbc.com/news/world-asia-23920541",
+        "title": "Vietnam internet restrictions come into effect",
+        "publisher": "BBC",
+        "published_on": "2013-09-01",
+        "kind": "wire_or_major_press",
+        "evidence_quote": null,
+        "quote_missing": true,
+        "supports_field": "occurred_on/decree takes effect"
+      }
+    ]
+  },
+  {
+    "incident_slug": "2022-belarus-labels-dw-extremist",
+    "sources": [
+      {
+        "url": "https://dokmz.com/2022/03/10/belarus-classifies-deutsche-welle-as-extremist/",
+        "title": "Belarus classifies Deutsche Welle as 'extremist'",
+        "publisher": "dokmz (media-freedom news aggregator)",
+        "published_on": "2022-03-10",
+        "kind": "wire_or_major_press",
+        "evidence_quote": "Belarus has classified all Deutsche Welle content as 'extremist.'",
+        "quote_missing": false,
+        "supports_field": "occurred_on/designation",
+        "note": "No qualifying Reuters/AP/BBC/AFP/major-newspaper report found specifically on this designation in this pass."
+      }
+    ]
+  }
+]

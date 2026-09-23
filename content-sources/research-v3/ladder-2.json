@@ -1,0 +1,3017 @@
+{
+  "sources": [
+    {
+      "id": "l2_001",
+      "url": "https://freedomhouse.org/country/hungary/nations-transit/2019",
+      "title": "Nations in Transit 2019: Hungary",
+      "publisher": "Freedom House",
+      "published_on": "2019-05-01",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_002",
+      "url": "https://freedomhouse.org/country/hungary/nations-transit/2021",
+      "title": "Nations in Transit 2021: Hungary",
+      "publisher": "Freedom House",
+      "published_on": "2021-05-01",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_003",
+      "url": "https://cpj.org/2021/04/mission-journal-trench-warfare-in-polish-press-as-government-eyes-next-election-cycle/",
+      "title": "Mission Journal: 'Trench warfare' in Polish press as government eyes next election cycle",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2021-04-01",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_004",
+      "url": "https://cpj.org/2016/04/erdogan-is-killing-journalism-says-todays-zaman-ed/",
+      "title": "'Erdogan is killing journalism,' says Today's Zaman editor forced out after takeover",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2016-04-14",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_005",
+      "url": "https://cpj.org/2016/03/cpj-writes-to-turkish-pm-ahmet-davutoglu-to-protes/",
+      "title": "CPJ writes to Turkish PM Ahmet Davutoglu to protest takeover of Feza media group",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2016-03-08",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_006",
+      "url": "https://cpj.org/2018/03/turkey-crackdown-chronicle-week-of-march-19-2018/",
+      "title": "Turkey Crackdown Chronicle: Week of March 19, 2018",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2018-03-28",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_007",
+      "url": "https://cpj.org/2022/05/ethiopia-expels-economist-correspondent-tom-gardner/",
+      "title": "Ethiopia expels Economist correspondent Tom Gardner",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2022-05-16",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_008",
+      "url": "https://cpj.org/2019/11/indian-government-threatens-to-cancel-journalist-a/",
+      "title": "Indian government threatens to cancel journalist Aatish Taseer's overseas citizenship",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2019-11-07",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_009",
+      "url": "https://cpj.org/2019/01/turkey-crackdown-chronicle-week-of-january-13-2019/",
+      "title": "Turkey Crackdown Chronicle: Week of January 13, 2019",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2019-01-17",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_010",
+      "url": "https://cpj.org/2022/03/russia-ukraine-war-press-freedom-watch/",
+      "title": "Russia-Ukraine war press freedom watch",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2022-03-11",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_011",
+      "url": "https://cpj.org/2018/09/online-smear-campaign-targets-freelance-reporter-i/",
+      "title": "Online smear campaign targets freelance reporter in Nicaragua",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2018-09-25",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_012",
+      "url": "https://cpj.org/2021/05/journalists-shutdowns-myanmar-ethiopia-kashmir/",
+      "title": "Journalists struggle to work amid extended internet shutdowns in Myanmar, Ethiopia, Kashmir",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2021-05-03",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_013",
+      "url": "https://freedomhouse.org/country/iran/freedom-world/2020",
+      "title": "Freedom in the World 2020: Iran",
+      "publisher": "Freedom House",
+      "published_on": "2020-01-01",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_014",
+      "url": "https://cpj.org/2023/08/india-blocks-social-media-accounts-of-gaon-savera-news-outlet-ahead-of-workers-convention/",
+      "title": "India blocks social media accounts of Gaon Savera news outlet ahead of workers' convention",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2023-08-24",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_015",
+      "url": "https://cpj.org/2020/05/journalist-zhang-zhan-arrested-for-covering-covid/",
+      "title": "Journalist Zhang Zhan arrested for covering COVID-19 in Wuhan",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2020-05-18",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_016",
+      "url": "https://cpj.org/2023/02/belarusian-authorities-sentence-journalist-andrzej-poczobut-to-8-years-in-prison-detain-journalist-anastasia-sharkevich/",
+      "title": "Belarusian authorities sentence journalist Andrzej Poczobut to 8 years in prison, detain journalist Anastasia Sharkevich",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2023-02-08",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_017",
+      "url": "https://cpj.org/2026/04/belarus-frees-journalist-andrzej-poczobut/",
+      "title": "Belarus frees journalist Andrzej Poczobut",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2026-04-28",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_018",
+      "url": "https://cpj.org/2024/07/russian-authorities-jail-us-journalist-evan-gershkovich-for-16-years/",
+      "title": "Russian authorities jail US journalist Evan Gershkovich for 16 years",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2024-07-19",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_019",
+      "url": "https://cpj.org/thetorch/2024/08/cpj-welcomes-return-of-gershkovich-kurmasheva-says-russia-must-stop-stifling-journalists/",
+      "title": "CPJ welcomes return of Gershkovich, Kurmasheva, says Russia must stop stifling journalists",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2024-08-01",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_020",
+      "url": "https://cpj.org/2015/09/cpj-condemns-75-year-prison-term-for-khadija-ismay/",
+      "title": "CPJ condemns 7.5-year prison term for Khadija Ismayilova",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2015-09-01",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_021",
+      "url": "https://cpj.org/2016/05/azerbaijani-reporter-khadija-ismayilova-ordered-r/",
+      "title": "Azerbaijani reporter Khadija Ismayilova ordered released",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2016-05-25",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_022",
+      "url": "https://cpj.org/thetorch/2019/02/maria-ressa-detained-overnight/",
+      "title": "Philippines' Maria Ressa detained and released over 'political' charge",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2019-02-14",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_023",
+      "url": "https://cpj.org/2010/04/dawit-isaac-jailed-3127-days-in-eritrea-without-tr/",
+      "title": "Dawit Isaac: jailed 3,127 days in Eritrea without trial",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2010-04-16",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_024",
+      "url": "https://cpj.org/2020/06/rappler-editor-maria-ressa-convicted-of-cyber-libel-by-philippines-court/",
+      "title": "Rappler editor Maria Ressa convicted of cyber libel by Philippines court",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2020-06-15",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_025",
+      "url": "https://cpj.org/2023/06/turkish-journalist-sedef-kabas-facing-new-trial-for-insulting-president-erdogan/",
+      "title": "Turkish journalist Sedef Kabas facing new trial for insulting President Erdogan",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2023-06-22",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_026",
+      "url": "https://cpj.org/2018/10/russia-uses-foreign-agents-law-to-hit-independent/",
+      "title": "Russia uses 'foreign agents' law to hit independent outlet with massive fine",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2018-10-26",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_027",
+      "url": "https://rsf.org/en/country/malta",
+      "title": "Malta",
+      "publisher": "Reporters Without Borders",
+      "published_on": null,
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_028",
+      "url": "https://cpj.org/2026/08/from-prosecutions-to-bans-and-spurious-copyright-claims-how-kazakhstans-journalists-are-being-silenced/",
+      "title": "From prosecutions to bans and spurious copyright claims: how Kazakhstan's journalists are being restricted",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2026-08-20",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_029",
+      "url": "https://cpj.org/2021/04/russia-designates-independent-outlets-meduza-and-pasmi-as-foreign-agents/",
+      "title": "Russia designates independent outlets Meduza and PASMI as 'foreign agents'",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2021-04-26",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_030",
+      "url": "https://cpj.org/2019/05/egypt-tests-new-censorship-law-with-handling-of-al/",
+      "title": "Egypt tests new media law with handling of al-Mashhad website block",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2019-05-07",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_031",
+      "url": "https://cpj.org/2014/02/attacks-on-the-press-vietnam-analysis/",
+      "title": "Attacks on the Press: Vietnam analysis",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2014-02-12",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_032",
+      "url": "https://cpj.org/2022/03/belarus-authorities-sentence-journalist-aleh-hruzdzilovich-to-prison-label-more-media-extremist/",
+      "title": "Belarus authorities sentence journalist Aleh Hruzdzilovich to prison, label more media 'extremist'",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2022-03-11",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_033",
+      "url": "https://cpj.org/2022/03/russia-further-blocks-media-outlets-social-media/",
+      "title": "Russia further blocks media outlets, social media",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2022-03-04",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_034",
+      "url": "https://cpj.org/2019/03/russia-advances-legislation-on-fake-news-and-disre/",
+      "title": "Russia advances legislation on 'fake news' and 'disrespecting authorities'",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2019-03-07",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l2_035",
+      "url": "https://rsf.org/en/country/hungary",
+      "title": "Hungary",
+      "publisher": "Reporters Without Borders",
+      "published_on": null,
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    }
+  ],
+  "actors": [
+    {
+      "slug": "viktor-orban",
+      "name": "Viktor Orban",
+      "kind": "person",
+      "role_or_office": "Prime Minister of Hungary",
+      "jurisdiction": "Hungary",
+      "country": "HU",
+      "sources": []
+    },
+    {
+      "slug": "mateusz-morawiecki",
+      "name": "Mateusz Morawiecki",
+      "kind": "person",
+      "role_or_office": "Prime Minister of Poland",
+      "jurisdiction": "Poland",
+      "country": "PL",
+      "sources": []
+    },
+    {
+      "slug": "recep-tayyip-erdogan",
+      "name": "Recep Tayyip Erdogan",
+      "kind": "person",
+      "role_or_office": "President of Turkiye",
+      "jurisdiction": "Turkiye",
+      "country": "TR",
+      "sources": []
+    },
+    {
+      "slug": "vladimir-putin",
+      "name": "Vladimir Putin",
+      "kind": "person",
+      "role_or_office": "President of Russia",
+      "jurisdiction": "Russia",
+      "country": "RU",
+      "sources": []
+    },
+    {
+      "slug": "abiy-ahmed",
+      "name": "Abiy Ahmed",
+      "kind": "person",
+      "role_or_office": "Prime Minister of Ethiopia",
+      "jurisdiction": "Ethiopia",
+      "country": "ET",
+      "sources": []
+    },
+    {
+      "slug": "daniel-ortega",
+      "name": "Daniel Ortega",
+      "kind": "person",
+      "role_or_office": "President of Nicaragua",
+      "jurisdiction": "Nicaragua",
+      "country": "NI",
+      "sources": []
+    },
+    {
+      "slug": "narendra-modi",
+      "name": "Narendra Modi",
+      "kind": "person",
+      "role_or_office": "Prime Minister of India",
+      "jurisdiction": "India",
+      "country": "IN",
+      "sources": []
+    },
+    {
+      "slug": "xi-jinping",
+      "name": "Xi Jinping",
+      "kind": "person",
+      "role_or_office": "President of China",
+      "jurisdiction": "China",
+      "country": "CN",
+      "sources": []
+    },
+    {
+      "slug": "alexander-lukashenko",
+      "name": "Alexander Lukashenko",
+      "kind": "person",
+      "role_or_office": "President of Belarus",
+      "jurisdiction": "Belarus",
+      "country": "BY",
+      "sources": []
+    },
+    {
+      "slug": "ilham-aliyev",
+      "name": "Ilham Aliyev",
+      "kind": "person",
+      "role_or_office": "President of Azerbaijan",
+      "jurisdiction": "Azerbaijan",
+      "country": "AZ",
+      "sources": []
+    },
+    {
+      "slug": "rodrigo-duterte",
+      "name": "Rodrigo Duterte",
+      "kind": "person",
+      "role_or_office": "President of the Philippines",
+      "jurisdiction": "Philippines",
+      "country": "PH",
+      "sources": []
+    },
+    {
+      "slug": "isaias-afwerki",
+      "name": "Isaias Afwerki",
+      "kind": "person",
+      "role_or_office": "President of Eritrea",
+      "jurisdiction": "Eritrea",
+      "country": "ER",
+      "sources": []
+    },
+    {
+      "slug": "joseph-muscat",
+      "name": "Joseph Muscat",
+      "kind": "person",
+      "role_or_office": "Prime Minister of Malta",
+      "jurisdiction": "Malta",
+      "country": "MT",
+      "sources": []
+    },
+    {
+      "slug": "kassym-jomart-tokayev",
+      "name": "Kassym-Jomart Tokayev",
+      "kind": "person",
+      "role_or_office": "President of Kazakhstan",
+      "jurisdiction": "Kazakhstan",
+      "country": "KZ",
+      "sources": []
+    },
+    {
+      "slug": "abdel-fattah-el-sisi",
+      "name": "Abdel Fattah el-Sisi",
+      "kind": "person",
+      "role_or_office": "President of Egypt",
+      "jurisdiction": "Egypt",
+      "country": "EG",
+      "sources": []
+    },
+    {
+      "slug": "nguyen-tan-dung",
+      "name": "Nguyen Tan Dung",
+      "kind": "person",
+      "role_or_office": "Prime Minister of Vietnam",
+      "jurisdiction": "Vietnam",
+      "country": "VN",
+      "sources": []
+    },
+    {
+      "slug": "hassan-rouhani",
+      "name": "Hassan Rouhani",
+      "kind": "person",
+      "role_or_office": "President of Iran",
+      "jurisdiction": "Iran",
+      "country": "IR",
+      "sources": []
+    },
+    {
+      "slug": "min-aung-hlaing",
+      "name": "Min Aung Hlaing",
+      "kind": "person",
+      "role_or_office": "Commander-in-Chief of Myanmar's armed forces",
+      "jurisdiction": "Myanmar",
+      "country": "MM",
+      "sources": []
+    },
+    {
+      "slug": "kesma",
+      "name": "Central European Press and Media Foundation (KESMA)",
+      "kind": "organization",
+      "role_or_office": "Government-aligned media holding foundation",
+      "jurisdiction": "Hungary",
+      "country": "HU",
+      "sources": []
+    },
+    {
+      "slug": "roskomnadzor",
+      "name": "Roskomnadzor",
+      "kind": "agency",
+      "role_or_office": "Russia's federal media and communications regulator",
+      "jurisdiction": "Russia",
+      "country": "RU",
+      "sources": []
+    },
+    {
+      "slug": "ethiopian-media-authority",
+      "name": "Ethiopian Media Authority",
+      "kind": "agency",
+      "role_or_office": "Ethiopia's state media regulator",
+      "jurisdiction": "Ethiopia",
+      "country": "ET",
+      "sources": []
+    },
+    {
+      "slug": "supreme-council-for-media-regulation-egypt",
+      "name": "Supreme Council for Media Regulation",
+      "kind": "agency",
+      "role_or_office": "Egypt's state media regulator",
+      "jurisdiction": "Egypt",
+      "country": "EG",
+      "sources": []
+    },
+    {
+      "slug": "minsk-central-district-court",
+      "name": "Central District Court, Minsk",
+      "kind": "agency",
+      "role_or_office": "Belarusian court that issued the extremist designations",
+      "jurisdiction": "Belarus",
+      "country": "BY",
+      "sources": []
+    },
+    {
+      "slug": "pkn-orlen",
+      "name": "PKN Orlen",
+      "kind": "organization",
+      "role_or_office": "Poland's state-controlled oil and gas company",
+      "jurisdiction": "Poland",
+      "country": "PL",
+      "sources": []
+    },
+    {
+      "slug": "demiroren-holding",
+      "name": "Demiroren Holding",
+      "kind": "organization",
+      "role_or_office": "Turkish conglomerate aligned with the governing party",
+      "jurisdiction": "Turkiye",
+      "country": "TR",
+      "sources": []
+    },
+    {
+      "slug": "ndh-turkish-court-istanbul",
+      "name": "Istanbul court (Feza Media Group case)",
+      "kind": "agency",
+      "role_or_office": "Court that ordered trustees installed at Feza Media Group",
+      "jurisdiction": "Turkiye",
+      "country": "TR",
+      "sources": []
+    }
+  ],
+  "outlets": [
+    {
+      "slug": "kesma-network",
+      "name": "KESMA member outlets",
+      "kind": "media_network",
+      "country": "HU",
+      "homepage_url": null
+    },
+    {
+      "slug": "index-hu",
+      "name": "Index.hu",
+      "kind": "news_website",
+      "country": "HU",
+      "homepage_url": "https://index.hu/"
+    },
+    {
+      "slug": "polska-press",
+      "name": "Polska Press",
+      "kind": "newspaper_group",
+      "country": "PL",
+      "homepage_url": null
+    },
+    {
+      "slug": "zaman",
+      "name": "Zaman",
+      "kind": "newspaper",
+      "country": "TR",
+      "homepage_url": null
+    },
+    {
+      "slug": "todays-zaman",
+      "name": "Today's Zaman",
+      "kind": "newspaper",
+      "country": "TR",
+      "homepage_url": null
+    },
+    {
+      "slug": "feza-media-group",
+      "name": "Feza Media Group",
+      "kind": "media_conglomerate",
+      "country": "TR",
+      "homepage_url": null
+    },
+    {
+      "slug": "cihan-news-agency",
+      "name": "Cihan News Agency",
+      "kind": "news_agency",
+      "country": "TR",
+      "homepage_url": null
+    },
+    {
+      "slug": "hurriyet",
+      "name": "Hurriyet",
+      "kind": "newspaper",
+      "country": "TR",
+      "homepage_url": null
+    },
+    {
+      "slug": "cnn-turk",
+      "name": "CNN Turk",
+      "kind": "broadcaster",
+      "country": "TR",
+      "homepage_url": null
+    },
+    {
+      "slug": "dogan-holding",
+      "name": "Dogan Holding",
+      "kind": "media_conglomerate",
+      "country": "TR",
+      "homepage_url": null
+    },
+    {
+      "slug": "cbc-radio-canada",
+      "name": "CBC/Radio-Canada",
+      "kind": "broadcaster",
+      "country": "CA",
+      "homepage_url": "https://www.cbc.ca/"
+    },
+    {
+      "slug": "the-economist",
+      "name": "The Economist",
+      "kind": "magazine",
+      "country": "GB",
+      "homepage_url": "https://www.economist.com/"
+    },
+    {
+      "slug": "time-magazine",
+      "name": "Time",
+      "kind": "magazine",
+      "country": "US",
+      "homepage_url": "https://time.com/"
+    },
+    {
+      "slug": "gaon-savera",
+      "name": "Gaon Savera",
+      "kind": "news_website",
+      "country": "IN",
+      "homepage_url": null
+    },
+    {
+      "slug": "meduza",
+      "name": "Meduza",
+      "kind": "news_website",
+      "country": "RU",
+      "homepage_url": "https://meduza.io/"
+    },
+    {
+      "slug": "pasmi",
+      "name": "PASMI",
+      "kind": "news_website",
+      "country": "RU",
+      "homepage_url": null
+    },
+    {
+      "slug": "the-new-times",
+      "name": "The New Times",
+      "kind": "magazine",
+      "country": "RU",
+      "homepage_url": null
+    },
+    {
+      "slug": "rappler",
+      "name": "Rappler",
+      "kind": "news_website",
+      "country": "PH",
+      "homepage_url": "https://www.rappler.com/"
+    },
+    {
+      "slug": "wall-street-journal",
+      "name": "The Wall Street Journal",
+      "kind": "newspaper",
+      "country": "US",
+      "homepage_url": "https://www.wsj.com/"
+    },
+    {
+      "slug": "radio-free-europe-radio-liberty",
+      "name": "Radio Free Europe/Radio Liberty",
+      "kind": "broadcaster",
+      "country": "CZ",
+      "homepage_url": null
+    },
+    {
+      "slug": "setit",
+      "name": "Setit",
+      "kind": "newspaper",
+      "country": "ER",
+      "homepage_url": null
+    },
+    {
+      "slug": "deutsche-welle",
+      "name": "Deutsche Welle",
+      "kind": "broadcaster",
+      "country": "DE",
+      "homepage_url": null
+    },
+    {
+      "slug": "regionalnaya-gazeta",
+      "name": "Regionalnaya Gazeta",
+      "kind": "newspaper",
+      "country": "BY",
+      "homepage_url": null
+    },
+    {
+      "slug": "bbc-russian",
+      "name": "BBC Russian",
+      "kind": "broadcaster",
+      "country": "GB",
+      "homepage_url": null
+    },
+    {
+      "slug": "voice-of-america",
+      "name": "Voice of America",
+      "kind": "broadcaster",
+      "country": "US",
+      "homepage_url": null
+    },
+    {
+      "slug": "al-mashhad",
+      "name": "Al-Mashhad",
+      "kind": "news_website",
+      "country": "EG",
+      "homepage_url": null
+    },
+    {
+      "slug": "orda",
+      "name": "Orda",
+      "kind": "news_website",
+      "country": "KZ",
+      "homepage_url": null
+    },
+    {
+      "slug": "gazeta-wyborcza",
+      "name": "Gazeta Wyborcza",
+      "kind": "newspaper",
+      "country": "PL",
+      "homepage_url": "https://wyborcza.pl/"
+    },
+    {
+      "slug": "new-york-times",
+      "name": "The New York Times",
+      "kind": "newspaper",
+      "country": "US",
+      "homepage_url": "https://www.nytimes.com/"
+    }
+  ],
+  "journalists": [
+    {
+      "slug": "szabolcs-dull",
+      "name": "Szabolcs Dull",
+      "outlet": "index-hu"
+    },
+    {
+      "slug": "sevgi-akarcesme",
+      "name": "Sevgi Akarcesme",
+      "outlet": "todays-zaman"
+    },
+    {
+      "slug": "celil-sagir",
+      "name": "Celil Sagir",
+      "outlet": "zaman"
+    },
+    {
+      "slug": "tom-gardner",
+      "name": "Tom Gardner",
+      "outlet": "the-economist"
+    },
+    {
+      "slug": "simon-marks",
+      "name": "Simon Marks",
+      "outlet": "new-york-times"
+    },
+    {
+      "slug": "carl-david-goette-luciak",
+      "name": "Carl David Goette-Luciak",
+      "outlet": null
+    },
+    {
+      "slug": "ans-boersma",
+      "name": "Ans Boersma",
+      "outlet": null
+    },
+    {
+      "slug": "aatish-taseer",
+      "name": "Aatish Taseer",
+      "outlet": "time-magazine"
+    },
+    {
+      "slug": "aung-marm-oo",
+      "name": "Aung Marm Oo",
+      "outlet": null
+    },
+    {
+      "slug": "maya-misikir",
+      "name": "Maya Misikir",
+      "outlet": null
+    },
+    {
+      "slug": "mohammad-mosaed",
+      "name": "Mohammad Mosaed",
+      "outlet": null
+    },
+    {
+      "slug": "zhang-zhan",
+      "name": "Zhang Zhan",
+      "outlet": null
+    },
+    {
+      "slug": "andrzej-poczobut",
+      "name": "Andrzej Poczobut",
+      "outlet": "gazeta-wyborcza"
+    },
+    {
+      "slug": "anastasia-sharkevich",
+      "name": "Anastasia Sharkevich",
+      "outlet": null
+    },
+    {
+      "slug": "evan-gershkovich",
+      "name": "Evan Gershkovich",
+      "outlet": "wall-street-journal"
+    },
+    {
+      "slug": "alsu-kurmasheva",
+      "name": "Alsu Kurmasheva",
+      "outlet": "radio-free-europe-radio-liberty"
+    },
+    {
+      "slug": "khadija-ismayilova",
+      "name": "Khadija Ismayilova",
+      "outlet": null
+    },
+    {
+      "slug": "maria-ressa",
+      "name": "Maria Ressa",
+      "outlet": "rappler"
+    },
+    {
+      "slug": "reynaldo-santos-jr",
+      "name": "Reynaldo Santos Jr.",
+      "outlet": "rappler"
+    },
+    {
+      "slug": "dawit-isaac",
+      "name": "Dawit Isaac",
+      "outlet": "setit"
+    },
+    {
+      "slug": "sedef-kabas",
+      "name": "Sedef Kabas",
+      "outlet": null
+    },
+    {
+      "slug": "daphne-caruana-galizia",
+      "name": "Daphne Caruana Galizia",
+      "outlet": null
+    },
+    {
+      "slug": "azamat-omarov",
+      "name": "Azamat Omarov",
+      "outlet": null
+    },
+    {
+      "slug": "diana-okremova",
+      "name": "Diana Okremova",
+      "outlet": null
+    },
+    {
+      "slug": "aleh-hruzdzilovich",
+      "name": "Aleh Hruzdzilovich",
+      "outlet": "radio-free-europe-radio-liberty"
+    }
+  ],
+  "incidents": [
+    {
+      "slug": "2018-hungary-kesma-media-merger",
+      "title": "Hungary: formation of the KESMA pro-government media foundation",
+      "occurred_on": "2018-11-29",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Hungary, national",
+      "country": "HU",
+      "level": "national",
+      "continent": "Europe",
+      "type": "funding_and_ownership_pressure",
+      "tactic_primary": "funding_and_ownership_pressure",
+      "tactics": [
+        "funding_and_ownership_pressure"
+      ],
+      "stage": "silence",
+      "leader_slug": "viktor-orban",
+      "granularity": "granular",
+      "summary": "Owners aligned with Hungary's governing party donated 476 outlets into one non-profit foundation, KESMA. The government exempted the merger from the antitrust review that would normally apply to a combination of that size.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "On November 29, 2018, the owners of 476 Hungarian outlets, including television channels, radio stations, news portals, newspapers and magazines, transferred them for no payment into a single non-profit body, the Central European Press and Media Foundation, known as KESMA. Most of these outlets had already been supportive of Prime Minister Viktor Orban's government; several had themselves been bought in earlier years by businesspeople close to the governing Fidesz party. Ordinarily a media combination of this scale would trigger a review by Hungary's competition authority to check its effect on media pluralism. The government instead declared the merger a matter of national interest and exempted it from that review by decree. KESMA's outlets now make up a large share of Hungary's total media market, alongside the country's state broadcaster.",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "Hungary's press freedom organization Reporters Without Borders later said the government-aligned foundation and state broadcasting together dominate about eighty percent of the national media market, crowding out independent competitors for advertising and audience.",
+      "status": "Sustained; KESMA continued to operate as of the sources reviewed.",
+      "what_we_dont_know": "The sources reviewed do not give the government's stated reason for exempting the merger from competition review.",
+      "outcome": "sustained",
+      "outcome_on": "2018-11-29",
+      "outcome_note": "The merger was completed and the exemption was not reported as reversed in the sources reviewed.",
+      "actors": [
+        "viktor-orban",
+        "kesma"
+      ],
+      "outlets": [
+        "kesma-network"
+      ],
+      "journalists": [],
+      "cases": [],
+      "sources": [
+        "l2_001",
+        "l2_035"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "476 outlets donated to KESMA",
+          "statement": "The number of outlets folded into the new foundation.",
+          "source_id": "l2_001",
+          "evidence_quote": "In December, the owners of 476 progovernment titles donated their outlets to a new non-profit entity called KESMA for free; the merger was exempted from antitrust review on \"national interest\" grounds."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "KESMA now controls about 80 percent of the country's media market",
+          "statement": "RSF's later assessment of the merged foundation's market share.",
+          "source_id": "l2_035",
+          "evidence_quote": "this group now controls 80% of the country's media landscape"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Public broadcasting became a government messaging tool",
+          "statement": "RSF's characterization of the state broadcaster over the same period.",
+          "source_id": "l2_035",
+          "evidence_quote": "public broadcasting was turned into a propaganda machine"
+        }
+      ],
+      "ladder_note": "Owners surrendered 476 outlets into one government-aligned foundation, exempted by decree from antitrust review; United States funding pressure has cut money and licenses but has not required owners to give up outlets."
+    },
+    {
+      "slug": "2020-hungary-index-hu-editor-fired",
+      "title": "Hungary: editor fired and staff resign at Index.hu",
+      "occurred_on": "2020-07-24",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Hungary, national",
+      "country": "HU",
+      "level": "national",
+      "continent": "Europe",
+      "type": "funding_and_ownership_pressure",
+      "tactic_primary": "funding_and_ownership_pressure",
+      "tactics": [
+        "funding_and_ownership_pressure"
+      ],
+      "stage": "pressure",
+      "leader_slug": "viktor-orban",
+      "granularity": "granular",
+      "summary": "Index.hu, Hungary's most-read independent news site, fired editor-in-chief Szabolcs Dull weeks after he warned that a change in ownership threatened its independence. Most of the newsroom resigned within days.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "In March 2020, businessman Miklos Vaszily, who had previously run outlets aligned with Prime Minister Viktor Orban's government, gained an indirect stake in the company that sells advertising for Index.hu, Hungary's largest independent news site. On June 22, 2020, editor-in-chief Szabolcs Dull published a public letter, co-signed by most of the newsroom, saying the site's independence was in danger. Index.hu added a public indicator it called a barometer to track the threat. On July 22, 2020, company leadership fired Dull. Two days later, more than seventy of the outlet's roughly ninety journalists resigned, saying they could no longer guarantee independent coverage. Many of the departing staff went on to found a new outlet, Telex.hu, later that year. Index.hu continued operating under new ownership and editorial leadership.",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "The mass resignation removed most of the reporting staff Index.hu had built over two decades and shifted its ownership toward people described in the sources reviewed as close to the government.",
+      "status": "Sustained; Dull's dismissal was not reversed and Index.hu continued under its new ownership.",
+      "what_we_dont_know": "The sources reviewed do not give the company's stated reason for dismissing Dull.",
+      "outcome": "sustained",
+      "outcome_on": "2020-07-24",
+      "outcome_note": "Dull's dismissal stood and the outlet continued under its changed ownership; the sources reviewed do not report a reversal.",
+      "actors": [
+        "viktor-orban"
+      ],
+      "outlets": [
+        "index-hu"
+      ],
+      "journalists": [
+        "szabolcs-dull"
+      ],
+      "cases": [],
+      "sources": [
+        "l2_002"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Dull dismissed July 22, 2020",
+          "statement": "Confirmation of the firing date.",
+          "source_id": "l2_002",
+          "evidence_quote": "Szabolcs Dull was dismissed by company leadership in July."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "More than 70 staff resign",
+          "statement": "Scale of the newsroom departure.",
+          "source_id": "l2_002",
+          "evidence_quote": "Editorial board of Index and more than 70 staff members resign"
+        },
+        {
+          "field": "what_happened",
+          "value": "Ownership passed to pro-government circles",
+          "statement": "Freedom House's description of the buyer.",
+          "source_id": "l2_002",
+          "evidence_quote": "Index.hu was sold to progovernment business circles"
+        }
+      ],
+      "ladder_note": "An editor was fired and most of a ninety-person newsroom resigned after a government-linked businessman gained influence over the outlet's ownership; United States funding pressure has not removed an editor through an ownership change."
+    },
+    {
+      "slug": "2021-poland-orlen-buys-polska-press",
+      "title": "Poland: state oil company Orlen buys the Polska Press newspaper group",
+      "occurred_on": "2021-04-01",
+      "occurred_on_precision": "month",
+      "jurisdiction": "Poland, national",
+      "country": "PL",
+      "level": "national",
+      "continent": "Europe",
+      "type": "funding_and_ownership_pressure",
+      "tactic_primary": "funding_and_ownership_pressure",
+      "tactics": [
+        "funding_and_ownership_pressure"
+      ],
+      "stage": "silence",
+      "leader_slug": "mateusz-morawiecki",
+      "granularity": "granular",
+      "summary": "Poland's state-controlled oil company PKN Orlen completed the purchase of Polska Press, a group of 20 regional newspapers reaching millions of readers, from its German owner, over objections from Poland's human rights commissioner.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "PKN Orlen, an oil and gas company majority owned by the Polish state, announced on December 7, 2020, that it would buy Polska Press, a group of 20 regional daily newspapers and about 120 local weeklies and websites reaching an estimated 17.4 million readers, from Germany's Verlagsgruppe Passau. Poland's national human rights commissioner, Adam Bodnar, warned in March 2021 that state control over the group could let officials influence editorial boards. Orlen completed the acquisition in April 2021 and installed a new management team. Some journalists at member papers, including Polska Times, said their day-to-day assignments had not changed immediately but that they feared future interference. On February 10, 2021, dozens of independent Polish outlets, including national broadcasters, staged a one-day protest against a separate proposed advertising tax, running the message \"Media without choice\" instead of normal programming, a protest that took place against the backdrop of the Orlen deal.",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "Polska Press journalists described uncertainty about their outlets' editorial direction once a state-controlled company held ownership, even before any specific change in coverage was reported.",
+      "status": "Sustained as of the sources reviewed.",
+      "what_we_dont_know": "The sources reviewed do not report whether Orlen changed the editorial line of specific Polska Press titles after the sale closed.",
+      "outcome": "sustained",
+      "outcome_on": "2021-04-01",
+      "outcome_note": "The acquisition closed and was not reported as reversed in the sources reviewed.",
+      "actors": [
+        "mateusz-morawiecki",
+        "pkn-orlen"
+      ],
+      "outlets": [
+        "polska-press"
+      ],
+      "journalists": [],
+      "cases": [],
+      "sources": [
+        "l2_003"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Bodnar warns of editorial influence",
+          "statement": "Statement from Poland's human rights commissioner on the risk of the sale.",
+          "source_id": "l2_003",
+          "evidence_quote": "could easily gain influence over editorial boards, and thus transform a free press, which is tasked with producing honest and fact-based criticism of the public administration and the people who man it, into pro-government information and propaganda bulletins"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Polska Times editor notes no immediate change but concern",
+          "statement": "A journalist inside the acquired group describing the atmosphere after the sale.",
+          "source_id": "l2_003",
+          "evidence_quote": "For the time being, our work has not changed but we are, of course, full of concerns that this scenario could be repeated"
+        },
+        {
+          "field": "what_happened",
+          "value": "Media without choice protest, February 10, 2021",
+          "statement": "Description of the one-day protest by independent outlets.",
+          "source_id": "l2_003",
+          "evidence_quote": "Media without choice"
+        }
+      ],
+      "ladder_note": "A state-controlled company bought a group of 20 regional papers reaching 17 million readers; United States funding pressure has cut money and reviewed licenses but has not transferred an outlet's ownership to the state."
+    },
+    {
+      "slug": "2016-turkiye-zaman-trustees-installed",
+      "title": "Turkiye: court installs trustees at Zaman newspaper",
+      "occurred_on": "2016-03-04",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Turkiye, national",
+      "country": "TR",
+      "level": "national",
+      "continent": "Asia",
+      "type": "funding_and_ownership_pressure",
+      "tactic_primary": "funding_and_ownership_pressure",
+      "tactics": [
+        "funding_and_ownership_pressure"
+      ],
+      "stage": "silence",
+      "leader_slug": "recep-tayyip-erdogan",
+      "granularity": "granular",
+      "summary": "An Istanbul court put Turkiye's best-selling newspaper, Zaman, and its parent company under trustees after ruling it supported a group the government called a terrorist organization. Police used tear gas on a crowd that gathered in support.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "On March 4, 2016, an Istanbul court ruled that Feza Media Group, publisher of the newspapers Zaman and Today's Zaman and the Cihan news agency, supported a movement led by the exiled cleric Fethullah Gulen that Turkiye's government had labeled a terrorist organization. The court ordered the company placed under court-appointed trustees, who took control of its board, servers and archives and blocked existing journalists' access to their own systems. Police used tear gas and water cannons to disperse a crowd that had gathered outside Zaman's Istanbul office in support of the paper. Within days, the new management removed critical stories from the paper's history and installed an editorial line supportive of the government; the paper's foreign editor and other senior staff were dismissed. Today's Zaman continued for several more months before all Feza-linked outlets were permanently closed by a state-of-emergency decree following the failed coup attempt of July 2016.",
+      "stated_justification": "\"the new administration does not want any stories that were 'critical of Turkey'\"",
+      "effect_on_reporting": "Journalists said the paper reversed its editorial line within days and that the takeover was part of a broader effort described by one ousted editor as aimed at every independent voice, not only Zaman.",
+      "status": "Sustained until the outlets were later closed entirely by decree in July 2016.",
+      "what_we_dont_know": "The sources reviewed do not include the trustees' own account of why specific staff were dismissed.",
+      "outcome": "sustained",
+      "outcome_on": "2016-03-04",
+      "outcome_note": "Editorial control was not restored to the original owners; the outlets were later shut down entirely under a separate July 2016 decree.",
+      "actors": [
+        "recep-tayyip-erdogan",
+        "ndh-turkish-court-istanbul"
+      ],
+      "outlets": [
+        "zaman",
+        "todays-zaman",
+        "feza-media-group",
+        "cihan-news-agency"
+      ],
+      "journalists": [
+        "sevgi-akarcesme",
+        "celil-sagir"
+      ],
+      "cases": [],
+      "sources": [
+        "l2_004",
+        "l2_005"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Court rules Zaman supported a terrorist organization",
+          "statement": "The court's stated basis for installing trustees.",
+          "source_id": "l2_005",
+          "evidence_quote": "an Istanbul court on Friday ruled that Zaman and Today's Zaman support an alleged terrorist organization"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Police used tear gas and water cannons on supporters",
+          "statement": "Description of the police response outside the newsroom.",
+          "source_id": "l2_005",
+          "evidence_quote": "police used tear gas and water cannons against journalists and protesters who gathered to support them"
+        },
+        {
+          "field": "what_happened",
+          "value": "New managers blocked journalists' access to servers and archives",
+          "statement": "Description of what the trustees did on taking control.",
+          "source_id": "l2_005",
+          "evidence_quote": "the new managers took over the dailies' servers and archives and blocked journalists' access"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Editor says the takeover targets more than one paper",
+          "statement": "Ousted editor Sevgi Akarcesme's assessment of the takeover's scope.",
+          "source_id": "l2_004",
+          "evidence_quote": "Erdoğan is killing journalism. It's not just about Zaman and Today's Zaman. Everyone is targeted."
+        }
+      ],
+      "ladder_note": "A court replaced a newspaper's board and editors with trustees days after a hearing without the company's lawyers present; United States funding pressure has not removed an outlet's management by court order."
+    },
+    {
+      "slug": "2018-turkiye-dogan-sells-to-demiroren",
+      "title": "Turkiye: Dogan Holding sells its media outlets to Demiroren",
+      "occurred_on": "2018-03-21",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Turkiye, national",
+      "country": "TR",
+      "level": "national",
+      "continent": "Asia",
+      "type": "funding_and_ownership_pressure",
+      "tactic_primary": "funding_and_ownership_pressure",
+      "tactics": [
+        "funding_and_ownership_pressure"
+      ],
+      "stage": "silence",
+      "leader_slug": "recep-tayyip-erdogan",
+      "granularity": "granular",
+      "summary": "Turkiye's largest independent media group, including the newspaper Hurriyet and the broadcaster CNN Turk, was sold to the Demiroren conglomerate, a buyer with ties to the governing party, for a reported 1.1 billion dollars.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "Dogan Holding, one of Turkiye's largest conglomerates, announced on March 21, 2018, that it would sell its media assets, including the newspapers Hurriyet and Posta and the television channels Kanal D and CNN Turk, to Demiroren Holding for a reported 1.1 billion dollars. Dogan's outlets had been among the few remaining large media companies not aligned with President Recep Tayyip Erdogan's government, though the group had already softened its coverage under years of tax disputes and legal pressure. Demiroren had a record of changing coverage after previous purchases: when it bought the newspapers Milliyet and Vatan from Dogan in 2011, both switched to a government-supportive editorial line. Journalists said the sale would place Turkiye's mass media even more directly under pro-government ownership, since Demiroren's chairman had personal and business ties to Erdogan.",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "Journalists covering the sale said it would extend pro-government ownership over the last major independent broadcaster and newspaper group, following the same pattern seen at Demiroren's earlier acquisitions.",
+      "status": "Sustained; the sale closed as announced.",
+      "what_we_dont_know": "The sources reviewed do not give the sale's final confirmed price beyond the reported figure.",
+      "outcome": "sustained",
+      "outcome_on": "2018-03-21",
+      "outcome_note": "The sale closed and was not reported as reversed in the sources reviewed.",
+      "actors": [
+        "recep-tayyip-erdogan",
+        "demiroren-holding"
+      ],
+      "outlets": [
+        "dogan-holding",
+        "hurriyet",
+        "cnn-turk"
+      ],
+      "journalists": [],
+      "cases": [],
+      "sources": [
+        "l2_006"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Dogan announces sale to Demiroren, March 21, 2018",
+          "statement": "The CPJ chronicle's description of the announced sale.",
+          "source_id": "l2_006",
+          "evidence_quote": "Doğan Holding, one of Turkey's largest conglomerates, on March 21 announced that it would sell its media assets to the pro-government Demirören Holding."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Earlier Demiroren purchases turned pro-government",
+          "statement": "Precedent cited for what the new sale would mean editorially.",
+          "source_id": "l2_006",
+          "evidence_quote": "when Demirören previously acquired dailies Milliyet and Vatan from Doğan in 2011, their editorial lines became strictly pro-government"
+        },
+        {
+          "field": "what_happened",
+          "value": "Sale includes Hurriyet, Posta, Kanal D and CNN Turk",
+          "statement": "The specific outlets named as part of the sale.",
+          "source_id": "l2_006",
+          "evidence_quote": "Two of Turkey's top-selling newspapers, Hurriyet and Posta, and its main entertainment and news channels, Kanal D and CNN Turk, would be included in the sale, the news reports said."
+        }
+      ],
+      "ladder_note": "Turkiye's largest remaining independent newspaper and broadcast group was sold to a buyer with ties to the president, following two prior purchases that turned pro-government; United States pressure on owners has not produced a forced sale of this kind."
+    },
+    {
+      "slug": "2022-russia-expels-cbc-cancels-visas",
+      "title": "Russia: CBC/Radio-Canada bureau closed and journalists' visas cancelled",
+      "occurred_on": "2022-05-18",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Russia, national",
+      "country": "RU",
+      "level": "national",
+      "continent": "Europe",
+      "type": "expulsion_and_visa_denial",
+      "tactic_primary": "expulsion_and_visa_denial",
+      "tactics": [
+        "expulsion_and_visa_denial"
+      ],
+      "stage": "punish",
+      "leader_slug": "vladimir-putin",
+      "granularity": "granular",
+      "summary": "Russian authorities ordered the Canadian broadcaster CBC/Radio-Canada's Moscow bureau closed and cancelled its journalists' visas and accreditation, part of a wave of expulsions and non-renewals of foreign correspondents after the invasion of Ukraine.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "On May 18, 2022, Russian authorities moved to close the Moscow bureau of CBC/Radio-Canada, Canada's public broadcaster, and cancelled the visas and accreditation of its correspondents there, ending the outlet's ability to report from inside the country. The action came three months into Russia's full-scale invasion of Ukraine, during a period in which Russia also blocked the websites of the BBC's Russian service, Germany's Deutsche Welle and other outlets, and later denied visa renewals to correspondents from the Netherlands and Finland and expelled two German journalists. Canada had imposed sanctions on Russian officials and state media figures over the invasion, and Russian officials described several of these press-related measures as reciprocal steps against countries that had sanctioned Russia or its state broadcasters.",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "The closure ended CBC's ability to report from inside Russia during the war, joining several other Western outlets whose correspondents lost accreditation or visas over the same period.",
+      "status": "Sustained; the bureau remained closed in the sources reviewed.",
+      "what_we_dont_know": "The sources reviewed do not give Russia's specific stated reason for acting against CBC's bureau on that date.",
+      "outcome": "sustained",
+      "outcome_on": "2022-05-18",
+      "outcome_note": "The bureau closure and visa cancellations were not reported as reversed in the sources reviewed.",
+      "actors": [
+        "vladimir-putin"
+      ],
+      "outlets": [
+        "cbc-radio-canada"
+      ],
+      "journalists": [],
+      "cases": [],
+      "sources": [
+        "l2_010"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "CBC bureau closed and visas cancelled",
+          "statement": "Description of the action against CBC's Moscow bureau.",
+          "source_id": "l2_010",
+          "evidence_quote": "Russian authorities have moved to close the outlet's Moscow bureau and cancel the visa and accreditations of its journalists"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Russia establishing total control over information after the invasion",
+          "statement": "CPJ's broader characterization of Russia's actions since the invasion began.",
+          "source_id": "l2_010",
+          "evidence_quote": "Russian authorities have moved quickly to establish total censorship and control over the free flow of information since Russia invaded Ukraine on February 24,"
+        },
+        {
+          "field": "what_happened",
+          "value": "Roskomnadzor also blocked BBC Russian and Deutsche Welle",
+          "statement": "Related blocking action against other foreign outlets in the same period.",
+          "source_id": "l2_033",
+          "evidence_quote": "Roskomnadzor on Friday, March 4, blocked access to several news websites, including those of BBC Russian, German public broadcaster Deutsche Welle"
+        }
+      ],
+      "ladder_note": "Russia closed a foreign broadcaster's bureau and cancelled its journalists' visas and accreditation in retaliation for sanctions; the September 2026 White House ban restricted building access but did not remove any outlet's staff from the country."
+    },
+    {
+      "slug": "2022-ethiopia-expels-tom-gardner",
+      "title": "Ethiopia: Economist correspondent Tom Gardner expelled",
+      "occurred_on": "2022-05-13",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Ethiopia, national",
+      "country": "ET",
+      "level": "national",
+      "continent": "Africa",
+      "type": "expulsion_and_visa_denial",
+      "tactic_primary": "expulsion_and_visa_denial",
+      "tactics": [
+        "expulsion_and_visa_denial"
+      ],
+      "stage": "punish",
+      "leader_slug": "abiy-ahmed",
+      "granularity": "granular",
+      "summary": "Ethiopia's media regulator revoked The Economist correspondent Tom Gardner's press accreditation and gave him 48 hours to leave the country, citing unspecified conduct, almost a year after expelling a New York Times reporter.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "On May 13, 2022, Ethiopia's Media Authority revoked the press accreditation of Tom Gardner, a correspondent for The Economist who had reported from the country for several years, and ordered him to leave within 48 hours. The authority said Gardner had failed to meet unspecified standards of conduct for journalists; weeks earlier, in March 2022, officials had accused him of posting information on social media that was not properly sourced or supported by government authorities. Gardner's expulsion came almost a year after Ethiopian authorities similarly expelled New York Times correspondent Simon Marks in May 2021, during the country's civil war with forces from the Tigray region. The Economist said Gardner's reporting on Ethiopia had been professional and unbiased.",
+      "stated_justification": "\"failed to live to [the] standards of conduct for journalists\"",
+      "effect_on_reporting": "The expulsion removed one of the few remaining Western correspondents reporting on Ethiopia's civil war from inside the country, following a similar expulsion the year before.",
+      "status": "Closed; Gardner left the country within the 48-hour deadline.",
+      "what_we_dont_know": "The sources reviewed do not specify which standards of conduct the authority said Gardner failed to meet.",
+      "outcome": "sustained",
+      "outcome_on": "2022-05-13",
+      "outcome_note": "The expulsion was carried out and was not reported as reversed in the sources reviewed.",
+      "actors": [
+        "abiy-ahmed",
+        "ethiopian-media-authority"
+      ],
+      "outlets": [
+        "the-economist",
+        "new-york-times"
+      ],
+      "journalists": [
+        "tom-gardner",
+        "simon-marks"
+      ],
+      "cases": [],
+      "sources": [
+        "l2_007"
+      ],
+      "claims": [
+        {
+          "field": "stated_justification",
+          "value": "Authority cites failure to meet conduct standards",
+          "statement": "The regulator's stated reason for revoking accreditation.",
+          "source_id": "l2_007",
+          "evidence_quote": "failed to live to [the] standards of conduct for journalists"
+        },
+        {
+          "field": "what_happened",
+          "value": "Expulsion follows a similar 2021 case",
+          "statement": "Reference tying Gardner's case to the earlier expulsion of a New York Times reporter.",
+          "source_id": "l2_007",
+          "evidence_quote": "Gardner's expulsion came almost a year after Ethiopian authorities similarly expelled New York Times reporter Simon Marks"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "The Economist calls Gardner's reporting professional and unbiased",
+          "statement": "The outlet's response to the expulsion.",
+          "source_id": "l2_007",
+          "evidence_quote": "Gardner's reporting on Ethiopia has been professional, unbiased and often courageous."
+        }
+      ],
+      "ladder_note": "Ethiopia gave a foreign correspondent 48 hours to leave over unspecified conduct, the second such expulsion in a year; the White House ban restricted access to the briefing room, not to the country itself."
+    },
+    {
+      "slug": "2018-nicaragua-expels-goette-luciak",
+      "title": "Nicaragua: freelance correspondent detained and deported after online campaign",
+      "occurred_on": "2018-09-16",
+      "occurred_on_precision": "month",
+      "jurisdiction": "Nicaragua, national",
+      "country": "NI",
+      "level": "national",
+      "continent": "North America",
+      "type": "expulsion_and_visa_denial",
+      "tactic_primary": "expulsion_and_visa_denial",
+      "tactics": [
+        "expulsion_and_visa_denial"
+      ],
+      "stage": "punish",
+      "leader_slug": "daniel-ortega",
+      "granularity": "granular",
+      "summary": "A coordinated online campaign accused freelance correspondent Carl David Goette-Luciak of being a foreign agent and circulated his home address, after which he was detained and deported from Nicaragua in September 2018.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "Beginning September 16, 2018, dozens of social media accounts, some appearing automated and posting nearly identical messages within minutes of one another, began sharing photographs and videos of Carl David Goette-Luciak, a United States-Austrian freelance journalist who had reported from Nicaragua on protests against President Daniel Ortega's government for outlets including The Guardian and The Washington Post. The posts accused him of working for the Central Intelligence Agency and of trying to destabilize the country, and some included his home address; other users called for him to be captured and handed to police, or expelled. Some of the accounts sharing the material were linked to government-affiliated organizations. Goette-Luciak was later detained and deported from Nicaragua that September.",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "The campaign and subsequent deportation removed one of the few foreign freelance correspondents then covering Nicaragua's protest movement for major English-language outlets.",
+      "status": "Closed; Goette-Luciak was deported and did not return to report from Nicaragua in the period covered by the sources reviewed.",
+      "what_we_dont_know": "The sources reviewed do not name the government office responsible for the deportation order.",
+      "outcome": "sustained",
+      "outcome_on": "2018-09-30",
+      "outcome_note": "The deportation was not reported as reversed; the sources reviewed record at least 50 Nicaraguan journalists in exile by mid-2019.",
+      "actors": [
+        "daniel-ortega"
+      ],
+      "outlets": [],
+      "journalists": [
+        "carl-david-goette-luciak"
+      ],
+      "cases": [],
+      "sources": [
+        "l2_011",
+        "l2_012"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Campaign shares his home address",
+          "statement": "Description of what the coordinated accounts posted about him.",
+          "source_id": "l2_011",
+          "evidence_quote": "They had the exact address, including the name of the owner of the house, which I didn't even know."
+        },
+        {
+          "field": "what_happened",
+          "value": "Accounts appeared automated and coordinated",
+          "statement": "CPJ's description of the campaign's coordinated character.",
+          "source_id": "l2_011",
+          "evidence_quote": "Some of the accounts sharing these posts appeared automated, using the same language and images and posting within minutes of each other"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Users call for his capture or expulsion",
+          "statement": "The kind of response the campaign encouraged from other users.",
+          "source_id": "l2_011",
+          "evidence_quote": "called for him to be captured and turned over to police, tortured, or expelled from the country"
+        }
+      ],
+      "ladder_note": "A freelance correspondent was targeted online with his home address, then detained and deported from Nicaragua; no comparable United States action in the record has removed a journalist from the country."
+    },
+    {
+      "slug": "2019-turkiye-deports-ans-boersma",
+      "title": "Turkiye: Dutch freelance journalist Ans Boersma deported",
+      "occurred_on": "2019-01-17",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Turkiye, national",
+      "country": "TR",
+      "level": "national",
+      "continent": "Asia",
+      "type": "expulsion_and_visa_denial",
+      "tactic_primary": "expulsion_and_visa_denial",
+      "tactics": [
+        "expulsion_and_visa_denial"
+      ],
+      "stage": "punish",
+      "leader_slug": "recep-tayyip-erdogan",
+      "granularity": "granular",
+      "summary": "Turkish authorities detained Dutch freelance journalist Ans Boersma while she tried to renew her residence permit in Istanbul and deported her the next day, citing an alleged link to a Syrian armed group that the Netherlands said it had never been asked about.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "On January 16, 2019, Turkish authorities took Ans Boersma, a Dutch freelance journalist based in Istanbul, into custody while she attempted to renew her residence permit at the city's Foreigners' Office. She was held overnight at a police station and deported the next day, January 17, without being allowed to return to her home to collect belongings. Turkish officials linked the deportation to an allegation that Boersma had ties to Jabhat al-Nusra, a Syrian armed group. The Dutch government said Turkey had made no request for her detention, expulsion or extradition and that it had not been consulted about the allegation before she was removed. Boersma had reported on Turkiye and Syria for several years before the deportation.",
+      "stated_justification": "\"The Netherlands told Turkey that the reporter, who was deported today, had links to Jabhat al-Nusra.\"",
+      "effect_on_reporting": "The deportation removed a working foreign correspondent from the country on an allegation her own government said it had not been asked to confirm.",
+      "status": "Closed; Boersma was deported and did not return to report from Turkiye in the period covered by the sources reviewed.",
+      "what_we_dont_know": "The sources reviewed do not include the evidence Turkish authorities cited for the Jabhat al-Nusra allegation.",
+      "outcome": "sustained",
+      "outcome_on": "2019-01-17",
+      "outcome_note": "The deportation was not reported as reversed in the sources reviewed.",
+      "actors": [
+        "recep-tayyip-erdogan"
+      ],
+      "outlets": [],
+      "journalists": [
+        "ans-boersma"
+      ],
+      "cases": [],
+      "sources": [
+        "l2_009"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Detained while renewing residence permit",
+          "statement": "Circumstances of her detention.",
+          "source_id": "l2_009",
+          "evidence_quote": "The journalist was taken into custody the day before, when she tried to renew her residence permit at the Foreigners' Office in Istanbul."
+        },
+        {
+          "field": "stated_justification",
+          "value": "Officials cite alleged Jabhat al-Nusra ties",
+          "statement": "Turkey's stated basis for the deportation.",
+          "source_id": "l2_009",
+          "evidence_quote": "The Netherlands told Turkey that the reporter, who was deported today, had links to Jabhat al-Nusra."
+        },
+        {
+          "field": "what_happened",
+          "value": "Held overnight, deported without collecting belongings",
+          "statement": "Details of her overnight detention and removal.",
+          "source_id": "l2_009",
+          "evidence_quote": "She was detained overnight at a police station, and put on the plane the following day without being allowed to visit her house to pack."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Dutch government says it made no such request",
+          "statement": "The Netherlands' response disputing the basis for the deportation.",
+          "source_id": "l2_009",
+          "evidence_quote": "No request for detention, expulsion or extradition has been made."
+        }
+      ],
+      "ladder_note": "A foreign correspondent was detained overnight and deported on an allegation her own government said it was never asked to confirm; the White House ban has not deported a journalist from the country."
+    },
+    {
+      "slug": "2019-india-revokes-taseer-oci-status",
+      "title": "India: journalist Aatish Taseer's overseas citizenship revoked",
+      "occurred_on": "2019-11-07",
+      "occurred_on_precision": "day",
+      "jurisdiction": "India, national",
+      "country": "IN",
+      "level": "national",
+      "continent": "Asia",
+      "type": "expulsion_and_visa_denial",
+      "tactic_primary": "expulsion_and_visa_denial",
+      "tactics": [
+        "expulsion_and_visa_denial"
+      ],
+      "stage": "punish",
+      "leader_slug": "narendra-modi",
+      "granularity": "granular",
+      "summary": "India's government cancelled writer and journalist Aatish Taseer's Overseas Citizen of India status months after he wrote a Time magazine cover story critical of Prime Minister Narendra Modi, citing his father's Pakistani nationality.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "In May 2019, Time magazine published a cover story by writer and journalist Aatish Taseer that was critical of Prime Minister Narendra Modi ahead of that year's general election. On August 13, 2019, India's Home Ministry sent Taseer a notice threatening to revoke his Overseas Citizen of India status, a form of long-term immigration status that lets people of Indian origin live and work in the country without a visa. The ministry said Taseer was ineligible for the status because his father, the Pakistani politician Salmaan Taseer, was a Pakistani national, and Pakistani nationals cannot hold it. On November 7, 2019, the government made the cancellation official. Taseer disputed the notice, said he did not hold Pakistani citizenship, and said he believed the action was linked to his criticism of the Modi government.",
+      "stated_justification": "\"his father was a Pakistani national, and Pakistani nationals are not eligible for such status\"",
+      "effect_on_reporting": "The cancellation ended Taseer's ability to enter India on his Overseas Citizen status, restricting a foreign-based journalist's access to the country whose government he had written about.",
+      "status": "Closed; the cancellation was made official in November 2019.",
+      "what_we_dont_know": "The sources reviewed do not report whether Taseer obtained an alternative visa to enter India afterward.",
+      "outcome": "sustained",
+      "outcome_on": "2019-11-07",
+      "outcome_note": "The cancellation was carried out and was not reported as reversed in the sources reviewed.",
+      "actors": [
+        "narendra-modi"
+      ],
+      "outlets": [
+        "time-magazine"
+      ],
+      "journalists": [
+        "aatish-taseer"
+      ],
+      "cases": [],
+      "sources": [
+        "l2_008"
+      ],
+      "claims": [
+        {
+          "field": "stated_justification",
+          "value": "Ministry cites father's Pakistani nationality",
+          "statement": "The government's stated legal basis for the cancellation.",
+          "source_id": "l2_008",
+          "evidence_quote": "Taseer was \"ineligible\" for such citizenship"
+        },
+        {
+          "field": "what_happened",
+          "value": "Cancellation follows a Time cover story critical of Modi",
+          "statement": "Link between the article and the government's notice.",
+          "source_id": "l2_008",
+          "evidence_quote": "criticized Prime Minister Narendra Modi in a May cover story he wrote for Time magazine"
+        },
+        {
+          "field": "what_happened",
+          "value": "CPJ says targeting immigration status shows intolerance of criticism",
+          "statement": "CPJ's assessment of the government's action.",
+          "source_id": "l2_008",
+          "evidence_quote": "Targeting a journalist's immigration status after the publication of a critical article shows that the Bharatiya Janata Party is intolerant of criticism and freedom of the press"
+        }
+      ],
+      "ladder_note": "India revoked a journalist's long-term immigration status months after his cover story criticized the prime minister; the White House ban withdrew building access, not legal status to enter the country."
+    },
+    {
+      "slug": "2021-myanmar-military-internet-shutdown",
+      "title": "Myanmar: military cuts mobile internet after seizing power",
+      "occurred_on": "2021-02-01",
+      "occurred_on_precision": "month",
+      "jurisdiction": "Myanmar, national",
+      "country": "MM",
+      "level": "national",
+      "continent": "Asia",
+      "type": "shutdowns_and_blocking",
+      "tactic_primary": "shutdowns_and_blocking",
+      "tactics": [
+        "shutdowns_and_blocking"
+      ],
+      "stage": "silence",
+      "leader_slug": "min-aung-hlaing",
+      "granularity": "granular",
+      "summary": "After seizing power on February 1, 2021, Myanmar's military cut mobile data service nationwide, leaving reporters in rural townships and Rakhine State unable to send news and blocking large areas from outside communication for months.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "On February 1, 2021, Myanmar's military, led by Commander-in-Chief Min Aung Hlaing, seized power from the elected government and detained its leaders. In the weeks that followed, the military ordered mobile internet providers to cut data service, first intermittently and then for extended stretches, across large parts of the country. Reporters for local outlets said the blackout made it difficult or impossible to send news out of affected areas; one editor said reporters in different townships found it very hard to file their stories once mobile data was blocked. In Rakhine State, in the country's west, journalists described a total blockage of mobile data across northern cities and rural areas for months. The shutdown compounded restrictions the military had already placed on domestic media licenses and on journalists' movement.",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "Local reporters said the shutdown of mobile data made it very difficult to send news out of affected townships, cutting off some regions from outside coverage for months at a time.",
+      "status": "Ongoing as of the source reviewed, published in May 2021.",
+      "what_we_dont_know": "The sources reviewed do not give an exact date when service was restored in each affected region.",
+      "outcome": "ongoing",
+      "outcome_on": "2021-05-03",
+      "outcome_note": "As of the May 2021 source, mobile data remained cut in parts of the country, including large areas of Rakhine State.",
+      "actors": [
+        "min-aung-hlaing"
+      ],
+      "outlets": [],
+      "journalists": [
+        "aung-marm-oo"
+      ],
+      "cases": [],
+      "sources": [
+        "l2_012"
+      ],
+      "claims": [
+        {
+          "field": "effect_on_reporting",
+          "value": "Reporters in different townships cannot send stories",
+          "statement": "Editor Aung Marm Oo describing the effect of the shutdown on reporters.",
+          "source_id": "l2_012",
+          "evidence_quote": "Since mobile internet usage [was] blocked by the military junta, our reporters in different townships have found it really difficult to send their news stories"
+        },
+        {
+          "field": "what_happened",
+          "value": "Total blockage of mobile data in Rakhine",
+          "statement": "Description of the shutdown's severity in Rakhine State.",
+          "source_id": "l2_012",
+          "evidence_quote": "It's a total blockage of mobile data in the northern cities and rural areas of Rakhine."
+        },
+        {
+          "field": "what_happened",
+          "value": "Shutdown followed the February 1, 2021 seizure of power",
+          "statement": "CPJ's framing of the shutdown as one of three extended shutdowns it documented that spring.",
+          "source_id": "l2_012",
+          "evidence_quote": "Journalists struggle to work amid extended internet shutdowns in Myanmar, Ethiopia, Kashmir"
+        }
+      ],
+      "ladder_note": "Myanmar's military cut mobile data nationwide after seizing power, leaving reporters in entire townships unable to file; United States funding and access actions have not shut off a region's communications."
+    },
+    {
+      "slug": "2020-ethiopia-tigray-internet-blackout",
+      "title": "Ethiopia: internet and phone service cut across Tigray",
+      "occurred_on": "2020-11-04",
+      "occurred_on_precision": "month",
+      "jurisdiction": "Tigray region, Ethiopia",
+      "country": "ET",
+      "level": "state_or_province",
+      "continent": "Africa",
+      "type": "shutdowns_and_blocking",
+      "tactic_primary": "shutdowns_and_blocking",
+      "tactics": [
+        "shutdowns_and_blocking"
+      ],
+      "stage": "silence",
+      "leader_slug": "abiy-ahmed",
+      "granularity": "granular",
+      "summary": "Ethiopia's government cut internet and telephone service across the Tigray region when war broke out there in November 2020, leaving the region without communication for months and forcing reporters to travel there to learn what was happening.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "Fighting broke out in November 2020 between Ethiopia's federal government, led by Prime Minister Abiy Ahmed, and forces aligned with the Tigray region's ruling party. The government cut internet and telephone service to the region at the start of the conflict, leaving it largely unreachable from outside. A freelance journalist who traveled to the regional capital in March 2021 said connectivity remained shut off and that even where partial service had been restored, calls and texts worked in the capital and surrounding areas but not uniformly across the wider region. The blackout meant that reporters could not confirm events inside Tigray by phone or online and instead had to travel there directly, at a time when access to the region was also restricted by the military.",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "Journalists said the shutdown left them unable to confirm events inside Tigray without traveling there in person, since calls, texts and internet access from outside the region did not work.",
+      "status": "Ongoing as of the source reviewed, published in May 2021.",
+      "what_we_dont_know": "The sources reviewed do not give a date on which service was fully restored across the region.",
+      "outcome": "ongoing",
+      "outcome_on": "2021-05-03",
+      "outcome_note": "As of the May 2021 source, service had been only partially restored in the regional capital and surrounding areas.",
+      "actors": [
+        "abiy-ahmed"
+      ],
+      "outlets": [],
+      "journalists": [
+        "maya-misikir"
+      ],
+      "cases": [],
+      "sources": [
+        "l2_012"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Internet connectivity remains shut off",
+          "statement": "Direct statement on the state of connectivity in Tigray.",
+          "source_id": "l2_012",
+          "evidence_quote": "Internet connectivity remains shut off."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Partial restoration uneven across the region",
+          "statement": "Description of where service had and had not returned by March 2021.",
+          "source_id": "l2_012",
+          "evidence_quote": "By the time I went to cover my story in March 2021, partial communications had been restored; calls and texts were working in the regional capital and surrounding areas, but not uniformly across the region."
+        },
+        {
+          "field": "what_happened",
+          "value": "Shutdown documented alongside Myanmar and Kashmir",
+          "statement": "CPJ grouping the Tigray blackout with two other extended shutdowns it tracked in the same period.",
+          "source_id": "l2_012",
+          "evidence_quote": "Journalists struggle to work amid extended internet shutdowns in Myanmar, Ethiopia, Kashmir"
+        }
+      ],
+      "ladder_note": "Ethiopia cut internet and phone service to an entire region for months during a civil war, leaving reporters unable to confirm events without traveling there in person; no United States action in the record has cut off a region's communications."
+    },
+    {
+      "slug": "2022-russia-blocks-bbc-dw-meduza",
+      "title": "Russia: regulator blocks BBC Russian, Deutsche Welle and other outlets",
+      "occurred_on": "2022-03-04",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Russia, national",
+      "country": "RU",
+      "level": "national",
+      "continent": "Europe",
+      "type": "shutdowns_and_blocking",
+      "tactic_primary": "shutdowns_and_blocking",
+      "tactics": [
+        "shutdowns_and_blocking"
+      ],
+      "stage": "silence",
+      "leader_slug": "vladimir-putin",
+      "granularity": "granular",
+      "summary": "Russia's media regulator Roskomnadzor blocked access nationwide to the websites of BBC Russian, Deutsche Welle, Meduza, Voice of America's Russian service and Radio Free Europe/Radio Liberty within days of invading Ukraine, alongside new prison terms for reporting the regulator called false.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "On March 4, 2022, Russia's state media regulator, Roskomnadzor, blocked access within Russia to the websites of the BBC's Russian-language service, Germany's public broadcaster Deutsche Welle, the independent news site Meduza, the Russian-language service of the United States Congress-funded broadcaster Voice of America, and several services of Radio Free Europe/Radio Liberty, another United States Congress-funded broadcaster. Roskomnadzor separately confirmed that Facebook and Twitter were blocked in the country. The same day, Russia's legislature adopted amendments to the criminal code creating prison terms of up to fifteen years for people convicted of spreading what the amendments called \"fakes\" about the military, a category that came to include most independent reporting on the invasion, which Russian law required media to call a \"special military operation.\"",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "The blocks and new penalties led most remaining independent Russian outlets, including Meduza's editorial staff, to relocate their operations outside the country within days.",
+      "status": "Sustained; the blocks remained in place in the sources reviewed.",
+      "what_we_dont_know": "The sources reviewed do not give Roskomnadzor's specific stated reason for blocking each outlet on that date.",
+      "outcome": "sustained",
+      "outcome_on": "2022-03-04",
+      "outcome_note": "The blocks were not reported as reversed in the sources reviewed.",
+      "actors": [
+        "vladimir-putin",
+        "roskomnadzor"
+      ],
+      "outlets": [
+        "bbc-russian",
+        "deutsche-welle",
+        "meduza",
+        "voice-of-america",
+        "radio-free-europe-radio-liberty"
+      ],
+      "journalists": [],
+      "cases": [],
+      "sources": [
+        "l2_033"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Roskomnadzor blocks five named outlets, March 4, 2022",
+          "statement": "List of the outlets blocked on that date.",
+          "source_id": "l2_033",
+          "evidence_quote": "Roskomnadzor on Friday, March 4, blocked access to several news websites, including those of BBC Russian, German public broadcaster Deutsche Welle, Latvia-based independent news site Meduza, the Russian-language service of U.S. Congress-funded broadcaster Voice of America (VOA)"
+        },
+        {
+          "field": "what_happened",
+          "value": "New law sets up to 15 years for spreading 'fakes'",
+          "statement": "The new criminal penalty adopted the same day.",
+          "source_id": "l2_033",
+          "evidence_quote": "The Russian legislature adopted amendments to the criminal code introducing higher penalties, such as fines, criminal liabilities, and imposing prison terms of up to 15 years for those convicted of disseminating \"fakes,\""
+        },
+        {
+          "field": "what_happened",
+          "value": "Facebook and Twitter also blocked",
+          "statement": "Confirmation that social media platforms were blocked the same day.",
+          "source_id": "l2_033",
+          "evidence_quote": "Roskomnadzor confirmed...that Facebook and Twitter are blocked."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Authorities move to establish total control of information",
+          "statement": "CPJ's summary characterization of the pace of these actions.",
+          "source_id": "l2_033",
+          "evidence_quote": "Russian authorities have moved quickly to establish total censorship and control over the free flow of information since Russia invaded Ukraine on February 24,"
+        }
+      ],
+      "ladder_note": "Russia's regulator blocked five foreign outlets and two social media platforms nationwide within days of invading Ukraine, alongside fifteen-year prison terms for coverage it called false; the White House ban excluded three outlets from one building, not from the country."
+    },
+    {
+      "slug": "2019-iran-nationwide-internet-shutdown",
+      "title": "Iran: near-total internet shutdown during fuel-price protests",
+      "occurred_on": "2019-11-16",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Iran, national",
+      "country": "IR",
+      "level": "national",
+      "continent": "Asia",
+      "type": "shutdowns_and_blocking",
+      "tactic_primary": "shutdowns_and_blocking",
+      "tactics": [
+        "shutdowns_and_blocking"
+      ],
+      "stage": "silence",
+      "leader_slug": "hassan-rouhani",
+      "granularity": "granular",
+      "summary": "Iran cut internet connectivity to about five percent of normal levels nationwide for nearly a week during protests over fuel prices, while arresting at least eleven journalists, including one detained for reporting on the shutdown itself.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "Protests broke out across Iran in mid-November 2019 after the government raised fuel prices without warning. Beginning around November 16, 2019, Iranian authorities imposed a near-total shutdown of internet service that lasted nearly a week, with connectivity dropping to about five percent of normal levels nationwide for several days. Human rights monitors said the blackout appeared aimed at stopping the flow of news about the protests and about the security forces' violent response to them. During the shutdown and the days that followed, at least eleven journalists, including photographers and camera operators, were arrested in connection with the protests. One journalist, Mohammad Mosaed, was arrested specifically for posting on social media about the internet shutdown itself and was released on bail the following month.",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "The shutdown prevented most independent reporting on the protests and the security response from leaving the country in real time, and journalists who wrote about the blackout itself were arrested.",
+      "status": "Closed; connectivity was restored after roughly a week.",
+      "what_we_dont_know": "The sources reviewed do not name the specific government body that ordered the shutdown.",
+      "outcome": "reversed",
+      "outcome_on": "2019-11-23",
+      "outcome_note": "Internet connectivity was restored after roughly a week, according to the source reviewed, though the underlying criminal cases against arrested journalists continued.",
+      "actors": [
+        "hassan-rouhani"
+      ],
+      "outlets": [],
+      "journalists": [
+        "mohammad-mosaed"
+      ],
+      "cases": [],
+      "sources": [
+        "l2_013"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Near-total shutdown for nearly a week",
+          "statement": "Duration of the shutdown.",
+          "source_id": "l2_013",
+          "evidence_quote": "a near-total shutdown of internet service for nearly a week"
+        },
+        {
+          "field": "what_happened",
+          "value": "Connectivity drops to 5 percent of normal",
+          "statement": "Scale of the reduction in connectivity.",
+          "source_id": "l2_013",
+          "evidence_quote": "connectivity dropped to just 5 percent of normal levels for several days"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "At least 11 journalists arrested since the protests began",
+          "statement": "Number of journalists arrested during the period of the shutdown.",
+          "source_id": "l2_013",
+          "evidence_quote": "at least 11 journalists, including photographers and cameramen, had been arrested since the start of the protests in mid-November"
+        }
+      ],
+      "ladder_note": "Iran cut internet connectivity to about five percent of normal nationwide for nearly a week and arrested a journalist for reporting on the shutdown itself; no United States action in the record has cut off nationwide communications."
+    },
+    {
+      "slug": "2023-india-blocks-gaon-savera-accounts",
+      "title": "India: Gaon Savera's Facebook and X accounts blocked",
+      "occurred_on": "2023-08-21",
+      "occurred_on_precision": "day",
+      "jurisdiction": "India, national",
+      "country": "IN",
+      "level": "national",
+      "continent": "Asia",
+      "type": "shutdowns_and_blocking",
+      "tactic_primary": "shutdowns_and_blocking",
+      "tactics": [
+        "shutdowns_and_blocking"
+      ],
+      "stage": "silence",
+      "leader_slug": "narendra-modi",
+      "granularity": "granular",
+      "summary": "India blocked independent news outlet Gaon Savera's Facebook page and X account nationwide just before a workers' convention it planned to cover, without a public explanation from the government.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "On Monday, August 21, 2023, users in India found that Gaon Savera, an independent news outlet, could no longer be reached on Facebook, where its page had become inaccessible inside the country. The following day, the outlet's account on X, formerly known as Twitter, was blocked as well. The blocks came just ahead of a workers' convention that Gaon Savera had planned to cover. Neither Facebook's parent company Meta nor the Indian government publicly explained why the accounts were blocked in India specifically, rather than removed worldwide, a pattern consistent with a government request under India's information-technology rules rather than a platform policy violation. The outlet's website remained reachable, but readers who normally found its reporting through social media lost that access during the period covered by the source reviewed.",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "The blocks cut off Gaon Savera's main channels for reaching readers on social media just before an event it intended to cover, without any public accounting from the authorities.",
+      "status": "Unresolved as of the source reviewed.",
+      "what_we_dont_know": "The sources reviewed do not identify which government agency requested the blocks or state whether they were later lifted.",
+      "outcome": "unknown",
+      "outcome_on": null,
+      "outcome_note": "CPJ called on India to restore access; the source reviewed does not report whether the accounts were later unblocked.",
+      "actors": [
+        "narendra-modi"
+      ],
+      "outlets": [
+        "gaon-savera"
+      ],
+      "journalists": [],
+      "cases": [],
+      "sources": [
+        "l2_014"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Facebook page and X account blocked on consecutive days",
+          "statement": "Timeline of the two platform blocks.",
+          "source_id": "l2_014",
+          "evidence_quote": "On Monday, August 21, Gaon Savera's Facebook page became inaccessible in India, and its account on X, formerly known as Twitter, was also blocked the following day"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "CPJ calls for accounts to be restored",
+          "statement": "CPJ's demand following the blocks.",
+          "source_id": "l2_014",
+          "evidence_quote": "Authorities in India must immediately unblock the social media accounts of the independent news website Gaon Savera"
+        },
+        {
+          "field": "what_happened",
+          "value": "Outlet described as independent",
+          "statement": "CPJ's description of Gaon Savera as an independent news outlet in its report on the blocks.",
+          "source_id": "l2_014",
+          "evidence_quote": "the independent news website Gaon Savera"
+        }
+      ],
+      "ladder_note": "India blocked an independent outlet's Facebook and X accounts nationwide ahead of an event it planned to cover, without a stated reason; the White House ban limited three outlets' building access, not their reach online."
+    },
+    {
+      "slug": "2020-china-arrests-zhang-zhan",
+      "title": "China: citizen journalist Zhang Zhan imprisoned for Wuhan reporting",
+      "occurred_on": "2020-05-14",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Shanghai / Wuhan, China",
+      "country": "CN",
+      "level": "national",
+      "continent": "Asia",
+      "type": "detention_and_violence",
+      "tactic_primary": "detention_and_violence",
+      "tactics": [
+        "detention_and_violence"
+      ],
+      "stage": "eliminate",
+      "leader_slug": "xi-jinping",
+      "granularity": "granular",
+      "summary": "China detained citizen journalist Zhang Zhan for posting independent video reports from Wuhan during the early COVID-19 outbreak, later convicting her of \"picking quarrels and provoking trouble\" and, after her release, detaining her again years later.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "Zhang Zhan, a former lawyer, traveled to Wuhan in February 2020 and began posting independent video reports on Twitter and YouTube about the early coronavirus outbreak there, including interviews with affected residents and business owners. She went missing on May 14, 2020, and was confirmed arrested and detained the next day. Chinese authorities held her on the charge of \"picking quarrels and provoking trouble,\" a broadly worded offense that press freedom groups say Chinese courts use against government critics generally. A court sentenced her to four years in prison in December 2020. Zhang staged repeated hunger strikes in detention and was released in May 2024 after completing her sentence, only for CPJ to report that Chinese authorities brought a second case against her the following year, keeping her under continued restriction.",
+      "stated_justification": "\"picking quarrels and provoking trouble\"",
+      "effect_on_reporting": "Zhang's imprisonment and later re-detention removed one of the few independent voices who had reported directly from Wuhan during the outbreak's earliest weeks, before China's official narrative was established.",
+      "status": "Ongoing; CPJ reported a second case against her in 2025 after her initial release.",
+      "what_we_dont_know": "The sources reviewed do not give the specific evidence used to support the 'picking quarrels' charge.",
+      "outcome": "ongoing",
+      "outcome_on": null,
+      "outcome_note": "Zhang completed her original four-year sentence and was released in 2024, but the sources reviewed report a second case against her the following year.",
+      "actors": [
+        "xi-jinping"
+      ],
+      "outlets": [],
+      "journalists": [
+        "zhang-zhan"
+      ],
+      "cases": [],
+      "sources": [
+        "l2_015"
+      ],
+      "claims": [
+        {
+          "field": "stated_justification",
+          "value": "Charge of picking quarrels and provoking trouble",
+          "statement": "The formal charge used against her.",
+          "source_id": "l2_015",
+          "evidence_quote": "picking quarrels and provoking trouble"
+        },
+        {
+          "field": "what_happened",
+          "value": "China said to fear independent reporting on its COVID-19 response",
+          "statement": "CPJ's assessment of the motive behind her arrest.",
+          "source_id": "l2_015",
+          "evidence_quote": "China professes pride in its handling of the COVID-19 pandemic, but appears deathly afraid of allowing independent journalists like Zhang Zhan to freely tell the story of what is happening,"
+        },
+        {
+          "field": "what_happened",
+          "value": "She faced up to five years if convicted",
+          "statement": "The potential sentence reported at the time of arrest.",
+          "source_id": "l2_015",
+          "evidence_quote": "If convicted, she could face up to five years in prison"
+        }
+      ],
+      "ladder_note": "China imprisoned a citizen journalist for four years over her Wuhan reporting, then opened a second case against her after release; United States detention incidents in the record ended in release the same day."
+    },
+    {
+      "slug": "2023-belarus-sentences-poczobut",
+      "title": "Belarus: journalist Andrzej Poczobut sentenced to eight years",
+      "occurred_on": "2023-02-08",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Hrodna, Belarus",
+      "country": "BY",
+      "level": "national",
+      "continent": "Europe",
+      "type": "detention_and_violence",
+      "tactic_primary": "detention_and_violence",
+      "tactics": [
+        "detention_and_violence"
+      ],
+      "stage": "eliminate",
+      "leader_slug": "alexander-lukashenko",
+      "granularity": "granular",
+      "summary": "Belarus sentenced Polish-Belarusian correspondent Andrzej Poczobut to eight years in prison on charges of inciting hatred and calling for sanctions, after holding him since March 2021. He was freed five years later in a multi-country prisoner exchange.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "Andrzej Poczobut, a correspondent for Poland's Gazeta Wyborcza and a political commentator based in the Hrodna region of Belarus, had already faced repeated prosecution for his reporting on the country's Polish minority, including a suspended sentence for defamation and insulting the president in 2011. Belarusian security forces detained him again in March 2021. On February 8, 2023, a Belarusian court convicted him of inciting hatred and calling for sanctions against Belarus and sentenced him to eight years in prison. The same court proceedings led to the detention of another journalist, Anastasia Sharkevich, who appeared in a video circulated by a pro-government Telegram channel saying she had been arrested by security forces. Poczobut remained imprisoned for a total of 1,860 days before being freed on April 28, 2026, as part of a prisoner exchange involving Belarus, Poland and several other countries.",
+      "stated_justification": "\"convicted Poczobut of inciting hatred and 'calling for sanctions'\"",
+      "effect_on_reporting": "Poczobut's years-long imprisonment removed one of the last correspondents reporting for a foreign outlet on Belarus's Polish minority from inside the country.",
+      "status": "Closed; Poczobut was released in a prisoner exchange after nearly five years in detention.",
+      "what_we_dont_know": "The sources reviewed do not detail the specific statements that formed the basis of the incitement charge.",
+      "outcome": "reversed",
+      "outcome_on": "2026-04-28",
+      "outcome_note": "Poczobut was freed after 1,860 days as part of a multi-country prisoner exchange; CPJ reported 22 other journalists remained imprisoned in Belarus at the time.",
+      "actors": [
+        "alexander-lukashenko"
+      ],
+      "outlets": [],
+      "journalists": [
+        "andrzej-poczobut",
+        "anastasia-sharkevich"
+      ],
+      "cases": [],
+      "sources": [
+        "l2_016",
+        "l2_017"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Convicted of inciting hatred and calling for sanctions",
+          "statement": "The formal basis of his conviction.",
+          "source_id": "l2_016",
+          "evidence_quote": "convicted Poczobut of inciting hatred and \"calling for sanctions,\""
+        },
+        {
+          "field": "what_happened",
+          "value": "CPJ calls it part of a cycle of repression",
+          "statement": "CPJ's characterization of the sentence.",
+          "source_id": "l2_016",
+          "evidence_quote": "Belarusian authorities' sentencing of journalist Andrzej Poczobut to eight years in prison illustrates the government's never-ending cycle of repression"
+        },
+        {
+          "field": "outcome_note",
+          "value": "Held 1,860 days before release",
+          "statement": "The total length of his detention before the 2026 exchange.",
+          "source_id": "l2_017",
+          "evidence_quote": "Poczobut had been detained for 1,860 days, having been held since March 2021 before his February 2023 sentencing to eight years in prison."
+        },
+        {
+          "field": "outcome_note",
+          "value": "22 other journalists remained imprisoned in Belarus",
+          "statement": "Scale of ongoing imprisonment reported at the time of his release.",
+          "source_id": "l2_017",
+          "evidence_quote": "22 journalists remained imprisoned in Belarus as of April 28"
+        }
+      ],
+      "ladder_note": "Belarus sentenced a correspondent to eight years for reporting on its Polish minority and held him nearly five years before an exchange; comparable United States detentions in the record ended in hours, not years."
+    },
+    {
+      "slug": "2024-russia-sentences-gershkovich",
+      "title": "Russia: Wall Street Journal reporter Evan Gershkovich sentenced to 16 years",
+      "occurred_on": "2023-03-29",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Yekaterinburg, Russia",
+      "country": "RU",
+      "level": "national",
+      "continent": "Europe",
+      "type": "detention_and_violence",
+      "tactic_primary": "detention_and_violence",
+      "tactics": [
+        "detention_and_violence"
+      ],
+      "stage": "eliminate",
+      "leader_slug": "vladimir-putin",
+      "granularity": "granular",
+      "summary": "Russia arrested Wall Street Journal reporter Evan Gershkovich in March 2023 on an espionage charge his employer called fabricated, held him for about 15 months before a closed trial, and sentenced him to 16 years before releasing him in a prisoner exchange.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "Russian security services arrested Evan Gershkovich, a correspondent for The Wall Street Journal, in Yekaterinburg on March 29, 2023, accusing him of collecting secret information for the United States Central Intelligence Agency about a Russian tank factory. He was held for nearly 15 months before a closed-door trial opened on June 26, 2024. On July 19, 2024, a Russian judge sentenced him to 16 years in a penal colony. The Wall Street Journal's leadership called the conviction a sham and said Russian authorities had failed to present evidence of a crime. The United States Embassy in Russia said he had done nothing wrong. On August 1, 2024, Gershkovich was released along with Radio Free Europe/Radio Liberty editor Alsu Kurmasheva and other prisoners in a multi-country exchange.",
+      "stated_justification": "The indictment accused Gershkovich of collecting \"secret information\" for the CIA on a Russian tank factory.",
+      "effect_on_reporting": "Gershkovich's arrest ended regular Western newspaper reporting from inside Russia by a staff correspondent for the duration of his imprisonment.",
+      "status": "Closed; Gershkovich was released in a prisoner exchange in August 2024.",
+      "what_we_dont_know": "The sources reviewed do not include the specific evidence Russian prosecutors presented at the closed trial.",
+      "outcome": "reversed",
+      "outcome_on": "2024-08-01",
+      "outcome_note": "Gershkovich was freed in a prisoner exchange alongside RFE/RL editor Alsu Kurmasheva after 16 months in detention.",
+      "actors": [
+        "vladimir-putin"
+      ],
+      "outlets": [
+        "wall-street-journal",
+        "radio-free-europe-radio-liberty"
+      ],
+      "journalists": [
+        "evan-gershkovich",
+        "alsu-kurmasheva"
+      ],
+      "cases": [],
+      "sources": [
+        "l2_018",
+        "l2_019"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Indictment accuses him of collecting secret information for the CIA",
+          "statement": "The formal charge against Gershkovich.",
+          "source_id": "l2_018",
+          "evidence_quote": "collecting \"secret information\" for the CIA on a Russian tank factory"
+        },
+        {
+          "field": "stated_justification",
+          "value": "CPJ calls the sentence a sham",
+          "statement": "CPJ's characterization of the conviction.",
+          "source_id": "l2_018",
+          "evidence_quote": "Russia's decision to jail Evan Gershkovich for 16 years on sham charges is outrageous,"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Wall Street Journal calls it a disgraceful, sham conviction",
+          "statement": "The employer's response, noting his time in detention.",
+          "source_id": "l2_018",
+          "evidence_quote": "This disgraceful, sham conviction comes after Evan has spent 478 days in prison, wrongfully detained,"
+        },
+        {
+          "field": "outcome_note",
+          "value": "Released with Kurmasheva in prisoner exchange",
+          "statement": "Confirmation of the August 2024 release.",
+          "source_id": "l2_019",
+          "evidence_quote": "Evan and Alsu were detained and sentenced on spurious charges…"
+        }
+      ],
+      "ladder_note": "Russia held a Wall Street Journal reporter for over a year on an espionage charge his employer called fabricated, then sentenced him to sixteen years; United States detentions of journalists in the record have not led to years-long imprisonment on state charges."
+    },
+    {
+      "slug": "2015-azerbaijan-sentences-ismayilova",
+      "title": "Azerbaijan: investigative journalist Khadija Ismayilova sentenced to 7.5 years",
+      "occurred_on": "2015-09-01",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Baku, Azerbaijan",
+      "country": "AZ",
+      "level": "national",
+      "continent": "Asia",
+      "type": "detention_and_violence",
+      "tactic_primary": "detention_and_violence",
+      "tactics": [
+        "detention_and_violence"
+      ],
+      "stage": "eliminate",
+      "leader_slug": "ilham-aliyev",
+      "granularity": "granular",
+      "summary": "A Baku court convicted investigative journalist Khadija Ismayilova on business and tax charges and sentenced her to seven and a half years in prison, in a case CPJ said was payback for her reporting on official corruption.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "Khadija Ismayilova, an investigative journalist known for reporting on corruption involving the family of Azerbaijan's president, Ilham Aliyev, was arrested in Baku on December 5, 2014, after prosecutors brought a series of charges against her covering embezzlement, an unlicensed business, tax evasion and abuse of power. On September 1, 2015, a Baku court convicted her on those charges and sentenced her to seven and a half years in prison. CPJ said it had determined the charges to be payback for her reporting and called the trial a farce, though it warned the consequences were serious for her and for Azerbaijani journalists generally. Ismayilova denied all the charges throughout the proceedings. In May 2016, Azerbaijan's Supreme Court converted her prison term to a three-and-a-half-year suspended sentence and ordered her released, after she had spent about 538 days in custody.",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "Ismayilova's imprisonment removed one of Azerbaijan's most prominent investigative reporters from active work for a year and a half and signaled to other journalists the risk of reporting on the president's family.",
+      "status": "Closed; Ismayilova was released in May 2016 with a suspended sentence.",
+      "what_we_dont_know": "The sources reviewed do not include the court's own written reasoning for the conviction.",
+      "outcome": "reversed",
+      "outcome_on": "2016-05-25",
+      "outcome_note": "Azerbaijan's Supreme Court converted her sentence to a suspended term and ordered her released after about 538 days in custody.",
+      "actors": [
+        "ilham-aliyev"
+      ],
+      "outlets": [],
+      "journalists": [
+        "khadija-ismayilova"
+      ],
+      "cases": [],
+      "sources": [
+        "l2_020",
+        "l2_021"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Convicted and sentenced to seven and a half years",
+          "statement": "The court's verdict and sentence.",
+          "source_id": "l2_020",
+          "evidence_quote": "convicted Khadija Ismayilova...of illegal business, tax evasion, abuse of power, and embezzlement, and sentenced her to seven and a half years in prison"
+        },
+        {
+          "field": "stated_justification",
+          "value": "CPJ determines charges were retaliation for her reporting",
+          "statement": "CPJ's assessment of the motive behind the prosecution.",
+          "source_id": "l2_020",
+          "evidence_quote": "CPJ has determined the charges to be retaliation for Ismayilova's reporting on corruption in the Azerbaijani government."
+        },
+        {
+          "field": "outcome_note",
+          "value": "Sentence converted and she is ordered released",
+          "statement": "Description of the May 2016 Supreme Court decision.",
+          "source_id": "l2_021",
+          "evidence_quote": "The court converted Ismayilova's jail term into a three-and-a half-year suspended term"
+        }
+      ],
+      "ladder_note": "Azerbaijan imprisoned an investigative reporter for over a year on charges CPJ called retaliation for exposing the president's family's business holdings; no United States case in the record has produced a multi-year sentence."
+    },
+    {
+      "slug": "2019-philippines-arrests-ressa",
+      "title": "Philippines: Rappler's Maria Ressa arrested over cyber libel case",
+      "occurred_on": "2019-02-13",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Manila, Philippines",
+      "country": "PH",
+      "level": "national",
+      "continent": "Asia",
+      "type": "detention_and_violence",
+      "tactic_primary": "detention_and_violence",
+      "tactics": [
+        "detention_and_violence"
+      ],
+      "stage": "punish",
+      "leader_slug": "rodrigo-duterte",
+      "granularity": "granular",
+      "summary": "Philippine agents arrested Rappler executive editor Maria Ressa at the outlet's Manila office and held her overnight on a cyber libel case tied to a 2012 story, published before the cybercrime law used to charge her existed.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "On the evening of February 13, 2019, officers from the National Bureau of Investigation arrested Maria Ressa, executive editor of the news site Rappler, at its bureau in Manila. The case stemmed from a story Rappler had published in 2012 alleging links between a businessman and a Philippine chief justice; the government charged Ressa with cyber libel under a cybercrime law that took effect after the story was originally published, then updated to reflect a later correction. Ressa was held overnight and released on bail the following morning, February 14. She said the charge was political and that the Philippine government had misused its cybercrime law against her outlet, which had published extensive critical coverage of President Rodrigo Duterte's campaign against narcotics.",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "The arrest of Rappler's top editor at her own newsroom, over an article published years before the law used to charge her existed, became a defining example of legal pressure on the outlet during the Duterte administration.",
+      "status": "Closed; Ressa was released on bail the morning after her arrest.",
+      "what_we_dont_know": "The sources reviewed do not include the National Bureau of Investigation's own account of why the arrest was timed for the evening.",
+      "outcome": "reversed",
+      "outcome_on": "2019-02-14",
+      "outcome_note": "Ressa was released on bail the morning after her arrest; the underlying cyber libel case continued separately.",
+      "actors": [
+        "rodrigo-duterte"
+      ],
+      "outlets": [
+        "rappler"
+      ],
+      "journalists": [
+        "maria-ressa"
+      ],
+      "cases": [],
+      "sources": [
+        "l2_022"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Arrested at Rappler's bureau, held overnight",
+          "statement": "Description of the arrest and overnight detention.",
+          "source_id": "l2_022",
+          "evidence_quote": "arrested Ressa at Rappler's bureau in Manila and held her overnight over a cyber libel case"
+        },
+        {
+          "field": "what_happened",
+          "value": "Case tied to a 2012 story predating the law",
+          "statement": "The story and law timeline underlying the charge.",
+          "source_id": "l2_022",
+          "evidence_quote": "in connection to a story published by Rappler in 2012, before the law was enacted"
+        },
+        {
+          "field": "stated_justification",
+          "value": "Ressa calls the charge political",
+          "statement": "Ressa's own description of the charge's motivation.",
+          "source_id": "l2_022",
+          "evidence_quote": "the charge was \"political\" and that the Philippines has \"weaponized\" its cybercrime law"
+        }
+      ],
+      "ladder_note": "Philippine agents arrested an outlet's executive editor at her own newsroom over a story published years before the cybercrime law used to charge her existed; United States detentions in the record ended without charges filed."
+    },
+    {
+      "slug": "2001-eritrea-jails-journalists-indefinitely",
+      "title": "Eritrea: independent press closed and journalists jailed without trial",
+      "occurred_on": "2001-09-18",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Asmara, Eritrea",
+      "country": "ER",
+      "level": "national",
+      "continent": "Africa",
+      "type": "detention_and_violence",
+      "tactic_primary": "detention_and_violence",
+      "tactics": [
+        "detention_and_violence"
+      ],
+      "stage": "eliminate",
+      "leader_slug": "isaias-afwerki",
+      "granularity": "granular",
+      "summary": "Eritrea's government closed every private newspaper and jailed at least nineteen journalists, including Dawit Isaac of the paper Setit, without charge or trial in September 2001, after suspending the constitution. Several have never been publicly accounted for since.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "On September 18, 2001, as international attention was focused on the aftermath of the September 11, 2001 hijackings in the United States, Eritrea's government under President Isaias Afwerki closed the country's private newspapers and arrested their editors and reporters, including Dawit Isaac, a Swedish-Eritrean journalist and co-owner of the newspaper Setit. At least nineteen journalists were detained in the restrictions that followed, along with a group of senior political dissidents. None of them has ever been publicly charged with a crime or given a trial. Authorities have refused to disclose the detainees' locations or confirm whether they remain alive, a practice that international law treats as enforced disappearance. Isaac was reported to have been held for 3,127 days as of a 2010 accounting, with no public update on his status since.",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "The closures ended Eritrea's independent press entirely, and the indefinite, uncharged detention of its journalists has kept the country at the bottom of international press freedom rankings for more than two decades.",
+      "status": "Unresolved; the detainees' fates remain unconfirmed as of the source reviewed.",
+      "what_we_dont_know": "The sources reviewed do not confirm whether Dawit Isaac or the other detained journalists are alive.",
+      "outcome": "ongoing",
+      "outcome_on": null,
+      "outcome_note": "As of the 2010 source reviewed, none of the journalists detained in 2001 had been charged, tried or publicly accounted for.",
+      "actors": [
+        "isaias-afwerki"
+      ],
+      "outlets": [
+        "setit"
+      ],
+      "journalists": [
+        "dawit-isaac"
+      ],
+      "cases": [],
+      "sources": [
+        "l2_023"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Never publicly charged or tried",
+          "statement": "Description of Isaac's legal status after years in detention.",
+          "source_id": "l2_023",
+          "evidence_quote": "He has never been publicly charged with a crime or been given a trial."
+        },
+        {
+          "field": "what_happened",
+          "value": "Many first detained in the 2001 restrictions on dissent and independent media",
+          "statement": "CPJ's description of when the detentions began.",
+          "source_id": "l2_023",
+          "evidence_quote": "Many were first detained in 2001, when the government cracked down on political dissent and the independent media."
+        },
+        {
+          "field": "what_happened",
+          "value": "Constitution suspended after closing private newspapers",
+          "statement": "Description tying the closures to the constitution's suspension.",
+          "source_id": "l2_023",
+          "evidence_quote": "a document President Isaias Afeworki indefinitely suspended in September 2001 after shutting down private newspapers like Isaac's Setit"
+        }
+      ],
+      "ladder_note": "Eritrea jailed at least nineteen journalists without charge, trial or public acknowledgment of their fate after suspending its constitution, and has not accounted for several of them in over two decades; no United States detention in the record has approached that duration."
+    },
+    {
+      "slug": "2020-philippines-ressa-cyber-libel-conviction",
+      "title": "Philippines: Maria Ressa convicted of cyber libel",
+      "occurred_on": "2020-06-15",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Manila, Philippines",
+      "country": "PH",
+      "level": "national",
+      "continent": "Asia",
+      "type": "lawsuits_against_press",
+      "tactic_primary": "lawsuits_against_press",
+      "tactics": [
+        "lawsuits_against_press"
+      ],
+      "stage": "punish",
+      "leader_slug": "rodrigo-duterte",
+      "granularity": "granular",
+      "summary": "A Manila court convicted Rappler's Maria Ressa and researcher Reynaldo Santos Jr. of criminal cyber libel and sentenced them to up to six years in prison, over a 2012 story republished after the cybercrime law used to charge them took effect.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "A Manila trial court issued its verdict on June 15, 2020, convicting Rappler executive editor Maria Ressa and former researcher Reynaldo Santos Jr. of cyber libel over a 2012 article that linked a businessman to a Philippine chief justice. The government's case relied on Rappler's 2014 correction of a single word in the story, arguing that the correction restarted the clock for a libel charge under the Cybercrime Prevention Act, a law that took effect only after the article was first published. The court sentenced both to a prison term of up to six years, though they remained free pending appeal. CPJ said the conviction and sentencing amounted to, in its words, \"an outrageous crime against press freedom,\" and urged Philippine authorities not to pursue the case further. The case became one of several legal proceedings Rappler faced during President Rodrigo Duterte's administration.",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "A criminal conviction carrying a possible prison term became a central legal threat hanging over Rappler's leadership for years afterward, even as the outlet continued publishing.",
+      "status": "Ongoing on appeal as of the source reviewed.",
+      "what_we_dont_know": "The sources reviewed do not include the trial court's full written reasoning for treating the 2014 correction as a new act of publication.",
+      "outcome": "ongoing",
+      "outcome_on": "2020-06-15",
+      "outcome_note": "Ressa and Santos were convicted and sentenced but remained free pending appeal, according to the source reviewed.",
+      "actors": [
+        "rodrigo-duterte"
+      ],
+      "outlets": [
+        "rappler"
+      ],
+      "journalists": [
+        "maria-ressa",
+        "reynaldo-santos-jr"
+      ],
+      "cases": [],
+      "sources": [
+        "l2_024"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Conviction and sentencing of up to six years",
+          "statement": "CPJ's description of the verdict's severity.",
+          "source_id": "l2_024",
+          "evidence_quote": "Today's conviction and sentencing of Maria Ressa of up to six years in jail is an outrageous crime against press freedom"
+        },
+        {
+          "field": "what_happened",
+          "value": "Case involved Ressa and researcher Reynaldo Santos",
+          "statement": "Naming both defendants and the underlying case.",
+          "source_id": "l2_024",
+          "evidence_quote": "Rappler editor Maria Ressa Convicted of Cyber Libel by Philippines Court"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "CPJ urges against contesting the appeal",
+          "statement": "CPJ's call to Philippine authorities following the verdict.",
+          "source_id": "l2_024",
+          "evidence_quote": "urged Philippine authorities not to contest the appeal"
+        }
+      ],
+      "ladder_note": "A court convicted an outlet's executive editor of criminal cyber libel and imposed a prison sentence over a story published before the cybercrime law existed; United States lawsuits against the press in the record are civil, seeking damages, not prison time."
+    },
+    {
+      "slug": "2022-turkiye-prosecutes-sedef-kabas",
+      "title": "Turkiye: journalist Sedef Kabas tried for insulting the president",
+      "occurred_on": "2022-01-14",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Turkiye, national",
+      "country": "TR",
+      "level": "national",
+      "continent": "Asia",
+      "type": "lawsuits_against_press",
+      "tactic_primary": "lawsuits_against_press",
+      "tactics": [
+        "lawsuits_against_press"
+      ],
+      "stage": "punish",
+      "leader_slug": "recep-tayyip-erdogan",
+      "granularity": "granular",
+      "summary": "Turkish authorities tried journalist Sedef Kabas repeatedly for insulting President Erdogan over her on-air comments and tweets questioning his college diploma and alleging corruption, an offense carrying up to four years in prison.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "Turkish journalist Sedef Kabas was arrested on January 14, 2022, over on-air comments prosecutors said insulted President Recep Tayyip Erdogan under Article 299 of Turkiye's penal code, an offense that can carry up to four years in prison, with an added penalty if the insult was made publicly. She was convicted and sentenced to two years and four months in prison but was released pending appeal on March 11, 2022. Turkish prosecutors then pursued a separate case over a series of her tweets, in which she questioned the validity of Erdogan's college diploma, made allegations of corruption, and criticized several of his policies and statements. On June 22, 2023, an Istanbul court denied a motion to dismiss that second insult charge, keeping Kabas on trial for statements made from outside any official capacity, as an independent journalist and commentator.",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "Repeated prosecutions under the insult law kept Kabas facing potential imprisonment for years over ordinary commentary and tweets about the president, a pattern CPJ said was a severe threat to free speech in Turkiye.",
+      "status": "Ongoing as of the source reviewed.",
+      "what_we_dont_know": "The sources reviewed do not report the final outcome of the second insult prosecution.",
+      "outcome": "ongoing",
+      "outcome_on": "2023-06-22",
+      "outcome_note": "The Istanbul court declined to dismiss the second charge and the case remained open as of the source reviewed.",
+      "actors": [
+        "recep-tayyip-erdogan"
+      ],
+      "outlets": [],
+      "journalists": [
+        "sedef-kabas"
+      ],
+      "cases": [],
+      "sources": [
+        "l2_025"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Charged for tweets questioning his diploma and alleging corruption",
+          "statement": "The specific statements underlying the second prosecution.",
+          "source_id": "l2_025",
+          "evidence_quote": "in which she questioned the validity of his college diploma, made allegations of corruption, and criticized numerous policies and statements of the president"
+        },
+        {
+          "field": "what_happened",
+          "value": "Insult conviction can carry up to four years",
+          "statement": "The statutory penalty under the insult law.",
+          "source_id": "l2_025",
+          "evidence_quote": "Insulting Turkey's president can carry a prison sentence of up to four years, with an added penalty if the insult was made in public."
+        },
+        {
+          "field": "what_happened",
+          "value": "Earlier convicted and released pending appeal",
+          "statement": "Outcome of her first prosecution under the same charge.",
+          "source_id": "l2_025",
+          "evidence_quote": "Kabas was arrested for the same charge over her on-air comments in January 2022. She was found guilty and sentenced to two years and four months in prison, but was released pending appeal on March 11, 2022."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "CPJ calls the prosecution a severe threat to free speech",
+          "statement": "CPJ's characterization of the continued prosecution.",
+          "source_id": "l2_025",
+          "evidence_quote": "Turkish authorities' persistence in putting journalist Sedef Kabaş on trial for allegedly insulting the president is a severe threat to free speech."
+        }
+      ],
+      "ladder_note": "A journalist faced a second prosecution carrying up to four years in prison for tweets questioning the president's diploma, after an earlier conviction on the same charge; United States lawsuits against the press seek damages, not prison time."
+    },
+    {
+      "slug": "2018-russia-fines-the-new-times",
+      "title": "Russia: outlet fined $338,000 under the foreign agents law",
+      "occurred_on": "2018-10-26",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Moscow, Russia",
+      "country": "RU",
+      "level": "national",
+      "continent": "Europe",
+      "type": "lawsuits_against_press",
+      "tactic_primary": "lawsuits_against_press",
+      "tactics": [
+        "lawsuits_against_press"
+      ],
+      "stage": "pressure",
+      "leader_slug": "vladimir-putin",
+      "granularity": "granular",
+      "summary": "A Moscow court fined the magazine The New Times 22.3 million rubles, about $338,000, for a paperwork lapse under Russia's foreign agents law, a sum its editor said was designed to force the outlet to close.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "On October 26, 2018, a Moscow court ordered the magazine The New Times to pay 22.3 million rubles, about $338,000, for failing to provide financial information required under Russia's foreign agents law, which requires organizations that receive funding from abroad to register and report on their finances or face penalties. The New Times had already been financially strained, having stopped producing a print edition in June 2017 for lack of money. Its editor said she had in fact reported the required information correctly to the proper authorities and said she would appeal the fine. CPJ said the fine was clearly intended to cripple the outlet and amounted to a serious threat to what remained of press freedom in Russia, since a sum of that size threatened the magazine's ability to keep operating at all.",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "A fine of that size, imposed on an outlet already unable to afford printing, threatened to end The New Times' operations entirely rather than simply penalize a specific story.",
+      "status": "Ongoing on appeal as of the source reviewed.",
+      "what_we_dont_know": "The sources reviewed do not report the outcome of the editor's stated appeal.",
+      "outcome": "ongoing",
+      "outcome_on": "2018-10-26",
+      "outcome_note": "The outlet's editor said she would appeal the fine; the source reviewed does not report the appeal's result.",
+      "actors": [
+        "vladimir-putin"
+      ],
+      "outlets": [
+        "the-new-times"
+      ],
+      "journalists": [],
+      "cases": [],
+      "sources": [
+        "l2_026"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Fined 22.3 million rubles for a foreign agents paperwork lapse",
+          "statement": "The amount and stated legal basis for the fine.",
+          "source_id": "l2_026",
+          "evidence_quote": "A Moscow court on October 26 ordered the outlet to pay 22.3 million rubles (US$338,000)"
+        },
+        {
+          "field": "stated_justification",
+          "value": "Fine for failing to provide financial information",
+          "statement": "The specific violation cited under the foreign agents law.",
+          "source_id": "l2_026",
+          "evidence_quote": "for failing to provide financial information under Russia's \"foreign agents\" law"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "CPJ says the fine is designed to cripple the outlet",
+          "statement": "CPJ's assessment of the fine's practical effect.",
+          "source_id": "l2_026",
+          "evidence_quote": "The exorbitant fine imposed on The New Times is clearly aimed at crippling the outlet and amounts to a direct attack on what is left of press freedom in Russia"
+        }
+      ],
+      "ladder_note": "A court fined an outlet $338,000 over a foreign agents paperwork lapse, a sum its editor said was designed to force its closure; United States lawsuits against the press have not sought a fine that could end an outlet's operations."
+    },
+    {
+      "slug": "2017-malta-freezes-caruana-galizia-account",
+      "title": "Malta: minister orders reporter's bank account frozen",
+      "occurred_on": "2017-02-01",
+      "occurred_on_precision": "month",
+      "jurisdiction": "Malta, national",
+      "country": "MT",
+      "level": "national",
+      "continent": "Europe",
+      "type": "lawsuits_against_press",
+      "tactic_primary": "lawsuits_against_press",
+      "tactics": [
+        "lawsuits_against_press"
+      ],
+      "stage": "pressure",
+      "leader_slug": "joseph-muscat",
+      "granularity": "granular",
+      "summary": "A month after journalist Daphne Caruana Galizia published reporting on members of Malta's government, the economy minister had her bank account frozen, one of dozens of legal actions she faced before she was killed in a car bombing in October 2017.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "Daphne Caruana Galizia, Malta's best-known investigative journalist, published reporting in January 2017 that included compromising information about members of Prime Minister Joseph Muscat's government. The following month, February 2017, Malta's economy minister had her bank account frozen, an administrative order that cut off her access to her own funds while she continued reporting. The freeze came during a period in which Caruana Galizia faced dozens of civil defamation suits from government officials and businesspeople she had reported on, filed in Malta and abroad, which press freedom groups later described as an attempt to exhaust her financially and legally rather than to win any single case. Caruana Galizia was killed in a car bombing outside her home on October 16, 2017, while several of the suits against her remained pending.",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "The frozen account was one of many financial and legal pressures Caruana Galizia faced in the months before her killing, alongside dozens of separate lawsuits from officials and businesspeople named in her reporting.",
+      "status": "Unresolved as of her killing in October 2017; legal actions against her family continued afterward.",
+      "what_we_dont_know": "The sources reviewed do not state when or whether the freeze on her account was lifted before her death.",
+      "outcome": "unknown",
+      "outcome_on": null,
+      "outcome_note": "The source reviewed does not report the freeze being lifted before her 2017 killing; five people were later sentenced over the killing itself between 2022 and 2026, while defamation suits continued against her family.",
+      "actors": [
+        "joseph-muscat"
+      ],
+      "outlets": [],
+      "journalists": [
+        "daphne-caruana-galizia"
+      ],
+      "cases": [],
+      "sources": [
+        "l2_027"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Account frozen the month after a story on the government",
+          "statement": "The direct link between her reporting and the freeze.",
+          "source_id": "l2_027",
+          "evidence_quote": "The bank account of Daphne Caruana Galizia, a journalist who published compromising information about the members of the government in January 2017, was frozen the following month at the Economy Minister's behest."
+        },
+        {
+          "field": "what_happened",
+          "value": "Family later faced posthumous defamation suits",
+          "statement": "RSF's description of legal actions continuing against her family after her death.",
+          "source_id": "l2_027",
+          "evidence_quote": "Even the family members of journalist Daphne Caruana Galizia, murdered in 2017, have been subjected to posthumous defamation suits."
+        },
+        {
+          "field": "outcome_note",
+          "value": "Five perpetrators sentenced between 2022 and 2026",
+          "statement": "RSF's account of the criminal case's progress since her killing.",
+          "source_id": "l2_027",
+          "evidence_quote": "Between 2022 and 2026, five perpetrators were sentenced to long prison sentences."
+        }
+      ],
+      "ladder_note": "A minister ordered a reporter's bank account frozen a month after her story on his colleagues, one of dozens of suits filed against her before her killing; United States lawsuits against the press in the record have not frozen a journalist's assets."
+    },
+    {
+      "slug": "2026-kazakhstan-copyright-claims-against-press",
+      "title": "Kazakhstan: fabricated copyright complaints used against journalists",
+      "occurred_on": "2026-08-20",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Kazakhstan, national",
+      "country": "KZ",
+      "level": "national",
+      "continent": "Asia",
+      "type": "lawsuits_against_press",
+      "tactic_primary": "lawsuits_against_press",
+      "tactics": [
+        "lawsuits_against_press"
+      ],
+      "stage": "pressure",
+      "leader_slug": "kassym-jomart-tokayev",
+      "granularity": "granular",
+      "summary": "An investigation found paid services in Kazakhstan filing fabricated copyright complaints, impersonating global brands, to get social media platforms to remove journalists' accounts and posts, alongside criminal prosecutions of the press.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "CPJ reported on August 20, 2026, that journalists in Kazakhstan faced a pattern of legal and platform-based pressure that included prosecutions, professional bans and what it called spurious copyright claims. One case involved journalist Azamat Omarov, whose YouTube and Instagram accounts were repeatedly removed or blocked based on copyright complaints CPJ said appeared fabricated. An investigation by the Organized Crime and Corruption Reporting Project, cited in the CPJ report, found an underground market of agencies charging up to $5,000 to file false copyright complaints against journalists, sometimes using email addresses that impersonated global brands including L'Oreal and Giorgio Armani. Diana Okremova of the Legal Media Center said platforms needed to account for Kazakhstan's political context before acting on a single complaint against a journalist or public figure.",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "The fabricated complaints removed journalists' social media accounts and posts without any court proceeding, using platform copyright rules as a substitute for a lawsuit.",
+      "status": "Ongoing as of the source reviewed.",
+      "what_we_dont_know": "The sources reviewed do not identify who commissioned the false complaints against specific journalists.",
+      "outcome": "ongoing",
+      "outcome_on": "2026-08-20",
+      "outcome_note": "The pattern was reported as continuing at the time of the source reviewed, with no described resolution.",
+      "actors": [
+        "kassym-jomart-tokayev"
+      ],
+      "outlets": [
+        "orda"
+      ],
+      "journalists": [
+        "azamat-omarov",
+        "diana-okremova"
+      ],
+      "cases": [],
+      "sources": [
+        "l2_028"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Omarov's accounts removed on apparently spurious complaints",
+          "statement": "Description of the platform action against a specific journalist.",
+          "source_id": "l2_028",
+          "evidence_quote": "YouTube and Instagram were removing his videos and blocking his accounts on the basis of apparently spurious copyright complaints."
+        },
+        {
+          "field": "what_happened",
+          "value": "Complaints impersonated global brands",
+          "statement": "How the false complaints were made to appear legitimate.",
+          "source_id": "l2_028",
+          "evidence_quote": "Perpetrators used email addresses and posed as representatives of global brands, including L'Oréal and Giorgio Armani, when launching complaints."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Underground market charges up to $5,000 per false complaint",
+          "statement": "Scale of the business built around filing false complaints.",
+          "source_id": "l2_028",
+          "evidence_quote": "An underground market and agencies charging up to US$5,000 to file false complaints against the press"
+        }
+      ],
+      "ladder_note": "An investigation found paid services filing fabricated copyright complaints to remove Kazakh journalists' accounts, bypassing courts entirely; United States lawsuits against the press in the record proceed openly through the court system."
+    },
+    {
+      "slug": "2019-russia-fake-news-disrespect-law",
+      "title": "Russia: new laws penalize online \"fake news\" and \"disrespecting authorities\"",
+      "occurred_on": "2019-03-07",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Russia, national",
+      "country": "RU",
+      "level": "national",
+      "continent": "Europe",
+      "type": "disinformation_labeling",
+      "tactic_primary": "disinformation_labeling",
+      "tactics": [
+        "disinformation_labeling"
+      ],
+      "stage": "pressure",
+      "leader_slug": "vladimir-putin",
+      "granularity": "granular",
+      "summary": "Russia's parliament passed laws letting courts jail and fine people, including journalists, for posting information the government alone judges to be false, or for statements found to disrespect officials or state symbols online.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "On March 7, 2019, Russia's State Duma passed legislation permitting courts to jail and fine people who use the internet to spread what the law calls \"fake news\" or to disrespect government officials and state symbols, including President Vladimir Putin. Under the fake-news provisions, individuals, including journalists, could be fined up to 100,000 rubles, and companies up to 500,000 rubles, for posting unverified information that authorities determine threatens someone's life, health or property, or threatens mass public disorder. Separately, people found guilty of posting what courts call indecent statements about the government could face up to 15 days in administrative detention, with fines rising to 200,000 rubles and repeat violations carrying additional jail time. CPJ said the legislation was clearly aimed at tightening state control over independent media and pressuring journalists toward self-censorship.",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "The law gave authorities a standing legal tool to fine or briefly jail journalists and ordinary internet users over reporting or commentary the government alone determined to be false or disrespectful, without a specific factual dispute needing to be argued in court beforehand.",
+      "status": "Sustained; the laws remained in force and were later expanded during the 2022 invasion of Ukraine.",
+      "what_we_dont_know": "The sources reviewed do not report how many people were fined or jailed under the law in its first year.",
+      "outcome": "sustained",
+      "outcome_on": "2019-03-07",
+      "outcome_note": "The laws were enacted and were later expanded in March 2022 to include prison terms of up to 15 years for wartime 'fakes.'",
+      "actors": [
+        "vladimir-putin"
+      ],
+      "outlets": [],
+      "journalists": [],
+      "cases": [],
+      "sources": [
+        "l2_034"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Fake news fines up to 100,000 rubles for individuals",
+          "statement": "Penalty structure under the new fake-news provision.",
+          "source_id": "l2_034",
+          "evidence_quote": "people found guilty of publishing \"indecent\" posts online...would face up to 15 days in administrative detention. Individuals, including journalists, who post \"fake news\" could be hit with fines of up to 100,000 rubles (more than $1,500)"
+        },
+        {
+          "field": "what_happened",
+          "value": "Fake news defined as unverified information seen as threatening",
+          "statement": "The law's definition of what counts as fake news.",
+          "source_id": "l2_034",
+          "evidence_quote": "\"fake news\" as any unverified information that \"threatens someone's life and (or) their health or property, or threatens mass public disorder or danger...\""
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "CPJ says the law is aimed at self-censorship",
+          "statement": "CPJ's assessment of the legislation's intent.",
+          "source_id": "l2_034",
+          "evidence_quote": "We are extremely troubled by the legislation that cleared Russia's State Duma today, which is clearly aimed at tightening state control over independent media and intimidating journalists into self-censorship,"
+        }
+      ],
+      "ladder_note": "Russia's parliament created fines and jail terms for online posts that authorities alone judge false or disrespectful of officials; no enacted United States law imposes jail time for calling an official statement false."
+    },
+    {
+      "slug": "2021-russia-designates-meduza-foreign-agent",
+      "title": "Russia: independent outlet Meduza designated a 'foreign agent'",
+      "occurred_on": "2021-04-23",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Russia, national",
+      "country": "RU",
+      "level": "national",
+      "continent": "Europe",
+      "type": "disinformation_labeling",
+      "tactic_primary": "disinformation_labeling",
+      "tactics": [
+        "disinformation_labeling"
+      ],
+      "stage": "pressure",
+      "leader_slug": "vladimir-putin",
+      "granularity": "granular",
+      "summary": "Russia's Justice Ministry labeled the independent news site Meduza and outlet PASMI \"foreign agents,\" a status requiring constant public disclosure, quarterly reports and audits, and carrying up to two years in prison for noncompliance, which Meduza said would destroy its advertising business.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "On April 23, 2021, Russia's Justice Ministry added the independent news site Meduza, which is based in Latvia and widely read inside Russia, and the outlet PASMI to its register of \"foreign agents.\" The designation, created under a law expanded over several years to cover media organizations and individuals, requires labeled outlets to mark every piece of content with a foreign agent notice, provide a legal representative inside Russia, file quarterly financial reports and semi-annual activity reports, and undergo annual audits. People working for a foreign agent outlet who fail to comply can face up to two years in prison. Meduza's editor said the label would deprive the outlet of the ability to fully practice journalism inside Russia and would destroy its business, since advertisers would avoid being associated with a designated outlet. CPJ called on Russia to stop labeling independent outlets as foreign agents.",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "Meduza's editor said the label would cut off the outlet's advertising revenue and constrain its ability to operate as a normal news organization inside Russia, years before Russia banned it outright in 2023.",
+      "status": "Sustained; the designation remained in place and Russia later outlawed Meduza entirely.",
+      "what_we_dont_know": "The sources reviewed do not give the Justice Ministry's specific stated reason for designating Meduza on that date.",
+      "outcome": "sustained",
+      "outcome_on": "2021-04-23",
+      "outcome_note": "The designation was not reversed; Russia later declared Meduza an 'undesirable organization' and outlawed it entirely.",
+      "actors": [
+        "vladimir-putin"
+      ],
+      "outlets": [
+        "meduza",
+        "pasmi"
+      ],
+      "journalists": [],
+      "cases": [],
+      "sources": [
+        "l2_029"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Requires quarterly reports, audits and a legal representative",
+          "statement": "The compliance burden the label imposes.",
+          "source_id": "l2_029",
+          "evidence_quote": "media organizations and individuals receiving foreign funding can be required to have a legal representative in Russia, provide the government with quarterly expense reports and semi-annual reports on their activities, undergo annual audits, and face other requirements."
+        },
+        {
+          "field": "what_happened",
+          "value": "Noncompliance can carry up to two years in prison",
+          "statement": "The criminal penalty for individuals who do not comply with the label's requirements.",
+          "source_id": "l2_029",
+          "evidence_quote": "In cases of non-compliance, people working for \"foreign agent\" outlets can face up to two years in prison,"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Meduza's editor says the label destroys its business",
+          "statement": "Meduza's own assessment of the designation's practical effect.",
+          "source_id": "l2_029",
+          "evidence_quote": "Recognition of Meduza as a foreign agent deprives us of the opportunity to fully engage in journalism in Russia (because this is a discriminatory status), and destroys our business (because advertisers will run away from us),"
+        }
+      ],
+      "ladder_note": "Russia's foreign agent label forced an outlet to mark every article, file quarterly reports and risk two years in prison for lapses, by its own editor's account destroying its advertising business; no United States 'fake news' designation carries a legal reporting duty or prison exposure."
+    },
+    {
+      "slug": "2019-egypt-media-law-blocks-al-mashhad",
+      "title": "Egypt: media law used to fine and block news site al-Mashhad",
+      "occurred_on": "2019-03-22",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Egypt, national",
+      "country": "EG",
+      "level": "national",
+      "continent": "Africa",
+      "type": "disinformation_labeling",
+      "tactic_primary": "disinformation_labeling",
+      "tactics": [
+        "disinformation_labeling"
+      ],
+      "stage": "pressure",
+      "leader_slug": "abdel-fattah-el-sisi",
+      "granularity": "granular",
+      "summary": "Under a 2018 law that treats any social media account with more than 5,000 followers as a media outlet, Egypt's media regulator fined news site al-Mashhad and ordered internet providers to block it for spreading what it called false news.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "Egypt's Law No. 180 of 2018 applies to every online and offline media outlet and, separately, to any social media account with more than 5,000 followers, treating such accounts as media outlets subject to regulation by the state's Supreme Council for Media Regulation. The law bans content the council judges to be false news, defamatory, obscene, or a threat to national security, with violators facing fines of up to 250,000 Egyptian pounds and having their websites blocked. On March 22, 2019, the council fined the news site al-Mashhad 50,000 Egyptian pounds and ordered Egyptian internet providers to block the site for six months. Al-Mashhad appealed, and on April 7 the council reduced the block to one month starting from the appeal date, but the site remained inaccessible inside Egypt as of May 7, 2019, according to the source reviewed.",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "The law let a state regulator fine and block a news site inside the country over content it alone judged false, without the matter going before an ordinary court first.",
+      "status": "Unresolved; al-Mashhad remained blocked in Egypt as of the date given in the source reviewed.",
+      "what_we_dont_know": "The sources reviewed do not report whether the block was lifted after May 7, 2019.",
+      "outcome": "unknown",
+      "outcome_on": "2019-05-07",
+      "outcome_note": "Al-Mashhad's website was still inaccessible in Egypt as of May 7, 2019, the last date given in the source reviewed.",
+      "actors": [
+        "abdel-fattah-el-sisi",
+        "supreme-council-for-media-regulation-egypt"
+      ],
+      "outlets": [
+        "al-mashhad"
+      ],
+      "journalists": [],
+      "cases": [],
+      "sources": [
+        "l2_030"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Law covers accounts with more than 5,000 followers",
+          "statement": "The scope of Law No. 180 of 2018 as applied to social media.",
+          "source_id": "l2_030",
+          "evidence_quote": "applies to all online and offline media outlets, as well as social media accounts with more than 5000 followers"
+        },
+        {
+          "field": "what_happened",
+          "value": "Al-Mashhad fined and its site ordered blocked for six months",
+          "statement": "The regulator's specific action against al-Mashhad.",
+          "source_id": "l2_030",
+          "evidence_quote": "fined al-Mashhad 50,000 Egyptian pounds (US$2,909) and said Egyptian internet service providers would block the paper's website for six months"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Site still inaccessible after a partial appeal win",
+          "statement": "Status of the block after al-Mashhad's appeal.",
+          "source_id": "l2_030",
+          "evidence_quote": "al-Mashhad was still inaccessible in Egypt as of May 7"
+        }
+      ],
+      "ladder_note": "Egyptian law classifies any social media account over five thousand followers as a media outlet subject to state fines and blocking, and Egypt used it to fine and block a news site for weeks; no United States 'fake news' designation can fine or block an outlet."
+    },
+    {
+      "slug": "2013-vietnam-decree-72-restricts-blogs",
+      "title": "Vietnam: Decree 72 restricts blogs to personal information",
+      "occurred_on": "2013-09-01",
+      "occurred_on_precision": "month",
+      "jurisdiction": "Vietnam, national",
+      "country": "VN",
+      "level": "national",
+      "continent": "Asia",
+      "type": "disinformation_labeling",
+      "tactic_primary": "disinformation_labeling",
+      "tactics": [
+        "disinformation_labeling"
+      ],
+      "stage": "pressure",
+      "leader_slug": "nguyen-tan-dung",
+      "granularity": "granular",
+      "summary": "Vietnam's Decree 72 took effect in September 2013, barring bloggers and social media users from linking to or reposting news from press organizations or foreign government websites, restricting them to sharing personal information only.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "Vietnam's government issued Decree 72 in 2013, and it took effect on September 1, 2013, broadly prohibiting Vietnamese bloggers and internet users from linking to or reposting news from press organizations or information from foreign government websites, restricting personal blogs and social media accounts to sharing personal information only. The decree did not specify how global internet companies would be penalized if they refused to cooperate with government orders to identify bloggers who violated it or restrict their posts. A coalition of internet companies, the Asia Internet Coalition, said the decree would negatively affect Vietnam's internet economy and discourage businesses from operating in the country. A Vietnamese Ministry of Information official denied the decree amounted to a ban, saying the government had never stopped people from sharing information or linking to news from other websites.",
+      "stated_justification": "\"We never ban people from sharing information or linking news from websites.\"",
+      "effect_on_reporting": "The decree gave authorities a legal basis to treat ordinary sharing or reposting of news articles online as a violation, adding to prosecutions Vietnam had already brought against individual bloggers over their reporting.",
+      "status": "Sustained as of the source reviewed.",
+      "what_we_dont_know": "The sources reviewed do not report how many people were penalized specifically under Decree 72 in its first years.",
+      "outcome": "sustained",
+      "outcome_on": "2013-09-01",
+      "outcome_note": "The decree remained in force and was not reported as reversed in the source reviewed.",
+      "actors": [
+        "nguyen-tan-dung"
+      ],
+      "outlets": [],
+      "journalists": [],
+      "cases": [],
+      "sources": [
+        "l2_031"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Bars linking to or reposting news and foreign government sites",
+          "statement": "The core restriction imposed by the decree.",
+          "source_id": "l2_031",
+          "evidence_quote": "broadly prohibits Vietnamese bloggers and Internet users from linking to or reposting news from press organizations or information from foreign government websites."
+        },
+        {
+          "field": "what_happened",
+          "value": "No clear penalty specified for internet companies",
+          "statement": "Gap in the decree regarding enforcement against platforms.",
+          "source_id": "l2_031",
+          "evidence_quote": "The legislation was not explicit about how global Internet companies would be penalized for refusing to cooperate with official orders to identify or censor bloggers"
+        },
+        {
+          "field": "stated_justification",
+          "value": "Ministry official denies it is a ban",
+          "statement": "The government's own denial of the decree's effect.",
+          "source_id": "l2_031",
+          "evidence_quote": "We never ban people from sharing information or linking news from websites."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Industry coalition warns of harm to Vietnam's internet economy",
+          "statement": "Internet companies' response to the decree.",
+          "source_id": "l2_031",
+          "evidence_quote": "the Decree will negatively affect Vietnam's Internet ecosystem...stifle innovation and discourage businesses from operating in Vietnam"
+        }
+      ],
+      "ladder_note": "Vietnam's decree barred bloggers from sharing news articles at all, restricting them to personal content on pain of prosecution; no United States rule confines an outlet or blogger to personal content."
+    },
+    {
+      "slug": "2022-belarus-labels-dw-extremist",
+      "title": "Belarus: Deutsche Welle and other outlets labeled 'extremist'",
+      "occurred_on": "2022-03-09",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Belarus, national",
+      "country": "BY",
+      "level": "national",
+      "continent": "Europe",
+      "type": "disinformation_labeling",
+      "tactic_primary": "disinformation_labeling",
+      "tactics": [
+        "disinformation_labeling"
+      ],
+      "stage": "pressure",
+      "leader_slug": "alexander-lukashenko",
+      "granularity": "granular",
+      "summary": "A Minsk court declared all output from German broadcaster Deutsche Welle \"extremist,\" alongside a local newspaper and a Russian blogger's videos, making it a crime to produce, store or share the labeled material, as a former correspondent was jailed the same week.",
+      "issue_of_the_day": "Not stated in the sources reviewed.",
+      "what_happened": "On March 3, 2022, a Minsk district court sentenced Aleh Hruzdzilovich, a former correspondent for Radio Free Europe/Radio Liberty, to a year and a half in prison over his participation in three protests in 2020. Days later, on March 9, 2022, Minsk's Central District Court declared all information products of Deutsche Welle, Germany's public broadcaster, to be extremist material, effectively banning the outlet inside Belarus. The same order labeled the independent newspaper Regionalnaya Gazeta and videos by Russian blogger Yuriy Dud extremist as well, bringing the total number of outlets Belarus had designated extremist to 20. Under Belarusian law, anyone convicted of producing, storing or sharing material labeled extremist can be fined up to 960 rubles or detained for up to 15 days; Belarus's information ministry separately warned that even subscribing to a labeled outlet's Telegram channel could lead to prosecution.",
+      "stated_justification": "Not stated in the sources reviewed.",
+      "effect_on_reporting": "The designation made it a punishable offense inside Belarus to read, store or share Deutsche Welle's reporting, cutting off a foreign broadcaster's audience by criminalizing the audience's own conduct rather than the broadcaster's.",
+      "status": "Sustained as of the source reviewed.",
+      "what_we_dont_know": "The sources reviewed do not report whether the designation was later narrowed or lifted.",
+      "outcome": "sustained",
+      "outcome_on": "2022-03-09",
+      "outcome_note": "The designation brought the total number of outlets labeled extremist in Belarus to 20 and was not reported as reversed.",
+      "actors": [
+        "alexander-lukashenko",
+        "minsk-central-district-court"
+      ],
+      "outlets": [
+        "deutsche-welle",
+        "regionalnaya-gazeta"
+      ],
+      "journalists": [
+        "aleh-hruzdzilovich"
+      ],
+      "cases": [],
+      "sources": [
+        "l2_032"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Court declares all DW content extremist",
+          "statement": "The scope of the March 9, 2022 order against Deutsche Welle.",
+          "source_id": "l2_032",
+          "evidence_quote": "On Wednesday, March 9, the Central District Court in Minsk declared all \"information products\" by DW extremist, effectively banning the broadcaster in the country"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Sharing labeled material can bring a fine or 15 days detention",
+          "statement": "The penalty for producing, storing or sharing extremist-labeled material.",
+          "source_id": "l2_032",
+          "evidence_quote": "Anyone convicted of producing, storing, or spreading materials designated extremist can be fined up to 960 rubles (US$290) or detained for up to 15 days,"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Even subscribing to a labeled Telegram channel risks prosecution",
+          "statement": "Warning issued alongside the designation.",
+          "source_id": "l2_032",
+          "evidence_quote": "The MDCOCC announcement about DW warned of prosecution even for subscribing to Telegram channels and chats of outlets designated as extremist."
+        },
+        {
+          "field": "what_happened",
+          "value": "Designation brings the total to 20 outlets",
+          "statement": "Scale of Belarus's use of the extremist label against media by this point.",
+          "source_id": "l2_032",
+          "evidence_quote": "The designations of DW and Regionalnaya Gazeta as extremist takes the number of media outlets labelled as such to 20,"
+        }
+      ],
+      "ladder_note": "Belarus banned a foreign broadcaster's entire output as extremist material, making it a crime to read or share it, and jailed a former correspondent the same week; no United States 'fake news' label makes sharing an outlet's work a crime."
+    }
+  ]
+}

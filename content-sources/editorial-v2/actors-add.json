@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "jeff-landry",
+    "name": "Jeff Landry",
+    "kind": "person",
+    "role_or_office": "Governor of Louisiana",
+    "jurisdiction": "Louisiana, United States",
+    "country": "US",
+    "sources": [
+      "s077"
+    ]
+  },
+  {
+    "slug": "narendra-modi",
+    "name": "Narendra Modi",
+    "kind": "person",
+    "role_or_office": "Prime Minister of India",
+    "jurisdiction": "India",
+    "country": "IN",
+    "sources": [
+      "s057"
+    ]
+  },
+  {
+    "slug": "recep-tayyip-erdogan",
+    "name": "Recep Tayyip Erdoğan",
+    "kind": "person",
+    "role_or_office": "President of Türkiye",
+    "jurisdiction": "Türkiye",
+    "country": "TR",
+    "sources": [
+      "s081"
+    ]
+  },
+  {
+    "slug": "john-lee",
+    "name": "John Lee",
+    "kind": "person",
+    "role_or_office": "Chief Executive of Hong Kong (from July 2022)",
+    "jurisdiction": "Hong Kong, China",
+    "country": "HK",
+    "sources": [
+      "s069",
+      "s068"
+    ]
+  }
+]

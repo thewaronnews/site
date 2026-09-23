@@ -1,0 +1,3412 @@
+{
+  "sources": [
+    {
+      "id": "l1_001",
+      "url": "https://cpj.org/2026/03/hungary-mayor-forcibly-removes-telex-reporters-from-ruling-party-campaign-event/",
+      "title": "Hungary mayor forcibly removes Telex reporters from ruling party campaign event",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2026-03-16",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_002",
+      "url": "https://cpj.org/2022/03/russia-ukraine-war-press-freedom-watch/",
+      "title": "Russia-Ukraine war press freedom watch",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2022-03-11",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_003",
+      "url": "https://cpj.org/2020/02/china-expels-3-wall-street-journal-journalists-ove/",
+      "title": "China expels 3 Wall Street Journal journalists over opinion headline",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2020-02-19",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_004",
+      "url": "https://cpj.org/2020/08/belarus-strips-journalists-working-for-foreign-outlets-of-accreditation/",
+      "title": "Belarus strips journalists working for foreign outlets of accreditation",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2020-08-29",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_005",
+      "url": "https://cpj.org/2018/02/philippines-bans-rappler-reporters-from-presidenti/",
+      "title": "Philippines bans Rappler reporters from presidential palace",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2018-02-21",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_006",
+      "url": "https://cpj.org/2021/06/turkish-presidency-press-card-controls-court-found-restrictive/",
+      "title": "Turkish presidency reintroduces press card controls that court found restrictive",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2021-06-09",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_007",
+      "url": "https://cpj.org/2005/05/high-court-refuses-to-accredit-daily-news-journali/",
+      "title": "High Court refuses to accredit Daily News journalists",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2005-05-12",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_008",
+      "url": "https://cpj.org/2024/09/cpj-concerned-by-kazakhstans-restrictive-new-media-accreditation/",
+      "title": "CPJ concerned by Kazakhstan's restrictive new media accreditation",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2024-09-03",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_009",
+      "url": "https://cpj.org/2021/03/foreign-correspondents-in-china-face-covid-19-restrictions-and-expulsions-fccc-finds/",
+      "title": "Foreign correspondents in China face COVID-19 restrictions and expulsions, FCCC finds",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2021-03-03",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_010",
+      "url": "https://cpj.org/2022/09/russian-authorities-suspend-novaya-gazetas-print-license/",
+      "title": "Russian authorities suspend Novaya Gazeta's print license",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2022-09-06",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_011",
+      "url": "https://cpj.org/2021/12/hong-kong-authorities-file-new-charges-against-jimmy-lai-and-six-other-apple-daily-executives-in-fresh-media-crackdown/",
+      "title": "Hong Kong authorities file new charges against Jimmy Lai and six other Apple Daily executives in fresh media crackdown",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2021-12-29",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_012",
+      "url": "https://cpj.org/2015/09/regional-court-orders-venezuela-to-reinstate-rctv/",
+      "title": "Regional court orders Venezuela to reinstate RCTV on the air",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2015-09-08",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_013",
+      "url": "https://cpj.org/2007/05/cpj-urges-ch%c3%a1vez-to-allow-rctv-to-stay-on-the-air/",
+      "title": "CPJ urges Chavez to allow RCTV to stay on the air",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2007-05-24",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_014",
+      "url": "https://cpj.org/2004/03/attacks-on-the-press-2003-zimbabwe/",
+      "title": "Attacks on the Press 2003: Zimbabwe",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2004-03-11",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_015",
+      "url": "https://cpj.org/2010/05/zimbabwe-allows-independent-dailies-for-1st-time-i/",
+      "title": "Zimbabwe allows independent dailies for 1st time in nearly 7 years",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2010-05-27",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_016",
+      "url": "https://cpj.org/2021/11/hungary-klubradio-andras-arato-loss-broadcast-license/",
+      "title": "Hungary's Klubradio owner Andras Arato on how the station is responding to the loss of its broadcast license",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2021-11-09",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_017",
+      "url": "https://cpj.org/2023/02/cambodian-authorities-shutter-voice-of-democracy-news-outlet/",
+      "title": "Cambodian authorities shutter Voice of Democracy news outlet",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2023-02-13",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_018",
+      "url": "https://cpj.org/2023/02/turkish-media-watchdog-fines-broadcasters-for-criticizing-earthquake-response/",
+      "title": "Turkish media watchdog fines broadcasters for criticizing earthquake response",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2023-02-22",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_019",
+      "url": "https://cpj.org/2014/02/attacks-on-the-press-in-2013-israel-and-the-occupi/",
+      "title": "Attacks on the Press in 2013: Israel and the Occupied Palestinian Territory",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2014-02-12",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_020",
+      "url": "https://cpj.org/2020/10/al-manassa-editor-nora-younis-on-censorship-in-egypt/",
+      "title": "Al-Manassa editor Nora Younis on censorship in Egypt",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2020-10-26",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_021",
+      "url": "https://cpj.org/2022/09/cpj-dismayed-by-22-year-sentence-for-russian-journalist-ivan-safronov/",
+      "title": "CPJ dismayed by 22-year sentence for Russian journalist Ivan Safronov",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2022-09-05",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_022",
+      "url": "https://cpj.org/2022/08/cpj-calls-on-vietnam-authorities-to-release-ipfa-winner-pham-doan-trang/",
+      "title": "CPJ calls on Vietnam authorities to release IPFA winner Pham Doan Trang",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2022-08-16",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_023",
+      "url": "https://cpj.org/2024/01/cpj-calls-for-release-of-all-jailed-iranian-journalists-after-bail-granted-to-niloofar-hamedi-and-elahe-mohammadi/",
+      "title": "CPJ calls for release of all jailed Iranian journalists after bail granted to Niloofar Hamedi and Elahe Mohammadi",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2024-01-17",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_024",
+      "url": "https://cpj.org/2025/09/son-of-jailed-chinese-journalist-dong-yuyu-says-espionage-conviction-purely-political/",
+      "title": "Son of jailed Chinese journalist Dong Yuyu says espionage conviction 'purely political'",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2025-09-30",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_025",
+      "url": "https://cpj.org/2010/02/attacks-on-the-press-2009-north-korea/",
+      "title": "Attacks on the Press 2009: North Korea",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2010-02-16",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_026",
+      "url": "https://cpj.org/2022/01/turkish-journalist-sedef-kabas-arrested-for-insulting-president-erdogan/",
+      "title": "Turkish journalist Sedef Kabas arrested for 'insulting' President Erdogan",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2022-01-25",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_027",
+      "url": "https://cpj.org/2023/06/turkish-journalist-sedef-kabas-facing-new-trial-for-insulting-president-erdogan/",
+      "title": "Turkish journalist Sedef Kabas facing new trial for 'insulting' President Erdogan",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2023-06-22",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_028",
+      "url": "https://cpj.org/2013/01/thai-editor-somyot-sentenced-to-11-years-in-prison/",
+      "title": "Thai editor Somyot sentenced to 11 years in prison",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2013-01-24",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_029",
+      "url": "https://cpj.org/2018/05/thai-magazine-editor-freed-after-seven-years-in-pr/",
+      "title": "Thai magazine editor freed after seven years in prison",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2018-05-01",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_030",
+      "url": "https://cpj.org/2023/02/russian-journalist-maria-ponomarenko-sentenced-to-6-years-in-prison/",
+      "title": "Russian journalist Maria Ponomarenko sentenced to 6 years in prison",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2023-02-15",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_031",
+      "url": "https://cpj.org/2023/02/belarusian-authorities-sentence-journalist-andrzej-poczobut-to-8-years-in-prison-detain-journalist-anastasia-sharkevich/",
+      "title": "Belarusian authorities sentence journalist Andrzej Poczobut to 8 years in prison, detain journalist Anastasia Sharkevich",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2023-02-08",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_032",
+      "url": "https://cpj.org/2026/04/belarus-frees-journalist-andrzej-poczobut/",
+      "title": "Belarus frees journalist Andrzej Poczobut",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2026-04-28",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_033",
+      "url": "https://cpj.org/2021/12/hungarys-szabolcs-panyi-on-how-pegasus-surveillance-has-hindered-his-reporting/",
+      "title": "Hungary's Szabolcs Panyi on how Pegasus surveillance has hindered his reporting",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2021-12-13",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_034",
+      "url": "https://cpj.org/2020/07/journalists-omar-radi-and-imad-stitou-detained-overnight-in-morocco/",
+      "title": "Journalists Omar Radi and Imad Stitou detained overnight in Morocco",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2020-07-06",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_035",
+      "url": "https://cpj.org/2022/10/morocco-journalists-families-spyware-fears/",
+      "title": "In Morocco, journalists, and their families, still struggle to cope with spyware fears",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2022-10-13",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_036",
+      "url": "https://cpj.org/2024/10/moroccos-pardoned-journalists-face-smears-threats-after-prison/",
+      "title": "Morocco's pardoned journalists face smears, threats after prison",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2024-10-01",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_037",
+      "url": "https://cpj.org/2018/10/how-the-saudis-may-have-spied-on-jamal-khashoggi/",
+      "title": "How the Saudis may have spied on Jamal Khashoggi",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2018-10-31",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    },
+    {
+      "id": "l1_038",
+      "url": "https://cpj.org/2017/06/spyware-targeted-mexican-journalists-and-activists/",
+      "title": "Spyware targeted Mexican journalists and activists",
+      "publisher": "Committee to Protect Journalists",
+      "published_on": "2017-06-20",
+      "kind": "press_freedom_org",
+      "accessed_on": "2026-09-22",
+      "http_status": 200,
+      "link_state": "live"
+    }
+  ],
+  "actors": [
+    {
+      "slug": "viktor-orban",
+      "name": "Viktor Orban",
+      "kind": "person",
+      "role_or_office": "Prime Minister of Hungary",
+      "jurisdiction": "Hungary",
+      "country": "HU",
+      "sources": [
+        "l1_001",
+        "l1_016"
+      ]
+    },
+    {
+      "slug": "laszlo-vecsei",
+      "name": "Laszlo Vecsei",
+      "kind": "person",
+      "role_or_office": "Mayor of Csakbereny, Hungary",
+      "jurisdiction": "Hungary",
+      "country": "HU",
+      "sources": [
+        "l1_001"
+      ]
+    },
+    {
+      "slug": "vladimir-putin",
+      "name": "Vladimir Putin",
+      "kind": "person",
+      "role_or_office": "President of Russia",
+      "jurisdiction": "Russia",
+      "country": "RU",
+      "sources": [
+        "l1_002",
+        "l1_010",
+        "l1_021"
+      ]
+    },
+    {
+      "slug": "xi-jinping",
+      "name": "Xi Jinping",
+      "kind": "person",
+      "role_or_office": "General Secretary of the Communist Party of China",
+      "jurisdiction": "China",
+      "country": "CN",
+      "sources": [
+        "l1_003",
+        "l1_009",
+        "l1_024"
+      ]
+    },
+    {
+      "slug": "alexander-lukashenko",
+      "name": "Alexander Lukashenko",
+      "kind": "person",
+      "role_or_office": "President of Belarus",
+      "jurisdiction": "Belarus",
+      "country": "BY",
+      "sources": [
+        "l1_004",
+        "l1_031",
+        "l1_032"
+      ]
+    },
+    {
+      "slug": "rodrigo-duterte",
+      "name": "Rodrigo Duterte",
+      "kind": "person",
+      "role_or_office": "President of the Philippines",
+      "jurisdiction": "Philippines",
+      "country": "PH",
+      "sources": [
+        "l1_005"
+      ]
+    },
+    {
+      "slug": "recep-tayyip-erdogan",
+      "name": "Recep Tayyip Erdogan",
+      "kind": "person",
+      "role_or_office": "President of Turkiye",
+      "jurisdiction": "Turkiye",
+      "country": "TR",
+      "sources": [
+        "l1_006",
+        "l1_018",
+        "l1_026",
+        "l1_027"
+      ]
+    },
+    {
+      "slug": "robert-mugabe",
+      "name": "Robert Mugabe",
+      "kind": "person",
+      "role_or_office": "President of Zimbabwe",
+      "jurisdiction": "Zimbabwe",
+      "country": "ZW",
+      "sources": [
+        "l1_007",
+        "l1_014"
+      ]
+    },
+    {
+      "slug": "kassym-jomart-tokayev",
+      "name": "Kassym-Jomart Tokayev",
+      "kind": "person",
+      "role_or_office": "President of Kazakhstan",
+      "jurisdiction": "Kazakhstan",
+      "country": "KZ",
+      "sources": [
+        "l1_008"
+      ]
+    },
+    {
+      "slug": "hugo-chavez",
+      "name": "Hugo Chavez",
+      "kind": "person",
+      "role_or_office": "President of Venezuela",
+      "jurisdiction": "Venezuela",
+      "country": "VE",
+      "sources": [
+        "l1_012",
+        "l1_013"
+      ]
+    },
+    {
+      "slug": "hun-sen",
+      "name": "Hun Sen",
+      "kind": "person",
+      "role_or_office": "Prime Minister of Cambodia",
+      "jurisdiction": "Cambodia",
+      "country": "KH",
+      "sources": [
+        "l1_017"
+      ]
+    },
+    {
+      "slug": "benjamin-netanyahu",
+      "name": "Benjamin Netanyahu",
+      "kind": "person",
+      "role_or_office": "Prime Minister of Israel",
+      "jurisdiction": "Israel",
+      "country": "IL",
+      "sources": [
+        "l1_019"
+      ]
+    },
+    {
+      "slug": "abdel-fattah-el-sisi",
+      "name": "Abdel Fattah el-Sisi",
+      "kind": "person",
+      "role_or_office": "President of Egypt",
+      "jurisdiction": "Egypt",
+      "country": "EG",
+      "sources": [
+        "l1_020"
+      ]
+    },
+    {
+      "slug": "nguyen-xuan-phuc",
+      "name": "Nguyen Xuan Phuc",
+      "kind": "person",
+      "role_or_office": "Prime Minister of Vietnam",
+      "jurisdiction": "Vietnam",
+      "country": "VN",
+      "sources": [
+        "l1_022"
+      ]
+    },
+    {
+      "slug": "ebrahim-raisi",
+      "name": "Ebrahim Raisi",
+      "kind": "person",
+      "role_or_office": "President of Iran",
+      "jurisdiction": "Iran",
+      "country": "IR",
+      "sources": [
+        "l1_023"
+      ]
+    },
+    {
+      "slug": "kim-jong-il",
+      "name": "Kim Jong Il",
+      "kind": "person",
+      "role_or_office": "Chairman of the National Defence Commission of North Korea",
+      "jurisdiction": "North Korea",
+      "country": "KP",
+      "sources": [
+        "l1_025"
+      ]
+    },
+    {
+      "slug": "yingluck-shinawatra",
+      "name": "Yingluck Shinawatra",
+      "kind": "person",
+      "role_or_office": "Prime Minister of Thailand",
+      "jurisdiction": "Thailand",
+      "country": "TH",
+      "sources": [
+        "l1_028",
+        "l1_029"
+      ]
+    },
+    {
+      "slug": "saadeddine-othmani",
+      "name": "Saadeddine Othmani",
+      "kind": "person",
+      "role_or_office": "Prime Minister of Morocco",
+      "jurisdiction": "Morocco",
+      "country": "MA",
+      "sources": [
+        "l1_034",
+        "l1_035"
+      ]
+    },
+    {
+      "slug": "king-salman",
+      "name": "Salman bin Abdulaziz Al Saud",
+      "kind": "person",
+      "role_or_office": "King and Prime Minister of Saudi Arabia",
+      "jurisdiction": "Saudi Arabia",
+      "country": "SA",
+      "sources": [
+        "l1_037"
+      ]
+    },
+    {
+      "slug": "enrique-pena-nieto",
+      "name": "Enrique Pena Nieto",
+      "kind": "person",
+      "role_or_office": "President of Mexico",
+      "jurisdiction": "Mexico",
+      "country": "MX",
+      "sources": [
+        "l1_038"
+      ]
+    },
+    {
+      "slug": "carrie-lam",
+      "name": "Carrie Lam",
+      "kind": "person",
+      "role_or_office": "Chief Executive of Hong Kong",
+      "jurisdiction": "Hong Kong, China",
+      "country": "HK",
+      "sources": [
+        "l1_011"
+      ]
+    },
+    {
+      "slug": "donald-tusk",
+      "name": "Donald Tusk",
+      "kind": "person",
+      "role_or_office": "Prime Minister of Poland",
+      "jurisdiction": "Poland",
+      "country": "PL",
+      "sources": [
+        "l1_032"
+      ]
+    },
+    {
+      "slug": "jhopee-avancena",
+      "name": "Jhopee Avancena",
+      "kind": "person",
+      "role_or_office": "Head of Malacanang Palace's internal house affairs office",
+      "jurisdiction": "Philippines",
+      "country": "PH",
+      "sources": [
+        "l1_005"
+      ]
+    },
+    {
+      "slug": "harry-roque",
+      "name": "Harry Roque",
+      "kind": "person",
+      "role_or_office": "Presidential spokesperson of the Philippines",
+      "jurisdiction": "Philippines",
+      "country": "PH",
+      "sources": [
+        "l1_005"
+      ]
+    },
+    {
+      "slug": "anatoly-glaz",
+      "name": "Anatoly Glaz",
+      "kind": "person",
+      "role_or_office": "Spokesman for Belarus's Foreign Ministry",
+      "jurisdiction": "Belarus",
+      "country": "BY",
+      "sources": [
+        "l1_004"
+      ]
+    },
+    {
+      "slug": "geng-shuang",
+      "name": "Geng Shuang",
+      "kind": "person",
+      "role_or_office": "Spokesperson for China's Ministry of Foreign Affairs",
+      "jurisdiction": "China",
+      "country": "CN",
+      "sources": [
+        "l1_003"
+      ]
+    },
+    {
+      "slug": "dmitry-muratov",
+      "name": "Dmitry Muratov",
+      "kind": "person",
+      "role_or_office": "Editor of Novaya Gazeta",
+      "jurisdiction": "Russia",
+      "country": "RU",
+      "sources": [
+        "l1_010"
+      ]
+    },
+    {
+      "slug": "hila-gerstl",
+      "name": "Hila Gerstl",
+      "kind": "person",
+      "role_or_office": "Israeli district court judge",
+      "jurisdiction": "Israel",
+      "country": "IL",
+      "sources": [
+        "l1_019"
+      ]
+    }
+  ],
+  "outlets": [
+    {
+      "slug": "telex",
+      "name": "Telex",
+      "kind": "digital_native",
+      "country": "HU",
+      "homepage_url": "https://telex.hu/"
+    },
+    {
+      "slug": "cbc-radio-canada",
+      "name": "CBC/Radio-Canada",
+      "kind": "broadcaster",
+      "country": "CA",
+      "homepage_url": "https://www.cbc.ca/"
+    },
+    {
+      "slug": "wall-street-journal",
+      "name": "The Wall Street Journal",
+      "kind": "newspaper",
+      "country": "US",
+      "homepage_url": "https://www.wsj.com/"
+    },
+    {
+      "slug": "new-york-times",
+      "name": "The New York Times",
+      "kind": "newspaper",
+      "country": "US",
+      "homepage_url": "https://www.nytimes.com/"
+    },
+    {
+      "slug": "washington-post",
+      "name": "The Washington Post",
+      "kind": "newspaper",
+      "country": "US",
+      "homepage_url": "https://www.washingtonpost.com/"
+    },
+    {
+      "slug": "bbc",
+      "name": "BBC",
+      "kind": "broadcaster",
+      "country": "GB",
+      "homepage_url": "https://www.bbc.com/"
+    },
+    {
+      "slug": "reuters",
+      "name": "Reuters",
+      "kind": "wire_service",
+      "country": "GB",
+      "homepage_url": "https://www.reuters.com/"
+    },
+    {
+      "slug": "associated-press",
+      "name": "Associated Press",
+      "kind": "wire_service",
+      "country": "US",
+      "homepage_url": "https://apnews.com/"
+    },
+    {
+      "slug": "radio-liberty",
+      "name": "Radio Free Europe/Radio Liberty",
+      "kind": "broadcaster",
+      "country": "CZ",
+      "homepage_url": "https://www.rferl.org/"
+    },
+    {
+      "slug": "agence-france-presse",
+      "name": "Agence France-Presse",
+      "kind": "wire_service",
+      "country": "FR",
+      "homepage_url": "https://www.afp.com/"
+    },
+    {
+      "slug": "deutsche-welle",
+      "name": "Deutsche Welle",
+      "kind": "broadcaster",
+      "country": "DE",
+      "homepage_url": "https://www.dw.com/"
+    },
+    {
+      "slug": "rappler",
+      "name": "Rappler",
+      "kind": "digital_native",
+      "country": "PH",
+      "homepage_url": "https://www.rappler.com/"
+    },
+    {
+      "slug": "evrensel",
+      "name": "Evrensel",
+      "kind": "newspaper",
+      "country": "TR",
+      "homepage_url": "https://www.evrensel.net/"
+    },
+    {
+      "slug": "mezopotamya-news-agency",
+      "name": "Mezopotamya News Agency",
+      "kind": "wire_service",
+      "country": "TR",
+      "homepage_url": ""
+    },
+    {
+      "slug": "daily-news-zimbabwe",
+      "name": "Daily News",
+      "kind": "newspaper",
+      "country": "ZW",
+      "homepage_url": ""
+    },
+    {
+      "slug": "radio-azattyq",
+      "name": "Radio Azattyq (RFE/RL Kazakh Service)",
+      "kind": "broadcaster",
+      "country": "KZ",
+      "homepage_url": "https://www.azattyq.org/"
+    },
+    {
+      "slug": "novaya-gazeta",
+      "name": "Novaya Gazeta",
+      "kind": "newspaper",
+      "country": "RU",
+      "homepage_url": "https://novayagazeta.ru/"
+    },
+    {
+      "slug": "apple-daily",
+      "name": "Apple Daily",
+      "kind": "newspaper",
+      "country": "HK",
+      "homepage_url": ""
+    },
+    {
+      "slug": "rctv",
+      "name": "Radio Caracas Television (RCTV)",
+      "kind": "broadcaster",
+      "country": "VE",
+      "homepage_url": ""
+    },
+    {
+      "slug": "klubradio",
+      "name": "Klubradio",
+      "kind": "broadcaster",
+      "country": "HU",
+      "homepage_url": "https://www.klubradio.hu/"
+    },
+    {
+      "slug": "voice-of-democracy",
+      "name": "Voice of Democracy",
+      "kind": "digital_native",
+      "country": "KH",
+      "homepage_url": ""
+    },
+    {
+      "slug": "halk-tv",
+      "name": "Halk TV",
+      "kind": "broadcaster",
+      "country": "TR",
+      "homepage_url": ""
+    },
+    {
+      "slug": "tele1",
+      "name": "TELE1",
+      "kind": "broadcaster",
+      "country": "TR",
+      "homepage_url": ""
+    },
+    {
+      "slug": "fox-tv-turkey",
+      "name": "FOX TV Turkiye",
+      "kind": "broadcaster",
+      "country": "TR",
+      "homepage_url": ""
+    },
+    {
+      "slug": "haaretz",
+      "name": "Haaretz",
+      "kind": "newspaper",
+      "country": "IL",
+      "homepage_url": "https://www.haaretz.com/"
+    },
+    {
+      "slug": "al-manassa",
+      "name": "Al-Manassa",
+      "kind": "digital_native",
+      "country": "EG",
+      "homepage_url": "https://www.almanassa.com/"
+    },
+    {
+      "slug": "kommersant",
+      "name": "Kommersant",
+      "kind": "newspaper",
+      "country": "RU",
+      "homepage_url": "https://www.kommersant.ru/"
+    },
+    {
+      "slug": "vedomosti",
+      "name": "Vedomosti",
+      "kind": "newspaper",
+      "country": "RU",
+      "homepage_url": "https://www.vedomosti.ru/"
+    },
+    {
+      "slug": "the-vietnamese",
+      "name": "The Vietnamese",
+      "kind": "digital_native",
+      "country": "VN",
+      "homepage_url": ""
+    },
+    {
+      "slug": "shargh",
+      "name": "Shargh",
+      "kind": "newspaper",
+      "country": "IR",
+      "homepage_url": ""
+    },
+    {
+      "slug": "ham-mihan",
+      "name": "Ham-Mihan",
+      "kind": "newspaper",
+      "country": "IR",
+      "homepage_url": ""
+    },
+    {
+      "slug": "guangming-daily",
+      "name": "Guangming Daily",
+      "kind": "newspaper",
+      "country": "CN",
+      "homepage_url": ""
+    },
+    {
+      "slug": "current-tv",
+      "name": "Current TV",
+      "kind": "broadcaster",
+      "country": "US",
+      "homepage_url": ""
+    },
+    {
+      "slug": "oy-magazine",
+      "name": "Voice of Taksin magazine",
+      "kind": "magazine",
+      "country": "TH",
+      "homepage_url": ""
+    },
+    {
+      "slug": "rusnews",
+      "name": "RusNews",
+      "kind": "digital_native",
+      "country": "RU",
+      "homepage_url": ""
+    },
+    {
+      "slug": "belsat-tv",
+      "name": "Belsat TV",
+      "kind": "broadcaster",
+      "country": "PL",
+      "homepage_url": "https://belsat.eu/"
+    },
+    {
+      "slug": "direkt36",
+      "name": "Direkt36",
+      "kind": "digital_native",
+      "country": "HU",
+      "homepage_url": "https://www.direkt36.hu/"
+    },
+    {
+      "slug": "le-desk",
+      "name": "Le Desk",
+      "kind": "digital_native",
+      "country": "MA",
+      "homepage_url": "https://ledesk.ma/"
+    },
+    {
+      "slug": "aristegui-noticias",
+      "name": "Aristegui Noticias",
+      "kind": "digital_native",
+      "country": "MX",
+      "homepage_url": "https://aristeguinoticias.com/"
+    }
+  ],
+  "journalists": [
+    {
+      "slug": "judit-presinszky",
+      "name": "Judit Presinszky",
+      "outlet": "telex"
+    },
+    {
+      "slug": "nora-siteri",
+      "name": "Nora Siteri",
+      "outlet": "telex"
+    },
+    {
+      "slug": "josh-chin",
+      "name": "Josh Chin",
+      "outlet": "wall-street-journal"
+    },
+    {
+      "slug": "chao-deng",
+      "name": "Chao Deng",
+      "outlet": "wall-street-journal"
+    },
+    {
+      "slug": "philip-wen",
+      "name": "Philip Wen",
+      "outlet": "wall-street-journal"
+    },
+    {
+      "slug": "pia-ranada",
+      "name": "Pia Ranada",
+      "outlet": "rappler"
+    },
+    {
+      "slug": "maria-ressa",
+      "name": "Maria Ressa",
+      "outlet": "rappler"
+    },
+    {
+      "slug": "canan-coskun",
+      "name": "Canan Coskun",
+      "outlet": ""
+    },
+    {
+      "slug": "fatih-polat",
+      "name": "Fatih Polat",
+      "outlet": "evrensel"
+    },
+    {
+      "slug": "mehves-evin",
+      "name": "Mehves Evin",
+      "outlet": ""
+    },
+    {
+      "slug": "andras-arato",
+      "name": "Andras Arato",
+      "outlet": "klubradio"
+    },
+    {
+      "slug": "ananth-baliga",
+      "name": "Ananth Baliga",
+      "outlet": "voice-of-democracy"
+    },
+    {
+      "slug": "aluf-benn",
+      "name": "Aluf Benn",
+      "outlet": "haaretz"
+    },
+    {
+      "slug": "nora-younis",
+      "name": "Nora Younis",
+      "outlet": "al-manassa"
+    },
+    {
+      "slug": "ivan-safronov",
+      "name": "Ivan Safronov",
+      "outlet": "kommersant"
+    },
+    {
+      "slug": "pham-doan-trang",
+      "name": "Pham Doan Trang",
+      "outlet": "the-vietnamese"
+    },
+    {
+      "slug": "niloofar-hamedi",
+      "name": "Niloofar Hamedi",
+      "outlet": "shargh"
+    },
+    {
+      "slug": "elahe-mohammadi",
+      "name": "Elahe Mohammadi",
+      "outlet": "ham-mihan"
+    },
+    {
+      "slug": "dong-yuyu",
+      "name": "Dong Yuyu",
+      "outlet": "guangming-daily"
+    },
+    {
+      "slug": "laura-ling",
+      "name": "Laura Ling",
+      "outlet": "current-tv"
+    },
+    {
+      "slug": "euna-lee",
+      "name": "Euna Lee",
+      "outlet": "current-tv"
+    },
+    {
+      "slug": "sedef-kabas",
+      "name": "Sedef Kabas",
+      "outlet": ""
+    },
+    {
+      "slug": "somyot-prueksakasemsuk",
+      "name": "Somyot Prueksakasemsuk",
+      "outlet": "oy-magazine"
+    },
+    {
+      "slug": "jakrapob-penkair",
+      "name": "Jakrapob Penkair",
+      "outlet": "oy-magazine"
+    },
+    {
+      "slug": "maria-ponomarenko",
+      "name": "Maria Ponomarenko",
+      "outlet": "rusnews"
+    },
+    {
+      "slug": "andrzej-poczobut",
+      "name": "Andrzej Poczobut",
+      "outlet": "belsat-tv"
+    },
+    {
+      "slug": "szabolcs-panyi",
+      "name": "Szabolcs Panyi",
+      "outlet": "direkt36"
+    },
+    {
+      "slug": "omar-radi",
+      "name": "Omar Radi",
+      "outlet": "le-desk"
+    },
+    {
+      "slug": "imad-stitou",
+      "name": "Imad Stitou",
+      "outlet": ""
+    },
+    {
+      "slug": "omar-abdulaziz",
+      "name": "Omar Abdulaziz",
+      "outlet": ""
+    },
+    {
+      "slug": "jamal-khashoggi",
+      "name": "Jamal Khashoggi",
+      "outlet": "washington-post"
+    },
+    {
+      "slug": "carmen-aristegui",
+      "name": "Carmen Aristegui",
+      "outlet": "aristegui-noticias"
+    },
+    {
+      "slug": "carlos-loret-de-mola",
+      "name": "Carlos Loret de Mola",
+      "outlet": ""
+    },
+    {
+      "slug": "jimmy-lai",
+      "name": "Jimmy Lai",
+      "outlet": "apple-daily"
+    },
+    {
+      "slug": "cheung-kim-hung",
+      "name": "Cheung Kim Hung",
+      "outlet": "apple-daily"
+    },
+    {
+      "slug": "ryan-law-wai-kwong",
+      "name": "Ryan Law Wai-kwong",
+      "outlet": "apple-daily"
+    }
+  ],
+  "incidents": [
+    {
+      "slug": "2026-hungary-mayor-removes-telex-reporters",
+      "title": "Hungary: a ruling-party mayor forcibly removes Telex reporters from a campaign event",
+      "occurred_on": "2026-03-10",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Csakbereny, Hungary",
+      "country": "HU",
+      "level": "municipal",
+      "type": "access_ban",
+      "continent": "Europe",
+      "tactic_primary": "access_ban",
+      "tactics": [
+        "access_ban"
+      ],
+      "leader_slug": "viktor-orban",
+      "granularity": "granular",
+      "summary": "A mayor from Hungary's ruling Fidesz party physically removed two Telex journalists from a campaign forum in a community center, covering their camera lens and pushing them out after they declined to leave what he called a closed event.",
+      "issue_of_the_day": "Telex, an independent Hungarian outlet, was covering a campaign forum ahead of Hungary's April 2026 parliamentary election when the mayor hosting the event moved to stop the reporting.",
+      "what_happened": "On March 10, 2026, Telex correspondent Judit Presinszky and camera operator Nora Siteri went to a campaign forum for the ruling Fidesz party in a community center in Csakbereny, central Hungary. Mayor Laszlo Vecsei, who was hosting the event, grabbed Siteri's camera to cover the lens and then pushed the journalists, grabbing one of them by the arm, before they were removed from the building. A member of a local civilian patrol group then prevented the pair from re-entering. Vecsei said he acted after the journalists refused to leave what he described as a closed, non-public campaign event, though Telex said it was covering a public function open to constituents. Telex said it had filed a criminal complaint over the removal. The Committee to Protect Journalists said the episode marked a new low for a Hungarian press corps that already faces years of exclusion from government events under Prime Minister Viktor Orban.",
+      "stated_justification": "Mayor Vecsei said he removed the journalists \"after they refused to leave what he described as a closed, non-public campaign event.\"",
+      "effect_on_reporting": "Telex's reporters were prevented from covering the campaign forum in person and were physically blocked from returning to the building, and the outlet turned to a criminal complaint rather than continued on-site reporting.",
+      "status": "Telex has filed a criminal complaint over the removal; no outcome of that complaint has been reported.",
+      "what_we_dont_know": "It is not established in the sources reviewed whether the criminal complaint led to any charge against Mayor Vecsei.",
+      "outcome": "ongoing",
+      "outcome_on": "2026-03-10",
+      "outcome_note": "Telex filed a criminal complaint the same period as the removal; the Committee to Protect Journalists reports no resolution of that complaint.",
+      "stage": "punish",
+      "ladder_note": "A government official used physical force to remove and bar named reporters from an event, rather than only denying a credential or building pass.",
+      "actors": [
+        "viktor-orban",
+        "laszlo-vecsei"
+      ],
+      "outlets": [
+        "telex"
+      ],
+      "journalists": [
+        "judit-presinszky",
+        "nora-siteri"
+      ],
+      "cases": [],
+      "sources": [
+        "l1_001"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Csakbereny, March 10, 2026",
+          "statement": "A CPJ representative described the removal of the two Telex journalists as a low point for press freedom in Hungary.",
+          "source_id": "l1_001",
+          "evidence_quote": "Telex's Judit Presinszky and Nora Siteri being forcibly removed while reporting on a public campaign event marks a new low"
+        },
+        {
+          "field": "what_happened",
+          "value": "camera covered, journalists pushed",
+          "statement": "The mayor covered the camera lens and pushed the journalists, grabbing one by the arm, according to CPJ's account of the incident.",
+          "source_id": "l1_001",
+          "evidence_quote": "grabbed Siteri's camera to cover the lens"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "criminal complaint filed",
+          "statement": "Telex responded to the removal by filing a criminal complaint rather than continuing to report from the event.",
+          "source_id": "l1_001",
+          "evidence_quote": "said they have filed a criminal complaint"
+        }
+      ],
+      "actor_roles": {
+        "viktor-orban": "other",
+        "laszlo-vecsei": "enforced"
+      }
+    },
+    {
+      "slug": "2022-russia-bars-entry-foreign-journalists",
+      "title": "Russia: entry bans, visa restrictions and bureau closures for foreign correspondents",
+      "occurred_on": "2022-06-16",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Russia",
+      "country": "RU",
+      "level": "national",
+      "type": "access_ban",
+      "continent": "Europe",
+      "tactic_primary": "access_ban",
+      "tactics": [
+        "access_ban"
+      ],
+      "leader_slug": "vladimir-putin",
+      "granularity": "granular",
+      "summary": "Over several months in 2022, Russian authorities closed a Canadian broadcaster's Moscow bureau, barred dozens of named British and Australian journalists from entering the country, and suspended simplified visa rules for European journalists.",
+      "issue_of_the_day": "Russia's actions followed Western governments' sanctions on Russian state broadcasters and officials after Russia's invasion of Ukraine in February 2022.",
+      "what_happened": "Across the spring of 2022, Russian authorities took a series of steps to keep foreign journalists out of the country. On May 18, Russian authorities moved to close CBC/Radio-Canada's Moscow bureau and cancel the visa and accreditation of its journalists, matching Canada's decision to bar Russian state television. On June 14, Russia barred 49 British citizens, including 29 named journalists, from entering the country. Two days later, it barred 121 Australians, including journalists from ABC News, the Sydney Morning Herald, Nine News and Sky News. Separately, President Vladimir Putin signed a law suspending simplified visa procedures for several categories of visitors, including journalists, coming from most European countries. Russian officials framed each step as a response matching measures taken by the country concerned against Russian state media or officials, rather than as a general press policy.",
+      "stated_justification": "Russian officials presented the entry bans on British and Australian journalists as a response matching measures the United Kingdom and Australia had taken against Russian journalists and officials; a specific legal justification beyond that framing was not detailed in the source reviewed.",
+      "effect_on_reporting": "Named journalists from CBC, the BBC, the Sydney Morning Herald and other outlets lost the ability to report from inside Russia in person, and foreign outlets lost simplified visa access for future correspondents.",
+      "status": "The entry bans and visa restrictions remained in force through 2022 with no indication of reversal in the source reviewed.",
+      "what_we_dont_know": "The source reviewed does not give a complete published list of the 29 British or the Australian journalists named, or confirm whether any individual ban was later lifted.",
+      "outcome": "sustained",
+      "outcome_on": "2022-06-16",
+      "outcome_note": "The bans on named British and Australian journalists and the suspension of simplified visas for European journalists remained in effect through 2022 according to the source reviewed.",
+      "stage": "punish",
+      "ladder_note": "Dozens of named foreign correspondents were barred from entering the country by law and by sanction, not merely excluded from one building or briefing.",
+      "actors": [
+        "vladimir-putin"
+      ],
+      "outlets": [
+        "cbc-radio-canada",
+        "bbc"
+      ],
+      "journalists": [],
+      "cases": [],
+      "sources": [
+        "l1_002"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "CBC bureau closed, May 18, 2022",
+          "statement": "Russian authorities moved to close CBC/Radio-Canada's Moscow bureau and cancel its journalists' visas and accreditation.",
+          "source_id": "l1_002",
+          "evidence_quote": "close the outlet's Moscow bureau and cancel the visa and accreditations of its journalists"
+        },
+        {
+          "field": "what_happened",
+          "value": "49 British citizens barred, June 14, 2022",
+          "statement": "Russia barred 49 British citizens, including 29 journalists, from entering the country.",
+          "source_id": "l1_002",
+          "evidence_quote": "imposed sanctions on 49 British citizens, including 29 journalists"
+        },
+        {
+          "field": "what_happened",
+          "value": "121 Australians barred, June 16, 2022",
+          "statement": "Russia barred 121 Australians, including journalists from four named outlets, from entering the country.",
+          "source_id": "l1_002",
+          "evidence_quote": "121 Australians, including journalists from ABC News, Sydney Morning Herald, Nine News, and Sky News"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "visa procedures suspended",
+          "statement": "Putin signed a law suspending simplified visa procedures for journalists and other visitors from most European countries.",
+          "source_id": "l1_002",
+          "evidence_quote": "suspending simplified visa procedures for designated categories of people — including journalists — coming to Russia from most European countries"
+        }
+      ],
+      "actor_roles": {
+        "vladimir-putin": "ordered"
+      }
+    },
+    {
+      "slug": "2020-china-expels-three-wsj-journalists-headline",
+      "title": "China: three Wall Street Journal correspondents expelled over an opinion headline",
+      "occurred_on": "2020-02-19",
+      "occurred_on_precision": "day",
+      "jurisdiction": "China",
+      "country": "CN",
+      "level": "national",
+      "type": "access_ban",
+      "continent": "Asia",
+      "tactic_primary": "access_ban",
+      "tactics": [
+        "access_ban"
+      ],
+      "leader_slug": "xi-jinping",
+      "granularity": "granular",
+      "summary": "China's foreign ministry expelled three Wall Street Journal correspondents and revoked their press credentials after an opinion column, unrelated to their own reporting, used a headline the ministry called offensive.",
+      "issue_of_the_day": "The Wall Street Journal had published an opinion column on February 3, 2020, by an outside scholar, headlined \"China Is the Real Sick Man of Asia,\" about the economic effects of the coronavirus outbreak.",
+      "what_happened": "On February 19, 2020, China's Ministry of Foreign Affairs ordered three Wall Street Journal correspondents in Beijing, deputy bureau chief Josh Chin and reporters Chao Deng and Philip Wen, to leave the country within five days and revoked their press credentials. The order came more than two weeks after the newspaper ran an opinion column by an outside academic, Hudson Institute scholar Walter Russell Mead, under the headline \"China Is the Real Sick Man of Asia,\" discussing the coronavirus outbreak's economic effects. None of the three expelled journalists had written or edited the column. Foreign ministry spokesperson Geng Shuang called the headline \"racist\" and cited it as the basis for the expulsions. The Wall Street Journal's own reporters had separately criticized the headline as a poor editorial choice, but the paper declined to apologize on the newsroom's behalf for a piece written by an unrelated outside contributor.",
+      "stated_justification": "Foreign ministry spokesperson Geng Shuang characterized the opinion headline as \"racist\" and cited it as the basis for revoking the journalists' press credentials.",
+      "effect_on_reporting": "Three working Wall Street Journal correspondents lost their accreditation and were made to leave China within five days over content that none of them had written, reducing the paper's Beijing reporting capacity during the early coronavirus outbreak.",
+      "status": "The expulsions were carried out as ordered; the source reviewed does not report any reversal.",
+      "what_we_dont_know": "It is not stated in the source reviewed whether any of the three journalists were later permitted to return to China on assignment.",
+      "outcome": "sustained",
+      "outcome_on": "2020-02-19",
+      "outcome_note": "The three journalists' press credentials were revoked and the expulsion carried out; no reversal is reported in the source reviewed.",
+      "stage": "punish",
+      "ladder_note": "Working correspondents were expelled from the country over content written by someone outside their newsroom, not barred from one building or event.",
+      "actors": [
+        "xi-jinping",
+        "geng-shuang"
+      ],
+      "outlets": [
+        "wall-street-journal"
+      ],
+      "journalists": [
+        "josh-chin",
+        "chao-deng",
+        "philip-wen"
+      ],
+      "cases": [],
+      "sources": [
+        "l1_003"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "three journalists named",
+          "statement": "China's foreign ministry ordered three named Wall Street Journal correspondents to leave the country over the headline.",
+          "source_id": "l1_003",
+          "evidence_quote": "Josh Chin (Deputy bureau chief), Chao Deng (Reporter), Philip Wen (Reporter)"
+        },
+        {
+          "field": "stated_justification",
+          "value": "headline called racist",
+          "statement": "Geng Shuang called the opinion headline racist and used it as the basis for the expulsion order.",
+          "source_id": "l1_003",
+          "evidence_quote": "China's expulsion of three accredited correspondents in reaction to what it sees as an offensive headline makes the country appear less like a confident rising power than a thin-skinned bully"
+        },
+        {
+          "field": "issue_of_the_day",
+          "value": "opinion column, February 3, 2020",
+          "statement": "The triggering opinion column ran under the headline about the coronavirus outbreak's economic effects, written by an outside scholar rather than any of the three expelled correspondents.",
+          "source_id": "l1_003",
+          "evidence_quote": "China Is the Real Sick Man of Asia"
+        }
+      ],
+      "actor_roles": {
+        "xi-jinping": "other",
+        "geng-shuang": "ordered"
+      }
+    },
+    {
+      "slug": "2020-belarus-strips-accreditation-foreign-outlets",
+      "title": "Belarus: accreditation withdrawn from 17 journalists working for foreign outlets",
+      "occurred_on": "2020-08-29",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Belarus",
+      "country": "BY",
+      "level": "national",
+      "type": "access_ban",
+      "continent": "Europe",
+      "tactic_primary": "access_ban",
+      "tactics": [
+        "access_ban"
+      ],
+      "leader_slug": "alexander-lukashenko",
+      "granularity": "granular",
+      "summary": "Belarus's government revoked the accreditation of at least 17 journalists working for foreign outlets, including the BBC, Reuters, the Associated Press, Radio Liberty, AFP and Deutsche Welle, as they covered protests after a disputed presidential election.",
+      "issue_of_the_day": "The journalists had been covering protests that followed Belarus's August 9, 2020, presidential election, which the opposition and Western governments said was falsified in favor of Alexander Lukashenko.",
+      "what_happened": "On August 29, 2020, Belarusian authorities revoked the accreditation of at least 17 journalists who had been covering the post-election protests for foreign media outlets, among them the BBC, Reuters, the Associated Press, Radio Free Europe/Radio Liberty, Agence France-Presse and Deutsche Welle. Government spokesman Anatoly Glaz said the accreditation withdrawals followed a recommendation from Belarus's counter-terrorism unit. Some of the affected foreign journalists were deported to Russia the same day. The move came three weeks after Belarus's disputed presidential election, which had drawn large street protests and a heavy police response, and left foreign wire services and broadcasters largely unable to report from inside the country on the unrest as it continued into the autumn.",
+      "stated_justification": "Government spokesman Anatoly Glaz said \"the decision to revoke the media accreditations was made after a recommendation by Belarus's counter-terrorism unit.\"",
+      "effect_on_reporting": "At least 17 journalists working for major international wire services and broadcasters lost their ability to report from inside Belarus, and some were deported the same day.",
+      "status": "The accreditation withdrawals took effect immediately and some journalists were deported; the source reviewed does not report a reversal.",
+      "what_we_dont_know": "The source reviewed does not name all 17 affected journalists or state whether any of them later regained accreditation.",
+      "outcome": "sustained",
+      "outcome_on": "2020-08-29",
+      "outcome_note": "The accreditation of at least 17 journalists was withdrawn and some were deported the same day, with no reversal reported in the source reviewed.",
+      "stage": "punish",
+      "ladder_note": "At least 17 journalists working for named international outlets lost accreditation nationwide and some were deported, not confined to one building or pool.",
+      "actors": [
+        "alexander-lukashenko",
+        "anatoly-glaz"
+      ],
+      "outlets": [
+        "bbc",
+        "reuters",
+        "associated-press",
+        "radio-liberty",
+        "agence-france-presse",
+        "deutsche-welle"
+      ],
+      "journalists": [],
+      "cases": [],
+      "sources": [
+        "l1_004"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "at least 17 journalists, August 29, 2020",
+          "statement": "At least 17 journalists covering the post-election protests for foreign outlets lost their accreditation.",
+          "source_id": "l1_004",
+          "evidence_quote": "at least 17 journalists who had been covering post-election protests for foreign media outlets"
+        },
+        {
+          "field": "stated_justification",
+          "value": "counter-terrorism unit recommendation",
+          "statement": "Government spokesman Anatoly Glaz attributed the decision to a recommendation from the counter-terrorism unit.",
+          "source_id": "l1_004",
+          "evidence_quote": "the decision to revoke the media accreditations was made after a recommendation by Belarus's counter-terrorism unit"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "same-day deportations",
+          "statement": "Some of the affected foreign journalists were deported to Russia on the day their accreditation was revoked.",
+          "source_id": "l1_004",
+          "evidence_quote": "Some foreign journalists were deported to Russia on the same day"
+        }
+      ],
+      "actor_roles": {
+        "alexander-lukashenko": "other",
+        "anatoly-glaz": "ordered"
+      }
+    },
+    {
+      "slug": "2018-philippines-bans-rappler-presidential-palace",
+      "title": "Philippines: a Rappler reporter is barred from the presidential palace",
+      "occurred_on": "2018-02-21",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Philippines",
+      "country": "PH",
+      "level": "national",
+      "type": "access_ban",
+      "continent": "Asia",
+      "tactic_primary": "access_ban",
+      "tactics": [
+        "access_ban"
+      ],
+      "leader_slug": "rodrigo-duterte",
+      "granularity": "granular",
+      "summary": "President Rodrigo Duterte ordered Rappler reporter Pia Ranada and the outlet's CEO barred from Malacanang Palace, the seat of the Philippine presidency, after the government revoked Rappler's operating license.",
+      "issue_of_the_day": "The ban followed the Philippine Securities and Exchange Commission's January 2018 revocation of Rappler's operating license over a foreign-ownership finding, a decision Rappler said was really aimed at its critical coverage of Duterte.",
+      "what_happened": "On February 21, 2018, Jhopee Avancena, head of Malacanang Palace's internal house affairs office, told Rappler reporter Pia Ranada by text message that she and Rappler CEO Maria Ressa had been banned from the palace grounds on President Duterte's orders. Ranada was initially denied access by guards at the gate but was eventually allowed to join a televised news briefing that day. Presidential spokesperson Harry Roque said the government acted because Duterte had lost trust in Rappler over what he called \"fake news\" reporting, and said Rappler's reporters would have to cover the president's speeches and activities by television rather than in person from the palace. The ban followed weeks of government pressure on Rappler, including the Securities and Exchange Commission's revocation of its operating license the previous month, a decision widely read as retribution for the outlet's coverage of Duterte's campaign and his anti-drug enforcement policy.",
+      "stated_justification": "Presidential spokesperson Harry Roque said the government banned Rappler's reporters because President Duterte had \"lost trust\" in the outlet's \"fake news\" reporting.",
+      "effect_on_reporting": "Rappler's palace correspondent could no longer cover the president's activities in person and the outlet was told to rely on television broadcasts instead of first-hand access.",
+      "status": "The ban remained in force for the remainder of Duterte's term; no reversal is reported in the source reviewed.",
+      "what_we_dont_know": "The source reviewed does not state whether the ban was lifted after Duterte left office in mid-2022.",
+      "outcome": "unknown",
+      "outcome_on": "2018-02-21",
+      "outcome_note": "The source reviewed reports only the ban taking effect and does not state whether or when it ended.",
+      "stage": "pressure",
+      "ladder_note": "The head of government personally ordered a named outlet's reporters excluded from the seat of government after revoking the outlet's corporate license.",
+      "actors": [
+        "rodrigo-duterte",
+        "jhopee-avancena",
+        "harry-roque"
+      ],
+      "outlets": [
+        "rappler"
+      ],
+      "journalists": [
+        "pia-ranada",
+        "maria-ressa"
+      ],
+      "cases": [],
+      "sources": [
+        "l1_005"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "ban ordered by text message, February 21, 2018",
+          "statement": "A palace official told the Rappler reporter by text message that she and the outlet's CEO had been banned from the palace on the president's orders.",
+          "source_id": "l1_005",
+          "evidence_quote": "told Ranada by text message that she and Rappler CEO Maria Ressa had been banned from the palace on Duterte's orders"
+        },
+        {
+          "field": "stated_justification",
+          "value": "\"lost trust\" and \"fake news\"",
+          "statement": "The presidential spokesperson said the ban followed the president's loss of trust in the outlet's reporting, which he called fake news.",
+          "source_id": "l1_005",
+          "evidence_quote": "lost trust"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "coverage by television only",
+          "statement": "The spokesperson said Rappler's reporters would have to cover the president's activities by television rather than in person.",
+          "source_id": "l1_005",
+          "evidence_quote": "have to cover the leader's speeches and activities by live television rather than in person from the presidential palace"
+        }
+      ],
+      "actor_roles": {
+        "rodrigo-duterte": "ordered",
+        "jhopee-avancena": "enforced",
+        "harry-roque": "other"
+      }
+    },
+    {
+      "slug": "2021-turkiye-press-card-controls-restrictive",
+      "title": "Turkiye: the presidency's press card system is found restrictive by the country's top administrative court",
+      "occurred_on": "2021-04-01",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Turkiye",
+      "country": "TR",
+      "level": "national",
+      "type": "credential_control",
+      "continent": "Asia",
+      "tactic_primary": "credential_control",
+      "tactics": [
+        "credential_control"
+      ],
+      "leader_slug": "recep-tayyip-erdogan",
+      "granularity": "granular",
+      "summary": "Turkiye's Council of State suspended 2018 rules under which the presidency's Communications Directorate could deny or cancel the yellow and turquoise press cards that let reporters work and enter official buildings, after finding the grounds for denial too broad.",
+      "issue_of_the_day": "The 2018 rules had let the presidency cancel press cards for vaguely worded reasons, including \"diminishing the dignity of the media profession,\" and had been used against journalists dismissed or reassigned after the 2016 coup attempt.",
+      "what_happened": "Since 2018, Turkiye's presidency, through its Communications Directorate, has controlled the issuance and cancellation of the country's yellow and turquoise press cards, which let journalists enter official buildings and access official information. The rules allowed cancellation for broadly worded reasons, including \"diminishing the dignity of the media profession\" or acting against national security. On April 1, 2021, Turkiye's Council of State, the country's highest administrative court, suspended the 2018 regulation, finding its grounds for denial and cancellation too broad. By the time of the ruling, staff at the newspaper Evrensel had waited more than two years for replacement cards, journalist Canan Coskun had lost eligibility after moving from print to a digital outlet, and no staff member at Mezopotamya News Agency held a card at all. A journalists' union chair said about 300 journalists were awaiting a decision on reapplications. The presidency said it would keep provisions aimed at journalists it accused of \"making propaganda\" for \"terrorism.\"",
+      "stated_justification": "The presidency said of the underlying 2018 rules that \"the clauses that prevent those who make propaganda for terrorism and violence from hiding behind the press card were strengthened.\"",
+      "effect_on_reporting": "Journalists at outlets including Evrensel and Mezopotamya News Agency were left without valid press cards for years, restricting their access to official buildings and information even after the court's ruling.",
+      "status": "The Council of State suspended the 2018 regulation in April 2021, but hundreds of journalists' reapplications remained pending.",
+      "what_we_dont_know": "The source reviewed does not report how many of the roughly 300 pending reapplications were ultimately approved.",
+      "outcome": "reversed",
+      "outcome_on": "2021-04-01",
+      "outcome_note": "Turkiye's Council of State suspended the challenged 2018 press card regulation, though the source reviewed reports hundreds of journalists still waiting for cards afterward.",
+      "stage": "pressure",
+      "ladder_note": "A national regulator controlled the credential every journalist needs to work and enter official buildings, denying or delaying cards for hundreds of reporters for years.",
+      "actors": [
+        "recep-tayyip-erdogan"
+      ],
+      "outlets": [
+        "evrensel",
+        "mezopotamya-news-agency"
+      ],
+      "journalists": [
+        "canan-coskun",
+        "fatih-polat",
+        "mehves-evin"
+      ],
+      "cases": [],
+      "sources": [
+        "l1_006"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Council of State ruling, April 1, 2021",
+          "statement": "Turkiye's Council of State suspended the 2018 press card regulations, finding their grounds for denial too broad.",
+          "source_id": "l1_006",
+          "evidence_quote": "On April 1, 2021, Turkey's Council of State suspended the 2018 press card regulations."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "about 300 journalists waiting",
+          "statement": "A journalists' union chair said about 300 journalists were awaiting a decision on their card reapplications.",
+          "source_id": "l1_006",
+          "evidence_quote": "Approximately 300 journalists await evaluation of reapplications, per union chair Gokhan Durmus."
+        },
+        {
+          "field": "stated_justification",
+          "value": "presidency defends the rules",
+          "statement": "The presidency said the rules were strengthened to stop people it accused of terrorism propaganda from holding a press card.",
+          "source_id": "l1_006",
+          "evidence_quote": "The clauses that prevent those who make propaganda for terrorism and violence from hiding behind the press card were strengthened."
+        }
+      ],
+      "actor_roles": {
+        "recep-tayyip-erdogan": "ordered"
+      }
+    },
+    {
+      "slug": "2005-zimbabwe-court-refuses-daily-news-accreditation",
+      "title": "Zimbabwe: the High Court refuses to accredit Daily News journalists under the media registration law",
+      "occurred_on": "2005-05-12",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Zimbabwe",
+      "country": "ZW",
+      "level": "national",
+      "type": "credential_control",
+      "continent": "Africa",
+      "tactic_primary": "credential_control",
+      "tactics": [
+        "credential_control"
+      ],
+      "leader_slug": "robert-mugabe",
+      "granularity": "granular",
+      "summary": "Zimbabwe's High Court ruled that Daily News journalists could not be accredited to work as reporters until their newspaper's publisher had itself been registered with the government's Media and Information Commission.",
+      "issue_of_the_day": "The Daily News, Zimbabwe's largest independent newspaper, had been closed since September 2003 after the Supreme Court found it unregistered under the Access to Information and Protection of Privacy Act (AIPPA), a 2002 law requiring every media outlet and journalist to register with the government.",
+      "what_happened": "On May 12, 2005, a judge on Zimbabwe's High Court ruled that journalists at the Daily News could not receive individual accreditation to practice as reporters until the newspaper's publisher, Associated Newspapers of Zimbabwe (ANZ), had first been granted registration by the government's Media and Information Commission (MIC), the body created under AIPPA to register media outlets and license journalists. The ruling came during ANZ's long-running effort to reopen the paper, which police had shut in September 2003. At a hearing five days earlier, the MIC had requested additional documents from ANZ, and the company's lawyer said the commission had demanded information beyond what the law required. The Committee to Protect Journalists' executive director at the time, Ann Cooper, said the accreditation process amounted to a means of providing cover for a government campaign against the independent press, rather than a genuine licensing procedure.",
+      "stated_justification": "Not stated in the sources reviewed; the Media and Information Commission did not issue a public statement explaining the additional documents it requested from the newspaper's publisher.",
+      "effect_on_reporting": "Daily News journalists remained unable to work as accredited reporters because the newspaper's publisher itself could not obtain registration, keeping Zimbabwe's largest independent paper off the newsstands.",
+      "status": "The accreditation refusal stood as of the ruling; the Daily News did not reopen for several more years.",
+      "what_we_dont_know": "The source reviewed does not explain what additional documents the Media and Information Commission required or why the registration was withheld.",
+      "outcome": "upheld",
+      "outcome_on": "2005-05-12",
+      "outcome_note": "The High Court upheld the requirement that the publisher be registered before its journalists could be accredited; the paper was not relicensed until 2010.",
+      "stage": "punish",
+      "ladder_note": "Journalists at a named newspaper were denied the individual credential needed to work at all, conditioned on a separate corporate registration the government withheld for years.",
+      "actors": [
+        "robert-mugabe"
+      ],
+      "outlets": [
+        "daily-news-zimbabwe"
+      ],
+      "journalists": [],
+      "cases": [],
+      "sources": [
+        "l1_007",
+        "l1_014"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "ruling, May 12, 2005",
+          "statement": "The judge ruled that Daily News journalists could not be accredited until the paper's publisher itself was registered by the Media and Information Commission.",
+          "source_id": "l1_007",
+          "evidence_quote": "until the newspaper had been granted registration by the government's Media and Information Commission (MIC)"
+        },
+        {
+          "field": "issue_of_the_day",
+          "value": "AIPPA registration requirement",
+          "statement": "The Access to Information and Protection of Privacy Act requires all journalists and media outlets to register with the Media and Information Commission.",
+          "source_id": "l1_007",
+          "evidence_quote": "requires all journalists and media outlets to register with the MIC"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "commission demanded extra information",
+          "statement": "The publisher's lawyer said the commission demanded information beyond what the law required of it.",
+          "source_id": "l1_007",
+          "evidence_quote": "the commission had demanded information beyond the legal requirements"
+        },
+        {
+          "field": "stated_justification",
+          "value": "CPJ's assessment of the process",
+          "statement": "CPJ's then executive director said the accreditation process served to cover a government campaign against the independent press.",
+          "source_id": "l1_007",
+          "evidence_quote": "a farce designed to provide cover for the government's campaign to crush the independent media"
+        }
+      ],
+      "actor_roles": {
+        "robert-mugabe": "other"
+      }
+    },
+    {
+      "slug": "2024-kazakhstan-restrictive-media-accreditation-rules",
+      "title": "Kazakhstan: new accreditation rules let officials withdraw a journalist's pass for off-topic questions",
+      "occurred_on": "2024-08-20",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Kazakhstan",
+      "country": "KZ",
+      "level": "national",
+      "type": "credential_control",
+      "continent": "Asia",
+      "tactic_primary": "credential_control",
+      "tactics": [
+        "credential_control"
+      ],
+      "leader_slug": "kassym-jomart-tokayev",
+      "granularity": "granular",
+      "summary": "Kazakhstan's government adopted rules allowing journalists' accreditation to be withdrawn for six months over conduct at a news event, including asking off-topic questions, while proposing separate rules letting the foreign ministry deny foreign media accreditation over any violation of Kazakh law.",
+      "issue_of_the_day": "The rules followed a period of monthslong accreditation denials against journalists with Radio Free Europe/Radio Liberty's Kazakh service, Radio Azattyq, and escalating administrative charges against them for allegedly spreading false information.",
+      "what_happened": "New domestic media rules took effect in Kazakhstan on August 20, 2024, allowing a journalist's accreditation to be withdrawn for six months if they twice failed to comply with rules at news events, a category that could include asking questions considered off-topic. A day earlier, the foreign ministry had posted proposed rules that would let it deny or revoke accreditation for foreign correspondents over any violation of Kazakh law, including minor administrative offenses. The rules followed a period in which domestic journalists and correspondents for Radio Free Europe/Radio Liberty's Kazakh service, Radio Azattyq, faced monthslong denials of accreditation alongside a rising number of administrative charges accusing them of spreading false information. The Committee to Protect Journalists said it emailed Kazakhstan's Ministry of Culture and Information and Ministry of Foreign Affairs for comment but received no reply from either.",
+      "stated_justification": "Not stated in the sources reviewed; Kazakhstan's Ministry of Culture and Information and Ministry of Foreign Affairs did not respond to requests for comment on the new rules.",
+      "effect_on_reporting": "Journalists with Radio Azattyq and other domestic reporters faced accreditation denials lasting months even before the new rules, restricting their access to official events and information.",
+      "status": "The domestic rules took effect August 20, 2024, and the foreign media rules remained proposed as of the source's publication.",
+      "what_we_dont_know": "The source reviewed does not report how many journalists lost accreditation for six months under the new domestic rule once it took effect.",
+      "outcome": "ongoing",
+      "outcome_on": "2024-09-03",
+      "outcome_note": "The domestic accreditation rule had taken effect and the foreign media rule remained proposed, with officials not responding to requests for comment.",
+      "stage": "punish",
+      "ladder_note": "A government rule lets officials withdraw a journalist's accreditation for the content of the questions asked, not only for building or event access.",
+      "actors": [
+        "kassym-jomart-tokayev"
+      ],
+      "outlets": [
+        "radio-azattyq"
+      ],
+      "journalists": [],
+      "cases": [],
+      "sources": [
+        "l1_008"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "six-month withdrawal rule, effective August 20, 2024",
+          "statement": "The new domestic rule allows accreditation to be withdrawn for six months over repeated non-compliance at news events, including off-topic questions.",
+          "source_id": "l1_008",
+          "evidence_quote": "journalists' accreditation to be withdrawn for six months if they twice fail to comply with rules at news events, which could potentially include asking off-topic questions"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Radio Azattyq journalists affected",
+          "statement": "Radio Free Europe/Radio Liberty's Kazakh service and domestic journalists faced monthslong accreditation denials and escalating false-information charges.",
+          "source_id": "l1_008",
+          "evidence_quote": "Radio Free Europe/Radio Liberty's Kazakh service (Radio Azattyq) and domestic journalists faced monthslong accreditation denials and escalating administrative \"false information\" charges."
+        },
+        {
+          "field": "stated_justification",
+          "value": "no government response",
+          "statement": "CPJ's requests for comment to two Kazakh ministries went unanswered.",
+          "source_id": "l1_008",
+          "evidence_quote": "CPJ's emails to the Ministry of Culture and Information and the Ministry of Foreign Affairs for comment did not receive any replies."
+        }
+      ],
+      "actor_roles": {
+        "kassym-jomart-tokayev": "other"
+      }
+    },
+    {
+      "slug": "2020-china-press-card-visa-restrictions-us-outlets",
+      "title": "China: press credentials and visas withheld from correspondents at three American newspapers",
+      "occurred_on": "2020-03-18",
+      "occurred_on_precision": "day",
+      "jurisdiction": "China",
+      "country": "CN",
+      "level": "national",
+      "type": "credential_control",
+      "continent": "Asia",
+      "tactic_primary": "credential_control",
+      "tactics": [
+        "credential_control"
+      ],
+      "leader_slug": "xi-jinping",
+      "granularity": "granular",
+      "summary": "A survey by the Foreign Correspondents' Club of China found the government refused new press credentials to journalists tied to American outlets and cancelled or refused visas for correspondents at the New York Times, Wall Street Journal and Washington Post through 2020.",
+      "issue_of_the_day": "The findings covered a year in which China expelled dozens of foreign journalists amid tit-for-tat measures with the United States and additional restrictions tied to the coronavirus outbreak.",
+      "what_happened": "In a report issued in March 2021 covering the preceding year, the Foreign Correspondents' Club of China (FCCC), a professional association of foreign reporters based in the country, surveyed 150 of its members from 30 countries and regions and found that media freedom for foreign correspondents had deteriorated significantly in 2020. Among the specific findings, the report said Chinese authorities had refused to issue press credentials to journalists accredited with United States news outlets, had cancelled and refused to issue new visas for correspondents at the New York Times, Wall Street Journal and Washington Post, and had expelled at least 18 foreign journalists in the first half of the year alone. The credential and visa restrictions extended the effect of earlier expulsion orders, since a journalist without a valid press card or visa cannot legally remain in the country to report, regardless of whether they were personally named in an expulsion order.",
+      "stated_justification": "Not stated in the sources reviewed; no Chinese government justification for the specific credential and visa denials is quoted in the source.",
+      "effect_on_reporting": "Correspondents at three major American newspapers lost the credentials and visas needed to report from China even where they had not been individually ordered to leave, compounding earlier expulsions.",
+      "status": "The restrictions were in force through the period covered by the March 2021 report; the source reviewed does not report a reversal.",
+      "what_we_dont_know": "The source reviewed does not say how many correspondents at the three newspapers were affected by name or whether any later regained credentials.",
+      "outcome": "sustained",
+      "outcome_on": "2021-03-03",
+      "outcome_note": "The credential and visa denials were in force for the year covered by the survey, with no reversal reported in the source reviewed.",
+      "stage": "punish",
+      "ladder_note": "Credentials and visas needed to work at all were denied to correspondents at three named outlets on a national scale, on top of earlier individual expulsion orders.",
+      "actors": [
+        "xi-jinping"
+      ],
+      "outlets": [
+        "new-york-times",
+        "wall-street-journal",
+        "washington-post"
+      ],
+      "journalists": [],
+      "cases": [],
+      "sources": [
+        "l1_009"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "credentials refused to US-outlet journalists",
+          "statement": "China refused to issue press credentials to journalists accredited with United States news outlets.",
+          "source_id": "l1_009",
+          "evidence_quote": "Refused to issue press credentials to journalists accredited with U.S. news outlets"
+        },
+        {
+          "field": "what_happened",
+          "value": "visas cancelled at three newspapers",
+          "statement": "China cancelled and refused new visas to foreign correspondents from the three named newspapers.",
+          "source_id": "l1_009",
+          "evidence_quote": "Cancelled and refused to issue new visas to foreign correspondents from The New York Times, The Wall Street Journal, and The Washington Post"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "18 journalists expelled in first half of 2020",
+          "statement": "The survey found at least 18 foreign journalists were expelled from China in the first half of 2020.",
+          "source_id": "l1_009",
+          "evidence_quote": "Expelled at least 18 foreign journalists in the first half of 2020"
+        }
+      ],
+      "actor_roles": {
+        "xi-jinping": "ordered"
+      }
+    },
+    {
+      "slug": "2022-russia-suspends-novaya-gazeta-license",
+      "title": "Russia: a Moscow court suspends Novaya Gazeta's print license",
+      "occurred_on": "2022-09-05",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Russia",
+      "country": "RU",
+      "level": "national",
+      "type": "outlet_licensing",
+      "continent": "Europe",
+      "tactic_primary": "outlet_licensing",
+      "tactics": [
+        "outlet_licensing"
+      ],
+      "leader_slug": "vladimir-putin",
+      "granularity": "granular",
+      "summary": "A Moscow court suspended the print license of Novaya Gazeta, whose editor Dmitry Muratov shared the 2021 Nobel Peace Prize, after the media regulator Roskomnadzor said the paper had not provided documents about a 2006 change of ownership.",
+      "issue_of_the_day": "The suspension came about six months into Russia's invasion of Ukraine, during which several independent Russian outlets closed or moved abroad rather than operate under new wartime speech laws.",
+      "what_happened": "On September 5, 2022, Moscow's Basmanny District Court suspended the print license of Novaya Gazeta, one of Russia's last major independent newspapers, at the request of Roskomnadzor, the state media regulator. Roskomnadzor alleged the paper had failed to provide documents relating to a change of ownership that had taken place in 2006, sixteen years earlier. Novaya Gazeta's editor, Dmitry Muratov, who had shared the 2021 Nobel Peace Prize for his work at the paper, called the suspension \"a political hit job, without the slightest legal basis.\" The newspaper itself said on social media that the authorities had effectively ended the publication and taken thirty years of its staff's work. The suspension followed Novaya Gazeta's earlier decision, days after Russia's February 2022 invasion of Ukraine, to pause its print and online publishing rather than operate under new laws criminalizing what the government called false information about the military.",
+      "stated_justification": "Roskomnadzor alleged the newspaper \"failed to provide documents relating to a change of ownership in 2006.\"",
+      "effect_on_reporting": "One of Russia's last major independent newspapers lost its print license entirely, ending decades of publication under a legal pretext its editor said had no basis.",
+      "status": "The print license remained suspended as of the ruling; the source reviewed does not report a reversal.",
+      "what_we_dont_know": "The source reviewed does not explain why a 2006 ownership matter was raised only in 2022 or what documents Roskomnadzor said were missing.",
+      "outcome": "sustained",
+      "outcome_on": "2022-09-05",
+      "outcome_note": "The Basmanny District Court's suspension of the print license stood as of the ruling, with no reversal reported in the source reviewed.",
+      "stage": "silence",
+      "ladder_note": "A national court ended a Nobel-recognized newspaper's print license outright over a sixteen-year-old paperwork dispute, not a temporary suspension or fine.",
+      "actors": [
+        "vladimir-putin",
+        "dmitry-muratov"
+      ],
+      "outlets": [
+        "novaya-gazeta"
+      ],
+      "journalists": [],
+      "cases": [],
+      "sources": [
+        "l1_010"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "suspension, September 5, 2022",
+          "statement": "Moscow's Basmanny District Court suspended Novaya Gazeta's print license at Roskomnadzor's request.",
+          "source_id": "l1_010",
+          "evidence_quote": "a Moscow court"
+        },
+        {
+          "field": "stated_justification",
+          "value": "2006 ownership documents cited",
+          "statement": "Roskomnadzor's stated grounds were the newspaper's alleged failure to provide documents on a 2006 ownership change.",
+          "source_id": "l1_010",
+          "evidence_quote": "failed to provide documents relating to a change of ownership in 2006"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "editor calls it a political act",
+          "statement": "Novaya Gazeta's editor, a Nobel Peace Prize laureate, said the suspension was a political act without legal basis.",
+          "source_id": "l1_010",
+          "evidence_quote": "a political hit job, without the slightest legal basis"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "newspaper's own statement",
+          "statement": "Novaya Gazeta said the ruling had ended the newspaper and erased thirty years of its staff's work.",
+          "source_id": "l1_010",
+          "evidence_quote": "Today they killed the newspaper. Stole 30 years of life from its staff."
+        }
+      ],
+      "actor_roles": {
+        "vladimir-putin": "other",
+        "dmitry-muratov": "other"
+      }
+    },
+    {
+      "slug": "2021-hong-kong-apple-daily-forced-closure",
+      "title": "China (Hong Kong): Apple Daily closes after its assets are frozen under the national security law",
+      "occurred_on": "2021-06-24",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Hong Kong, China",
+      "country": "HK",
+      "level": "national",
+      "type": "outlet_licensing",
+      "continent": "Asia",
+      "tactic_primary": "outlet_licensing",
+      "tactics": [
+        "outlet_licensing"
+      ],
+      "leader_slug": "carrie-lam",
+      "granularity": "granular",
+      "summary": "Apple Daily, Hong Kong's largest pro-democracy newspaper, printed its final edition after the government froze its parent company's assets and arrested its editors under the national security law imposed on the territory in 2020.",
+      "issue_of_the_day": "The closure followed Hong Kong's 2019 to 2020 pro-democracy protests and Beijing's imposition of a national security law on the territory in June 2020, which criminalized broadly defined acts of subversion and collusion with foreign forces.",
+      "what_happened": "Apple Daily, a Hong Kong newspaper founded by media owner Jimmy Lai and known for its pro-democracy coverage, printed its final edition in June 2021 after Hong Kong police froze the assets of its parent company, Next Digital, under the national security law and arrested several of its senior editors. Lai himself had already been detained and was, as of a December 2021 report, serving a separate 20-month prison term related to a conviction for his part in unauthorized demonstrations, while also awaiting trial on national security and fraud charges. On December 28, 2021, Hong Kong's Department of Justice filed further conspiracy charges accusing Lai and six former Apple Daily executives, including former chief executive Cheung Kim Hung and former editor-in-chief Ryan Law Wai-kwong, of printing seditious publications, a charge that could bring up to three years in prison on top of any national security sentence, which could reach life imprisonment.",
+      "stated_justification": "Not stated directly in the source reviewed; Hong Kong's security bureau, in a related statement about the sedition case, described Apple Daily's sister outlet Stand News as pursuing an editorial line it called intended to \"smear and vilify\" the authorities, a characterization the government applied to the wider media prosecutions of this period.",
+      "effect_on_reporting": "Hong Kong's largest pro-democracy newspaper stopped publishing entirely after twenty-six years, and several of its most senior editors faced prosecution that could carry sentences up to life imprisonment.",
+      "status": "Apple Daily remained closed and its former executives faced additional charges as of the report reviewed.",
+      "what_we_dont_know": "The source reviewed does not give the exact date of Next Digital's asset freeze or state the final outcome of the national security charges against Lai and the other executives.",
+      "outcome": "sustained",
+      "outcome_on": "2021-06-24",
+      "outcome_note": "Apple Daily did not resume publication and its former executives faced additional charges as of the December 2021 report reviewed.",
+      "stage": "silence",
+      "ladder_note": "A newspaper's assets were frozen and its senior editors charged with offenses carrying up to life imprisonment, ending publication entirely rather than a licensing dispute or fine.",
+      "actors": [
+        "carrie-lam"
+      ],
+      "outlets": [
+        "apple-daily"
+      ],
+      "journalists": [
+        "jimmy-lai",
+        "cheung-kim-hung",
+        "ryan-law-wai-kwong"
+      ],
+      "cases": [],
+      "sources": [
+        "l1_011"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "new charges, December 28, 2021",
+          "statement": "Hong Kong's Department of Justice filed conspiracy charges against Lai and six former Apple Daily executives for allegedly printing seditious publications.",
+          "source_id": "l1_011",
+          "evidence_quote": "On December 28, 2021, Hong Kong's Department of Justice filed conspiracy charges against Lai and six former media executives for allegedly printing seditious publications."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "Lai's detention",
+          "statement": "Jimmy Lai was, as of the report, serving a 20-month prison term for his alleged involvement in unauthorized demonstrations and awaiting trial on national security and fraud charges.",
+          "source_id": "l1_011",
+          "evidence_quote": "serving a 20-month prison term for charges related to his alleged involvement in illegal demonstrations"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "potential life sentence",
+          "statement": "Conviction on the existing national security charges could bring the defendants a sentence of life imprisonment.",
+          "source_id": "l1_011",
+          "evidence_quote": "could face life in prison"
+        }
+      ],
+      "actor_roles": {
+        "carrie-lam": "other"
+      }
+    },
+    {
+      "slug": "2007-venezuela-rctv-license-not-renewed",
+      "title": "Venezuela: the government declines to renew RCTV's broadcast concession",
+      "occurred_on": "2007-05-27",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Venezuela",
+      "country": "VE",
+      "level": "national",
+      "type": "outlet_licensing",
+      "continent": "South America",
+      "tactic_primary": "outlet_licensing",
+      "tactics": [
+        "outlet_licensing"
+      ],
+      "leader_slug": "hugo-chavez",
+      "granularity": "granular",
+      "summary": "Venezuela's government let Radio Caracas Television's twenty-year broadcast concession expire rather than renew it, replacing the country's most-watched channel with a new state broadcaster; a regional human rights court later found the decision violated free expression.",
+      "issue_of_the_day": "President Hugo Chavez's government accused RCTV of supporting the failed April 2002 coup attempt against him, an accusation the government cited alongside the concession's scheduled expiration.",
+      "what_happened": "Radio Caracas Television's twenty-year broadcast concession was due to expire at midnight on May 27, 2007, and Venezuela's government, led by President Hugo Chavez, chose not to renew it. A new state broadcaster, the Venezuelan Social Television Station, took over RCTV's former frequency. Government officials accused RCTV's employees of having supported the failed 2002 coup against Chavez, and separately accused the channel of violating Venezuelan law and broadcasting indecent content; the administration described the non-renewal as the natural result of the concession's expiration rather than a deliberate act against the channel. In September 2015, the Inter-American Court of Human Rights ruled that the non-renewal had in fact violated freedom of expression, finding it was \"a restriction on the exercise of freedom of expression designed to impede the communication and circulation of ideas and opinions\" and that the government's real purpose was to stop RCTV's critical coverage of Chavez's administration. The court said the decision had also harmed the public's right to access RCTV's editorial line.",
+      "stated_justification": "The government described the non-renewal as \"natural and inexorable,\" the automatic result of the concession's expiration, while separately accusing RCTV's staff of having backed the 2002 coup.",
+      "effect_on_reporting": "Venezuela's most-watched television channel went off the open airwaves entirely, replaced by a state broadcaster, ending its national terrestrial reach.",
+      "status": "RCTV did not return to open-signal broadcasting; it continued only through cable and international channels.",
+      "what_we_dont_know": "The source reviewed does not state whether Venezuela complied with the 2015 Inter-American Court ruling by taking any specific remedial action.",
+      "outcome": "sustained",
+      "outcome_on": "2015-09-08",
+      "outcome_note": "A regional human rights court found in 2015 that the 2007 non-renewal violated free expression, but the source reviewed does not report RCTV's return to open-signal broadcasting.",
+      "stage": "silence",
+      "ladder_note": "The country's most-watched television channel lost its national broadcast concession entirely, later found by an international court to have been aimed at ending its critical coverage.",
+      "actors": [
+        "hugo-chavez"
+      ],
+      "outlets": [
+        "rctv"
+      ],
+      "journalists": [],
+      "cases": [],
+      "sources": [
+        "l1_012",
+        "l1_013"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "concession expired, May 27, 2007",
+          "statement": "RCTV's broadcast concession was due to expire at 11:59 p.m. on May 27, 2007, and the government chose not to renew it.",
+          "source_id": "l1_013",
+          "evidence_quote": "The broadcast concession expires on May 27, 2007"
+        },
+        {
+          "field": "stated_justification",
+          "value": "government calls it automatic",
+          "statement": "The administration characterized the non-renewal as the natural and unavoidable result of the concession's expiration.",
+          "source_id": "l1_013",
+          "evidence_quote": "natural and inexorable"
+        },
+        {
+          "field": "outcome_note",
+          "value": "Inter-American Court ruling, 2015",
+          "statement": "The regional court found the non-renewal was designed to stop the circulation of RCTV's ideas and opinions.",
+          "source_id": "l1_012",
+          "evidence_quote": "a restriction on the exercise of freedom of expression designed to impede the communication and circulation of ideas and opinions"
+        },
+        {
+          "field": "outcome_note",
+          "value": "court finds real purpose",
+          "statement": "The court found the government's real aim was to stop RCTV's coverage critical of the Chavez administration.",
+          "source_id": "l1_012",
+          "evidence_quote": "to silence critics of the government"
+        }
+      ],
+      "actor_roles": {
+        "hugo-chavez": "ordered"
+      }
+    },
+    {
+      "slug": "2003-zimbabwe-daily-news-shut-down",
+      "title": "Zimbabwe: police close the Daily News under the media registration law",
+      "occurred_on": "2003-09-12",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Zimbabwe",
+      "country": "ZW",
+      "level": "national",
+      "type": "outlet_licensing",
+      "continent": "Africa",
+      "tactic_primary": "outlet_licensing",
+      "tactics": [
+        "outlet_licensing"
+      ],
+      "leader_slug": "robert-mugabe",
+      "granularity": "granular",
+      "summary": "Zimbabwe's Supreme Court ruled the Daily News, the country's largest independent newspaper, was operating unregistered under a 2002 media law, and police shut its offices the next day; the paper stayed closed for nearly seven years.",
+      "issue_of_the_day": "The closure came amid a wider campaign by President Robert Mugabe's government against independent media following the contested 2002 presidential election.",
+      "what_happened": "On September 11, 2003, Zimbabwe's Supreme Court declared that the Daily News was violating the Access to Information and Protection of Privacy Act (AIPPA), a 2002 law requiring every media company to register with the government's Media and Information Commission (MIC). Because the paper's publisher had not registered, the court said it was operating outside the law and would consider constitutional arguments only after registration took place. The next day, police raided the newspaper's offices and ordered all journalists to leave the building, citing the Supreme Court's declaration. Administrative courts twice later ordered the Media and Information Commission to register the Daily News, but police closed the offices again each time journalists tried to resume work. Government officials said they were not interfering in the judicial process, while describing the independent press as serving foreign interests. The paper did not print again until the Media Commission granted it a new license in May 2010, nearly seven years later.",
+      "stated_justification": "Government officials said the courts, not the government, were responsible for the closure, while describing the independent press as serving outside interests; the source reviewed does not quote a specific legal justification beyond the registration requirement.",
+      "effect_on_reporting": "Zimbabwe's largest independent newspaper was unable to publish for nearly seven years, and journalists were physically removed from its offices each time they attempted to resume work.",
+      "status": "The paper was closed from September 2003 until it received a new license in May 2010.",
+      "what_we_dont_know": "The source reviewed does not explain why the Media and Information Commission twice failed to comply with administrative court orders to register the paper.",
+      "outcome": "reversed",
+      "outcome_on": "2010-05-27",
+      "outcome_note": "Zimbabwe's Media Commission granted the Daily News a new publishing license on May 27, 2010, nearly seven years after the closure.",
+      "stage": "silence",
+      "ladder_note": "The country's largest independent newspaper was shut by police and kept off newsstands for nearly seven years, not a temporary suspension or fine.",
+      "actors": [
+        "robert-mugabe"
+      ],
+      "outlets": [
+        "daily-news-zimbabwe"
+      ],
+      "journalists": [],
+      "cases": [],
+      "sources": [
+        "l1_014",
+        "l1_015"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Supreme Court ruling, September 11, 2003",
+          "statement": "Zimbabwe's Supreme Court declared the Daily News was violating the media registration law.",
+          "source_id": "l1_014",
+          "evidence_quote": "On September 11, Zimbabwe's Supreme Court declared that the Daily News was violating provisions of the repressive Access to Information and Protection of Privacy Act (AIPPA)."
+        },
+        {
+          "field": "what_happened",
+          "value": "police raid, September 12, 2003",
+          "statement": "Police raided the newspaper's offices the day after the ruling and ordered journalists to leave the building.",
+          "source_id": "l1_014",
+          "evidence_quote": "police raided the newspaper's offices and ordered all journalists to leave the building, using the Supreme Court's declaration as a pretext"
+        },
+        {
+          "field": "outcome_note",
+          "value": "new licenses, May 27, 2010",
+          "statement": "Zimbabwe's Media Commission granted the Daily News and other independent papers new licenses in May 2010.",
+          "source_id": "l1_015",
+          "evidence_quote": "Zimbabwe's Media Commission granted publishing licenses on May 27, 2010, marking the first time in nearly seven years that independent dailies would be allowed to print domestically."
+        }
+      ],
+      "actor_roles": {
+        "robert-mugabe": "other"
+      }
+    },
+    {
+      "slug": "2021-hungary-klubradio-loses-broadcast-license",
+      "title": "Hungary: Klubradio loses its terrestrial broadcast license over its tender application",
+      "occurred_on": "2021-02-14",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Hungary",
+      "country": "HU",
+      "level": "national",
+      "type": "outlet_licensing",
+      "continent": "Europe",
+      "tactic_primary": "outlet_licensing",
+      "tactics": [
+        "outlet_licensing"
+      ],
+      "leader_slug": "viktor-orban",
+      "granularity": "granular",
+      "summary": "Hungary's Media Council ended Klubradio's decades-old terrestrial broadcast license, citing errors in its renewal application, after the station had built a following as one of the country's few remaining independent voices.",
+      "issue_of_the_day": "The decision affected one of the last Hungarian broadcasters to carry news and talk programming independent of the government of Prime Minister Viktor Orban.",
+      "what_happened": "Hungary's Media Council, the country's broadcast regulator known as the NMHH, denied Klubradio's license renewal in September 2020, and the station's terrestrial broadcasting ceased in February 2021 once its old license expired. The council said Klubradio's tender application contained incorrect, incomplete and contradictory submissions, pointing to specific issues such as an incompletely filled-out form and a program length recorded as 45 minutes rather than 50. The council also questioned the sustainability of a business model relying on listener donations. Klubradio's owner, Andras Arato, acknowledged one of the errors, saying the station had failed to complete a form correctly, but argued the underlying decision was aimed at the station's independent voice. Hungary's highest court, the Curia, upheld the Media Council's decision in September 2021. Klubradio has continued broadcasting online since losing its terrestrial signal.",
+      "stated_justification": "The Media Council said Klubradio's tender submission was \"incorrect, incomplete and contradictory,\" and that it was Klubradio's own application, not the council, that ended the station's terrestrial service.",
+      "effect_on_reporting": "One of Hungary's few remaining independent broadcasters lost its terrestrial frequency, keeping its programming from radio listeners who did not seek it out online.",
+      "status": "Hungary's Curia upheld the license denial in September 2021, and Klubradio has broadcast online only since losing its terrestrial signal.",
+      "what_we_dont_know": "The source reviewed does not report whether other broadcasters' tender applications with similar errors received the same treatment.",
+      "outcome": "upheld",
+      "outcome_on": "2021-09-01",
+      "outcome_note": "Hungary's Curia upheld the Media Council's denial of Klubradio's license renewal in September 2021.",
+      "stage": "silence",
+      "ladder_note": "A national broadcast regulator ended one of the country's last independent stations' terrestrial license over its paperwork, and the country's top court upheld the decision.",
+      "actors": [
+        "viktor-orban"
+      ],
+      "outlets": [
+        "klubradio"
+      ],
+      "journalists": [
+        "andras-arato"
+      ],
+      "cases": [],
+      "sources": [
+        "l1_016"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "terrestrial broadcast ends, February 2021",
+          "statement": "Klubradio's terrestrial broadcasting ceased in February 2021 after the Media Council denied its license renewal the previous September.",
+          "source_id": "l1_016",
+          "evidence_quote": "Terrestrial broadcasting ceased"
+        },
+        {
+          "field": "stated_justification",
+          "value": "Media Council's stated reason",
+          "statement": "The Media Council said Klubradio's tender application was incorrect, incomplete and contradictory.",
+          "source_id": "l1_016",
+          "evidence_quote": "It was not the Media Council...that 'deprived' listeners of Klubradio's radio media service...but Klubradio itself, which submitted an incorrect, incomplete and contradictory tender."
+        },
+        {
+          "field": "what_happened",
+          "value": "owner acknowledges an error",
+          "statement": "Klubradio's owner acknowledged the station had not completed a form correctly on its tender application.",
+          "source_id": "l1_016",
+          "evidence_quote": "One of our gravest mistakes in that application – according to the Media Council – was that we did not complete a form correctly."
+        },
+        {
+          "field": "outcome_note",
+          "value": "Curia upholds decision, September 2021",
+          "statement": "Hungary's highest court, the Curia, upheld the Media Council's decision in September 2021.",
+          "source_id": "l1_016",
+          "evidence_quote": "Hungary's highest court (the Curia) upholding the decision in September 2021"
+        }
+      ],
+      "actor_roles": {
+        "viktor-orban": "other"
+      }
+    },
+    {
+      "slug": "2023-cambodia-shutters-voice-of-democracy",
+      "title": "Cambodia: Prime Minister Hun Sen orders Voice of Democracy's license revoked over one article",
+      "occurred_on": "2023-02-13",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Cambodia",
+      "country": "KH",
+      "level": "national",
+      "type": "outlet_licensing",
+      "continent": "Asia",
+      "tactic_primary": "outlet_licensing",
+      "tactics": [
+        "outlet_licensing"
+      ],
+      "leader_slug": "hun-sen",
+      "granularity": "granular",
+      "summary": "Prime Minister Hun Sen personally ordered the license of independent outlet Voice of Democracy revoked over an article about an earthquake-aid agreement signed by his son, rejecting the outlet's published apology.",
+      "issue_of_the_day": "The article, published February 8, 2023, reported that Hun Sen's son and eventual successor, Hun Manet, had overstepped his authority by signing a $100,000 earthquake aid agreement for Turkiye.",
+      "what_happened": "On February 12, 2023, Prime Minister Hun Sen said Voice of Democracy had defamed him and his son Hun Manet in a February 8 article alleging Hun Manet exceeded his authority by signing a $100,000 earthquake aid agreement with Turkiye. Hun Sen initially demanded the outlet verify its facts and apologize within 72 hours. When Voice of Democracy published a further apology on the morning of February 13, Hun Sen said on social media that he was standing by his order to revoke its license, and the Ministry of Information revoked it that day. Voice of Democracy's associate editor, Ananth Baliga, said the closure of independent media would leave corruption unchecked and let those in power act without restraint. The outlet had operated for more than a decade as one of Cambodia's few independent Khmer- and English-language news sources.",
+      "stated_justification": "Hun Sen said Voice of Democracy \"intentionally slandered him and his son Hun Manet\" in the February 8 article about the earthquake aid agreement.",
+      "effect_on_reporting": "One of Cambodia's few remaining independent news outlets lost its operating license entirely over a single article, ending more than a decade of publication.",
+      "status": "The license revocation took effect February 13, 2023; the source reviewed does not report a reversal.",
+      "what_we_dont_know": "The source reviewed does not state whether Voice of Democracy pursued a legal challenge to the revocation.",
+      "outcome": "sustained",
+      "outcome_on": "2023-02-13",
+      "outcome_note": "The Ministry of Information revoked the license as Hun Sen ordered, with no reversal reported in the source reviewed.",
+      "stage": "silence",
+      "ladder_note": "The head of government personally ordered a national outlet's operating license revoked over one article, rejecting a published apology, rather than pursuing a defamation suit.",
+      "actors": [
+        "hun-sen"
+      ],
+      "outlets": [
+        "voice-of-democracy"
+      ],
+      "journalists": [
+        "ananth-baliga"
+      ],
+      "cases": [],
+      "sources": [
+        "l1_017"
+      ],
+      "claims": [
+        {
+          "field": "stated_justification",
+          "value": "Hun Sen's stated reason",
+          "statement": "Hun Sen said the outlet had slandered him and his son over the earthquake aid article.",
+          "source_id": "l1_017",
+          "evidence_quote": "intentionally slandered him and his son Hun Manet"
+        },
+        {
+          "field": "what_happened",
+          "value": "license revoked, February 13, 2023",
+          "statement": "The license was announced revoked the Sunday after the article ran and took effect Monday morning despite a second apology.",
+          "source_id": "l1_017",
+          "evidence_quote": "Hun Sen 'replied on Facebook saying he was standing by his closure order.'"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "editor warns of unchecked corruption",
+          "statement": "Voice of Democracy's associate editor said the absence of independent media would let corruption go unchecked.",
+          "source_id": "l1_017",
+          "evidence_quote": "The absence of independent media will only allow corruption to go unchecked and those in positions of power to run amok."
+        }
+      ],
+      "actor_roles": {
+        "hun-sen": "ordered"
+      }
+    },
+    {
+      "slug": "2010-israel-prisoner-x-gag-order",
+      "title": "Israel: a court bars any mention of the 'Prisoner X' case",
+      "occurred_on": "2010-06-01",
+      "occurred_on_precision": "month",
+      "jurisdiction": "Israel",
+      "country": "IL",
+      "level": "national",
+      "type": "prior_restraint",
+      "continent": "Asia",
+      "tactic_primary": "prior_restraint",
+      "tactics": [
+        "prior_restraint"
+      ],
+      "leader_slug": "benjamin-netanyahu",
+      "granularity": "granular",
+      "summary": "An Israeli judge ordered Israeli media barred from any mention of a prisoner held under a false identity, or of the order itself, applying a system under which security-related stories must be reviewed and cleared by the military before publication.",
+      "issue_of_the_day": "The order concerned the custody of a man later identified as Ben Zygier, an Australian-Israeli detained on suspicion of harming state security, whose case Israeli outlets could not report on for years under the order.",
+      "what_happened": "In June 2010, Israeli district court judge Hila Gerstl issued a court order banning any mention of a prisoner who came to be known publicly only as \"Prisoner X,\" or of the circumstances of his custody, and separately prohibited any mention that the order itself existed. The order operated alongside Israel's long-standing military review system, under which all news publications dealing with security issues must be approved in advance by a military reviewing authority before publication, a standard Israel's High Court has said requires proof that publication would cause imminent, certain and actual harm to state security. Israeli authorities separately maintained an informal Editors' Committee, through which the prime minister's office asked media heads not to publish information described as very embarrassing to a government agency in exchange for advance notice of such information; Haaretz editor-in-chief Aluf Benn declined to take part, saying the arrangement would turn editors into intelligence assets rather than independent journalists.",
+      "stated_justification": "Not stated in the sources reviewed as a specific published order; Israel's general standard for pre-publication military review, as set by the High Court, requires proof that publication would cause \"imminent, certain, and actual harm to state security.\"",
+      "effect_on_reporting": "Israeli media were barred from reporting on the prisoner's case at all for years, and could not even acknowledge that a court order existed, while Israel's wider military review system required advance approval for any security-related story.",
+      "status": "The order remained in force inside Israel for years; the case became publicly known only through international reporting.",
+      "what_we_dont_know": "The source reviewed does not state when or how the domestic order was eventually narrowed or lifted.",
+      "outcome": "unknown",
+      "outcome_on": "2010-06-01",
+      "outcome_note": "The source reviewed, a 2013 annual survey, documents the order's existence and Israel's wider military review system without stating when the domestic order was resolved.",
+      "stage": "silence",
+      "ladder_note": "A court order barred any domestic mention of a named prisoner's case or of the order itself, backed by a standing system requiring advance approval of security reporting.",
+      "actors": [
+        "benjamin-netanyahu",
+        "hila-gerstl"
+      ],
+      "outlets": [
+        "haaretz"
+      ],
+      "journalists": [
+        "aluf-benn"
+      ],
+      "cases": [],
+      "sources": [
+        "l1_019"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "order issued, June 2010",
+          "statement": "The judge's order banned any mention of the prisoner or the circumstances of his custody, and of the order itself.",
+          "source_id": "l1_019",
+          "evidence_quote": "banning \"any mention of Prisoner X or the circumstances of his custody\", and even prohibited mention of the order itself"
+        },
+        {
+          "field": "stated_justification",
+          "value": "military censorship standard",
+          "statement": "Israel's High Court requires proof that publication would cause imminent, certain and actual harm to state security before security-related material can be censored.",
+          "source_id": "l1_019",
+          "evidence_quote": "imminent, certain, and actual harm to state security"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "editor declines Editors' Committee",
+          "statement": "Haaretz's editor-in-chief declined to join the informal Editors' Committee, saying it would make editors into intelligence assets.",
+          "source_id": "l1_019",
+          "evidence_quote": "turn editors into intelligence 'assets'"
+        }
+      ],
+      "actor_roles": {
+        "benjamin-netanyahu": "other",
+        "hila-gerstl": "ordered"
+      }
+    },
+    {
+      "slug": "2023-turkiye-rtuk-fines-earthquake-coverage",
+      "title": "Turkiye: the broadcast regulator fines and suspends channels for earthquake coverage",
+      "occurred_on": "2023-02-22",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Turkiye",
+      "country": "TR",
+      "level": "national",
+      "type": "prior_restraint",
+      "continent": "Asia",
+      "tactic_primary": "prior_restraint",
+      "tactics": [
+        "prior_restraint"
+      ],
+      "leader_slug": "recep-tayyip-erdogan",
+      "granularity": "granular",
+      "summary": "Turkiye's broadcast regulator, RTUK, fined three television channels and suspended the next five episodes of two of their programs after they aired criticism of the government's response to the February 2023 earthquakes.",
+      "issue_of_the_day": "Earthquakes in southern Turkiye in early February 2023 killed more than 50,000 people and drew widespread criticism of the government's building codes and disaster response.",
+      "what_happened": "On February 22, 2023, Turkiye's Radio and Television Supreme Council (RTUK), the state broadcast regulator, fined three television channels, Halk TV and TELE1 at five percent of their January revenue each and FOX TV Turkiye at three percent, over broadcasts criticizing the government's response to earthquakes that had struck the country weeks earlier and killed tens of thousands of people. RTUK also suspended the next five episodes of the specific Halk TV and TELE1 programs that had aired the criticism, barring those programs from airing at all for that period regardless of content. The Committee to Protect Journalists said it emailed RTUK for comment but received no response, and called for the fines and suspensions to be revoked, saying critical journalism during a period of mourning could be harsh but could also help bring about accountability.",
+      "stated_justification": "Not stated in the sources reviewed; RTUK did not respond to a request for comment on its reasoning for the fines and suspensions.",
+      "effect_on_reporting": "Three broadcasters were fined over their earthquake coverage and two had specific programs barred from airing for five future episodes regardless of content, a forward-looking restriction on what they could broadcast next.",
+      "status": "The fines and program suspensions were imposed and, as of the source reviewed, had not been revoked.",
+      "what_we_dont_know": "The source reviewed does not report whether the fines were paid or challenged in court.",
+      "outcome": "sustained",
+      "outcome_on": "2023-02-22",
+      "outcome_note": "CPJ called for the penalties to be revoked; the source reviewed does not report that RTUK did so.",
+      "stage": "pressure",
+      "ladder_note": "A national regulator barred two programs from airing at all for five future episodes over their earthquake coverage, a forward restriction rather than a single broadcast ban.",
+      "actors": [
+        "recep-tayyip-erdogan"
+      ],
+      "outlets": [
+        "halk-tv",
+        "tele1",
+        "fox-tv-turkey"
+      ],
+      "journalists": [],
+      "cases": [],
+      "sources": [
+        "l1_018"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "fines, February 22, 2023",
+          "statement": "RTUK fined Halk TV and TELE1 five percent of January revenue each and FOX TV Turkiye three percent over earthquake coverage.",
+          "source_id": "l1_018",
+          "evidence_quote": "Halk TV: 5% of January revenue"
+        },
+        {
+          "field": "what_happened",
+          "value": "five-episode suspension",
+          "statement": "RTUK suspended the next five episodes of the Halk TV and TELE1 programs that had aired the criticized coverage.",
+          "source_id": "l1_018",
+          "evidence_quote": "The RTÜK also suspended the next five episodes of Halk TV and TELE1 programs that aired the criticism."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "CPJ calls for reversal",
+          "statement": "CPJ said critical journalism during a period of mourning could still help bring about accountability, and called for the penalties to be revoked.",
+          "source_id": "l1_018",
+          "evidence_quote": "Critical journalism during a time of mourning for the tens of thousands of lives lost to the earthquakes may appear harsh, but it can also pave the way to justice"
+        }
+      ],
+      "actor_roles": {
+        "recep-tayyip-erdogan": "other"
+      }
+    },
+    {
+      "slug": "2018-egypt-scmr-license-requirement-al-manassa",
+      "title": "Egypt: a license requirement leaves an independent news site unable to operate legally for years",
+      "occurred_on": "2018-10-01",
+      "occurred_on_precision": "month",
+      "jurisdiction": "Egypt",
+      "country": "EG",
+      "level": "national",
+      "type": "prior_restraint",
+      "continent": "Africa",
+      "tactic_primary": "prior_restraint",
+      "tactics": [
+        "prior_restraint"
+      ],
+      "leader_slug": "abdel-fattah-el-sisi",
+      "granularity": "granular",
+      "summary": "Egypt's Supreme Council for Media Regulation required news websites to obtain a government license to operate, and independent outlet Al-Manassa's application, filed in 2018, went unanswered for more than two years.",
+      "issue_of_the_day": "The licensing requirement operated alongside a 2018 cybercrime law that made it a crime to use certain software tools without the council's permission, according to Al-Manassa's editor.",
+      "what_happened": "Egypt's Supreme Council for Media Regulation (SCMR), founded in 2018 to oversee print, broadcast and online media, required news websites operating in the country to obtain a license from it before they could publish legally. Al-Manassa, an independent Egyptian news site founded in 2016, submitted its license application in October 2018 when the council called for websites to register, but had received no response as of an October 2020 interview with its editor, Nora Younis, meaning the outlet had operated for two years under an unresolved licensing requirement with no legal certainty about its status. Younis also said Egypt's cybercrime law separately made it a criminal offense to use certain open-source software tools without the council's permission if doing so could be characterized as committing a crime, a provision she said gave authorities broad discretion over online publishers' technical operations as well as their editorial content.",
+      "stated_justification": "Not stated in the sources reviewed; the Supreme Council for Media Regulation did not respond to Al-Manassa's 2018 license application or explain the delay.",
+      "effect_on_reporting": "An independent news site operated for more than two years without a resolved license, unable to obtain the legal certainty the licensing system was meant to provide, under a regulator that could also treat unlicensed software use as a crime.",
+      "status": "As of the October 2020 interview, Al-Manassa's 2018 application remained unanswered.",
+      "what_we_dont_know": "The source reviewed does not state whether the Supreme Council for Media Regulation ever responded to Al-Manassa's application.",
+      "outcome": "ongoing",
+      "outcome_on": "2020-10-26",
+      "outcome_note": "Al-Manassa's editor said the outlet's 2018 license application had received no response as of the October 2020 interview.",
+      "stage": "pressure",
+      "ladder_note": "A national council required a license before a news site could operate at all and left the application unanswered for years rather than approving, denying or fining it.",
+      "actors": [
+        "abdel-fattah-el-sisi"
+      ],
+      "outlets": [
+        "al-manassa"
+      ],
+      "journalists": [
+        "nora-younis"
+      ],
+      "cases": [],
+      "sources": [
+        "l1_020"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "license requirement",
+          "statement": "Egyptian law requires news websites to obtain a license from the Supreme Council for Media Regulation, founded in 2018.",
+          "source_id": "l1_020",
+          "evidence_quote": "Media websites in Egypt are required under this law to obtain a license from the SCMR, which was founded in 2018, while Al-Manassa was founded in 2016."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "application unanswered since 2018",
+          "statement": "Al-Manassa's October 2018 license application had received no response as of the October 2020 interview.",
+          "source_id": "l1_020",
+          "evidence_quote": "Al-Manassa submitted its timely application in October 2018, and have never received a response to this day."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "cybercrime law on software use",
+          "statement": "Egypt's cybercrime law makes it illegal to use certain open-source software without the council's permission if it could be characterized as committing a crime.",
+          "source_id": "l1_020",
+          "evidence_quote": "It is illegal under cybercrime law to use, without SCMR permission, open source software to commit 'a crime.'"
+        }
+      ],
+      "actor_roles": {
+        "abdel-fattah-el-sisi": "other"
+      }
+    },
+    {
+      "slug": "2022-russia-safronov-treason-sentence",
+      "title": "Russia: journalist Ivan Safronov is sentenced to 22 years for treason",
+      "occurred_on": "2022-09-05",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Russia",
+      "country": "RU",
+      "level": "national",
+      "type": "secrets_and_espionage_laws",
+      "continent": "Europe",
+      "tactic_primary": "secrets_and_espionage_laws",
+      "tactics": [
+        "secrets_and_espionage_laws"
+      ],
+      "leader_slug": "vladimir-putin",
+      "granularity": "granular",
+      "summary": "A Russian court sentenced military correspondent Ivan Safronov to 22 years in prison for treason, accusing him of spying for a foreign state, in a case his supporters linked to his 2019 reporting on Russian arms sales to Egypt.",
+      "issue_of_the_day": "Safronov had reported for the newspapers Kommersant and Vedomosti on Russian military affairs, including 2019 coverage of a planned sale of fighter jets to Egypt, before taking a communications role at Russia's space agency.",
+      "what_happened": "On September 5, 2022, a Moscow court sentenced Ivan Safronov, a former military correspondent for the newspapers Kommersant and Vedomosti, to 22 years in prison for treason, along with a fine of 500,000 rubles and two years of restricted freedom after release, with eligibility for parole after 14 years. Authorities accused Safronov of spying for a foreign country, but reporting on the case indicated that the classified material he was accused of sharing was already publicly available, and press freedom groups said the prosecution was tied to his 2019 reporting on a planned Russian sale of fighter jets to Egypt, published while he still worked as a journalist. Safronov had been held since his arrest in July 2020 and, as of the sentencing, planned to appeal. The Committee to Protect Journalists' program director, Carlos Martinez de la Serna, said the sentence was unacceptable for a man guilty of no crime other than doing his job as a journalist.",
+      "stated_justification": "Not stated in the sources reviewed as a public account of the specific classified material at issue; authorities accused Safronov of spying for a foreign country under Russia's treason law.",
+      "effect_on_reporting": "A journalist who had reported on Russian military affairs received one of the longest sentences imposed on a Russian journalist in the post-Soviet period, in a case linked by press freedom groups to his earlier reporting rather than any later state role.",
+      "status": "Safronov was sentenced to 22 years and planned to appeal; the source reviewed does not report the outcome of any appeal.",
+      "what_we_dont_know": "The source reviewed does not identify the specific classified information authorities said Safronov shared or the foreign country he was accused of spying for.",
+      "outcome": "ongoing",
+      "outcome_on": "2022-09-05",
+      "outcome_note": "Safronov received a 22-year sentence and planned to appeal; the source reviewed does not report a ruling on any appeal.",
+      "stage": "eliminate",
+      "ladder_note": "A journalist received a 22-year sentence for treason in a case linked to his own earlier reporting, far longer than any credential, licensing or fine-based restriction.",
+      "actors": [
+        "vladimir-putin"
+      ],
+      "outlets": [
+        "kommersant",
+        "vedomosti"
+      ],
+      "journalists": [
+        "ivan-safronov"
+      ],
+      "cases": [],
+      "sources": [
+        "l1_021"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "22-year sentence, September 5, 2022",
+          "statement": "The court sentenced Safronov to 22 years in prison plus a fine and restricted freedom after release.",
+          "source_id": "l1_021",
+          "evidence_quote": "The 22-year prison sentence for Ivan Safronov, guilty of no other crime than doing his job as a journalist, is simply unacceptable"
+        },
+        {
+          "field": "issue_of_the_day",
+          "value": "2019 reporting on jet sales to Egypt",
+          "statement": "Safronov worked as a military correspondent for Kommersant and Vedomosti before the charges.",
+          "source_id": "l1_021",
+          "evidence_quote": "Safronov worked as a military correspondent for Kommersant and Vedomosti newspapers."
+        },
+        {
+          "field": "what_we_dont_know",
+          "value": "detained since July 2020",
+          "statement": "Safronov had been detained since July 2020 and planned to appeal the sentence.",
+          "source_id": "l1_021",
+          "evidence_quote": "Safronov has been detained since July 2020 and plans to appeal."
+        }
+      ],
+      "actor_roles": {
+        "vladimir-putin": "other"
+      }
+    },
+    {
+      "slug": "2021-vietnam-pham-doan-trang-nine-year-sentence",
+      "title": "Vietnam: journalist Pham Doan Trang is sentenced to nine years for anti-state \"propaganda\"",
+      "occurred_on": "2021-12-14",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Vietnam",
+      "country": "VN",
+      "level": "national",
+      "type": "secrets_and_espionage_laws",
+      "continent": "Asia",
+      "tactic_primary": "secrets_and_espionage_laws",
+      "tactics": [
+        "secrets_and_espionage_laws"
+      ],
+      "leader_slug": "nguyen-xuan-phuc",
+      "granularity": "granular",
+      "summary": "A Vietnamese court sentenced Pham Doan Trang, founding editor of the independent outlet The Vietnamese, to nine years in prison for distributing anti-state \"propaganda\" under a national-security provision of the country's penal code.",
+      "issue_of_the_day": "Trang had spent years writing and publishing independent reporting and commentary critical of the ruling Communist Party before her arrest, work for which she had already received international press freedom recognition.",
+      "what_happened": "On December 14, 2021, a court in Vietnam sentenced Pham Doan Trang, founding editor of the independent publication The Vietnamese, to nine years in prison for distributing anti-state \"propaganda\" under Article 117 of Vietnam's penal code, a national-security provision the government has used repeatedly against independent writers and bloggers. The Committee to Protect Journalists had earlier honored Trang with its International Press Freedom Award. CPJ's senior Southeast Asia representative, Shawn Crispin, called for her release along with that of other journalists held in Vietnam, saying the country would be taken seriously as a global actor only once it stopped wrongfully imprisoning them. The nine-year term placed Trang among the longest-serving imprisoned journalists in Southeast Asia at the time of sentencing.",
+      "stated_justification": "Not stated in the sources reviewed as a specific account of the material Vietnamese authorities characterized as anti-state \"propaganda.\"",
+      "effect_on_reporting": "An award-winning independent editor received a nine-year sentence under a national-security law, removing one of Vietnam's most prominent independent journalistic voices from publication for a decade.",
+      "status": "Trang was sentenced to nine years in prison; the source reviewed does not report a subsequent release.",
+      "what_we_dont_know": "The source reviewed does not identify the specific articles or publications Vietnamese authorities cited as anti-state \"propaganda.\"",
+      "outcome": "sustained",
+      "outcome_on": "2021-12-14",
+      "outcome_note": "Trang's nine-year sentence stood as of the source reviewed, with no release reported in it.",
+      "stage": "eliminate",
+      "ladder_note": "An independent editor received a nine-year sentence under a national-security propaganda law for her journalism, not a licensing or credential dispute.",
+      "actors": [
+        "nguyen-xuan-phuc"
+      ],
+      "outlets": [
+        "the-vietnamese"
+      ],
+      "journalists": [
+        "pham-doan-trang"
+      ],
+      "cases": [],
+      "sources": [
+        "l1_022"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "nine-year sentence, December 14, 2021",
+          "statement": "The court sentenced Trang to nine years for distributing anti-state propaganda under Article 117.",
+          "source_id": "l1_022",
+          "evidence_quote": "9 years in prison"
+        },
+        {
+          "field": "issue_of_the_day",
+          "value": "founding editor of The Vietnamese",
+          "statement": "Trang was the founding editor of the independent publication The Vietnamese.",
+          "source_id": "l1_022",
+          "evidence_quote": "Founding editor of The Vietnamese, an independent publication"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "CPJ calls for release",
+          "statement": "CPJ's Southeast Asia representative said Vietnam would be taken seriously as a global actor only once it released wrongfully held journalists.",
+          "source_id": "l1_022",
+          "evidence_quote": "The sooner Vietnam releases all of the journalists it wrongfully holds behind bars, the sooner it will be taken seriously as a responsible global actor"
+        }
+      ],
+      "actor_roles": {
+        "nguyen-xuan-phuc": "other"
+      }
+    },
+    {
+      "slug": "2024-iran-hamedi-mohammadi-sentenced",
+      "title": "Iran: journalists Niloofar Hamedi and Elahe Mohammadi are sentenced to 13 and 12 years",
+      "occurred_on": "2024-01-17",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Iran",
+      "country": "IR",
+      "level": "national",
+      "type": "secrets_and_espionage_laws",
+      "continent": "Asia",
+      "tactic_primary": "secrets_and_espionage_laws",
+      "tactics": [
+        "secrets_and_espionage_laws"
+      ],
+      "leader_slug": "ebrahim-raisi",
+      "granularity": "granular",
+      "summary": "Iranian journalists Niloofar Hamedi and Elahe Mohammadi, who broke the story of Mahsa Amini's death in police custody, were sentenced to 13 and 12 years respectively on national-security-linked charges tied to their reporting, and later released on heavy bail.",
+      "issue_of_the_day": "Hamedi and Mohammadi had reported on the September 2022 death of Mahsa Amini, a 22-year-old woman who died after being held by Iran's morality police for allegedly violating the country's mandatory dress code, reporting that helped ignite months of nationwide protests.",
+      "what_happened": "Niloofar Hamedi and Elahe Mohammadi, two Iranian journalists, were sentenced to 13 and 12 years in prison respectively on charges linked to their reporting on the September 2022 hospitalization and death of Mahsa Amini, a 22-year-old woman held by Iran's morality police for allegedly violating the country's mandatory dress code. Hamedi's reporting for the newspaper Shargh and Mohammadi's for the newspaper Ham-Mihan had helped bring the case to national and international attention, contributing to protests that spread across Iran in the months that followed. After spending almost sixteen months in detention, the two journalists were granted bail of about 10 billion tomans, roughly 200,000 dollars, in January 2024, but were also barred from leaving the country. The Committee to Protect Journalists called for the release of all jailed Iranian journalists following the bail decision.",
+      "stated_justification": "Not stated in the sources reviewed as specific named charges; the source describes their sentences as \"linked to their reporting\" on Amini's death and the protests that followed.",
+      "effect_on_reporting": "Two journalists whose reporting had helped expose a death in police custody spent nearly sixteen months in detention and received sentences of 12 and 13 years before being released on heavy bail with a travel ban.",
+      "status": "Hamedi and Mohammadi were released on bail in January 2024 after almost sixteen months in detention, but remained barred from leaving Iran.",
+      "what_we_dont_know": "The source reviewed does not name the specific criminal charges under which the two journalists were sentenced.",
+      "outcome": "ongoing",
+      "outcome_on": "2024-01-17",
+      "outcome_note": "The two journalists were released on bail of about 200,000 dollars in January 2024 but remained banned from leaving the country.",
+      "stage": "eliminate",
+      "ladder_note": "Two journalists received sentences of 12 and 13 years for reporting a death in state custody, far beyond a license, credential or access restriction.",
+      "actors": [
+        "ebrahim-raisi"
+      ],
+      "outlets": [
+        "shargh",
+        "ham-mihan"
+      ],
+      "journalists": [
+        "niloofar-hamedi",
+        "elahe-mohammadi"
+      ],
+      "cases": [],
+      "sources": [
+        "l1_023"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "sentences of 13 and 12 years",
+          "statement": "Hamedi and Mohammadi were sentenced to 13 and 12 years respectively on charges linked to their reporting on Amini's death.",
+          "source_id": "l1_023",
+          "evidence_quote": "sentenced to serve 13- and 12-years respectively on charges linked to their reporting"
+        },
+        {
+          "field": "issue_of_the_day",
+          "value": "Mahsa Amini's death",
+          "statement": "The journalists had reported on the 2022 hospitalization and death of Mahsa Amini, held in morality police custody over the dress code.",
+          "source_id": "l1_023",
+          "evidence_quote": "the 2022 hospitalization and subsequent death of a 22-year-old woman, Mahsa Amini, who was in morality police custody for allegedly violating Iran's conservative dress law"
+        },
+        {
+          "field": "outcome_note",
+          "value": "bail granted, January 2024",
+          "statement": "The two journalists were granted bail of about 10 billion tomans after almost sixteen months in detention, and barred from leaving the country.",
+          "source_id": "l1_023",
+          "evidence_quote": "had to pay bail of 10 billion tomans"
+        }
+      ],
+      "actor_roles": {
+        "ebrahim-raisi": "other"
+      }
+    },
+    {
+      "slug": "2024-china-dong-yuyu-espionage-sentence",
+      "title": "China: editor Dong Yuyu is sentenced to seven years for espionage over meals with a diplomat",
+      "occurred_on": "2024-11-01",
+      "occurred_on_precision": "month",
+      "jurisdiction": "China",
+      "country": "CN",
+      "level": "national",
+      "type": "secrets_and_espionage_laws",
+      "continent": "Asia",
+      "tactic_primary": "secrets_and_espionage_laws",
+      "tactics": [
+        "secrets_and_espionage_laws"
+      ],
+      "leader_slug": "xi-jinping",
+      "granularity": "granular",
+      "summary": "A Chinese court sentenced Guangming Daily editor and columnist Dong Yuyu to seven years in prison for espionage after his 2022 arrest while having lunch with a Japanese diplomat, a case his son called purely political.",
+      "issue_of_the_day": "Dong had worked at Guangming Daily, a state-run Chinese newspaper, since 1987 and was known for commentary that engaged with foreign diplomats and officials as part of his beat.",
+      "what_happened": "Dong Yuyu, an editor and columnist at the state-run newspaper Guangming Daily since 1987, was arrested in February 2022 while having lunch with a Japanese diplomat in Beijing. Chinese authorities alleged his interactions with foreign officials and diplomats amounted to espionage, and in November 2024 a court sentenced him to seven years in prison. As of a September 2025 report, Dong had spent more than three and a half years in detention, and his appeal remained pending before the Beijing High Court with repeated extensions of its deadline. His son, Dong Yifu, described the case as purely political and said releasing his father would do more good for China internationally than keeping him imprisoned.",
+      "stated_justification": "Not stated in the sources reviewed as a specific public account of the espionage allegation beyond Dong's meetings with foreign diplomats and officials.",
+      "effect_on_reporting": "A veteran editor at a state newspaper was imprisoned for years over ordinary contact with a foreign diplomat, a routine part of his beat, discouraging similar contact by other Chinese journalists with foreign officials.",
+      "status": "Dong's appeal remained pending before the Beijing High Court as of the September 2025 report, with the deadline repeatedly extended.",
+      "what_we_dont_know": "The source reviewed does not describe the specific information authorities alleged Dong shared with the Japanese diplomat.",
+      "outcome": "ongoing",
+      "outcome_on": "2024-11-01",
+      "outcome_note": "Dong's appeal remained pending before the Beijing High Court as of the September 2025 report reviewed, with its deadline repeatedly extended.",
+      "stage": "eliminate",
+      "ladder_note": "A veteran editor received a seven-year espionage sentence for meeting a foreign diplomat over lunch, a routine journalistic contact rather than any published disclosure.",
+      "actors": [
+        "xi-jinping"
+      ],
+      "outlets": [
+        "guangming-daily"
+      ],
+      "journalists": [
+        "dong-yuyu"
+      ],
+      "cases": [],
+      "sources": [
+        "l1_024"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "arrested at lunch, February 2022",
+          "statement": "Dong was arrested in February 2022 while having lunch with a Japanese diplomat in Beijing.",
+          "source_id": "l1_024",
+          "evidence_quote": "He was arrested in February 2022 while having lunch with a Japanese diplomat in Beijing."
+        },
+        {
+          "field": "what_happened",
+          "value": "seven-year sentence, November 2024",
+          "statement": "A court sentenced Dong to seven years in prison in November 2024.",
+          "source_id": "l1_024",
+          "evidence_quote": "Seven years imprisonment, handed down in November 2024."
+        },
+        {
+          "field": "stated_justification",
+          "value": "son calls case political",
+          "statement": "Dong's son said the case was purely political and that releasing his father would benefit China internationally.",
+          "source_id": "l1_024",
+          "evidence_quote": "purely political"
+        }
+      ],
+      "actor_roles": {
+        "xi-jinping": "other"
+      }
+    },
+    {
+      "slug": "2009-north-korea-ling-lee-sentenced",
+      "title": "North Korea: American journalists Laura Ling and Euna Lee are sentenced to hard labor",
+      "occurred_on": "2009-06-08",
+      "occurred_on_precision": "day",
+      "jurisdiction": "North Korea",
+      "country": "KP",
+      "level": "national",
+      "type": "secrets_and_espionage_laws",
+      "continent": "Asia",
+      "tactic_primary": "secrets_and_espionage_laws",
+      "tactics": [
+        "secrets_and_espionage_laws"
+      ],
+      "leader_slug": "kim-jong-il",
+      "granularity": "granular",
+      "summary": "A North Korean court sentenced Current TV journalists Laura Ling and Euna Lee to twenty years of \"reform through hard labor\" after their arrest for crossing the border from China without authorization, and both were released months later following a visit by former President Bill Clinton.",
+      "issue_of_the_day": "Ling and Lee had been reporting near the China-North Korea border for the American outlet Current TV when they were detained by North Korean border guards in March 2009.",
+      "what_happened": "Laura Ling and Euna Lee, journalists for the American outlet Current TV, were arrested on March 17, 2009, and charged with crossing the border from China into North Korea without authorization. A North Korean court sentenced them to twenty years of \"reform through hard labor.\" The two women were held separately from each other in a combination guesthouse and government-run hotel outside Pyongyang; both later said they had been psychologically distressed during their detention but were not physically abused. Their roughly five-month ordeal ended in June 2009 when former President Bill Clinton traveled to Pyongyang and met with North Korean leader Kim Jong Il, who granted the pardons that let Ling and Lee return to the United States.",
+      "stated_justification": "North Korean authorities charged Ling and Lee with crossing the border from China without authorization on March 17, the specific basis stated for their arrest and trial.",
+      "effect_on_reporting": "Two American journalists received a twenty-year hard-labor sentence for a border-crossing charge while reporting near North Korea's frontier, and their release required a former president's personal diplomatic visit rather than any legal appeal.",
+      "status": "Ling and Lee were pardoned and released in June 2009 after roughly five months in detention.",
+      "what_we_dont_know": "The source reviewed does not describe the specific reporting the two journalists were doing at the moment of their arrest.",
+      "outcome": "reversed",
+      "outcome_on": "2009-08-04",
+      "outcome_note": "North Korean leader Kim Jong Il pardoned Ling and Lee after former President Bill Clinton traveled to Pyongyang to secure their release.",
+      "stage": "eliminate",
+      "ladder_note": "Two foreign journalists received a twenty-year hard-labor sentence for a border charge, resolved only by a former head of state's personal visit to the country's leader.",
+      "actors": [
+        "kim-jong-il"
+      ],
+      "outlets": [
+        "current-tv"
+      ],
+      "journalists": [
+        "laura-ling",
+        "euna-lee"
+      ],
+      "cases": [],
+      "sources": [
+        "l1_025"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "charge stated",
+          "statement": "Ling and Lee were charged with illegally crossing the border from China on March 17, 2009.",
+          "source_id": "l1_025",
+          "evidence_quote": "Charged with illegally crossing the border from China on March 17"
+        },
+        {
+          "field": "what_happened",
+          "value": "twenty-year sentence",
+          "statement": "A North Korean court sentenced the two journalists to twenty years of reform through hard labor.",
+          "source_id": "l1_025",
+          "evidence_quote": "sentenced to 20 years of 'reform through hard labor'"
+        },
+        {
+          "field": "outcome_note",
+          "value": "Clinton secures release",
+          "statement": "Ling and Lee returned to the United States after Bill Clinton traveled to Pyongyang and Kim Jong Il granted the pardons.",
+          "source_id": "l1_025",
+          "evidence_quote": "returned to the United States after former President Bill Clinton traveled to Pyongyang to escort them home following behind-the-scenes negotiations"
+        }
+      ],
+      "actor_roles": {
+        "kim-jong-il": "ordered"
+      }
+    },
+    {
+      "slug": "2022-turkiye-sedef-kabas-insulting-president",
+      "title": "Turkiye: journalist Sedef Kabas is arrested for a proverb about President Erdogan",
+      "occurred_on": "2022-01-22",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Turkiye",
+      "country": "TR",
+      "level": "national",
+      "type": "insult_and_defamation_laws",
+      "continent": "Asia",
+      "tactic_primary": "insult_and_defamation_laws",
+      "tactics": [
+        "insult_and_defamation_laws"
+      ],
+      "leader_slug": "recep-tayyip-erdogan",
+      "granularity": "granular",
+      "summary": "Turkish journalist Sedef Kabas was arrested and later convicted under Article 299 of the penal code, which criminalizes insulting the president, after quoting a proverb about a palace becoming a stable during a televised discussion of Erdogan.",
+      "issue_of_the_day": "Kabas made the comment during a political talk show discussion of President Recep Tayyip Erdogan, after also questioning his university diploma and alleging corruption in earlier social media posts.",
+      "what_happened": "On January 22, 2022, Turkish police arrested journalist Sedef Kabas from her home after midnight, following comments she made during a televised political talk show in which she said, discussing President Recep Tayyip Erdogan, \"When cattle enters a palace, it does not become king but the palace becomes a stable.\" She was jailed as a flight risk despite her lawyers' objections to the arrest order. Kabas was prosecuted under Article 299 of Turkiye's penal code, which criminalizes insulting the president and carries a sentence of up to four years in prison, with enhanced penalties where the insult is made publicly. She was found guilty and sentenced to two years and four months in prison, and was released pending appeal on March 11, 2022, after 49 days in detention. In June 2023, she faced a further trial on the same Article 299 charge over the same set of remarks, which had also included social media posts questioning Erdogan's university diploma and alleging corruption.",
+      "stated_justification": "Turkish prosecutors pursued the case under Article 299 of the penal code, which makes \"insulting Turkey's president\" a criminal offense.",
+      "effect_on_reporting": "A journalist was jailed and later convicted over a single televised remark about the president, with a further prosecution on the same charge continuing more than a year later.",
+      "status": "Kabas was released pending appeal in March 2022 and faced a new trial on the same charge in June 2023.",
+      "what_we_dont_know": "The source reviewed does not report the final outcome of Kabas's appeal or the 2023 trial.",
+      "outcome": "ongoing",
+      "outcome_on": "2023-06-22",
+      "outcome_note": "Kabas remained free pending appeal as of the sources reviewed, with a further trial on the same Article 299 charge continuing in mid-2023.",
+      "stage": "punish",
+      "ladder_note": "A journalist was jailed overnight and convicted under a criminal insult law for one televised remark about the head of state, with prosecution continuing over a year later.",
+      "actors": [
+        "recep-tayyip-erdogan"
+      ],
+      "outlets": [],
+      "journalists": [
+        "sedef-kabas"
+      ],
+      "cases": [],
+      "sources": [
+        "l1_026",
+        "l1_027"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "arrest, January 22, 2022",
+          "statement": "Kabas was arrested from her home after midnight following her televised remark about Erdogan.",
+          "source_id": "l1_026",
+          "evidence_quote": "jailed as a 'flight risk'"
+        },
+        {
+          "field": "what_happened",
+          "value": "the proverb quoted on air",
+          "statement": "Kabas made the comment about a palace and cattle during a televised political talk show discussion of Erdogan.",
+          "source_id": "l1_026",
+          "evidence_quote": "When cattle enters a palace, it does not become king but the palace becomes a stable"
+        },
+        {
+          "field": "stated_justification",
+          "value": "Article 299 of the penal code",
+          "statement": "Article 299 makes insulting Turkey's president a criminal offense punishable by up to four years in prison.",
+          "source_id": "l1_027",
+          "evidence_quote": "Article 299 of the Turkish penal code makes \"insulting Turkey's president\" punishable by up to four years imprisonment, with enhanced penalties if the insult occurs publicly."
+        },
+        {
+          "field": "outcome_note",
+          "value": "released pending appeal",
+          "statement": "Kabas was found guilty, sentenced to two years and four months, and released pending appeal after 49 days in detention.",
+          "source_id": "l1_027",
+          "evidence_quote": "released pending appeal on March 11, 2022, after 49 days in detention"
+        }
+      ],
+      "actor_roles": {
+        "recep-tayyip-erdogan": "other"
+      }
+    },
+    {
+      "slug": "2013-thailand-somyot-lese-majeste-sentence",
+      "title": "Thailand: magazine editor Somyot Prueksakasemsuk is sentenced to 11 years under the lese-majeste law",
+      "occurred_on": "2013-01-24",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Thailand",
+      "country": "TH",
+      "level": "national",
+      "type": "insult_and_defamation_laws",
+      "continent": "Asia",
+      "tactic_primary": "insult_and_defamation_laws",
+      "tactics": [
+        "insult_and_defamation_laws"
+      ],
+      "leader_slug": "yingluck-shinawatra",
+      "granularity": "granular",
+      "summary": "A Thai court sentenced magazine editor Somyot Prueksakasemsuk to 11 years in prison under Article 112 of the penal code, the country's lese-majeste law barring insults to the royal family, over two articles he published under a pen name.",
+      "issue_of_the_day": "The two articles that led to the charge, published in Voice of Taksin magazine in February and March 2010, were written under a pseudonym by a former government spokesman living in exile, whom Somyot identified only after his own prosecution began.",
+      "what_happened": "On January 24, 2013, a Thai court sentenced magazine editor Somyot Prueksakasemsuk to 11 years in prison under Article 112 of Thailand's penal code, the country's lese-majeste law, which bars insults to the royal family and under which any Thai person may file a complaint even though royal family members themselves have never personally done so. The charge concerned two articles published in February and March 2010 in Voice of Taksin magazine under the pen name \"Jit Polachan.\" Somyot later identified the true author as Jakrapob Penkair, a former government spokesman then living in exile in Cambodia. During his trial testimony, Somyot argued the articles referred to a broad aristocratic elite rather than the king specifically. CPJ's Asia program coordinator at the time, Bob Dietz, called the sentence the latest abuse of the lese-majeste law to suppress free expression in Thailand. Somyot completed his sentence in full and was released on April 30, 2018, telling reporters the country's military government had led Thailand backward and that he was disappointed democracy had not been restored.",
+      "stated_justification": "The prosecution was brought under Article 112 of the penal code, Thailand's lese-majeste law, over the two 2010 magazine articles.",
+      "effect_on_reporting": "A magazine editor received an 11-year sentence as the person responsible for publication, rather than the pseudonymous author, of two articles a court found insulted the monarchy.",
+      "status": "Somyot served his full sentence and was released on April 30, 2018.",
+      "what_we_dont_know": "The source reviewed does not report what happened to Jakrapob Penkair, the article's identified author, who remained in exile.",
+      "outcome": "upheld",
+      "outcome_on": "2018-04-30",
+      "outcome_note": "Somyot's conviction and sentence were not overturned; he served his full 11-year term and was released on completing it in April 2018.",
+      "stage": "eliminate",
+      "ladder_note": "An editor received an 11-year sentence under a royal insult law for articles written by someone else, and served the sentence in full before release.",
+      "actors": [
+        "yingluck-shinawatra"
+      ],
+      "outlets": [
+        "oy-magazine"
+      ],
+      "journalists": [
+        "somyot-prueksakasemsuk",
+        "jakrapob-penkair"
+      ],
+      "cases": [],
+      "sources": [
+        "l1_028",
+        "l1_029"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "11-year sentence, January 24, 2013",
+          "statement": "The court sentenced Somyot to 11 years in prison over the two 2010 magazine articles.",
+          "source_id": "l1_028",
+          "evidence_quote": "11 years in prison"
+        },
+        {
+          "field": "issue_of_the_day",
+          "value": "articles under a pen name",
+          "statement": "The charge concerned two articles published under the pen name Jit Polachan in Voice of Taksin magazine.",
+          "source_id": "l1_028",
+          "evidence_quote": "Two articles written under the penname \"Jit Polachan\" and published in Voice of Taksin magazine in February and March 2010."
+        },
+        {
+          "field": "what_happened",
+          "value": "Somyot's court testimony",
+          "statement": "Somyot testified that the articles referred to a broad aristocratic elite rather than the king.",
+          "source_id": "l1_028",
+          "evidence_quote": "the articles did not refer to the king, but instead to a broad aristocratic elite"
+        },
+        {
+          "field": "outcome_note",
+          "value": "released, April 30, 2018",
+          "statement": "Somyot was released on April 30, 2018, after serving his sentence in full.",
+          "source_id": "l1_029",
+          "evidence_quote": "Somyot completed his full sentence, so no conditions were placed on his release."
+        }
+      ],
+      "actor_roles": {
+        "yingluck-shinawatra": "other"
+      }
+    },
+    {
+      "slug": "2023-russia-ponomarenko-fake-news-sentence",
+      "title": "Russia: journalist Maria Ponomarenko is sentenced to six years for reporting on a Mariupol strike",
+      "occurred_on": "2023-02-15",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Russia",
+      "country": "RU",
+      "level": "national",
+      "type": "insult_and_defamation_laws",
+      "continent": "Europe",
+      "tactic_primary": "insult_and_defamation_laws",
+      "tactics": [
+        "insult_and_defamation_laws"
+      ],
+      "leader_slug": "vladimir-putin",
+      "granularity": "granular",
+      "summary": "A Russian court sentenced journalist Maria Ponomarenko to six years in prison and a five-year ban on journalism under a law criminalizing \"false information\" about the military, after she published a Telegram post about an airstrike on a Mariupol theater that Russia denies carrying out.",
+      "issue_of_the_day": "Ponomarenko's post concerned an airstrike that hit a theater in Mariupol, Ukraine, in March 2022, a strike Russian authorities have denied responsibility for.",
+      "what_happened": "On February 15, 2023, a Russian court sentenced Maria Ponomarenko, a correspondent for the independent news website RusNews, to six years in prison and a five-year ban on journalistic activity, under Russia's law criminalizing the spread of what it calls false information about the armed forces. The charge stemmed from a post Ponomarenko published on a Telegram news channel about an alleged Russian airstrike on a theater in Mariupol, Ukraine, in March 2022, a strike Russian authorities deny having carried out. Ponomarenko had been detained since April 2022. Prosecutors had requested a nine-year sentence before the court imposed six years instead. In her final statement to the court, Ponomarenko said she might have asked for leniency had she committed a real crime, but said she had not.",
+      "stated_justification": "Ponomarenko was charged under Russia's law criminalizing the spread of \"false information\" about the armed forces, over her post about the Mariupol theater strike.",
+      "effect_on_reporting": "A journalist received a six-year prison sentence and a five-year professional ban for a single social media post about a wartime strike that contradicted the government's account of events.",
+      "status": "Ponomarenko was sentenced to six years in prison; the source reviewed does not report a release.",
+      "what_we_dont_know": "The source reviewed does not report the outcome of any appeal Ponomarenko may have filed.",
+      "outcome": "sustained",
+      "outcome_on": "2023-02-15",
+      "outcome_note": "Ponomarenko's six-year sentence and five-year journalism ban stood as of the source reviewed.",
+      "stage": "eliminate",
+      "ladder_note": "A journalist received a six-year sentence and a five-year professional ban under a wartime false-information law for one social media post, not a fine or license action.",
+      "actors": [
+        "vladimir-putin"
+      ],
+      "outlets": [
+        "rusnews"
+      ],
+      "journalists": [
+        "maria-ponomarenko"
+      ],
+      "cases": [],
+      "sources": [
+        "l1_030"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "six-year sentence, February 15, 2023",
+          "statement": "The court sentenced Ponomarenko to six years in prison and a five-year ban on journalistic activity.",
+          "source_id": "l1_030",
+          "evidence_quote": "Six years in prison plus a five-year ban on journalistic activities"
+        },
+        {
+          "field": "issue_of_the_day",
+          "value": "Mariupol theater post",
+          "statement": "The charge stemmed from Ponomarenko's Telegram post about an alleged Russian airstrike on a Mariupol theater, which Russia denies.",
+          "source_id": "l1_030",
+          "evidence_quote": "Ponomarenko published information in a Telegram news channel about an alleged Russian airstrike on a theater in Mariupol, Ukraine, which Russian authorities deny responsibility for."
+        },
+        {
+          "field": "what_happened",
+          "value": "final statement to the court",
+          "statement": "Ponomarenko told the court she would have asked for leniency only if she had committed a real crime.",
+          "source_id": "l1_030",
+          "evidence_quote": "she might have asked for leniency if she had committed a real crime, but said she had not"
+        }
+      ],
+      "actor_roles": {
+        "vladimir-putin": "other"
+      }
+    },
+    {
+      "slug": "2023-belarus-poczobut-eight-year-sentence",
+      "title": "Belarus: journalist Andrzej Poczobut is sentenced to eight years for inciting hatred",
+      "occurred_on": "2023-02-08",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Belarus",
+      "country": "BY",
+      "level": "national",
+      "type": "insult_and_defamation_laws",
+      "continent": "Europe",
+      "tactic_primary": "insult_and_defamation_laws",
+      "tactics": [
+        "insult_and_defamation_laws"
+      ],
+      "leader_slug": "alexander-lukashenko",
+      "granularity": "granular",
+      "summary": "A Belarusian court sentenced dual Belarusian-Polish journalist Andrzej Poczobut to eight years in prison on charges of inciting hatred and calling for sanctions, and he was freed three years later as part of a multi-country prisoner exchange.",
+      "issue_of_the_day": "Poczobut had been a longtime commentator and producer for programs on the Poland-based independent broadcaster Belsat TV and Polish public broadcaster TVP Polonia, reporting on Belarus for a Polish-speaking audience.",
+      "what_happened": "On February 8, 2023, a Belarusian court sentenced journalist Andrzej Poczobut, who holds both Belarusian and Polish citizenship, to eight years in prison on charges of inciting hatred and calling for sanctions said to be aimed at harming Belarus's national security. Poczobut, a political commentator and producer for the program Nad Niemnem on the independent broadcaster Belsat TV and on Polish public broadcaster TVP Polonia, had been imprisoned since March 2021. CPJ's Europe and Central Asia program coordinator, Gulnoza Said, said the sentence illustrated a continuing pattern of Belarusian government action against independent journalists. Poczobut was freed on April 28, 2026, as part of a prisoner exchange involving Poland, Belarus, the United States, Moldova, Romania, Russia, Kazakhstan and Ukraine, in which ten prisoners were swapped at the Polish-Belarusian border. Polish Prime Minister Donald Tusk announced the release, calling it the result of a two-year diplomatic effort.",
+      "stated_justification": "Not stated in the sources reviewed as a specific factual basis beyond the charges of \"inciting hatred\" and \"calling for sanctions aimed at harming national security.\"",
+      "effect_on_reporting": "A journalist covering Belarus for a Polish-speaking audience was imprisoned for about five years before his release depended on a multi-country diplomatic exchange rather than any legal appeal.",
+      "status": "Poczobut was freed on April 28, 2026, after about five years in detention, as part of a multi-country prisoner exchange.",
+      "what_we_dont_know": "The source reviewed does not describe the specific statements by Poczobut that Belarusian authorities characterized as inciting hatred.",
+      "outcome": "reversed",
+      "outcome_on": "2026-04-28",
+      "outcome_note": "Poczobut was freed on April 28, 2026, as part of a prisoner exchange involving eight countries, before completing his eight-year sentence.",
+      "stage": "eliminate",
+      "ladder_note": "A journalist was imprisoned for about five years on a hatred and sanctions charge, and his release required an eight-country prisoner exchange rather than any domestic legal process.",
+      "actors": [
+        "alexander-lukashenko",
+        "donald-tusk"
+      ],
+      "outlets": [
+        "belsat-tv"
+      ],
+      "journalists": [
+        "andrzej-poczobut"
+      ],
+      "cases": [],
+      "sources": [
+        "l1_031",
+        "l1_032"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "eight-year sentence, February 8, 2023",
+          "statement": "The court sentenced Poczobut to eight years in prison on charges of inciting hatred and calling for sanctions.",
+          "source_id": "l1_031",
+          "evidence_quote": "Belarusian authorities' sentencing of journalist Andrzej Poczobut to eight years in prison illustrates the government's never-ending cycle of repression against independent journalists."
+        },
+        {
+          "field": "issue_of_the_day",
+          "value": "Belsat and TVP Polonia work",
+          "statement": "Poczobut was a commentator and producer for a program on the independent broadcaster Belsat TV and on Polish public broadcaster TVP Polonia.",
+          "source_id": "l1_031",
+          "evidence_quote": "political commentator and producer for Nad Niemnem, a TV program on Poland-based independent broadcaster Belsat TV and Polish public broadcaster TVP Polonia"
+        },
+        {
+          "field": "outcome_note",
+          "value": "freed, April 28, 2026",
+          "statement": "Poczobut was freed as part of a prisoner exchange at the Polish-Belarusian border involving eight countries.",
+          "source_id": "l1_032",
+          "evidence_quote": "Andrzej Poczobut is free! Welcome to your Polish home, my friend"
+        },
+        {
+          "field": "outcome_note",
+          "value": "two-year diplomatic effort",
+          "statement": "Polish Prime Minister Donald Tusk described the exchange as the result of a two-year diplomatic effort.",
+          "source_id": "l1_032",
+          "evidence_quote": "the finale of a two-year-long intricate diplomatic game, full of dramatic twists"
+        }
+      ],
+      "actor_roles": {
+        "alexander-lukashenko": "other",
+        "donald-tusk": "other"
+      }
+    },
+    {
+      "slug": "2021-hungary-panyi-pegasus-spyware",
+      "title": "Hungary: investigative journalist Szabolcs Panyi's phone is infected with Pegasus spyware",
+      "occurred_on": "2021-07-01",
+      "occurred_on_precision": "month",
+      "jurisdiction": "Hungary",
+      "country": "HU",
+      "level": "national",
+      "type": "surveillance_and_subpoenas",
+      "continent": "Europe",
+      "tactic_primary": "surveillance_and_subpoenas",
+      "tactics": [
+        "surveillance_and_subpoenas"
+      ],
+      "leader_slug": "viktor-orban",
+      "granularity": "granular",
+      "summary": "Amnesty International found forensic traces of Pegasus spyware on the phone of Direkt36 investigative journalist Szabolcs Panyi, who covers Hungarian national security and diplomacy, as part of the wider Pegasus Project investigation.",
+      "issue_of_the_day": "The finding was published as part of the July 2021 Pegasus Project, a collaborative investigation by Forbidden Stories and Amnesty International's Security Lab into governments' use of NSO Group's Pegasus spyware against journalists and civil society figures worldwide.",
+      "what_happened": "Amnesty International's Security Lab found forensic traces linked to Pegasus spyware on the phone of Szabolcs Panyi, an investigative reporter for the Hungarian outlet Direkt36 who covers national security, high-level diplomacy and corruption. The finding was published in July 2021 as part of the Pegasus Project, a collaborative investigation led by the nonprofit journalism organization Forbidden Stories with Amnesty International's technical support, examining the use of Pegasus spyware made by Israel's NSO Group against journalists and others in multiple countries, including Hungary. Panyi said in a December 2021 interview that the disclosure had begun to chill his sources, since those who spoke with him now feared what trouble it might bring into their lives, and that he had adopted more cautious reporting habits, including secure messaging applications and in-person meetings held without his phone present.",
+      "stated_justification": "Not stated in the sources reviewed; the Hungarian government did not provide a public justification for the surveillance in the source reviewed.",
+      "effect_on_reporting": "An investigative reporter's confidential sources became more reluctant to speak with him once the surveillance became known, and he had to change his reporting practices to protect them.",
+      "status": "The Pegasus Project's findings on Panyi's phone were published in July 2021; the source reviewed does not report any Hungarian government accountability measure.",
+      "what_we_dont_know": "The source reviewed does not state which specific stories Panyi was working on when the spyware was placed on his phone.",
+      "outcome": "ongoing",
+      "outcome_on": "2021-07-01",
+      "outcome_note": "The finding prompted European Union scrutiny of Pegasus use against journalists, but the source reviewed does not report any Hungarian accountability measure.",
+      "stage": "punish",
+      "ladder_note": "A journalist's phone was covertly infected with spyware capable of reading his communications and locating his sources, rather than a subpoena for records already created.",
+      "actors": [
+        "viktor-orban"
+      ],
+      "outlets": [
+        "direkt36"
+      ],
+      "journalists": [
+        "szabolcs-panyi"
+      ],
+      "cases": [],
+      "sources": [
+        "l1_033"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Pegasus traces confirmed",
+          "statement": "Amnesty International found forensic traces linked to Pegasus spyware on Panyi's phone.",
+          "source_id": "l1_033",
+          "evidence_quote": "Amnesty International reported forensic traces linked to Pegasus on Panyi's phone."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "sources grow afraid",
+          "statement": "Panyi said sources had become afraid of the trouble speaking with him might bring into their lives.",
+          "source_id": "l1_033",
+          "evidence_quote": "increasingly afraid of the trouble I might bring into their life"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "chilling effect on reporting",
+          "statement": "Panyi said the disclosure risked a chilling effect on sources that could hinder Hungarian journalists' work over the long run.",
+          "source_id": "l1_033",
+          "evidence_quote": "Among Hungarian journalists, the biggest fear now is that this affair will have a chilling effect on sources, and paradoxically this enormous scoop will hinder our work in the long run."
+        }
+      ],
+      "actor_roles": {
+        "viktor-orban": "other"
+      }
+    },
+    {
+      "slug": "2020-morocco-omar-radi-pegasus-and-detention",
+      "title": "Morocco: investigative journalist Omar Radi's phone is infected with Pegasus spyware and he is later detained",
+      "occurred_on": "2020-07-05",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Morocco",
+      "country": "MA",
+      "level": "national",
+      "type": "surveillance_and_subpoenas",
+      "continent": "Africa",
+      "tactic_primary": "surveillance_and_subpoenas",
+      "tactics": [
+        "surveillance_and_subpoenas"
+      ],
+      "leader_slug": "saadeddine-othmani",
+      "granularity": "granular",
+      "summary": "Amnesty International confirmed Moroccan investigative journalist Omar Radi's phone had been infected with Pegasus spyware, and Moroccan police separately detained him overnight days later after private material from his devices circulated in pro-government media.",
+      "issue_of_the_day": "Radi worked as an investigative journalist for the Moroccan outlet Le Desk and had faced a prior court conviction and government-aligned media allegations before the spyware finding.",
+      "what_happened": "Amnesty International confirmed in 2020 that Pegasus spyware, made by Israel's NSO Group, had been used against Omar Radi, an investigative journalist for the Moroccan outlet Le Desk, one of at least two Moroccan journalists whose phones were identified as having been infected; the later Pegasus Project named Radi among seven Moroccan journalists identified as potential or confirmed recipients of the spyware. On July 5, 2020, Moroccan police detained Radi and fellow journalist Imad Stitou overnight following a dispute with a camera operator who had been following Radi since late June, and the pair were later summoned for investigation on additional allegations. Private communications belonging to Radi, including photographs, videos, texts and phone calls that a person close to him said had been obtained despite his taking every technical precaution against hacking, were later published in pro-government media outlets and used as evidence against him in separate court proceedings. Moroccan authorities did not respond to requests for comment on the spyware findings.",
+      "stated_justification": "Not stated in the sources reviewed; Moroccan authorities, including the National Brigade of Judicial Police and the Ministry of Justice, did not respond to requests for comment on the spyware findings or the detention.",
+      "effect_on_reporting": "An investigative journalist's private communications, obtained despite his taking precautions against hacking, were later published by pro-government media and used against him in court, alongside a separate overnight detention.",
+      "status": "Radi's phone was confirmed compromised in 2020, and he was separately convicted the following year on charges unrelated to the spyware finding itself.",
+      "what_we_dont_know": "The source reviewed does not establish who placed the spyware on Radi's phone or link it directly to the later criminal charges against him.",
+      "outcome": "reversed",
+      "outcome_on": "2024-07-01",
+      "outcome_note": "Radi was released in July 2024 as part of a mass royal pardon, though he said his legal status left him unable to work as an accredited journalist afterward.",
+      "stage": "punish",
+      "ladder_note": "A journalist's private communications were covertly extracted despite his taking precautions against hacking, then published by pro-government media and used against him in court.",
+      "actors": [
+        "saadeddine-othmani"
+      ],
+      "outlets": [
+        "le-desk"
+      ],
+      "journalists": [
+        "omar-radi",
+        "imad-stitou"
+      ],
+      "cases": [],
+      "sources": [
+        "l1_034",
+        "l1_035",
+        "l1_036"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "overnight detention, July 5, 2020",
+          "statement": "Police detained Radi and Imad Stitou overnight following a dispute with a camera operator who had been following Radi.",
+          "source_id": "l1_034",
+          "evidence_quote": "Radi worked as an investigative journalist at Le Desk news website."
+        },
+        {
+          "field": "what_happened",
+          "value": "Pegasus confirmed on Radi's phone",
+          "statement": "Amnesty International confirmed in 2020 that Pegasus spyware had been used against Radi, one of at least two Moroccan journalists targeted.",
+          "source_id": "l1_035",
+          "evidence_quote": "Amnesty International confirmed in 2020 that Pegasus spyware was used against Omar Radi, one of at least two Moroccan journalists targeted with this surveillance technology."
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "private material extracted despite precautions",
+          "statement": "A person close to Radi said his devices were compromised despite his taking every precaution against hacking.",
+          "source_id": "l1_035",
+          "evidence_quote": "The most tech-savvy person I know is our friend Omar Radi. He took all the necessary precautions against hacking, and they still [managed to infect his devices]."
+        },
+        {
+          "field": "outcome_note",
+          "value": "pardoned, July 2024",
+          "statement": "Radi was released as part of a mass pardon marking the king's 25 years on the throne, after an original six-year sentence on separate charges.",
+          "source_id": "l1_036",
+          "evidence_quote": "Six years on sexual assault charges"
+        },
+        {
+          "field": "outcome_note",
+          "value": "unclear status after release",
+          "statement": "Radi said he could not work as a journalist afterward because Moroccan accreditation rules require no criminal record.",
+          "source_id": "l1_036",
+          "evidence_quote": "In Morocco, in order for journalists to receive a press accreditation to legally work, they need not to have a criminal record. So, at the moment I cannot work in journalism until I figure out my unclear legal status."
+        }
+      ],
+      "actor_roles": {
+        "saadeddine-othmani": "other"
+      }
+    },
+    {
+      "slug": "2018-saudi-arabia-pegasus-khashoggi-associate",
+      "title": "Saudi Arabia: spyware on an associate's phone precedes Jamal Khashoggi's killing by one day",
+      "occurred_on": "2018-10-01",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Saudi Arabia",
+      "country": "SA",
+      "level": "national",
+      "type": "surveillance_and_subpoenas",
+      "continent": "Asia",
+      "tactic_primary": "surveillance_and_subpoenas",
+      "tactics": [
+        "surveillance_and_subpoenas"
+      ],
+      "leader_slug": "king-salman",
+      "granularity": "granular",
+      "summary": "Citizen Lab found Pegasus spyware on the phone of Saudi dissident Omar Abdulaziz, a close associate and collaborator of journalist Jamal Khashoggi, one day before Saudi operatives killed Khashoggi inside the country's Istanbul consulate.",
+      "issue_of_the_day": "Abdulaziz and Khashoggi had been collaborating on plans for a news and human rights website, and Khashoggi was, according to Abdulaziz, sharply critical of the Saudi crown prince in their private conversations.",
+      "what_happened": "On October 1, 2018, the Canadian digital rights research group Citizen Lab published forensic analysis finding, with a high degree of confidence, that Saudi dissident Omar Abdulaziz's phone had been successfully infected with Pegasus spyware made by Israel's NSO Group, in an operation linked to Saudi government operators. Abdulaziz was a close associate of journalist Jamal Khashoggi, and the two had been collaborating on plans for a news and human rights website; Abdulaziz said Khashoggi had been sharply critical of Saudi Crown Prince Mohammed bin Salman in their private conversations, including through encrypted messages that the spyware would have exposed. The day after Citizen Lab published its findings, on October 2, 2018, Saudi operatives killed Khashoggi inside the country's consulate in Istanbul. Abdulaziz has said he cannot definitively link the spyware operation against his own phone to Khashoggi's killing, but the timing raised serious questions about how Saudi authorities may have learned of Khashoggi's private communications and views before his death.",
+      "stated_justification": "Not stated in the sources reviewed; no Saudi government justification for the spyware operation against Abdulaziz's phone is quoted in the source.",
+      "effect_on_reporting": "Surveillance of a journalist's close collaborator exposed private communications and views the journalist believed were confidential, one day before he was killed inside his own country's consulate.",
+      "status": "No public accountability measure for the spyware operation against Abdulaziz's phone is reported in the source reviewed.",
+      "what_we_dont_know": "The source reviewed states Abdulaziz cannot definitively link the spyware operation to Khashoggi's killing, and does not establish that link independently.",
+      "outcome": "unknown",
+      "outcome_on": "2018-10-01",
+      "outcome_note": "Citizen Lab's finding on the spyware operation itself was not followed, in the source reviewed, by any reported Saudi accountability measure.",
+      "stage": "punish",
+      "ladder_note": "A journalist's close collaborator was covertly surveilled one day before the journalist himself was killed inside his own country's consulate.",
+      "actors": [
+        "king-salman"
+      ],
+      "outlets": [],
+      "journalists": [
+        "omar-abdulaziz",
+        "jamal-khashoggi"
+      ],
+      "cases": [],
+      "sources": [
+        "l1_037"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "Citizen Lab finding, October 1, 2018",
+          "statement": "Citizen Lab found with a high degree of confidence that Abdulaziz had been targeted with Pegasus spyware linked to Saudi operators.",
+          "source_id": "l1_037",
+          "evidence_quote": "with a high degree of confidence"
+        },
+        {
+          "field": "issue_of_the_day",
+          "value": "collaboration with Khashoggi",
+          "statement": "Abdulaziz and Khashoggi were collaborating on plans for a news and human rights website.",
+          "source_id": "l1_037",
+          "evidence_quote": "plans for a news and human rights website"
+        },
+        {
+          "field": "effect_on_reporting",
+          "value": "killing follows one day later",
+          "statement": "Saudi operatives killed Khashoggi inside the Saudi consulate in Istanbul one day after Citizen Lab published its findings on the spyware attack against his associate.",
+          "source_id": "l1_037",
+          "evidence_quote": "Saudi operatives murdered journalist Jamal Khashoggi at the Saudi consulate in Istanbul"
+        }
+      ],
+      "actor_roles": {
+        "king-salman": "other"
+      }
+    },
+    {
+      "slug": "2017-mexico-aristegui-pegasus-spyware",
+      "title": "Mexico: journalist Carmen Aristegui receives Pegasus spyware through phishing texts",
+      "occurred_on": "2017-06-19",
+      "occurred_on_precision": "day",
+      "jurisdiction": "Mexico",
+      "country": "MX",
+      "level": "national",
+      "type": "surveillance_and_subpoenas",
+      "continent": "North America",
+      "tactic_primary": "surveillance_and_subpoenas",
+      "tactics": [
+        "surveillance_and_subpoenas"
+      ],
+      "leader_slug": "enrique-pena-nieto",
+      "granularity": "granular",
+      "summary": "Citizen Lab, R3D and Article 19 documented Pegasus spyware sent to Mexican investigative journalists Carmen Aristegui and Carlos Loret de Mola through phishing text messages, which the Mexican government denied having sent.",
+      "issue_of_the_day": "Aristegui and Loret de Mola were among several Mexican investigative journalists, human rights defenders and anti-corruption figures sent the same spyware technique around the same period.",
+      "what_happened": "On June 19 and 20, 2017, researchers at Citizen Lab, a University of Toronto research group, working with the Mexican digital rights organization R3D and the press freedom group Article 19, documented that investigative journalists Carmen Aristegui and Carlos Loret de Mola, along with several human rights defenders and anti-corruption figures, had received phishing text messages containing fabricated warnings about family members. Clicking the links in the messages installed Pegasus spyware, made by the Israeli firm NSO Group, on the recipients' phones. NSO Group has said it sells Pegasus exclusively to governments. President Enrique Pena Nieto's administration categorically denied that any of its members engaged in surveillance or communications operations against human rights defenders, journalists or anti-corruption activists without prior judicial authorization. Citizen Lab's report said the spyware itself could not be traced back to whoever had sent it, and that there was no conclusive evidence establishing who was responsible.",
+      "stated_justification": "President Enrique Pena Nieto's administration \"categorically denie[d] that any of its members engages in surveillance or communications operations against defenders of human rights, journalists, anti-corruption activists or any other person without prior judicial authorization.\"",
+      "effect_on_reporting": "Prominent investigative journalists covering corruption and human rights in Mexico received spyware capable of reading their phones' communications, while the technical evidence could not conclusively identify who was responsible.",
+      "status": "No individual or agency was conclusively identified as responsible in the source reviewed, and the government denied involvement.",
+      "what_we_dont_know": "Citizen Lab's report states there was no conclusive evidence establishing who was responsible, and the source reviewed does not report that this was later resolved.",
+      "outcome": "unknown",
+      "outcome_on": "2017-06-20",
+      "outcome_note": "The government denied responsibility and Citizen Lab's report found no conclusive evidence establishing who sent the spyware, according to the source reviewed.",
+      "stage": "punish",
+      "ladder_note": "Investigative journalists' phones were covertly targeted with spyware through fabricated personal warnings, with government responsibility denied and never conclusively established.",
+      "actors": [
+        "enrique-pena-nieto"
+      ],
+      "outlets": [
+        "aristegui-noticias"
+      ],
+      "journalists": [
+        "carmen-aristegui",
+        "carlos-loret-de-mola"
+      ],
+      "cases": [],
+      "sources": [
+        "l1_038"
+      ],
+      "claims": [
+        {
+          "field": "what_happened",
+          "value": "phishing texts, June 19-20, 2017",
+          "statement": "Citizen Lab, R3D and Article 19 documented that Aristegui and Loret de Mola received phishing texts with fabricated family warnings that installed Pegasus spyware.",
+          "source_id": "l1_038",
+          "evidence_quote": "Investigative journalists Carmen Aristegui and Carlos Loret de Mola, along with human rights activists and anti-corruption figures."
+        },
+        {
+          "field": "stated_justification",
+          "value": "government denial",
+          "statement": "President Pena Nieto's administration denied that any of its members conducted surveillance against journalists or human rights defenders without judicial authorization.",
+          "source_id": "l1_038",
+          "evidence_quote": "categorically denie[d] that any of its members engages in surveillance or communications operations against defenders of human rights, journalists, anti-corruption activists or any other person without prior judicial authorization"
+        },
+        {
+          "field": "what_we_dont_know",
+          "value": "no conclusive attribution",
+          "statement": "Citizen Lab's report said the spyware could not be traced back to its senders and there was no conclusive evidence of who was behind the attacks.",
+          "source_id": "l1_038",
+          "evidence_quote": "the software cannot be traced back to its original senders"
+        }
+      ],
+      "actor_roles": {
+        "enrique-pena-nieto": "other"
+      }
+    }
+  ]
+}

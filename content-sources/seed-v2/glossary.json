@@ -1,0 +1,585 @@
+[
+  {
+    "slug": "hard-pass",
+    "term": "Hard pass",
+    "definition": "A White House-issued credential granting a journalist routine, standing access to the White House grounds and press facilities without applying for entry each time, as distinct from a single-use day pass. Hard passes are issued to reporters who regularly cover the White House and can be suspended or revoked by White House staff.",
+    "sources": [
+      "s003",
+      "s031",
+      "s086"
+    ]
+  },
+  {
+    "slug": "day-pass",
+    "term": "Day pass",
+    "definition": "A single-day credential allowing a journalist to enter the White House for one specific day, requiring a new application each time. Reporters without a hard pass, including many local and less-frequent White House correspondents, rely on day passes for occasional coverage.",
+    "sources": [
+      "s016"
+    ]
+  },
+  {
+    "slug": "press-pool",
+    "term": "Press pool",
+    "definition": "A small rotating group of reporters and photographers who cover events in spaces too small for the full press corps, such as the Oval Office or Air Force One, and share their notes, audio, video or photographs with all other accredited outlets.",
+    "sources": [
+      "s008",
+      "s009"
+    ]
+  },
+  {
+    "slug": "pool-report",
+    "term": "Pool report",
+    "definition": "The written or recorded account a pool reporter produces after covering a limited-access event, distributed to the full White House press corps so outlets not present can report the same facts. Pool reports are a practical mechanism for extending small-space access across the whole press corps.",
+    "sources": [
+      "s008",
+      "s009"
+    ]
+  },
+  {
+    "slug": "whca",
+    "term": "White House Correspondents' Association (WHCA)",
+    "definition": "A private, nonprofit professional association of journalists accredited to cover the White House. For more than a century the WHCA managed rotation of the press pool among its member outlets; in February 2025 the White House took over that role itself.",
+    "sources": [
+      "s003",
+      "s075"
+    ]
+  },
+  {
+    "slug": "sherrill-v-knight-standard",
+    "term": "Sherrill v. Knight standard",
+    "definition": "The rule from Sherrill v. Knight (D.C. Cir. 1977) that once the White House opens access to the press generally, it may not deny an individual journalist's press pass arbitrarily or for less than compelling reasons, and must give notice of the reasons, a chance to respond, and a final written explanation.",
+    "sources": [
+      "s071",
+      "s072"
+    ]
+  },
+  {
+    "slug": "prior-restraint",
+    "term": "Prior restraint",
+    "definition": "A government action that blocks speech or publication before it occurs, rather than punishing it afterward, as in the Pentagon Papers case. The Supreme Court held that \"any system of prior restraints of expression comes to this Court bearing a heavy presumption against its constitutional validity\" in New York Times Co. v. United States (1971).",
+    "sources": [
+      "s090",
+      "s098",
+      "s100"
+    ]
+  },
+  {
+    "slug": "espionage-act",
+    "term": "Espionage Act",
+    "definition": "An 18 U.S.C. Chapter 37 federal law, first passed in 1917, criminalizing the unauthorized gathering, retention or transmission of national-defense information. It has increasingly been used against government employees and contractors who leak classified information to journalists, rather than against foreign spies.",
+    "sources": [
+      "s043",
+      "s092"
+    ]
+  },
+  {
+    "slug": "slapp",
+    "term": "SLAPP (strategic lawsuit against public participation)",
+    "definition": "A lawsuit filed less to win on the merits than to burden a defendant, such as a journalist or news outlet, with the cost and time of litigation over speech on a matter of public concern, discouraging further reporting or comment.",
+    "sources": [
+      "s095"
+    ]
+  },
+  {
+    "slug": "anti-slapp",
+    "term": "Anti-SLAPP law",
+    "definition": "A statute allowing a defendant sued over protected speech on a matter of public concern to seek early dismissal of the suit and, often, recovery of attorney's fees, intended to deter strategic lawsuits against public participation. Anti-SLAPP protections vary by state, and no comprehensive federal anti-SLAPP law exists.",
+    "sources": [
+      "s095"
+    ]
+  },
+  {
+    "slug": "shield-law",
+    "term": "Shield law",
+    "definition": "A statute or rule giving journalists a legal privilege to refuse to disclose confidential sources or unpublished material in legal proceedings. Most U.S. states have some form of shield law; no federal shield law has been enacted, leaving federal cases governed by Justice Department internal guidelines instead.",
+    "sources": [
+      "s093",
+      "s027"
+    ]
+  },
+  {
+    "slug": "foia",
+    "term": "Freedom of Information Act (FOIA)",
+    "definition": "A 1966 federal law giving the public, including journalists, a legal right to request records from federal executive-branch agencies, subject to specified exemptions such as national security and personal privacy. Most U.S. states have parallel public-records laws covering state and local government.",
+    "sources": [
+      "s094"
+    ]
+  },
+  {
+    "slug": "credentialing",
+    "term": "Credentialing",
+    "definition": "The process by which a government body or institution decides which journalists may receive access credentials, such as a hard pass, badge or press card, to cover it. Credentialing rules and who controls them, government officials or a press organization, shape which outlets can report from inside a given institution.",
+    "sources": [
+      "s003",
+      "s031"
+    ]
+  },
+  {
+    "slug": "viewpoint-discrimination",
+    "term": "Viewpoint discrimination",
+    "definition": "Government action that treats speech differently based on the specific position or opinion it expresses, rather than its subject matter generally. Courts treat viewpoint discrimination as especially disfavored under the First Amendment, including in the government's control of access to otherwise-open forums.",
+    "sources": [
+      "s016",
+      "s010"
+    ]
+  },
+  {
+    "slug": "public-forum-doctrine",
+    "term": "Public forum doctrine",
+    "definition": "A body of First Amendment law classifying government property by how much the government may restrict speech there, ranging from traditional public forums with the strongest protection to nonpublic forums such as the Oval Office, where the government has broad discretion over access.",
+    "sources": [
+      "s091",
+      "s025"
+    ]
+  },
+  {
+    "slug": "corporation-for-public-broadcasting",
+    "term": "Corporation for Public Broadcasting (CPB)",
+    "definition": "A private, nonprofit corporation chartered by Congress in 1967 to distribute federal funding to public radio and television stations, including through NPR and PBS member stations. CPB does not itself produce programming; it funds the public broadcasting system.",
+    "sources": [
+      "s032",
+      "s097",
+      "s080"
+    ]
+  },
+  {
+    "slug": "fcc-news-distortion-policy",
+    "term": "FCC news distortion policy",
+    "definition": "A long-standing Federal Communications Commission policy under which the agency can, in narrow circumstances, act against a broadcast licensee for deliberately staging or falsifying news, while the FCC generally does not regulate broadcast content or editorial decisions under the First Amendment.",
+    "sources": [
+      "s096",
+      "s028"
+    ]
+  },
+  {
+    "slug": "gag-order",
+    "term": "Gag order",
+    "definition": "A court order restricting parties, attorneys or, in rarer cases, the press from publicly discussing a pending case. Gag orders directed at the press are a form of prior restraint and face heightened constitutional scrutiny.",
+    "sources": [
+      "s090"
+    ]
+  },
+  {
+    "slug": "national-security-law-hong-kong",
+    "term": "National Security Law (Hong Kong)",
+    "definition": "A law imposed on Hong Kong by China's National People's Congress Standing Committee in 2020 criminalizing secession, subversion, terrorism and collusion with foreign forces. Press-freedom organizations say it has been used to prosecute journalists and shut down independent outlets, including Apple Daily.",
+    "sources": [
+      "s068",
+      "s084",
+      "s085"
+    ]
+  },
+  {
+    "slug": "foreign-agent-law",
+    "term": "Foreign agent law",
+    "definition": "A law requiring individuals or organizations receiving foreign support, or deemed to act on behalf of foreign interests, to register with the state and accept added restrictions or reporting obligations. Russia has expanded its foreign-agent framework to cover independent and exiled journalists.",
+    "sources": [
+      "s062",
+      "s063",
+      "s064"
+    ]
+  },
+  {
+    "slug": "access-journalism",
+    "term": "Access journalism",
+    "definition": "A term for reporting that depends on maintaining a source's or institution's goodwill to preserve continued access. The term is often invoked in debates over how outlets should respond to credential or access threats.",
+    "sources": [
+      "s017"
+    ]
+  },
+  {
+    "slug": "embed",
+    "term": "Embedded journalist",
+    "definition": "A journalist attached to a military unit or other organization for an extended period, traveling and living alongside it to report from close range, typically under rules of engagement negotiated with that organization, such as the Pentagon's press-credentialing rules.",
+    "sources": [
+      "s029",
+      "s030"
+    ]
+  },
+  {
+    "slug": "actual-malice",
+    "term": "Actual malice standard",
+    "definition": "The First Amendment standard from New York Times v. Sullivan (1964) requiring a public official or public figure suing for defamation to prove the defendant published a false statement knowing it was false or with reckless disregard for the truth.",
+    "sources": [
+      "s082"
+    ]
+  },
+  {
+    "slug": "chilling-effect",
+    "term": "Chilling effect",
+    "definition": "The discouragement of legitimate speech or newsgathering caused by fear of legal, financial or physical consequences, even where no formal prohibition exists. Courts and press-freedom organizations cite documented chilling effects, such as sources avoiding contact with reporters, as a measurable harm from surveillance or prosecution threats.",
+    "sources": [
+      "s043",
+      "s078"
+    ]
+  },
+  {
+    "slug": "subpoena",
+    "term": "Subpoena (to a journalist)",
+    "definition": "A legal order compelling a journalist to testify or produce records, such as notes, communications or unpublished material, often sought to identify a confidential source. Journalists' ability to resist such subpoenas depends on applicable shield laws or, at the federal level, Justice Department guidelines.",
+    "sources": [
+      "s027",
+      "s093"
+    ]
+  },
+  {
+    "slug": "leak-investigation",
+    "term": "Leak investigation",
+    "definition": "A government inquiry, often criminal, into the unauthorized disclosure of nonpublic information to the press. Leak investigations can include surveillance of reporters' phone or email records and, in the most serious cases, prosecution of the source under statutes such as the Espionage Act.",
+    "sources": [
+      "s043",
+      "s027"
+    ]
+  },
+  {
+    "slug": "background-and-on-background",
+    "term": "On background / on background",
+    "definition": "A sourcing arrangement in which a source's information may be reported but the source may not be named, or may be described only in general terms the source and reporter agree on in advance, as distinct from on-the-record or off-the-record arrangements.",
+    "sources": [
+      "s089"
+    ]
+  },
+  {
+    "slug": "federal-communications-commission",
+    "term": "Federal Communications Commission (FCC)",
+    "definition": "The United States federal agency that regulates broadcasting and telecommunications, including the licensing of radio and television stations. Its chair and commissioners oversee broadcast rules such as the news distortion policy.",
+    "sources": [
+      "s096",
+      "s028"
+    ]
+  },
+  {
+    "slug": "voice-of-america",
+    "term": "Voice of America (VOA)",
+    "definition": "The United States government's international broadcaster, created in 1942 and funded by the United States Congress, which provides news in nearly 50 languages. A 'firewall' in the 1994 U.S. International Broadcasting Act prohibits interference by any United States government official in its news reporting.",
+    "sources": [
+      "s147",
+      "s022"
+    ]
+  },
+  {
+    "slug": "us-agency-for-global-media",
+    "term": "U.S. Agency for Global Media (USAGM)",
+    "definition": "The United States federal agency that oversees Voice of America and other government-funded international broadcasters.",
+    "sources": [
+      "s147",
+      "s106"
+    ]
+  },
+  {
+    "slug": "us-department-of-justice",
+    "term": "Department of Justice (United States)",
+    "definition": "The United States federal department that enforces federal law and prosecutes federal crimes. It is headed by the attorney general of the United States.",
+    "sources": [
+      "s117",
+      "s027"
+    ]
+  },
+  {
+    "slug": "secret-service",
+    "term": "Secret Service (United States)",
+    "definition": "A United States federal agency responsible for protecting national leaders, including the president of the United States, and visiting heads of state, and for safeguarding the country's financial infrastructure.",
+    "sources": [
+      "s118",
+      "s072"
+    ]
+  },
+  {
+    "slug": "us-department-of-defense",
+    "term": "Department of Defense (United States)",
+    "definition": "The United States federal department that provides the country's military forces. Its headquarters building is the Pentagon, and it is headed by the secretary of defense.",
+    "sources": [
+      "s116",
+      "s029"
+    ]
+  },
+  {
+    "slug": "us-department-of-homeland-security",
+    "term": "Department of Homeland Security (DHS)",
+    "definition": "The United States federal department whose work includes customs, border and immigration enforcement, emergency response to disasters, counterterrorism and cybersecurity.",
+    "sources": [
+      "s114"
+    ]
+  },
+  {
+    "slug": "immigration-and-customs-enforcement",
+    "term": "Immigration and Customs Enforcement (ICE)",
+    "definition": "A United States federal agency that enforces federal laws on border control, customs, trade and immigration.",
+    "sources": [
+      "s115"
+    ]
+  },
+  {
+    "slug": "us-congress",
+    "term": "Congress (United States)",
+    "definition": "The national legislature of the United States, made up of the Senate and the House of Representatives. It drafts and passes federal laws and reviews the federal budget.",
+    "sources": [
+      "s119"
+    ]
+  },
+  {
+    "slug": "executive-order",
+    "term": "Executive order (United States)",
+    "definition": "An official document, numbered and published in the Federal Register, through which the president of the United States manages the operations of the federal government.",
+    "sources": [
+      "s148"
+    ]
+  },
+  {
+    "slug": "supreme-court-of-the-united-states",
+    "term": "Supreme Court of the United States",
+    "definition": "The highest court in the United States for all cases arising under the country's constitution or federal laws, and the final authority on their meaning.",
+    "sources": [
+      "s120",
+      "s122"
+    ]
+  },
+  {
+    "slug": "dc-circuit",
+    "term": "D.C. Circuit (United States Court of Appeals for the District of Columbia Circuit)",
+    "definition": "One of 13 United States federal appeals courts that sit below the Supreme Court of the United States. It sits in Washington, D.C., and hears appeals from the federal trial court there.",
+    "sources": [
+      "s121",
+      "s122"
+    ]
+  },
+  {
+    "slug": "us-district-court",
+    "term": "United States district court",
+    "definition": "A federal trial court in the United States. There are 94; each decides the facts of the cases before it and applies the law to them.",
+    "sources": [
+      "s122"
+    ]
+  },
+  {
+    "slug": "us-district-court-dc",
+    "term": "United States District Court for the District of Columbia (D.D.C.)",
+    "definition": "The federal trial court for Washington, D.C., the capital of the United States.",
+    "sources": [
+      "s146",
+      "s122"
+    ]
+  },
+  {
+    "slug": "fifth-circuit",
+    "term": "Fifth Circuit (United States Court of Appeals for the Fifth Circuit)",
+    "definition": "One of 13 United States federal appeals courts that sit below the Supreme Court of the United States, based in New Orleans, Louisiana.",
+    "sources": [
+      "s145",
+      "s122"
+    ]
+  },
+  {
+    "slug": "first-amendment",
+    "term": "First Amendment (United States)",
+    "definition": "The part of the United States Constitution that provides that Congress shall make no law abridging the freedom of speech or of the press. It is a United States provision and applies only there.",
+    "sources": [
+      "s123"
+    ]
+  },
+  {
+    "slug": "fifth-amendment",
+    "term": "Fifth Amendment (United States)",
+    "definition": "The part of the United States Constitution that, among other protections, provides that no person shall be deprived of life, liberty or property without due process of law.",
+    "sources": [
+      "s124"
+    ]
+  },
+  {
+    "slug": "due-process",
+    "term": "Due process",
+    "definition": "The requirement that a government follow fair procedures, such as notice and a chance to be heard, before it takes away a person's life, liberty or property. In the United States it is guaranteed by the Fifth and Fourteenth Amendments to the Constitution.",
+    "sources": [
+      "s128",
+      "s124"
+    ]
+  },
+  {
+    "slug": "temporary-restraining-order",
+    "term": "Temporary restraining order (TRO)",
+    "definition": "A short-term court order, made before a full hearing, that stops a party from acting while the court considers a case. The party asking for it must show that it would otherwise suffer immediate harm that could not be repaired.",
+    "sources": [
+      "s125"
+    ]
+  },
+  {
+    "slug": "preliminary-injunction",
+    "term": "Preliminary injunction",
+    "definition": "A court order made before or during a trial to keep the situation as it is until a final judgment. The party asking for it must show that it would otherwise suffer harm that could not be repaired.",
+    "sources": [
+      "s126"
+    ]
+  },
+  {
+    "slug": "en-banc",
+    "term": "En banc",
+    "definition": "A hearing of a case by all the judges of a court rather than by a smaller panel, used when a matter is especially complex or important. The term is French for 'on the bench'.",
+    "sources": [
+      "s127"
+    ]
+  },
+  {
+    "slug": "roskomnadzor",
+    "term": "Roskomnadzor",
+    "definition": "The Federal Service for Supervision of Communications, Information Technology and Mass Media, the Russian government body that oversees communications, information technology and mass media in Russia.",
+    "sources": [
+      "s129"
+    ]
+  },
+  {
+    "slug": "rtuk",
+    "term": "RTÜK (Radio and Television Supreme Council)",
+    "definition": "Radyo ve Televizyon Üst Kurulu, Türkiye's broadcasting regulator, whose organization and powers are set by Law No. 6112 on radio and television broadcasting.",
+    "sources": [
+      "s130",
+      "s131",
+      "s133"
+    ]
+  },
+  {
+    "slug": "ofcom",
+    "term": "Ofcom (Office of Communications)",
+    "definition": "The United Kingdom's regulator of broadcasting and communications, established as a public body by the Office of Communications Act 2002.",
+    "sources": [
+      "s132",
+      "s133"
+    ]
+  },
+  {
+    "slug": "crtc",
+    "term": "CRTC (Canadian Radio-television and Telecommunications Commission)",
+    "definition": "Canada's regulator of broadcasting and telecommunications, established by the Canadian Radio-television and Telecommunications Commission Act.",
+    "sources": [
+      "s134"
+    ]
+  },
+  {
+    "slug": "state-duma",
+    "term": "State Duma (Russia)",
+    "definition": "The lower house of the Federal Assembly, Russia's national parliament.",
+    "sources": [
+      "s135",
+      "s062"
+    ]
+  },
+  {
+    "slug": "undesirable-organization",
+    "term": "Undesirable organization (Russia)",
+    "definition": "A Russian legal designation for a foreign or international organization; Russians who cooperate with an organization so designated can be prosecuted. Reporters Without Borders, citing the Russian group OVD-Info, reports that media professionals are the largest professional group on the 'foreign agent' and 'undesirable organisation' lists.",
+    "sources": [
+      "s062",
+      "s063"
+    ]
+  },
+  {
+    "slug": "national-assembly-of-hungary",
+    "term": "National Assembly (Hungary)",
+    "definition": "Hungary's national parliament, which passes the country's laws, including its media laws.",
+    "sources": [
+      "s054",
+      "s055"
+    ]
+  },
+  {
+    "slug": "sovereignty-protection-office",
+    "term": "Sovereignty Protection Office (Hungary)",
+    "definition": "A Hungarian state office, also translated as the Sovereignty Protection Authority, created by the National Sovereignty Protection Act promulgated on December 20, 2023, with power to investigate organizations, including news outlets, for foreign influence. Hungary's National Assembly abolished it on June 30, 2026.",
+    "sources": [
+      "s054",
+      "s055"
+    ]
+  },
+  {
+    "slug": "hong-kong-chief-executive",
+    "term": "Chief Executive of Hong Kong",
+    "definition": "The head of the government of Hong Kong, a special administrative region of China. According to Freedom House, the Chief Executive is chosen by an Election Committee of individuals backed by the central government in Beijing.",
+    "sources": [
+      "s069"
+    ]
+  },
+  {
+    "slug": "criminal-defamation",
+    "term": "Criminal defamation",
+    "definition": "An offence under which a statement that damages a person's reputation can lead to a fine or a prison sentence, rather than only to a civil lawsuit for damages. In India, the journalist Ravi Nair was sentenced to a year in prison and a fine in a criminal defamation case in February 2026.",
+    "sources": [
+      "s057"
+    ]
+  },
+  {
+    "slug": "committee-to-protect-journalists",
+    "term": "Committee to Protect Journalists (CPJ)",
+    "definition": "A non-profit organization based in New York that documents cases of journalists imprisoned or killed around the world and advocates for their release and for justice.",
+    "sources": [
+      "s136"
+    ]
+  },
+  {
+    "slug": "reporters-without-borders",
+    "term": "Reporters Without Borders (RSF)",
+    "definition": "An international organization with its headquarters in Paris that defends the right to information and publishes the annual World Press Freedom Index.",
+    "sources": [
+      "s137",
+      "s052"
+    ]
+  },
+  {
+    "slug": "freedom-of-the-press-foundation",
+    "term": "Freedom of the Press Foundation (FPF)",
+    "definition": "A United States non-profit organization that builds secure communication tools for newsrooms, teaches journalists digital security and runs the U.S. Press Freedom Tracker.",
+    "sources": [
+      "s138",
+      "s141"
+    ]
+  },
+  {
+    "slug": "reporters-committee-for-freedom-of-the-press",
+    "term": "Reporters Committee for Freedom of the Press (RCFP)",
+    "definition": "A United States non-profit organization that provides legal help to journalists, including a legal hotline, and files amicus briefs in press freedom cases.",
+    "sources": [
+      "s139",
+      "s089"
+    ]
+  },
+  {
+    "slug": "knight-first-amendment-institute",
+    "term": "Knight First Amendment Institute",
+    "definition": "An institute at Columbia University in New York that defends the freedoms of speech and of the press through litigation, research and public education.",
+    "sources": [
+      "s140"
+    ]
+  },
+  {
+    "slug": "us-press-freedom-tracker",
+    "term": "U.S. Press Freedom Tracker",
+    "definition": "A non-partisan news website and database of press freedom incidents in the United States, run as a project of the Freedom of the Press Foundation.",
+    "sources": [
+      "s141"
+    ]
+  },
+  {
+    "slug": "freedom-house",
+    "term": "Freedom House",
+    "definition": "A United States-based organization, founded in 1941, that publishes Freedom in the World, an annual assessment of political rights and civil liberties by country.",
+    "sources": [
+      "s142",
+      "s064"
+    ]
+  },
+  {
+    "slug": "civicus-monitor",
+    "term": "CIVICUS Monitor",
+    "definition": "A research project of CIVICUS, a global alliance of civil society organizations, that rates and reports on civic freedoms country by country.",
+    "sources": [
+      "s143",
+      "s057"
+    ]
+  },
+  {
+    "slug": "human-rights-watch",
+    "term": "Human Rights Watch",
+    "definition": "An international non-governmental organization that investigates and reports on human rights abuses around the world.",
+    "sources": [
+      "s144"
+    ]
+  }
+]

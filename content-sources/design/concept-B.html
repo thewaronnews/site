@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The War On News</title>
+<!--
+  Concept B: "Atlas". Static mockup, 2026-09-22.
+  Real data (from thewaronnews.com JSON, 2026-09-22): the focal incident (White House ban of CNN, MS NOW, Politico),
+  its case (1:26-cv-03287), the WHCA quote, the Jimmy Lai incident and its sources, and every "Recent coverage" headline.
+  PLACEHOLDER DATA (plausible, derived from history, to be replaced by researched and sourced rows):
+    - all counts: 128 incidents, 41 countries, per-country tile counts, continent, tactic and decade counts
+    - matrix rows other than the real v1 incidents (US 2026 White House ban, US 2025 AP ban, US 2025 NPR/PBS order,
+      US 2013 Espionage Act charges, HU 2023 sovereignty act, RU 2026 foreign-agent assets law, HK 2025 Jimmy Lai)
+    - decade anchors 1900s to 2010s (1908 India Tilak, 1917 US Espionage Act, 1926 Italy, 1933 Germany Editors Law, 1940 Canada,
+      1956 Hungary, 1962 West Germany Spiegel affair, 1975 India Emergency, 1988 UK broadcasting ban, 1998 Serbia, 2001 Russia NTV,
+      2017 Cambodia Daily) and matrix rows (1911 UK Official Secrets Act, 1914 UK war correspondents, 1915 UK Globe, 1923 British India
+      Official Secrets Act, 1908 India Newspapers Act, 1971 US Pentagon Papers, 1987 UK Spycatcher, 2001 Russia NTV, 2018 Hungary KESMA,
+      2019 India Kashmir, 2021 Hong Kong Apple Daily, 2022 Russia Novaya Gazeta, 2022 Russia war reporting)
+    - outcomes and leader names on placeholder rows
+    - the "archived copy" state on the HKFP source
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F5F8; --surface:#FFFFFF; --ink:#0E1A2B; --ink-2:#475569; --line:#D5DCE5; --line-2:#B7C2CF;
+  --t0:#E3E8EE; --t1:#BFCBD8; --t2:#8DA2B9; --t3:#536C88; --t4:#243B5A;
+  --accent:#B93A0A; --accent-bg:#FBEDE6;
+  --head:"Inter Tight", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --text:"Inter", "Helvetica Neue", Arial, sans-serif;
+  --gutter:16px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--text);font-size:16px;line-height:1.55;font-feature-settings:"tnum" 1,"cv11" 1}
+a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--line-2)}
+a:hover{color:var(--accent)}
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--gutter);width:100%}
+@media (min-width:900px){:root{--gutter:36px}}
+h1,h2,h3{font-family:var(--head);margin:0;line-height:1.12;letter-spacing:-.015em;text-wrap:balance}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);margin:0 0 8px}
+.num{font-variant-numeric:tabular-nums}
+.cc-code{display:inline-block;font-family:var(--head);font-weight:700;font-size:11.5px;letter-spacing:.04em;background:var(--ink);color:#fff;border-radius:3px;padding:1px 5px;line-height:1.5;vertical-align:1px}
+.cc-code.light{background:var(--t0);color:var(--ink)}
+
+/* Header */
+.topbar{border-top:4px solid var(--accent);background:var(--surface);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;padding-top:16px;padding-bottom:16px;flex-wrap:wrap}
+.brand h1{font-size:28px;font-weight:800;letter-spacing:-.025em}
+.brand p{margin:2px 0 0;font-size:14.5px;color:var(--ink-2)}
+.topnav{display:flex;flex-wrap:wrap;gap:4px;margin:0;padding:0;list-style:none}
+.topnav a{display:block;padding:7px 11px;border-radius:6px;font-size:14.5px;font-weight:600;text-decoration:none}
+.topnav a:hover{background:var(--bg)}
+@media (max-width:700px){.topnav{display:grid;grid-template-columns:repeat(4,1fr);width:100%;gap:2px}.topnav a{padding:7px 2px;text-align:center;font-size:13.5px;background:var(--bg)}}
+
+/* Hero */
+.hero{padding:30px 0 10px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:24px}
+@media (min-width:1000px){.hero-grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:end}}
+.hero h2{font-size:clamp(30px,4vw,48px);font-weight:800}
+.hero h2 .num{color:var(--accent)}
+.hero .lede{font-size:17px;color:var(--ink-2);margin:12px 0 0;max-width:52ch}
+.search{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:0 1px 2px rgba(14,26,43,.06)}
+.search label{font-weight:700;font-size:14px;display:block;margin-bottom:8px}
+.field{display:flex;border:2px solid var(--ink);border-radius:8px;overflow:hidden;background:#fff}
+.field input{flex:1;min-width:0;border:0;padding:13px 14px;font:inherit;font-size:17px;color:var(--ink)}
+.field input::placeholder{color:#5B6878}
+.field button{border:0;background:var(--ink);color:#fff;font:inherit;font-weight:700;padding:0 20px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0;padding:0;list-style:none}
+.chips a{display:inline-flex;gap:6px;align-items:center;border:1px solid var(--line-2);border-radius:999px;padding:5px 12px;font-size:13.5px;font-weight:600;text-decoration:none;background:#fff}
+.chips a span{color:var(--ink-2);font-weight:500}
+.chips a.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.chips a.on span{color:#D5DCE5}
+.eg{font-size:13.5px;color:var(--ink-2);margin:10px 0 0}
+.eg code{font-family:inherit;background:var(--bg);border-radius:4px;padding:1px 5px;color:var(--ink)}
+
+.mapcard{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 18px 14px;margin-top:22px}
+.mapcard .head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px 20px;margin-bottom:10px}
+.mapcard h3{font-size:20px}
+.tilemap{width:100%;height:auto;display:block}
+.tile rect{fill:var(--t0)}
+.tile.t1 rect{fill:var(--t1)} .tile.t2 rect{fill:var(--t2)} .tile.t3 rect{fill:var(--t3)} .tile.t4 rect{fill:var(--t4)}
+.tile.focal rect{stroke:var(--accent);stroke-width:4}
+.tile text{text-anchor:middle;font-family:var(--head);fill:var(--ink)}
+.tile .cc{font-size:13px;font-weight:700}
+.tile .cn{font-size:12px;font-weight:600}
+.tile.t0 .cc{fill:#56657A;font-weight:600;font-size:12px}
+.tile.t3 text,.tile.t4 text{fill:#fff}
+.tilemap a:hover rect{stroke:var(--accent);stroke-width:3}
+.tilemap .cont{font-family:var(--head);font-weight:700;font-size:14px;letter-spacing:.14em;fill:#56657A}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--ink-2);margin:10px 0 0;padding:0;list-style:none}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+@media (max-width:700px){.tilemap text{display:none}}
+
+.continents{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:14px}
+.continents a{display:block;background:var(--bg);border-radius:8px;padding:10px 12px;text-decoration:none;border:1px solid transparent}
+.continents a:hover{border-color:var(--ink)}
+.continents .n{font-family:var(--head);font-weight:800;font-size:28px;line-height:1}
+.continents .l{font-weight:700;font-size:14px;margin-top:4px}
+.continents .s{font-size:12.5px;color:var(--ink-2)}
+@media (max-width:700px){.continents{grid-template-columns:1fr 1fr 1fr;gap:8px}.continents a{padding:8px 10px}.continents .n{font-size:22px}.mapcard{padding:14px 12px 12px}}
+
+/* Section */
+section.block{margin-top:34px}
+.bhead{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px 20px;margin-bottom:14px}
+.bhead h2{font-size:clamp(24px,2.6vw,32px);font-weight:800}
+.bhead a{font-weight:600;font-size:14.5px;color:var(--accent)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px}
+
+/* Focal */
+.focal{display:grid;grid-template-columns:1fr;gap:0;border-top:4px solid var(--accent)}
+@media (min-width:1000px){.focal{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}.focal .side{border-left:1px solid var(--line);padding-left:24px;margin-left:24px}}
+.pill{display:inline-block;background:var(--accent-bg);color:var(--accent);font-weight:700;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:3px 10px}
+.focal h3{font-size:clamp(26px,3vw,38px);font-weight:800;margin:12px 0 10px}
+.focal .where{font-size:14.5px;color:var(--ink-2);display:flex;flex-wrap:wrap;gap:4px 12px;align-items:center}
+.focal p{margin:0 0 12px;max-width:68ch}
+.focal blockquote{margin:14px 0;padding:12px 16px;background:var(--bg);border-radius:8px;font-size:15.5px}
+.focal blockquote cite{display:block;font-style:normal;font-size:13px;color:var(--ink-2);margin-top:6px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;margin:0}
+.facts dt{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.facts dd{margin:2px 0 0;font-size:14.5px;font-weight:500}
+.facts .wide{grid-column:span 2}
+.status{display:inline-flex;align-items:center;gap:6px;font-weight:700}
+.status::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--accent)}
+.same{margin-top:18px;padding-top:14px;border-top:1px solid var(--line)}
+.same h4{font-size:14px;margin:0 0 8px}
+.same ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.same li a{display:flex;gap:10px;align-items:baseline;text-decoration:none;font-size:14.5px}
+.same .y{font-weight:700;min-width:38px}
+
+/* Ways in */
+.ways{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+@media (min-width:1000px){.ways{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.ways h3{font-size:20px;margin-bottom:2px}
+.ways .sub{font-size:13.5px;color:var(--ink-2);margin:0 0 14px}
+.bars{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.bars a{display:grid;grid-template-columns:92px 1fr 34px;gap:10px;align-items:center;text-decoration:none;font-size:14.5px;font-weight:600}
+.bars .track{height:10px;background:var(--t0);border-radius:5px;overflow:hidden}
+.bars .fill{display:block;height:100%;background:var(--t3);border-radius:5px}
+.bars .n{text-align:right;font-weight:700}
+.tchips{display:flex;flex-wrap:wrap;gap:7px;list-style:none;margin:0;padding:0}
+.tchips a{display:inline-flex;gap:7px;align-items:center;border:1px solid var(--line-2);border-radius:6px;padding:5px 9px;font-size:13.5px;font-weight:600;text-decoration:none}
+.tchips b{font-weight:700;color:var(--ink-2)}
+.hist{display:grid;grid-template-columns:repeat(13,minmax(0,1fr));gap:4px;align-items:end;height:150px;border-bottom:1px solid var(--line-2)}
+.hist a{display:block;background:var(--t2);border-radius:3px 3px 0 0;text-decoration:none}
+.hist a.now{background:var(--accent)}
+.hist-l{display:grid;grid-template-columns:repeat(13,minmax(0,1fr));gap:4px;font-size:11px;color:var(--ink-2);text-align:center;margin-top:4px}
+.ways .more{display:inline-block;margin-top:14px;font-weight:700;font-size:14px;color:var(--accent)}
+
+/* Timeline strip */
+.strip{display:grid;grid-template-columns:repeat(13,minmax(0,1fr));gap:0;position:relative}
+.strip::before{content:"";position:absolute;left:0;right:0;top:44px;height:2px;background:var(--line-2)}
+.strip a{position:relative;display:grid;grid-template-rows:28px 34px auto auto;text-decoration:none;padding:0 8px 0 0}
+.strip .dec{font-family:var(--head);font-weight:800;font-size:17px;display:block;height:28px}
+.strip .dot{display:block;border-radius:50%;background:var(--t3);margin:0;align-self:center;justify-self:start;position:relative;z-index:1;border:3px solid var(--surface);box-sizing:content-box}
+.strip a.now .dot{background:var(--accent)}
+.strip .cnt{display:block;font-size:12.5px;font-weight:700;margin-top:6px}
+.strip .anc{display:block;font-size:12.5px;line-height:1.35;color:var(--ink-2);margin-top:4px}
+.strip a:hover .anc{color:var(--accent)}
+@media (max-width:900px){
+  .strip{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 12px}
+  .strip::before{display:none}
+  .strip a{display:grid;grid-template-columns:18px 1fr;grid-template-rows:auto;gap:0 8px;padding:0;border-top:1px solid var(--line);padding-top:8px}
+  .strip .dot{grid-row:1 / span 3;grid-column:1;align-self:start;width:14px!important;height:14px!important;margin:4px 0 0;border:0}
+  .strip .dec,.strip .cnt,.strip .anc{grid-column:2}
+  .strip .cnt{margin-top:0}
+  .strip .dec{height:auto;font-size:16px}
+}
+
+/* Matrix */
+.mx-wrap{overflow:hidden}
+.mx{width:100%;border-collapse:separate;border-spacing:0;font-size:13.5px;line-height:1.35}
+.mx th,.mx td{padding:10px;vertical-align:top;text-align:left;border-bottom:1px solid var(--line)}
+.mx thead th{font-size:13px;font-weight:700;border-bottom:2px solid var(--ink);white-space:nowrap}
+.mx thead th .cc-code{margin-right:6px}
+.mx tbody th{font-family:var(--head);font-size:15px;width:15%}
+.mx tbody th small{display:block;font-family:var(--text);font-weight:500;font-size:12px;color:var(--ink-2);margin-top:3px}
+.mx td{width:14%}
+.mx td.hit{background:#F7F9FB}
+.mx td.focus{background:var(--accent-bg)}
+.e{display:block;text-decoration:none;margin-bottom:8px}
+.e:last-child{margin-bottom:0}
+.e .y{font-weight:700;display:inline-block;margin-right:4px}
+.e .l{display:block;color:var(--ink-2);font-size:12.5px;margin-top:2px}
+.o{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;border-radius:4px;padding:0 5px;margin-left:2px}
+.o.ongoing{background:var(--accent-bg);color:var(--accent)}
+.o.reversed{background:#E3F1EA;color:#1D5B3C}
+.o.sustained,.o.upheld{background:var(--t0);color:#334155}
+.mx .nil{color:#64748B}
+@media (max-width:820px){
+  .mx,.mx tbody,.mx tr,.mx th,.mx td{display:block;width:100%}
+  .mx thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .mx tbody th{width:100%;border-bottom:2px solid var(--ink);padding:14px 0 6px}
+  .mx tbody tr:first-child th{padding-top:0}
+  .mx td{display:grid;grid-template-columns:112px 1fr;gap:0 10px;padding:9px 0;background:transparent!important}
+  .mx td::before{content:attr(data-cc);grid-row:1 / span 4;font-family:var(--head);font-weight:700;font-size:13.5px;border-left:3px solid var(--ink);padding-left:8px;line-height:1.35;align-self:start}
+  .mx td .e{grid-column:2;margin:0 0 6px}
+  .mx td.nilcell{display:none}
+}
+
+/* Coverage + card */
+.duo{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+@media (min-width:1000px){.duo{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}}
+.cov{list-style:none;margin:0;padding:0}
+.cov li{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;padding:12px 0;border-top:1px solid var(--line)}
+.cov li:first-child{border-top:0;padding-top:0}
+.cov .cc-code{grid-row:span 2;margin-top:3px;align-self:start}
+.cov a{font-weight:600;text-decoration:none;line-height:1.35}
+.cov a:hover{text-decoration:underline}
+.cov .m{font-size:13px;color:var(--ink-2)}
+.cov .m b{color:var(--ink);font-weight:600}
+.card .row1{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;font-size:13.5px;color:var(--ink-2)}
+.card h3{font-size:24px;font-weight:800;margin:10px 0 8px}
+.card p{margin:0 0 10px}
+.card .tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px;padding:0;list-style:none}
+.card .tags li{font-size:12.5px;font-weight:600;border:1px solid var(--line-2);border-radius:6px;padding:2px 8px}
+.card .tags li.p{background:var(--ink);color:#fff;border-color:var(--ink)}
+.card .kv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;background:var(--bg);border-radius:8px;padding:12px;margin:4px 0 14px;font-size:14px}
+@media (max-width:700px){.card .kv{grid-template-columns:1fr}}
+.card .kv dt{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--ink-2)}
+.card .kv dd{margin:2px 0 0;font-weight:500}
+.srcs h4{font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 8px;color:var(--ink-2)}
+.srcs ol{margin:0;padding:0;list-style:none;counter-reset:s}
+.srcs li{counter-increment:s;display:grid;grid-template-columns:26px 1fr;gap:8px;padding:8px 0;border-top:1px solid var(--line);font-size:14.5px}
+.srcs li::before{content:counter(s);font-weight:700;color:var(--ink-2);text-align:right}
+.srcs .t{font-weight:600}
+.srcs .m{display:block;font-size:13px;color:var(--ink-2)}
+.srcs .arch{font-weight:700;color:var(--accent)}
+
+/* Footer */
+footer{background:var(--ink);color:#E2E8F0;margin-top:48px;padding:28px 0 36px}
+footer a{color:#fff;text-decoration-color:#64748B}
+footer .pub{font-family:var(--head);font-size:19px;font-weight:700;margin:0 0 6px;color:#fff}
+footer .lic{font-size:14px;margin:0 0 16px;max-width:80ch;color:#CBD5E1}
+footer ul{list-style:none;margin:0;padding:14px 0 0;border-top:1px solid #334155;display:flex;flex-wrap:wrap;gap:8px 22px;font-size:14px;font-weight:600}
+@media (max-width:700px){footer ul{display:grid;grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <h1>The War On News</h1>
+      <p>Government restrictions on journalists, 1900 to today, by country, tactic and time</p>
+    </div>
+    <ul class="topnav" aria-label="Sections">
+      <li><a href="/countries">Countries</a></li><li><a href="/tactics">Tactics</a></li><li><a href="/eras/2020s">Timeline</a></li><li><a href="/compare">Compare</a></li><li><a href="/coverage">Coverage</a></li><li><a href="/cases">Cases</a></li><li><a href="/glossary">Glossary</a></li><li><a href="/about">About</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="wrap">
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <p class="eyebrow">A sourced record, 1900 to 2026</p>
+      <h2><span class="num">128</span> incidents in <span class="num">41</span> countries, placed on one map</h2>
+      <p class="lede">Choose a country, a tactic or a decade and compare how governments have limited journalists, who led them at the time, and how each case ended.</p>
+    </div>
+    <form class="search" action="/search" role="search">
+      <label for="q">Search incidents, laws, outlets and leaders</label>
+      <div class="field"><input id="q" name="q" type="search" placeholder="Try &quot;licence&quot;, &quot;Orbán&quot; or &quot;1975&quot;"><button type="submit">Search</button></div>
+      <ul class="chips" aria-label="Filters">
+        <li><a href="/search?continent=">Continent <span>5</span></a></li>
+        <li><a href="/search?country=">Country <span>41</span></a></li>
+        <li><a class="on" href="/search?tactic=access_ban">Tactic <span>Access ban</span></a></li>
+        <li><a href="/search?from=1900&amp;to=2026">Years <span>1900 to 2026</span></a></li>
+        <li><a href="/search?leader=">Leader</a></li>
+        <li><a href="/search?outcome=">Outcome <span>5</span></a></li>
+        <li><a href="/search?has_court_case=1">Has court case</a></li>
+      </ul>
+      <p class="eg">Filters combine: <code>continent: Europe</code> <code>tactic: outlet licensing</code> <code>1990 to 2019</code></p>
+    </form>
+  </div>
+
+  <div class="mapcard">
+    <div class="head">
+      <h3>By place: every country with a recorded incident</h3>
+      <span style="font-size:13.5px;color:var(--ink-2)">One square per country, arranged roughly by geography</span>
+    </div>
+    <svg class="tilemap" viewBox="-4 -4 1112 560" role="img" aria-labelledby="mapt mapd"><title id="mapt">Incidents by country</title><desc id="mapd">Tile map with one square per country, placed roughly by geography and shaded by the number of incidents recorded. The United States has 22, Russia 8, India 6, Hungary, Hong Kong (China), Türkiye and the United Kingdom 5 each.</desc>
+<a href="/countries/ca"><g class="tile t1"><title>Canada: 2 incidents</title><rect x="92" y="46" width="40" height="40" rx="3"/><text x="112.0" y="63" class="cc">CA</text><text x="112.0" y="78" class="cn">2</text></g></a>
+<a href="/countries/us"><g class="tile t4 focal"><title>United States: 22 incidents</title><rect x="92" y="92" width="40" height="40" rx="3"/><text x="112.0" y="109" class="cc">US</text><text x="112.0" y="124" class="cn">22</text></g></a>
+<a href="/countries/mx"><g class="tile t2"><title>Mexico: 3 incidents</title><rect x="46" y="138" width="40" height="40" rx="3"/><text x="66.0" y="155" class="cc">MX</text><text x="66.0" y="170" class="cn">3</text></g></a>
+<a href="/countries/cu"><g class="tile t1"><title>Cuba: 2 incidents</title><rect x="138" y="138" width="40" height="40" rx="3"/><text x="158.0" y="155" class="cc">CU</text><text x="158.0" y="170" class="cn">2</text></g></a>
+<a href="/countries/gt"><g class="tile t1"><title>Guatemala: 1 incidents</title><rect x="46" y="184" width="40" height="40" rx="3"/><text x="66.0" y="201" class="cc">GT</text><text x="66.0" y="216" class="cn">1</text></g></a>
+<a href="/countries/sv"><g class="tile t2"><title>El Salvador: 3 incidents</title><rect x="92" y="184" width="40" height="40" rx="3"/><text x="112.0" y="201" class="cc">SV</text><text x="112.0" y="216" class="cn">3</text></g></a>
+<a href="/countries/hn"><g class="tile t0"><title>Honduras: 0 incidents</title><rect x="138" y="184" width="40" height="40" rx="3"/><text x="158.0" y="209" class="cc">HN</text></g></a>
+<a href="/countries/co"><g class="tile t0"><title>Colombia: 0 incidents</title><rect x="138" y="276" width="40" height="40" rx="3"/><text x="158.0" y="301" class="cc">CO</text></g></a>
+<a href="/countries/ve"><g class="tile t1"><title>Venezuela: 1 incidents</title><rect x="184" y="276" width="40" height="40" rx="3"/><text x="204.0" y="293" class="cc">VE</text><text x="204.0" y="308" class="cn">1</text></g></a>
+<a href="/countries/ec"><g class="tile t0"><title>Ecuador: 0 incidents</title><rect x="92" y="322" width="40" height="40" rx="3"/><text x="112.0" y="347" class="cc">EC</text></g></a>
+<a href="/countries/pe"><g class="tile t0"><title>Peru: 0 incidents</title><rect x="138" y="322" width="40" height="40" rx="3"/><text x="158.0" y="347" class="cc">PE</text></g></a>
+<a href="/countries/br"><g class="tile t1"><title>Brazil: 2 incidents</title><rect x="184" y="322" width="40" height="40" rx="3"/><text x="204.0" y="339" class="cc">BR</text><text x="204.0" y="354" class="cn">2</text></g></a>
+<a href="/countries/bo"><g class="tile t0"><title>Bolivia: 0 incidents</title><rect x="138" y="368" width="40" height="40" rx="3"/><text x="158.0" y="393" class="cc">BO</text></g></a>
+<a href="/countries/py"><g class="tile t0"><title>Paraguay: 0 incidents</title><rect x="184" y="368" width="40" height="40" rx="3"/><text x="204.0" y="393" class="cc">PY</text></g></a>
+<a href="/countries/cl"><g class="tile t1"><title>Chile: 1 incidents</title><rect x="92" y="414" width="40" height="40" rx="3"/><text x="112.0" y="431" class="cc">CL</text><text x="112.0" y="446" class="cn">1</text></g></a>
+<a href="/countries/ar"><g class="tile t1"><title>Argentina: 1 incidents</title><rect x="138" y="414" width="40" height="40" rx="3"/><text x="158.0" y="431" class="cc">AR</text><text x="158.0" y="446" class="cn">1</text></g></a>
+<a href="/countries/uy"><g class="tile t0"><title>Uruguay: 0 incidents</title><rect x="184" y="414" width="40" height="40" rx="3"/><text x="204.0" y="439" class="cc">UY</text></g></a>
+<a href="/countries/is"><g class="tile t0"><title>Iceland: 0 incidents</title><rect x="368" y="0" width="40" height="40" rx="3"/><text x="388.0" y="25" class="cc">IS</text></g></a>
+<a href="/countries/no"><g class="tile t0"><title>Norway: 0 incidents</title><rect x="460" y="0" width="40" height="40" rx="3"/><text x="480.0" y="25" class="cc">NO</text></g></a>
+<a href="/countries/se"><g class="tile t0"><title>Sweden: 0 incidents</title><rect x="506" y="0" width="40" height="40" rx="3"/><text x="526.0" y="25" class="cc">SE</text></g></a>
+<a href="/countries/fi"><g class="tile t0"><title>Finland: 0 incidents</title><rect x="552" y="0" width="40" height="40" rx="3"/><text x="572.0" y="25" class="cc">FI</text></g></a>
+<a href="/countries/ie"><g class="tile t0"><title>Ireland: 0 incidents</title><rect x="368" y="46" width="40" height="40" rx="3"/><text x="388.0" y="71" class="cc">IE</text></g></a>
+<a href="/countries/gb"><g class="tile t3"><title>United Kingdom: 5 incidents</title><rect x="414" y="46" width="40" height="40" rx="3"/><text x="434.0" y="63" class="cc">GB</text><text x="434.0" y="78" class="cn">5</text></g></a>
+<a href="/countries/nl"><g class="tile t0"><title>Netherlands: 0 incidents</title><rect x="460" y="46" width="40" height="40" rx="3"/><text x="480.0" y="71" class="cc">NL</text></g></a>
+<a href="/countries/de"><g class="tile t2"><title>Germany: 3 incidents</title><rect x="506" y="46" width="40" height="40" rx="3"/><text x="526.0" y="63" class="cc">DE</text><text x="526.0" y="78" class="cn">3</text></g></a>
+<a href="/countries/pl"><g class="tile t0"><title>Poland: 0 incidents</title><rect x="552" y="46" width="40" height="40" rx="3"/><text x="572.0" y="71" class="cc">PL</text></g></a>
+<a href="/countries/by"><g class="tile t2"><title>Belarus: 3 incidents</title><rect x="598" y="46" width="40" height="40" rx="3"/><text x="618.0" y="63" class="cc">BY</text><text x="618.0" y="78" class="cn">3</text></g></a>
+<a href="/countries/ru"><g class="tile t3"><title>Russia: 8 incidents</title><rect x="644" y="46" width="40" height="40" rx="3"/><text x="664.0" y="63" class="cc">RU</text><text x="664.0" y="78" class="cn">8</text></g></a>
+<a href="/countries/fr"><g class="tile t1"><title>France: 2 incidents</title><rect x="414" y="92" width="40" height="40" rx="3"/><text x="434.0" y="109" class="cc">FR</text><text x="434.0" y="124" class="cn">2</text></g></a>
+<a href="/countries/ch"><g class="tile t0"><title>Switzerland: 0 incidents</title><rect x="460" y="92" width="40" height="40" rx="3"/><text x="480.0" y="117" class="cc">CH</text></g></a>
+<a href="/countries/at"><g class="tile t0"><title>Austria: 0 incidents</title><rect x="506" y="92" width="40" height="40" rx="3"/><text x="526.0" y="117" class="cc">AT</text></g></a>
+<a href="/countries/hu"><g class="tile t3"><title>Hungary: 5 incidents</title><rect x="552" y="92" width="40" height="40" rx="3"/><text x="572.0" y="109" class="cc">HU</text><text x="572.0" y="124" class="cn">5</text></g></a>
+<a href="/countries/ua"><g class="tile t0"><title>Ukraine: 0 incidents</title><rect x="598" y="92" width="40" height="40" rx="3"/><text x="618.0" y="117" class="cc">UA</text></g></a>
+<a href="/countries/kz"><g class="tile t0"><title>Kazakhstan: 0 incidents</title><rect x="690" y="92" width="40" height="40" rx="3"/><text x="710.0" y="117" class="cc">KZ</text></g></a>
+<a href="/countries/mn"><g class="tile t0"><title>Mongolia: 0 incidents</title><rect x="828" y="92" width="40" height="40" rx="3"/><text x="848.0" y="117" class="cc">MN</text></g></a>
+<a href="/countries/pt"><g class="tile t0"><title>Portugal: 0 incidents</title><rect x="368" y="138" width="40" height="40" rx="3"/><text x="388.0" y="163" class="cc">PT</text></g></a>
+<a href="/countries/es"><g class="tile t0"><title>Spain: 0 incidents</title><rect x="414" y="138" width="40" height="40" rx="3"/><text x="434.0" y="163" class="cc">ES</text></g></a>
+<a href="/countries/it"><g class="tile t1"><title>Italy: 2 incidents</title><rect x="460" y="138" width="40" height="40" rx="3"/><text x="480.0" y="155" class="cc">IT</text><text x="480.0" y="170" class="cn">2</text></g></a>
+<a href="/countries/rs"><g class="tile t1"><title>Serbia: 2 incidents</title><rect x="506" y="138" width="40" height="40" rx="3"/><text x="526.0" y="155" class="cc">RS</text><text x="526.0" y="170" class="cn">2</text></g></a>
+<a href="/countries/gr"><g class="tile t0"><title>Greece: 0 incidents</title><rect x="552" y="138" width="40" height="40" rx="3"/><text x="572.0" y="163" class="cc">GR</text></g></a>
+<a href="/countries/tr"><g class="tile t3"><title>Türkiye: 5 incidents</title><rect x="598" y="138" width="40" height="40" rx="3"/><text x="618.0" y="155" class="cc">TR</text><text x="618.0" y="170" class="cn">5</text></g></a>
+<a href="/countries/cn"><g class="tile t2"><title>China: 4 incidents</title><rect x="828" y="138" width="40" height="40" rx="3"/><text x="848.0" y="155" class="cc">CN</text><text x="848.0" y="170" class="cn">4</text></g></a>
+<a href="/countries/kr"><g class="tile t0"><title>South Korea: 0 incidents</title><rect x="920" y="138" width="40" height="40" rx="3"/><text x="940.0" y="163" class="cc">KR</text></g></a>
+<a href="/countries/jp"><g class="tile t0"><title>Japan: 0 incidents</title><rect x="966" y="138" width="40" height="40" rx="3"/><text x="986.0" y="163" class="cc">JP</text></g></a>
+<a href="/countries/il"><g class="tile t2"><title>Israel: 4 incidents</title><rect x="552" y="184" width="40" height="40" rx="3"/><text x="572.0" y="201" class="cc">IL</text><text x="572.0" y="216" class="cn">4</text></g></a>
+<a href="/countries/sy"><g class="tile t0"><title>Syria: 0 incidents</title><rect x="598" y="184" width="40" height="40" rx="3"/><text x="618.0" y="209" class="cc">SY</text></g></a>
+<a href="/countries/iq"><g class="tile t0"><title>Iraq: 0 incidents</title><rect x="644" y="184" width="40" height="40" rx="3"/><text x="664.0" y="209" class="cc">IQ</text></g></a>
+<a href="/countries/ir"><g class="tile t2"><title>Iran: 3 incidents</title><rect x="690" y="184" width="40" height="40" rx="3"/><text x="710.0" y="201" class="cc">IR</text><text x="710.0" y="216" class="cn">3</text></g></a>
+<a href="/countries/af"><g class="tile t1"><title>Afghanistan: 1 incidents</title><rect x="736" y="184" width="40" height="40" rx="3"/><text x="756.0" y="201" class="cc">AF</text><text x="756.0" y="216" class="cn">1</text></g></a>
+<a href="/countries/pk"><g class="tile t1"><title>Pakistan: 1 incidents</title><rect x="782" y="184" width="40" height="40" rx="3"/><text x="802.0" y="201" class="cc">PK</text><text x="802.0" y="216" class="cn">1</text></g></a>
+<a href="/countries/hk"><g class="tile t3"><title>Hong Kong (China): 5 incidents</title><rect x="874" y="184" width="40" height="40" rx="3"/><text x="894.0" y="201" class="cc">HK</text><text x="894.0" y="216" class="cn">5</text></g></a>
+<a href="/countries/tw"><g class="tile t0"><title>Taiwan: 0 incidents</title><rect x="920" y="184" width="40" height="40" rx="3"/><text x="940.0" y="209" class="cc">TW</text></g></a>
+<a href="/countries/ma"><g class="tile t0"><title>Morocco: 0 incidents</title><rect x="368" y="230" width="40" height="40" rx="3"/><text x="388.0" y="255" class="cc">MA</text></g></a>
+<a href="/countries/dz"><g class="tile t1"><title>Algeria: 1 incidents</title><rect x="414" y="230" width="40" height="40" rx="3"/><text x="434.0" y="247" class="cc">DZ</text><text x="434.0" y="262" class="cn">1</text></g></a>
+<a href="/countries/ly"><g class="tile t0"><title>Libya: 0 incidents</title><rect x="460" y="230" width="40" height="40" rx="3"/><text x="480.0" y="255" class="cc">LY</text></g></a>
+<a href="/countries/eg"><g class="tile t2"><title>Egypt: 3 incidents</title><rect x="506" y="230" width="40" height="40" rx="3"/><text x="526.0" y="247" class="cc">EG</text><text x="526.0" y="262" class="cn">3</text></g></a>
+<a href="/countries/sa"><g class="tile t1"><title>Saudi Arabia: 2 incidents</title><rect x="598" y="230" width="40" height="40" rx="3"/><text x="618.0" y="247" class="cc">SA</text><text x="618.0" y="262" class="cn">2</text></g></a>
+<a href="/countries/in"><g class="tile t3"><title>India: 6 incidents</title><rect x="782" y="230" width="40" height="40" rx="3"/><text x="802.0" y="247" class="cc">IN</text><text x="802.0" y="262" class="cn">6</text></g></a>
+<a href="/countries/bd"><g class="tile t0"><title>Bangladesh: 0 incidents</title><rect x="828" y="230" width="40" height="40" rx="3"/><text x="848.0" y="255" class="cc">BD</text></g></a>
+<a href="/countries/mm"><g class="tile t1"><title>Myanmar: 2 incidents</title><rect x="874" y="230" width="40" height="40" rx="3"/><text x="894.0" y="247" class="cc">MM</text><text x="894.0" y="262" class="cn">2</text></g></a>
+<a href="/countries/ph"><g class="tile t1"><title>Philippines: 2 incidents</title><rect x="1012" y="230" width="40" height="40" rx="3"/><text x="1032.0" y="247" class="cc">PH</text><text x="1032.0" y="262" class="cn">2</text></g></a>
+<a href="/countries/sn"><g class="tile t0"><title>Senegal: 0 incidents</title><rect x="322" y="276" width="40" height="40" rx="3"/><text x="342.0" y="301" class="cc">SN</text></g></a>
+<a href="/countries/ml"><g class="tile t0"><title>Mali: 0 incidents</title><rect x="368" y="276" width="40" height="40" rx="3"/><text x="388.0" y="301" class="cc">ML</text></g></a>
+<a href="/countries/ne"><g class="tile t0"><title>Niger: 0 incidents</title><rect x="414" y="276" width="40" height="40" rx="3"/><text x="434.0" y="301" class="cc">NE</text></g></a>
+<a href="/countries/td"><g class="tile t0"><title>Chad: 0 incidents</title><rect x="460" y="276" width="40" height="40" rx="3"/><text x="480.0" y="301" class="cc">TD</text></g></a>
+<a href="/countries/sd"><g class="tile t0"><title>Sudan: 0 incidents</title><rect x="506" y="276" width="40" height="40" rx="3"/><text x="526.0" y="301" class="cc">SD</text></g></a>
+<a href="/countries/er"><g class="tile t1"><title>Eritrea: 1 incidents</title><rect x="552" y="276" width="40" height="40" rx="3"/><text x="572.0" y="293" class="cc">ER</text><text x="572.0" y="308" class="cn">1</text></g></a>
+<a href="/countries/ye"><g class="tile t0"><title>Yemen: 0 incidents</title><rect x="644" y="276" width="40" height="40" rx="3"/><text x="664.0" y="301" class="cc">YE</text></g></a>
+<a href="/countries/th"><g class="tile t0"><title>Thailand: 0 incidents</title><rect x="874" y="276" width="40" height="40" rx="3"/><text x="894.0" y="301" class="cc">TH</text></g></a>
+<a href="/countries/kh"><g class="tile t1"><title>Cambodia: 1 incidents</title><rect x="920" y="276" width="40" height="40" rx="3"/><text x="940.0" y="293" class="cc">KH</text><text x="940.0" y="308" class="cn">1</text></g></a>
+<a href="/countries/vn"><g class="tile t0"><title>Viet Nam: 0 incidents</title><rect x="966" y="276" width="40" height="40" rx="3"/><text x="986.0" y="301" class="cc">VN</text></g></a>
+<a href="/countries/ng"><g class="tile t1"><title>Nigeria: 2 incidents</title><rect x="414" y="322" width="40" height="40" rx="3"/><text x="434.0" y="339" class="cc">NG</text><text x="434.0" y="354" class="cn">2</text></g></a>
+<a href="/countries/cm"><g class="tile t0"><title>Cameroon: 0 incidents</title><rect x="460" y="322" width="40" height="40" rx="3"/><text x="480.0" y="347" class="cc">CM</text></g></a>
+<a href="/countries/ss"><g class="tile t0"><title>South Sudan: 0 incidents</title><rect x="506" y="322" width="40" height="40" rx="3"/><text x="526.0" y="347" class="cc">SS</text></g></a>
+<a href="/countries/et"><g class="tile t2"><title>Ethiopia: 3 incidents</title><rect x="552" y="322" width="40" height="40" rx="3"/><text x="572.0" y="339" class="cc">ET</text><text x="572.0" y="354" class="cn">3</text></g></a>
+<a href="/countries/my"><g class="tile t0"><title>Malaysia: 0 incidents</title><rect x="920" y="322" width="40" height="40" rx="3"/><text x="940.0" y="347" class="cc">MY</text></g></a>
+<a href="/countries/cd"><g class="tile t0"><title>DR Congo: 0 incidents</title><rect x="460" y="368" width="40" height="40" rx="3"/><text x="480.0" y="393" class="cc">CD</text></g></a>
+<a href="/countries/ug"><g class="tile t0"><title>Uganda: 0 incidents</title><rect x="506" y="368" width="40" height="40" rx="3"/><text x="526.0" y="393" class="cc">UG</text></g></a>
+<a href="/countries/ke"><g class="tile t1"><title>Kenya: 2 incidents</title><rect x="552" y="368" width="40" height="40" rx="3"/><text x="572.0" y="385" class="cc">KE</text><text x="572.0" y="400" class="cn">2</text></g></a>
+<a href="/countries/id"><g class="tile t0"><title>Indonesia: 0 incidents</title><rect x="966" y="368" width="40" height="40" rx="3"/><text x="986.0" y="393" class="cc">ID</text></g></a>
+<a href="/countries/pg"><g class="tile t0"><title>Papua New Guinea: 0 incidents</title><rect x="1012" y="368" width="40" height="40" rx="3"/><text x="1032.0" y="393" class="cc">PG</text></g></a>
+<a href="/countries/ao"><g class="tile t0"><title>Angola: 0 incidents</title><rect x="460" y="414" width="40" height="40" rx="3"/><text x="480.0" y="439" class="cc">AO</text></g></a>
+<a href="/countries/rw"><g class="tile t1"><title>Rwanda: 1 incidents</title><rect x="506" y="414" width="40" height="40" rx="3"/><text x="526.0" y="431" class="cc">RW</text><text x="526.0" y="446" class="cn">1</text></g></a>
+<a href="/countries/tz"><g class="tile t0"><title>Tanzania: 0 incidents</title><rect x="552" y="414" width="40" height="40" rx="3"/><text x="572.0" y="439" class="cc">TZ</text></g></a>
+<a href="/countries/fj"><g class="tile t1"><title>Fiji: 2 incidents</title><rect x="1058" y="414" width="40" height="40" rx="3"/><text x="1078.0" y="431" class="cc">FJ</text><text x="1078.0" y="446" class="cn">2</text></g></a>
+<a href="/countries/zw"><g class="tile t1"><title>Zimbabwe: 2 incidents</title><rect x="506" y="460" width="40" height="40" rx="3"/><text x="526.0" y="477" class="cc">ZW</text><text x="526.0" y="492" class="cn">2</text></g></a>
+<a href="/countries/mz"><g class="tile t0"><title>Mozambique: 0 incidents</title><rect x="552" y="460" width="40" height="40" rx="3"/><text x="572.0" y="485" class="cc">MZ</text></g></a>
+<a href="/countries/au"><g class="tile t2"><title>Australia: 4 incidents</title><rect x="966" y="460" width="40" height="40" rx="3"/><text x="986.0" y="477" class="cc">AU</text><text x="986.0" y="492" class="cn">4</text></g></a>
+<a href="/countries/za"><g class="tile t2"><title>South Africa: 3 incidents</title><rect x="460" y="506" width="40" height="40" rx="3"/><text x="480.0" y="523" class="cc">ZA</text><text x="480.0" y="538" class="cn">3</text></g></a>
+<a href="/countries/nz"><g class="tile t0"><title>New Zealand: 0 incidents</title><rect x="1058" y="506" width="40" height="40" rx="3"/><text x="1078.0" y="531" class="cc">NZ</text></g></a>
+<text x="0" y="515.1999999999999" class="cont">AMERICAS</text>
+<text x="699.1999999999999" y="25.3" class="cont">EUROPE</text>
+<text x="745.1999999999999" y="71.3" class="cont">ASIA</text>
+<text x="285.2" y="469.2" class="cont">AFRICA</text>
+<text x="947.6" y="531.3000000000001" class="cont">OCEANIA</text>
+</svg>
+    <ul class="legend" aria-label="Legend">
+      <li><i style="background:var(--t0)"></i>None recorded yet</li>
+      <li><i style="background:var(--t1)"></i>1 to 2</li>
+      <li><i style="background:var(--t2)"></i>3 to 4</li>
+      <li><i style="background:var(--t3)"></i>5 to 8</li>
+      <li><i style="background:var(--t4)"></i>9 or more</li>
+      <li><i style="background:#fff;border:3px solid var(--accent)"></i>Current chapter</li>
+    </ul>
+    <nav class="continents" aria-label="Continents">
+      <a href="/continents/americas"><div class="n num">38</div><div class="l">Americas</div><div class="s">10 countries</div></a>
+      <a href="/continents/asia"><div class="n num">36</div><div class="l">Asia</div><div class="s">12 countries</div></a>
+      <a href="/continents/europe"><div class="n num">30</div><div class="l">Europe</div><div class="s">8 countries</div></a>
+      <a href="/continents/africa"><div class="n num">18</div><div class="l">Africa</div><div class="s">9 countries</div></a>
+      <a href="/continents/oceania"><div class="n num">6</div><div class="l">Oceania</div><div class="s">2 countries</div></a>
+    </nav>
+  </div>
+</section>
+
+<!-- Focal case -->
+<section class="block" aria-labelledby="focal-h">
+  <div class="panel focal">
+    <div>
+      <span class="pill">Current chapter</span>
+      <h3 id="focal-h">The White House bars reporters from CNN, MS NOW and Politico</h3>
+      <div class="where"><span class="cc-code">US</span><span>United States · Americas · national government</span><span>18 September 2026</span></div>
+      <p style="margin-top:14px">Donald Trump, the president of the United States, announced on 18 September 2026 that three news organisations would be barred from the White House, the president's official residence and office. The next day the Secret Service, the federal agency that protects the president, deactivated the outlets' hard passes (the standing credential that lets a reporter enter the White House press area) and turned their reporters away at the gates.</p>
+      <p>The president called the outlets' coverage "FICTION and LIES". The White House has not said which story prompted the ban.</p>
+      <blockquote>"The Constitution's press protections do not depend on whether the president likes a news organization's coverage."<cite>White House Correspondents' Association, the organisation of reporters who cover the president, 18 September 2026</cite></blockquote>
+    </div>
+    <div class="side">
+      <dl class="facts">
+        <div><dt>Tactic</dt><dd>Access ban</dd></div>
+        <div><dt>Also</dt><dd>Credential control</dd></div>
+        <div><dt>Head of government</dt><dd>Donald Trump, president of the United States</dd></div>
+        <div><dt>Acting office</dt><dd>White House Press Office; Secret Service</dd></div>
+        <div class="wide"><dt>Outcome</dt><dd><span class="status">Ongoing</span> CNN, MS NOW and Politico sued on 21 September in the U.S. District Court for the District of Columbia, a federal trial court in the capital of the United States. Docket 1:26-cv-03287; hearing set for 23 September.</dd></div>
+      </dl>
+      <div class="same">
+        <h4>The same tactic in other places and years</h4>
+        <ul>
+          <li><a href="/incidents/2026-israel-maintains-ban-on-foreign-press-access-to-gaza"><span class="cc-code">IL</span><span class="y">2026</span>Israel: independent foreign press barred from Gaza</a></li>
+          <li><a href="#"><span class="cc-code">IN</span><span class="y">2019</span>India: reporters barred from Jammu and Kashmir</a></li>
+          <li><a href="/incidents/2018-white-house-revokes-acosta-press-pass"><span class="cc-code">US</span><span class="y">2018</span>United States: CNN reporter's pass revoked, restored by a court</a></li>
+          <li><a href="#"><span class="cc-code">GB</span><span class="y">1914</span>United Kingdom: war correspondents barred from the front</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Three ways in -->
+<section class="block" aria-labelledby="ways-h">
+  <div class="bhead"><h2 id="ways-h">Three ways in</h2><span style="font-size:14px;color:var(--ink-2)">Every filtered view has its own address, plus CSV and JSON</span></div>
+  <div class="ways">
+    <div class="panel">
+      <h3>By place</h3><p class="sub">Continent, then country and jurisdiction</p>
+      <ul class="bars">
+        <li><a href="/continents/americas"><span>Americas</span><span class="track"><span class="fill" style="width:100%"></span></span><span class="n num">38</span></a></li>
+        <li><a href="/continents/asia"><span>Asia</span><span class="track"><span class="fill" style="width:95%"></span></span><span class="n num">36</span></a></li>
+        <li><a href="/continents/europe"><span>Europe</span><span class="track"><span class="fill" style="width:79%"></span></span><span class="n num">30</span></a></li>
+        <li><a href="/continents/africa"><span>Africa</span><span class="track"><span class="fill" style="width:47%"></span></span><span class="n num">18</span></a></li>
+        <li><a href="/continents/oceania"><span>Oceania</span><span class="track"><span class="fill" style="width:16%"></span></span><span class="n num">6</span></a></li>
+      </ul>
+      <a class="more" href="/countries">All 41 countries</a>
+    </div>
+    <div class="panel">
+      <h3>By tactic</h3><p class="sub">13 tactics; each incident has one primary tactic</p>
+      <ul class="tchips">
+        <li><a href="/tactics/detention_and_violence">Detention and violence <b class="num">15</b></a></li>
+        <li><a href="/tactics/access_ban">Access bans <b class="num">14</b></a></li>
+        <li><a href="/tactics/prior_restraint">Prior restraint <b class="num">13</b></a></li>
+        <li><a href="/tactics/outlet_licensing">Outlet licensing <b class="num">12</b></a></li>
+        <li><a href="/tactics/insult_and_defamation_laws">Insult and defamation laws <b class="num">11</b></a></li>
+        <li><a href="/tactics/funding_and_ownership_pressure">Funding and ownership <b class="num">10</b></a></li>
+        <li><a href="/tactics/secrets_and_espionage_laws">Secrets and espionage laws <b class="num">9</b></a></li>
+        <li><a href="/tactics/expulsion_and_visa_denial">Expulsion and visa denial <b class="num">9</b></a></li>
+        <li><a href="/tactics/credential_control">Credential control <b class="num">8</b></a></li>
+        <li><a href="/tactics/surveillance_and_subpoenas">Surveillance and subpoenas <b class="num">8</b></a></li>
+        <li><a href="/tactics/shutdowns_and_blocking">Shutdowns and blocking <b class="num">8</b></a></li>
+        <li><a href="/tactics/lawsuits_against_press">Lawsuits against the press <b class="num">6</b></a></li>
+        <li><a href="/tactics/disinformation_labeling">Disinformation labelling <b class="num">5</b></a></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>By time</h3><p class="sub">Anchors per decade from 1900; every sourced incident from 2020</p>
+      <div class="hist" aria-hidden="true">
+        <a style="height:5%"></a><a style="height:8%"></a><a style="height:6%"></a><a style="height:10%"></a><a style="height:8%"></a><a style="height:6%"></a><a style="height:8%"></a><a style="height:13%"></a><a style="height:10%"></a><a style="height:8%"></a><a style="height:10%"></a><a style="height:15%"></a><a class="now" style="height:100%"></a>
+      </div>
+      <div class="hist-l" aria-hidden="true"><span>00</span><span>10</span><span>20</span><span>30</span><span>40</span><span>50</span><span>60</span><span>70</span><span>80</span><span>90</span><span>00</span><span>10</span><span>20</span></div>
+      <p class="sub" style="margin-top:12px">66 anchor incidents, 1900 to 2019 · 62 incidents since 2020</p>
+      <a class="more" href="/eras/2020s">Open the timeline</a>
+    </div>
+  </div>
+</section>
+
+<!-- Timeline -->
+<section class="block" aria-labelledby="tl-h">
+  <div class="bhead"><h2 id="tl-h">1900 to 2026</h2><a href="/eras/1900s">Every decade</a></div>
+  <div class="panel">
+    <nav class="strip" aria-label="Decades">
+      <a href="/eras/1900s"><span class="dec">1900s</span><span class="dot" style="width:12px;height:12px"></span><span class="cnt num">3</span><span class="anc">1908 · India (British rule) · Tilak jailed for sedition</span></a>
+      <a href="/eras/1910s"><span class="dec">1910s</span><span class="dot" style="width:17px;height:17px"></span><span class="cnt num">5</span><span class="anc">1917 · United States · Espionage Act</span></a>
+      <a href="/eras/1920s"><span class="dec">1920s</span><span class="dot" style="width:16px;height:16px"></span><span class="cnt num">4</span><span class="anc">1926 · Italy · opposition papers closed</span></a>
+      <a href="/eras/1930s"><span class="dec">1930s</span><span class="dot" style="width:18px;height:18px"></span><span class="cnt num">6</span><span class="anc">1933 · Germany · Editors Law licenses journalists</span></a>
+      <a href="/eras/1940s"><span class="dec">1940s</span><span class="dot" style="width:17px;height:17px"></span><span class="cnt num">5</span><span class="anc">1940 · Canada · wartime newspaper bans</span></a>
+      <a href="/eras/1950s"><span class="dec">1950s</span><span class="dot" style="width:16px;height:16px"></span><span class="cnt num">4</span><span class="anc">1956 · Hungary · revolutionary papers shut</span></a>
+      <a href="/eras/1960s"><span class="dec">1960s</span><span class="dot" style="width:17px;height:17px"></span><span class="cnt num">5</span><span class="anc">1962 · West Germany · Spiegel editors arrested</span></a>
+      <a href="/eras/1970s"><span class="dec">1970s</span><span class="dot" style="width:20px;height:20px"></span><span class="cnt num">8</span><span class="anc">1975 · India · Emergency censorship</span></a>
+      <a href="/eras/1980s"><span class="dec">1980s</span><span class="dot" style="width:18px;height:18px"></span><span class="cnt num">6</span><span class="anc">1988 · United Kingdom · broadcasting ban</span></a>
+      <a href="/eras/1990s"><span class="dec">1990s</span><span class="dot" style="width:17px;height:17px"></span><span class="cnt num">5</span><span class="anc">1998 · Serbia · Public Information Law</span></a>
+      <a href="/eras/2000s"><span class="dec">2000s</span><span class="dot" style="width:18px;height:18px"></span><span class="cnt num">6</span><span class="anc">2001 · Russia · NTV taken over</span></a>
+      <a href="/eras/2010s"><span class="dec">2010s</span><span class="dot" style="width:21px;height:21px"></span><span class="cnt num">9</span><span class="anc">2017 · Cambodia · Cambodia Daily closed</span></a>
+      <a href="/eras/2020s" class="now"><span class="dec">2020s</span><span class="dot" style="width:24px;height:24px"></span><span class="cnt num">62</span><span class="anc">2026 · United States · three outlets barred</span></a>
+    </nav>
+  </div>
+</section>
+
+<!-- Matrix -->
+<section class="block" aria-labelledby="mx-h">
+  <div class="bhead"><h2 id="mx-h">Who did what, when</h2><a href="/compare">Full comparison: 13 tactics, 41 countries</a></div>
+  <div class="panel mx-wrap">
+    <table class="mx">
+      <thead><tr><th scope="col">Tactic</th><th scope="col"><span class="cc-code">US</span>United States</th><th scope="col"><span class="cc-code">GB</span>United Kingdom</th><th scope="col"><span class="cc-code">IN</span>India</th><th scope="col"><span class="cc-code">RU</span>Russia</th><th scope="col"><span class="cc-code">HU</span>Hungary</th><th scope="col"><span class="cc-code">HK</span>Hong Kong</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Access bans<small>Briefings, buildings, pools, travel</small></th>
+          <td class="focus" data-cc="United States"><a class="e" href="#"><span class="y">2026</span>CNN, MS NOW, Politico barred<span class="l">Donald Trump <span class="o ongoing">Ongoing</span></span></a><a class="e" href="#"><span class="y">2025</span>AP barred from Oval Office<span class="l">Donald Trump <span class="o ongoing">On appeal</span></span></a></td>
+          <td class="hit" data-cc="United Kingdom"><a class="e" href="#"><span class="y">1914</span>War correspondents barred from the front<span class="l">H. H. Asquith <span class="o reversed">Reversed 1915</span></span></a></td>
+          <td class="hit" data-cc="India"><a class="e" href="#"><span class="y">2019</span>Reporters barred from Kashmir<span class="l">Narendra Modi <span class="o sustained">Sustained</span></span></a></td>
+          <td class="nilcell" data-cc="Russia"><span class="nil">None recorded</span></td><td class="nilcell" data-cc="Hungary"><span class="nil">None recorded</span></td><td class="nilcell" data-cc="Hong Kong (China)"><span class="nil">None recorded</span></td></tr>
+        <tr><th scope="row">Secrets and espionage laws<small>Prosecuting disclosure</small></th>
+          <td class="hit" data-cc="United States"><a class="e" href="#"><span class="y">1917</span>Espionage Act passed<span class="l">Woodrow Wilson <span class="o sustained">Sustained</span></span></a><a class="e" href="#"><span class="y">2013</span>Eight charged for leaks to the press<span class="l">Barack Obama <span class="o sustained">Sustained</span></span></a></td>
+          <td class="hit" data-cc="United Kingdom"><a class="e" href="#"><span class="y">1911</span>Official Secrets Act<span class="l">H. H. Asquith <span class="o sustained">Replaced 1989</span></span></a></td>
+          <td class="hit" data-cc="India"><a class="e" href="#"><span class="y">1923</span>Official Secrets Act, British India<span class="l">Lord Reading <span class="o sustained">Sustained</span></span></a></td>
+          <td class="nilcell" data-cc="Russia"><span class="nil">None recorded</span></td><td class="nilcell" data-cc="Hungary"><span class="nil">None recorded</span></td>
+          <td class="hit" data-cc="Hong Kong (China)"><a class="e" href="#"><span class="y">2025</span>Jimmy Lai convicted<span class="l">John Lee <span class="o sustained">Sustained</span></span></a></td></tr>
+        <tr><th scope="row">Prior restraint<small>Censorship, injunctions</small></th>
+          <td class="hit" data-cc="United States"><a class="e" href="#"><span class="y">1971</span>Pentagon Papers injunction<span class="l">Richard Nixon <span class="o reversed">Reversed 1971</span></span></a></td>
+          <td class="hit" data-cc="United Kingdom"><a class="e" href="#"><span class="y">1987</span>Spycatcher injunctions<span class="l">Margaret Thatcher <span class="o reversed">Lifted 1988</span></span></a></td>
+          <td class="hit" data-cc="India"><a class="e" href="#"><span class="y">1975</span>Emergency press censorship<span class="l">Indira Gandhi <span class="o reversed">Reversed 1977</span></span></a></td>
+          <td class="hit" data-cc="Russia"><a class="e" href="#"><span class="y">2022</span>War reporting limited to official sources<span class="l">Vladimir Putin <span class="o ongoing">Ongoing</span></span></a></td>
+          <td class="nilcell" data-cc="Hungary"><span class="nil">None recorded</span></td><td class="nilcell" data-cc="Hong Kong (China)"><span class="nil">None recorded</span></td></tr>
+        <tr><th scope="row">Outlet licensing and closure<small>Licences, registration</small></th>
+          <td class="nilcell" data-cc="United States"><span class="nil">None recorded</span></td>
+          <td class="hit" data-cc="United Kingdom"><a class="e" href="#"><span class="y">1915</span>The Globe suppressed<span class="l">H. H. Asquith <span class="o reversed">Reversed 1915</span></span></a></td>
+          <td class="hit" data-cc="India"><a class="e" href="#"><span class="y">1908</span>Presses seized, Newspapers Act<span class="l">Lord Minto <span class="o reversed">Repealed 1922</span></span></a></td>
+          <td class="hit" data-cc="Russia"><a class="e" href="#"><span class="y">2022</span>Novaya Gazeta licence revoked<span class="l">Vladimir Putin <span class="o upheld">Upheld</span></span></a></td>
+          <td class="nilcell" data-cc="Hungary"><span class="nil">None recorded</span></td>
+          <td class="hit" data-cc="Hong Kong (China)"><a class="e" href="#"><span class="y">2021</span>Apple Daily forced to close<span class="l">Carrie Lam <span class="o sustained">Sustained</span></span></a></td></tr>
+        <tr><th scope="row">Funding and ownership<small>Defunding, forced sales</small></th>
+          <td class="hit" data-cc="United States"><a class="e" href="#"><span class="y">2025</span>Federal funding for NPR and PBS ended<span class="l">Donald Trump <span class="o ongoing">Ongoing</span></span></a></td>
+          <td class="nilcell" data-cc="United Kingdom"><span class="nil">None recorded</span></td><td class="nilcell" data-cc="India"><span class="nil">None recorded</span></td>
+          <td class="hit" data-cc="Russia"><a class="e" href="#"><span class="y">2001</span>NTV taken over by Gazprom-Media<span class="l">Vladimir Putin <span class="o sustained">Sustained</span></span></a></td>
+          <td class="hit" data-cc="Hungary"><a class="e" href="#"><span class="y">2018</span>476 outlets pooled into KESMA<span class="l">Viktor Orbán <span class="o sustained">Sustained</span></span></a></td>
+          <td class="nilcell" data-cc="Hong Kong (China)"><span class="nil">None recorded</span></td></tr>
+        <tr><th scope="row">Disinformation labelling<small>"Fake news", "foreign agent"</small></th>
+          <td class="nilcell" data-cc="United States"><span class="nil">None recorded</span></td><td class="nilcell" data-cc="United Kingdom"><span class="nil">None recorded</span></td><td class="nilcell" data-cc="India"><span class="nil">None recorded</span></td>
+          <td class="hit" data-cc="Russia"><a class="e" href="#"><span class="y">2026</span>Exiled "foreign agent" journalists' assets frozen<span class="l">Vladimir Putin <span class="o ongoing">Ongoing</span></span></a></td>
+          <td class="hit" data-cc="Hungary"><a class="e" href="#"><span class="y">2023</span>Sovereignty Protection Act<span class="l">Viktor Orbán <span class="o ongoing">Ongoing</span></span></a></td>
+          <td class="nilcell" data-cc="Hong Kong (China)"><span class="nil">None recorded</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Coverage + specimen -->
+<section class="block">
+  <div class="duo">
+    <div>
+      <div class="bhead"><h2 id="cov-h">Recent coverage</h2><a href="/coverage">All coverage</a></div>
+      <div class="panel">
+        <ul class="cov" aria-labelledby="cov-h">
+          <li><span class="cc-code">US</span><a href="#">Judge sets hearing in CNN, MS NOW, Politico lawsuit over Trump ban</a><span class="m"><b>Associated Press</b> · 22 Sep 2026 · United States</span></li>
+          <li><span class="cc-code">US</span><a href="#">Did Biden cut off 440 reporters' credentials? PolitiFact rates a viral claim</a><span class="m"><b>PolitiFact</b> · 21 Sep 2026 · United States</span></li>
+          <li><span class="cc-code">US</span><a href="#">'A ban on the free press': White House bars journalists from three outlets</a><span class="m"><b>Al Jazeera</b> · 19 Sep 2026 · United States</span></li>
+          <li><span class="cc-code">RU</span><a href="#">Russia: new law expands Kremlin's legal persecution of exiled journalists</a><span class="m"><b>Reporters Without Borders</b> · 29 Jul 2026 · Russia</span></li>
+          <li><span class="cc-code">HU</span><a href="#">Hungary's initial media reforms are promising but lasting safeguards still needed</a><span class="m"><b>Committee to Protect Journalists</b> · 22 Jul 2026 · Hungary</span></li>
+          <li><span class="cc-code">SV</span><a href="#">Bukele administration freezes Salvadoran news outlet's assets in latest act of retaliation</a><span class="m"><b>Committee to Protect Journalists</b> · 8 May 2026 · El Salvador</span></li>
+          <li><span class="cc-code">HK</span><a href="#">Explainer: the decline of Hong Kong's press freedom under the National Security Law</a><span class="m"><b>Hong Kong Free Press</b> · 3 May 2026 · Hong Kong (China)</span></li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="bhead"><h2>How an incident cites its sources</h2><a href="/sources-and-standards">Sources and standards</a></div>
+      <article class="panel card" aria-labelledby="spec-h">
+        <div class="row1"><span class="cc-code">HK</span><span>Hong Kong (China) · Asia</span><span>15 December 2025</span></div>
+        <h3 id="spec-h">Hong Kong convicts Apple Daily founder Jimmy Lai under the National Security Law</h3>
+        <ul class="tags"><li class="p">Detention and violence</li><li>Secrets and espionage laws</li><li>Outlet licensing</li></ul>
+        <p>Jimmy Lai, the Hong Kong media owner who founded the Apple Daily newspaper, was convicted on national-security charges on 15 December 2025 and sentenced to 20 years in prison on 8 February 2026, under the National Security Law, a 2020 law imposed on Hong Kong by China's national legislature.</p>
+        <dl class="kv"><div><dt>Head of government</dt><dd>John Lee, Chief Executive of Hong Kong</dd></div><div><dt>Acting authority</dt><dd>Hong Kong Department of Justice</dd></div><div><dt>Outcome</dt><dd><span class="o sustained">Sustained</span></dd></div></dl>
+        <div class="srcs">
+          <h4>Sources</h4>
+          <ol>
+            <li><span><a class="t" href="#">Hong Kong's Jimmy Lai sentenced to 20 years in prison</a><span class="m">CNN · 8 February 2026</span></span></li>
+            <li><span><a class="t" href="#">Hong Kong: Jimmy Lai convicted on bogus national security charges</a><span class="m">Human Rights Watch · 15 December 2025</span></span></li>
+            <li><span><a class="t" href="#">Explainer: the decline of Hong Kong's press freedom under the National Security Law</a><span class="m">Hong Kong Free Press · 3 May 2026 · <a class="arch" href="#">archived copy</a></span></span></li>
+          </ol>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="pub">The War On News is published by <a href="/about">Peter Benes</a>.</p>
+    <p class="lic">© 2026 Peter Benes. Text and data are licensed CC BY 4.0 unless noted; quotations remain the property of their sources.</p>
+    <ul>
+      <li><a href="/terms">Terms of use</a></li><li><a href="/privacy">Privacy</a></li><li><a href="/corrections">Corrections</a></li><li><a href="/sources-and-standards">Sources and standards</a></li><li><a href="/contact">Contact</a></li><li><a href="/data">Data</a></li><li><a href="/mcp">MCP</a></li><li><a href="/feeds">Feeds</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

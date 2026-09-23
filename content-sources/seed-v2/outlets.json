@@ -1,0 +1,772 @@
+[
+ {
+  "slug": "cnn",
+  "name": "CNN",
+  "kind": "broadcaster",
+  "country": "US",
+  "homepage_url": "https://www.cnn.com/"
+ },
+ {
+  "slug": "ms-now",
+  "name": "MS NOW",
+  "kind": "broadcaster",
+  "country": "US",
+  "homepage_url": "https://www.msnow.com/"
+ },
+ {
+  "slug": "politico",
+  "name": "Politico",
+  "kind": "digital",
+  "country": "US",
+  "homepage_url": "https://www.politico.com/"
+ },
+ {
+  "slug": "associated-press",
+  "name": "The Associated Press",
+  "kind": "wire",
+  "country": "US",
+  "homepage_url": "https://apnews.com/"
+ },
+ {
+  "slug": "wall-street-journal",
+  "name": "The Wall Street Journal",
+  "kind": "newspaper",
+  "country": "US",
+  "homepage_url": "https://www.wsj.com/"
+ },
+ {
+  "slug": "npr",
+  "name": "NPR",
+  "kind": "public_media",
+  "country": "US",
+  "homepage_url": "https://www.npr.org/"
+ },
+ {
+  "slug": "pbs",
+  "name": "PBS",
+  "kind": "public_media",
+  "country": "US",
+  "homepage_url": "https://www.pbs.org/"
+ },
+ {
+  "slug": "voice-of-america",
+  "name": "Voice of America",
+  "kind": "public_media",
+  "country": "US",
+  "homepage_url": "https://www.voanews.com/"
+ },
+ {
+  "slug": "abc-news",
+  "name": "ABC News",
+  "kind": "broadcaster",
+  "country": "US",
+  "homepage_url": "https://abcnews.go.com/"
+ },
+ {
+  "slug": "cbs-news",
+  "name": "CBS News",
+  "kind": "broadcaster",
+  "country": "US",
+  "homepage_url": "https://www.cbsnews.com/"
+ },
+ {
+  "slug": "military-times",
+  "name": "Military Times / Defense News",
+  "kind": "digital",
+  "country": "US",
+  "homepage_url": "https://www.militarytimes.com/"
+ },
+ {
+  "slug": "el-faro",
+  "name": "El Faro",
+  "kind": "digital",
+  "country": "SV",
+  "homepage_url": "https://elfaro.net/"
+ },
+ {
+  "slug": "apple-daily",
+  "name": "Apple Daily",
+  "kind": "newspaper",
+  "country": "HK",
+  "homepage_url": "https://en.wikipedia.org/wiki/Apple_Daily"
+ },
+ {
+  "slug": "next-magazine",
+  "name": "Next Magazine",
+  "kind": "digital",
+  "country": "HK",
+  "homepage_url": "https://en.wikipedia.org/wiki/Next_Magazine_(Hong_Kong)"
+ },
+ {
+  "slug": "the-nation",
+  "name": "The Nation",
+  "kind": "newspaper",
+  "country": "US",
+  "homepage_url": "https://www.thenation.com/"
+ },
+ {
+  "slug": "bbc",
+  "name": "BBC",
+  "kind": "broadcaster",
+  "country": "GB",
+  "homepage_url": "https://www.bbc.com/"
+ },
+ {
+  "slug": "indian-express",
+  "name": "The Indian Express",
+  "kind": "newspaper",
+  "country": "IN",
+  "homepage_url": "https://indianexpress.com/"
+ },
+ {
+  "slug": "hindustan-times",
+  "name": "Hindustan Times",
+  "kind": "newspaper",
+  "country": "IN",
+  "homepage_url": "https://www.hindustantimes.com/"
+ },
+ {
+  "slug": "the-masses",
+  "name": "The Masses",
+  "kind": "magazine",
+  "country": "US"
+ },
+ {
+  "slug": "milwaukee-leader",
+  "name": "The Milwaukee Leader",
+  "kind": "newspaper",
+  "country": "US"
+ },
+ {
+  "slug": "new-york-times-historical",
+  "name": "The New York Times",
+  "kind": "newspaper",
+  "country": "US"
+ },
+ {
+  "slug": "washington-post-historical",
+  "name": "The Washington Post",
+  "kind": "newspaper",
+  "country": "US"
+ },
+ {
+  "slug": "buenos-aires-herald",
+  "name": "Buenos Aires Herald",
+  "kind": "newspaper",
+  "country": "AR"
+ },
+ {
+  "slug": "la-opinion-argentina",
+  "name": "La Opinión",
+  "kind": "newspaper",
+  "country": "AR"
+ },
+ {
+  "slug": "radio-haiti-inter",
+  "name": "Radio Haiti-Inter",
+  "kind": "broadcaster",
+  "country": "HT"
+ },
+ {
+  "slug": "manila-times",
+  "name": "Manila Times",
+  "kind": "newspaper",
+  "country": "PH"
+ },
+ {
+  "slug": "philippines-free-press",
+  "name": "Philippines Free Press",
+  "kind": "magazine",
+  "country": "PH"
+ },
+ {
+  "slug": "al-ahram",
+  "name": "Al-Ahram",
+  "kind": "newspaper",
+  "country": "EG"
+ },
+ {
+  "slug": "hankook-ilbo",
+  "name": "Hankook Ilbo",
+  "kind": "newspaper",
+  "country": "KR"
+ },
+ {
+  "slug": "radio-magallanes",
+  "name": "Radio Magallanes",
+  "kind": "broadcaster",
+  "country": "CL"
+ },
+ {
+  "slug": "radio-candelaria",
+  "name": "Radio Candelaria",
+  "kind": "broadcaster",
+  "country": "CL"
+ },
+ {
+  "slug": "sunday-telegraph-sydney",
+  "name": "Sunday Telegraph (Sydney)",
+  "kind": "newspaper",
+  "country": "AU"
+ },
+ {
+  "slug": "new-york-times",
+  "name": "The New York Times",
+  "kind": "newspaper",
+  "country": "US",
+  "homepage_url": "https://www.nytimes.com/"
+ },
+ {
+  "slug": "wikileaks",
+  "name": "WikiLeaks",
+  "kind": "other",
+  "country": "AU",
+  "homepage_url": "https://wikileaks.org/"
+ },
+ {
+  "slug": "fox-news",
+  "name": "Fox News",
+  "kind": "broadcaster",
+  "country": "US",
+  "homepage_url": "https://www.foxnews.com/"
+ },
+ {
+  "slug": "al-jazeera-english",
+  "name": "Al Jazeera English",
+  "kind": "broadcaster",
+  "country": "QA",
+  "homepage_url": "https://www.aljazeera.com/"
+ },
+ {
+  "slug": "reuters",
+  "name": "Reuters",
+  "kind": "wire_service",
+  "country": "GB",
+  "homepage_url": "https://www.reuters.com/"
+ },
+ {
+  "slug": "abc-australia",
+  "name": "Australian Broadcasting Corporation (ABC)",
+  "kind": "broadcaster",
+  "country": "AU",
+  "homepage_url": "https://www.abc.net.au/"
+ },
+ {
+  "slug": "the-guardian",
+  "name": "The Guardian",
+  "kind": "other",
+  "country": "GB",
+  "homepage_url": "https://www.theguardian.com/"
+ },
+ {
+  "slug": "cambodia-daily",
+  "name": "The Cambodia Daily",
+  "kind": "other",
+  "country": "KH",
+  "homepage_url": "https://www.cambodiadaily.com/"
+ },
+ {
+  "slug": "ntv-russia",
+  "name": "NTV",
+  "kind": "broadcaster",
+  "country": "RU",
+  "homepage_url": ""
+ },
+ {
+  "slug": "novaya-gazeta",
+  "name": "Novaya Gazeta",
+  "kind": "newspaper",
+  "country": "RU",
+  "homepage_url": "https://novayagazeta.ru/"
+ },
+ {
+  "slug": "harakah",
+  "name": "Harakah",
+  "kind": "other",
+  "country": "MY",
+  "homepage_url": ""
+ },
+ {
+  "slug": "washington-post",
+  "name": "The Washington Post",
+  "kind": "other",
+  "country": "US",
+  "homepage_url": "https://www.washingtonpost.com/"
+ },
+ {
+  "slug": "marion-county-record",
+  "name": "Marion County Record",
+  "kind": "newspaper",
+  "country": "US",
+  "homepage_url": "https://www.marioncountyrecord.com/"
+ },
+ {
+  "slug": "nbc-news",
+  "name": "NBC News",
+  "kind": "broadcaster",
+  "country": "US",
+  "homepage_url": "https://www.nbcnews.com/"
+ },
+ {
+  "slug": "des-moines-register",
+  "name": "Des Moines Register",
+  "kind": "newspaper",
+  "country": "US",
+  "homepage_url": "https://www.desmoinesregister.com/"
+ },
+ {
+  "slug": "nine-news-australia",
+  "name": "Nine News Australia",
+  "kind": "broadcaster",
+  "country": "AU",
+  "homepage_url": "https://www.9news.com.au/"
+ },
+ {
+  "slug": "project-veritas",
+  "name": "Project Veritas",
+  "kind": "other",
+  "country": "US",
+  "homepage_url": "https://www.projectveritas.com/"
+ },
+ {
+  "slug": "the-grayzone",
+  "name": "The Grayzone",
+  "kind": "digital",
+  "country": "US",
+  "homepage_url": "https://thegrayzone.com/"
+ },
+ {
+  "slug": "tut-by",
+  "name": "Tut.by",
+  "kind": "digital",
+  "country": "BY",
+  "homepage_url": "https://зеркало.io/"
+ },
+ {
+  "slug": "el-periodico",
+  "name": "El Periodico",
+  "kind": "newspaper",
+  "country": "GT",
+  "homepage_url": "https://elperiodico.com.gt/"
+ },
+ {
+  "slug": "la-prensa",
+  "name": "La Prensa",
+  "kind": "newspaper",
+  "country": "NI",
+  "homepage_url": "https://www.laprensani.com/"
+ },
+ {
+  "slug": "rtvs-stvr",
+  "name": "RTVS / STVR",
+  "kind": "public_media",
+  "country": "SK",
+  "homepage_url": "https://www.stvr.sk/"
+ },
+ {
+  "slug": "stand-news",
+  "name": "Stand News",
+  "kind": "digital",
+  "country": "HK",
+  "homepage_url": ""
+ },
+ {
+  "slug": "telam",
+  "name": "Telam",
+  "kind": "wire",
+  "country": "AR",
+  "homepage_url": ""
+ },
+ {
+  "slug": "sheger-fm",
+  "name": "Sheger FM 102.1",
+  "kind": "broadcaster",
+  "country": "ET",
+  "homepage_url": ""
+ },
+ {
+  "slug": "n1-tv",
+  "name": "N1",
+  "kind": "broadcaster",
+  "country": "RS",
+  "homepage_url": "https://n1info.rs/"
+ },
+ {
+  "slug": "telex",
+  "name": "Telex",
+  "kind": "digital_native",
+  "country": "HU",
+  "homepage_url": "https://telex.hu/"
+ },
+ {
+  "slug": "cbc-radio-canada",
+  "name": "CBC/Radio-Canada",
+  "kind": "broadcaster",
+  "country": "CA",
+  "homepage_url": "https://www.cbc.ca/"
+ },
+ {
+  "slug": "radio-liberty",
+  "name": "Radio Free Europe/Radio Liberty",
+  "kind": "broadcaster",
+  "country": "CZ",
+  "homepage_url": "https://www.rferl.org/"
+ },
+ {
+  "slug": "agence-france-presse",
+  "name": "Agence France-Presse",
+  "kind": "wire_service",
+  "country": "FR",
+  "homepage_url": "https://www.afp.com/"
+ },
+ {
+  "slug": "deutsche-welle",
+  "name": "Deutsche Welle",
+  "kind": "broadcaster",
+  "country": "DE",
+  "homepage_url": "https://www.dw.com/"
+ },
+ {
+  "slug": "rappler",
+  "name": "Rappler",
+  "kind": "digital_native",
+  "country": "PH",
+  "homepage_url": "https://www.rappler.com/"
+ },
+ {
+  "slug": "evrensel",
+  "name": "Evrensel",
+  "kind": "newspaper",
+  "country": "TR",
+  "homepage_url": "https://www.evrensel.net/"
+ },
+ {
+  "slug": "mezopotamya-news-agency",
+  "name": "Mezopotamya News Agency",
+  "kind": "wire_service",
+  "country": "TR",
+  "homepage_url": ""
+ },
+ {
+  "slug": "daily-news-zimbabwe",
+  "name": "Daily News",
+  "kind": "newspaper",
+  "country": "ZW",
+  "homepage_url": ""
+ },
+ {
+  "slug": "radio-azattyq",
+  "name": "Radio Azattyq (RFE/RL Kazakh Service)",
+  "kind": "broadcaster",
+  "country": "KZ",
+  "homepage_url": "https://www.azattyq.org/"
+ },
+ {
+  "slug": "rctv",
+  "name": "Radio Caracas Television (RCTV)",
+  "kind": "broadcaster",
+  "country": "VE",
+  "homepage_url": ""
+ },
+ {
+  "slug": "klubradio",
+  "name": "Klubradio",
+  "kind": "broadcaster",
+  "country": "HU",
+  "homepage_url": "https://www.klubradio.hu/"
+ },
+ {
+  "slug": "voice-of-democracy",
+  "name": "Voice of Democracy",
+  "kind": "digital_native",
+  "country": "KH",
+  "homepage_url": ""
+ },
+ {
+  "slug": "halk-tv",
+  "name": "Halk TV",
+  "kind": "broadcaster",
+  "country": "TR",
+  "homepage_url": ""
+ },
+ {
+  "slug": "tele1",
+  "name": "TELE1",
+  "kind": "broadcaster",
+  "country": "TR",
+  "homepage_url": ""
+ },
+ {
+  "slug": "fox-tv-turkey",
+  "name": "FOX TV Turkiye",
+  "kind": "broadcaster",
+  "country": "TR",
+  "homepage_url": ""
+ },
+ {
+  "slug": "haaretz",
+  "name": "Haaretz",
+  "kind": "newspaper",
+  "country": "IL",
+  "homepage_url": "https://www.haaretz.com/"
+ },
+ {
+  "slug": "al-manassa",
+  "name": "Al-Manassa",
+  "kind": "digital_native",
+  "country": "EG",
+  "homepage_url": "https://www.almanassa.com/"
+ },
+ {
+  "slug": "kommersant",
+  "name": "Kommersant",
+  "kind": "newspaper",
+  "country": "RU",
+  "homepage_url": "https://www.kommersant.ru/"
+ },
+ {
+  "slug": "vedomosti",
+  "name": "Vedomosti",
+  "kind": "newspaper",
+  "country": "RU",
+  "homepage_url": "https://www.vedomosti.ru/"
+ },
+ {
+  "slug": "the-vietnamese",
+  "name": "The Vietnamese",
+  "kind": "digital_native",
+  "country": "VN",
+  "homepage_url": ""
+ },
+ {
+  "slug": "shargh",
+  "name": "Shargh",
+  "kind": "newspaper",
+  "country": "IR",
+  "homepage_url": ""
+ },
+ {
+  "slug": "ham-mihan",
+  "name": "Ham-Mihan",
+  "kind": "newspaper",
+  "country": "IR",
+  "homepage_url": ""
+ },
+ {
+  "slug": "guangming-daily",
+  "name": "Guangming Daily",
+  "kind": "newspaper",
+  "country": "CN",
+  "homepage_url": ""
+ },
+ {
+  "slug": "current-tv",
+  "name": "Current TV",
+  "kind": "broadcaster",
+  "country": "US",
+  "homepage_url": ""
+ },
+ {
+  "slug": "oy-magazine",
+  "name": "Voice of Taksin magazine",
+  "kind": "magazine",
+  "country": "TH",
+  "homepage_url": ""
+ },
+ {
+  "slug": "rusnews",
+  "name": "RusNews",
+  "kind": "digital_native",
+  "country": "RU",
+  "homepage_url": ""
+ },
+ {
+  "slug": "belsat-tv",
+  "name": "Belsat TV",
+  "kind": "broadcaster",
+  "country": "PL",
+  "homepage_url": "https://belsat.eu/"
+ },
+ {
+  "slug": "direkt36",
+  "name": "Direkt36",
+  "kind": "digital_native",
+  "country": "HU",
+  "homepage_url": "https://www.direkt36.hu/"
+ },
+ {
+  "slug": "le-desk",
+  "name": "Le Desk",
+  "kind": "digital_native",
+  "country": "MA",
+  "homepage_url": "https://ledesk.ma/"
+ },
+ {
+  "slug": "aristegui-noticias",
+  "name": "Aristegui Noticias",
+  "kind": "digital_native",
+  "country": "MX",
+  "homepage_url": "https://aristeguinoticias.com/"
+ },
+ {
+  "slug": "kesma-network",
+  "name": "KESMA member outlets",
+  "kind": "media_network",
+  "country": "HU",
+  "homepage_url": null
+ },
+ {
+  "slug": "index-hu",
+  "name": "Index.hu",
+  "kind": "news_website",
+  "country": "HU",
+  "homepage_url": "https://index.hu/"
+ },
+ {
+  "slug": "polska-press",
+  "name": "Polska Press",
+  "kind": "newspaper_group",
+  "country": "PL",
+  "homepage_url": null
+ },
+ {
+  "slug": "zaman",
+  "name": "Zaman",
+  "kind": "newspaper",
+  "country": "TR",
+  "homepage_url": null
+ },
+ {
+  "slug": "todays-zaman",
+  "name": "Today's Zaman",
+  "kind": "newspaper",
+  "country": "TR",
+  "homepage_url": null
+ },
+ {
+  "slug": "feza-media-group",
+  "name": "Feza Media Group",
+  "kind": "media_conglomerate",
+  "country": "TR",
+  "homepage_url": null
+ },
+ {
+  "slug": "cihan-news-agency",
+  "name": "Cihan News Agency",
+  "kind": "news_agency",
+  "country": "TR",
+  "homepage_url": null
+ },
+ {
+  "slug": "hurriyet",
+  "name": "Hurriyet",
+  "kind": "newspaper",
+  "country": "TR",
+  "homepage_url": null
+ },
+ {
+  "slug": "cnn-turk",
+  "name": "CNN Turk",
+  "kind": "broadcaster",
+  "country": "TR",
+  "homepage_url": null
+ },
+ {
+  "slug": "dogan-holding",
+  "name": "Dogan Holding",
+  "kind": "media_conglomerate",
+  "country": "TR",
+  "homepage_url": null
+ },
+ {
+  "slug": "the-economist",
+  "name": "The Economist",
+  "kind": "magazine",
+  "country": "GB",
+  "homepage_url": "https://www.economist.com/"
+ },
+ {
+  "slug": "time-magazine",
+  "name": "Time",
+  "kind": "magazine",
+  "country": "US",
+  "homepage_url": "https://time.com/"
+ },
+ {
+  "slug": "gaon-savera",
+  "name": "Gaon Savera",
+  "kind": "news_website",
+  "country": "IN",
+  "homepage_url": null
+ },
+ {
+  "slug": "meduza",
+  "name": "Meduza",
+  "kind": "news_website",
+  "country": "RU",
+  "homepage_url": "https://meduza.io/"
+ },
+ {
+  "slug": "pasmi",
+  "name": "PASMI",
+  "kind": "news_website",
+  "country": "RU",
+  "homepage_url": null
+ },
+ {
+  "slug": "the-new-times",
+  "name": "The New Times",
+  "kind": "magazine",
+  "country": "RU",
+  "homepage_url": null
+ },
+ {
+  "slug": "radio-free-europe-radio-liberty",
+  "name": "Radio Free Europe/Radio Liberty",
+  "kind": "broadcaster",
+  "country": "CZ",
+  "homepage_url": null
+ },
+ {
+  "slug": "setit",
+  "name": "Setit",
+  "kind": "newspaper",
+  "country": "ER",
+  "homepage_url": null
+ },
+ {
+  "slug": "regionalnaya-gazeta",
+  "name": "Regionalnaya Gazeta",
+  "kind": "newspaper",
+  "country": "BY",
+  "homepage_url": null
+ },
+ {
+  "slug": "bbc-russian",
+  "name": "BBC Russian",
+  "kind": "broadcaster",
+  "country": "GB",
+  "homepage_url": null
+ },
+ {
+  "slug": "al-mashhad",
+  "name": "Al-Mashhad",
+  "kind": "news_website",
+  "country": "EG",
+  "homepage_url": null
+ },
+ {
+  "slug": "orda",
+  "name": "Orda",
+  "kind": "news_website",
+  "country": "KZ",
+  "homepage_url": null
+ },
+ {
+  "slug": "gazeta-wyborcza",
+  "name": "Gazeta Wyborcza",
+  "kind": "newspaper",
+  "country": "PL",
+  "homepage_url": "https://wyborcza.pl/"
+ }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "statement": "US newsroom employment fell 26% between 2008 and 2020, with newspaper newsrooms alone shrinking 57%, from roughly 71,000 jobs to about 31,000.",
+    "source_url": "https://www.pewresearch.org/short-reads/2021/07/13/u-s-newsroom-employment-has-fallen-26-since-2008/",
+    "publisher": "Pew Research Center",
+    "published_on": "2021-07-13",
+    "evidence_quote": "Newsroom employment in the United States has dropped by 26% since 2008."
+  },
+  {
+    "statement": "US newspaper advertising revenue fell from about $49.4 billion in 2005 to roughly $9.8 billion in 2022, a decline of about 80%.",
+    "source_url": "https://www.pewresearch.org/journalism/fact-sheet/newspapers/",
+    "publisher": "Pew Research Center",
+    "published_on": "2023-11-10",
+    "evidence_quote": "The total estimated advertising revenue for the newspaper industry in 2022 was $9.8 billion, based on the Center's analysis of financial statements for publicly traded newspaper companies."
+  },
+  {
+    "statement": "US daily newspaper circulation, print and digital combined, was 20.9 million in 2022, down 8% (weekday) and 10% (Sunday) from 2021.",
+    "source_url": "https://www.pewresearch.org/journalism/fact-sheet/newspapers/",
+    "publisher": "Pew Research Center",
+    "published_on": "2023-11-10",
+    "evidence_quote": "In 2022, estimated total U.S. daily newspaper circulation (print and digital combined) was 20.9 million for both weekday and Sunday, down 8% and 10% respectively from 2021."
+  },
+  {
+    "statement": "Close to 3,500 US newspapers have closed since 2005, and 213 counties are now news deserts with no local news outlet, up from 206 the year before.",
+    "source_url": "https://localnewsinitiative.northwestern.edu/projects/state-of-local-news/2025/report/",
+    "publisher": "Medill Local News Initiative, Northwestern University",
+    "published_on": "2025-10-20",
+    "evidence_quote": "Close to 3,500 newspapers have vanished, leaving one in every four Americans with limited access to a local print newspaper."
+  },
+  {
+    "statement": "Some 50 million Americans live in counties with either no local news source or only one, once the 213 news deserts and 1,524 one-source counties are combined.",
+    "source_url": "https://localnewsinitiative.northwestern.edu/projects/state-of-local-news/2025/report/",
+    "publisher": "Medill Local News Initiative, Northwestern University",
+    "published_on": "2025-10-20",
+    "evidence_quote": "In another 1,524 counties, there's only one remaining news source. Taken together, some 50 million Americans have limited to no access to local news."
+  },
+  {
+    "statement": "Global trust in the news was 40% in 2025, unchanged for a third consecutive year.",
+    "source_url": "https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2025",
+    "publisher": "Reuters Institute for the Study of Journalism, University of Oxford",
+    "published_on": "2025-06-17",
+    "evidence_quote": "Overall trust in the news (40%) has remained stable for the third year in a row, even if it is still four points lower overall than it was at the height of the Coronavirus pandemic."
+  },
+  {
+    "statement": "Selective avoidance of the news remained near an all-time high in 2025, with 40% of people saying they sometimes or often avoid it.",
+    "source_url": "https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2025",
+    "publisher": "Reuters Institute for the Study of Journalism, University of Oxford",
+    "published_on": "2025-06-17",
+    "evidence_quote": "Selective news avoidance remains close to its all-time high (40%), with respondents saying that they sometimes or often avoid the news."
+  },
+  {
+    "statement": "In the United States in 2025, social media and video networks overtook both television news and news websites as a source of news for the first time.",
+    "source_url": "https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2025",
+    "publisher": "Reuters Institute for the Study of Journalism, University of Oxford",
+    "published_on": "2025-06-17",
+    "evidence_quote": "The proportion accessing news via social media and video networks in the United States (54%) is sharply up – overtaking both TV news (50%) and news websites/apps (48%) for the first time."
+  },
+  {
+    "statement": "A 2018 study of Twitter cascades found that false stories spread significantly farther, faster and deeper than true stories, taking true stories six times as long to reach 1,500 people.",
+    "source_url": "https://doi.org/10.1126/science.aap9559",
+    "publisher": "Science (Vosoughi, Roy and Aral)",
+    "published_on": "2018-03-09",
+    "evidence_quote": "It took the truth about six times as long as falsehood to reach 1500 people and 20 times as long as falsehood to reach a cascade depth of 10."
+  },
+  {
+    "statement": "A 2022 industry analysis estimated that programmatic advertisers directed about $2.6 billion a year worldwide to websites that publish misinformation and disinformation.",
+    "source_url": "https://www.newsguardtech.com/special-reports/brands-send-billions-to-misinformation-websites-newsguard-comscore-report/",
+    "publisher": "NewsGuard, with Comscore",
+    "published_on": "2022-06-16",
+    "evidence_quote": "The misinformation industry is booming–with $2.6 billion in estimated advertising revenue being sent to publishers of misinformation and disinformation each year by programmatic advertisers."
+  },
+  {
+    "statement": "In September 2024, the US Department of Justice announced the seizure of 32 internet domains used in a Russian government-directed influence campaign that had impersonated US news sites.",
+    "source_url": "https://www.justice.gov/opa/pr/justice-department-disrupts-covert-russian-government-sponsored-foreign-malign-influence",
+    "publisher": "US Department of Justice",
+    "published_on": "2024-09-04",
+    "evidence_quote": "The Justice Department today announced the ongoing seizure of 32 internet domains used in Russian government-directed foreign malign influence campaigns colloquially referred to as 'Doppelganger.'"
+  },
+  {
+    "statement": "The US intelligence community's 2025 assessment describes Russian information operations aimed at sowing doubt in US democratic processes, alongside comparable Chinese and Iranian activity.",
+    "source_url": "https://archive.dni.gov/files/ODNI/documents/assessments/ATA-2025-Unclassified-Report.pdf",
+    "publisher": "Office of the Director of National Intelligence",
+    "published_on": "2025-03-25",
+    "evidence_quote": "Moscow uses influence activities to counter threats, including by stoking political discord in the West, sowing doubt in democratic processes and U.S. global leadership."
+  },
+  {
+    "statement": "ProPublica's Local Reporting Network reimburses a partner newsroom for a reporter's full salary, up to $80,000 for 2026 and $82,500 for 2027, plus benefits, to fund a single yearlong investigation.",
+    "source_url": "https://www.propublica.org/how-to-apply/local-reporting-network",
+    "publisher": "ProPublica",
+    "published_on": "2025-01-01",
+    "evidence_quote": "We will reimburse a news organization for the salary of the selected reporter (up to $80,000 for 2026 and $82,500 for 2027, plus a benefits stipend)."
+  },
+  {
+    "statement": "The Society of Professional Journalists' Code of Ethics defines ethical journalism as accurate, fair and thorough, requiring verification before publication.",
+    "source_url": "https://www.spj.org/spj-code-of-ethics/",
+    "publisher": "Society of Professional Journalists",
+    "published_on": "2014-09-06",
+    "evidence_quote": "Ethical journalism strives to ensure the free exchange of information that is accurate, fair and thorough. Take responsibility for the accuracy of their work. Verify information before releasing it."
+  },
+  {
+    "statement": "Thomson Reuters' Trust Principles require that the integrity, independence and freedom from bias of its reporting be preserved at all times.",
+    "source_url": "https://www.thomsonreuters.com/en/about-us/trust-principles.html",
+    "publisher": "Thomson Reuters",
+    "published_on": "2008-01-01",
+    "evidence_quote": "The integrity, independence, and freedom from bias of Thomson Reuters shall at all times be fully preserved."
+  }
+]
