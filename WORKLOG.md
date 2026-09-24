@@ -794,3 +794,14 @@ that monkeypatch `fetch_all_sources_from_export()`; the scripts themselves are u
   or a slower cadence; 483 sources still lack a snapshot. (2) The 26 sources fetched as dead twice in 24h will tip
   to `dead` on the next failing check; a review list is in ops/logs/linkcheck-2026-09-23.jsonl. (3) Coverage cron
   showed 0 of 3 scored items today; Google News RSS 503s continue.
+
+## 2026-09-24: Democracy Now! added to the coverage feeds (Peter's decision)
+
+Peter had understood the retired News Desk as something he was expected to write. It never was: its notes were
+AI-drafted and gated, and his role was the daily digest review. Asked whether to rebuild the note-writing pipeline
+or keep `/coverage` as the news layer, he chose the links only. `/coverage` was already in the primary nav and on
+the home page ("Recent coverage", 5 items), so the only change is a feed: Democracy Now! (democracynow.org
+main RSS) added live through `PUT /admin/coverage/feeds` (21 feeds in KV) and to `DEFAULT_FEEDS` in
+`site/src/coverage.js` so the code default matches; no deploy needed for the KV change. A manual
+`POST /admin/cron/coverage` afterwards fetched 517 items across 21 feeds; the first Democracy Now! item scored
+0.96 and is shown. Google News RSS 503s continue (two of five queries this run).

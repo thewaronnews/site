@@ -56,6 +56,7 @@ export const DEFAULT_FEEDS = [
   { org: "Poynter", url: "https://www.poynter.org/feed/" },
   { org: "Columbia Journalism Review", url: "https://www.cjr.org/feed" },
   { org: "PEN America", url: "https://pen.org/feed/" },
+  { org: "Democracy Now!", url: "https://www.democracynow.org/democracynow.rss" },
   ...GN_QUERIES.map((q) => ({ org: "Google News", url: GN(q), google: true })),
   { org: "Google News (United Kingdom)", url: GN('"press freedom" OR "journalist arrested" OR "reporters barred"', "en-GB", "GB", "GB:en"), google: true },
   { org: "Google News (India)", url: GN('"press freedom" OR "journalist arrested" OR "journalist booked"', "en-IN", "IN", "IN:en"), google: true },
