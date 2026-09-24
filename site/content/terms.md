@@ -69,4 +69,4 @@ We may change these terms. The current version is always at [/terms](/terms), wi
 
 Questions about these terms: hello@thewaronnews.com.
 
-*These terms take effect on [date of publication].*
+*These terms take effect on September 22, 2026.*

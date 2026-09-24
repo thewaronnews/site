@@ -840,3 +840,12 @@ monkeypatches `fetch_all_sources_from_export()` to return one slice). Scripts un
   dead again; with yesterday's 26 they may now tip to `dead` under the 3-in-48h rule; list in
   ops/logs/linkcheck-2026-09-24.jsonl. (3) Should `outcome` stay `ongoing` while the TRO is in effect (it is
   temporary), or does the site treat a TRO as `reversed`? Left `ongoing`.
+
+## 2026-09-24: terms and privacy effective date; outcome decision (Peter)
+
+- /terms and /privacy ended with the placeholder "[date of publication]". Both now read September 22, 2026, the
+  date the site went live (first deploy and seed publish, 2026-09-22). gen-modules via deploy.sh, deployed, both
+  pages verified live in HTML and .md; IndexNow pinged.
+- Focal incident `outcome` stays `ongoing` while the TRO is in effect (Peter left it to the operator's judgement):
+  a TRO is temporary, and `reversed` is kept for a final or appealable ruling that ends the ban. `status` =
+  `enjoined` already records the TRO. Revisit when the court rules on a preliminary injunction or the TRO lapses.

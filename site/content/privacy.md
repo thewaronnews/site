@@ -33,4 +33,4 @@ You may ask to see the personal information we hold about you, to correct it or 
 
 If this notice changes, the new version will be posted here with the date it took effect.
 
-*This notice takes effect on [date of publication].*
+*This notice takes effect on September 22, 2026.*
