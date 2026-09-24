@@ -805,3 +805,38 @@ main RSS) added live through `PUT /admin/coverage/feeds` (21 feeds in KV) and to
 `site/src/coverage.js` so the code default matches; no deploy needed for the KV change. A manual
 `POST /admin/cron/coverage` afterwards fetched 517 items across 21 feeds; the first Democracy Now! item scored
 0.96 and is shown. Google News RSS 503s continue (two of five queries this run).
+
+## 2026-09-24 09:33 UTC: scheduled maintenance run (operator)
+
+Unattended run from the Cowork sandbox (device_bash). Background processes still do not survive a device_bash
+call, so `linkcheck.py --all` was driven in four slices through `../.maint-tmp/slice.py` (outside the repo; it
+monkeypatches `fetch_all_sources_from_export()` to return one slice). Scripts unchanged.
+
+- **Health (09:33Z).** incidents 191 (190 published), sources 513, claims 733, events 7, link_integrity ok 486 /
+  unchecked 27 / dead 0 / archived 30 (share 0.947). coverage_last_run 09:05Z (fresh, no manual invoke needed):
+  21 feeds, 1 feed error (Google News RSS 503), fetched 622, fresh 288, scored 1, shown 0, hidden 1. Last export
+  07:18Z (id 11, daily).
+- **Link integrity.** `linkcheck.py --all`, 513 sources checked and posted: live 387, paywalled 45, bot_blocked 4,
+  dead 26, redirected 10, error 41. `wayback.py --all --limit 150 --max-failures 10`: 0 saved, stopped after 10
+  consecutive failures (archive.org Save Page Now still failing). `indexnow.py --since-hours 26`: 7 URLs, HTTP 200;
+  plus a manual ping of the focal incident and /united-states after the update below (HTTP 200).
+- **Focal case (Cable News Network, Inc. v. Trump, D.D.C. 1:26-cv-03287).** Chrome needed a browser choice the
+  unattended subagent could not make, so it fell back to web search; the source page was fetched and the quotes
+  checked verbatim against its HTML. Development: early on Thursday 24 Sept 2026 Judge Timothy Kelly granted the
+  outlets a temporary restraining order (TRO) requiring the White House to reinstate their hard passes, finding
+  the revocations lacked "constitutionally adequate due process"; the TRO runs 14 days and, per the judge, is not
+  immediately appealable. Source: CNN report syndicated by KVIA, 24 Sept 06:54Z (CNN is a plaintiff; a
+  Reuters/AP/court-record source should be added when available). Added: source 514; claim 734 (field `action`,
+  outlet_report, high); event 14 (2026-09-24, ruling, published, claim 734); status claim 107 superseded by 735
+  (reason update); incident `status` in_effect -> `enjoined`, status_updated_on 2026-09-24 (revision 26; the
+  what_happened "Status as of" paragraph was rewritten to 2026-09-24 and its {c:107} refs moved to {c:735}, since
+  the record PUT rejects superseded claim refs); `outcome_note` updated via /fields (rev 27); source 514 attached via
+  PUT /links (rev 28; 12 sources, roles all `reporting` as in the export). `outcome` left `ongoing`.
+- **Coverage sanity.** /coverage.json: 21 items shown; only 1 published in the last 24h (id 183, CPJ, DRC) - fewer
+  than 3, noted. The coverage feed has not yet picked up the TRO ruling. Nothing plainly off-topic; nothing hidden.
+- **Search Console.** sc-domain:thewaronnews.com: Indexing and Performance still "Processing data"; clicks 0,
+  impressions 0. No settings touched. Bing not checked.
+- **Open for Peter.** (1) Wayback SPN still failing (0 of 10); SPN2 keys or a slower cadence. (2) 26 sources fetched
+  dead again; with yesterday's 26 they may now tip to `dead` under the 3-in-48h rule; list in
+  ops/logs/linkcheck-2026-09-24.jsonl. (3) Should `outcome` stay `ongoing` while the TRO is in effect (it is
+  temporary), or does the site treat a TRO as `reversed`? Left `ongoing`.

@@ -1,0 +1,25 @@
+{"count": 150, "dry_run": false, "event": "start", "mode": "all", "script": "wayback", "ts": "2026-09-24T09:46:35Z"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-24T09:46:35Z", "url": "https://whca.press/2026/09/18/statement-on-white-house-position-on-cnn-msnow-and-politico/"}
+{"event": "failed", "script": "wayback", "source_id": 3, "ts": "2026-09-24T09:46:42Z", "url": "https://whca.press/2026/09/18/statement-on-white-house-position-on-cnn-msnow-and-politico/"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-24T09:46:50Z", "url": "https://www.cnn.com/2026/09/20/politics/white-house-press-pool-trump"}
+{"event": "failed", "script": "wayback", "source_id": 9, "ts": "2026-09-24T09:46:57Z", "url": "https://www.cnn.com/2026/09/20/politics/white-house-press-pool-trump"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-24T09:47:05Z", "url": "https://politifact.com/factchecks/2026/sep/21/tiktok-posts/trump-white-house-press-ban-biden-440/"}
+{"event": "failed", "script": "wayback", "source_id": 16, "ts": "2026-09-24T09:47:12Z", "url": "https://politifact.com/factchecks/2026/sep/21/tiktok-posts/trump-white-house-press-ban-biden-440/"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-24T09:47:21Z", "url": "https://theworlddata.com/us-white-house-press-access-statistics/"}
+{"event": "failed", "script": "wayback", "source_id": 18, "ts": "2026-09-24T09:47:27Z", "url": "https://theworlddata.com/us-white-house-press-access-statistics/"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-24T09:47:36Z", "url": "https://www.newsonair.gov.in/white-house-bans-associated-press-from-oval-office-air-force-one"}
+{"event": "failed", "script": "wayback", "source_id": 19, "ts": "2026-09-24T09:47:44Z", "url": "https://www.newsonair.gov.in/white-house-bans-associated-press-from-oval-office-air-force-one"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-24T09:47:52Z", "url": "https://www.npr.org/2025/03/21/nx-s1-5336351/voice-of-america-trump-lawsuit-kari-lake-voa"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-24T09:47:53Z", "url": "https://www.npr.org/2025/03/21/nx-s1-5336351/voice-of-america-trump-lawsuit-kari-lake-voa"}
+{"event": "failed", "script": "wayback", "source_id": 22, "ts": "2026-09-24T09:47:53Z", "url": "https://www.npr.org/2025/03/21/nx-s1-5336351/voice-of-america-trump-lawsuit-kari-lake-voa"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-24T09:48:01Z", "url": "https://www.afge.org/article/judge-invalidates-trump-administrations-attempts-to-dismantle-voice-of-america/"}
+{"event": "failed", "script": "wayback", "source_id": 23, "ts": "2026-09-24T09:48:08Z", "url": "https://www.afge.org/article/judge-invalidates-trump-administrations-attempts-to-dismantle-voice-of-america/"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-24T09:48:17Z", "url": "https://www.npr.org/2025/04/08/nx-s1-5342369/ap-white-house-court-ruling-oval-office-gulf-of-mexico-america"}
+{"event": "failed", "script": "wayback", "source_id": 24, "ts": "2026-09-24T09:48:23Z", "url": "https://www.npr.org/2025/04/08/nx-s1-5342369/ap-white-house-court-ruling-oval-office-gulf-of-mexico-america"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-24T09:48:32Z", "url": "https://www.courtlistener.com/opinion/10600096/associated-press-v-taylor-budowich/"}
+{"event": "failed", "script": "wayback", "source_id": 26, "ts": "2026-09-24T09:48:38Z", "url": "https://www.courtlistener.com/opinion/10600096/associated-press-v-taylor-budowich/"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-24T09:48:47Z", "url": "https://www.npr.org/2025/09/19/nx-s1-5546764/fcc-brendan-carr-kimmel-trump-free-speech"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-24T09:48:47Z", "url": "https://www.npr.org/2025/09/19/nx-s1-5546764/fcc-brendan-carr-kimmel-trump-free-speech"}
+{"event": "failed", "script": "wayback", "source_id": 28, "ts": "2026-09-24T09:48:47Z", "url": "https://www.npr.org/2025/09/19/nx-s1-5546764/fcc-brendan-carr-kimmel-trump-free-speech"}
+{"consecutive_failures": 10, "event": "stopping_after_failures", "script": "wayback", "ts": "2026-09-24T09:48:56Z"}
+{"dry_run": false, "event": "summary", "failed": 10, "saved": 0, "script": "wayback", "total": 150, "ts": "2026-09-24T09:48:56Z"}
