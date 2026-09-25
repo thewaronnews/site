@@ -849,3 +849,35 @@ monkeypatches `fetch_all_sources_from_export()` to return one slice). Scripts un
 - Focal incident `outcome` stays `ongoing` while the TRO is in effect (Peter left it to the operator's judgement):
   a TRO is temporary, and `reversed` is kept for a final or appealable ruling that ends the ban. `status` =
   `enjoined` already records the TRO. Revisit when the court rules on a preliminary injunction or the TRO lapses.
+
+## 2026-09-25 09:32 UTC: scheduled maintenance run (operator)
+
+Unattended run from the Cowork sandbox (device_bash). `linkcheck.py --all` driven in four slices through
+`../.maint-tmp/slice.py` as before. Scripts unchanged.
+
+- **Health (09:32Z).** incidents 191 (190 published), sources 514, claims 735, events 8, link_integrity ok 494 /
+  unchecked 20 / dead 0 / archived 30 (share 0.961). coverage_last_run 09:05Z (fresh, no manual invoke needed):
+  21 feeds, 3 feed errors (all Google News RSS, HTTP 503), fetched 430, fresh 199, scored 0, shown 0. Last export
+  07:19Z (id 12, daily). After this run: sources 515, claims 736, events 9, link_integrity ok 493 / unchecked 7 /
+  **dead 19** / archived 40 (share 0.957).
+- **Link integrity.** `linkcheck.py --all`, 514 sources checked and posted: live 377, paywalled 56, bot_blocked 4,
+  dead 26, redirected 10, error 41. 19 sources have now reached `dead` under the Worker's 3-failures-in-48h rule
+  (first time above 0). `wayback.py --all --limit 150 --max-failures 10`, two 170 s windows (device_bash time limit):
+  16 saved, 6 failed, 1 availability error; archive.org Save Page Now is working again. `indexnow.py --since-hours 26`:
+  9 URLs, HTTP 200; plus the focal incident after the update below (HTTP 200).
+- **Focal case (Cable News Network, Inc. v. Trump, D.D.C. 1:26-cv-03287).** Chrome/Perplexity not used: three
+  browsers connected and none selected, which the unattended subagent could not resolve; it fell back to web search.
+  Quote checked verbatim against the fetched page. Development (2026-09-24, after the TRO): the outlets were back on
+  White House grounds, but CNN and MS NOW said their journalists were denied access to the state dinner arrival for
+  Xi Jinping. Source: AP via PBS News (source 515). Added claim 736 (field `action`, outlet_report, high) and event 15
+  (2026-09-24, action, published, claim 736); source 515 attached via PUT /links (rev 29). Status unchanged
+  (`enjoined`); no status claim superseded. Same AP report: the judge gave both sides until Oct. 5 to file arguments
+  on a preliminary injunction; TRO expires about 2026-10-08. No 2026-09-25 development found.
+- **Coverage sanity.** /coverage.json: 30 items shown; 7 published in the last 24h (ids 252, 260, 261, 266,
+  269, 271, 272). Nothing plainly off-topic; nothing hidden.
+- **Search Console.** Not checked (Chrome browser selection unavailable in an unattended run).
+- **Housekeeping.** A stale empty `.git/index.lock` (git could not unlink it: deletes are not permitted from the
+  sandbox) was moved to `../.maint-tmp/stale/`.
+- **Open for Peter.** (1) 19 sources now marked dead; list in ops/logs/linkcheck-2026-09-{23,24,25}.jsonl. Review
+  for replacement or archived copies. (2) Chrome for unattended runs: select a default browser so Perplexity and
+  Search Console steps can run. (3) Add a PI briefing event once filings on or before Oct. 5 appear.
