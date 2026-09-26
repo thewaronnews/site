@@ -1,0 +1,577 @@
+{
+ "incidents": [
+  {
+   "slug": "1985-us-morison-espionage-act-conviction",
+   "title": "United States: Espionage Act conviction of Samuel Loring Morison for leaking satellite photographs to Jane's Defence Weekly, 1985 to 1988",
+   "occurred_on": "1985",
+   "occurred_on_precision": "year",
+   "jurisdiction": "United States, federal",
+   "country": "US",
+   "continent": "North America",
+   "level": "national",
+   "type": "secrets_and_espionage_laws",
+   "tactic_primary": "secrets_and_espionage_laws",
+   "tactics": [
+    "secrets_and_espionage_laws"
+   ],
+   "stage": "punish",
+   "leader_slug": "ronald-reagan",
+   "summary": "Naval intelligence analyst Samuel Loring Morison was convicted under the Espionage Act after he sent classified satellite photographs to a British defense publication in 1984. The United States Court of Appeals for the Fourth Circuit upheld his conviction in 1988, rejecting his argument that giving the images to the press was protected by the First Amendment.",
+   "what_happened": "Samuel Loring Morison worked as an intelligence analyst at the Naval Intelligence Support Center in Suitland, Maryland, where he had access to classified material and had signed a nondisclosure agreement as a condition of his employment. In 1984 he sent two classified KH-11 satellite photographs showing construction of a Soviet Kiev-class aircraft carrier to Jane's Defence Weekly, a British publication on military affairs, which published them. Federal prosecutors charged Morison under two sections of the Espionage Act of 1917, one covering disclosure of national defense information to a foreign government and one covering disclosure to any other recipient, including a news organization, along with a separate federal charge of theft of government property. A jury convicted him on all counts. On appeal, Morison argued that applying the Espionage Act to a disclosure made to a news organization violated the First Amendment. The United States Court of Appeals for the Fourth Circuit, the federal appeals court based in Richmond, Virginia, rejected that argument. Writing for the court, Judge Donald Stewart Russell held that the Espionage Act's disclosure provisions applied to the press as well as to foreign governments, and the court affirmed the conviction in 1988. The Supreme Court of the United States declined to review the case.",
+   "stated_justification": "The Fourth Circuit said the Espionage Act's disclosure provisions were not limited to transmissions to foreign governments, and it separately described the related federal law Morison was also convicted under as \"a criminal statute covering the theft of government property.\"",
+   "effect_on_reporting": "Citing Branzburg v. Hayes, a 1972 Supreme Court decision, the Fourth Circuit said journalists had no special protection simply because they were transmitting information to the media, leaving the source of a leak, rather than the publication that printed it, open to an Espionage Act prosecution.",
+   "issue_of_the_day": "The case tested whether the Espionage Act of 1917, written to penalize wartime aid to a foreign enemy, could also be used against someone who gave classified material to a widely read defense publication rather than to an opposing government.",
+   "outcome": "upheld",
+   "outcome_on": "1988",
+   "outcome_note": "President Bill Clinton pardoned Morison, according to the First Amendment Encyclopedia, though no court reversed the Fourth Circuit's decision upholding his conviction.",
+   "actors": [
+    "ronald-reagan",
+    "samuel-loring-morison",
+    "donald-russell",
+    "bill-clinton",
+    "us-department-of-justice"
+   ],
+   "actor_roles": {
+    "ronald-reagan": "other",
+    "samuel-loring-morison": "other",
+    "donald-russell": "ruled",
+    "bill-clinton": "other",
+    "us-department-of-justice": "enforced"
+   },
+   "outlets": [
+    "janes-defence-weekly"
+   ],
+   "sources": [
+    "h1980_01",
+    "h1980_02"
+   ],
+   "claims": [
+    {
+     "field": "action",
+     "value": "Prosecution of Morison",
+     "statement": "The government prosecuted Morison after identifying him as the source of the leaked photographs.",
+     "source_id": "h1980_01",
+     "evidence_quote": "The government successfully prosecuted Morison after he was identified as the source of this information."
+    },
+    {
+     "field": "scope_of_action",
+     "value": "Morison's position and nondisclosure agreement",
+     "statement": "Morison held a security clearance at the Naval Intelligence Support Center and had signed an agreement not to disclose classified information.",
+     "source_id": "h1980_01",
+     "evidence_quote": "Samuel Loring Morison had been employed by the Naval Intelligence Support Center at Suitland, Maryland, where he had access to classified information. As part of his employment, he had signed a nondisclosure agreement."
+    },
+    {
+     "field": "occurred_on",
+     "value": "Photographs and 1984 publication",
+     "statement": "The leaked photographs showed a Soviet aircraft carrier under construction and were published by Jane's in 1984.",
+     "source_id": "h1980_01",
+     "evidence_quote": "It shows construction of a Kiev-class aircraft carrier, as published by Jane's in 1984."
+    },
+    {
+     "field": "outlet_affected",
+     "value": "Jane's Defence Weekly received the photographs",
+     "statement": "Morison leaked the satellite photographs to Jane's Defence Weekly.",
+     "source_id": "h1980_01",
+     "evidence_quote": "This photo is one of two KH-11 photos leaked to Jane's Defence Weekly."
+    },
+    {
+     "field": "stated_justification",
+     "value": "Fourth Circuit's reasoning on the Espionage Act",
+     "statement": "Judge Russell explained that different sections of the Espionage Act covered disclosure to foreign governments and disclosure to others, including the press.",
+     "source_id": "h1980_01",
+     "evidence_quote": "Writing for the court, Judge Donald Stewart Russell noted that section (d) of the Espionage Act dealt with the transmission of information to foreign governments while section (e) dealt with the transmission of this information to others, such as the press."
+    },
+    {
+     "field": "action",
+     "value": "Theft of government property count upheld",
+     "statement": "The court separately upheld Morison's conviction on the related federal charge of theft of government property.",
+     "source_id": "h1980_01",
+     "evidence_quote": "a criminal statute covering the theft of government property"
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "No special protection for the press",
+     "statement": "The court held that transmitting information to the media does not give a source special constitutional protection.",
+     "source_id": "h1980_01",
+     "evidence_quote": "He cited Branzburg v. Hayes (1972) for the principle expressed there that journalists had no special protection simply because they were transmitting information to the media."
+    },
+    {
+     "field": "reversed_on",
+     "value": "President Clinton later pardoned Morison",
+     "statement": "Morison's case ended with a presidential pardon after the Supreme Court declined to hear it.",
+     "source_id": "h1980_01",
+     "evidence_quote": "The Supreme Court declined to hear Morison’s case, but he was later pardoned by President Bill Clinton."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Branzburg's actual holding",
+     "statement": "The Fourth Circuit's ruling rested on Branzburg v. Hayes, in which the Supreme Court had held that reporters must respond to grand jury subpoenas the same as other citizens.",
+     "source_id": "h1980_02",
+     "evidence_quote": "The sole issue before us is the obligation of reporters to respond to grand jury subpoenas as other citizens do and to answer questions relevant to an investigation into the commission of crime."
+    }
+   ],
+   "granularity": "anchor",
+   "status": "historical"
+  },
+  {
+   "slug": "1989-us-panama-press-pool-restricted",
+   "title": "United States: Pentagon press pool kept from the opening hours of the Panama invasion, December 1989",
+   "occurred_on": "1989-12-20",
+   "occurred_on_precision": "day",
+   "jurisdiction": "United States, federal",
+   "country": "US",
+   "continent": "North America",
+   "level": "national",
+   "type": "access_ban",
+   "tactic_primary": "access_ban",
+   "tactics": [
+    "access_ban"
+   ],
+   "stage": "restrict",
+   "leader_slug": "george-hw-bush",
+   "summary": "When United States forces invaded Panama on December 20, 1989, the Pentagon kept its national media pool of reporters away from the opening hours of the fighting. President George H.W. Bush later told newspaper editors the arrangement had again failed to get journalists to the action.",
+   "what_happened": "United States forces invaded Panama on December 20, 1989, in an operation aimed at removing General Manuel Noriega from power. The Department of Defense activated its national media pool, a standing rotation of reporters created in April 1985 after journalists were excluded from the 1983 invasion of Grenada, but the Pentagon kept the pool away from the fighting for its opening hours. NBC News correspondent Fred Francis watched the early combat from a golf course three miles from the action rather than from the battlefield itself. Pooled reporters who reached Panama grew frustrated when Pentagon briefings described the fighting as over while Panamanians were still reporting gunfire by telephone, and journalist Peter Arnett later said the civilian death toll around Noriega's headquarters was never confirmed by the United States government. At an April 6, 1990 meeting with newspaper editors, a questioner told President George H.W. Bush that the Panama pool had again shown the arrangement for covering the opening of a military operation was not working. Bush said reporters who felt they had been denied access should be given it once they arrived.",
+   "stated_justification": "President Bush told the editors that constraints on press access were part of any combat situation, saying, \"When you're involved in a combat situation, I don't need to tell people in this room there are constraints.\"",
+   "effect_on_reporting": "NBC's Fred Francis watched the invasion's opening hours from a golf course three miles from the fighting, and journalist Peter Arnett later said the civilian toll around Noriega's headquarters was never acknowledged by the United States government.",
+   "issue_of_the_day": "The Panama pool was the first major test of the national media pool system the Pentagon created in April 1985 after journalists had been kept off the island during the 1983 invasion of Grenada.",
+   "outcome": "ongoing",
+   "outcome_on": "1990-04-06",
+   "outcome_note": "President Bush told newspaper editors on April 6, 1990, that journalists who felt they had been denied access during the Panama pool should be given it once they arrived in the future.",
+   "actors": [
+    "george-hw-bush",
+    "us-department-of-defense",
+    "fred-francis"
+   ],
+   "actor_roles": {
+    "george-hw-bush": "other",
+    "us-department-of-defense": "implemented",
+    "fred-francis": "other"
+   },
+   "outlets": [
+    "nbc-news"
+   ],
+   "sources": [
+    "h1980_03",
+    "h1980_04"
+   ],
+   "claims": [
+    {
+     "field": "action",
+     "value": "Pentagon kept reporters from the first 48 hours",
+     "statement": "The Pentagon restricted the press pool from covering the start of the Panama invasion.",
+     "source_id": "h1980_03",
+     "evidence_quote": "The Pentagon hemmed in reporters, keeping them from covering the first 48 hours of the fighting."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Francis watched from a golf course",
+     "statement": "NBC correspondent Fred Francis had to watch the invasion's early hours from a golf course rather than the battlefield.",
+     "source_id": "h1980_03",
+     "evidence_quote": "Francis was so incensed that he had to watch the early moments of the fighting from a country club golf course three miles away."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Civilian toll never acknowledged",
+     "statement": "Journalist Peter Arnett said the number of civilians killed around Noriega's headquarters was never confirmed by the United States government.",
+     "source_id": "h1980_03",
+     "evidence_quote": "That still haunts the United States down there, because there were many civilians killed around Noriega’s headquarters, but the United States never acknowledged it"
+    },
+    {
+     "field": "scope_of_action",
+     "value": "National media pool created in 1985",
+     "statement": "The national media pool was created in April 1985 to give journalists access during military operations.",
+     "source_id": "h1980_03",
+     "evidence_quote": "The pool, created in April 1985, was designed to offer journalists access in unique military situations."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Editors said the pool failed again in Panama",
+     "statement": "A newspaper editor told President Bush that the Panama press pool had again shown the arrangement for covering the start of a military operation did not work.",
+     "source_id": "h1980_04",
+     "evidence_quote": "the experience of the press pool in Panama again proved that this arrangement for covering the early stages of a military action is not working"
+    },
+    {
+     "field": "stated_justification",
+     "value": "Bush cites combat constraints",
+     "statement": "President Bush said constraints on press access were an ordinary part of a combat situation.",
+     "source_id": "h1980_04",
+     "evidence_quote": "When you're involved in a combat situation, I don't need to tell people in this room there are constraints."
+    },
+    {
+     "field": "status",
+     "value": "Bush says access should be given",
+     "statement": "President Bush said journalists who felt they had been denied access during the Panama pool should be given it once they reached the scene.",
+     "source_id": "h1980_04",
+     "evidence_quote": "for those who were in the press pool and felt that they weren't given access, we certainly ought to go the extra mile to see that they get access when they get there."
+    }
+   ],
+   "granularity": "anchor",
+   "status": "historical"
+  },
+  {
+   "slug": "1986-ussr-daniloff-moscow-arrest",
+   "title": "Soviet Union: arrest and seven-week detention of American correspondent Nicholas Daniloff in Moscow, 1986",
+   "occurred_on": "1986-08-30",
+   "occurred_on_precision": "day",
+   "jurisdiction": "Soviet Union, national",
+   "country": "RU",
+   "continent": "Europe",
+   "level": "national",
+   "type": "detention_and_violence",
+   "tactic_primary": "detention_and_violence",
+   "tactics": [
+    "detention_and_violence"
+   ],
+   "stage": "punish",
+   "leader_slug": "mikhail-gorbachev",
+   "summary": "Soviet authorities arrested Nicholas Daniloff, the Moscow correspondent for U.S. News & World Report, on August 30, 1986, days after the United States arrested a Soviet United Nations employee on espionage charges. Daniloff was held for two weeks before being moved to United States Embassy custody and left the Soviet Union on September 29, 1986.",
+   "what_happened": "Nicholas Daniloff, the Moscow correspondent for the magazine U.S. News & World Report, was arrested by Soviet authorities on August 30, 1986, days after the United States arrested Gennadi Zakharov, a Soviet employee of the United Nations, on espionage charges in New York. President Ronald Reagan told the United Nations General Assembly on September 22, 1986, that an American correspondent in Moscow had been made the subject of what he called fabricated accusations and trumped-up charges, arrested and jailed in disregard of due process, and in effect held as a hostage. The White House said Secretary of State George Shultz would raise Daniloff's case as the first item at his meeting that week with Soviet Foreign Minister Eduard Shevardnadze. On September 12, 1986, Daniloff was transferred from Soviet custody to the United States Ambassador in Moscow, ending confinement Reagan described as an 8-by-10-foot cell shared with a suspected informant and daily interrogation. Daniloff left the Soviet Union for the West on September 29, 1986. The Committee to Protect Journalists later named his case among \"meritless espionage cases brought against journalists.\"",
+   "stated_justification": "Soviet officials' own account of the espionage accusation does not appear among the sources reviewed here; President Reagan told the United Nations General Assembly that Daniloff had been made the subject of \"fabricated accusations and trumped-up charges.\"",
+   "effect_on_reporting": "Daniloff was held, in Reagan's description, in an 8-by-10-foot cell shared with a suspected informant and subjected to hours of interrogation before he was transferred to United States Ambassador custody on September 12, 1986.",
+   "issue_of_the_day": "Daniloff's arrest came days after the United States arrested Gennadi Zakharov, a Soviet employee at the United Nations, on espionage charges in New York, and the two cases became linked in the following weeks of diplomacy.",
+   "outcome": "reversed",
+   "outcome_on": "1986-09-29",
+   "outcome_note": "Daniloff left Moscow for the West on September 29, 1986, though the White House denied that his departure and Zakharov's release amounted to a formal exchange.",
+   "actors": [
+    "mikhail-gorbachev",
+    "ronald-reagan",
+    "nicholas-daniloff"
+   ],
+   "actor_roles": {
+    "mikhail-gorbachev": "other",
+    "ronald-reagan": "announced",
+    "nicholas-daniloff": "other"
+   },
+   "outlets": [
+    "us-news-and-world-report"
+   ],
+   "sources": [
+    "h1980_05",
+    "h1980_06",
+    "h1980_07",
+    "h1980_08",
+    "h1980_09",
+    "h1980_10"
+   ],
+   "claims": [
+    {
+     "field": "action",
+     "value": "Daniloff arrested August 30",
+     "statement": "Daniloff, the U.S. News & World Report Moscow correspondent, was arrested on August 30, 1986.",
+     "source_id": "h1980_05",
+     "evidence_quote": "Mr. Daniloff, the U.S. News & World Report Moscow correspondent, was arrested on August 30."
+    },
+    {
+     "field": "announced_by",
+     "value": "US raises case with Shevardnadze",
+     "statement": "The White House said Secretary of State Shultz would raise the Daniloff case as the first item in his meeting with the Soviet foreign minister.",
+     "source_id": "h1980_05",
+     "evidence_quote": "Secretary [of State] Shultz will be meeting this weekend with [Soviet] Foreign Minister Shevardnadze, and we will raise the issue as the first item on the agenda."
+    },
+    {
+     "field": "stated_justification",
+     "value": "Reagan calls charges fabricated",
+     "statement": "President Reagan told the United Nations the correspondent had been made the subject of fabricated, trumped-up charges.",
+     "source_id": "h1980_06",
+     "evidence_quote": "an American correspondent in Moscow was made the subject of fabricated accusations and trumped-up charges."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Arrested and jailed, held as hostage",
+     "statement": "Reagan said the journalist had been arrested and jailed in disregard of due process and human rights conventions, and in effect held as a hostage.",
+     "source_id": "h1980_06",
+     "evidence_quote": "He was arrested and jailed in a callous disregard of due process and numerous human rights conventions."
+    },
+    {
+     "field": "status",
+     "value": "Transferred to Ambassador custody",
+     "statement": "Daniloff was moved from Soviet custody to the custody of the United States Ambassador in Moscow.",
+     "source_id": "h1980_07",
+     "evidence_quote": "our hostage in Moscow, Mr. Daniloff, has been transferred to the custody of our Ambassador and will be in the Embassy there."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Conditions of detention",
+     "statement": "Daniloff had been held in an 8-by-10-foot cell shared with a suspected informant and subjected to daily interrogation.",
+     "source_id": "h1980_07",
+     "evidence_quote": "Mr. Daniloff is out of the 8-by 10-foot cell, which he was sharing with someone we think was an informant, and that he won't be subjected to 4 hours of interrogation every day."
+    },
+    {
+     "field": "reversed_on",
+     "value": "Daniloff leaves Moscow",
+     "statement": "Daniloff departed Moscow by air for the West on September 29, 1986.",
+     "source_id": "h1980_08",
+     "evidence_quote": "a Lufthansa airliner left Moscow bound for Frankfurt, West Germany, and on board are Mr. and Mrs. Nicholas Daniloff."
+    },
+    {
+     "field": "status",
+     "value": "Reagan denies a trade",
+     "statement": "President Reagan denied that Daniloff's release and Zakharov's release amounted to a trade.",
+     "source_id": "h1980_09",
+     "evidence_quote": "I know some persist in saying that we traded Zakharov for Daniloff. We did not."
+    },
+    {
+     "field": "stated_justification",
+     "value": "CPJ calls the case meritless",
+     "statement": "The Committee to Protect Journalists later described Daniloff's prosecution as one of several meritless espionage cases against journalists.",
+     "source_id": "h1980_10",
+     "evidence_quote": "Nicholas Daniloff in the former Soviet Union are other examples of meritless espionage cases brought against journalists"
+    }
+   ],
+   "granularity": "anchor",
+   "status": "historical"
+  },
+  {
+   "slug": "1987-malaysia-printing-act-bars-court-review",
+   "title": "Malaysia: Printing Presses and Publications Act amended to bar court review of publishing permits, 1987",
+   "occurred_on": "1987",
+   "occurred_on_precision": "year",
+   "jurisdiction": "Malaysia, national",
+   "country": "MY",
+   "continent": "Asia",
+   "level": "national",
+   "type": "outlet_licensing",
+   "tactic_primary": "outlet_licensing",
+   "tactics": [
+    "outlet_licensing"
+   ],
+   "stage": "silence",
+   "leader_slug": "mahathir-mohamad",
+   "summary": "Malaysia's government amended the Printing Presses and Publications Act in 1987 to expand its power to ban or restrict publications and to bar any court challenge to the suspension or revocation of a publishing permit. The change came the same year Prime Minister Mahathir Mohamad's government arrested 106 opposition politicians and activists in an operation known by the codename Lalang.",
+   "what_happened": "Malaysia's Printing Presses and Publications Act of 1984 already required every newspaper and periodical to hold an annual publishing permit issued by the government. In 1987 the government of Prime Minister Mahathir Mohamad amended the act to make the publication of what it called malicious news a punishable offense, to expand the government's power to ban or restrict publications, and to prohibit any court challenge to the suspension or revocation of a publishing permit. The amendment came the same year Mahathir's government carried out a wide arrest operation known by the codename Lalang, a Malay word for a weed. In October 1987 Mahathir ordered the arrest of 106 people, including politicians from the opposition Democratic Action Party and Parti Islam Se Malaysia, along with human rights activists, under the Internal Security Act, which allows detention without trial. Malaysia's courts had shown some willingness to review the legality of the government's actions, but Mahathir responded by removing five high court judges and introducing a provision barring judicial review of security detentions.",
+   "stated_justification": "Malaysian officials did not state, in the sources reviewed here, a specific public reason for the 1987 amendment beyond barring the publication of what the law itself called \"malicious news.\"",
+   "effect_on_reporting": "The United States State Department later said government power over licensing and other policies helped create \"an atmosphere that inhibits independent or investigative journalism and results in extensive self-censorship.\"",
+   "issue_of_the_day": "The press-law amendment followed Mahathir's use of the Internal Security Act against political opponents and activists in October 1987, at a time when Malaysia's courts had begun reviewing legal challenges to his own conduct in office.",
+   "outcome": "sustained",
+   "outcome_on": null,
+   "outcome_note": "The 1987 amendments to the Printing Presses and Publications Act remained in force, according to the United States State Department's account of Malaysia's press law.",
+   "actors": [
+    "mahathir-mohamad",
+    "government-of-malaysia"
+   ],
+   "actor_roles": {
+    "mahathir-mohamad": "ordered",
+    "government-of-malaysia": "legislated"
+   },
+   "outlets": [],
+   "sources": [
+    "h1980_11",
+    "h1980_12"
+   ],
+   "claims": [
+    {
+     "field": "action",
+     "value": "1987 amendment bars court review of permits",
+     "statement": "The Printing Presses and Publications Act was amended in 1987 to make the publication of \"malicious news\" a punishable offense, expand the government's power to restrict publications, and bar court challenges to permit suspensions.",
+     "source_id": "h1980_11",
+     "evidence_quote": "The act was amended in 1987 to make the publication of \"malicious news\" a punishable offense, expand the Government's power to ban or restrict publications, and prohibit court challenges to suspension or revocation of publication permits."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Licensing power discourages independent journalism",
+     "statement": "Government power over publishing licenses and other policies created \"an atmosphere that inhibits independent or investigative journalism and results in extensive self-censorship.\"",
+     "source_id": "h1980_11",
+     "evidence_quote": "Government power over license renewal and other policies create an atmosphere that inhibits independent or investigative journalism and results in extensive self-censorship."
+    },
+    {
+     "field": "scope_of_action",
+     "value": "106 arrested in October 1987",
+     "statement": "Mahathir ordered the arrest of 106 people, including opposition politicians and human rights activists.",
+     "source_id": "h1980_12",
+     "evidence_quote": "Mahathir ordered the arrest of 106 people, including human rights activists and politicians from the Democratic Action Party (DAP), Parti Islam Se Malaysia"
+    },
+    {
+     "field": "scope_of_action",
+     "value": "Operation code-named Lalang",
+     "statement": "The October 1987 arrests were carried out under the operational codename Lalang.",
+     "source_id": "h1980_12",
+     "evidence_quote": "These arrests took place under the operational codename lalang"
+    },
+    {
+     "field": "scope_of_action",
+     "value": "Courts had reviewed Mahathir's conduct",
+     "statement": "Malaysia's courts had shown a willingness to review the legality of Mahathir's actions and allegations against him before the 1987 restrictions on judicial review.",
+     "source_id": "h1980_12",
+     "evidence_quote": "Malaysia's courts initially expressed a willingness to review the legality of his actions, as well as allegations of corruption against Mahathir."
+    },
+    {
+     "field": "status",
+     "value": "Judges removed, judicial review barred",
+     "statement": "Mahathir removed five high court judges and introduced a provision forbidding judicial review of security detentions.",
+     "source_id": "h1980_12",
+     "evidence_quote": "Mahathir responded by removing five high court judges, including then-Chief Justice Tun Salleh Abbas, and introduced section 8B of the ISA, which forbids judicial review of ISA detentions"
+    }
+   ],
+   "granularity": "anchor",
+   "status": "historical"
+  }
+ ],
+ "actors": [
+  {
+   "slug": "samuel-loring-morison",
+   "name": "Samuel Loring Morison",
+   "kind": "person",
+   "role_or_office": "Intelligence analyst, Naval Intelligence Support Center",
+   "country": "US"
+  },
+  {
+   "slug": "donald-russell",
+   "name": "Donald Stewart Russell",
+   "kind": "person",
+   "role_or_office": "Judge, U.S. Court of Appeals for the Fourth Circuit",
+   "country": "US"
+  },
+  {
+   "slug": "bill-clinton",
+   "name": "Bill Clinton",
+   "kind": "person",
+   "role_or_office": "President of the United States",
+   "country": "US"
+  },
+  {
+   "slug": "fred-francis",
+   "name": "Fred Francis",
+   "kind": "person",
+   "role_or_office": "NBC News correspondent",
+   "country": "US"
+  },
+  {
+   "slug": "mikhail-gorbachev",
+   "name": "Mikhail Gorbachev",
+   "kind": "person",
+   "role_or_office": "General Secretary of the Communist Party of the Soviet Union",
+   "country": "RU",
+   "role_claim": {
+    "source_id": "h1980_06",
+    "evidence_quote": "General Secretary Gorbachev and I talked, alone.",
+    "statement": "President Reagan referred to Mikhail Gorbachev as General Secretary in his September 22, 1986 address to the United Nations General Assembly."
+   }
+  },
+  {
+   "slug": "nicholas-daniloff",
+   "name": "Nicholas Daniloff",
+   "kind": "person",
+   "role_or_office": "Moscow correspondent, U.S. News & World Report",
+   "country": "US"
+  },
+  {
+   "slug": "government-of-malaysia",
+   "name": "Government of Malaysia",
+   "kind": "body",
+   "role_or_office": "Government of Malaysia",
+   "country": "MY"
+  }
+ ],
+ "outlets": [
+  {
+   "slug": "janes-defence-weekly",
+   "name": "Jane's Defence Weekly",
+   "kind": "magazine",
+   "country": "GB"
+  },
+  {
+   "slug": "us-news-and-world-report",
+   "name": "U.S. News & World Report",
+   "kind": "magazine",
+   "country": "US"
+  }
+ ],
+ "sources": [
+  {
+   "id": "h1980_01",
+   "url": "https://firstamendment.mtsu.edu/article/united-states-v-morison-4th-cir/",
+   "title": "United States v. Morison (4th Cir.) (1988)",
+   "publisher": "The First Amendment Encyclopedia, Middle Tennessee State University",
+   "published_on": "2009",
+   "kind": "reference"
+  },
+  {
+   "id": "h1980_03",
+   "url": "https://www.rcfp.org/journals/the-news-media-and-the-law-fall-2001/blame-grenada/",
+   "title": "Blame Grenada!",
+   "publisher": "Reporters Committee for Freedom of the Press",
+   "published_on": "2001",
+   "kind": "reporting"
+  },
+  {
+   "id": "h1980_04",
+   "url": "https://www.presidency.ucsb.edu/documents/remarks-and-question-and-answer-session-with-members-the-american-society-newspaper",
+   "title": "Remarks and a Question-and-Answer Session With Members of the American Society of Newspaper Editors",
+   "publisher": "The American Presidency Project",
+   "published_on": "1990-04-06",
+   "kind": "primary_document"
+  },
+  {
+   "id": "h1980_05",
+   "url": "https://www.presidency.ucsb.edu/documents/statement-principal-deputy-press-secretary-speakes-the-arrest-and-detention-nicholas",
+   "title": "Statement by Principal Deputy Press Secretary Speakes on the Arrest and Detention of Nicholas Daniloff in the Soviet Union",
+   "publisher": "The American Presidency Project",
+   "published_on": "1986-09-16",
+   "kind": "primary_document"
+  },
+  {
+   "id": "h1980_06",
+   "url": "https://www.presidency.ucsb.edu/documents/address-the-41st-session-the-united-nations-general-assembly-new-york-new-york",
+   "title": "Address to the 41st Session of the United Nations General Assembly in New York, New York",
+   "publisher": "The American Presidency Project",
+   "published_on": "1986-09-22",
+   "kind": "primary_document"
+  },
+  {
+   "id": "h1980_07",
+   "url": "https://www.presidency.ucsb.edu/documents/remarks-white-house-ceremony-for-the-elementary-school-recognition-program-honorees",
+   "title": "Remarks at a White House Ceremony for the Elementary School Recognition Program Honorees",
+   "publisher": "The American Presidency Project",
+   "published_on": "1986-09-12",
+   "kind": "primary_document"
+  },
+  {
+   "id": "h1980_08",
+   "url": "https://www.presidency.ucsb.edu/documents/remarks-senate-campaign-rally-for-christopher-s-bond-kansas-city-missouri",
+   "title": "Remarks at a Senate Campaign Rally for Christopher S. Bond in Kansas City, Missouri",
+   "publisher": "The American Presidency Project",
+   "published_on": "1986-09-29",
+   "kind": "primary_document"
+  },
+  {
+   "id": "h1980_09",
+   "url": "https://www.presidency.ucsb.edu/documents/the-presidents-news-conference-963",
+   "title": "The President's News Conference",
+   "publisher": "The American Presidency Project",
+   "published_on": "1986-11-19",
+   "kind": "primary_document"
+  },
+  {
+   "id": "h1980_10",
+   "url": "https://cpj.org/2009/05/cpj-background-paper-describes-legal-issues-in-sab/",
+   "title": "CPJ Background Paper Describes Legal Issues in Saberi Case",
+   "publisher": "Committee to Protect Journalists",
+   "published_on": "2009-05-09",
+   "kind": "reporting"
+  },
+  {
+   "id": "h1980_11",
+   "url": "https://1997-2001.state.gov/global/human_rights/1998_hrp_report/malaysia.html",
+   "title": "1997 Human Rights Report: Malaysia",
+   "publisher": "U.S. Department of State",
+   "published_on": "1998",
+   "kind": "official_statement"
+  },
+  {
+   "id": "h1980_12",
+   "url": "https://www.hrw.org/report/2005/09/26/detained-without-trial/abuse-internal-security-act-detainees-malaysia",
+   "title": "Detained Without Trial: Abuse of Internal Security Act Detainees in Malaysia",
+   "publisher": "Human Rights Watch",
+   "published_on": "2005-09-26",
+   "kind": "reporting"
+  },
+  {
+   "id": "h1980_02",
+   "url": "https://www.law.cornell.edu/supremecourt/text/408/665",
+   "title": "Branzburg v. Hayes, 408 U.S. 665 (1972)",
+   "publisher": "Legal Information Institute, Cornell Law School",
+   "published_on": "1972",
+   "kind": "court_record"
+  }
+ ]
+}

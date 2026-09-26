@@ -68,10 +68,15 @@ class TestClassifyTier1(unittest.TestCase):
         state = linkcheck.classify_tier1(403, None, "https://example.com/a", "https://example.com/a", body, ARTICLE_TITLE)
         self.assertEqual(state, "tier2")
 
-    def test_403_without_challenge_marker_is_dead(self):
+    def test_403_without_challenge_marker_is_error(self):
         body = "<html><body>Forbidden</body></html>"
         state = linkcheck.classify_tier1(403, None, "https://example.com/a", "https://example.com/a", body, ARTICLE_TITLE)
-        self.assertEqual(state, "dead")
+        self.assertEqual(state, "error")
+
+    def test_cited_homepage_that_loads_is_live(self):
+        body = "<html><head><title>Reporters Committee</title></head></html>"
+        state = linkcheck.classify_tier1(200, None, "https://www.rcfp.org/", "https://www.rcfp.org/", body, "Reporters Committee for Freedom of the Press")
+        self.assertEqual(state, "live")
 
     def test_429_with_datadome_marker_is_tier2(self):
         body = "<html><body>datadome protection active</body></html>"
@@ -95,9 +100,9 @@ class TestClassifyTier1(unittest.TestCase):
         state = linkcheck.classify_tier1(None, "tls_failure", "https://example.com/a", "https://example.com/a", "", ARTICLE_TITLE)
         self.assertEqual(state, "dead")
 
-    def test_timeout_is_dead(self):
+    def test_timeout_is_error(self):
         state = linkcheck.classify_tier1(None, "timeout", "https://example.com/a", "https://example.com/a", "", ARTICLE_TITLE)
-        self.assertEqual(state, "dead")
+        self.assertEqual(state, "error")
 
     def test_network_error_is_dead(self):
         state = linkcheck.classify_tier1(None, "network_error", "https://example.com/a", "https://example.com/a", "", ARTICLE_TITLE)

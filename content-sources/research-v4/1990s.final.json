@@ -1,0 +1,542 @@
+{
+ "incidents": [
+  {
+   "slug": "1990-us-cnn-noriega-prior-restraint",
+   "title": "United States federal court bars CNN from broadcasting recordings of Manuel Noriega's calls with his lawyers",
+   "occurred_on": "1990-11-08",
+   "occurred_on_precision": "day",
+   "jurisdiction": "United States, federal",
+   "country": "US",
+   "continent": "North America",
+   "level": "national",
+   "type": "prior_restraint",
+   "tactic_primary": "prior_restraint",
+   "tactics": [
+    "prior_restraint"
+   ],
+   "leader_slug": "george-hw-bush",
+   "summary": "In November 1990, the United States District Court for the Southern District of Florida ordered Cable News Network to stop broadcasting tape recordings of jailed former Panamanian leader Manuel Noriega's telephone conversations with his defense lawyers. The Supreme Court of the United States declined to lift the order on November 18, 1990, over a dissent from Justices Thurgood Marshall and Sandra Day O'Connor.",
+   "what_happened": "General Manuel Noriega, a defendant in a pending federal criminal proceeding in Florida, asked the United States District Court for the Southern District of Florida to stop Cable News Network from broadcasting recorded conversations between him and his attorneys. On November 8, 1990, the District Court continued a temporary restraint on the broadcast, and a second written order dated November 9, 1990, kept the restraint in place for up to ten days while the court reviewed the recordings. CNN asked the United States Court of Appeals for the Eleventh Circuit to lift the order, but the panel denied relief, saying the First Amendment interests of the press and the public would be served by CNN immediately producing the tapes to the District Court rather than broadcasting them. CNN then asked the Supreme Court of the United States to stay the restraining orders and to review the case. On November 18, 1990, the Supreme Court denied both requests. Justice Thurgood Marshall, joined by Justice Sandra Day O'Connor, dissented.",
+   "stated_justification": "Manuel Noriega's motion asked the court to prevent Cable News Network from broadcasting the recorded conversations between him and his attorneys.",
+   "effect_on_reporting": "Rather than clearing Cable News Network to broadcast the recordings, the Eleventh Circuit panel said the First Amendment interests of the press and the public would be served by CNN immediately producing the tapes to the District Court for review.",
+   "issue_of_the_day": "Manuel Noriega was a defendant in a pending federal criminal proceeding in Florida when Cable News Network obtained recordings of his prison telephone calls with his attorneys.",
+   "outcome": "upheld",
+   "outcome_on": "1990-11-18",
+   "outcome_note": "The Supreme Court of the United States denied Cable News Network's request to stay the restraining orders and denied its petition for certiorari on November 18, 1990, over a dissent from Justices Thurgood Marshall and Sandra Day O'Connor.",
+   "actors": [
+    "george-hw-bush",
+    "william-hoeveler",
+    "manuel-noriega"
+   ],
+   "actor_roles": {
+    "william-hoeveler": "ordered",
+    "manuel-noriega": "other",
+    "george-hw-bush": "other"
+   },
+   "outlets": [
+    "cnn"
+   ],
+   "sources": [
+    "h1990_01",
+    "h1990_02"
+   ],
+   "claims": [
+    {
+     "field": "action",
+     "value": "Court enjoins CNN from broadcasting Noriega tapes",
+     "statement": "The United States District Court for the Southern District of Florida entered an order enjoining Cable News Network from broadcasting taped communications between Manuel Noriega, a defendant in a pending criminal proceeding, and his defense counsel.",
+     "source_id": "h1990_02",
+     "evidence_quote": "The District Court in this case entered an order enjoining petitioner Cable News Network (CNN) from broadcasting taped communications between respondent Manuel Noriega, a defendant in a pending criminal proceeding, and his counsel."
+    },
+    {
+     "field": "occurred_on",
+     "value": "First restraining order dated November 8, 1990",
+     "statement": "The District Court's first written order, continuing the temporary restraint on broadcast, was dated November 8, 1990.",
+     "source_id": "h1990_01",
+     "evidence_quote": "The first written order, dated November 8, 1990, continued the temporary restraint"
+    },
+    {
+     "field": "scope_of_action",
+     "value": "Second order extended restraint up to ten days",
+     "statement": "A second written order dated November 9, 1990 kept the restraint on broadcasting the tapes in place for up to ten days while the District Court reviewed them.",
+     "source_id": "h1990_01",
+     "evidence_quote": "The second written order, dated November 9, 1990, clarified the first written order and specified that the restraint would remain in effect for up to ten days, or until such lesser time as the District Court needed to decide the issue on the merits after review of the tape recordings."
+    },
+    {
+     "field": "stated_justification",
+     "value": "Noriega sought to block broadcast of recordings",
+     "statement": "Manuel Noriega's motion asked the court to prevent Cable News Network from broadcasting the recorded conversations between him and his attorneys.",
+     "source_id": "h1990_01",
+     "evidence_quote": "Noriega sought to prevent CNN from broadcasting the recorded conversations between Noriega and his attorneys."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Appeals court ordered tapes produced, not broadcast",
+     "statement": "The Eleventh Circuit panel held that Cable News Network had to immediately produce the tapes to the District Court so it could weigh the competing constitutional interests, rather than being cleared to broadcast them.",
+     "source_id": "h1990_01",
+     "evidence_quote": "The foregoing analysis compels the conclusion that the First Amendment interests of the press and the public will be best served by immediate production of the tapes held by CNN so that the District Court can conduct the difficult balancing of constitutional rights required under these circumstances"
+    },
+    {
+     "field": "status",
+     "value": "Supreme Court denied stay and certiorari",
+     "statement": "The Supreme Court of the United States denied Cable News Network's application to stay the District Court's restraining orders and denied its petition for a writ of certiorari on November 18, 1990.",
+     "source_id": "h1990_02",
+     "evidence_quote": "The application to stay restraining orders of the United States District Court for the Southern District of Florida presented to Justice KENNEDY and by him referred to the Court is denied. The petition for a writ of certiorari is denied."
+    },
+    {
+     "field": "status",
+     "value": "Marshall and O'Connor dissented from denial",
+     "statement": "Justice Thurgood Marshall, joined by Justice Sandra Day O'Connor, dissented from the denial of the stay and of certiorari.",
+     "source_id": "h1990_02",
+     "evidence_quote": "Justice MARSHALL, with whom Justice O'CONNOR joins, dissenting."
+    }
+   ],
+   "granularity": "anchor",
+   "stage": "silence"
+  },
+  {
+   "slug": "1990-us-butterworth-v-smith-grand-jury-secrecy",
+   "title": "United States Supreme Court strikes down Florida law barring a reporter from discussing his own grand jury testimony",
+   "occurred_on": "1990-03-21",
+   "occurred_on_precision": "day",
+   "jurisdiction": "Florida, United States",
+   "country": "US",
+   "continent": "North America",
+   "level": "state_or_province",
+   "type": "secrets_and_espionage_laws",
+   "tactic_primary": "secrets_and_espionage_laws",
+   "tactics": [
+    "secrets_and_espionage_laws"
+   ],
+   "leader_slug": "bob-martinez",
+   "summary": "In 1990, the Supreme Court of the United States struck down a Florida law that threatened newspaper reporter Michael Smith with criminal prosecution for discussing his own testimony before a state grand jury investigating local officials. The Court ruled unanimously that a state may not ban a grand jury witness from disclosing his own testimony once the grand jury's term has ended.",
+   "what_happened": "Michael Smith was a reporter for the Charlotte Herald-News in Charlotte County, Florida. While writing a series of newspaper articles, he obtained information about alleged wrongdoing in the Charlotte County State Attorney's Office and Sheriff's Department. A special prosecutor called Smith to testify before a Florida grand jury investigating those allegations. At the time he testified, Smith was warned by the special prosecutor's staff not to reveal his testimony in any manner, and that doing so could result in criminal prosecution under Florida Statute 905.27. After the grand jury ended its investigation, Smith wanted to write about what he had learned, including his own testimony, but the statute still barred him from disclosing it. He sued in federal court, and his case reached the Supreme Court of the United States. On March 21, 1990, the Court held unanimously that Florida's law violated the First Amendment insofar as it barred a grand jury witness from disclosing his own testimony after the grand jury's term had ended.",
+   "stated_justification": "The Supreme Court noted that Florida's asserted interests in grand jury secrecy included that if preindictment proceedings were made public, prospective witnesses would be hesitant to come forward voluntarily, knowing that those against whom they testified would be aware of that testimony.",
+   "effect_on_reporting": "The Court said the ban's impact on Smith's ability to make a truthful public statement was dramatic, since before testifying he had been free to speak about matters of public concern but believed he could no longer communicate that information.",
+   "issue_of_the_day": "Smith's reporting concerned alleged wrongdoing inside the Charlotte County State Attorney's Office and Sheriff's Department, which a special prosecutor and a state grand jury were investigating.",
+   "outcome": "reversed",
+   "outcome_on": "1990-03-21",
+   "outcome_note": "The Supreme Court held unanimously that Florida's ban violated the First Amendment as applied to a witness who wanted to discuss his own testimony after the grand jury's term had ended.",
+   "actors": [
+    "bob-martinez",
+    "robert-butterworth",
+    "michael-smith"
+   ],
+   "actor_roles": {
+    "robert-butterworth": "defended",
+    "michael-smith": "other",
+    "bob-martinez": "other"
+   },
+   "outlets": [
+    "charlotte-herald-news"
+   ],
+   "sources": [
+    "h1990_03",
+    "h1990_04"
+   ],
+   "claims": [
+    {
+     "field": "action",
+     "value": "Smith warned not to reveal grand jury testimony",
+     "statement": "At the time Michael Smith testified before the grand jury, he was warned by the special prosecutor's staff not to reveal his testimony in any manner, or face criminal prosecution under Florida Statute 905.27.",
+     "source_id": "h1990_03",
+     "evidence_quote": "At the time he testified, respondent was warned by the special prosecutor's staff not to reveal his testimony in any manner, and that such revelation could result in a criminal prosecution for violating Fla.Stat. § 905.27."
+    },
+    {
+     "field": "journalist_affected",
+     "value": "Smith was a Charlotte Herald-News reporter",
+     "statement": "Michael Smith was a reporter for the Charlotte Herald-News in Charlotte County, Florida.",
+     "source_id": "h1990_04",
+     "evidence_quote": "Michael Smith was a reporter for the Charlotte Herald-News in Charlotte County, Florida."
+    },
+    {
+     "field": "stated_justification",
+     "value": "Secrecy protects witnesses willing to testify voluntarily",
+     "statement": "The Supreme Court's opinion said one interest served by grand jury secrecy is that making preindictment proceedings public would make prospective witnesses hesitant to come forward voluntarily, knowing the people they testified against would learn of their testimony.",
+     "source_id": "h1990_03",
+     "evidence_quote": "First, if preindictment proceedings were made public, many prospective witnesses would be hesitant to come forward voluntarily, knowing that those against whom they testify would be aware of that testimony."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Ban had a dramatic effect on Smith",
+     "statement": "The Court said the ban's impact on Smith's ability to make a truthful public statement was dramatic, since he had been free before testifying to speak about matters of public concern but believed he could no longer communicate that information.",
+     "source_id": "h1990_03",
+     "evidence_quote": "The ban's impact on Smith's ability to make a truthful public statement is dramatic. Here, Smith, who before testifying was free to speak about information he possessed on matters of admitted public concern, believes that he is no longer free to communicate this information."
+    },
+    {
+     "field": "status",
+     "value": "Court struck down ban on disclosing past testimony",
+     "statement": "The Supreme Court held that Florida's law violated the First Amendment insofar as it barred a grand jury witness from disclosing his own testimony after the grand jury's term had ended.",
+     "source_id": "h1990_03",
+     "evidence_quote": "We hold that insofar as the Florida law prohibits a grand jury witness from disclosing his own testimony after the term of the grand jury has ended, it violates the First Amendment to the United States Constitution."
+    },
+    {
+     "field": "status",
+     "value": "Encyclopedia summary of the Supreme Court ruling",
+     "statement": "The First Amendment Encyclopedia said the Supreme Court ruled that states may not prohibit grand jury witnesses from disclosing their own testimony after the grand jury's term has expired.",
+     "source_id": "h1990_04",
+     "evidence_quote": "the Supreme Court ruled that states may not prohibit grand jury witnesses from disclosing their testimony after the grand jury term has expired."
+    }
+   ],
+   "granularity": "anchor",
+   "stage": "silence"
+  },
+  {
+   "slug": "1997-pe-ivcher-stripped-of-citizenship",
+   "title": "Peru strips television station owner Baruch Ivcher of his citizenship after critical reporting",
+   "occurred_on": "1997-07",
+   "occurred_on_precision": "month",
+   "jurisdiction": "Peru, national",
+   "country": "PE",
+   "continent": "South America",
+   "level": "national",
+   "type": "funding_and_ownership_pressure",
+   "tactic_primary": "funding_and_ownership_pressure",
+   "tactics": [
+    "funding_and_ownership_pressure",
+    "outlet_licensing"
+   ],
+   "leader_slug": "alberto-fujimori",
+   "summary": "In July 1997, the government of President Alberto Fujimori stripped Baruch Ivcher, the Israeli-born owner of Peru's Frecuencia Latina-Canal 2 television station, of his Peruvian citizenship, making him ineligible under Peruvian law to own the station. The Committee to Protect Journalists said it believed the action came \"in direct reprisal for investigative reports of Frecuencia Latina-Canal 2.\"",
+   "what_happened": "Baruch Ivcher, who was born in Israel, was a naturalized Peruvian citizen and the majority shareholder of Frecuencia Latina-Canal 2, a television station in Lima, Peru. In 1997, Frecuencia Latina-Canal 2 aired a series of investigative reports about the government of President Alberto Fujimori. In July of that year, the government stripped Ivcher of his Peruvian citizenship, which made him ineligible under Peruvian law to own a television station. The Committee to Protect Journalists, a press freedom organization, said it believed the action was taken \"in direct reprisal for investigative reports of Frecuencia Latina-Canal 2, including stories that implicated Peru's intelligence services in the wiretapping of journalists and members of the opposition.\" Ivcher went into exile in the United States and Israel. Control of the station passed to its minority owners, brothers Mendel and Samuel Winter, after a Peruvian court later convicted an associate of Ivcher's of fraudulently transferring shares of the company.",
+   "stated_justification": "The Committee to Protect Journalists said it believed the action was taken \"in direct reprisal for investigative reports of Frecuencia Latina-Canal 2, including stories that implicated Peru's intelligence services in the wiretapping of journalists and members of the opposition.\"",
+   "effect_on_reporting": "Ivcher went into exile in the United States and Israel, and majority control of Frecuencia Latina-Canal 2 passed to the station's minority owners, brothers Mendel and Samuel Winter.",
+   "issue_of_the_day": "Frecuencia Latina-Canal 2's investigative reporting, including stories on alleged government wiretapping of journalists and opposition figures, had drawn friction with the Fujimori government in 1997.",
+   "outcome": "sustained",
+   "outcome_on": null,
+   "outcome_note": "As of the Committee to Protect Journalists' report on 1999, Ivcher remained in exile and the Winter brothers retained majority control of Frecuencia Latina-Canal 2.",
+   "actors": [
+    "alberto-fujimori",
+    "baruch-ivcher"
+   ],
+   "actor_roles": {
+    "alberto-fujimori": "enforced",
+    "baruch-ivcher": "other"
+   },
+   "outlets": [
+    "frecuencia-latina"
+   ],
+   "sources": [
+    "h1990_05",
+    "h1990_06"
+   ],
+   "claims": [
+    {
+     "field": "action",
+     "value": "Citizenship revoked, barring station ownership",
+     "statement": "Ivcher, who was born in Israel and had been naturalized as a Peruvian citizen, had his citizenship revoked and, as a result, lost his right to own a television station, after Frecuencia Latina-Canal 2 aired a series of investigative reports about the government.",
+     "source_id": "h1990_06",
+     "evidence_quote": "Ivcher, an Israeli immigrant who was a naturalized Peruvian, was stripped of his citizenship and, as a result, his right to own a television station after Frecuencia Latina-Canal 2 aired a series of damaging investigative reports about the government."
+    },
+    {
+     "field": "occurred_on",
+     "value": "Associate accused of fraudulent share transfer, 1997",
+     "statement": "An associate of Ivcher's, Sotelo, was alleged to have fraudulently transferred shares of Frecuencia Latina-Canal 2 from Ivcher, the majority shareholder, to Ivcher's four daughters in 1997.",
+     "source_id": "h1990_05",
+     "evidence_quote": "Sotelo is alleged to have illegally transferred shares of Frecuencia Latina-Canal 2 from Baruch Ivcher, the majority shareholder, to his four daughters in 1997."
+    },
+    {
+     "field": "occurred_on",
+     "value": "Citizenship stripped July 1997, ownership barred",
+     "statement": "In July 1997, Ivcher, who was born in Israel, had his adopted Peruvian citizenship revoked and was thereby made ineligible to own a television station under Peruvian law.",
+     "source_id": "h1990_05",
+     "evidence_quote": "In July of that year, Ivcher, who was born in Israel, was stripped of his adopted Peruvian citizenship and thereby made ineligible to own a television station under Peruvian law."
+    },
+    {
+     "field": "stated_justification",
+     "value": "CPJ called action reprisal for reporting",
+     "statement": "CPJ told President Fujimori it believed the citizenship revocation was taken in direct reprisal for Frecuencia Latina-Canal 2's investigative reports, including stories that implicated Peru's intelligence services in wiretapping journalists and members of the opposition.",
+     "source_id": "h1990_05",
+     "evidence_quote": "we believe this action was taken in direct reprisal for investigative reports of Frecuencia Latina-Canal 2, including stories that implicated Peru's intelligence services in the wiretapping of journalists and members of the opposition."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Ivcher exiled to US and Israel",
+     "statement": "Ivcher went into exile in the United States and Israel.",
+     "source_id": "h1990_05",
+     "evidence_quote": "Ivcher is now in exile in the United States and Israel."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Winter brothers gained majority station control",
+     "statement": "The charges against Ivcher's associate Sotelo were filed by Frecuencia Latina-Canal 2's former minority owners, brothers Mendel and Samuel Winter, who came to exercise majority control over the station.",
+     "source_id": "h1990_05",
+     "evidence_quote": "The charges against Sotelo were filed by Frecuencia Latina-Canal 2's former minority owners, the brothers Mendel and Samuel Winter, who currently exercise majority control over the station."
+    }
+   ],
+   "granularity": "anchor",
+   "stage": "pressure"
+  },
+  {
+   "slug": "1997-by-sheremet-imprisoned-for-ort-reporting",
+   "title": "Belarus jails journalist Pavel Sheremet over his reporting for Russian television station ORT",
+   "occurred_on": "1997",
+   "occurred_on_precision": "year",
+   "jurisdiction": "Belarus, national",
+   "country": "BY",
+   "continent": "Europe",
+   "level": "national",
+   "type": "detention_and_violence",
+   "tactic_primary": "detention_and_violence",
+   "tactics": [
+    "detention_and_violence"
+   ],
+   "leader_slug": "alexander-lukashenko",
+   "summary": "In 1997, Belarusian authorities under President Alexander Lukashenko jailed journalist Pavel Sheremet for three months in connection with his reporting for the Russian television station ORT. The Committee to Protect Journalists said the same authorities also banned Sheremet from reporting at one point and forbade him from traveling to the West for a year.",
+   "what_happened": "Pavel Sheremet worked as a bureau chief for the Russian television station ORT, whose coverage was often critical of authorities, according to the Committee to Protect Journalists. He had earlier edited the independent newspaper Belarusskaya Delovaya Gazeta in his native Belarus. In 1997, Belarusian authorities jailed Sheremet for three months in connection with his reporting for ORT. The Committee to Protect Journalists, a press freedom organization, said the same authorities also banned Sheremet from reporting at one point and forbade him from traveling to the West for a year. In 1998, the organization named Sheremet a CPJ International Press Freedom awardee; for weeks, he and CPJ pressed authorities in Belarus for an exit visa, without which he could not leave Minsk to travel to the award ceremony in the United States. Belarusian authorities later stripped Sheremet of his citizenship in 2010.",
+   "stated_justification": "The Committee to Protect Journalists said Sheremet's imprisonment came over investigative journalism he had done for the Russian television channel ORT.",
+   "effect_on_reporting": "Belarusian authorities banned Sheremet from reporting at one point and forbade him from traveling to the West for a year, according to the Committee to Protect Journalists.",
+   "issue_of_the_day": "Sheremet's reporting on Belarus for ORT was often critical of authorities under President Alexander Lukashenko.",
+   "outcome": "sustained",
+   "outcome_on": null,
+   "outcome_note": "Belarusian authorities later stripped Sheremet of his Belarusian citizenship in 2010, according to the Committee to Protect Journalists.",
+   "actors": [
+    "alexander-lukashenko",
+    "pavel-sheremet"
+   ],
+   "actor_roles": {
+    "alexander-lukashenko": "enforced",
+    "pavel-sheremet": "other"
+   },
+   "outlets": [
+    "ort"
+   ],
+   "sources": [
+    "h1990_07",
+    "h1990_08"
+   ],
+   "claims": [
+    {
+     "field": "action",
+     "value": "Sheremet jailed three months, later stripped citizenship",
+     "statement": "CPJ reported that in 1997, Belarusian authorities jailed Sheremet for three months in connection with his reporting, and stripped him of his citizenship in 2010.",
+     "source_id": "h1990_08",
+     "evidence_quote": "In 1997, Belarussian authorities jailed him for three months in connection to his reporting, and stripped him of his citizenship in 2010."
+    },
+    {
+     "field": "journalist_affected",
+     "value": "Sheremet was ORT bureau chief in Belarus",
+     "statement": "Sheremet worked as a bureau chief for the Russian television station ORT, which was often critical of authorities.",
+     "source_id": "h1990_08",
+     "evidence_quote": "He had also worked as a bureau chief for the now defunct Russian television station ORT, which was often critical of authorities."
+    },
+    {
+     "field": "journalist_affected",
+     "value": "Sheremet previously edited a Belarusian newspaper",
+     "statement": "Sheremet was originally from Belarus, where he had edited the independent newspaper Belarusskaya Delovaya Gazeta.",
+     "source_id": "h1990_08",
+     "evidence_quote": "Sheremet was originally from Belarus, where he edited independent newspaper Belarusskaya Delovaya Gazeta"
+    },
+    {
+     "field": "stated_justification",
+     "value": "CPJ linked jailing to ORT investigative reporting",
+     "statement": "CPJ said the same Belarusian authorities had imprisoned Sheremet over investigative journalism he had done for the Russian television channel ORT.",
+     "source_id": "h1990_07",
+     "evidence_quote": "the same authorities who had imprisoned him for two months in retaliation for some of the tough investigative journalism he did for the Russian television channel ORT."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Reporting ban and year long travel ban",
+     "statement": "CPJ said the same Belarusian authorities also banned Sheremet from reporting at one point and forbade him from traveling to the West for a year.",
+     "source_id": "h1990_07",
+     "evidence_quote": "The same authorities, as CPJ documented at the time, also banned him from reporting at one point, and even forbade him to travel to the West for a year."
+    },
+    {
+     "field": "status",
+     "value": "Sheremet named 1998 CPJ press freedom awardee",
+     "statement": "Pavel Sheremet was named a CPJ International Press Freedom awardee in 1998.",
+     "source_id": "h1990_07",
+     "evidence_quote": "Pavel Sheremet, who died yesterday when a bomb blew up the car he was driving in Kiev, was a CPJ International Press Freedom awardee in 1998."
+    },
+    {
+     "field": "status",
+     "value": "Exit visa delay blocked US ceremony travel",
+     "statement": "For weeks, Sheremet and CPJ pressed authorities in Belarus for an exit visa, without which he could not leave Minsk to travel to the United States for the award ceremony.",
+     "source_id": "h1990_07",
+     "evidence_quote": "For weeks, he and CPJ had badgered authorities in his native Belarus for an exit visa, without which he could not leave Minsk to travel to the U.S."
+    }
+   ],
+   "granularity": "anchor",
+   "stage": "punish"
+  }
+ ],
+ "actors": [
+  {
+   "slug": "william-hoeveler",
+   "name": "William M. Hoeveler",
+   "kind": "person",
+   "role_or_office": "United States District Judge for the Southern District of Florida",
+   "country": "US",
+   "role_claim": {
+    "source_id": "h1990_01",
+    "evidence_quote": "seeking disqualification of District Court Judge William Hoeveler pursuant to 28 U.S.C.",
+    "statement": "William Hoeveler was identified as the United States District Judge whose disqualification Cable News Network separately sought."
+   }
+  },
+  {
+   "slug": "manuel-noriega",
+   "name": "Manuel Antonio Noriega",
+   "kind": "person",
+   "role_or_office": "Former de facto head of state of Panama; federal criminal defendant in Florida",
+   "country": "PA",
+   "role_claim": {
+    "source_id": "h1990_01",
+    "evidence_quote": "Manuel Antonio NORIEGA, Defendant-Appellee",
+    "statement": "Manuel Noriega was named as the defendant-appellee in the case arising from the restraining orders against CNN."
+   }
+  },
+  {
+   "slug": "bob-martinez",
+   "name": "Bob Martinez",
+   "kind": "person",
+   "role_or_office": "Governor of Florida",
+   "country": "US"
+  },
+  {
+   "slug": "robert-butterworth",
+   "name": "Robert A. Butterworth Jr.",
+   "kind": "person",
+   "role_or_office": "Attorney General of Florida",
+   "country": "US",
+   "role_claim": {
+    "source_id": "h1990_03",
+    "evidence_quote": "Robert A. BUTTERWORTH, Jr., Attorney General of Florida, et al., Petitioners v. Michael SMITH.",
+    "statement": "Robert A. Butterworth Jr. was identified as the Attorney General of Florida and the lead petitioner in the Supreme Court case."
+   }
+  },
+  {
+   "slug": "michael-smith",
+   "name": "Michael Smith",
+   "kind": "person",
+   "role_or_office": "Reporter for the Charlotte Herald-News",
+   "country": "US",
+   "role_claim": {
+    "source_id": "h1990_03",
+    "evidence_quote": "Respondent was a reporter for the Charlotte Herald-News in Charlotte County, Florida.",
+    "statement": "Michael Smith was identified as a reporter for the Charlotte Herald-News in Charlotte County, Florida."
+   }
+  },
+  {
+   "slug": "alberto-fujimori",
+   "name": "Alberto Fujimori",
+   "kind": "person",
+   "role_or_office": "President of Peru",
+   "country": "PE",
+   "role_claim": {
+    "source_id": "h1990_05",
+    "evidence_quote": "His Excellency Alberto Fujimori President of the Republic of Peru",
+    "statement": "CPJ addressed its protest letter over the case to Alberto Fujimori as President of the Republic of Peru."
+   }
+  },
+  {
+   "slug": "baruch-ivcher",
+   "name": "Baruch Ivcher",
+   "kind": "person",
+   "role_or_office": "Majority shareholder of Frecuencia Latina-Canal 2",
+   "country": "PE",
+   "role_claim": {
+    "source_id": "h1990_06",
+    "evidence_quote": "Ivcher, an Israeli immigrant who was a naturalized Peruvian, was stripped of his citizenship and, as a result, his right to own a television station after Frecuencia Latina-Canal 2 aired a series of damaging investigative reports about the government.",
+    "statement": "Ivcher was described as an Israeli immigrant who had been naturalized as a Peruvian citizen and was the owner of Frecuencia Latina-Canal 2."
+   }
+  },
+  {
+   "slug": "pavel-sheremet",
+   "name": "Pavel Sheremet",
+   "kind": "person",
+   "role_or_office": "Journalist; bureau chief for the Russian television station ORT",
+   "country": "BY",
+   "role_claim": {
+    "source_id": "h1990_08",
+    "evidence_quote": "He had also worked as a bureau chief for the now defunct Russian television station ORT, which was often critical of authorities.",
+    "statement": "Sheremet was identified as a bureau chief for the Russian television station ORT."
+   }
+  }
+ ],
+ "outlets": [
+  {
+   "slug": "charlotte-herald-news",
+   "name": "Charlotte Herald-News",
+   "kind": "newspaper",
+   "country": "US"
+  },
+  {
+   "slug": "frecuencia-latina",
+   "name": "Frecuencia Latina-Canal 2",
+   "kind": "broadcaster",
+   "country": "PE"
+  },
+  {
+   "slug": "ort",
+   "name": "ORT",
+   "kind": "broadcaster",
+   "country": "RU"
+  }
+ ],
+ "sources": [
+  {
+   "id": "h1990_01",
+   "kind": "court_record",
+   "title": "United States v. Noriega, 917 F.2d 1543 (11th Cir. 1990)",
+   "publisher": "Caselaw Access Project, Harvard Law School Library Innovation Lab",
+   "url": "https://static.case.law/f2d/917/cases/1543-01.json",
+   "published_on": "1990-11-10"
+  },
+  {
+   "id": "h1990_02",
+   "kind": "court_record",
+   "title": "Cable News Network, Inc. v. Noriega, 498 U.S. 976 (1990)",
+   "publisher": "Legal Information Institute, Cornell Law School",
+   "url": "https://www.law.cornell.edu/supct/html/historics/USSC_CR_0498_0976_ZO.html",
+   "published_on": "1990-11-18"
+  },
+  {
+   "id": "h1990_03",
+   "kind": "court_record",
+   "title": "Butterworth v. Smith, 494 U.S. 624 (1990)",
+   "publisher": "Legal Information Institute, Cornell Law School",
+   "url": "https://www.law.cornell.edu/supct/html/historics/USSC_CR_0494_0624_ZO.html",
+   "published_on": "1990-03-21"
+  },
+  {
+   "id": "h1990_04",
+   "kind": "reference",
+   "title": "Butterworth v. Smith (1990)",
+   "publisher": "The First Amendment Encyclopedia, Middle Tennessee State University",
+   "url": "https://firstamendment.mtsu.edu/article/butterworth-v-smith/",
+   "published_on": "2009"
+  },
+  {
+   "id": "h1990_05",
+   "kind": "reporting",
+   "title": "Peru: CPJ protests arrest of former television station shareholder",
+   "publisher": "Committee to Protect Journalists",
+   "url": "https://cpj.org/1999/06/peru-cpj-protests-arrest-of-former-television-stat/",
+   "published_on": "1999-06"
+  },
+  {
+   "id": "h1990_06",
+   "kind": "reporting",
+   "title": "Attacks on the Press in 1999: Peru",
+   "publisher": "Committee to Protect Journalists",
+   "url": "https://cpj.org/2000/03/attacks-on-the-press-1999-peru/",
+   "published_on": "2000-03"
+  },
+  {
+   "id": "h1990_07",
+   "kind": "reporting",
+   "title": "Remembering Pavel Sheremet, IPFA honoree, friend to CPJ, and hard-nosed journalist",
+   "publisher": "Committee to Protect Journalists",
+   "url": "https://cpj.org/2016/07/remembering-pavel-sheremet-ipfa-honoree-friend-to/",
+   "published_on": "2016-07"
+  },
+  {
+   "id": "h1990_08",
+   "kind": "reporting",
+   "title": "Journalist killed in Ukraine car bombing",
+   "publisher": "Committee to Protect Journalists",
+   "url": "https://cpj.org/2016/07/journalist-killed-in-ukraine-car-bombing/",
+   "published_on": "2016-07"
+  }
+ ]
+}

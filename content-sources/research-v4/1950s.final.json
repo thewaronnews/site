@@ -1,0 +1,453 @@
+{
+ "incidents": [
+  {
+   "slug": "1953-us-wechsler-mccarthy-subpoena",
+   "title": "United States: Senator Joseph McCarthy's subcommittee questions New York Post editor James Wechsler, 1953",
+   "occurred_on": "1953",
+   "occurred_on_precision": "year",
+   "jurisdiction": "United States, federal",
+   "country": "US",
+   "continent": "North America",
+   "level": "national",
+   "type": "surveillance_and_subpoenas",
+   "tactic_primary": "surveillance_and_subpoenas",
+   "tactics": [
+    "surveillance_and_subpoenas"
+   ],
+   "leader_slug": "dwight-d-eisenhower",
+   "summary": "In 1953, the Senate Permanent Subcommittee on Investigations, a Senate panel led by Senator Joseph McCarthy of Wisconsin, questioned New York Post editor James Wechsler about his membership in the Young Communist League in the 1930s. McCarthy suggested in the hearing that a former Communist could use control of a newspaper to spread material favoring Communism while posing as an anti-Communist.",
+   "what_happened": "James Wechsler, editor of the New York Post newspaper, was called before the Senate Permanent Subcommittee on Investigations, a panel chaired by Senator Joseph McCarthy of Wisconsin, after the Post published articles critical of the senator. Wechsler had belonged to the Young Communist League as a Columbia University student in the 1930s and had since written against Communism. In the hearing, McCarthy said a way to spread material favoring Communism would be for someone to misleadingly claim they had deserted the Communist Party and then use control of a newspaper to go after people who were actually opposed to Communism, implying that Wechsler's anti-Communist writing could be such a cover. Wechsler testified that the conscience of the country and the press would rise up against what he called \"this attempt to intimidate newspapers whose only crime is that they have been critical of Joe McCarthy.\" The exchange was one of several instances in which McCarthy's subcommittee summoned journalists over Communist Party ties from years earlier. In 1954, Wechsler was removed from the television program Starring the Editors after being described as a \"controversial personality.\"",
+   "stated_justification": "McCarthy told Wechsler that a way to spread material favoring Communism would be for someone to misleadingly claim to have deserted the Communist Party and then use control of a newspaper to \"attack and smear anybody who actually was fighting Communism.\"",
+   "effect_on_reporting": "Wechsler testified that the subcommittee's questioning was \"this attempt to intimidate newspapers whose only crime is that they have been critical of Joe McCarthy,\" and in 1954 he was removed from the television program Starring the Editors after being called a \"controversial personality.\"",
+   "issue_of_the_day": "By 1953, McCarthy's investigations were examining journalists and other public figures over Communist Party ties from decades earlier, treating a subject's political past as grounds for a congressional hearing regardless of their later, publicly stated views.",
+   "outcome": "unknown",
+   "outcome_on": null,
+   "outcome_note": "McCarthy's subcommittee did not formally sanction Wechsler, who remained editor of the New York Post, though he lost a television spot the following year after being called a \"controversial personality.\"",
+   "actors": [
+    "joseph-mccarthy"
+   ],
+   "actor_roles": {
+    "joseph-mccarthy": "enforced"
+   },
+   "outlets": [
+    "new-york-post-historical"
+   ],
+   "sources": [
+    "h1950_01",
+    "h1950_02",
+    "h1950_03"
+   ],
+   "claims": [
+    {
+     "field": "action",
+     "value": "Wechsler summoned before McCarthy's subcommittee",
+     "statement": "James Wechsler was called before Senator Joseph McCarthy's Senate subcommittee, where Wechsler confronted his questioners, according to History News Network.",
+     "source_id": "h1950_02",
+     "evidence_quote": "He was hauled before the senator's Senate committee in a nasty spectacle in which Wechsler confronted his inquisitors."
+    },
+    {
+     "field": "stated_justification",
+     "value": "McCarthy's theory of covert Communist messaging",
+     "statement": "Senator McCarthy said a way to spread material favoring Communism would be to misleadingly claim to have deserted the party and then use control of a newspaper to \"attack and smear anybody who actually was fighting Communism,\" according to Reason magazine.",
+     "source_id": "h1950_03",
+     "evidence_quote": "would be to claim that we deserted the party and, if we got in control of the paper, use that paper to attack and smear anybody who actually was fighting Communism."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Wechsler testifies against the subcommittee's tactics",
+     "statement": "James Wechsler testified that the questioning amounted to \"this attempt to intimidate newspapers whose only crime is that they have been critical of Joe McCarthy,\" according to PBS's American Experience.",
+     "source_id": "h1950_01",
+     "evidence_quote": "I think the issues raised by Senator McCarthy's attack on the post and myself are perfectly plain. I believe that the conscience of the country and the press will finally rise up against this attempt to intimidate newspapers whose only crime is that they have been critical of Joe McCarthy."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "1954 television removal",
+     "statement": "In 1954, Wechsler was removed from the television program Starring the Editors after being described as a \"controversial personality,\" according to History News Network.",
+     "source_id": "h1950_02",
+     "evidence_quote": "In 1954 he was thrown off a popular TV show, \"Starring the Editors,\" for being a \"controversial personality.\""
+    }
+   ],
+   "granularity": "anchor",
+   "status": "historical",
+   "stage": "pressure"
+  },
+  {
+   "slug": "1955-us-mississippi-till-trial-press-segregation",
+   "title": "United States: Tallahatchie County, Mississippi sheriff segregates Black reporters at the Emmett Till murder trial, September 1955",
+   "occurred_on": "1955-09-19",
+   "occurred_on_precision": "day",
+   "jurisdiction": "Mississippi, United States",
+   "country": "US",
+   "continent": "North America",
+   "level": "state_or_province",
+   "type": "access_ban",
+   "tactic_primary": "access_ban",
+   "tactics": [
+    "access_ban"
+   ],
+   "leader_slug": "hugh-l-white",
+   "summary": "When the murder trial of Roy Bryant and J.W. Milam opened in Sumner, Mississippi, on September 19, 1955, Tallahatchie County Sheriff Clarence Strider assigned Black reporters covering the trial, along with Michigan congressman Charles Diggs, to a separate table at the side of the courtroom rather than seats among the white press.",
+   "what_happened": "Roy Bryant and J.W. Milam went on trial for the murder of 14 year old Emmett Till in the Tallahatchie County courthouse in Sumner, Mississippi, with the trial opening on September 19, 1955. Tallahatchie County Sheriff Clarence Strider, who was also gathering evidence in the case, assigned Black reporters covering the trial, together with Michigan congressman Charles Diggs, to a card table at the side of the courtroom rather than seats among the white press. Photographer Ernest Withers, who covered the trial, recalled Strider describing the arrangement as twenty two seats for white spectators and four for Black spectators, with the two groups not to be mixed. Journalist John Herbers, who also covered the trial, said Strider's conduct in the courtroom was aimed less at the underlying case than at keeping the room fully segregated. Strider's dealings with reporters shifted over the course of the case, from an early promise that the killing would be investigated to open resistance once national coverage of the trial brought Tallahatchie County criticism from outside Mississippi.",
+   "stated_justification": "Sheriff Strider described the courtroom arrangement to the press as twenty two seats for white spectators and four for Black spectators, saying, \"we don't mix 'em down here.\"",
+   "effect_on_reporting": "Black reporters covering the trial, along with Congressman Diggs, were confined to a card table at the side of the courtroom rather than seated among the white press, and Strider's cooperation with reporters gave way to open resistance once national coverage of the case brought the county outside criticism.",
+   "issue_of_the_day": "Till, a 14 year old Black boy from Chicago, had been killed in the Mississippi Delta weeks earlier, and the trial drew national and international reporters to a rural county courthouse still operating under Mississippi's segregation laws.",
+   "outcome": "sustained",
+   "outcome_on": null,
+   "outcome_note": "The segregated seating for reporters and spectators held for the length of the trial, which ended in the acquittal of both defendants by an all white jury.",
+   "actors": [
+    "clarence-strider",
+    "hugh-l-white"
+   ],
+   "actor_roles": {
+    "clarence-strider": "enforced",
+    "hugh-l-white": "other"
+   },
+   "outlets": [],
+   "sources": [
+    "h1950_04",
+    "h1950_05"
+   ],
+   "claims": [
+    {
+     "field": "occurred_on",
+     "value": "Trial opened September 19, 1955",
+     "statement": "The trial of Roy Bryant and J.W. Milam for Emmett Till's murder opened on September 19, 1955, in Sumner, Mississippi, according to PBS's American Experience.",
+     "source_id": "h1950_04",
+     "evidence_quote": "On September 19th, less than three weeks after Emmett's body was found, Roy Bryant and J.W. Milam's trial for murder opened in Sumner, Mississippi"
+    },
+    {
+     "field": "action",
+     "value": "Black reporters and Diggs assigned to a side table",
+     "statement": "Tallahatchie County Sheriff Clarence Strider assigned Black reporters covering the trial, along with congressman Charles Diggs, to a card table at the side of the courtroom, according to PBS's American Experience.",
+     "source_id": "h1950_04",
+     "evidence_quote": "Strider consigned black reporters and Detroit Congressman Charles Diggs to a card table on the sidelines."
+    },
+    {
+     "field": "stated_justification",
+     "value": "Strider's description of the segregated seating",
+     "statement": "Photographer Ernest Withers recalled Sheriff Strider describing the seating as \"22 seats over here for you white boys\" and \"four seats over here for you colored boys,\" saying \"we don't mix 'em down here,\" according to PBS's American Experience.",
+     "source_id": "h1950_04",
+     "evidence_quote": "We got 22 seats over here for you white boys. And we've got four seats over here for you colored boys. We don't mix 'em down here."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Strider's cooperation with reporters turned to resistance",
+     "statement": "Sheriff Strider's dealings with reporters covering the case shifted from cooperation to resistance once national coverage brought the county outside criticism, according to a PBS American Experience profile of Strider.",
+     "source_id": "h1950_05",
+     "evidence_quote": "Strider trumpeted to the local press that the case would be investigated, but changed his mind once the case gained nationwide attention and scorn."
+    },
+    {
+     "field": "status",
+     "value": "Jury acquitted both defendants",
+     "statement": "An all white jury acquitted Roy Bryant and J.W. Milam of Emmett Till's murder, according to a news broadcast reproduced in PBS's American Experience.",
+     "source_id": "h1950_04",
+     "evidence_quote": "In the Emmett Till Murder trial, the all white jury has acquitted the two white defendants accused of killing the 14-year-old Negro youth."
+    }
+   ],
+   "granularity": "anchor",
+   "status": "historical",
+   "stage": "restrict"
+  },
+  {
+   "slug": "1951-argentina-peron-la-prensa-handed-to-cgt",
+   "title": "Argentina: President Juan Perón's government hands the expropriated newspaper La Prensa to the CGT labor federation, October 1951",
+   "occurred_on": "1951-10",
+   "occurred_on_precision": "month",
+   "jurisdiction": "Argentina, national",
+   "country": "AR",
+   "continent": "South America",
+   "level": "national",
+   "type": "outlet_licensing",
+   "tactic_primary": "outlet_licensing",
+   "tactics": [
+    "outlet_licensing",
+    "shutdowns_and_blocking"
+   ],
+   "leader_slug": "juan-peron",
+   "summary": "La Prensa, one of Argentina's leading newspapers and a longtime critic of President Juan Perón's government, was expropriated by the state earlier in 1951. In October 1951, the government formally handed the paper to the Confederación General del Trabajo (CGT), the country's main labor federation, which began publishing it.",
+   "what_happened": "La Prensa, a Buenos Aires newspaper long critical of President Juan Perón's government, was expropriated by the Argentine state earlier in 1951, according to a CIA intelligence digest from that October. The government folded the paper's transfer into the program for Loyalty Day, October 17, a Peronist political holiday marking a high point that year in Perón's re election campaign. As part of the day's program, the government made a formal presentation of the expropriated newspaper to workers, with the Confederación General del Trabajo (CGT), Argentina's main labor federation, beginning to publish it. The transfer drew international attention: the Inter American Press Association, a group representing more than three hundred newspapers and publications across the hemisphere, opened a five day meeting in Montevideo, Uruguay, on October 8, 1951, at which the group discussed the La Prensa case as an example of Argentina's treatment of the press, according to the same CIA reporting.",
+   "stated_justification": "Argentina's government has not been shown to have stated its reasons for the transfer. It folded the formal handover of La Prensa to the CGT into the program for Loyalty Day, October 17, 1951, a Peronist political holiday marking a high point of President Perón's re election campaign.",
+   "effect_on_reporting": "The Confederación General del Trabajo, Argentina's main labor federation, began publishing La Prensa after the government's formal presentation of the expropriated paper to its workers.",
+   "issue_of_the_day": "President Perón was campaigning for re election ahead of Argentina's November 11, 1951 vote, and Loyalty Day, the Peronist holiday marking the anniversary of a 1945 labor mobilization that returned Perón to power, was built up that year as a high point of the campaign.",
+   "outcome": "sustained",
+   "outcome_on": "1951-10",
+   "outcome_note": "La Prensa remained under CGT control until Perón's government was overthrown in 1955, after which it was returned to its previous owners.",
+   "actors": [
+    "juan-peron",
+    "confederacion-general-del-trabajo"
+   ],
+   "actor_roles": {
+    "juan-peron": "other",
+    "confederacion-general-del-trabajo": "implemented"
+   },
+   "outlets": [
+    "la-prensa"
+   ],
+   "sources": [
+    "h1950_06",
+    "h1950_07",
+    "h1950_08"
+   ],
+   "claims": [
+    {
+     "field": "action",
+     "value": "La Prensa expropriated by the Argentine government",
+     "statement": "La Prensa was expropriated by the Argentine government earlier in 1951, according to a CIA daily digest from October 9, 1951.",
+     "source_id": "h1950_08",
+     "evidence_quote": "La Prensa, which the Argentine Government expropriated earlier this year."
+    },
+    {
+     "field": "occurred_on",
+     "value": "Handover tied to October 17 Loyalty Day",
+     "statement": "A CIA digest dated October 17, 1951, described Loyalty Day, a Peronist political holiday, as the high point that year of President Perón's re election campaign.",
+     "source_id": "h1950_07",
+     "evidence_quote": "Loyalty Day, 17 October, is the most important Peronista- created holiday and this year has been planned as a high point in the election campaign."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "CGT begins publishing La Prensa",
+     "statement": "The government's Loyalty Day program included the formal presentation of the expropriated newspaper La Prensa to workers, with the Confederación General del Trabajo beginning to publish it, according to the same CIA digest.",
+     "source_id": "h1950_07",
+     "evidence_quote": "the formal presentation to the workers of the expropriated newspaper La Prensa, which the General Confederation of Labor will begin publishing"
+    },
+    {
+     "field": "scope_of_action",
+     "value": "Inter American Press Association discusses the case",
+     "statement": "The Inter American Press Association, representing more than three hundred newspapers and publications, opened a five day meeting in Montevideo on October 8, 1951, at which the La Prensa case was expected to be discussed, according to a CIA digest.",
+     "source_id": "h1950_08",
+     "evidence_quote": "Over 300 newspapers and publications are expected to be represented at the meeting of this non-government association."
+    }
+   ],
+   "granularity": "anchor",
+   "status": "historical",
+   "stage": "silence"
+  },
+  {
+   "slug": "1959-cuba-castro-criticizes-diario-de-la-marina",
+   "title": "Cuba: Prime Minister Fidel Castro publicly criticizes Havana newspapers that questioned his government, September 1959",
+   "occurred_on": "1959-09-28",
+   "occurred_on_precision": "day",
+   "jurisdiction": "Cuba, national",
+   "country": "CU",
+   "continent": "North America",
+   "level": "national",
+   "type": "disinformation_labeling",
+   "tactic_primary": "disinformation_labeling",
+   "tactics": [
+    "disinformation_labeling"
+   ],
+   "leader_slug": "fidel-castro",
+   "summary": "In a September 28, 1959 television appearance, Cuban Prime Minister Fidel Castro criticized Havana newspapers, including Diario de la Marina, that had questioned his government's actions, along with the Inter American Press Association's decision to examine press freedom in Cuba. Diario de la Marina answered the next day that the revolutionary government limited the press in ways short of formally shutting it down, and other independent papers joined the objection.",
+   "what_happened": "On September 28, 1959, Cuban Prime Minister Fidel Castro used a television appearance to criticize Havana newspapers that had questioned his government's actions, as well as the Inter American Press Association's decision to take up whether press freedom existed in Cuba, according to a CIA intelligence bulletin from the following week. Havana's Diario de la Marina, Cuba's oldest and largest daily and a paper with Catholic and conservative backing, answered in a September 29 editorial that the revolutionary government limited the press in ways short of formally shutting newspapers down. Other independent Cuban papers joined the objection, in what the CIA account called the first such open exception to Castro's public statements since the government took power on January 1, 1959. The dispute continued into 1960. On May 11 of that year, unions of Diario de la Marina's own workers took over the paper, accusing its publisher of taking direction from the United States embassy; the publisher took asylum in the Peruvian embassy in Havana.",
+   "stated_justification": "The record reviewed here does not include Castro's own stated reasons for criticizing the newspapers; a CIA account said his September 28, 1959 remarks reflected concern over mounting difficulties facing his government's program.",
+   "effect_on_reporting": "Diario de la Marina and other independent Cuban newspapers openly disputed Castro's characterization of their coverage, and the following year, on May 11, 1960, unions of Diario de la Marina's own workers took the paper over, forcing its publisher into asylum at the Peruvian embassy.",
+   "issue_of_the_day": "Nine months after Castro's government took power on January 1, 1959, Havana's remaining independent newspapers were increasingly at odds with the government over its economic program and treatment of critics, a dispute the Inter American Press Association also took up that year.",
+   "outcome": "sustained",
+   "outcome_on": "1960-05-11",
+   "outcome_note": "Diario de la Marina continued publishing independently for a further eight months before its own workers, organized in unions, took the paper over on May 11, 1960, and its publisher went into exile.",
+   "actors": [
+    "fidel-castro"
+   ],
+   "actor_roles": {
+    "fidel-castro": "announced"
+   },
+   "outlets": [
+    "diario-de-la-marina"
+   ],
+   "sources": [
+    "h1950_09",
+    "h1950_10"
+   ],
+   "claims": [
+    {
+     "field": "action",
+     "value": "Castro criticizes press in September 28 television appearance",
+     "statement": "Cuban Prime Minister Fidel Castro criticized the press and other critics of his government's program in a September 28, 1959 television appearance, which a CIA bulletin said reflected concern over his government's mounting difficulties.",
+     "source_id": "h1950_09",
+     "evidence_quote": "Prime Minister Fidel Castro's attack of 28 Septem- ber on press and other critics of his revolutionary program re- vealed a concern over his increasing difficulties."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Diario de la Marina's September 29 editorial answer",
+     "statement": "Diario de la Marina answered in a September 29, 1959 editorial that the revolutionary government limited the press in ways short of formally shutting newspapers down, according to a CIA bulletin.",
+     "source_id": "h1950_09",
+     "evidence_quote": "did not back down under the attack but charged ed- itorially on 29 September that press freedom is limited by the revolutionary government in many ways short of censor- Ship."
+    },
+    {
+     "field": "scope_of_action",
+     "value": "Other independent papers joined the objection",
+     "statement": "Other independent Cuban newspapers joined Diario de la Marina's objection, which a CIA bulletin called the first such open exception to Castro's public statements since the government took power on January 1, 1959.",
+     "source_id": "h1950_09",
+     "evidence_quote": "It was, surprisingly, joined by other independent pa- pers, in the first such strong and open exception to Castro's words since the revolutionary victory on 1 January."
+    },
+    {
+     "field": "status",
+     "value": "Workers take over Diario de la Marina, May 1960",
+     "statement": "Unions of Diario de la Marina's own workers took the newspaper over on May 11, 1960, accusing its publisher of taking direction from the United States embassy, and the publisher took asylum at the Peruvian embassy, according to a later CIA bulletin.",
+     "source_id": "h1950_10",
+     "evidence_quote": "Cuba's oldest and largest daily, the anti-Communist Diario de la Marina, was taken over on 11 May by unions of its workers, who accused its publisher of taking orders from the US Embassy. He has taken asylum in the Peruvian Em- bassy."
+    }
+   ],
+   "granularity": "anchor",
+   "status": "historical",
+   "stage": "pressure"
+  }
+ ],
+ "actors": [
+  {
+   "slug": "joseph-mccarthy",
+   "name": "Joseph McCarthy",
+   "kind": "person",
+   "role_or_office": "U.S. Senator from Wisconsin",
+   "country": "US"
+  },
+  {
+   "slug": "clarence-strider",
+   "name": "Clarence Strider",
+   "kind": "person",
+   "role_or_office": "Sheriff of Tallahatchie County, Mississippi",
+   "country": "US"
+  },
+  {
+   "slug": "juan-peron",
+   "name": "Juan Perón",
+   "kind": "person",
+   "role_or_office": "President of Argentina",
+   "country": "AR",
+   "role_claim": {
+    "source_id": "h1950_06",
+    "evidence_quote": "President Peron's security Measures and his army support",
+    "statement": "A CIA intelligence review referred to him as President Perón."
+   }
+  },
+  {
+   "slug": "confederacion-general-del-trabajo",
+   "name": "Confederación General del Trabajo (CGT)",
+   "kind": "body",
+   "role_or_office": "Argentina's main labor federation",
+   "country": "AR"
+  },
+  {
+   "slug": "fidel-castro",
+   "name": "Fidel Castro",
+   "kind": "person",
+   "role_or_office": "Prime Minister of Cuba",
+   "country": "CU",
+   "role_claim": {
+    "source_id": "h1950_09",
+    "evidence_quote": "Prime Minister Fidel Castro's attack of 28 Septem- ber on press",
+    "statement": "A CIA bulletin referred to him as Prime Minister Fidel Castro."
+   }
+  },
+  {
+   "slug": "dwight-d-eisenhower",
+   "name": "Dwight D. Eisenhower",
+   "kind": "person",
+   "role_or_office": "President of the United States",
+   "country": "US"
+  },
+  {
+   "slug": "hugh-l-white",
+   "name": "Hugh L. White",
+   "kind": "person",
+   "role_or_office": "Governor of Mississippi",
+   "country": "US"
+  }
+ ],
+ "outlets": [
+  {
+   "slug": "new-york-post-historical",
+   "name": "New York Post",
+   "kind": "newspaper",
+   "country": "US"
+  },
+  {
+   "slug": "diario-de-la-marina",
+   "name": "Diario de la Marina",
+   "kind": "newspaper",
+   "country": "CU"
+  }
+ ],
+ "sources": [
+  {
+   "id": "h1950_01",
+   "kind": "reporting",
+   "published_on": null,
+   "title": "American Experience: McCarthy (film transcript)",
+   "url": "https://www.pbs.org/wgbh/americanexperience/films/mccarthy/",
+   "fetched": "2026-09-26"
+  },
+  {
+   "id": "h1950_02",
+   "kind": "reporting",
+   "published_on": "2004-01-05",
+   "title": "James Wechsler: The Editor Who Dared Challenge J. Edgar Hoover (History News Network)",
+   "url": "http://hnn.us/articles/2869.html",
+   "fetched": "2026-09-26"
+  },
+  {
+   "id": "h1950_03",
+   "kind": "reporting",
+   "published_on": "2008-02-14",
+   "title": "McCarthy and His Friends (Reason)",
+   "url": "http://reason.com/archives/2008/02/14/mccarthy-and-his-friends",
+   "fetched": "2026-09-26"
+  },
+  {
+   "id": "h1950_04",
+   "kind": "reporting",
+   "published_on": null,
+   "title": "American Experience: The Murder of Emmett Till (film transcript)",
+   "url": "https://www.pbs.org/wgbh/americanexperience/films/till/",
+   "fetched": "2026-09-26"
+  },
+  {
+   "id": "h1950_05",
+   "kind": "reporting",
+   "published_on": null,
+   "title": "American Experience: Sheriff Clarence Strider (profile)",
+   "url": "https://www.pbs.org/wgbh/americanexperience/features/emmett-biography-sheriff-clarence-strider/",
+   "fetched": "2026-09-26"
+  },
+  {
+   "id": "h1950_06",
+   "kind": "primary_document",
+   "published_on": "1951-09-12",
+   "title": "CIA Current Intelligence Review, 12 September 1951 (declassified)",
+   "url": "https://archive.org/download/cia-readingroom-document-cia-rdp79s01060a000100120001-1/cia-rdp79s01060a000100120001-1_djvu.txt",
+   "fetched": "2026-09-26"
+  },
+  {
+   "id": "h1950_07",
+   "kind": "primary_document",
+   "published_on": "1951-10-17",
+   "title": "CIA Daily Digest, 17 October 1951 (declassified)",
+   "url": "https://archive.org/download/cia-readingroom-document-cia-rdp79t01146a000500050001-2/cia-rdp79t01146a000500050001-2_djvu.txt",
+   "fetched": "2026-09-26"
+  },
+  {
+   "id": "h1950_08",
+   "kind": "primary_document",
+   "published_on": "1951-10-09",
+   "title": "CIA Daily Digest, 9 October 1951 (declassified)",
+   "url": "https://archive.org/download/cia-readingroom-document-cia-rdp79t01146a000400320001-9/cia-rdp79t01146a000400320001-9_djvu.txt",
+   "fetched": "2026-09-26"
+  },
+  {
+   "id": "h1950_09",
+   "kind": "primary_document",
+   "published_on": "1959-10-01",
+   "title": "CIA Central Intelligence Bulletin, 1 October 1959 (declassified)",
+   "url": "https://archive.org/download/cia-readingroom-document-03164688/03164688_djvu.txt",
+   "fetched": "2026-09-26"
+  },
+  {
+   "id": "h1950_10",
+   "kind": "primary_document",
+   "published_on": "1960-05-14",
+   "title": "CIA Central Intelligence Bulletin, 14 May 1960 (declassified)",
+   "url": "https://archive.org/download/cia-readingroom-document-03177894/03177894_djvu.txt",
+   "fetched": "2026-09-26"
+  }
+ ]
+}

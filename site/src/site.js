@@ -3,7 +3,7 @@
 // no characterizing words outside quotation marks.
 
 export const SITE_NAME = "The War On News";
-export const SITE_SUBTITLE = "How governments have limited journalists, 1900 to today.";
+export const SITE_SUBTITLE = "How governments have limited journalists, from the first press laws to today.";
 export const SITE_DESCRIPTOR = SITE_SUBTITLE;
 export const SITE_ORIGIN = "https://thewaronnews.com";
 export const SITE_HOST = "thewaronnews.com";
@@ -29,7 +29,7 @@ export const DATAPACKAGE_NAME = "the-war-on-news";
 export const COPYRIGHT_YEAR = "2026";
 
 // 40-word definition used on the home page, in JSON-LD and in llms.txt.
-export const HOME_DEFINITION = "The War On News is a dated, sourced record of actions by governments, officials, regulators, courts and legislatures that limited journalists' ability to gather or publish news, from 1900 to today. Browse it by country, by tactic or by time, and follow each tactic's ladder to see where it has led, from restricting access to eliminating journalists.";
+export const HOME_DEFINITION = "The War On News is a dated, sourced record of actions by governments, officials, regulators, courts and legislatures that limited journalists' ability to gather or publish news, from 1900 to today, with briefs on earlier press controls. Browse it by country, by tactic or by time, and follow each tactic's ladder to see where it has led, from restricting access to eliminating journalists.";
 
 export const HOME_METHOD_LINE = "Each entry states who did what and when, quotes the reason the official gave, and links to the reporting and court records it rests on. Every fact is a claim with a verbatim quotation, a source address, a method and a check date.";
 
@@ -52,7 +52,7 @@ export const SECTIONS = [
 
 // Masthead descriptor (HTML only; Peter, 2026-09-22: make clear the subject
 // is journalism and fact-based reporting).
-export const MASTHEAD_DESCRIPTOR = "A record of government actions against journalism and fact-based reporting, 1900 to today";
+export const MASTHEAD_DESCRIPTOR = "A record of government actions against journalism and fact-based reporting, from the first press laws to today";
 
 // Footer (brief 2026-09-22, "Copy rules").
 export const FOOTER_LINKS = [

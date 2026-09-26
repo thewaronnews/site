@@ -1,0 +1,404 @@
+{
+ "incidents": [
+  {
+   "slug": "1942-us-chicago-tribune-midway-espionage-act",
+   "title": "United States: Justice Department investigates the Chicago Tribune under the Espionage Act over Battle of Midway coverage",
+   "occurred_on": "1942-08",
+   "occurred_on_precision": "month",
+   "jurisdiction": "United States, federal",
+   "country": "US",
+   "continent": "North America",
+   "level": "national",
+   "type": "secrets_and_espionage_laws",
+   "tactic_primary": "secrets_and_espionage_laws",
+   "tactics": [
+    "secrets_and_espionage_laws"
+   ],
+   "stage": "pressure",
+   "status": "historical",
+   "granularity": "anchor",
+   "leader_slug": "franklin-d-roosevelt",
+   "summary": "The United States Department of Justice convened a federal grand jury to consider Espionage Act charges against the Chicago Tribune and correspondent Stanley Johnston after the newspaper published details suggesting the Navy had broken Japanese naval codes ahead of the Battle of Midway. The grand jury declined to return an indictment.",
+   "what_happened": "On June 7, 1942, the Chicago Tribune published a dispatch by war correspondent Stanley Johnston reporting that the United States Navy had known in advance of Japanese plans for the Battle of Midway, detail that closely tracked a secret dispatch Admiral Chester W. Nimitz, commander of the Pacific Fleet, had sent to his commanders on May 31. The article's account of the Japanese fleet's organization suggested that American codebreakers had penetrated Japanese naval communications, one of the most closely held secrets of the war. The Federal Bureau of Investigation, the Department of Justice, and the Navy examined whether Johnston and the Tribune had violated the Espionage Act of 1917 by publishing the leaked classified information. By August 1942, the Department of Justice had convened a federal grand jury in Chicago, hearing testimony from naval officers and editors of other newspapers that had run the story. The grand jury ultimately declined to issue any indictment, avoiding a public trial in which the government feared exposing to Japan that its codes had been broken.",
+   "stated_justification": "Federal investigators viewed the article as damaging national security by indirectly revealing that the United States had penetrated Japan's naval codes.",
+   "effect_on_reporting": "The grand jury's decision not to indict was heralded as a great First Amendment victory by the Tribune and other news media.",
+   "issue_of_the_day": "The Battle of Midway, fought in early June 1942, was a major turning point in the Pacific war, and the United States guarded its codebreaking success as one of the most sensitive secrets of the conflict.",
+   "outcome": "reversed",
+   "outcome_on": "1942-08",
+   "outcome_note": "The federal grand jury investigating the Tribune and Johnston declined to issue any indictment.",
+   "actors": [
+    "franklin-d-roosevelt",
+    "us-department-of-justice",
+    "fbi",
+    "stanley-johnston"
+   ],
+   "actor_roles": {
+    "franklin-d-roosevelt": "other",
+    "us-department-of-justice": "enforced",
+    "fbi": "enforced",
+    "stanley-johnston": "other"
+   },
+   "outlets": [
+    "chicago-tribune"
+   ],
+   "sources": [
+    "h1940_01",
+    "h1940_02"
+   ],
+   "claims": [
+    {
+     "field": "occurred_on",
+     "value": "Article published June 7, 1942",
+     "statement": "The Chicago Tribune published Stanley Johnston's article on the Battle of Midway on June 7, 1942, prompting a Department of Justice investigation.",
+     "source_id": "h1940_02",
+     "evidence_quote": "The DOJ investigation was sparked by a June 7, 1942 article in the Tribune by correspondent Stanley Johnston, who had been aboard a Navy ship in the Pacific."
+    },
+    {
+     "field": "action",
+     "value": "Grand jury refuses to indict",
+     "statement": "A federal grand jury refused to indict the Chicago Tribune in 1942 over Stanley Johnston's article describing advance U.S. Navy knowledge of Japanese plans for the Battle of Midway.",
+     "source_id": "h1940_01",
+     "evidence_quote": "a grand jury refused to indict the Chicago Tribune in 1942 for an article stating the U.S. Navy had advance knowledge of Japanese plans to attack Midway Island"
+    },
+    {
+     "field": "action",
+     "value": "Grand jury convened",
+     "statement": "By August 1942 the Department of Justice had convened a federal grand jury to determine whether Johnston and the Tribune had violated the Espionage Act by publishing leaked classified information.",
+     "source_id": "h1940_02",
+     "evidence_quote": "By August the DOJ had convened a grand jury to investigate whether Johnston and the Tribune violated the Espionage Act by publishing leaked classified information."
+    },
+    {
+     "field": "stated_justification",
+     "value": "National security rationale",
+     "statement": "Federal investigators framed the article as damaging national security by indirectly revealing that the United States had penetrated Japan's naval codes.",
+     "source_id": "h1940_01",
+     "evidence_quote": "detail FBI, Justice Department, and Navy efforts to charge the Tribune with damaging national security by indirectly alluding to U.S. penetration of Japan's naval codes"
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Received as a press freedom victory",
+     "statement": "News organizations and historians described the grand jury's refusal to indict as a major First Amendment victory for the press.",
+     "source_id": "h1940_02",
+     "evidence_quote": "the grand jury declined to issue any indictments, which was heralded as a great First Amendment victory by the Tribune and other news media."
+    }
+   ]
+  },
+  {
+   "slug": "1941-greece-directorate-general-press-radio",
+   "title": "Greece: collaborationist government creates a Directorate-General for Press and Radio to review films and publications before release",
+   "occurred_on": "1941-05-08",
+   "occurred_on_precision": "day",
+   "jurisdiction": "Greece, national, under Axis military occupation",
+   "country": "GR",
+   "continent": "Europe",
+   "level": "national",
+   "type": "prior_restraint",
+   "tactic_primary": "prior_restraint",
+   "tactics": [
+    "prior_restraint",
+    "outlet_licensing"
+   ],
+   "stage": "silence",
+   "status": "historical",
+   "granularity": "anchor",
+   "leader_slug": "georgios-tsolakoglou",
+   "summary": "The collaborationist government installed in occupied Greece created a Directorate-General for Press and Radio to take over and expand the prior review powers of the prewar Metaxas dictatorship, requiring official permission before films, plays, music, and publications could reach the public. German Embassy officials reviewed the same material and could overrule the Greek reviewers.",
+   "what_happened": "Germany and Italy, joined by Bulgarian and Hungarian units, occupied Greece beginning April 6, 1941, and divided the country into occupation zones. The Germans installed a collaborationist government, and on May 8, 1941, a legal decree issued by the Tsolakoglou government transferred the prior-review powers of the prewar Under-Secretariat for Press and Tourism to a new Directorate-General for Press and Radio, set up as an office under the government's president. In 1942 and 1943, Legal Decree 1108 and Law 485 put review of films, theater, music, and publications on a more systematic legal footing. Film distribution companies had to apply to the Directorate-General's People's Enlightenment Directorate for a license to screen any picture, attaching a plot summary and script. German Embassy officials attended pre-screenings and could reject a film outright; surviving licensing files carry handwritten notes recording that a film had been prohibited or that its license had been granted by the German Embassy.",
+   "stated_justification": "The decree establishing the Directorate-General stated that it was meant to enlighten public opinion on Greek affairs and to elevate the national and religious spirit of the Greek people.",
+   "effect_on_reporting": "Licensing files show that the Greek censors' decisions were routinely subject to a separate German Embassy review, with applications marked as prohibited or approved by the German Embassy.",
+   "issue_of_the_day": "The film and publication review apparatus operated during the Axis occupation of Greece, which began in April 1941 when Germany, Italy, and Bulgaria divided the country into occupation zones.",
+   "outcome": "sustained",
+   "outcome_on": null,
+   "outcome_note": "The Directorate-General continued to license and review films and publications, with German Embassy oversight, through the years covered by its surviving archive.",
+   "actors": [
+    "georgios-tsolakoglou"
+   ],
+   "actor_roles": {
+    "georgios-tsolakoglou": "implemented"
+   },
+   "outlets": [],
+   "sources": [
+    "h1940_05",
+    "h1940_06"
+   ],
+   "claims": [
+    {
+     "field": "occurred_on",
+     "value": "Axis invasion of Greece",
+     "statement": "Germany and Italy, with Bulgarian and Hungarian support, invaded and occupied Greece beginning April 6, 1941.",
+     "source_id": "h1940_06",
+     "evidence_quote": "On April 6, 1941, the Germans and Italians, supported by Bulgarian and Hungarian units, attacked"
+    },
+    {
+     "field": "scope_of_action",
+     "value": "Occupation zones established",
+     "statement": "Germany, Italy, and Bulgaria occupied Greece and divided the country into separate occupation zones in 1941.",
+     "source_id": "h1940_06",
+     "evidence_quote": "Germany, Italy, and Bulgaria occupied parts of Greece and divided the country into zones in 1941"
+    },
+    {
+     "field": "announced_by",
+     "value": "Directorate-General for Press and Radio established",
+     "statement": "A legal decree issued by the Tsolakoglou government on May 8, 1941, transferred press review authority to a new Directorate-General for Press and Radio under the government's president.",
+     "source_id": "h1940_05",
+     "evidence_quote": "By virtue of a Legal Decree issued by the Tsolakoglou Government on 8 May 1941, the authority of the Under-Secretariat was transferred to the Directorate-General for Press and Radio that was set up as an Office under the President of the Greek collaborationist government."
+    },
+    {
+     "field": "stated_justification",
+     "value": "Stated aim of the decree",
+     "statement": "The decree stated that the Directorate-General aimed to enlighten public opinion on Greek affairs and elevate the national and religious spirit of the Greek people.",
+     "source_id": "h1940_05",
+     "evidence_quote": "the Directorate-General aimed, among other objectives, to enlighten public opinion on Greek affairs, to elevate the national and religious spirit of the Greeks and to develop the principles of the social regime under the conditions in Greece."
+    },
+    {
+     "field": "action",
+     "value": "Film and publication review laws systematized",
+     "statement": "Legal Decree 1108 of 1942 and Law 485 of 1943 put prior review of films, theater, music, and publications on a more systematic legal footing.",
+     "source_id": "h1940_05",
+     "evidence_quote": "the government updated the legal framework governing state-run preventive censorship in films, theatre, music and publications by virtue of Legal Decree 1108 of 1942 and Law 485 of 1943."
+    },
+    {
+     "field": "action",
+     "value": "Licensing requirement for films",
+     "statement": "Film distribution companies had to apply to the Directorate-General's People's Enlightenment Directorate for permission to screen a film, attaching a plot summary and script.",
+     "source_id": "h1940_05",
+     "evidence_quote": "film distribution companies had to file an application to the People's Enlightenment Directorate of the Directorate-General for Press and Radio, asking permission to screen a film and attaching the plot summary and script copies."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "German Embassy review of licenses",
+     "statement": "Licensing files submitted to the Directorate-General carried handwritten notes recording that the German Embassy had prohibited or granted a license for a film.",
+     "source_id": "h1940_05",
+     "evidence_quote": "licensing applications submitted by film companies to the Directorate-General for Press included hand-written notes with the German license number or phrases such as “prohibited” or “license was granted by the German Embassy.”"
+    }
+   ]
+  },
+  {
+   "slug": "1939-canada-defence-of-canada-regulations-censorship",
+   "title": "Canada: War Measures Act regulations authorize review of hundreds of newspapers and ban political organizations",
+   "occurred_on": "1939-09-03",
+   "occurred_on_precision": "day",
+   "jurisdiction": "Canada, federal",
+   "country": "CA",
+   "continent": "North America",
+   "level": "national",
+   "type": "prior_restraint",
+   "tactic_primary": "prior_restraint",
+   "tactics": [
+    "prior_restraint",
+    "outlet_licensing",
+    "detention_and_violence"
+   ],
+   "stage": "silence",
+   "status": "historical",
+   "granularity": "anchor",
+   "leader_slug": "william-lyon-mackenzie-king",
+   "summary": "Canada invoked the War Measures Act at the outset of the Second World War and used it to bring in the Defence of Canada Regulations, which gave the government power to review and restrict hundreds of newspapers and periodicals and to ban dozens of organizations, including the Communist Party of Canada.",
+   "what_happened": "The War Measures Act was invoked again for the Second World War and took effect on August 25, 1939, one week before Canada's own declaration against Germany. Cabinet used the Act to bring in the Defence of Canada Regulations, which were implemented on September 3, 1939. The Regulations gave authorities power to review and restrict 325 newspapers and periodicals and to ban more than 30 religious, cultural, and political organizations, including Jehovah's Witnesses and the Communist Party of Canada. They also let the Minister of Justice detain, without due process, anyone who acted in a manner prejudicial to public safety or the safety of the state, and free speech was restricted as a result. Montreal's mayor, Camillien Houde, was arrested at city hall in 1940 and interned for four years in Ontario for denouncing government conscription policy. The Communist Party of Canada was itself banned the following year, and more than 100 of its leading members were imprisoned. The wartime Regulations remained in force until they were replaced by similar legislation on December 31, 1945.",
+   "stated_justification": "The Regulations let the Minister of Justice detain, without due process, anyone who acted in a manner prejudicial to public safety or the safety of the state, the standard the government invoked to justify wartime press restrictions and internment.",
+   "effect_on_reporting": "Free speech was restricted and anyone critical of government positions risked internment without charge or trial; Montreal's mayor was interned for four years after he criticized conscription policy, and more than 100 Communist Party leaders were imprisoned after the party was banned.",
+   "issue_of_the_day": "The Regulations took effect in the first days of Canada's involvement in the Second World War, one week before Canada's own declaration against Germany.",
+   "outcome": "sustained",
+   "outcome_on": "1945-12-31",
+   "outcome_note": "The Defence of Canada Regulations remained in force for the duration of the war and were replaced by similar legislation on December 31, 1945.",
+   "actors": [
+    "william-lyon-mackenzie-king",
+    "communist-party-of-canada"
+   ],
+   "actor_roles": {
+    "william-lyon-mackenzie-king": "implemented",
+    "communist-party-of-canada": "other"
+   },
+   "outlets": [],
+   "sources": [
+    "h1940_07",
+    "h1940_08"
+   ],
+   "claims": [
+    {
+     "field": "announced_by",
+     "value": "Act invoked for Second World War",
+     "statement": "Cabinet invoked the War Measures Act again for the Second World War.",
+     "source_id": "h1940_07",
+     "evidence_quote": "The War Measures Act was invoked again during the Second World War"
+    },
+    {
+     "field": "occurred_on",
+     "value": "Act and Regulations take effect",
+     "statement": "The War Measures Act took effect on August 25, 1939, one week before Canada's own declaration of war, and Cabinet used it to bring in the Defence of Canada Regulations.",
+     "source_id": "h1940_07",
+     "evidence_quote": "One week before Canada declared war, the Act was used to implement the Defence of Canada Regulations"
+    },
+    {
+     "field": "action",
+     "value": "Defence of Canada Regulations implemented",
+     "statement": "The Defence of Canada Regulations were implemented on September 3, 1939.",
+     "source_id": "h1940_07",
+     "evidence_quote": "The Defence of Canada Regulations were implemented on 3 September 1939."
+    },
+    {
+     "field": "scope_of_action",
+     "value": "325 newspapers, 30 organizations",
+     "statement": "The Regulations gave authorities power to review and restrict 325 newspapers and periodicals and to ban more than 30 organizations, including the Communist Party of Canada.",
+     "source_id": "h1940_07",
+     "evidence_quote": "They gave authorities the ability to censor 325 newspapers and periodicals and to ban more than 30 religious, cultural and political organizations, including Jehovah's Witnesses and the Communist Party of Canada"
+    },
+    {
+     "field": "stated_justification",
+     "value": "Regulations authorized detention without due process",
+     "statement": "The Regulations let the Minister of Justice detain, without due process, anyone who acted in a manner prejudicial to public safety or the safety of the state.",
+     "source_id": "h1940_07",
+     "evidence_quote": "The Defence of Canada Regulations also allowed the Minister of Justice to detain anyone without due process who acted “in any manner prejudicial to the public safety or the safety of the state.”"
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Free speech restricted",
+     "statement": "Free speech was restricted and anyone critical of government positions could be interned without charge or trial.",
+     "source_id": "h1940_07",
+     "evidence_quote": "As a result, free speech was restricted. Any person critical of government positions could be interned without charge or trial."
+    },
+    {
+     "field": "journalist_affected",
+     "value": "Houde arrested and interned",
+     "statement": "Montreal mayor Camillien Houde was arrested at city hall in 1940 and interned in Ontario for four years for denouncing government conscription policy.",
+     "source_id": "h1940_07",
+     "evidence_quote": "Montreal mayor Camillien Houde was arrested at city hall in 1940. He was interned in Ontario for four years for denouncing government policies that led to conscription"
+    },
+    {
+     "field": "action",
+     "value": "Communist Party banned",
+     "statement": "The Communist Party of Canada was officially banned and more than 100 of its leading members were imprisoned.",
+     "source_id": "h1940_08",
+     "evidence_quote": "the party was officially banned in Canada, and more than 100 leading members were imprisoned."
+    },
+    {
+     "field": "reversed_on",
+     "value": "Regulations replaced by new legislation",
+     "statement": "The wartime Regulations were replaced by similar legislation on December 31, 1945.",
+     "source_id": "h1940_07",
+     "evidence_quote": "replaced by similar legislation on 31 December 1945"
+    }
+   ]
+  }
+ ],
+ "actors": [
+  {
+   "slug": "stanley-johnston",
+   "name": "Stanley Johnston",
+   "kind": "person",
+   "role_or_office": "War correspondent, Chicago Tribune",
+   "country": "US"
+  },
+  {
+   "slug": "harry-truman",
+   "name": "Harry S. Truman",
+   "kind": "person",
+   "role_or_office": "President of the United States",
+   "country": "US"
+  },
+  {
+   "slug": "hugo-black",
+   "name": "Hugo L. Black",
+   "kind": "person",
+   "role_or_office": "Associate Justice, Supreme Court of the United States",
+   "country": "US"
+  },
+  {
+   "slug": "georgios-tsolakoglou",
+   "name": "Georgios Tsolakoglou",
+   "kind": "person",
+   "role_or_office": "President of the collaborationist government of occupied Greece",
+   "country": "GR"
+  },
+  {
+   "slug": "william-lyon-mackenzie-king",
+   "name": "William Lyon Mackenzie King",
+   "kind": "person",
+   "role_or_office": "Prime Minister of Canada",
+   "country": "CA"
+  },
+  {
+   "slug": "communist-party-of-canada",
+   "name": "Communist Party of Canada",
+   "kind": "body",
+   "role_or_office": "Political party banned under the Defence of Canada Regulations",
+   "country": "CA"
+  }
+ ],
+ "outlets": [
+  {
+   "slug": "chicago-tribune",
+   "name": "Chicago Tribune",
+   "kind": "newspaper",
+   "country": "US"
+  }
+ ],
+ "sources": [
+  {
+   "id": "h1940_01",
+   "url": "https://nsarchive.gwu.edu/briefing-book/intelligence/2017-10-25/secrecy-leaks-when-us-government-prosecuted-chicago-tribune",
+   "title": "Secrecy and Leaks: When the U.S. Government Prosecuted the Chicago Tribune",
+   "publisher": "National Security Archive, George Washington University",
+   "published_on": "2017-10-25",
+   "kind": "reporting",
+   "http_status": 200,
+   "link_state": "live",
+   "accessed_on": "2026-09-26"
+  },
+  {
+   "id": "h1940_02",
+   "url": "https://www.rcfp.org/reporters-committee-leads-effort-unseal-grand-jury-testimony-1942-espionage-act-investigation-chicag/",
+   "title": "Reporters Committee leads effort to unseal grand jury testimony from 1942 Espionage Act investigation of Chicago Tribune",
+   "publisher": "Reporters Committee for Freedom of the Press",
+   "published_on": "2014-11-18",
+   "kind": "reporting",
+   "http_status": 200,
+   "link_state": "live",
+   "accessed_on": "2026-09-26"
+  },
+  {
+   "id": "h1940_05",
+   "url": "https://filmiconjournal.com/blog/post/83/rejected-by-the-german-embassy",
+   "title": "“Rejected by the German Embassy”: The Directorate-General for Press and Radio under the Greek collaborationist governments and film censorship during the Occupation of Greece by the Axis powers (1941-1944)",
+   "publisher": "Filmicon: Journal of Greek Film Studies",
+   "published_on": "2013-10-02",
+   "kind": "reference",
+   "http_status": 200,
+   "link_state": "live",
+   "accessed_on": "2026-09-26"
+  },
+  {
+   "id": "h1940_06",
+   "url": "https://encyclopedia.ushmm.org/content/en/article/greece",
+   "title": "Greece",
+   "publisher": "United States Holocaust Memorial Museum, Holocaust Encyclopedia",
+   "published_on": null,
+   "kind": "reference",
+   "http_status": 200,
+   "link_state": "live",
+   "accessed_on": "2026-09-26"
+  },
+  {
+   "id": "h1940_07",
+   "url": "https://www.thecanadianencyclopedia.ca/en/article/war-measures-act",
+   "title": "War Measures Act",
+   "publisher": "The Canadian Encyclopedia",
+   "published_on": null,
+   "kind": "reference",
+   "http_status": 200,
+   "link_state": "live",
+   "accessed_on": "2026-09-26"
+  },
+  {
+   "id": "h1940_08",
+   "url": "https://www.thecanadianencyclopedia.ca/en/article/communist-party-of-canada",
+   "title": "Communist Party of Canada",
+   "publisher": "The Canadian Encyclopedia",
+   "published_on": null,
+   "kind": "reference",
+   "http_status": 200,
+   "link_state": "live",
+   "accessed_on": "2026-09-26"
+  }
+ ]
+}

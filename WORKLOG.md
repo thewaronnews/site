@@ -911,3 +911,35 @@ Unattended run from the Cowork sandbox (device_bash). `linkcheck.py --all` drive
 - **Open for Peter.** (1) Dead sources now 23; review list in ops/logs/linkcheck-2026-09-2{4,5,6}.jsonl.
   (2) Whether the Air Force One exclusion should get its own status claim if the court rules the TRO covers the
   pool. (3) Add PI motion event once filed (due Sept 28).
+
+## 2026-09-26 (afternoon): dead sources, focal case, historical expansion, Before 1900 (Peter's requests)
+
+- **Dead sources 23 -> 0.** None were gone. `ops/linkcheck.py` misclassified: bare 403/429/503 without a
+  challenge marker, timeouts and resets now report `error` (no failure count); a cited homepage or section
+  front that loads is `live`; Jev "homepage" is dead only when redirected away from the cited URL; 308
+  redirects are followed on Python 3.10. Tests updated (20 pass). Re-check: 15 live, 1 redirected. Chrome check of
+  the rest: usnews (5), poynter (17, 256), WaPo 1980 (190), Press Gazette (228) live; CPJ staff (493) moved to
+  /about/people/; Parade (47) and Clearinghouse (275, CloudFront geo block) `bot_blocked`, both with snapshots.
+  Snapshots added for 190, 256, 275. Source 17's published_on is 2026-09-01; the page says 2026-09-21 (no
+  endpoint to edit a source; left).
+- **Focal case.** Claim 737 superseded by 738 (Air Force One exclusion on its own, NPR/AP). New claims 739
+  (pool resumed with CNN, CNN), 740 (counsel: order covers the pool, CNN), 741 (Stopperich declaration, badges
+  from 7:10 a.m., WaPo), 742 (entry restored around noon, WaPo), 743 (Boutrous filing: order "repeatedly
+  violated", WaPo), 744 (AP 2026-09-25 cites the 2025 AP exclusion), 745 (CNN 2025-04-15: wire slot removed
+  instead of restoring AP). Sources 517 to 520. Event 16 deleted and re-added as 17 (claim 738); events 18
+  (pool resumed) and 19 (filing). Summary, what_happened, effect_on_reporting and unknowns rewritten (rev 31);
+  related incidents linked as precedent: 2025-white-house-bars-ap-gulf-of-america,
+  2025-white-house-cuts-wire-service-pool-slot, 2025-whca-loses-control-of-press-pool (rev 32).
+- **Historical anchors: 36 new incidents, 1900 to 1999**, loaded with `site/tools/load-historical-2026-09-26.py`
+  from `content-sources/research-v4/*.final.json` (batch `historical-2026-09-26`). Haiku drafted, Sonnet rebuilt
+  sources; every evidence_quote verified verbatim against the fetched page (cloud curl) and lint-clean against
+  site/src/lint.js before load. 1900s has 2 (no fetchable non-US sources found), 1920s 3 (Milwaukee Leader 1921
+  dropped as a duplicate), 1940s 3 (AP v. United States antitrust dropped: not an action against journalism).
+  New actors and outlets created and published without claims; affected people are not linked as actors.
+- **Before 1900.** Explainer `press-control-before-1900` (10 briefs, 1643 to 1878, 16 sources, quotes verified).
+  Linked from /eras. Header tagline now "How governments have limited journalists, from the first press laws to
+  today."; masthead descriptor and home definition updated. Deployed.
+- linkcheck on the 103 new sources: live 88, redirected 10, paywalled 2, error 3. IndexNow: 386 URLs, HTTP 200.
+- **Open for Peter.** (1) Pre-1900 briefs cover Europe and North America only (Asian and other sources were not
+  fetchable from the sandbox). (2) Gitlow and Lovell use the Supreme Court date, not the earlier state action.
+  (3) Affected journalists in the new incidents are named in text but not yet linked as journalist records.

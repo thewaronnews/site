@@ -1,0 +1,611 @@
+{
+ "incidents": [
+  {
+   "slug": "1975-us-nebraska-press-v-stuart-restrictive-order",
+   "title": "United States judge bars the press from reporting a murder suspect's confession before trial",
+   "occurred_on": "1975-10-27",
+   "occurred_on_precision": "day",
+   "jurisdiction": "Lincoln County, Nebraska, United States",
+   "country": "US",
+   "continent": "North America",
+   "level": "state_or_province",
+   "type": "prior_restraint",
+   "tactic_primary": "prior_restraint",
+   "tactics": [
+    "prior_restraint"
+   ],
+   "leader_slug": "j-james-exon",
+   "summary": "On October 27, 1975, Nebraska District Judge Hugh Stuart ordered news organizations covering a mass murder near Sutherland, Nebraska, not to report a suspect's confession or other evidence before jury selection. The Supreme Court of the United States, the country's highest court, struck down the order on June 30, 1976, ruling that the government had not shown the heavy justification a prior restraint on publication requires.",
+   "what_happened": "On the evening of October 18, 1975, local police found six members of the Kellie family murdered in their home in Sutherland, Nebraska, a town of about 850 people. Police released the description of a suspect, Erwin Charles Simants, to reporters who had gone to the scene, and Simants was arrested the next morning. The Lincoln County Attorney and Simants's own lawyer asked a county court to restrict reporting on the case, and on October 27 the District Court of Lincoln County, under Judge Hugh Stuart, replaced that order with its own, finding a clear and present danger that pretrial publicity could impinge on Simants's right to a fair trial. Stuart's order barred news organizations from reporting the existence or content of Simants's confession and other evidence until a jury was chosen. Nebraska Press Association and other news organizations appealed to the Supreme Court of the United States, the country's highest court. On June 30, 1976, the Court ruled unanimously that the heavy burden required to justify a prior restraint, an order stopping publication in advance, had not been met, and it reversed the judgment of the Nebraska Supreme Court that had upheld the order.",
+   "stated_justification": "Judge Stuart found that, because of the nature of the crimes charged, there was a clear and present danger that pretrial publicity could impinge on Simants's right to a fair trial.",
+   "effect_on_reporting": "Stuart's order barred news organizations from reporting the existence or content of Simants's confession, the contents of a note he had written and other evidence, until a jury was chosen.",
+   "issue_of_the_day": "The killing of six members of one family drew widespread local, regional and national news coverage in a small Nebraska town, and courts were weighing how to balance a defendant's right to a fair trial against the press's right to report on pending criminal proceedings.",
+   "outcome": "reversed",
+   "outcome_on": "1976-06-30",
+   "outcome_note": "The Supreme Court of the United States reversed the restrictive order on June 30, 1976, finding the government had not met the heavy burden required to justify a prior restraint on publication.",
+   "actors": [
+    "j-james-exon",
+    "hugh-stuart",
+    "warren-burger"
+   ],
+   "actor_roles": {
+    "hugh-stuart": "ordered",
+    "warren-burger": "ruled",
+    "j-james-exon": "other"
+   },
+   "outlets": [
+    "nebraska-press-association"
+   ],
+   "sources": [
+    "h1970_01",
+    "h1970_02"
+   ],
+   "claims": [
+    {
+     "field": "occurred_on",
+     "value": "Kellie family murdered October 18, 1975",
+     "statement": "Police found six members of the Kellie family murdered in their home in Sutherland, Nebraska, a town of about 850 people, on the evening of October 18, 1975.",
+     "source_id": "h1970_01",
+     "evidence_quote": "On the evening of October 18, 1975, local police found the six members of the Henry Kellie family murdered in their home in Sutherland, Neb., a town of about 850 people."
+    },
+    {
+     "field": "scope_of_action",
+     "value": "Simants named as suspect",
+     "statement": "Police released the description of suspect Erwin Charles Simants to reporters who had gone to the scene of the crime.",
+     "source_id": "h1970_01",
+     "evidence_quote": "Police released the description of a suspect, Erwin Charles Simants, to the reporters who had hastened to the scene of the crime."
+    },
+    {
+     "field": "action",
+     "value": "District Court's own restrictive order, October 27, 1975",
+     "statement": "On October 27, 1975, the District Court of Lincoln County, Nebraska, replaced the county court's order with its own restrictive order barring reporting on the case.",
+     "source_id": "h1970_01",
+     "evidence_quote": "Without any further hearings, the District Court on October 27 terminated the County Court's order and substituted its own."
+    },
+    {
+     "field": "stated_justification",
+     "value": "Clear and present danger finding",
+     "statement": "Judge Stuart found that the nature of the crimes charged created a clear and present danger that pretrial publicity could impinge on the defendant's right to a fair trial.",
+     "source_id": "h1970_01",
+     "evidence_quote": "because of the nature of the crimes charged in the complaint that there is a clear and present danger that pre-trial publicity could impinge upon the defendant's right to a fair trial."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Five subjects barred from reporting",
+     "statement": "The order specifically barred news organizations from reporting five subjects, including the existence or contents of Simants's confession, which had already been introduced in open court.",
+     "source_id": "h1970_01",
+     "evidence_quote": "specifically prohibited petitioners from reporting five subjects: (1) the existence or contents of a confession Simants had made to law enforcement officers, which had been introduced in open court at arraignment"
+    },
+    {
+     "field": "status",
+     "value": "Supreme Court reverses, June 30, 1976",
+     "statement": "The Supreme Court of the United States held that the heavy burden required to justify a prior restraint on publication had not been met, and it reversed the Nebraska Supreme Court's judgment.",
+     "source_id": "h1970_01",
+     "evidence_quote": "the heavy burden imposed as a condition to securing a prior restraint was not met and the judgment of the Nebraska Supreme Court is therefore"
+    },
+    {
+     "field": "status",
+     "value": "First Amendment Encyclopedia summary of ruling",
+     "statement": "The First Amendment Encyclopedia said the Supreme Court unanimously ruled that a trial judge lacked authority to restrain reporting on a case before a jury was chosen, calling the restraint a form of prior restraint on the press.",
+     "source_id": "h1970_02",
+     "evidence_quote": "the Supreme Court unanimously ruled that a trial court judge did not have the authority to place gag orders on reporting about a specific crime prior to jury impanelment"
+    }
+   ],
+   "granularity": "anchor",
+   "stage": "silence"
+  },
+  {
+   "slug": "1971-us-zurcher-stanford-daily-newsroom-search",
+   "title": "United States police search a student newspaper's offices for photographs of a protest",
+   "occurred_on": "1971-04-12",
+   "occurred_on_precision": "day",
+   "jurisdiction": "Palo Alto and Santa Clara County, California, United States",
+   "country": "US",
+   "continent": "North America",
+   "level": "municipal",
+   "type": "surveillance_and_subpoenas",
+   "tactic_primary": "surveillance_and_subpoenas",
+   "tactics": [
+    "surveillance_and_subpoenas"
+   ],
+   "leader_slug": "ronald-reagan",
+   "summary": "On April 12, 1971, Palo Alto police searched the newsroom of The Stanford Daily, a student newspaper, for photographs of a clash between demonstrators and police at Stanford University Hospital, though no member of the paper's staff was suspected of a crime. The Supreme Court of the United States ruled 5 to 3 on May 31, 1978, that the search did not violate the First or Fourth Amendments.",
+   "what_happened": "Late in the day on April 9, 1971, officers of the Palo Alto Police Department and the Santa Clara County Sheriff's Department responded to a call from the director of Stanford University Hospital in California asking them to remove demonstrators who had occupied the hospital's administrative offices since the previous afternoon. Nine police officers were hurt in the resulting confrontation. The next day, The Stanford Daily, a student newspaper at Stanford University, published photographs of the clash. On April 12, 1971, the Santa Clara County District Attorney's office obtained a warrant from a municipal court to search the Daily's offices for photographs and negatives that might identify people involved in the felonies of \"battery on a peace officer\" and \"assault with a deadly weapon.\" Four police officers searched the newsroom's photo laboratory, filing cabinets, desks and wastebaskets that day, though the warrant did not allege that any Daily staff member had committed a crime, and the search turned up nothing beyond photographs the paper had already published. The Daily sued the police and prosecutors, arguing the search violated the First and Fourth Amendments. On May 31, 1978, the Supreme Court of the United States ruled 5 to 3 that a search warrant for a newsroom not itself suspected of a crime was constitutional.",
+   "stated_justification": "The warrant was issued on a finding that photographs and film relevant to the identity of the perpetrators of felonies, \"battery on a peace officer\" and \"assault with a deadly weapon,\" would be found on the Daily's premises.",
+   "effect_on_reporting": "The warrant affidavit did not allege that any member of the Daily's staff had committed a crime, and the search itself turned up nothing beyond the photographs the newspaper had already published.",
+   "issue_of_the_day": "A confrontation between police and demonstrators occupying Stanford University Hospital's administrative offices had injured nine officers, and prosecutors wanted photographs the student newspaper had taken of the clash to identify people involved.",
+   "outcome": "upheld",
+   "outcome_on": "1978-05-31",
+   "outcome_note": "The Supreme Court of the United States ruled 5 to 3 that the search of the Daily's newsroom did not violate the First or Fourth Amendments.",
+   "actors": [
+    "ronald-reagan",
+    "james-zurcher",
+    "louis-bergna",
+    "byron-white"
+   ],
+   "actor_roles": {
+    "james-zurcher": "enforced",
+    "louis-bergna": "ordered",
+    "byron-white": "ruled",
+    "ronald-reagan": "other"
+   },
+   "outlets": [
+    "stanford-daily"
+   ],
+   "sources": [
+    "h1970_03",
+    "h1970_04"
+   ],
+   "claims": [
+    {
+     "field": "scope_of_action",
+     "value": "Hospital occupation and clash, April 9, 1971",
+     "statement": "Police responded on April 9, 1971, to a call from Stanford University Hospital's director asking them to remove demonstrators who had occupied the hospital's administrative offices since the previous afternoon.",
+     "source_id": "h1970_03",
+     "evidence_quote": "Late in the day on Friday, April 9, 1971, officers of the Palo Alto Police Department and of the Santa Clara County Sheriff's Department responded to a call from the director of the Stanford University Hospital requesting the removal of a large group of demonstrators"
+    },
+    {
+     "field": "action",
+     "value": "Newsroom searched April 12, 1971",
+     "statement": "Four police officers searched The Stanford Daily's newsroom on April 12, 1971, in the presence of some of the paper's staff.",
+     "source_id": "h1970_03",
+     "evidence_quote": "The search pursuant to the warrant was conducted later that day by four police officers and took place in the presence of some members of the Daily staff."
+    },
+    {
+     "field": "stated_justification",
+     "value": "Warrant's stated basis",
+     "statement": "The search warrant was issued on a finding that photographs and film relevant to identifying the perpetrators of felonies, \"battery on a peace officer\" and \"assault with a deadly weapon,\" would be found on the newspaper's premises.",
+     "source_id": "h1970_03",
+     "evidence_quote": "relevant to the identity of the perpetrators of felonies, to wit, Battery on a Peace Officer, and Assault with Deadly Weapon, will be located"
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "No staff member suspected",
+     "statement": "The warrant affidavit contained no allegation that any member of the Daily's staff had committed a crime at the hospital.",
+     "source_id": "h1970_03",
+     "evidence_quote": "The warrant affidavit contained no allegation or indication that members of the Daily staff were in any way involved in unlawful acts at the hospital."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Search found nothing new",
+     "statement": "The First Amendment Encyclopedia reported that the search of the newsroom failed to turn up any evidence beyond the originals of the photographs the paper had already published.",
+     "source_id": "h1970_04",
+     "evidence_quote": "a search of the newsroom failed to turn up any evidence beyond the originals of the published photos."
+    },
+    {
+     "field": "status",
+     "value": "Supreme Court upholds newsroom searches, 5-3",
+     "statement": "The Supreme Court ruled 5 to 3, in an opinion by Justice Byron White, that searches of the property of innocent third parties, including the press, are permissible when police have probable cause.",
+     "source_id": "h1970_04",
+     "evidence_quote": "The Supreme Court, in a 5-3 opinion authored by Justice Byron R.White , held that searches of the property of innocent third parties, including the press, are permissible"
+    }
+   ],
+   "granularity": "anchor",
+   "stage": "pressure"
+  },
+  {
+   "slug": "1972-uk-sunday-times-thalidomide-injunction",
+   "title": "United Kingdom court bars The Sunday Times from publishing an article on thalidomide",
+   "occurred_on": "1972-11-17",
+   "occurred_on_precision": "day",
+   "jurisdiction": "England and Wales, United Kingdom",
+   "country": "GB",
+   "continent": "Europe",
+   "level": "national",
+   "type": "prior_restraint",
+   "tactic_primary": "prior_restraint",
+   "tactics": [
+    "prior_restraint"
+   ],
+   "leader_slug": "edward-heath",
+   "summary": "On November 17, 1972, the Divisional Court of the Queen's Bench Division, part of England's High Court, granted the Attorney General's request for an injunction stopping The Sunday Times from publishing an article about the drug thalidomide, on the ground that it would amount to contempt of court. The European Court of Human Rights ruled on April 26, 1979, by eleven votes to nine, that the injunction breached Article 10 of the European Convention on Human Rights, the treaty provision protecting freedom of expression.",
+   "what_happened": "Thalidomide, a sedative marketed in Britain in the early 1960s, caused severe birth defects in children whose mothers took it during pregnancy. Families of affected children sued the manufacturer, Distillers Company, and a settlement was still being negotiated a decade later. The Sunday Times prepared an article examining how Distillers had tested and marketed the drug. The Attorney General for England and Wales, the government's chief legal officer, applied to stop publication, arguing the article would prejudge issues still before the courts. On November 17, 1972, the Divisional Court of the Queen's Bench Division granted an injunction restraining Times Newspapers Ltd. from publishing the article on the ground that it would constitute contempt of court. The Court of Appeal discharged the injunction on February 16, 1973, but the House of Lords, then the United Kingdom's highest court, restored it in modified form after a further appeal. The injunction was discharged on June 23, 1976, and The Sunday Times published the article four days later. The newspaper's publisher brought the case to the European Court of Human Rights, which ruled on April 26, 1979, by eleven votes to nine, that the injunction had breached Article 10 of the European Convention on Human Rights.",
+   "stated_justification": "The House of Lords directed that Times Newspapers Ltd. be restrained from publishing any article or matter which prejudges the issues of negligence, breach of contract or breach of duty in the pending thalidomide litigation.",
+   "effect_on_reporting": "The Sunday Times was barred from publishing its article on the thalidomide litigation from November 1972 until the injunction was discharged on June 23, 1976; the newspaper published the article four days later.",
+   "issue_of_the_day": "Thalidomide, which caused severe birth defects in children whose mothers took it during pregnancy, had drawn nationwide public and parliamentary attention in Britain, and the House of Commons extensively debated the pending compensation settlement with the manufacturer on November 29, 1972.",
+   "outcome": "reversed",
+   "outcome_on": "1979-04-26",
+   "outcome_note": "The European Court of Human Rights ruled on April 26, 1979, by eleven votes to nine, that the injunction against The Sunday Times had breached Article 10 of the European Convention on Human Rights.",
+   "actors": [
+    "edward-heath",
+    "attorney-general-of-england-and-wales",
+    "jack-ashley"
+   ],
+   "actor_roles": {
+    "attorney-general-of-england-and-wales": "enforced",
+    "edward-heath": "other",
+    "jack-ashley": "other"
+   },
+   "outlets": [
+    "sunday-times"
+   ],
+   "sources": [
+    "h1970_05",
+    "h1970_06"
+   ],
+   "claims": [
+    {
+     "field": "action",
+     "value": "Divisional Court grants injunction, November 17, 1972",
+     "statement": "On November 17, 1972, the Divisional Court of the Queen's Bench Division granted the Attorney General's application for an injunction restraining The Sunday Times from publishing its article, on the ground that publication would constitute contempt of court.",
+     "source_id": "h1970_05",
+     "evidence_quote": "On 17 November 1972, the Divisional Court of the Queen’s Bench Division granted the AttorneyGeneral’s application for an injunction restraining publication of this future article on the ground that it would constitute contempt of court"
+    },
+    {
+     "field": "stated_justification",
+     "value": "House of Lords injunction wording",
+     "statement": "The House of Lords directed that Times Newspapers Ltd. be restrained from publishing any article or matter which prejudges the issues of negligence, breach of contract or breach of duty in the pending litigation against Distillers.",
+     "source_id": "h1970_05",
+     "evidence_quote": "restrained from publishing, or causing or authorising or procuring to be published or printed, any article or matter which prejudges the issues of negligence, breach of contract or breach of duty"
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Publication delayed to 1976",
+     "statement": "Four days after the injunction against Times Newspapers Ltd. was discharged on June 23, 1976, The Sunday Times published the article it had been prevented from printing since 1972.",
+     "source_id": "h1970_05",
+     "evidence_quote": "Four days later, the contentious article was published."
+    },
+    {
+     "field": "reversed_on",
+     "value": "Injunction discharged June 23, 1976",
+     "statement": "The injunction against Times Newspapers Ltd. was discharged on June 23, 1976, after which the delayed article was published.",
+     "source_id": "h1970_05",
+     "evidence_quote": "the injunction against Times Newspapers Ltd. was discharged on 23 June 1976"
+    },
+    {
+     "field": "status",
+     "value": "ECHR finds a breach of Article 10",
+     "statement": "The European Court of Human Rights held by eleven votes to nine that there had been a breach of Article 10 of the European Convention on Human Rights.",
+     "source_id": "h1970_05",
+     "evidence_quote": "holds by eleven votes to nine that there has been a breach of Article 10"
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "MP praises Sunday Times reporting",
+     "statement": "Jack Ashley, the Member of Parliament for Stoke-on-Trent South, told the House of Commons on November 29, 1972, that The Sunday Times had run a series of articles on thalidomide that he called brave and brilliant.",
+     "source_id": "h1970_06",
+     "evidence_quote": "a series of articles in The Sunday Times which was both brave and brilliant"
+    }
+   ],
+   "granularity": "anchor",
+   "stage": "silence"
+  },
+  {
+   "slug": "1977-south-africa-world-newspaper-banned-qoboza-detained",
+   "title": "South Africa bans The World and Weekend World newspapers and detains editor Percy Qoboza",
+   "occurred_on": "1977-10-19",
+   "occurred_on_precision": "day",
+   "jurisdiction": "South Africa, national",
+   "country": "ZA",
+   "continent": "Africa",
+   "level": "national",
+   "type": "outlet_licensing",
+   "tactic_primary": "outlet_licensing",
+   "tactics": [
+    "outlet_licensing",
+    "detention_and_violence"
+   ],
+   "leader_slug": "john-vorster",
+   "summary": "On October 19, 1977, a day South Africans came to call Black Wednesday, the government banned the newspapers The World and Weekend World and had the Special Branch police arrest editor Percy Qoboza and deputy editor Aggrey Klaaste. Qoboza was detained without charge under the Internal Security Act until his release in March 1978, and The World did not resume publication.",
+   "what_happened": "Percy Qoboza had edited The World, then South Africa's most widely read Black newspaper, since 1974, and the paper had covered the 1976 Soweto uprising and its aftermath. On October 19, 1977, the Special Branch of the South African Police arrested Qoboza and Aggrey Klaaste, the news editor of the affiliated Weekend World, in an operation South African History Online describes as a mission to shut down the two Black publications. The government banned The World and Weekend World the same day and detained Qoboza under section 10 of the Internal Security Act, holding him without charge at Modderbee Prison, east of Johannesburg; Klaaste was held there as well. The same day, the government banned nineteen Black Consciousness Movement organizations and detained scores of their members, weeks after the death in police custody of Black Consciousness leader Steve Biko. Aggrey Klaaste later wrote that police came to his home in Meadowlands on the morning of the arrests to read him a detention notice. Qoboza was released in March 1978 after international pressure. The World did not reopen; Qoboza went on to edit a different newspaper, the Post.",
+   "stated_justification": "The government held Qoboza and Klaaste under section 10 of the Internal Security Act, a law that let authorities detain people without charge or trial, without publicly detailing an individual reason for their detention.",
+   "effect_on_reporting": "The World and Weekend World stopped publishing after the ban, and Qoboza and Klaaste were held without charge for months at Modderbee Prison, according to South African History Online.",
+   "issue_of_the_day": "The bannings and detentions followed the September 1977 death in police custody of Black Consciousness Movement leader Steve Biko and accompanied the government's move to outlaw nineteen Black Consciousness organizations on the same day.",
+   "outcome": "sustained",
+   "outcome_on": "1978-03",
+   "outcome_note": "Qoboza was released from detention in March 1978 after international pressure, but The World did not resume publication.",
+   "actors": [
+    "john-vorster",
+    "percy-qoboza",
+    "aggrey-klaaste"
+   ],
+   "actor_roles": {
+    "john-vorster": "other",
+    "percy-qoboza": "other",
+    "aggrey-klaaste": "other"
+   },
+   "outlets": [
+    "the-world",
+    "weekend-world"
+   ],
+   "sources": [
+    "h1970_07",
+    "h1970_08",
+    "h1970_09",
+    "h1970_10"
+   ],
+   "claims": [
+    {
+     "field": "action",
+     "value": "Qoboza and Klaaste arrested",
+     "statement": "The Special Branch police arrested The World's editor, Percy Qoboza, and his deputy, Aggrey Klaaste, in an operation to shut down the two Black publications.",
+     "source_id": "h1970_07",
+     "evidence_quote": "The editor of The World and Weekend World, Percy Qoboza and his deputy, Aggrey Klaaste were arrested by the Special Branch police in a mission to shut down the two Black publications."
+    },
+    {
+     "field": "action",
+     "value": "Newspapers banned October 19, 1977",
+     "statement": "On October 19, 1977, the government banned the newspapers The World and Weekend World.",
+     "source_id": "h1970_08",
+     "evidence_quote": "On October 19, 1977, The World and Weekend World were banned."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Detention under Internal Security Act",
+     "statement": "Qoboza was taken into detention and held for five months under section 10 of the Internal Security Act at Modderbee Prison.",
+     "source_id": "h1970_08",
+     "evidence_quote": "was taken into detention and held for five months under section 10 of the Internal Security Act in Modderbee Prison."
+    },
+    {
+     "field": "journalist_affected",
+     "value": "Klaaste's account of his arrest",
+     "statement": "Aggrey Klaaste recalled that police came to his home in Meadowlands on the morning of October 19, 1977, to read him a notice of his detention.",
+     "source_id": "h1970_09",
+     "evidence_quote": "They came to my home in Meadowlands, the morning of the 19th, complaining bitterly that we had given them, the police, sleepless nights."
+    },
+    {
+     "field": "reversed_on",
+     "value": "Qoboza released March 1978",
+     "statement": "Qoboza was detained without charge until his release in March 1978, after international pressure.",
+     "source_id": "h1970_10",
+     "evidence_quote": "the newspaper was banned and Qoboza was detained without a charge until March 1978. International pressure led to his release"
+    }
+   ],
+   "granularity": "anchor",
+   "stage": "silence"
+  }
+ ],
+ "actors": [
+  {
+   "slug": "hugh-stuart",
+   "name": "Hugh Stuart",
+   "kind": "person",
+   "role_or_office": "Judge, District Court of Lincoln County, Nebraska",
+   "country": "US"
+  },
+  {
+   "slug": "warren-burger",
+   "name": "Warren E. Burger",
+   "kind": "person",
+   "role_or_office": "Chief Justice of the United States",
+   "country": "US"
+  },
+  {
+   "slug": "james-zurcher",
+   "name": "James Zurcher",
+   "kind": "person",
+   "role_or_office": "Chief of Police, Palo Alto, California",
+   "country": "US"
+  },
+  {
+   "slug": "louis-bergna",
+   "name": "Louis P. Bergna",
+   "kind": "person",
+   "role_or_office": "District Attorney, Santa Clara County, California",
+   "country": "US"
+  },
+  {
+   "slug": "byron-white",
+   "name": "Byron White",
+   "kind": "person",
+   "role_or_office": "Associate Justice of the Supreme Court of the United States",
+   "country": "US"
+  },
+  {
+   "slug": "edward-heath",
+   "name": "Edward Heath",
+   "kind": "person",
+   "role_or_office": "Prime Minister of the United Kingdom",
+   "country": "GB"
+  },
+  {
+   "slug": "attorney-general-of-england-and-wales",
+   "name": "Attorney General for England and Wales",
+   "kind": "body",
+   "role_or_office": "Chief legal officer of the government of England and Wales",
+   "country": "GB"
+  },
+  {
+   "slug": "jack-ashley",
+   "name": "Jack Ashley",
+   "kind": "person",
+   "role_or_office": "Member of Parliament for Stoke-on-Trent South",
+   "country": "GB"
+  },
+  {
+   "slug": "john-vorster",
+   "name": "Balthazar Johannes Vorster",
+   "kind": "person",
+   "role_or_office": "Prime Minister of South Africa",
+   "country": "ZA",
+   "role_claim": {
+    "source_id": "h1970_11",
+    "evidence_quote": "Balthazar Johannes Vorster (also known as BJ Vorster or John Vorster) was the Prime Minister of South Africa from 1966 to 1978",
+    "statement": "Balthazar Johannes Vorster, also known as John Vorster, was Prime Minister of South Africa from 1966 to 1978."
+   }
+  },
+  {
+   "slug": "percy-qoboza",
+   "name": "Percy Qoboza",
+   "kind": "person",
+   "role_or_office": "Editor, The World and Weekend World",
+   "country": "ZA"
+  },
+  {
+   "slug": "aggrey-klaaste",
+   "name": "Aggrey Klaaste",
+   "kind": "person",
+   "role_or_office": "News editor, Weekend World",
+   "country": "ZA"
+  },
+  {
+   "slug": "j-james-exon",
+   "name": "J. James Exon",
+   "kind": "person",
+   "role_or_office": "Governor of Nebraska",
+   "country": "US"
+  },
+  {
+   "slug": "ronald-reagan",
+   "name": "Ronald Reagan",
+   "kind": "person",
+   "role_or_office": "Governor of California",
+   "country": "US"
+  }
+ ],
+ "outlets": [
+  {
+   "slug": "nebraska-press-association",
+   "name": "Nebraska Press Association",
+   "kind": "press_association",
+   "country": "US"
+  },
+  {
+   "slug": "stanford-daily",
+   "name": "The Stanford Daily",
+   "kind": "newspaper",
+   "country": "US"
+  },
+  {
+   "slug": "sunday-times",
+   "name": "The Sunday Times",
+   "kind": "newspaper",
+   "country": "GB"
+  },
+  {
+   "slug": "the-world",
+   "name": "The World",
+   "kind": "newspaper",
+   "country": "ZA"
+  },
+  {
+   "slug": "weekend-world",
+   "name": "Weekend World",
+   "kind": "newspaper",
+   "country": "ZA"
+  }
+ ],
+ "sources": [
+  {
+   "id": "h1970_01",
+   "url": "https://www.law.cornell.edu/supremecourt/text/427/539",
+   "title": "Nebraska Press Association v. Stuart, 427 U.S. 539 (1976)",
+   "publisher": "Legal Information Institute, Cornell Law School",
+   "published_on": "1976-06-30",
+   "kind": "court_record",
+   "http_status": 200,
+   "link_state": "live",
+   "accessed_on": "2026-09-26"
+  },
+  {
+   "id": "h1970_02",
+   "url": "https://firstamendment.mtsu.edu/article/nebraska-press-association-v-stuart/",
+   "title": "Nebraska Press Association v. Stuart (1976)",
+   "publisher": "The First Amendment Encyclopedia, Middle Tennessee State University",
+   "published_on": "2009",
+   "kind": "reference",
+   "http_status": 200,
+   "link_state": "live",
+   "accessed_on": "2026-09-26"
+  },
+  {
+   "id": "h1970_03",
+   "url": "https://www.law.cornell.edu/supremecourt/text/436/547",
+   "title": "Zurcher v. Stanford Daily, 436 U.S. 547 (1978)",
+   "publisher": "Legal Information Institute, Cornell Law School",
+   "published_on": "1978-05-31",
+   "kind": "court_record",
+   "http_status": 200,
+   "link_state": "live",
+   "accessed_on": "2026-09-26"
+  },
+  {
+   "id": "h1970_04",
+   "url": "https://firstamendment.mtsu.edu/article/zurcher-v-stanford-daily/",
+   "title": "Zurcher v. Stanford Daily (1978)",
+   "publisher": "The First Amendment Encyclopedia, Middle Tennessee State University",
+   "published_on": "2009",
+   "kind": "reference",
+   "http_status": 200,
+   "link_state": "live",
+   "accessed_on": "2026-09-26"
+  },
+  {
+   "id": "h1970_05",
+   "url": "https://hudoc.echr.coe.int/app/conversion/pdf?library=ECHR&id=001-57584&filename=001-57584.pdf",
+   "title": "Case of The Sunday Times v. The United Kingdom (Application no. 6538/74)",
+   "publisher": "European Court of Human Rights",
+   "published_on": "1979-04-26",
+   "kind": "court_record",
+   "http_status": 200,
+   "link_state": "live",
+   "accessed_on": "2026-09-26"
+  },
+  {
+   "id": "h1970_06",
+   "url": "https://api.parliament.uk/historic-hansard/commons/1972/nov/29/thalidomide-children",
+   "title": "Thalidomide Children, House of Commons debate, 29 November 1972",
+   "publisher": "Hansard, UK Parliament",
+   "published_on": "1972-11-29",
+   "kind": "primary_document",
+   "http_status": 200,
+   "link_state": "live",
+   "accessed_on": "2026-09-26"
+  },
+  {
+   "id": "h1970_07",
+   "url": "https://www.sahistory.org.za/dated-event/percy-qoboza-and-his-deputy-aggrey-klaaste-are-arrested-special-branch-police",
+   "title": "Percy Qoboza and his deputy, Aggrey Klaaste are arrested by the Special Branch police",
+   "publisher": "South African History Online",
+   "published_on": "2013-10-17",
+   "kind": "reference",
+   "http_status": 200,
+   "link_state": "live",
+   "accessed_on": "2026-09-26"
+  },
+  {
+   "id": "h1970_08",
+   "url": "https://www.sahistory.org.za/dated-event/black-wednesday-banning-19-black-consciousness-movement-organisations",
+   "title": "Black Wednesday, the banning of 19 Black Consciousness Movement Organisations",
+   "publisher": "South African History Online",
+   "published_on": "2019-10-18",
+   "kind": "reference",
+   "http_status": 200,
+   "link_state": "live",
+   "accessed_on": "2026-09-26"
+  },
+  {
+   "id": "h1970_09",
+   "url": "https://www.sahistory.org.za/archive/lessons-black-wednesday-jerome-klaaste-18-october-2019",
+   "title": "Lessons from Black Wednesday, by Jerome Klaaste, 18 October 2019",
+   "publisher": "South African History Online",
+   "published_on": "2019-10-18",
+   "kind": "reporting",
+   "http_status": 200,
+   "link_state": "live",
+   "accessed_on": "2026-09-26"
+  },
+  {
+   "id": "h1970_10",
+   "url": "https://www.sahistory.org.za/dated-event/percy-qoboza-editor-post-states-it-difficult-see-how-credible-newspaper-blacks-can-be",
+   "title": "Percy Qoboza, editor of the Post, states that it is difficult to see how a credible newspaper for Blacks can be created in South Africa",
+   "publisher": "South African History Online",
+   "published_on": "2011-03-16",
+   "kind": "reference",
+   "http_status": 200,
+   "link_state": "live",
+   "accessed_on": "2026-09-26"
+  },
+  {
+   "id": "h1970_11",
+   "url": "https://www.sahistory.org.za/people/b-j-vorster-john-vorster",
+   "title": "Balthazar John Vorster",
+   "publisher": "South African History Online",
+   "published_on": "2011-02-17",
+   "kind": "reference",
+   "http_status": 200,
+   "link_state": "live",
+   "accessed_on": "2026-09-26"
+  }
+ ]
+}

@@ -1,0 +1,329 @@
+{
+ "incidents": [
+  {
+   "slug": "1909-us-panama-canal-libel-prosecutions",
+   "title": "United States: President Theodore Roosevelt seeks criminal libel indictments against the New York World and the Indianapolis News over Panama Canal reporting",
+   "occurred_on": "1909-03-04",
+   "occurred_on_precision": "day",
+   "jurisdiction": "United States, federal",
+   "country": "US",
+   "continent": "North America",
+   "level": "national",
+   "tactic_primary": "insult_and_defamation_laws",
+   "tactics": [
+    "insult_and_defamation_laws",
+    "lawsuits_against_press"
+   ],
+   "leader_slug": "theodore-roosevelt",
+   "summary": "President Theodore Roosevelt sought federal criminal libel indictments against the publishers of the New York World and the Indianapolis News after they reported that he and other officials had profited from the United States' purchase of the Panama Canal. Federal courts in New York and Indiana dismissed the indictments, and the Supreme Court upheld that result in 1911.",
+   "what_happened": "After newspapers including the New York World and the Indianapolis News published stories alleging that President Theodore Roosevelt, the Secretary of War and other individuals had profited from the United States' purchase of the Panama Canal, Roosevelt sought criminal libel prosecutions against the publishers. A federal grand jury in the Southern District of New York, the federal trial court for Manhattan, returned a true bill against the Press Publishing Company, publisher of the World, on March 4, 1909, charging fourteen counts of criminal libel under an 1898 law applying New York's criminal code to federal enclaves such as West Point and a New York City post office. A parallel case, United States v. Smith, was brought against the Indianapolis News, in which Vice President Charles Fairbanks held a financial interest unknown to most of its readers; Roosevelt sought to prosecute that paper in Washington, D.C. Judge Albert Barnes Anderson of the federal court in Indiana ruled in 1909 that any offense would have occurred in Indiana, not the capital, and could only be tried there. The Supreme Court, in United States v. Press Publishing Co., unanimously quashed the New York indictment on January 3, 1911, holding that no federal criminal libel law covered offenses on federal enclaves.",
+   "stated_justification": "Roosevelt said the newspapers had libeled him, the Secretary of War and other individuals by publishing stories about who had profited from the Panama Canal purchase.",
+   "effect_on_reporting": "The prosecutions threatened the World and the News with criminal liability for their reporting on the canal purchase; both cases were dismissed before trial, on venue and jurisdictional grounds, without a conviction.",
+   "issue_of_the_day": "The New York World and the Indianapolis News had published reports on who had profited from the United States' purchase of the Panama Canal, reports that Roosevelt disputed as libelous.",
+   "outcome": "reversed",
+   "outcome_on": "1911-01-03",
+   "outcome_note": "The Supreme Court's 1911 ruling that no federal criminal libel law existed for offenses on federal enclaves left the World and the News without convictions and was later described as an early safeguard for the freedom of the press.",
+   "actors": [
+    "theodore-roosevelt",
+    "edward-douglass-white",
+    "albert-b-anderson"
+   ],
+   "actor_roles": {
+    "theodore-roosevelt": "ordered",
+    "edward-douglass-white": "ruled",
+    "albert-b-anderson": "ruled"
+   },
+   "outlets": [
+    "new-york-world",
+    "indianapolis-news"
+   ],
+   "sources": [
+    "h1900_01",
+    "h1900_02",
+    "h1900_03"
+   ],
+   "claims": [
+    {
+     "field": "action",
+     "value": "Grand jury returns true bill against Press Publishing Co.",
+     "statement": "A federal grand jury in the Southern District of New York returned a true bill charging the Press Publishing Company, publisher of the World, with fourteen counts of criminal libel.",
+     "source_id": "h1900_01",
+     "evidence_quote": "a grand jury in the circuit court of the United States for the southern district of New York found a true bill against the Press Publishing Company, charging the commission of alleged criminal libels, set out in an indictment composed of fourteen counts."
+    },
+    {
+     "field": "scope_of_action",
+     "value": "President, Secretary of War and others named as libeled",
+     "statement": "The indictment alleged that the President, the Secretary of War and certain private individuals had been criminally libeled by the World's articles.",
+     "source_id": "h1900_01",
+     "evidence_quote": "Those who were alleged in each count to have been criminally libeled were, at the time of the publications, the President of the United States, the Secretary of War, and certain private individuals."
+    },
+    {
+     "field": "stated_justification",
+     "value": "Roosevelt initiated the prosecutions over Panama Canal profit claims",
+     "statement": "Roosevelt initiated the libel prosecutions against Pulitzer and other publishers over stories alleging he had profited from the Panama Canal purchase while president.",
+     "source_id": "h1900_02",
+     "evidence_quote": "Theodore Roosevelt initiated libel prosecutions against Joseph Pulitzer and the other publishers of newspaper stories that had alleged that, while serving as president, he had profited from the sale of the Panama Canal."
+    },
+    {
+     "field": "status",
+     "value": "Supreme Court quashes the indictment",
+     "statement": "Chief Justice Edward White wrote the unanimous Supreme Court opinion quashing the indictment because no federal crime of libel existed.",
+     "source_id": "h1900_02",
+     "evidence_quote": "Chief Justice Edward White’s opinion for a unanimous Court quashed the indictments, recognizing that there was no federal crime of libel"
+    },
+    {
+     "field": "journalist_affected",
+     "value": "Case brought against the Indianapolis News over Panama Canal stories",
+     "statement": "The Indianapolis News had published stories questioning the finances of the Panama Canal purchase, and Roosevelt considered the stories libelous and sought to prosecute the paper.",
+     "source_id": "h1900_03",
+     "evidence_quote": "The News had published stories questioning the financial aspects of acquisition of the Panama Canal. President Theodore Roosevelt considered these stories libelous and sought a libel prosecution in Washington, D.C."
+    },
+    {
+     "field": "scope_of_action",
+     "value": "Vice President Fairbanks had an undisclosed stake in the News",
+     "statement": "Vice President Charles Fairbanks held a financial interest in the Indianapolis News that most of the paper's readers did not know about.",
+     "source_id": "h1900_03",
+     "evidence_quote": "The case involved the Indianapolis News , a paper in which, unbeknownst to most of its readers at the time, Vice President Charles Fairbank s had a substantial financial interest."
+    },
+    {
+     "field": "status",
+     "value": "Judge Anderson rules the case belongs in Indiana",
+     "statement": "Judge Albert Barnes Anderson ruled that any offense would have occurred in Indiana rather than the nation's capital, so the case could only be tried in Indiana.",
+     "source_id": "h1900_03",
+     "evidence_quote": "his more important contribution for First Amendment purposes was in ruling that if any offense had occurred, it had taken place in Indiana rather than in the nation’s capital and thus could only be prosecuted in Indiana"
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Case later called a guarantee of press freedom",
+     "statement": "A contemporary law journal described the Supreme Court's decision as \"a landmark, one of the substantial guarantees of the continued freedom of the press.\"",
+     "source_id": "h1900_02",
+     "evidence_quote": "a contemporary law journal described it as “a landmark, one of the substantial guarantees of the continued freedom of the press.”"
+    }
+   ],
+   "granularity": "anchor",
+   "type": "insult_and_defamation_laws",
+   "stage": "punish"
+  },
+  {
+   "slug": "1901-philippines-us-colonial-libel-act-el-renacimiento",
+   "title": "Philippines: United States colonial government's libel law is used to close the newspaper El Renacimiento",
+   "occurred_on": "1901",
+   "occurred_on_precision": "year",
+   "jurisdiction": "Philippine Islands, United States colonial government",
+   "country": "PH",
+   "continent": "Asia",
+   "level": "national",
+   "tactic_primary": "insult_and_defamation_laws",
+   "tactics": [
+    "insult_and_defamation_laws",
+    "lawsuits_against_press"
+   ],
+   "leader_slug": "william-howard-taft",
+   "summary": "The United States colonial government in the Philippines enacted a criminal libel law in 1901 that Governor-General William Howard Taft defended by saying Filipinos were unused to the freedom of the press. The law was used in 1908 to convict the editors and publisher of the pro-independence newspaper El Renacimiento over an editorial criticizing colonial officials, and the resulting fine forced the paper to close.",
+   "what_happened": "In 1901, the Philippine Commission, the American-appointed body governing the Philippine Islands, enacted Act No. 277, a law criminalizing libel, while the colonial government was led by future President William Howard Taft. Taft said the law was necessary because Filipinos were, in his words, a strange people unused to the freedom of the press. The law was later used against the pro-independence newspaper El Renacimiento, which in 1908 published an editorial describing an eagle as the most rapacious bird of prey and accusing unnamed colonial officials of having the characteristics of the vulture, the owl and the vampire. Although the editorial did not name him, Dean C. Worcester, the Secretary of the Interior, filed a libel suit that resulted in the conviction of the paper's editor Fidel Reyes, co-editor Teodoro M. Kalaw and publisher Martin Ocampo. Kalaw and Ocampo's appeals to the Philippine Supreme Court and the United States Supreme Court failed to overturn the conviction. Ocampo paid a fine of 100,000 pesos, which forced El Renacimiento and its sister paper Muling Pagsilang to stop publishing.",
+   "stated_justification": "Governor-General William Howard Taft said the libel law was necessary because Filipinos were a strange people unused to the freedom of the press.",
+   "effect_on_reporting": "The conviction and a 100,000 peso fine forced El Renacimiento and its sister paper Muling Pagsilang to stop publishing, ending the pro-independence paper's run.",
+   "issue_of_the_day": "El Renacimiento was a newspaper that supported Philippine independence during United States colonial rule, and its 1908 editorial criticizing unnamed colonial officials as birds of prey drew a libel suit from Secretary of the Interior Dean C. Worcester.",
+   "outcome": "upheld",
+   "outcome_on": "1914",
+   "outcome_note": "Kalaw and Ocampo's convictions were affirmed on appeal, and Governor-General Francis Burton Harrison pardoned Ocampo in 1914, after the fine had already forced the paper to close.",
+   "actors": [
+    "william-howard-taft",
+    "dean-c-worcester"
+   ],
+   "actor_roles": {
+    "william-howard-taft": "legislated",
+    "dean-c-worcester": "enforced"
+   },
+   "outlets": [
+    "el-renacimiento",
+    "muling-pagsilang"
+   ],
+   "sources": [
+    "h1900_04",
+    "h1900_05"
+   ],
+   "claims": [
+    {
+     "field": "action",
+     "value": "Philippine Commission enacts Act No. 277",
+     "statement": "The Philippine Commission enacted Act No. 277, a law criminalizing libel, which was later used against the nationalist press.",
+     "source_id": "h1900_04",
+     "evidence_quote": "Act No. 277 criminalizing libel passed the US’ Philippine Commission and was used to bully the nationalist press."
+    },
+    {
+     "field": "stated_justification",
+     "value": "Taft says Filipinos unused to press freedom",
+     "statement": "Governor-General William Howard Taft justified the libel law's passage by saying Filipinos were a strange people unused to the freedom of the press.",
+     "source_id": "h1900_04",
+     "evidence_quote": "Governor General William Howard Taft justified its passage by saying that Filipinos are “a strange people unused to the freedom of the press.”"
+    },
+    {
+     "field": "action",
+     "value": "El Renacimiento's 1908 editorial on colonial officials",
+     "statement": "El Renacimiento's 1908 editorial described colonial officials as birds of prey, comparing them to eagles, vultures, owls and vampires.",
+     "source_id": "h1900_04",
+     "evidence_quote": "El Renacimiento described “the eagle” as the “most rapacious” bird of prey, and criticized certain US colonial government officials “who, besides being eagles, have the characteristics of the vulture, the owl, and the vampire.”"
+    },
+    {
+     "field": "journalist_affected",
+     "value": "Worcester's suit convicts Reyes, Kalaw and Ocampo",
+     "statement": "Secretary of the Interior Dean C. Worcester filed the libel suit that led to the conviction of El Renacimiento's editor Fidel Reyes, co-editor Teodoro M. Kalaw and publisher Martin Ocampo.",
+     "source_id": "h1900_04",
+     "evidence_quote": "Although the paper did not name him, Worcester filed a libel suit which resulted in the conviction of Fidel Reyes, who wrote the editorial, his co-editor Teodoro M. Kalaw, and publisher Martin Ocampo."
+    },
+    {
+     "field": "status",
+     "value": "Conviction affirmed on appeal",
+     "statement": "Kalaw and Ocampo's appeals to the Philippine Supreme Court and the United States Supreme Court failed, and their conviction was affirmed in both courts.",
+     "source_id": "h1900_04",
+     "evidence_quote": "Kalaw and Ocampo appealed the decision before the Philippine Supreme Court and later, the US Supreme Court, but their conviction was affirmed in both."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Fine forces the paper to close",
+     "statement": "Ocampo's 100,000 peso fine crippled El Renacimiento and its sister paper Muling Pagsilang, and both stopped publishing.",
+     "source_id": "h1900_04",
+     "evidence_quote": "Ocampo had to pay the then huge amount of P100,000 in fines, which so crippled the paper and its sister newspaper Muling Pagsilang both ceased publication."
+    },
+    {
+     "field": "reversed_on",
+     "value": "Ocampo pardoned in 1914",
+     "statement": "Governor-General Francis Burton Harrison pardoned Ocampo in 1914, after the fine had already closed the paper.",
+     "source_id": "h1900_04",
+     "evidence_quote": "Although pardoned by then US Governor-General Francis Burton Harrison in 1914,"
+    },
+    {
+     "field": "announced_by",
+     "value": "Taft led the colonial government from 1900",
+     "statement": "The colonial government the United States established in the Philippines in 1900 was led by future President William Howard Taft.",
+     "source_id": "h1900_05",
+     "evidence_quote": "the colonial government that the United States established in the Philippines in 1900 under future President William Howard Taft launched a pacification campaign that became known as the “policy of attraction.”"
+    }
+   ],
+   "granularity": "anchor",
+   "type": "insult_and_defamation_laws",
+   "stage": "punish"
+  }
+ ],
+ "actors": [
+  {
+   "slug": "theodore-roosevelt",
+   "name": "Theodore Roosevelt",
+   "kind": "person",
+   "role_or_office": "President of the United States",
+   "country": "US"
+  },
+  {
+   "slug": "edward-douglass-white",
+   "name": "Edward Douglass White",
+   "kind": "person",
+   "role_or_office": "Chief Justice of the United States",
+   "country": "US"
+  },
+  {
+   "slug": "albert-b-anderson",
+   "name": "Albert Barnes Anderson",
+   "kind": "person",
+   "role_or_office": "Judge, United States District Court for the District of Indiana",
+   "country": "US"
+  },
+  {
+   "slug": "william-howard-taft",
+   "name": "William Howard Taft",
+   "kind": "person",
+   "role_or_office": "Governor-General of the Philippine Islands",
+   "country": "PH"
+  },
+  {
+   "slug": "dean-c-worcester",
+   "name": "Dean C. Worcester",
+   "kind": "person",
+   "role_or_office": "Secretary of the Interior, Philippine Islands",
+   "country": "PH"
+  }
+ ],
+ "outlets": [
+  {
+   "slug": "new-york-world",
+   "name": "The New York World",
+   "kind": "newspaper",
+   "country": "US"
+  },
+  {
+   "slug": "indianapolis-news",
+   "name": "The Indianapolis News",
+   "kind": "newspaper",
+   "country": "US"
+  },
+  {
+   "slug": "el-renacimiento",
+   "name": "El Renacimiento",
+   "kind": "newspaper",
+   "country": "PH"
+  },
+  {
+   "slug": "muling-pagsilang",
+   "name": "Muling Pagsilang",
+   "kind": "newspaper",
+   "country": "PH"
+  }
+ ],
+ "sources": [
+  {
+   "id": "h1900_01",
+   "url": "https://www.law.cornell.edu/supremecourt/text/219/1",
+   "title": "United States v. Press Publishing Co., 219 U.S. 1 (1911)",
+   "publisher": "Cornell Law School, Legal Information Institute",
+   "published_on": "1911-01-03",
+   "kind": "court_record",
+   "http_status": 200,
+   "link_state": "live",
+   "accessed_on": "2026-09-26"
+  },
+  {
+   "id": "h1900_02",
+   "url": "https://firstamendment.mtsu.edu/article/united-states-v-press-publishing-co/",
+   "title": "United States v. Press Publishing Co. (1911)",
+   "publisher": "The First Amendment Encyclopedia, Middle Tennessee State University",
+   "published_on": "2023-07-30",
+   "kind": "reference",
+   "http_status": 200,
+   "link_state": "live",
+   "accessed_on": "2026-09-26"
+  },
+  {
+   "id": "h1900_03",
+   "url": "https://firstamendment.mtsu.edu/article/united-states-v-smith/",
+   "title": "United States v. Smith (Ind.) (1909)",
+   "publisher": "The First Amendment Encyclopedia, Middle Tennessee State University",
+   "published_on": "2009-01-01",
+   "kind": "reference",
+   "http_status": 200,
+   "link_state": "live",
+   "accessed_on": "2026-09-26"
+  },
+  {
+   "id": "h1900_04",
+   "url": "https://cmfr-phil.org/inmediasres/luis-teodoro/a-relic-of-colonial-times-2/",
+   "title": "A relic of colonial rule",
+   "publisher": "Center for Media Freedom and Responsibility",
+   "published_on": "2014-02-24",
+   "kind": "reference",
+   "http_status": 200,
+   "link_state": "live",
+   "accessed_on": "2026-09-26"
+  },
+  {
+   "id": "h1900_05",
+   "url": "https://history.state.gov/milestones/1899-1913/war",
+   "title": "The Philippine-American War, 1899-1902",
+   "publisher": "U.S. Department of State, Office of the Historian",
+   "published_on": null,
+   "kind": "reference",
+   "http_status": 200,
+   "link_state": "live",
+   "accessed_on": "2026-09-26"
+  }
+ ]
+}

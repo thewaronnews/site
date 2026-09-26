@@ -581,7 +581,8 @@ export async function erasIndexHandler({ env }) {
     title: "Eras",
     metaDescription: "Government actions against journalists decade by decade since 1900: anchor incidents for each decade and region, and every well-sourced incident since 2020.",
     blocks: [
-      { k: "p", text: "The record runs from 1900 to today. Before 2020 it holds anchor incidents: well-documented cases that show what governments did in each decade and region. From 2020 it aims to hold every well-sourced incident." },
+      { k: "p", text: "The incident record runs from 1900 to today. Before 2020 it holds anchor incidents: well-documented cases that show what governments did in each decade and region. From 2020 it aims to hold every well-sourced incident." },
+      { k: "html", html: `<p>Earlier press controls, from licensing laws to sedition trials, are summarized in ${linkCell("/explainers/press-control-before-1900", "Before 1900").html}.</p>`, text: `Before 1900: ${SITE_ORIGIN}/explainers/press-control-before-1900` },
       { k: "table", headers: ["Decade", "Incidents", "Countries"], rows: rows.map((r) => [r.count ? linkCell(`/eras/${r.decade}`, r.decade) : r.decade, String(r.count), String(r.countries)]) },
     ],
     data: { eras: rows.map((r) => ({ ...r, url: `${SITE_ORIGIN}/eras/${r.decade}` })), license: LICENSE },

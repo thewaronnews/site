@@ -1,0 +1,392 @@
+{
+ "incidents": [
+  {
+   "slug": "1925-us-supreme-court-upholds-gitlow-anarchy-conviction",
+   "title": "United States: Supreme Court upholds Benjamin Gitlow's conviction under New York's Criminal Anarchy Law, 1925",
+   "occurred_on": "1925-06-08",
+   "occurred_on_precision": "day",
+   "jurisdiction": "New York, United States",
+   "country": "US",
+   "continent": "North America",
+   "level": "state_or_province",
+   "type": "secrets_and_espionage_laws",
+   "tactic_primary": "secrets_and_espionage_laws",
+   "tactics": [
+    "secrets_and_espionage_laws",
+    "detention_and_violence"
+   ],
+   "leader_slug": "al-smith",
+   "summary": "The United States Supreme Court voted seven to two on June 8, 1925 to uphold the conviction of socialist publisher Benjamin Gitlow, who had been tried and sentenced to prison under New York's 1902 Criminal Anarchy Law for distributing 16,000 copies of the Left Wing Manifesto. The Court also held for the first time that the Fourteenth Amendment's due process clause extends free speech and press protections to state governments.",
+   "what_happened": "Benjamin Gitlow, a socialist leader, was tried, convicted and sentenced to imprisonment under New York's Criminal Anarchy Law of 1902 after publishing 16,000 copies of the Left Wing Manifesto in the newspaper The Revolutionary Age, which he managed as business manager. New York's courts affirmed his conviction, and Gitlow appealed to the United States Supreme Court, arguing that the state law violated his rights to free speech and a free press. On June 8, 1925, the Supreme Court voted seven to two to uphold the constitutionality of New York's Criminal Anarchy Statute and to sustain Gitlow's conviction under it. The majority held that the statute was not an arbitrary or unreasonable exercise of the state's police power and did not unwarrantably infringe the freedom of speech or of the press. At the same time, the Court held that the Fourteenth Amendment's due process clause protects free speech and free press as fundamental personal liberties against actions by state governments, extending constitutional free speech protection beyond the federal government for the first time. Fears of radical activity during the Red Scare that followed the First World War had led New York and other states to adopt such restrictions on speech and publishing.",
+   "stated_justification": "The Supreme Court found that New York's Criminal Anarchy Law, which prohibited advocating the violent overthrow of the government, was a valid exercise of the state's power to protect public order and was not an arbitrary or unreasonable restriction on speech or the press.",
+   "effect_on_reporting": "Gitlow's conviction and prison sentence stood, and states gained confirmed authority to prosecute publishers for circulating writing that advocated the violent overthrow of government.",
+   "issue_of_the_day": "Fears of growing socialist and union activity during the Red Scare that followed the First World War led Congress and state legislatures, including New York's, to adopt new restrictions on radical speech and publishing.",
+   "outcome": "upheld",
+   "outcome_on": "1925-06-08",
+   "outcome_note": "The Supreme Court's decision upheld Gitlow's conviction and New York's Criminal Anarchy Law while establishing that free speech and press protections apply to state governments through the Fourteenth Amendment.",
+   "actors": [
+    "al-smith",
+    "benjamin-gitlow"
+   ],
+   "actor_roles": {
+    "benjamin-gitlow": "other",
+    "al-smith": "other"
+   },
+   "outlets": [
+    "the-revolutionary-age"
+   ],
+   "sources": [
+    "h1920_01",
+    "h1920_02"
+   ],
+   "claims": [
+    {
+     "field": "action",
+     "value": "Gitlow tried, convicted and sentenced to imprisonment",
+     "statement": "Benjamin Gitlow was tried, convicted and sentenced to imprisonment for criminal anarchy.",
+     "source_id": "h1920_01",
+     "evidence_quote": "He was separately tried, convicted, and sentenced to imprisonment."
+    },
+    {
+     "field": "action",
+     "value": "Convicted for publishing 16,000 copies of the Left Wing Manifesto",
+     "statement": "Benjamin Gitlow, a socialist leader, was convicted under New York's criminal anarchy law for publishing 16,000 copies of the Left Wing Manifesto.",
+     "source_id": "h1920_02",
+     "evidence_quote": "Benjamin Gitlow, a socialist leader, was convicted under New York’s criminal anarchy law for publishing 16,000 copies of the Left-Wing Manifesto"
+    },
+    {
+     "field": "stated_justification",
+     "value": "Supreme Court upheld the 1902 Criminal Anarchy Statute 7-2",
+     "statement": "The Supreme Court voted seven to two to uphold the constitutionality of New York's 1902 Criminal Anarchy Statute, which prohibited advocating the violent overthrow of the government.",
+     "source_id": "h1920_02",
+     "evidence_quote": "the Supreme Court voted 7-2 to uphold the constitutionality of New York’s Criminal Anarchy Statute of 1902 , which prohibited advocating violent overthrow of the government."
+    },
+    {
+     "field": "status",
+     "value": "Statute not an unreasonable exercise of police power",
+     "statement": "The Court held that the statute was not an arbitrary or unreasonable exercise of the state's police power and sustained its constitutionality.",
+     "source_id": "h1920_01",
+     "evidence_quote": "We cannot hold that the present statute is an arbitrary or unreasonable exercise of the police power of the State unwarrantably infringing the freedom of speech or press; and we must and do sustain its constitutionality."
+    },
+    {
+     "field": "status",
+     "value": "Free speech and press treated as protected liberties",
+     "statement": "The Court identified free speech and press as fundamental personal liberties protected by the Fourteenth Amendment's due process clause from impairment by the states.",
+     "source_id": "h1920_02",
+     "evidence_quote": "among the fundamental personal rights and ‘liberties’ protected by the due process clause of the Fourteenth Amendment from impairment by the States."
+    },
+    {
+     "field": "occurred_on",
+     "value": "Decided June 8, 1925",
+     "statement": "The Supreme Court decided the case on June 8, 1925.",
+     "source_id": "h1920_01",
+     "evidence_quote": "Decided June 8, 1925."
+    },
+    {
+     "field": "scope_of_action",
+     "value": "Red Scare prompted new speech restrictions",
+     "statement": "Fears of growing socialist and union activity during the Red Scare prompted Congress and states to adopt restrictions on speech and the press.",
+     "source_id": "h1920_02",
+     "evidence_quote": "Fears of growing socialist and union activities during the red scare prompted Congress and states to adopt restrictions on speech and press."
+    }
+   ],
+   "granularity": "anchor",
+   "stage": "punish"
+  },
+  {
+   "slug": "1926-uk-general-strike-newsprint-requisition",
+   "title": "United Kingdom: Government requisitions newsprint and restricts rival newspapers during the 1926 General Strike",
+   "occurred_on": "1926-05",
+   "occurred_on_precision": "month",
+   "jurisdiction": "United Kingdom, national",
+   "country": "GB",
+   "continent": "Europe",
+   "level": "national",
+   "type": "funding_and_ownership_pressure",
+   "tactic_primary": "funding_and_ownership_pressure",
+   "tactics": [
+    "funding_and_ownership_pressure",
+    "shutdowns_and_blocking"
+   ],
+   "leader_slug": "stanley-baldwin",
+   "summary": "During the general strike called by the Trades Union Congress in May 1926, the British government requisitioned the country's available newsprint for its own newspaper, the British Gazette, and placed a provisional embargo on paper supplies to the Trades Union Congress's British Worker and many other newspapers. Chancellor of the Exchequer Winston Churchill defended the measures in the House of Commons as necessary to keep the government's own newspaper in production.",
+   "what_happened": "When the Trades Union Congress called a general strike in early May 1926 in support of coal miners in a dispute with mine owners, most national newspapers stopped printing normally, and the government began publishing its own paper, the British Gazette, through His Majesty's Stationery Office, with its costs charged to the Treasury. Chancellor of the Exchequer Winston Churchill told the House of Commons on May 10, 1926 that it had become necessary to requisition provisionally all the newsprint suited to the presses used for the British Gazette. He said a provisional embargo had also been placed on newsprint for the Trades Union Congress's British Worker, as well as on paper reserves of many other newspapers, including a large number in London. Members of Parliament pressed Churchill on whether the government was acting impartially between the parties to the dispute and why certain statements had not been published in the government's paper. Churchill remarked that it was a pity that all the other newspapers had been suppressed by the disruption, while defending the newsprint controls as necessary to sustain the one paper the government considered able to keep the public informed.",
+   "stated_justification": "The government said the newsprint controls were needed to keep the British Gazette, the paper it considered the only means of spreading authoritative information on a large scale, in continuous production, and that the British Gazette's cost would be borne on the Treasury Vote as an official publication of His Majesty's Stationery Office.",
+   "effect_on_reporting": "The Trades Union Congress's British Worker and many other newspapers had their newsprint supplies embargoed, while the government's own paper had newsprint requisitioned in its favor.",
+   "issue_of_the_day": "Britain was in the midst of a general strike called by the Trades Union Congress in May 1926 in support of coal miners in a dispute with mine owners, during which most independent newspapers could not print normally.",
+   "outcome": "ongoing",
+   "outcome_on": "1926-05-10",
+   "outcome_note": "As of the exchanges recorded in Parliament on May 10, 1926, the newsprint embargo on rival newspapers remained in place while the government's own paper continued publishing with requisitioned supplies.",
+   "actors": [
+    "stanley-baldwin",
+    "winston-churchill",
+    "william-joynson-hicks"
+   ],
+   "actor_roles": {
+    "stanley-baldwin": "other",
+    "winston-churchill": "defended",
+    "william-joynson-hicks": "announced"
+   },
+   "outlets": [
+    "british-worker",
+    "british-gazette"
+   ],
+   "sources": [
+    "h1920_05",
+    "h1920_06"
+   ],
+   "claims": [
+    {
+     "field": "action",
+     "value": "Newsprint requisitioned for the government's paper",
+     "statement": "Chancellor of the Exchequer Winston Churchill said it had become necessary to requisition provisionally all the newsprint adapted to the presses used for the government's newspaper.",
+     "source_id": "h1920_05",
+     "evidence_quote": "It has become necessary to requisition provisionally all the news print available which is adapted to the presses employed by the Government newspaper."
+    },
+    {
+     "field": "outlet_affected",
+     "value": "British Worker's newsprint embargoed",
+     "statement": "Churchill said a provisional embargo had been placed on newsprint for the Trades Union Congress's British Worker.",
+     "source_id": "h1920_05",
+     "evidence_quote": "As far as paper is concerned, a provisional embargo has been placed upon that newspaper as well as"
+    },
+    {
+     "field": "scope_of_action",
+     "value": "Embargo extended to many other newspapers",
+     "statement": "The newsprint embargo also covered the paper reserves of many other newspapers, including a large number in London.",
+     "source_id": "h1920_05",
+     "evidence_quote": "upon the paper reserves of many other suitable newspapers, including a very great number of newspapers in London."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Churchill remarked other newspapers had been suppressed",
+     "statement": "Churchill remarked to the House of Commons that it was a pity that all the other newspapers had been suppressed by the strike.",
+     "source_id": "h1920_05",
+     "evidence_quote": "what a pity it is that all the other newspapers have been suppressed!"
+    },
+    {
+     "field": "announced_by",
+     "value": "Home Secretary confirmed government responsibility for the British Gazette",
+     "statement": "The Home Secretary confirmed that the British Gazette was published by His Majesty's Stationery Office and that its cost would be borne on the Treasury Vote.",
+     "source_id": "h1920_06",
+     "evidence_quote": "as the paper is being published by His Majesty's Stationery Office, the cost of the publication will be borne on the Treasury Vote."
+    },
+    {
+     "field": "scope_of_action",
+     "value": "Strike arose from a miners' dispute",
+     "statement": "Churchill said impartiality would be observed as between employers and employed, mine owners or miners, in connection with the newsprint controls.",
+     "source_id": "h1920_05",
+     "evidence_quote": "Impartiality will be observed as between employers and employed, mine owners or miners"
+    }
+   ],
+   "granularity": "anchor",
+   "stage": "pressure"
+  },
+  {
+   "slug": "1926-dutch-east-indies-mawa-article-153bis",
+   "title": "Dutch East Indies: Colonial authorities end publication of the communist newspaper Mawa under Penal Code Article 153 bis, 1926",
+   "occurred_on": "1926",
+   "occurred_on_precision": "year",
+   "jurisdiction": "Dutch East Indies (Indonesia), colonial",
+   "country": "ID",
+   "continent": "Asia",
+   "level": "national",
+   "type": "outlet_licensing",
+   "tactic_primary": "outlet_licensing",
+   "tactics": [
+    "outlet_licensing",
+    "secrets_and_espionage_laws"
+   ],
+   "leader_slug": "andries-de-graeff",
+   "summary": "In 1926, colonial authorities in the Dutch East Indies ended publication of Mawa, a newspaper linked to the Communist Association of the Indies in Soerakarta, through repeated use of Article 153 bis of the colonial Penal Code, which criminalized advocating the overthrow of the government. The action came in the same year that a new Governor-General took office and colonial authorities put down a communist uprising in Batavia and the Banten region.",
+   "what_happened": "Mawa, a newspaper that served as the voice of the Communist Association of the Indies (Perhimpoenan Komunis di Indie, PKI) in the city of Soerakarta on Java, ceased publication in 1926, only a year after it began, after colonial prosecutors repeatedly applied Article 153 bis of the Netherlands Indies Penal Code against it. That article, together with related article 153 ter, restricted any movement and discourse that colonial authorities judged might cause public insecurity. Andries Cornelis Dirk de Graeff took office as Governor-General of the Dutch East Indies on March 26, 1926. In November of that year, members of the PKI revolted in the streets of the colonial capital, Batavia, and in the Banten residency of western Java, an uprising that colonial authorities put down. Following the revolt, restrictions on the press and on political activity increased across the colony, continuing a pattern in which colonial authorities used the Penal Code's provisions against subversive speech to end the publication of newspapers linked to the communist movement.",
+   "stated_justification": "Colonial authorities acted under Article 153 bis and ter of the Penal Code, provisions that restricted any movement and discourse judged likely to cause public insecurity.",
+   "effect_on_reporting": "Mawa stopped publishing after only a year, and government restrictions on the press and on political activity increased in the colony following the failed communist uprising later that year.",
+   "issue_of_the_day": "Communist organizing was spreading among Indonesian workers' movements in the mid-1920s, and in November 1926 members of the Communist Party of the Indies rose up in Batavia and the Banten region, an uprising that colonial authorities put down.",
+   "outcome": "sustained",
+   "outcome_on": "1926",
+   "outcome_note": "Mawa did not resume publishing, and the colonial government's restrictions on communist-linked newspapers continued after the 1926 uprising.",
+   "actors": [
+    "andries-de-graeff"
+   ],
+   "actor_roles": {
+    "andries-de-graeff": "enforced"
+   },
+   "outlets": [
+    "mawa"
+   ],
+   "sources": [
+    "h1920_07",
+    "h1920_08"
+   ],
+   "claims": [
+    {
+     "field": "action",
+     "value": "Mawa ceased publication in 1926 under Article 153 bis",
+     "statement": "In 1926, due to repeated application of Article 153 bis of the Penal Code, the communist-linked newspaper Mawa ceased publication only a year after its first issue.",
+     "source_id": "h1920_07",
+     "evidence_quote": "in 1926, due to a series of application of Article 153 bis of the Penal Code, the voice of Soerakarta’s Communist Association of the Indies (Perhimpoean Komunis di India, PKI), Mawa, ceased publication, only one year after its inaugural issue."
+    },
+    {
+     "field": "stated_justification",
+     "value": "Article 153 bis and ter restricted threatening discourse",
+     "statement": "Article 153 bis and ter of the Penal Code restricted any movement and discourse that colonial authorities judged might cause public insecurity.",
+     "source_id": "h1920_07",
+     "evidence_quote": "153 bis and ter restricted any movement and discourse that might cause public insecurity."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Press restrictions increased after the 1926 uprising",
+     "statement": "Government restrictions on the press and on political activity increased in the colony following the failed 1926 uprising.",
+     "source_id": "h1920_08",
+     "evidence_quote": "Press censorship increased, as did political oppression."
+    },
+    {
+     "field": "scope_of_action",
+     "value": "PKI members revolted in Batavia and Banten in November 1926",
+     "statement": "In November 1926, members of the Communist Party of the Indies revolted in the streets of Batavia and in the Banten residency.",
+     "source_id": "h1920_08",
+     "evidence_quote": "In November 1926, members of the Communist Party (Partai Kommunis Indonesia, PKI) revolted in the streets of Batavia and in the Banten residency."
+    },
+    {
+     "field": "announced_by",
+     "value": "De Graeff became Governor-General on March 26, 1926",
+     "statement": "Andries Cornelis Dirk de Graeff took office as Governor-General of the Dutch East Indies in Batavia on March 26, 1926.",
+     "source_id": "h1920_07",
+     "evidence_quote": "the new Governor-General, Andries Cornelis Dirk de Graeff, assumed his office in Batavia on March 26, 1926."
+    }
+   ],
+   "granularity": "anchor",
+   "stage": "silence"
+  }
+ ],
+ "actors": [
+  {
+   "slug": "benjamin-gitlow",
+   "name": "Benjamin Gitlow",
+   "kind": "person",
+   "role_or_office": "Socialist leader and newspaper business manager",
+   "country": "US"
+  },
+  {
+   "slug": "andries-de-graeff",
+   "name": "Andries Cornelis Dirk de Graeff",
+   "kind": "person",
+   "role_or_office": "Governor-General of the Dutch East Indies",
+   "country": "ID",
+   "role_claim": {
+    "source_id": "h1920_07",
+    "evidence_quote": "the new Governor-General, Andries Cornelis Dirk de Graeff, assumed his office in Batavia on March 26, 1926.",
+    "statement": "De Graeff assumed office as Governor-General of the Dutch East Indies on March 26, 1926."
+   }
+  },
+  {
+   "slug": "stanley-baldwin",
+   "name": "Stanley Baldwin",
+   "kind": "person",
+   "role_or_office": "Prime Minister of the United Kingdom",
+   "country": "GB",
+   "role_claim": {
+    "source_id": "h1920_05",
+    "evidence_quote": "The PRIME MINISTER (Mr. Baldwin)",
+    "statement": "Baldwin is identified in Hansard as the Prime Minister."
+   }
+  },
+  {
+   "slug": "winston-churchill",
+   "name": "Winston Churchill",
+   "kind": "person",
+   "role_or_office": "Chancellor of the Exchequer",
+   "country": "GB",
+   "role_claim": {
+    "source_id": "h1920_05",
+    "evidence_quote": "The CHANCELLOR of the EXCHEQUER (Mr. Churchill)",
+    "statement": "Churchill is identified in Hansard as the Chancellor of the Exchequer."
+   }
+  },
+  {
+   "slug": "william-joynson-hicks",
+   "name": "Sir William Joynson-Hicks",
+   "kind": "person",
+   "role_or_office": "Home Secretary",
+   "country": "GB"
+  },
+  {
+   "slug": "al-smith",
+   "name": "Alfred E. Smith",
+   "kind": "person",
+   "role_or_office": "Governor of New York",
+   "country": "US"
+  }
+ ],
+ "outlets": [
+  {
+   "slug": "the-revolutionary-age",
+   "name": "The Revolutionary Age",
+   "kind": "newspaper",
+   "country": "US"
+  },
+  {
+   "slug": "british-worker",
+   "name": "The British Worker",
+   "kind": "newspaper",
+   "country": "GB"
+  },
+  {
+   "slug": "british-gazette",
+   "name": "The British Gazette",
+   "kind": "newspaper",
+   "country": "GB"
+  },
+  {
+   "slug": "mawa",
+   "name": "Mawa",
+   "kind": "newspaper",
+   "country": "ID"
+  }
+ ],
+ "sources": [
+  {
+   "id": "h1920_01",
+   "kind": "court_record",
+   "published_on": "1925-06-08",
+   "title": "Gitlow v. New York, 268 U.S. 652 (1925)",
+   "url": "https://www.law.cornell.edu/supremecourt/text/268/652"
+  },
+  {
+   "id": "h1920_02",
+   "kind": "reference",
+   "published_on": "2009-01-01",
+   "title": "Gitlow v. New York (1925), The First Amendment Encyclopedia",
+   "url": "https://firstamendment.mtsu.edu/article/gitlow-v-new-york/"
+  },
+  {
+   "id": "h1920_05",
+   "kind": "primary_document",
+   "published_on": "1926-05-10",
+   "title": "News Print (Hansard, 10 May 1926)",
+   "url": "https://api.parliament.uk/historic-hansard/commons/1926/may/10/news-print"
+  },
+  {
+   "id": "h1920_06",
+   "kind": "primary_document",
+   "published_on": "1926-05-05",
+   "title": "\"British Gazette.\" (Hansard, 5 May 1926)",
+   "url": "https://api.parliament.uk/historic-hansard/commons/1926/may/05/british-gazette"
+  },
+  {
+   "id": "h1920_07",
+   "kind": "reference",
+   "published_on": "2011",
+   "title": "Nobuto Yamamoto, Print Power and Censorship in Colonial Indonesia, 1914-1942 (Cornell University dissertation)",
+   "url": "https://ecommons.cornell.edu/server/api/core/bitstreams/fe4bfdb2-a196-4b98-9706-23bf333c79f9/content"
+  },
+  {
+   "id": "h1920_08",
+   "kind": "reference",
+   "published_on": "2020",
+   "title": "Arnout van der Meer, Performing Power: Cultural Hegemony, Identity, and Resistance in Colonial Indonesia (Cornell University Press)",
+   "url": "https://ecommons.cornell.edu/server/api/core/bitstreams/5ed47411-365e-42d9-bad4-7078124982e3/content"
+  }
+ ]
+}

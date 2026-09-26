@@ -1,0 +1,440 @@
+{
+ "incidents": [
+  {
+   "slug": "1918-us-espionage-act-conviction-of-editor-frohwerk",
+   "title": "United States convicts newspaper editor Jacob Frohwerk under the Espionage Act, June 1918",
+   "occurred_on": "1918-06-26",
+   "occurred_on_precision": "day",
+   "jurisdiction": "United States, federal",
+   "country": "US",
+   "continent": "North America",
+   "level": "national",
+   "type": "secrets_and_espionage_laws",
+   "tactic_primary": "secrets_and_espionage_laws",
+   "tactics": [
+    "secrets_and_espionage_laws",
+    "detention_and_violence"
+   ],
+   "leader_slug": "woodrow-wilson",
+   "summary": "Jacob Frohwerk, an associate editor of the German language newspaper the Missouri Staats-Zeitung, was tried and convicted in June 1918 under the Espionage Act of 1917 for publishing articles opposing American participation in the First World War, and was sentenced to ten years in prison on each of twelve counts, to run concurrently. The Supreme Court of the United States upheld the conviction on March 10, 1919.",
+   "what_happened": "Jacob Frohwerk was indicted for conspiring with Carl Gleeser to violate the Espionage Act of June 15, 1917, while the two were preparing and publishing the Missouri Staats-Zeitung, a German language newspaper based in Kansas City. Twelve articles that ran in the paper between July 6 and December 7, 1917, argued against sending American soldiers to France and criticized the military draft. A federal jury convicted Frohwerk on all but one count, and the trial court sentenced him to a fine and to ten years in prison on each remaining count, the later terms to run concurrently with the first. Frohwerk appealed to the Supreme Court of the United States, arguing the prosecution violated his First Amendment right to free speech. Justice Oliver Wendell Holmes, writing for the Court, ruled on March 10, 1919, that criticizing the war was not automatically protected once it was joined to a conspiracy to obstruct military recruiting, and affirmed the conviction and sentence.",
+   "stated_justification": "Prosecutors charged that the twelve articles amounted to attempts to cause disloyalty, mutiny and refusal of duty in the military and naval forces of the United States, in violation of the Espionage Act.",
+   "effect_on_reporting": "The ruling meant an editor of a small circulation foreign language newspaper could be convicted and imprisoned for articles critical of the war, extending the standard the Court had set the same term in Schenck v. United States.",
+   "issue_of_the_day": "The United States had entered the First World War in April 1917 and introduced a national draft, and federal prosecutors brought Espionage Act cases against numerous newspapers and speakers who opposed the war effort.",
+   "outcome": "upheld",
+   "outcome_on": "1919-03-10",
+   "outcome_note": "The Supreme Court's ruling left Frohwerk's conviction and ten year sentence in place.",
+   "actors": [
+    "woodrow-wilson"
+   ],
+   "actor_roles": {
+    "woodrow-wilson": "other"
+   },
+   "outlets": [
+    "missouri-staats-zeitung"
+   ],
+   "sources": [
+    "h1910_01",
+    "h1910_02"
+   ],
+   "claims": [
+    {
+     "field": "status",
+     "value": "Supreme Court argued Jan. 27, 1919, decided March 10, 1919",
+     "statement": "The Supreme Court of the United States heard Frohwerk's appeal on January 27, 1919, and affirmed his conviction on March 10, 1919.",
+     "source_id": "h1910_01",
+     "evidence_quote": "No. 685. Argued Jan. 27, 1919. Decided March 10, 1919."
+    },
+    {
+     "field": "occurred_on",
+     "value": "Trial began June 26, 1918",
+     "statement": "Frohwerk's trial on the Espionage Act indictment began on June 26, 1918, after the District Court overruled his demurrer to the indictment.",
+     "source_id": "h1910_01",
+     "evidence_quote": "The demurrer was overruled on June 24, and on the following day the plea of not guilty was ordered to be entered, a continuance was refused, a jury was empannelled and the trial set to begin the next morning."
+    },
+    {
+     "field": "action",
+     "value": "Indictment charged conspiracy over Missouri Staats-Zeitung articles",
+     "statement": "The indictment alleged a conspiracy between Frohwerk and Carl Gleeser, publishers of the Missouri Staats Zeitung, to violate the Espionage Act of June 15, 1917.",
+     "source_id": "h1910_01",
+     "evidence_quote": "a conspiracy between the plaintiff in error and one Carl Gleeser, they then being engaged in the preparation and publication of a newspaper, the Missouri Staats Zeitung, to violate the Espionage Act of June 15, 1917"
+    },
+    {
+     "field": "stated_justification",
+     "value": "Charged with attempting to cause disloyalty",
+     "statement": "Additional counts of the indictment charged that the newspaper's articles amounted to attempts to cause disloyalty, mutiny and refusal of duty in the armed forces.",
+     "source_id": "h1910_01",
+     "evidence_quote": "The other counts allege attempts to cause disloyalty, mutiny and refusal of duty in the military and naval forces of the United States, by the same publications, each count being confined to the publication of a single date."
+    },
+    {
+     "field": "journalist_affected",
+     "value": "Convicted on all but one count, sentenced to ten years",
+     "statement": "A jury convicted Frohwerk on all but one count, and the trial court sentenced him to a fine and ten years' imprisonment on each remaining count.",
+     "source_id": "h1910_01",
+     "evidence_quote": "Frohwerk was found guilty on all the counts except the seventh, which needs no further mention. He was sentenced to a fine and to ten years imprisonment on each count, the imprisonment on the later counts to run concurrently with that on the first."
+    },
+    {
+     "field": "outlet_affected",
+     "value": "Convicted for articles in the Missouri Staats Zeitung",
+     "statement": "Frohwerk was convicted of conspiring to violate the Espionage Act of 1917 through articles he wrote for the Missouri newspaper Staats Zeitung opposing American involvement in the war.",
+     "source_id": "h1910_02",
+     "evidence_quote": "Jacob Frohwerk was convicted of conspiring to violate provisions of the Espionage Act of 1917 by writing articles published in the Missouri newspaper Staats Zeitung opposing U.S. involvement in World War I."
+    }
+   ],
+   "granularity": "anchor",
+   "stage": "punish"
+  },
+  {
+   "slug": "1917-us-mother-earth-editor-emma-goldman-convicted-magazine-barred-from-mail",
+   "title": "United States convicts Mother Earth editor Emma Goldman of draft conspiracy and bars her magazine from the mail",
+   "occurred_on": "1917",
+   "occurred_on_precision": "year",
+   "jurisdiction": "United States, federal",
+   "country": "US",
+   "continent": "North America",
+   "level": "national",
+   "type": "detention_and_violence",
+   "tactic_primary": "detention_and_violence",
+   "tactics": [
+    "detention_and_violence",
+    "shutdowns_and_blocking",
+    "expulsion_and_visa_denial"
+   ],
+   "leader_slug": "woodrow-wilson",
+   "summary": "Emma Goldman, editor of the anarchist magazine Mother Earth, was convicted with fellow anarchist Alexander Berkman of conspiring against the newly enacted Selective Draft Law and received the maximum two year sentence and a ten thousand dollar fine. Postal authorities then withdrew Mother Earth's second class mailing privileges, and Goldman was deported from the United States in 1919.",
+   "what_happened": "Emma Goldman had edited and contributed to Mother Earth, an anarchist magazine published in New York since 1906. After Congress enacted the Selective Draft Law on May 18, 1917, requiring men to register for military conscription, Goldman and fellow anarchist Alexander Berkman were arrested in New York within weeks on charges of conspiring to induce men to refuse to register. A jury convicted both, and the trial court imposed the maximum sentence available under the conspiracy statute: two years in prison and a ten thousand dollar fine. The Supreme Court of the United States, hearing the case as Goldman v. United States, affirmed the conviction on January 14, 1918, rejecting arguments that there had been no evidence of guilt to submit to the jury. After Goldman's conviction, postal authorities denied Mother Earth its second class mailing privileges, cutting off the inexpensive postal rate the magazine needed to reach subscribers nationwide, and the magazine was suppressed. Goldman served her sentence, and in December 1919 she was deported from the United States.",
+   "stated_justification": "The government charged that Goldman and Berkman conspired to induce men liable for the draft under the Selective Draft Law of May 18, 1917, to disobey the law by failing to register.",
+   "effect_on_reporting": "Mother Earth, the magazine Goldman edited, was suppressed after the Post Office withdrew its second class mailing privileges following her conviction.",
+   "issue_of_the_day": "The United States had entered the First World War in April 1917 and introduced a national draft that spring, and federal authorities moved against anarchists, socialists and other war opponents under new wartime laws.",
+   "outcome": "upheld",
+   "outcome_on": "1918-01-14",
+   "outcome_note": "Goldman's conviction stood, and she was deported from the United States in 1919.",
+   "actors": [
+    "woodrow-wilson"
+   ],
+   "actor_roles": {
+    "woodrow-wilson": "other"
+   },
+   "outlets": [
+    "mother-earth"
+   ],
+   "sources": [
+    "h1910_03",
+    "h1910_04"
+   ],
+   "claims": [
+    {
+     "field": "outlet_affected",
+     "value": "Goldman edited Mother Earth, suppressed in 1917",
+     "statement": "Goldman was at times an editor and contributor to Mother Earth, an anarchist magazine published from 1906 until it was suppressed in 1917.",
+     "source_id": "h1910_03",
+     "evidence_quote": "Goldman was at times an editor and a contributor to Mother Earth, an anarchist publication active from 1906 until it was suppressed in 1917 under the Espionage Act"
+    },
+    {
+     "field": "action",
+     "value": "Arrested and convicted with Berkman, maximum sentence",
+     "statement": "Goldman was arrested with Alexander Berkman within weeks of the Selective Draft Law's enactment, and both were convicted of conspiracy against the draft and given the maximum two year sentence and a $10,000 fine.",
+     "source_id": "h1910_03",
+     "evidence_quote": "Arrested, along with fellow anarchist Alexander Berkman in New York less than a month after the enactment of the act, the two were found guilty of conspiracy against the draft and received the maximum two-year sentence and a $10,000 fine."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Mother Earth denied second-class mailing privileges",
+     "statement": "After Goldman's conviction, the postal authorities denied Mother Earth its second class mailing privileges.",
+     "source_id": "h1910_03",
+     "evidence_quote": "After she was convicted, the postal authorities denied Mother Earth second-class mailing privileges"
+    },
+    {
+     "field": "status",
+     "value": "Deported in 1919",
+     "statement": "Goldman was deported from the United States in 1919.",
+     "source_id": "h1910_03",
+     "evidence_quote": "Emma Goldman was deported in 1919 and moved to Great Britain in 1921."
+    },
+    {
+     "field": "occurred_on",
+     "value": "Supreme Court argued Dec. 13-14 1917, decided Jan. 14, 1918",
+     "statement": "The Supreme Court of the United States heard Goldman's appeal on December 13 and 14, 1917, and decided the case on January 14, 1918.",
+     "source_id": "h1910_04",
+     "evidence_quote": "No. 702. Argued Dec. 13, 14, 1917. Decided Jan. 14, 1918."
+    },
+    {
+     "field": "scope_of_action",
+     "value": "Charged with conspiring to induce men not to register",
+     "statement": "The indictment charged that Goldman and her co-defendants conspired to induce persons required to register under the Selective Draft Law of May 18, 1917, to disobey the law.",
+     "source_id": "h1910_04",
+     "evidence_quote": "unlawfully conspired together and with others unknown to induce persons who by the Selective Draft Law of May 18, 1917"
+    }
+   ],
+   "granularity": "anchor",
+   "stage": "punish"
+  },
+  {
+   "slug": "1914-britain-press-bureau-controls-wartime-newspaper-coverage",
+   "title": "Britain's Official Press Bureau controls newspaper coverage of the First World War",
+   "occurred_on": "1914-08-27",
+   "occurred_on_precision": "day",
+   "jurisdiction": "United Kingdom, national",
+   "country": "GB",
+   "continent": "Europe",
+   "level": "national",
+   "type": "prior_restraint",
+   "tactic_primary": "prior_restraint",
+   "tactics": [
+    "prior_restraint",
+    "secrets_and_espionage_laws"
+   ],
+   "leader_slug": "herbert-asquith",
+   "summary": "Weeks after Britain entered the First World War, Prime Minister Herbert Asquith told the House of Commons that the Official Press Bureau was the sole channel through which the Admiralty, the War Office and other departments released naval and military information to newspapers. Members of Parliament later complained in the Commons that the Bureau delayed and withheld war news from the public.",
+   "what_happened": "The First World War began for Britain on August 4, 1914, and within weeks the government set up the Official Press Bureau to control the release of naval and military information to the press. On August 27, 1914, Prime Minister Herbert Asquith told the House of Commons that the Bureau was the mouthpiece through which the Admiralty, the War Office and other public departments made war news public, and that the government had considered but decided against adding trained journalists directly to the Bureau's own staff, associating them instead with the cable censors. On November 12, 1914, member of Parliament Sir William Bull moved an amendment to the Address in reply to the King's Speech, telling the Commons that \"the Press censorship started badly\" and that officials had delayed and withheld accounts of events at the front for hours or days at a time. The Bureau remained the government's central channel for war news, and members of Parliament continued pressing ministers about delays in releasing information to newspapers.",
+   "stated_justification": "The government said that all information that could be given without prejudice to the public interest would be given fully and promptly, but that naval and military considerations required screening war news before its release.",
+   "effect_on_reporting": "Newspapers depended on the Press Bureau for authorized war news, and journalists were associated with the Bureau's cable censors rather than given independent access to military information.",
+   "issue_of_the_day": "Britain had just entered the First World War, and the government sought to prevent newspapers from publishing information that might aid German forces or reveal the movements of British troops.",
+   "outcome": "sustained",
+   "outcome_on": "1914-11-12",
+   "outcome_note": "The Press Bureau continued controlling war news months later, when members of Parliament again raised complaints in the House of Commons on November 12, 1914.",
+   "actors": [
+    "herbert-asquith"
+   ],
+   "actor_roles": {
+    "herbert-asquith": "announced"
+   },
+   "outlets": [],
+   "sources": [
+    "h1910_05",
+    "h1910_06"
+   ],
+   "claims": [
+    {
+     "field": "occurred_on",
+     "value": "Commons debate August 27, 1914",
+     "statement": "Prime Minister Asquith described the Press Bureau's role to the House of Commons on August 27, 1914.",
+     "source_id": "h1910_05",
+     "evidence_quote": "HC Deb 27 August 1914 vol 66 cc150-2"
+    },
+    {
+     "field": "action",
+     "value": "Bureau was sole mouthpiece for war information",
+     "statement": "Asquith said the Official Press Bureau was the sole channel through which the Admiralty, War Office and other departments made naval and military information public.",
+     "source_id": "h1910_05",
+     "evidence_quote": "Official Press Bureau is the mouthpiece through which communications relative to the progress of naval and military operations are made public by the Admiralty, the War Office, and other public Departments concerned."
+    },
+    {
+     "field": "stated_justification",
+     "value": "Government said information given without prejudice to public interest",
+     "statement": "Asquith said the principle governing release of information was that everything that could be given without harming the public interest would be given fully and promptly.",
+     "source_id": "h1910_05",
+     "evidence_quote": "can be given without prejudice to the public interest shall be given fully and given at once."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Journalists tied to cable censors, not Bureau staff",
+     "statement": "The government decided not to add trained journalists to the Bureau's own staff, instead associating them with the work of the cable censors.",
+     "source_id": "h1910_05",
+     "evidence_quote": "It was unanimously agreed that it was not desirable to add such persons to the staff of the Bureau, but that it was desirable that they should be associated with the work carried on by the cable censors."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "MP criticizes early wartime press controls",
+     "statement": "Member of Parliament Sir William Bull told the House of Commons that \"the Press censorship started badly.\"",
+     "source_id": "h1910_06",
+     "evidence_quote": "The Press censorship started badly."
+    },
+    {
+     "field": "reversed_on",
+     "value": "Commons debate continued November 12, 1914",
+     "statement": "Members of Parliament continued raising complaints about the Press Bureau's control of war news in a Commons debate on November 12, 1914.",
+     "source_id": "h1910_06",
+     "evidence_quote": "HC Deb 12 November 1914 vol 68 cc123-66"
+    }
+   ],
+   "granularity": "anchor",
+   "stage": "silence"
+  },
+  {
+   "slug": "1913-ottoman-empire-press-law-bars-officials-from-editing-newspapers",
+   "title": "Ottoman Empire bars lawmakers and officials from editing newspapers and jails a leading editor",
+   "occurred_on": "1913-03-09",
+   "occurred_on_precision": "day",
+   "jurisdiction": "Ottoman Empire, national",
+   "country": "TR",
+   "continent": "Asia",
+   "level": "national",
+   "type": "outlet_licensing",
+   "tactic_primary": "outlet_licensing",
+   "tactics": [
+    "outlet_licensing",
+    "detention_and_violence"
+   ],
+   "leader_slug": "mehmed-v",
+   "summary": "In March 1913 the Ottoman government amended its 1909 press law, barring members of parliament and state officials from serving as newspaper editors and applying the ban retroactively to every periodical already in print. The revision followed the martial court prosecution of Tanin editor Huseyin Cahid, who was jailed for continuing to publish after a protest suspension in 1912.",
+   "what_happened": "The Ottoman Parliament had passed a comprehensive press law in 1909 requiring newspapers to register with the government and giving officials power to suspend and fine periodicals. Publishers exploited a loophole in the law, having suspended papers reappear under different names to escape court orders. Tanin, edited by Huseyin Cahid, suspended its own publication between July 28 and August 8, 1912, in protest of the dissolution of parliament. Shortly after Tanin resumed publishing, a martial court sentenced Cahid to one month in prison on charges that his articles threatened public order. Provincial governors, responsible for enforcing the law, complained it was too weak, and on February 16, 1913, a revision gave police power to confiscate periodicals that published obscene material. On March 9, 1913, the government extended the law further: it barred members of the Ayan and Mebusan houses of parliament and all state officials from becoming newspaper editors, and applied the ban retroactively to every periodical already in print.",
+   "stated_justification": "Officials said the existing law was too weak for provincial governors to enforce, and Huseyin Cahid was prosecuted on charges that his newspaper articles threatened public order.",
+   "effect_on_reporting": "Lawmakers and officials who edited newspapers had to give up those positions once the March 1913 ban took retroactive effect, and editors who had evaded suspension orders by reappearing under new names lost that option.",
+   "issue_of_the_day": "The Committee of Union and Progress had just retaken control of the Ottoman government in a coup in January 1913, after a period in which opposition newspapers had used loopholes in the 1909 press law to keep publishing despite suspension orders.",
+   "outcome": "sustained",
+   "outcome_on": "1913-03-09",
+   "outcome_note": "The March 1913 amendment and its retroactive ban on lawmakers and officials editing newspapers remained the law under the Committee of Union and Progress government.",
+   "actors": [
+    "mehmed-v"
+   ],
+   "actor_roles": {
+    "mehmed-v": "other"
+   },
+   "outlets": [
+    "tanin"
+   ],
+   "sources": [
+    "h1910_07",
+    "h1910_08"
+   ],
+   "claims": [
+    {
+     "field": "journalist_affected",
+     "value": "Tanin suspended itself in protest, July-August 1912",
+     "statement": "Tanin, edited by Huseyin Cahid, suspended its own publication between July 28 and August 8, 1912, in protest of the dissolution of parliament.",
+     "source_id": "h1910_07",
+     "evidence_quote": "Hiiseyin Câhid had suspended the publication of his paper, Tanin, between July 28 and August 8, 1912, as an act of protest against the dissolution of the parliament."
+    },
+    {
+     "field": "stated_justification",
+     "value": "Editor jailed for articles said to threaten public order",
+     "statement": "A martial court sentenced Cahid to one month in prison on charges that his articles threatened public order.",
+     "source_id": "h1910_07",
+     "evidence_quote": "he was sentenced to one month in prison by a martial court with charges that his articles \"threatened public order.\""
+    },
+    {
+     "field": "action",
+     "value": "March 1913 press law amendment",
+     "statement": "In March 1913 the press law underwent an extensive modification that made it more restrictive.",
+     "source_id": "h1910_07",
+     "evidence_quote": "In March 1913, the Press Law underwent extensive modification, which made it even more restrictive."
+    },
+    {
+     "field": "scope_of_action",
+     "value": "Ban applied retroactively to all periodicals",
+     "statement": "The provision barring lawmakers and officials from editing newspapers was applied retroactively to every periodical already in print.",
+     "source_id": "h1910_07",
+     "evidence_quote": "The March 1912 provision concerning editors would be applied retroactively to all periodicals."
+    },
+    {
+     "field": "action",
+     "value": "Senators, deputies and officials barred from editing",
+     "statement": "The revision barred senators, deputies and all state officials from becoming editors of newspapers.",
+     "source_id": "h1910_07",
+     "evidence_quote": "Senators, deputies, and all state officials were also prohibited from becoming editors of newspapers."
+    },
+    {
+     "field": "occurred_on",
+     "value": "Most extensive arrangement made March 9, 1913",
+     "statement": "The most extensive arrangement to the press law was made on March 9, 1913, first changing the article on who could serve as editor.",
+     "source_id": "h1910_08",
+     "evidence_quote": "The most extensive arrangement was made on March 9, 1913. The first change was made in article three."
+    },
+    {
+     "field": "scope_of_action",
+     "value": "February 1913 revision let police confiscate periodicals",
+     "statement": "A February 16, 1913 revision gave police the power to confiscate periodicals judged to have published obscene material.",
+     "source_id": "h1910_08",
+     "evidence_quote": "There was another rearrangement in the law on 16 February 1913. According to it, police had a right to confiscate the periodicals that published obscene news."
+    }
+   ],
+   "granularity": "anchor",
+   "stage": "silence"
+  }
+ ],
+ "actors": [
+  {
+   "slug": "herbert-asquith",
+   "name": "Herbert Henry Asquith",
+   "kind": "person",
+   "role_or_office": "Prime Minister of the United Kingdom",
+   "country": "GB"
+  },
+  {
+   "slug": "mehmed-v",
+   "name": "Mehmed V",
+   "kind": "person",
+   "role_or_office": "Sultan of the Ottoman Empire",
+   "country": "TR"
+  }
+ ],
+ "outlets": [
+  {
+   "slug": "missouri-staats-zeitung",
+   "name": "Missouri Staats-Zeitung",
+   "kind": "newspaper",
+   "country": "US"
+  },
+  {
+   "slug": "mother-earth",
+   "name": "Mother Earth",
+   "kind": "magazine",
+   "country": "US"
+  },
+  {
+   "slug": "tanin",
+   "name": "Tanin",
+   "kind": "newspaper",
+   "country": "TR"
+  }
+ ],
+ "sources": [
+  {
+   "id": "h1910_01",
+   "kind": "court_record",
+   "title": "Frohwerk v. United States, 249 U.S. 204 (1919)",
+   "url": "https://www.law.cornell.edu/supremecourt/text/249/204",
+   "published_on": "1919-03-10"
+  },
+  {
+   "id": "h1910_02",
+   "kind": "reference",
+   "title": "Frohwerk v. United States (1919)",
+   "url": "https://firstamendment.mtsu.edu/article/frohwerk-v-united-states/",
+   "published_on": "2009"
+  },
+  {
+   "id": "h1910_03",
+   "kind": "reference",
+   "title": "Emma Goldman",
+   "url": "https://firstamendment.mtsu.edu/article/emma-goldman/",
+   "published_on": "2009"
+  },
+  {
+   "id": "h1910_04",
+   "kind": "court_record",
+   "title": "Goldman v. United States, 245 U.S. 474 (1918)",
+   "url": "https://www.law.cornell.edu/supremecourt/text/245/474",
+   "published_on": "1918-01-14"
+  },
+  {
+   "id": "h1910_05",
+   "kind": "primary_document",
+   "title": "British Press Bureau (Hansard, 27 August 1914)",
+   "url": "https://api.parliament.uk/historic-hansard/commons/1914/aug/27/british-press-bureau",
+   "published_on": "1914-08-27"
+  },
+  {
+   "id": "h1910_06",
+   "kind": "primary_document",
+   "title": "Press Censorship (Hansard, 12 November 1914)",
+   "url": "https://api.parliament.uk/historic-hansard/commons/1914/nov/12/press-censorship",
+   "published_on": "1914-11-12"
+  },
+  {
+   "id": "h1910_07",
+   "kind": "reference",
+   "title": "Chasing the Printed Word: Press Censorship in the Ottoman Empire, 1876-1913",
+   "url": "https://psi203.cankaya.edu.tr/uploads/files/Yosmaolu-ChasingPrintedWord-2003.pdf",
+   "published_on": "2003"
+  },
+  {
+   "id": "h1910_08",
+   "kind": "reference",
+   "title": "A Comparative Study of the Press Laws of 1909 and 1931",
+   "url": "https://open.metu.edu.tr/bitstream/handle/11511/15618/index.pdf",
+   "published_on": null
+  }
+ ]
+}

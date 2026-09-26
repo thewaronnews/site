@@ -1,0 +1,507 @@
+{
+ "incidents": [
+  {
+   "slug": "1934-us-louisiana-newspaper-tax-grosjean",
+   "title": "United States: Louisiana taxes large newspapers' advertising revenue; the tax is struck down in Grosjean v. American Press Co.",
+   "occurred_on": "1934-07-12",
+   "occurred_on_precision": "day",
+   "jurisdiction": "Louisiana, United States",
+   "country": "US",
+   "continent": "North America",
+   "level": "state_or_province",
+   "type": "funding_and_ownership_pressure",
+   "tactic_primary": "funding_and_ownership_pressure",
+   "tactics": [
+    "funding_and_ownership_pressure"
+   ],
+   "leader_slug": "oscar-k-allen",
+   "summary": "Louisiana taxed the gross receipts that businesses earned from advertising in newspapers with circulations above 20,000 copies a week, a threshold that caught the state's largest papers. The Supreme Court of the United States ruled unanimously in 1936 that the tax operated as a restraint on advertising revenue and circulation, and struck it down.",
+   "what_happened": "The Louisiana Legislature passed Act No. 23 on July 12, 1934, taxing 2 percent of the gross receipts that businesses earned from placing advertisements in any newspaper, magazine or periodical with a circulation of more than 20,000 copies a week. The tax was adopted under the influence of United States Senator Huey Long, who had maintained control over the state legislature after his election to the Senate in 1932. Nine publishers whose papers met the circulation threshold sued to stop the tax, and their case reached the Supreme Court of the United States as Grosjean v. American Press Co. On February 10, 1936, the Court ruled unanimously, in an opinion by Justice George Sutherland, that the tax violated the free press and due process protections that the Fourteenth Amendment to the United States Constitution carries into state law. Sutherland wrote that the tax operated as a restraint in two ways, cutting the revenue newspapers earned from advertising and tending to restrict their circulation, and that its form, based on circulation rather than the volume of advertisements, was itself suspicious. The Court did not question Louisiana's general power to tax newspapers like other businesses; it found only that this particular tax was not an ordinary one.",
+   "stated_justification": "Louisiana did not argue in court that newspaper owners were exempt from ordinary business taxes; the tax was defended as a routine exercise of the state's general taxing power rather than a measure aimed at the press.",
+   "effect_on_reporting": "The tax cut into the revenue newspapers earned from advertising and tended to restrict their circulation, according to the Supreme Court's opinion.",
+   "issue_of_the_day": "The tax followed Senator Huey Long's rise to dominate Louisiana politics after his election to the United States Senate in 1932, and applied to the state's largest newspapers.",
+   "outcome": "reversed",
+   "outcome_on": "1936-02-10",
+   "outcome_note": "The Supreme Court's ruling voided the tax and left Louisiana's large newspapers free of it.",
+   "actors": [
+    "huey-long",
+    "george-sutherland",
+    "oscar-k-allen"
+   ],
+   "actor_roles": {
+    "huey-long": "other",
+    "george-sutherland": "ruled",
+    "oscar-k-allen": "other"
+   },
+   "outlets": [],
+   "sources": [
+    "h1930_01",
+    "h1930_02"
+   ],
+   "claims": [
+    {
+     "field": "occurred_on",
+     "value": "Act No. 23 enacted July 12, 1934",
+     "statement": "The Louisiana Legislature enacted the tax through Act No. 23 on July 12, 1934.",
+     "source_id": "h1930_01",
+     "evidence_quote": "the act of the Legislature of Louisiana known as Act No. 23, passed and approved July 12, 1934"
+    },
+    {
+     "field": "action",
+     "value": "Tax operated as a restraint on advertising and circulation",
+     "statement": "Justice George Sutherland's opinion held that the tax operated as a restraint in two ways, cutting revenue from advertising and tending to restrict circulation.",
+     "source_id": "h1930_01",
+     "evidence_quote": "It thus operates as a restraint in a double sense. First, its effect is to curtail the amount of revenue realized from advertising; and, second, its direct tendency is to restrict circulation."
+    },
+    {
+     "field": "action",
+     "value": "Tax's form measured by circulation was suspicious",
+     "statement": "Sutherland found the tax's form itself suspicious because it was measured by the extent of a newspaper's circulation rather than by the volume of its advertising.",
+     "source_id": "h1930_01",
+     "evidence_quote": "The form in which the tax is imposed is in itself suspicious. It is not measured or limited by the volume of advertisements."
+    },
+    {
+     "field": "stated_justification",
+     "value": "Court found no dispute that newspapers could face ordinary taxation",
+     "statement": "The Supreme Court noted that no one suggested newspaper owners were immune from ordinary forms of taxation, distinguishing this tax from a routine business tax.",
+     "source_id": "h1930_01",
+     "evidence_quote": "the owners of newspapers are immune from any of the ordinary forms of taxation for support of the government"
+    },
+    {
+     "field": "reversed_on",
+     "value": "Unanimous Court struck down the tax as a license tax",
+     "statement": "Writing for a unanimous Supreme Court, Justice George Sutherland classified the Louisiana tax as a license tax and struck it down.",
+     "source_id": "h1930_02",
+     "evidence_quote": "Writing for a unanimous Court, Justice George Sutherland classified the tax as a “license tax.”"
+    },
+    {
+     "field": "action",
+     "value": "Tax adopted under Huey Long's influence",
+     "statement": "The tax was adopted in 1934 under the influence of United States Senator Huey Long, who had controlled the Louisiana legislature since his election to the Senate in 1932.",
+     "source_id": "h1930_02",
+     "evidence_quote": "under the influence of Sen. Huey Long, a former governor who maintained control over the legislature after being elected as a U.S. senator in 1932"
+    }
+   ],
+   "granularity": "anchor",
+   "stage": "pressure"
+  },
+  {
+   "slug": "1938-us-lovell-v-griffin-permit-requirement",
+   "title": "United States: Supreme Court strikes down a Georgia city's permit requirement for distributing literature, 1938",
+   "occurred_on": "1938-03-28",
+   "occurred_on_precision": "day",
+   "jurisdiction": "City of Griffin, Georgia, United States",
+   "country": "US",
+   "continent": "North America",
+   "level": "municipal",
+   "type": "prior_restraint",
+   "tactic_primary": "prior_restraint",
+   "tactics": [
+    "prior_restraint"
+   ],
+   "leader_slug": "eurith-d-rivers",
+   "summary": "The city of Griffin, Georgia, required written permission from the city manager before anyone could distribute pamphlets, circulars or magazines within its limits, treating unlicensed distribution as a punishable nuisance. Alma Lovell was convicted and sentenced to imprisonment for distributing religious literature without a permit, and the Supreme Court of the United States reversed her conviction in 1938, ruling that the ordinance was invalid on its face.",
+   "what_happened": "The city of Griffin, Georgia, adopted an ordinance making it a punishable nuisance to distribute circulars, handbooks, advertising or literature of any kind, whether given away or sold, anywhere in the city without first obtaining written permission from the city manager. Alma Lovell, a distributor of religious literature, was convicted in the city's recorder's court for distributing a pamphlet and a magazine called the Golden Age without such permission, and was sentenced to imprisonment for fifty days in default of paying a $50 fine. Georgia's courts upheld the conviction, and Lovell appealed to the Supreme Court of the United States. The Court heard argument on February 4, 1938, and decided the case on March 28, 1938. Chief Justice Charles Evans Hughes, writing for the Court, held that the ordinance was invalid on its face because \"its character is such that it strikes at the very foundation of the freedom of the press by subjecting it to license and censorship.\" The Court reversed Lovell's conviction and returned the case for further proceedings consistent with its opinion.",
+   "stated_justification": "The city's ordinance itself supplied the only stated reason for the permit requirement, describing unlicensed distribution of literature as a nuisance punishable as an offense against the city.",
+   "effect_on_reporting": "Chief Justice Hughes wrote that \"its character is such that it strikes at the very foundation of the freedom of the press by subjecting it to license and censorship.\"",
+   "issue_of_the_day": "Lovell was a Jehovah's Witness distributing religious pamphlets and a magazine, activity that Griffin's ordinance treated the same as any other literature requiring a permit.",
+   "outcome": "reversed",
+   "outcome_on": "1938-03-28",
+   "outcome_note": "The Supreme Court reversed Lovell's conviction and sent the case back for further proceedings consistent with its ruling.",
+   "actors": [
+    "charles-evans-hughes",
+    "eurith-d-rivers"
+   ],
+   "actor_roles": {
+    "charles-evans-hughes": "ruled",
+    "eurith-d-rivers": "other"
+   },
+   "outlets": [
+    "the-golden-age"
+   ],
+   "sources": [
+    "h1930_03",
+    "h1930_04"
+   ],
+   "claims": [
+    {
+     "field": "occurred_on",
+     "value": "Supreme Court argued Feb 4, decided Mar 28, 1938",
+     "statement": "The Supreme Court heard argument in Lovell's case on February 4, 1938, and decided it on March 28, 1938.",
+     "source_id": "h1930_03",
+     "evidence_quote": "Argued and Submitted Feb. 4, 1938. Decided March 28, 1938."
+    },
+    {
+     "field": "journalist_affected",
+     "value": "Alma Lovell convicted and sentenced",
+     "statement": "Alma Lovell was convicted in the Griffin, Georgia recorder's court and sentenced to fifty days in jail in default of a $50 fine for distributing literature without a permit.",
+     "source_id": "h1930_03",
+     "evidence_quote": "Appellant, Alma Lovell, was convicted in the recorder's court of the City of Griffin, Ga., of the violation of a city ordinance and was sentenced to imprisonment for fifty days in default of the payment of a fine of $50."
+    },
+    {
+     "field": "action",
+     "value": "Ordinance required permit and deemed violation a nuisance",
+     "statement": "Griffin's ordinance made it a punishable nuisance to distribute literature of any kind in the city without first obtaining written permission from the city manager.",
+     "source_id": "h1930_03",
+     "evidence_quote": "without first obtaining written permission from the City Manager of the City of Griffin, such practice shall be deemed a nuisance, and punishable as an offense against the City of Griffin."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Ordinance struck at the foundation of press freedom",
+     "statement": "Chief Justice Charles Evans Hughes wrote that \"its character is such that it strikes at the very foundation of the freedom of the press by subjecting it to license and censorship.\"",
+     "source_id": "h1930_03",
+     "evidence_quote": "its character is such that it strikes at the very foundation of the freedom of the press by subjecting it to license and censorship."
+    },
+    {
+     "field": "reversed_on",
+     "value": "Supreme Court reversed the conviction",
+     "statement": "The Supreme Court reversed Lovell's conviction and sent the case back for further proceedings.",
+     "source_id": "h1930_03",
+     "evidence_quote": "The judgment is reversed and the cause is remanded for further proceedings not inconsistent with this opinion."
+    },
+    {
+     "field": "action",
+     "value": "Case invalidated conviction of a Jehovah's Witness pamphleteer",
+     "statement": "The First Amendment Encyclopedia describes the case as invalidating the conviction of a Jehovah's Witness who sold a religious pamphlet and magazine without the city manager's permission.",
+     "source_id": "h1930_04",
+     "evidence_quote": "invalidated the conviction of a Jehovah's Witness who sold a religious pamphlet and magazine in violation of a local ordinance requiring prior permission from the city manager."
+    },
+    {
+     "field": "outlet_affected",
+     "value": "Distribution of the Golden Age magazine",
+     "statement": "Lovell was convicted for distributing a pamphlet and a magazine called the Golden Age.",
+     "source_id": "h1930_03",
+     "evidence_quote": "The evidence against appellant was that she distributed a certain pamphlet and a magazine called the 'Golden Age.'"
+    }
+   ],
+   "granularity": "anchor",
+   "stage": "silence"
+  },
+  {
+   "slug": "1937-japan-newspaper-law-war-censorship",
+   "title": "Japan: government requires clearance to publish war news under the Newspaper Law, 1937",
+   "occurred_on": "1937-07",
+   "occurred_on_precision": "month",
+   "jurisdiction": "Empire of Japan",
+   "country": "JP",
+   "continent": "Asia",
+   "level": "national",
+   "type": "prior_restraint",
+   "tactic_primary": "prior_restraint",
+   "tactics": [
+    "prior_restraint"
+   ],
+   "leader_slug": "fumimaro-konoe",
+   "summary": "After Japan's war with China escalated into full scale conflict in July 1937, the government invoked Article 27 of the Newspaper Law to require government clearance before publishing war related news, while a Home Ministry directive to local officials banned the printing of what it called \"fallacies\" that could \"confuse the hearts of people and induce social unrest.\" By August 1937 the Army Ministry found that about eighty percent of submitted articles were approved, a result that reflected editors submitting only material they expected would pass.",
+   "what_happened": "Japan's war with China escalated into full scale conflict after the Marco Polo Bridge Incident of July 7, 1937, fought between Japanese and Chinese troops near Beijing. Prince Fumimaro Konoe, who had formed Japan's Cabinet on June 4, 1937, led the government as the war expanded. To control coverage of the fighting, the government invoked Article 27 of the Newspaper Law, requiring publishers to obtain government clearance before printing war related news. A Home Ministry directive to local officials went further, banning the printing of what it called \"fallacies\" that could \"confuse the hearts of people and induce social unrest.\" Officials also relied on informal consultations with publishers rather than formal orders alone, leading newspapers to adopt internal guidelines and self policing. By August 1937 the Army Ministry assessed that about eighty percent of submitted articles were approved, a figure that alarmed the Home Ministry until officials concluded it reflected editors submitting only material they believed would pass, rather than a lack of material to suppress.",
+   "stated_justification": "A Home Ministry directive banned the printing of what it called \"fallacies\" that could \"confuse the hearts of people and induce social unrest,\" the government's stated reason for controlling coverage of the war.",
+   "effect_on_reporting": "By August 1937 the Army Ministry found that about eighty percent of submitted articles were approved, a figure that reflected editors submitting only material they believed would pass rather than official leniency.",
+   "issue_of_the_day": "Japan's full scale war with China, which began with the Marco Polo Bridge Incident on July 7, 1937, produced the war coverage that the government sought to control.",
+   "outcome": "sustained",
+   "outcome_on": null,
+   "outcome_note": "By the government's own assessment, most newspapers were already shaping their coverage to what officials wanted before formal rejection was needed.",
+   "actors": [
+    "fumimaro-konoe",
+    "home-ministry-japan",
+    "army-ministry-japan"
+   ],
+   "actor_roles": {
+    "fumimaro-konoe": "other",
+    "home-ministry-japan": "enforced",
+    "army-ministry-japan": "announced"
+   },
+   "outlets": [],
+   "sources": [
+    "h1930_05",
+    "h1930_06"
+   ],
+   "claims": [
+    {
+     "field": "occurred_on",
+     "value": "Marco Polo Bridge Incident, July 7, 1937",
+     "statement": "Japan's full scale war with China began with the Marco Polo Bridge Incident on July 7, 1937.",
+     "source_id": "h1930_06",
+     "evidence_quote": "July 7 Marco Polo Bridge Incident (starting 2nd Sino-Japanese War)"
+    },
+    {
+     "field": "action",
+     "value": "Newspaper Law required clearance for war news",
+     "statement": "The government required publishers to obtain government clearance before printing war related news under Article 27 of the Newspaper Law.",
+     "source_id": "h1930_05",
+     "evidence_quote": "Article 27 of the Newspaper Law was put into effect, requiring government clearance to publish war related news."
+    },
+    {
+     "field": "stated_justification",
+     "value": "Home Ministry directive banned printing of \"fallacies\"",
+     "statement": "A Home Ministry directive to local officials banned the printing of what it called fallacies that could confuse the hearts of people and induce social unrest.",
+     "source_id": "h1930_05",
+     "evidence_quote": "one Home Ministry directive to local officials specifically banned the printing of “fallacies” that could “confuse the hearts of people and induce social unrest."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Eighty percent of submitted articles approved, August 1937",
+     "statement": "The Army Ministry's August 1937 assessment found that about eighty percent of submitted articles were approved.",
+     "source_id": "h1930_05",
+     "evidence_quote": "the Army Ministry’s August 1937 assessment that eighty percent of articles were approved"
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "High approval reflected editors submitting only safe material",
+     "statement": "Officials concluded the high approval figure reflected editors submitting only material they believed would pass, rather than official leniency.",
+     "source_id": "h1930_05",
+     "evidence_quote": "An alarming statistic for the Home Ministry that was quickly explained as resulting from newspaper editors only submitting articles they believed would pass"
+    }
+   ],
+   "granularity": "anchor",
+   "stage": "silence"
+  },
+  {
+   "slug": "1933-germany-reichstag-fire-decree-press-suspension",
+   "title": "Germany: Reichstag Fire Decree suspends freedom of the press, February 1933",
+   "occurred_on": "1933-02-28",
+   "occurred_on_precision": "day",
+   "jurisdiction": "Germany",
+   "country": "DE",
+   "continent": "Europe",
+   "level": "national",
+   "type": "outlet_licensing",
+   "tactic_primary": "outlet_licensing",
+   "tactics": [
+    "outlet_licensing"
+   ],
+   "leader_slug": "adolf-hitler",
+   "summary": "Weeks after Adolf Hitler became German chancellor, the government used a fire that heavily damaged the Reichstag building to obtain President Paul von Hindenburg's approval for a decree suspending the constitutional guarantee of freedom of the press, along with the rights to assembly and free expression of opinion. The decree gave the government the power to arrest political opponents without specific charge, dissolve political organizations and suppress publications, and it remained in force until Germany's defeat in 1945.",
+   "what_happened": "On February 27, 1933, a fire heavily damaged the Reichstag, the German parliament building, in Berlin. The government blamed the fire on a communist plot to overthrow the state and used it to obtain President Paul von Hindenburg's signature on the Decree of the Reich President for the Protection of the People and the State, known as the Reichstag Fire Decree, on February 28, 1933. Citing Article 48 of the German constitution, the decree stated it was issued as a defensive measure against communist acts of violence endangering the state. It suspended sections of the constitution safeguarding personal liberty, freedom of the press, freedom of assembly and the privacy of postal and telephone communications. With the decree in place, the government was free to arrest and incarcerate political opponents without specific charge, dissolve political organizations and suppress publications. It followed an earlier measure of February 4, 1933, when Hitler's cabinet had already restricted the press and authorized police to ban political meetings and marches.",
+   "stated_justification": "The decree itself stated that it was issued as a defensive measure against communist acts of violence endangering the state.",
+   "effect_on_reporting": "With the decree in place, the government was free to arrest and incarcerate political opponents without specific charge, dissolve political organizations and suppress publications.",
+   "issue_of_the_day": "The decree followed Adolf Hitler's appointment as chancellor on January 30, 1933, and an earlier February 4 order that had already restricted the press and authorized police to ban political meetings and marches.",
+   "outcome": "sustained",
+   "outcome_on": "1945-05",
+   "outcome_note": "The decree remained in force until Germany's defeat in May 1945.",
+   "actors": [
+    "adolf-hitler",
+    "paul-von-hindenburg"
+   ],
+   "actor_roles": {
+    "adolf-hitler": "other",
+    "paul-von-hindenburg": "ordered"
+   },
+   "outlets": [],
+   "sources": [
+    "h1930_07",
+    "h1930_08"
+   ],
+   "claims": [
+    {
+     "field": "occurred_on",
+     "value": "Decree passed February 28, 1933",
+     "statement": "The Reichstag Fire Decree was passed on February 28, 1933.",
+     "source_id": "h1930_07",
+     "evidence_quote": "It was passed on February 28, 1933."
+    },
+    {
+     "field": "action",
+     "value": "Decree suspended press freedom and removed police restraints",
+     "statement": "The decree permitted restrictions on the rights to assembly, free speech and freedom of the press, and removed restraints on police investigations.",
+     "source_id": "h1930_07",
+     "evidence_quote": "The decree permitted the restriction of the right to assembly, freedom of speech, and freedom of the press, among other rights, and it removed all restraints on police investigations."
+    },
+    {
+     "field": "action",
+     "value": "Decree suspended constitutional protections, second account",
+     "statement": "A second account of the decree confirms it suspended the rights to assembly, free speech, freedom of the press and other constitutional protections, including restraints on police investigations.",
+     "source_id": "h1930_08",
+     "evidence_quote": "suspended the right to assembly, freedom of speech, freedom of the press, and other constitutional protections, including all restraints on police investigations"
+    },
+    {
+     "field": "stated_justification",
+     "value": "Decree cited defensive measure against communist violence",
+     "statement": "The decree's own text said it was issued as a defensive measure against communist acts of violence endangering the state.",
+     "source_id": "h1930_07",
+     "evidence_quote": "the following is decreed as a defensive measure against communist acts of violence endangering the state"
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Government free to arrest opponents and suppress publications",
+     "statement": "With the decree in place, the German government was free to arrest political opponents without specific charge, dissolve political organizations and suppress publications.",
+     "source_id": "h1930_07",
+     "evidence_quote": "With the decree in place, the regime was free to arrest and incarcerate political opponents without specific charge, dissolve political organizations, and suppress publications."
+    },
+    {
+     "field": "action",
+     "value": "Earlier February 4 order restricted the press",
+     "statement": "An earlier order on February 4, 1933, had already restricted the press and authorized police to ban political meetings and marches.",
+     "source_id": "h1930_07",
+     "evidence_quote": "On February 4, Hitler's cabinet had restricted the press and authorized the police to ban political meetings and marches."
+    },
+    {
+     "field": "occurred_on",
+     "value": "Hitler appointed Chancellor January 30, 1933",
+     "statement": "Adolf Hitler had been appointed Reich Chancellor by President Paul von Hindenburg on January 30, 1933.",
+     "source_id": "h1930_07",
+     "evidence_quote": "Adolf Hitler's appointment as Reich Chancellor by President Paul von Hindenburg on January 30, 1933."
+    },
+    {
+     "field": "status",
+     "value": "Decree remained in effect until 1945",
+     "statement": "The decree remained in effect until Nazi Germany's defeat in May 1945.",
+     "source_id": "h1930_08",
+     "evidence_quote": "It remained in effect until Nazi Germany was defeated in May 1945."
+    }
+   ],
+   "granularity": "anchor",
+   "stage": "silence"
+  }
+ ],
+ "actors": [
+  {
+   "slug": "huey-long",
+   "name": "Huey P. Long",
+   "kind": "person",
+   "role_or_office": "United States Senator from Louisiana",
+   "country": "US"
+  },
+  {
+   "slug": "george-sutherland",
+   "name": "George Sutherland",
+   "kind": "person",
+   "role_or_office": "Associate Justice, Supreme Court of the United States",
+   "country": "US",
+   "role_claim": {
+    "source_id": "h1930_02",
+    "evidence_quote": "Writing for a unanimous Court, Justice George Sutherland classified the tax as a “license tax.”",
+    "statement": "George Sutherland was the Supreme Court justice who wrote the Grosjean opinion."
+   }
+  },
+  {
+   "slug": "charles-evans-hughes",
+   "name": "Charles Evans Hughes",
+   "kind": "person",
+   "role_or_office": "Chief Justice of the United States",
+   "country": "US",
+   "role_claim": {
+    "source_id": "h1930_03",
+    "evidence_quote": "Mr. Chief Justice HUGHES delivered the opinion of the Court.",
+    "statement": "Charles Evans Hughes was Chief Justice of the United States when the Court decided Lovell."
+   }
+  },
+  {
+   "slug": "fumimaro-konoe",
+   "name": "Fumimaro Konoe",
+   "kind": "person",
+   "role_or_office": "Prime Minister of Japan",
+   "country": "JP",
+   "role_claim": {
+    "source_id": "h1930_06",
+    "evidence_quote": "June 4 Formation of 1st KONOE Fumimaro Cabinet",
+    "statement": "Fumimaro Konoe formed his first Cabinet as Japan's Prime Minister on June 4, 1937."
+   }
+  },
+  {
+   "slug": "home-ministry-japan",
+   "name": "Home Ministry of Japan",
+   "kind": "body",
+   "role_or_office": "Ministry responsible for domestic administration and press control, Empire of Japan",
+   "country": "JP"
+  },
+  {
+   "slug": "army-ministry-japan",
+   "name": "Army Ministry of Japan",
+   "kind": "body",
+   "role_or_office": "Ministry responsible for the Imperial Japanese Army",
+   "country": "JP"
+  },
+  {
+   "slug": "paul-von-hindenburg",
+   "name": "Paul von Hindenburg",
+   "kind": "person",
+   "role_or_office": "President of Germany",
+   "country": "DE",
+   "role_claim": {
+    "source_id": "h1930_07",
+    "evidence_quote": "The Reich President von Hindenburg",
+    "statement": "Paul von Hindenburg was the Reich President who signed the Reichstag Fire Decree."
+   }
+  },
+  {
+   "slug": "oscar-k-allen",
+   "name": "Oscar K. Allen",
+   "kind": "person",
+   "role_or_office": "Governor of Louisiana",
+   "country": "US"
+  },
+  {
+   "slug": "eurith-d-rivers",
+   "name": "Eurith D. Rivers",
+   "kind": "person",
+   "role_or_office": "Governor of Georgia",
+   "country": "US"
+  }
+ ],
+ "outlets": [
+  {
+   "slug": "the-golden-age",
+   "name": "The Golden Age",
+   "kind": "magazine",
+   "country": "US"
+  }
+ ],
+ "sources": [
+  {
+   "id": "h1930_01",
+   "kind": "court_record",
+   "title": "Grosjean v. American Press Co., Inc., 297 U.S. 233 (1936)",
+   "url": "https://www.law.cornell.edu/supremecourt/text/297/233",
+   "published_on": "1936-02-10"
+  },
+  {
+   "id": "h1930_02",
+   "kind": "reference",
+   "title": "Grosjean v. American Press Co. (1936)",
+   "url": "https://firstamendment.mtsu.edu/article/grosjean-v-american-press-co/",
+   "published_on": null
+  },
+  {
+   "id": "h1930_03",
+   "kind": "court_record",
+   "title": "Lovell v. City of Griffin, 303 U.S. 444 (1938)",
+   "url": "https://www.law.cornell.edu/supremecourt/text/303/444",
+   "published_on": "1938-03-28"
+  },
+  {
+   "id": "h1930_04",
+   "kind": "reference",
+   "title": "Lovell v. City of Griffin (1938)",
+   "url": "https://firstamendment.mtsu.edu/article/lovell-v-city-of-griffin/",
+   "published_on": "2009"
+  },
+  {
+   "id": "h1930_05",
+   "kind": "reference",
+   "title": "War & Media in Modern Japan",
+   "url": "https://fanningtheflames.hoover.org/shorthand-story/9",
+   "published_on": "2021"
+  },
+  {
+   "id": "h1930_06",
+   "kind": "reference",
+   "title": "Chronological Table, Modern Japan in Archives (National Diet Library)",
+   "url": "https://www.ndl.go.jp/modern/e/utility/chronology.html",
+   "published_on": null
+  },
+  {
+   "id": "h1930_07",
+   "kind": "primary_document",
+   "title": "Decree of the Reich President for the Protection of the People and the State",
+   "url": "https://encyclopedia.ushmm.org/content/en/article/reichstag-fire-decree",
+   "published_on": null
+  },
+  {
+   "id": "h1930_08",
+   "kind": "reference",
+   "title": "The Reichstag Fire",
+   "url": "https://encyclopedia.ushmm.org/content/en/article/the-reichstag-fire",
+   "published_on": null
+  }
+ ]
+}

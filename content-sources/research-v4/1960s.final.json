@@ -1,0 +1,616 @@
+{
+ "incidents": [
+  {
+   "slug": "1960-us-montgomery-commissioner-sues-new-york-times-for-libel",
+   "title": "United States: Montgomery, Alabama commissioner sues The New York Times for libel over a civil rights advertisement",
+   "occurred_on": "1960",
+   "occurred_on_precision": "year",
+   "jurisdiction": "Alabama, United States",
+   "country": "US",
+   "continent": "North America",
+   "level": "state_or_province",
+   "type": "lawsuits_against_press",
+   "tactic_primary": "lawsuits_against_press",
+   "tactics": [
+    "lawsuits_against_press",
+    "insult_and_defamation_laws"
+   ],
+   "leader_slug": "john-patterson",
+   "summary": "L. B. Sullivan, an elected Montgomery, Alabama city commissioner who supervised the police department, sued The New York Times for libel over a 1960 civil rights advertisement and won a $500,000 jury verdict. On March 9, 1964, the Supreme Court of the United States reversed the judgment, ruling that a public official cannot recover libel damages over criticism of official conduct without proving the statement was made with actual malice.",
+   "what_happened": "L. B. Sullivan, the elected Commissioner of Public Affairs for the city of Montgomery, Alabama, supervised the city's police department. In 1960, The New York Times published a full-page advertisement soliciting funds for the civil rights movement that described police actions against demonstrators supporting the Reverend Martin Luther King Jr. Sullivan brought a civil libel action against the newspaper and four individual petitioners in the Circuit Court of Montgomery County, testifying that any description of police action reflected on him personally. Under Alabama law, Sullivan needed only to show the advertisement contained errors that could have harmed his reputation; the jury awarded him $500,000, the full amount he sought, and the Supreme Court of Alabama affirmed. The New York Times asked the Supreme Court of the United States, the country's highest court, to review the judgment. On March 9, 1964, the Court ruled unanimously in New York Times Co. v. Sullivan that the Constitution's guarantees of speech and press bar a public official from recovering libel damages over criticism of official conduct unless the official proves the statement was made with actual malice, meaning with knowledge it was false or with reckless disregard for the truth. The Court reversed the Alabama judgment and remanded the case.",
+   "stated_justification": "Sullivan testified that because his duties included supervision of the police department, any published description of police action reflected on him personally, and Alabama law let him recover damages without proving the advertisement's errors were made knowingly or recklessly.",
+   "effect_on_reporting": "The Supreme Court's ruling required any public official suing over criticism of official conduct to prove the challenged statement was made with actual malice, meaning with knowledge it was false or with reckless disregard for the truth.",
+   "issue_of_the_day": "The advertisement had described police actions against civil rights demonstrators who supported the Reverend Martin Luther King Jr. in Montgomery, and Sullivan, who supervised the police department, considered the description a reflection on him personally.",
+   "outcome": "reversed",
+   "outcome_on": "1964-03-09",
+   "outcome_note": "The Supreme Court of the United States reversed the Alabama libel judgment on March 9, 1964, and remanded the case for further proceedings consistent with its opinion.",
+   "actors": [
+    "l-b-sullivan",
+    "john-patterson"
+   ],
+   "actor_roles": {
+    "l-b-sullivan": "other",
+    "john-patterson": "other"
+   },
+   "outlets": [
+    "new-york-times-historical"
+   ],
+   "sources": [
+    "h1960_01",
+    "h1960_02"
+   ],
+   "claims": [
+    {
+     "field": "occurred_on",
+     "value": "Advertisement ran March 29, 1960",
+     "statement": "Sullivan's complaint arose from a full-page advertisement carried in The New York Times on March 29, 1960, and he filed his libel suit later that year.",
+     "source_id": "h1960_01",
+     "evidence_quote": "Respondent's complaint alleged that he had been libeled by statements in a full-page advertisement that was carried in the New York Times on March 29, 1960."
+    },
+    {
+     "field": "action",
+     "value": "Alabama jury awarded Sullivan $500,000",
+     "statement": "A Montgomery County jury awarded Sullivan $500,000, the full amount he sought from The New York Times and four individual petitioners, and the Supreme Court of Alabama affirmed the judgment.",
+     "source_id": "h1960_01",
+     "evidence_quote": "A jury in the Circuit Court of Montgomery County awarded him damages of $500,000, the full amount claimed, against all the petitioners, and the Supreme Court of Alabama affirmed."
+    },
+    {
+     "field": "stated_justification",
+     "value": "Sullivan's reason for suing",
+     "statement": "Sullivan testified that because his duties included supervising the police department, he considered any description of police conduct a reflection on him personally.",
+     "source_id": "h1960_01",
+     "evidence_quote": "When it describes police action, certainly I feel it reflects on me as an individual."
+    },
+    {
+     "field": "stated_justification",
+     "value": "Alabama libel standard before the ruling",
+     "statement": "Under Alabama law as it stood before the Supreme Court's ruling, Sullivan needed only to show the advertisement contained errors that could have harmed his reputation.",
+     "source_id": "h1960_02",
+     "evidence_quote": "Under Alabama law, Sullivan only needed to prove that there were mistakes and that they likely harmed his reputation."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Actual malice standard",
+     "statement": "The Supreme Court held that a public official may not recover libel damages over criticism of official conduct unless the official proves the statement was made with actual malice, that is, with knowledge it was false or with reckless disregard for the truth.",
+     "source_id": "h1960_01",
+     "evidence_quote": "unless he proves that the statement was made with 'actual malice'—that is, with knowledge that it was false or with reckless disregard of whether it was false or not."
+    },
+    {
+     "field": "reversed_on",
+     "value": "Supreme Court reversed the Alabama judgment",
+     "statement": "The Supreme Court of the United States reversed the judgment of the Supreme Court of Alabama and remanded the case for further proceedings.",
+     "source_id": "h1960_01",
+     "evidence_quote": "The judgment of the Supreme Court of Alabama is reversed and the case is remanded to that court for further proceedings not inconsistent with this opinion."
+    },
+    {
+     "field": "scope_of_action",
+     "value": "Sullivan's role as city commissioner",
+     "statement": "The lawsuit was filed by L. B. Sullivan, an elected city commissioner in Montgomery, Alabama, whose duties included supervision of the local police.",
+     "source_id": "h1960_02",
+     "evidence_quote": "The lawsuit was filed by L. B. Sullivan, an elected city commissioner in Montgomery, Alabama, whose duties included supervision of the local police."
+    }
+   ],
+   "granularity": "anchor",
+   "status": "historical",
+   "stage": "punish"
+  },
+  {
+   "slug": "1962-us-estes-v-texas-camera-ban",
+   "title": "United States: Texas judge allows televised pretrial hearing in the Billie Sol Estes case; Supreme Court later limits cameras in criminal courtrooms",
+   "occurred_on": "1962-09-24",
+   "occurred_on_precision": "day",
+   "jurisdiction": "Texas, United States",
+   "country": "US",
+   "continent": "North America",
+   "level": "state_or_province",
+   "type": "access_ban",
+   "tactic_primary": "access_ban",
+   "tactics": [
+    "access_ban"
+   ],
+   "leader_slug": "price-daniel",
+   "summary": "A Texas state judge in Tyler allowed live television and photography at pretrial hearings and part of the criminal trial of financier Billie Sol Estes, over defense objections. On June 7, 1965, the Supreme Court of the United States ruled 5 to 4 that the resulting disruption denied Estes due process and reversed his conviction, while dissenting justices warned the decision could limit the public's ability to know what happens in courts.",
+   "what_happened": "Billie Sol Estes, a Texas financier, was tried for swindling in the District Court for the Seventh Judicial District of Texas at Tyler, presided over by Judge Otis T. Dunagan. Dunagan permitted live radio and television coverage and news photography of a pretrial hearing on Estes's motion to bar cameras from his trial, and dozens of cameramen and photographers filled the courtroom, with cables, wires and microphones surrounding the judge's bench, counsel table and jury box. Coverage was more limited during the trial itself, but Estes argued the earlier publicity and disruption had already deprived him of a fair trial. The Texas Court of Criminal Appeals rejected his claim, and Estes asked the Supreme Court of the United States, the country's highest court, to review the case under the Fourteenth Amendment's due process guarantee. On June 7, 1965, the Court ruled 5 to 4 that the televising of Estes's trial had denied him due process and reversed his conviction. Four dissenting justices, led by Justice Potter Stewart, warned that the decision suggested there are limits on the public's right to know what goes on in the courts.",
+   "stated_justification": "Judge Otis T. Dunagan told the parties that the most important point in managing camera coverage was to ensure Estes received a fair and impartial trial, calling this the primary purpose of the court.",
+   "effect_on_reporting": "The ruling meant broadcasters and photographers could be barred from filming state criminal trials, and Justice Potter Stewart's dissent warned it suggested there are limits on the public's right to know what goes on in the courts.",
+   "issue_of_the_day": "Estes's pretrial hearing had drawn dozens of cameramen and news photographers to the Tyler courtroom, and the Supreme Court weighed whether that presence had compromised the fairness of his trial.",
+   "outcome": "reversed",
+   "outcome_on": "1965-06-07",
+   "outcome_note": "The Supreme Court reversed Estes's conviction on June 7, 1965, ruling that the televised proceedings had denied him due process of law.",
+   "actors": [
+    "otis-t-dunagan",
+    "price-daniel"
+   ],
+   "actor_roles": {
+    "otis-t-dunagan": "ruled",
+    "price-daniel": "other"
+   },
+   "outlets": [],
+   "sources": [
+    "h1960_03",
+    "h1960_04"
+   ],
+   "claims": [
+    {
+     "field": "status",
+     "value": "Argued and decided, 1965",
+     "statement": "The Supreme Court of the United States heard Estes v. Texas on April 1, 1965, and decided it on June 7, 1965.",
+     "source_id": "h1960_03",
+     "evidence_quote": "Argued April 1, 1965. Decided June 7, 1965."
+    },
+    {
+     "field": "occurred_on",
+     "value": "Pretrial camera hearing, September 24, 1962",
+     "statement": "A pretrial hearing on cameras in the courtroom, filled with reporters and photographers, was held on September 24, 1962, in Billie Sol Estes's case.",
+     "source_id": "h1960_03",
+     "evidence_quote": "On September 24, a hearing was held to consider petitioner's motion to prohibit television, motion pictures, and still photography at the trial."
+    },
+    {
+     "field": "action",
+     "value": "Supreme Court reversed Estes's conviction",
+     "statement": "The Supreme Court held that Estes's trial was not conducted consistently with due process and reversed his conviction.",
+     "source_id": "h1960_03",
+     "evidence_quote": "We hold to the contrary and reverse his conviction."
+    },
+    {
+     "field": "action",
+     "value": "Question of due process in televised trial",
+     "statement": "The Supreme Court took the case to decide whether Estes was denied due process by being required to submit to a televised trial.",
+     "source_id": "h1960_03",
+     "evidence_quote": "We granted certiorari to consider whether petitioner was denied due process when he was required to submit to a televised trial."
+    },
+    {
+     "field": "stated_justification",
+     "value": "Trial judge's stated aim",
+     "statement": "Judge Otis T. Dunagan told the parties that the most important point in regulating camera coverage was to ensure Estes received a fair and impartial trial.",
+     "source_id": "h1960_03",
+     "evidence_quote": "the most important point is whether or not it would interfere with a fair and impartial trial of this Defendant. That is the most important point, and that is the purpose, or will be the primary purpose of the Court, to insure that he gets that fair trial."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Acknowledged press role, then limited it",
+     "statement": "The Court acknowledged the press's role in informing the public of court proceedings, even as it found the cameras at Estes's hearing had interfered with the trial.",
+     "source_id": "h1960_03",
+     "evidence_quote": "informing the citizenry of public events and occurrences, including court proceedings"
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Stewart dissent on public access",
+     "statement": "Justice Potter Stewart dissented, warning that the suggestion there are limits on the public's right to know what goes on in the courts caused him deep concern.",
+     "source_id": "h1960_03",
+     "evidence_quote": "The suggestion that there are limits upon the public's right to know what goes on in the courts causes me deep concern."
+    },
+    {
+     "field": "scope_of_action",
+     "value": "Cameras at the pretrial hearing",
+     "statement": "Dozens of cameramen staked out the Tyler courtroom during the preliminary hearing, even though live coverage was more limited during the trial itself.",
+     "source_id": "h1960_04",
+     "evidence_quote": "Although live coverage was limited during the trial itself, the opening days of the preliminary hearing had developed into a circus atmosphere as dozens of cameramen staked out the courtroom."
+    },
+    {
+     "field": "journalist_affected",
+     "value": "Judge Dunagan presided",
+     "statement": "Judge Otis T. Dunagan presided over the pretrial hearing on a defense motion to prohibit cameras at Billie Sol Estes's trial in Tyler, Texas.",
+     "source_id": "h1960_04",
+     "evidence_quote": "A pre-trial hearing in the court of Judge Otis T. Dunagan (on bench at left) was held in Tyler, Texas in 1962, on a motion by Estes attorney John Cofer (right), to prohibit pictures at the Billie Sol Estes trial."
+    }
+   ],
+   "granularity": "anchor",
+   "status": "historical",
+   "stage": "restrict"
+  },
+  {
+   "slug": "1962-west-germany-spiegel-affair-raid-and-arrests",
+   "title": "West Germany: police raid Der Spiegel's offices and arrest its editors over a defense article",
+   "occurred_on": "1962-10-26",
+   "occurred_on_precision": "day",
+   "jurisdiction": "Federal Republic of Germany",
+   "country": "DE",
+   "continent": "Europe",
+   "level": "national",
+   "type": "detention_and_violence",
+   "tactic_primary": "detention_and_violence",
+   "tactics": [
+    "detention_and_violence",
+    "prior_restraint"
+   ],
+   "leader_slug": "konrad-adenauer",
+   "summary": "On October 26, 1962, West German police raided the offices of the news magazine Der Spiegel and arrested its publisher, Rudolf Augstein, after it reported that the armed forces were only \"conditionally prepared\" for a nuclear strike. Deputy editor-in-chief Conrad Ahlers, the article's author, was arrested days later in Spain, and the affair brought on a coalition crisis that contributed to Chancellor Konrad Adenauer's resignation the following year.",
+   "what_happened": "On October 10, 1962, the news magazine Der Spiegel published an article stating that the Bundeswehr, the West German armed forces, was only \"conditionally prepared\" to defend the country against a nuclear strike, and the magazine was accused of treason. On October 26, 1962, police stormed Der Spiegel's offices and arrested the magazine's publisher, Rudolf Augstein. Conrad Ahlers, the article's author and the magazine's deputy editor-in-chief, was on vacation in Spain and was arrested there; a Frankfurt newspaper editorial noted that Defense Minister Franz Josef Strauss had made phone calls to Spain in connection with the arrest. The police operation came only two days after a separate Bundestag dispute over Der Spiegel's reporting on military housing contracts had ended. The raid was condemned in much of the West German press and triggered student demonstrations for freedom of the press, including one at Munich's Ludwig Maximilian University. The dispute over the defense minister's role helped bring on a coalition crisis that contributed to Chancellor Konrad Adenauer's resignation, which took effect on October 15, 1963.",
+   "stated_justification": "The Federal Prosecution Office treated the October 10 article's description of the Bundeswehr's nuclear preparedness as treason.",
+   "effect_on_reporting": "A Frankfurt newspaper editorial warned that journalists might resolve not to write another word about the army given the legal uncertainty the raid created, and the raid was condemned in much of the West German press and prompted student demonstrations for freedom of the press.",
+   "issue_of_the_day": "The article's account of the Bundeswehr's readiness followed only two days after a separate Bundestag dispute over Der Spiegel's reporting on military housing contracts had ended.",
+   "outcome": "unknown",
+   "outcome_on": null,
+   "outcome_note": "The dispute over the defense minister's role helped bring on a coalition crisis, and Chancellor Adenauer's resignation took effect on October 15, 1963.",
+   "actors": [
+    "konrad-adenauer",
+    "franz-josef-strauss",
+    "rudolf-augstein",
+    "conrad-ahlers"
+   ],
+   "actor_roles": {
+    "konrad-adenauer": "other",
+    "franz-josef-strauss": "ordered",
+    "rudolf-augstein": "other",
+    "conrad-ahlers": "other"
+   },
+   "outlets": [
+    "der-spiegel"
+   ],
+   "sources": [
+    "h1960_06",
+    "h1960_07",
+    "h1960_08",
+    "h1960_11"
+   ],
+   "claims": [
+    {
+     "field": "occurred_on",
+     "value": "October 10 article on Bundeswehr readiness",
+     "statement": "Der Spiegel published an article on October 10, 1962, saying the Bundeswehr was only conditionally prepared to defend the country against a nuclear strike, and the magazine was accused of treason.",
+     "source_id": "h1960_06",
+     "evidence_quote": "On October 10, 1962, the news magazine Der Spiegel published an article stating that the Bundeswehr was only “conditionally prepared” [ bedingt abwehrbereit ] to defend the country against a nuclear attack."
+    },
+    {
+     "field": "stated_justification",
+     "value": "Der Spiegel accused of treason",
+     "statement": "Der Spiegel was accused of treason over the October 10 article.",
+     "source_id": "h1960_06",
+     "evidence_quote": "The magazine was accused of treason."
+    },
+    {
+     "field": "action",
+     "value": "Raid and Augstein's arrest",
+     "statement": "Police stormed Der Spiegel's offices on October 26, 1962, and arrested the magazine's publisher, Rudolf Augstein.",
+     "source_id": "h1960_06",
+     "evidence_quote": "On Friday, October 26, 1962, the police stormed its offices and arrested publisher Rudolf Augstein."
+    },
+    {
+     "field": "action",
+     "value": "Ahlers's arrest in Spain",
+     "statement": "Conrad Ahlers, the article's author and the magazine's deputy editor-in-chief, was arrested while on vacation in Spain.",
+     "source_id": "h1960_06",
+     "evidence_quote": "Conrad Ahlers, the author of the article and the magazine’s deputy editor-in-chief, was arrested while on vacation in Spain."
+    },
+    {
+     "field": "scope_of_action",
+     "value": "Strauss's phone calls to Spain",
+     "statement": "A BILD-Zeitung editorial said that no matter how many phone calls Defense Minister Strauss made to Spain, he could not have anyone incarcerated without a court-ordered arrest warrant, pointing to his role in arranging Ahlers's arrest.",
+     "source_id": "h1960_08",
+     "evidence_quote": "No matter how many phone calls Mr. Strauss makes to Spain, even he can’t incarcerate anyone without a court-ordered arrest warrant."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Editorial warns journalists may avoid military coverage",
+     "statement": "A Frankfurt newspaper editorial said the police operation could lead all journalists to resolve not to write another word about the German army as long as the legal uncertainty continued.",
+     "source_id": "h1960_06",
+     "evidence_quote": "all journalists must resolve not to write another word about the German army as long as this legal uncertainty continues"
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Press condemnation and student protests",
+     "statement": "The arrest of Rudolf Augstein and other Der Spiegel employees on charges of treason was condemned in the left-wing press and triggered student protests for freedom of the press, including one at Munich's Ludwig Maximilian University.",
+     "source_id": "h1960_07",
+     "evidence_quote": "The arrest of editor-in-chief Rudolf Augstein and other Spiegel employees on charges of treason was roundly condemned in the left-wing press and triggered student protests on behalf of freedom of the press, including this one at Ludwig Maximilian University in Munich."
+    },
+    {
+     "field": "scope_of_action",
+     "value": "Timing after the Fibag dispute",
+     "statement": "The police operation against Der Spiegel came almost three weeks after the October 10 article appeared but only two days after a separate Bundestag dispute over the magazine's reporting on military housing contracts had ended.",
+     "source_id": "h1960_06",
+     "evidence_quote": "The police operation occurred almost three weeks after the article appeared but only two days after the end of the Fibag scandal in the Bundestag, which was triggered by articles published in Der Spiegel."
+    },
+    {
+     "field": "status",
+     "value": "Coalition crisis and Adenauer's resignation",
+     "statement": "Protests against Defense Minister Strauss's role in the affair triggered a coalition crisis that ultimately also led to the resignation of Chancellor Konrad Adenauer.",
+     "source_id": "h1960_07",
+     "evidence_quote": "Defense Minister Franz-Josef Strauß (CSU) triggered a coalition crisis and ultimately also led to the resignation of Chancellor Konrad Adenauer."
+    },
+    {
+     "field": "reversed_on",
+     "value": "Adenauer's resignation date",
+     "statement": "Chancellor Konrad Adenauer's term ended on October 15, 1963, following the coalition crisis brought on by the affair.",
+     "source_id": "h1960_11",
+     "evidence_quote": "his term will end on October 15, 1963."
+    }
+   ],
+   "granularity": "anchor",
+   "status": "historical",
+   "stage": "punish"
+  },
+  {
+   "slug": "1968-brazil-institutional-act-five-press-controls",
+   "title": "Brazil's military government decrees the Fifth Institutional Act and moves to control the press",
+   "occurred_on": "1968-12-13",
+   "occurred_on_precision": "day",
+   "jurisdiction": "Brazil, federal",
+   "country": "BR",
+   "continent": "South America",
+   "level": "national",
+   "type": "prior_restraint",
+   "tactic_primary": "prior_restraint",
+   "tactics": [
+    "prior_restraint",
+    "funding_and_ownership_pressure"
+   ],
+   "leader_slug": "artur-costa-e-silva",
+   "summary": "On the night of December 13, 1968, Brazil's military government, led by President Artur da Costa e Silva, decreed the Fifth Institutional Act, suspending constitutional guarantees and recessing the national Congress. A United States Embassy cable reported weeks later that officials planned to ease press restrictions gradually while keeping the threat of renewed controls and economic pressure over newspapers in reserve.",
+   "what_happened": "On the night of December 13, 1968, Brazil's military government, led by President Artur da Costa e Silva, decreed the Fifth Institutional Act, known as AI-5. A United States Embassy cable described the decree as a self-issued license letting the executive govern without the trappings of democracy, noting it let the president recess the national Congress, state assemblies and municipal chambers, intervene in states and municipalities without constitutional restraint, and suspend any citizen's political rights for ten years. A State Department cable reported that the crisis leading to the decree began with a floor speech by opposition deputy Marcio Moreira Alves that the military considered insulting to the army. In the weeks after AI-5, the United States Embassy in Rio de Janeiro reported that Brazilian officials planned to ease press restrictions gradually, encouraging newspapers toward self-restraint while holding the threat of renewed controls and economic pressure in reserve, since most newspapers depended on government-supplied newsprint. The embassy assessed that a full restoration of press freedom would be a long process.",
+   "stated_justification": "A State Department cable reported that the crisis leading to the decree began with a floor speech by opposition deputy Marcio Moreira Alves that the military considered insulting to the army.",
+   "effect_on_reporting": "The United States Embassy in Rio de Janeiro reported that the government planned to ease press restrictions gradually, encouraging self-restraint while holding the threat of renewed controls and economic pressure in reserve, since most newspapers depended on government-supplied newsprint.",
+   "issue_of_the_day": "The decree followed a months-long dispute between Brazil's Congress and its military leadership over disciplining an opposition deputy for a speech on the floor of Congress that the army considered insulting.",
+   "outcome": "unknown",
+   "outcome_on": null,
+   "outcome_note": "The United States Embassy assessed at the time that a full restoration of press freedom in Brazil would be a long process.",
+   "actors": [
+    "artur-costa-e-silva"
+   ],
+   "actor_roles": {
+    "artur-costa-e-silva": "ordered"
+   },
+   "outlets": [],
+   "sources": [
+    "h1960_09",
+    "h1960_10"
+   ],
+   "claims": [
+    {
+     "field": "occurred_on",
+     "value": "Cable dated December 14, 1968",
+     "statement": "The United States Embassy in Rio de Janeiro sent a cable on December 14, 1968, assessing the Fifth Institutional Act decreed the night before.",
+     "source_id": "h1960_09",
+     "evidence_quote": "Rio de Janeiro , December 14, 1968, 1625Z ."
+    },
+    {
+     "field": "action",
+     "value": "Fifth Institutional Act decreed December 13, 1968",
+     "statement": "The United States Embassy said the Institutional Act decreed on the night of December 13, 1968 amounted to a self-issued license letting the executive govern without the trappings of democracy.",
+     "source_id": "h1960_09",
+     "evidence_quote": "Institutional act decreed last night amounts to a self-issued license authorizing executive to govern without trappings or inconveniences of democracy."
+    },
+    {
+     "field": "scope_of_action",
+     "value": "Powers granted by AI-5",
+     "statement": "The Fifth Institutional Act let the president recess the national Congress, state assemblies and municipal chambers, intervene in states and municipalities without constitutional restraint, and suspend any citizen's political rights for ten years.",
+     "source_id": "h1960_09",
+     "evidence_quote": "The act allowed the President to recess the congress, state assemblies, and municipal chambers; to intervene in the states and municipalities without constitutional restraint; to suspend the political rights of any citizen for ten years"
+    },
+    {
+     "field": "stated_justification",
+     "value": "Origin in the Moreira Alves speech",
+     "statement": "A State Department cable said the crisis that led to the Fifth Institutional Act began with a speech by opposition deputy Marcio Moreira Alves on the floor of Congress that the military considered insulting to the army.",
+     "source_id": "h1960_09",
+     "evidence_quote": "Current crisis had its precise beginnings in a speech by opposition deputy Moreira Alves on floor of Congress which was insulting to army."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Plan to ease restrictions gradually",
+     "statement": "The United States Embassy reported that government sources said the plan was to ease press restrictions on newspapers gradually, with suggestions of self-restraint already made to editors.",
+     "source_id": "h1960_10",
+     "evidence_quote": "Various government sources tell us plan is to ease censorship gradually. Suggestions of self-censorship have already been made."
+    },
+    {
+     "field": "effect_on_reporting",
+     "value": "Leverage over newspapers through newsprint",
+     "statement": "The embassy reported that control over the press would be maintained through the threat of renewed restrictions and economic measures, since most Brazilian newspapers were in debt to the government, which held a monopoly on newsprint.",
+     "source_id": "h1960_10",
+     "evidence_quote": "by threats of renewed censorship and economic measures (most newspapers are in debt to GOB which has newsprint monopoly)."
+    },
+    {
+     "field": "status",
+     "value": "Costa e Silva remained president",
+     "statement": "Artur da Costa e Silva remained president of Brazil after the Fifth Institutional Act was decreed, though his freedom of action was limited.",
+     "source_id": "h1960_10",
+     "evidence_quote": "Costa e Silva still President of Brazil."
+    },
+    {
+     "field": "status",
+     "value": "Long process to restore press freedom",
+     "statement": "The United States Embassy assessed that restoring press freedom in Brazil would be a long process.",
+     "source_id": "h1960_10",
+     "evidence_quote": "we view restoration of press freedom as a long term process."
+    }
+   ],
+   "granularity": "anchor",
+   "status": "historical",
+   "stage": "silence"
+  }
+ ],
+ "actors": [
+  {
+   "slug": "l-b-sullivan",
+   "name": "L. B. Sullivan",
+   "kind": "person",
+   "role_or_office": "Commissioner of Public Affairs, City of Montgomery, Alabama",
+   "country": "US",
+   "role_claim": {
+    "source_id": "h1960_02",
+    "evidence_quote": "The lawsuit was filed by L. B. Sullivan, an elected city commissioner in Montgomery, Alabama, whose duties included supervision of the local police.",
+    "statement": "L. B. Sullivan was an elected city commissioner in Montgomery, Alabama, whose duties included supervision of the local police."
+   }
+  },
+  {
+   "slug": "otis-t-dunagan",
+   "name": "Otis T. Dunagan",
+   "kind": "person",
+   "role_or_office": "Judge, District Court for the Seventh Judicial District of Texas, at Tyler",
+   "country": "US",
+   "role_claim": {
+    "source_id": "h1960_04",
+    "evidence_quote": "A pre-trial hearing in the court of Judge Otis T. Dunagan (on bench at left) was held in Tyler, Texas in 1962, on a motion by Estes attorney John Cofer (right), to prohibit pictures at the Billie Sol Estes trial.",
+    "statement": "Otis T. Dunagan was the Texas judge who presided over the pretrial hearing on camera coverage of Billie Sol Estes's trial in Tyler, Texas."
+   }
+  },
+  {
+   "slug": "konrad-adenauer",
+   "name": "Konrad Adenauer",
+   "kind": "person",
+   "role_or_office": "Chancellor of the Federal Republic of Germany",
+   "country": "DE",
+   "role_claim": {
+    "source_id": "h1960_07",
+    "evidence_quote": "Defense Minister Franz-Josef Strauß (CSU) triggered a coalition crisis and ultimately also led to the resignation of Chancellor Konrad Adenauer.",
+    "statement": "Konrad Adenauer was chancellor of the Federal Republic of Germany at the time of the Spiegel affair."
+   }
+  },
+  {
+   "slug": "franz-josef-strauss",
+   "name": "Franz Josef Strauss",
+   "kind": "person",
+   "role_or_office": "Federal Minister of Defense, Federal Republic of Germany",
+   "country": "DE",
+   "role_claim": {
+    "source_id": "h1960_07",
+    "evidence_quote": "Defense Minister Franz-Josef Strauß (CSU)",
+    "statement": "Franz Josef Strauss served as West Germany's federal minister of defense at the time of the Spiegel affair."
+   }
+  },
+  {
+   "slug": "rudolf-augstein",
+   "name": "Rudolf Augstein",
+   "kind": "person",
+   "role_or_office": "Publisher and editor-in-chief, Der Spiegel",
+   "country": "DE",
+   "role_claim": {
+    "source_id": "h1960_07",
+    "evidence_quote": "The arrest of editor-in-chief Rudolf Augstein and other Spiegel employees on charges of treason was roundly condemned in the left-wing press and triggered student protests on behalf of freedom of the press, including this one at Ludwig Maximilian University in Munich.",
+    "statement": "Rudolf Augstein was editor-in-chief of Der Spiegel when he was arrested on charges of treason."
+   }
+  },
+  {
+   "slug": "conrad-ahlers",
+   "name": "Conrad Ahlers",
+   "kind": "person",
+   "role_or_office": "Deputy editor-in-chief, Der Spiegel",
+   "country": "DE",
+   "role_claim": {
+    "source_id": "h1960_06",
+    "evidence_quote": "Conrad Ahlers, the author of the article and the magazine’s deputy editor-in-chief, was arrested while on vacation in Spain.",
+    "statement": "Conrad Ahlers was Der Spiegel's deputy editor-in-chief and the author of the article that prompted the raid."
+   }
+  },
+  {
+   "slug": "artur-costa-e-silva",
+   "name": "Artur da Costa e Silva",
+   "kind": "person",
+   "role_or_office": "President of Brazil",
+   "country": "BR",
+   "role_claim": {
+    "source_id": "h1960_10",
+    "evidence_quote": "Costa e Silva still President of Brazil.",
+    "statement": "Artur da Costa e Silva was president of Brazil when the Fifth Institutional Act was decreed in December 1968."
+   }
+  },
+  {
+   "slug": "john-patterson",
+   "name": "John Patterson",
+   "kind": "person",
+   "role_or_office": "Governor of Alabama",
+   "country": "US",
+   "role_claim": {
+    "source_id": "h1960_01",
+    "evidence_quote": "upon the demand of Governor John Patterson of Alabama, who asserted that the publication charged him with 'grave misconduct",
+    "statement": "The Supreme Court's opinion identified John Patterson as Governor of Alabama."
+   }
+  },
+  {
+   "slug": "price-daniel",
+   "name": "Price Daniel",
+   "kind": "person",
+   "role_or_office": "Governor of Texas",
+   "country": "US"
+  }
+ ],
+ "outlets": [
+  {
+   "slug": "der-spiegel",
+   "name": "Der Spiegel",
+   "kind": "magazine",
+   "country": "DE"
+  }
+ ],
+ "sources": [
+  {
+   "id": "h1960_01",
+   "url": "https://www.law.cornell.edu/supremecourt/text/376/254",
+   "title": "New York Times Co. v. Sullivan, 376 U.S. 254 (1964)",
+   "publisher": "Cornell Law School, Legal Information Institute",
+   "kind": "court_record",
+   "published_on": "1964-03-09"
+  },
+  {
+   "id": "h1960_02",
+   "url": "https://firstamendment.mtsu.edu/article/new-york-times-co-v-sullivan/",
+   "title": "New York Times Co. v. Sullivan (1964)",
+   "publisher": "The First Amendment Encyclopedia, Middle Tennessee State University",
+   "kind": "reference",
+   "published_on": "2023-08-06"
+  },
+  {
+   "id": "h1960_03",
+   "url": "https://www.law.cornell.edu/supremecourt/text/381/532",
+   "title": "Estes v. Texas, 381 U.S. 532 (1965)",
+   "publisher": "Cornell Law School, Legal Information Institute",
+   "kind": "court_record",
+   "published_on": "1965-06-07"
+  },
+  {
+   "id": "h1960_04",
+   "url": "https://firstamendment.mtsu.edu/article/estes-v-texas/",
+   "title": "Estes v. Texas (1965)",
+   "publisher": "The First Amendment Encyclopedia, Middle Tennessee State University",
+   "kind": "reference",
+   "published_on": "2023-08-06"
+  },
+  {
+   "id": "h1960_06",
+   "url": "https://germanhistorydocs.org/en/two-germanies-1961-1989/democracy-in-jeopardy-october-29-1962",
+   "title": "Democracy in Jeopardy? (October 29, 1962)",
+   "publisher": "German History in Documents and Images, German Historical Institute Washington",
+   "kind": "primary_document",
+   "published_on": "1962-10-29"
+  },
+  {
+   "id": "h1960_07",
+   "url": "https://germanhistorydocs.org/en/two-germanies-1961-1989/munich-demonstration-for-freedom-of-the-press-in-response-to-the-spiegel-affair-c-october-november-1962",
+   "title": "Munich Demonstration for Freedom of the Press in Response to the Spiegel Affair (c. October/November 1962)",
+   "publisher": "German History in Documents and Images, German Historical Institute Washington",
+   "kind": "reference",
+   "published_on": "1962-11"
+  },
+  {
+   "id": "h1960_08",
+   "url": "https://germanhistorydocs.org/en/two-germanies-1961-1989/the-spiegel-affair-and-the-strengths-and-weaknesses-of-german-democracy-november-12-1962",
+   "title": "The Spiegel Affair and the Strengths and Weaknesses of German Democracy (November 12, 1962)",
+   "publisher": "German History in Documents and Images, German Historical Institute Washington",
+   "kind": "primary_document",
+   "published_on": "1962-11-12"
+  },
+  {
+   "id": "h1960_09",
+   "url": "https://history.state.gov/historicaldocuments/frus1964-68v31/d236",
+   "title": "Foreign Relations of the United States, 1964-1968, Volume XXXI, Document 236",
+   "publisher": "Office of the Historian, United States Department of State",
+   "kind": "primary_document",
+   "published_on": "1968-12-14"
+  },
+  {
+   "id": "h1960_10",
+   "url": "https://history.state.gov/historicaldocuments/frus1964-68v31/d240",
+   "title": "Foreign Relations of the United States, 1964-1968, Volume XXXI, Document 240",
+   "publisher": "Office of the Historian, United States Department of State",
+   "kind": "primary_document",
+   "published_on": "1968-12-20"
+  },
+  {
+   "id": "h1960_11",
+   "url": "https://germanhistorydocs.org/en/two-germanies-1961-1989/farewell-to-federal-chancellor-konrad-adenauer-october-15-1963",
+   "title": "Farewell to Chancellor Konrad Adenauer (October 15, 1963)",
+   "publisher": "German History in Documents and Images, German Historical Institute Washington",
+   "kind": "primary_document",
+   "published_on": "1963-10-15"
+  }
+ ]
+}

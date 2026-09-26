@@ -80,6 +80,16 @@ CHALLENGE_MARKERS = [
 ]
 
 
+class _Redirect308(urllib.request.HTTPRedirectHandler):
+    """Python 3.10's urllib does not follow 308 Permanent Redirect; treat it like 301."""
+
+    def http_error_308(self, req, fp, code, msg, headers):
+        return self.http_error_301(req, fp, 301, msg, headers)
+
+
+_OPENER = urllib.request.build_opener(_Redirect308())
+
+
 def build_request(url: str) -> urllib.request.Request:
     return urllib.request.Request(
         url,
@@ -104,7 +114,7 @@ def fetch(url: str, host_last_fetch: Dict[str, float]) -> Dict[str, Any]:
 
     try:
         req = build_request(url)
-        with urllib.request.urlopen(req, timeout=TIER1_TIMEOUT) as resp:
+        with _OPENER.open(req, timeout=TIER1_TIMEOUT) as resp:
             raw = resp.read(1_000_000)
             if resp.headers.get("Content-Encoding") == "gzip":
                 try:
@@ -132,7 +142,14 @@ def fetch(url: str, host_last_fetch: Dict[str, float]) -> Dict[str, Any]:
         }
     except urllib.error.URLError as exc:
         reason = str(exc.reason)
-        kind = "tls_failure" if "certificate" in reason.lower() or "ssl" in reason.lower() else "network_error"
+        low = reason.lower()
+        if "certificate" in low or "ssl" in low:
+            kind = "tls_failure"
+        elif any(m in low for m in ("name or service not known", "nodename nor servname", "no address associated", "name resolution", "refused")):
+            kind = "network_error"
+        else:
+            # Resets, timeouts and proxy errors say nothing about the page itself.
+            kind = "timeout"
         return {"http_status": None, "final_url": url, "body": "", "error": kind, "detail": reason}
     except TimeoutError:
         return {"http_status": None, "final_url": url, "body": "", "error": "timeout"}
@@ -172,10 +189,13 @@ def classify_tier1(
     paywalled, dead, tier2, ambiguous, redirected, live.
     Exposed separately (not just inline) so tests can exercise it directly.
     """
-    if error in ("tls_failure", "network_error", "timeout"):
+    # Spec 6 step 3: failures are 404/410, NXDOMAIN, refused and TLS failure.
+    # A timeout or reset is inconclusive (news sites often stall scripted
+    # clients) and is reported as `error`, which does not count toward dead.
+    if error in ("tls_failure", "network_error"):
         return "dead"
-    if http_status is None:
-        return "dead"
+    if error == "timeout" or http_status is None:
+        return "error"
     if http_status in (404, 410):
         return "dead"
     if http_status in (401, 402):
@@ -185,15 +205,25 @@ def classify_tier1(
     if http_status in (403, 429, 503):
         if has_marker(body, CHALLENGE_MARKERS):
             return "tier2"
-        return "dead"
+        # A bare 403/429/503 is a refusal to serve this client, not evidence
+        # that the page is gone (2026-09-26: Poynter, Parade, Press Gazette
+        # articles that load in a browser were being marked dead).
+        return "error"
     if http_status == 200:
         page_title = extract_title(body)
         overlap = common.title_token_overlap(page_title, source_title) if page_title else 0.0
+        same_url = final_url.rstrip("/") == original_url.rstrip("/")
+        # A reference source that *is* a homepage or section front (an
+        # organisation's site, a court's site) is live when it loads.
+        if same_url and is_homepage_or_section(original_url):
+            return "live"
         if is_homepage_or_section(final_url) or overlap < 0.30:
             return "ambiguous"
         if final_url.rstrip("/") != original_url.rstrip("/"):
             return "redirected"
         return "live"
+    if http_status in (404, 410):
+        return "dead"
     if 300 <= http_status < 400:
         # urllib already followed redirects; a bare 3xx here means the
         # redirect chain ended without a 200 (rare, but treat as ambiguous).
@@ -317,6 +347,10 @@ def run(limit: int, dry_run: bool, base: Optional[str], all_sources: bool) -> in
             choice, confidence = jev_page_state(jev, result.get("final_url", url), extract_title(result.get("body", "")), result.get("body", ""))
             if choice and confidence >= 0.80:
                 state = PAGE_STATE_TO_OBSERVED.get(choice, "error")
+                if choice == "homepage" and result.get("final_url", url).rstrip("/") == url.rstrip("/"):
+                    # Still at the cited address: an index or landing page
+                    # cited as a reference, not a soft 404.
+                    state = "live"
                 detail = f"jev:{choice}:{confidence:.2f}"
             else:
                 state = "error"
