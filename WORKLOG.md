@@ -935,7 +935,8 @@ Unattended run from the Cowork sandbox (device_bash). `linkcheck.py --all` drive
   sources; every evidence_quote verified verbatim against the fetched page (cloud curl) and lint-clean against
   site/src/lint.js before load. 1900s has 2 (no fetchable non-US sources found), 1920s 3 (Milwaukee Leader 1921
   dropped as a duplicate), 1940s 3 (AP v. United States antitrust dropped: not an action against journalism).
-  New actors and outlets created and published without claims; affected people are not linked as actors.
+  New actors and outlets created and published without claims. "Who acted" relinked after load: only officials
+  and bodies that acted; affected journalists and defendants (Daniloff, Morison, Ivcher, Sheremet and others) removed.
 - **Before 1900.** Explainer `press-control-before-1900` (10 briefs, 1643 to 1878, 16 sources, quotes verified).
   Linked from /eras. Header tagline now "How governments have limited journalists, from the first press laws to
   today."; masthead descriptor and home definition updated. Deployed.
