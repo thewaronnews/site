@@ -881,3 +881,33 @@ Unattended run from the Cowork sandbox (device_bash). `linkcheck.py --all` drive
 - **Open for Peter.** (1) 19 sources now marked dead; list in ops/logs/linkcheck-2026-09-{23,24,25}.jsonl. Review
   for replacement or archived copies. (2) Chrome for unattended runs: select a default browser so Perplexity and
   Search Console steps can run. (3) Add a PI briefing event once filings on or before Oct. 5 appear.
+
+## 2026-09-26 09:32 UTC: scheduled maintenance run (operator)
+
+Unattended run from the Cowork sandbox (device_bash). `linkcheck.py --all` driven in four slices through
+`../.maint-tmp/slice.py` as before. Scripts unchanged.
+
+- **Health (09:32Z).** incidents 191 (190 published), sources 515, claims 736, events 9, link_integrity ok 493 /
+  unchecked 7 / dead 19 / archived 40 (share 0.957). coverage_last_run 09:05Z (fresh, no manual invoke needed):
+  21 feeds, 0 feed errors, fetched 735, fresh 368, scored 2, shown 2. Last export 07:17Z (id 13, daily). After this
+  run: sources 516, claims 737, events 10, link_integrity ok 492 / unchecked 5 / **dead 23** / archived 48 (share 0.953).
+- **Link integrity.** `linkcheck.py --all`, 515 sources checked and posted: live 391, paywalled 45, bot_blocked 5,
+  dead 24, redirected 10, error 40. Dead under the 3-in-48h rule rose from 19 to 23. `wayback.py --all --limit 150
+  --max-failures 10`, two 170 s windows: 15 saved, 5 failed (no run of 10 consecutive failures). `indexnow.py
+  --since-hours 26`: 8 URLs, HTTP 200.
+- **Focal case (Cable News Network, Inc. v. Trump, D.D.C. 1:26-cv-03287).** Perplexity Pro in Peter's Chrome
+  (Browser 1) used, then verified by web fetch; quote checked verbatim against the fetched page. Development
+  (2026-09-25, evening): White House guidance replaced CNN with Real America's Voice News on Air Force One for the
+  2026-09-26 trip to Knoxville, Tennessee; the TRO addressed hard passes and not pool duties. Earlier that day the TV
+  pool resumed with CNN taking part. Source: AP via NPR (source 516). Added claim 737 (field `action`, outlet_report,
+  high) and event 16 (2026-09-25, action, published, claim 737); source attached via PUT /links (rev 30). Status
+  unchanged (`enjoined`); no status claim superseded. Docket (CourtListener): 2026-09-25 pro hac vice motion
+  (routine, not recorded). Correction to the 09-25 entry: per the 09-24 minute order the PI motion is due Sept 28,
+  opposition Oct 2, reply Oct 5.
+- **Coverage sanity.** /coverage.json: 42 items shown; 4 published in the last 24h (ids 320, 324, 319, 286).
+  Nothing plainly off-topic; nothing hidden.
+- **Search Console.** sc-domain:thewaronnews.com: Page indexing still "Processing data". Performance: 1 click,
+  99 impressions, CTR 1%, average position 10.8 (first click). No settings touched. Bing not checked.
+- **Open for Peter.** (1) Dead sources now 23; review list in ops/logs/linkcheck-2026-09-2{4,5,6}.jsonl.
+  (2) Whether the Air Force One exclusion should get its own status claim if the court rules the TRO covers the
+  pool. (3) Add PI motion event once filed (due Sept 28).
