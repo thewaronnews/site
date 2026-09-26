@@ -1,0 +1,182 @@
+[
+  {
+    "incident_slug": "1909-us-panama-canal-libel-prosecutions",
+    "slug": "joseph-pulitzer",
+    "name": "Joseph Pulitzer",
+    "role": "Publisher of the New York World",
+    "outlet_slug": "new-york-world",
+    "relation": "affected",
+    "existing": false
+  },
+  {
+    "incident_slug": "1901-philippines-us-colonial-libel-act-el-renacimiento",
+    "slug": "fidel-reyes",
+    "name": "Fidel Reyes",
+    "role": "Editor of El Renacimiento",
+    "outlet_slug": "el-renacimiento",
+    "relation": "affected",
+    "existing": false
+  },
+  {
+    "incident_slug": "1901-philippines-us-colonial-libel-act-el-renacimiento",
+    "slug": "teodoro-m-kalaw",
+    "name": "Teodoro M. Kalaw",
+    "role": "Co-editor of El Renacimiento",
+    "outlet_slug": "el-renacimiento",
+    "relation": "affected",
+    "existing": false
+  },
+  {
+    "incident_slug": "1901-philippines-us-colonial-libel-act-el-renacimiento",
+    "slug": "martin-ocampo",
+    "name": "Martin Ocampo",
+    "role": "Publisher of El Renacimiento",
+    "outlet_slug": "el-renacimiento",
+    "relation": "affected",
+    "existing": false
+  },
+  {
+    "incident_slug": "1918-us-espionage-act-conviction-of-editor-frohwerk",
+    "slug": "jacob-frohwerk",
+    "name": "Jacob Frohwerk",
+    "role": "Associate editor of the Missouri Staats-Zeitung",
+    "outlet_slug": "missouri-staats-zeitung",
+    "relation": "affected",
+    "existing": false
+  },
+  {
+    "incident_slug": "1918-us-espionage-act-conviction-of-editor-frohwerk",
+    "slug": "carl-gleeser",
+    "name": "Carl Gleeser",
+    "role": "Publisher of the Missouri Staats-Zeitung",
+    "outlet_slug": "missouri-staats-zeitung",
+    "relation": "affected",
+    "existing": false
+  },
+  {
+    "incident_slug": "1917-us-mother-earth-editor-emma-goldman-convicted-magazine-barred-from-mail",
+    "slug": "emma-goldman",
+    "name": "Emma Goldman",
+    "role": "Editor of Mother Earth magazine",
+    "outlet_slug": "mother-earth",
+    "relation": "affected",
+    "existing": false
+  },
+  {
+    "incident_slug": "1913-ottoman-empire-press-law-bars-officials-from-editing-newspapers",
+    "slug": "huseyin-cahid",
+    "name": "Huseyin Cahid",
+    "role": "Editor of Tanin",
+    "outlet_slug": "tanin",
+    "relation": "affected",
+    "existing": false
+  },
+  {
+    "incident_slug": "1925-us-supreme-court-upholds-gitlow-anarchy-conviction",
+    "slug": "benjamin-gitlow",
+    "name": "Benjamin Gitlow",
+    "role": "Publisher of The Revolutionary Age",
+    "outlet_slug": "the-revolutionary-age",
+    "relation": "affected",
+    "existing": false
+  },
+  {
+    "incident_slug": "1942-us-chicago-tribune-midway-espionage-act",
+    "slug": "stanley-johnston",
+    "name": "Stanley Johnston",
+    "role": "War correspondent for the Chicago Tribune",
+    "outlet_slug": "chicago-tribune",
+    "relation": "affected",
+    "existing": false
+  },
+  {
+    "incident_slug": "1953-us-wechsler-mccarthy-subpoena",
+    "slug": "james-wechsler",
+    "name": "James Wechsler",
+    "role": "Editor of the New York Post",
+    "outlet_slug": "new-york-post-historical",
+    "relation": "affected",
+    "existing": false
+  },
+  {
+    "incident_slug": "1962-west-germany-spiegel-affair-raid-and-arrests",
+    "slug": "rudolf-augstein",
+    "name": "Rudolf Augstein",
+    "role": "Publisher of Der Spiegel",
+    "outlet_slug": "der-spiegel",
+    "relation": "affected",
+    "existing": false
+  },
+  {
+    "incident_slug": "1962-west-germany-spiegel-affair-raid-and-arrests",
+    "slug": "conrad-ahlers",
+    "name": "Conrad Ahlers",
+    "role": "Deputy editor-in-chief of Der Spiegel",
+    "outlet_slug": "der-spiegel",
+    "relation": "affected",
+    "existing": false
+  },
+  {
+    "incident_slug": "1977-south-africa-world-newspaper-banned-qoboza-detained",
+    "slug": "percy-qoboza",
+    "name": "Percy Qoboza",
+    "role": "Editor of The World",
+    "outlet_slug": "the-world",
+    "relation": "affected",
+    "existing": false
+  },
+  {
+    "incident_slug": "1977-south-africa-world-newspaper-banned-qoboza-detained",
+    "slug": "aggrey-klaaste",
+    "name": "Aggrey Klaaste",
+    "role": "News editor of Weekend World",
+    "outlet_slug": "weekend-world",
+    "relation": "affected",
+    "existing": false
+  },
+  {
+    "incident_slug": "1989-us-panama-press-pool-restricted",
+    "slug": "fred-francis",
+    "name": "Fred Francis",
+    "role": "NBC News correspondent",
+    "outlet_slug": "nbc-news",
+    "relation": "affected",
+    "existing": false
+  },
+  {
+    "incident_slug": "1986-ussr-daniloff-moscow-arrest",
+    "slug": "nicholas-daniloff",
+    "name": "Nicholas Daniloff",
+    "role": "Moscow correspondent for U.S. News & World Report",
+    "outlet_slug": "us-news-and-world-report",
+    "relation": "affected",
+    "existing": false
+  },
+  {
+    "incident_slug": "1990-us-butterworth-v-smith-grand-jury-secrecy",
+    "slug": "michael-smith",
+    "name": "Michael Smith",
+    "role": "Reporter for the Charlotte Herald-News",
+    "outlet_slug": "charlotte-herald-news",
+    "relation": "plaintiff",
+    "existing": false
+  },
+  {
+    "incident_slug": "1997-pe-ivcher-stripped-of-citizenship",
+    "slug": "baruch-ivcher",
+    "name": "Baruch Ivcher",
+    "role": "Owner of Frecuencia Latina-Canal 2",
+    "outlet_slug": "frecuencia-latina",
+    "relation": "affected",
+    "existing": false
+  },
+  {
+    "incident_slug": "1997-by-sheremet-imprisoned-for-ort-reporting",
+    "slug": "pavel-sheremet",
+    "name": "Pavel Sheremet",
+    "role": "Bureau chief for ORT",
+    "outlet_slug": "ort",
+    "relation": "affected",
+    "existing": false
+  }
+]

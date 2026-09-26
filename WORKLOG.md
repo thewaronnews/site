@@ -944,3 +944,14 @@ Unattended run from the Cowork sandbox (device_bash). `linkcheck.py --all` drive
 - **Open for Peter.** (1) Pre-1900 briefs cover Europe and North America only (Asian and other sources were not
   fetchable from the sandbox). (2) Gitlow and Lovell use the Supreme Court date, not the earlier state action.
   (3) Affected journalists in the new incidents are named in text but not yet linked as journalist records.
+
+## 2026-09-26 (evening): journalists linked for the historical incidents
+
+- 20 journalist records created and published (`site/tools/link-historical-journalists-2026-09-26.py`, map in
+  `content-sources/research-v4/journalists-map.json`) and linked to 15 of the 36 new incidents, with outlet at the
+  time where the outlet exists (e.g. Pulitzer/New York World, Augstein and Ahlers/Der Spiegel, Qoboza and Klaaste/
+  The World, Daniloff, Sheremet, Ivcher; Michael Smith as plaintiff). The other 21 incidents name no individual
+  journalist.
+- 16 actor records created earlier today for affected people (and 3 unlinked others: Morison, Noriega, Jack
+  Ashley, Bill Clinton, Communist Party of Canada) withdrawn; they were not actors in the incidents.
+- Peter: pre-1900 coverage of Europe and North America is fine as is.
