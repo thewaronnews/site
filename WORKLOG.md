@@ -955,3 +955,33 @@ Unattended run from the Cowork sandbox (device_bash). `linkcheck.py --all` drive
 - 16 actor records created earlier today for affected people (and 3 unlinked others: Morison, Noriega, Jack
   Ashley, Bill Clinton, Communist Party of Canada) withdrawn; they were not actors in the incidents.
 - Peter: pre-1900 coverage of Europe and North America is fine as is.
+
+## 2026-09-27 09:32 UTC: scheduled maintenance run (operator)
+
+Unattended run from the Cowork sandbox (device_bash). `linkcheck.py --all` driven in five slices through
+`../.maint-tmp/slice.py`. Scripts unchanged.
+
+- **Health (09:32Z).** incidents 227 (226 published), sources 618, claims 983, events 12, link_integrity ok 612 /
+  unchecked 6 / dead 0 / archived 51 (share 0.99). coverage_last_run 09:05Z (fresh, no manual invoke needed):
+  21 feeds, 0 feed errors, fetched 734, fresh 368, scored 0, shown 0. Last export 07:20Z (id 14, daily). After this
+  run: sources 620, claims 986, events 13, link_integrity ok 615 / unchecked 5 / dead 0 / archived 55 (share 0.992).
+- **Link integrity.** `linkcheck.py --all`, 618 sources checked and posted: live 494, paywalled 47, bot_blocked 5,
+  dead 1 (single failure; not dead under the 3-in-48h rule), redirected 22, error 49. `wayback.py --all --limit 150
+  --max-failures 10`, two 170 s windows: 7 saved, 11 failed (no run of 10 consecutive failures). `indexnow.py
+  --since-hours 26`: 395 URLs, HTTP 200.
+- **Focal case (Cable News Network, Inc. v. Trump, D.D.C. 1:26-cv-03287).** Perplexity Pro in Peter's Chrome
+  (Browser 1), quotes checked verbatim against the fetched pages. Development (2026-09-26): no TV pool on the Air
+  Force One trip to Tennessee; the other pool networks (CBS, ABC, NBC, Fox News) declined to take CNN's place;
+  Trump posted Truth Social statements on CNN and MS NOW. Sources 619 (AP via Philadelphia Inquirer) and 620 (NPR);
+  claims 984 to 986 (field `action`, outlet_report, high); event 20 (2026-09-26, action, claim 984); sources
+  attached via PUT /links (rev 33; related precedent links intact). Status unchanged (`enjoined`); narrative fields
+  not rewritten. Docket: no Sept 26 or 27 entries found (CourtListener not fetchable directly; per Perplexity, last
+  entries Sept 25). PI motion still due Sept 28.
+- **Coverage sanity.** /coverage.json: 46 items shown; only 1 published in the last 24h (id 329, CPJ on Hamdi
+  al-Zaeem), below the 3-item threshold; the cron scored and showed 0 new items this pass. Nothing plainly
+  off-topic; nothing hidden.
+- **Search Console.** sc-domain:thewaronnews.com: Page indexing still "Processing data". Performance (data through
+  09-24): 5 clicks, 656 impressions, CTR 0.8%, average position 9.8. No settings touched. Bing not checked.
+- **Open for Peter.** (1) Coverage intake is thin: 0 new items scored on the last cron pass and 1 in 24h; check
+  whether feeds or scoring threshold need attention. (2) Summary and effect_on_reporting still stop at 2026-09-25;
+  update once the PI motion (due Sept 28) is filed.
