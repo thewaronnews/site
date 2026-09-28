@@ -985,3 +985,34 @@ Unattended run from the Cowork sandbox (device_bash). `linkcheck.py --all` drive
 - **Open for Peter.** (1) Coverage intake is thin: 0 new items scored on the last cron pass and 1 in 24h; check
   whether feeds or scoring threshold need attention. (2) Summary and effect_on_reporting still stop at 2026-09-25;
   update once the PI motion (due Sept 28) is filed.
+
+## 2026-09-28 09:32 UTC: scheduled maintenance run (operator)
+
+Unattended run from the Cowork sandbox (device_bash). `linkcheck.py --all` driven in five slices through
+`../.maint-tmp/slice.py`; focal-case writes through `../.maint-tmp/focal8.py`. Scripts unchanged.
+
+- **Health (09:32Z).** incidents 227 (226 published), sources 620, claims 986, events 13, link_integrity ok 615 /
+  unchecked 5 / dead 0 / archived 55 (share 0.992). coverage_last_run 09:05Z (fresh, no manual invoke needed):
+  21 feeds, 0 feed errors, fetched 727, fresh 356, scored 0, shown 0. Last export 07:19Z (id 15, daily). After this
+  run: sources 622, claims 988, events 15, link_integrity ok 617 / unchecked 5 / dead 0 / archived 55.
+- **Link integrity.** `linkcheck.py --all`, 620 sources checked and posted: live 498, paywalled 47, bot_blocked 5,
+  dead 1 (single failure; not dead under the 3-in-48h rule), redirected 21, error 48. `wayback.py --all --limit 150
+  --max-failures 10`, two 170 s windows: 0 saved, 16 failed, 26 availability-API errors (no run of 10 consecutive
+  failures; archive.org effectively unavailable this run). `indexnow.py --since-hours 26`: 11 URLs, HTTP 200.
+- **Focal case (Cable News Network, Inc. v. Trump, D.D.C. 1:26-cv-03287).** Perplexity Pro in Peter's Chrome
+  (Browser 1); quotes copied from the source pages in Chrome (direct fetch from the sandbox: Politico 403, WaPo
+  timeout). Developments 2026-09-27: (a) Attorney General Todd Blanche on ABC's This Week called press access to the
+  White House and Air Force One a "privilege" (Politico; source 621, claim 987 field `stated_justification`, event 21
+  `statement`); (b) a network TV camera crew filmed the president's public events again (Washington Post; source 622,
+  claim 988 field `action`, event 22 `action`). Sources attached via PUT /links (rev 34). Status unchanged
+  (`enjoined`, TRO of Sept 24). Docket: no Sept 26 to 28 entries visible (CourtListener last updated Sept 27 per
+  Perplexity); PI motion due today (Sept 28), not yet confirmed filed. Note: a source POST first went through before
+  a claim 422 (field `statement` not in allowlist); source POST is idempotent by URL, so no duplicate.
+- **Coverage sanity.** /coverage.json: 47 items shown; only 1 published in the last 24h (id 341, Blanche on
+  access), below the 3-item threshold; the cron scored and showed 0 new items this pass. Nothing plainly
+  off-topic; nothing hidden.
+- **Search Console.** sc-domain:thewaronnews.com: Page indexing still "Processing data". Performance (Sept 21 to
+  25): 7 clicks, 1.22K impressions, CTR 0.6%, average position 9.9, 74 queries. No settings touched. Bing not checked.
+- **Open for Peter.** (1) Coverage intake still thin (0 scored on the last cron pass for a second day, 1 item in
+  24h); feeds or scoring threshold likely need a look. (2) Wayback saved nothing in two windows. (3) Check
+  tomorrow whether the PI motion was filed Sept 28; update summary and effect_on_reporting then.
