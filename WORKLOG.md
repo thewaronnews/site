@@ -1070,3 +1070,9 @@ Unattended run from the Cowork sandbox (device_bash). `linkcheck.py --all` drive
   peterbenes@gmail.com); with authuser=betty@benesthemenace.com it works. Page indexing still "Processing data";
   sitemap.xml read Sept 29, success, 4,447 discovered pages. Routine prompt updated to use the authuser URL, the
   correct mount path ($HOME/mnt/thewaronnews.com), the deploy SECRETS_FILE note, and the stale git-lock workaround.
+- **Chrome and Search Console, corrected.** Peter: use the Betty Mac Studio Chrome (Browser 2 in
+  list_connected_browsers), not Browser 1. There the property opens with no authuser parameter. New finding: GSC
+  Enhancements showed Datasets 1 valid / 80 invalid (missing "description"; warnings "license", "creator"). Cause:
+  every incident Article carried isPartOf as a typed Dataset stub. Now isPartOf references `/data#dataset` by @id
+  and the /data Dataset carries that @id (site/src/jsonld.js, deployed, verified live). Breadcrumbs 1,558 valid,
+  Events 80 valid. "Validate fix" in GSC not clicked; Peter can start it.

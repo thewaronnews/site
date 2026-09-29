@@ -90,7 +90,9 @@ export function incidentLd(full) {
     license: LICENSE_URL,
     about,
     citation: (full.sources || []).map((s) => ({ "@type": "CreativeWork", name: s.title, url: s.url, publisher: s.publisher })),
-    isPartOf: { "@type": "Dataset", name: SITE_NAME, url: `${SITE_ORIGIN}/data` },
+    // Reference by @id only: a typed stub here made Google count each incident
+    // page as an invalid Dataset (missing description, 80 items, 2026-09-29).
+    isPartOf: { "@id": `${SITE_ORIGIN}/data#dataset` },
   };
 }
 
@@ -202,6 +204,7 @@ export function datasetLd(lastExport) {
   return {
     "@context": CTX,
     "@type": "Dataset",
+    "@id": `${SITE_ORIGIN}/data#dataset`,
     name: SITE_NAME,
     description: `${SITE_SUBTITLE} Incidents, events, actors, outlets, journalists, cases, sources, claims, tactics and countries, exported nightly as a Frictionless Data Package.`,
     url: `${SITE_ORIGIN}/data`,
