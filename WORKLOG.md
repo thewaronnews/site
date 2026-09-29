@@ -1016,3 +1016,33 @@ Unattended run from the Cowork sandbox (device_bash). `linkcheck.py --all` drive
 - **Open for Peter.** (1) Coverage intake still thin (0 scored on the last cron pass for a second day, 1 item in
   24h); feeds or scoring threshold likely need a look. (2) Wayback saved nothing in two windows. (3) Check
   tomorrow whether the PI motion was filed Sept 28; update summary and effect_on_reporting then.
+
+## 2026-09-29 09:35 UTC: scheduled maintenance run (operator)
+
+Unattended run from the Cowork sandbox (device_bash). `linkcheck.py --all` driven in five slices through
+`../.maint-tmp/slice.py`; focal-case writes through `../.maint-tmp/focal9.py`. Scripts unchanged.
+
+- **Health (09:35Z).** incidents 227 (226 published), sources 622, claims 988, events 15, link_integrity ok 617 /
+  unchecked 5 / dead 0 / archived 55 (share 0.992). coverage_last_run 09:05Z (fresh, no manual invoke needed):
+  21 feeds, 0 feed errors, fetched 730, fresh 300, scored 0, shown 0. Last export 07:19Z (id 16, daily). After this
+  run: sources 623, claims 990, events 16.
+- **Link integrity.** `linkcheck.py --all`, 622 sources checked and posted: live 497, paywalled 47, bot_blocked 5,
+  dead 1 (single failure; not dead under the 3-in-48h rule), redirected 22, error 50. `wayback.py --all --limit 150
+  --max-failures 10`, one 170 s window: 0 saved, 8 failed, 11 availability-API errors (no run of 10 consecutive
+  failures; archive.org still effectively unavailable). `indexnow.py --since-hours 26`: 10 URLs, HTTP 200.
+- **Focal case (Cable News Network, Inc. v. Trump, D.D.C. 1:26-cv-03287).** Perplexity Pro in Peter's Chrome
+  (Browser 1); quotes copied from the source pages. Development 2026-09-28: plaintiffs (CNN, MS NOW, Politico and
+  reporters Akayla Gardner, Cheyenne Haslett, Betsy Klein) filed the motion for a preliminary injunction (ECF 32).
+  Claim 989 (source 105, CourtListener docket, field `action`), claim 990 (source 623, CNN, TRO expires Oct 8),
+  event 23 `filing`. Sources attached via PUT /links (rev 35). Status unchanged (`enjoined`, TRO of Sept 24, expires
+  Oct 8). Schedule per CNN: government response due Oct 2, reply Oct 5, no hearing date set. Not recorded (procedural):
+  pro hac vice order for Patrick J. Fuster, $1.00 TRO bond deposit. Perplexity mentioned a White House email giving CNN
+  a TV-pool slot Thursday; unverified, not recorded.
+- **Coverage sanity.** /coverage.json: 51 items shown; 4 published in the last 24h (ids 346, 347, 350, 353), meets
+  the 3-item threshold, though the cron again scored 0 new items this pass (third day). Nothing plainly off-topic;
+  nothing hidden.
+- **Search Console.** sc-domain:thewaronnews.com (needed `authuser=betty@benesthemenace.com`; Chrome default account
+  is a different one). Page indexing still "Processing data". Performance (Sept 21 to 26): 7 clicks, 1.65K
+  impressions, CTR 0.4%, average position 10.1. No settings touched. Bing not checked.
+- **Open for Peter.** (1) Cron scoring 0 for a third day while items still appear; check feeds/scoring. (2) Wayback
+  saved nothing again. (3) Update summary and effect_on_reporting with the PI motion; watch for the Oct 2 response.

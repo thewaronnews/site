@@ -1,0 +1,20 @@
+{"count": 150, "dry_run": false, "event": "start", "mode": "all", "script": "wayback", "ts": "2026-09-29T09:46:43Z"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-29T09:46:43Z", "url": "https://www.axios.com/2025/10/14/pentagon-press-restrictions-trump-journalists-news-outlets"}
+{"event": "failed", "script": "wayback", "source_id": 30, "ts": "2026-09-29T09:46:50Z", "url": "https://www.axios.com/2025/10/14/pentagon-press-restrictions-trump-journalists-news-outlets"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-29T09:46:58Z", "url": "https://www.pogo.org/analyses/six-americans-obama-and-holder-charged-under-espionage-act-and-one-bonus-whistleblower"}
+{"event": "failed", "script": "wayback", "source_id": 45, "ts": "2026-09-29T09:47:11Z", "url": "https://www.pogo.org/analyses/six-americans-obama-and-holder-charged-under-espionage-act-and-one-bonus-whistleblower"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-29T09:47:20Z", "url": "https://freedom.press/issues/judge-reinstates-acosta-press-pass/"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-29T09:47:39Z", "url": "https://freedom.press/issues/judge-reinstates-acosta-press-pass/"}
+{"event": "failed", "script": "wayback", "source_id": 46, "ts": "2026-09-29T09:47:39Z", "url": "https://freedom.press/issues/judge-reinstates-acosta-press-pass/"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-29T09:47:48Z", "url": "https://news.yahoo.com/white-house-restores-jim-acosta-212020316.html"}
+{"event": "failed", "script": "wayback", "source_id": 48, "ts": "2026-09-29T09:47:54Z", "url": "https://news.yahoo.com/white-house-restores-jim-acosta-212020316.html"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-29T09:48:03Z", "url": "https://ifex.org/2026-rsf-index-press-freedom-at-a-25-year-low/"}
+{"event": "failed", "script": "wayback", "source_id": 51, "ts": "2026-09-29T09:48:09Z", "url": "https://ifex.org/2026-rsf-index-press-freedom-at-a-25-year-low/"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-29T09:48:18Z", "url": "https://rsf.org/en/hungary-s-sovereignty-law-viktor-orban-s-new-dangerous-provocation-targeting-independent-media"}
+{"event": "failed", "script": "wayback", "source_id": 54, "ts": "2026-09-29T09:48:24Z", "url": "https://rsf.org/en/hungary-s-sovereignty-law-viktor-orban-s-new-dangerous-provocation-targeting-independent-media"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-29T09:48:33Z", "url": "https://cpj.org/2026/07/hungarys-initial-media-reforms-are-promising-but-lasting-safeguards-still-needed/"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-29T09:48:52Z", "url": "https://cpj.org/2026/07/hungarys-initial-media-reforms-are-promising-but-lasting-safeguards-still-needed/"}
+{"event": "failed", "script": "wayback", "source_id": 55, "ts": "2026-09-29T09:48:52Z", "url": "https://cpj.org/2026/07/hungarys-initial-media-reforms-are-promising-but-lasting-safeguards-still-needed/"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-29T09:49:01Z", "url": "https://www.ecpmf.eu/hungary-media-freedom-remains-in-crisis-mode-ahead-of-2026-elections/"}
+{"error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-29T09:49:32Z", "url": "https://www.ecpmf.eu/hungary-media-freedom-remains-in-crisis-mode-ahead-of-2026-elections/"}
+{"event": "failed", "script": "wayback", "source_id": 56, "ts": "2026-09-29T09:49:32Z", "url": "https://www.ecpmf.eu/hungary-media-freedom-remains-in-crisis-mode-ahead-of-2026-elections/"}
