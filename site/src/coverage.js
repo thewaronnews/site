@@ -313,10 +313,13 @@ export async function jevClassify(env, state) {
 
 // ---------- the hourly job ----------
 
-const PRESS_RE = /\b(journalists?|reporters?|press|media|newspapers?|broadcasters?|outlets?|correspondents?|editors?|news agency|photojournalists?|bloggers?|publishers?|newsrooms?|radio|television|tv)\b/gi;
-const STATE_RE = /\b(government|authorities|police|court|judge|ministry|minister|law|bill|arrest(ed|s)?|detain(ed|s)?|jail(ed)?|prison|sentenced|charged|ban(s|ned)?|barred|revok(e|ed|es)|expel(led|s)?|deport(ed)?|licen[cs]e|regulator|president|prime minister|parliament|congress|sued|lawsuit|subpoena|raid(ed)?|seiz(e|ed)|block(ed|s)?|shut(down| down)|visa|accreditation|credentials?|pentagon|white house|kremlin|junta|military|security forces|spyware|surveillance|agent)\b/gi;
+// Plurals and inflections matter: "Subpoenas", "Judges" and "lawsuits" used to
+// miss the screen (2026-09-29 fix), as did headlines naming an outlet rather
+// than "press" ("CNN barred from ...").
+const PRESS_RE = /\b(journalists?|journalism|reporters?|reporting|press|media|newspapers?|broadcasters?|outlets?|correspondents?|editors?|news agenc(y|ies)|news organi[sz]ations?|photojournalists?|photographers?|bloggers?|publishers?|newsrooms?|radio|television|tv|writers?|columnists?|cartoonists?|podcasters?|cnn|politico|ms ?now|msnbc|bbc|al jazeera|reuters|associated press|ap news|new york times|washington post|voice of america|voa|radio free \w+)\b/gi;
+const STATE_RE = /\b(governments?|authorities|police|courts?|judges?|judicial|ministry|ministers?|laws?|bills?|acts? amendments?|amendments?|decrees?|arrest(ed|s|ing)?|detain(ed|s|ing)?|detention|jail(ed|s)?|prisons?|imprison(ed|ment)?|sentenc(ed|es|ing)|charged|charges|indict(ed|ment|s)?|prosecut(e|ed|ion|ors?)|ban(s|ned|ning)?|barred|bars|revok(e|ed|es)|revocation|expel(led|s)?|expulsion|deport(ed|ation)?|licen[cs]es?|regulators?|president|prime minister|parliament|congress|senate|legislat(ure|ion|ors?)|sued|sues|suing|lawsuits?|subpoena(s|ed)?|raid(ed|s)?|seiz(e|ed|ure)|block(ed|s|ing)?|shut(down| down)|visas?|accreditation|credentials?|pentagon|white house|kremlin|junta|military|army|security forces|spyware|surveillance|agents?|officials?|politicians?|lawmakers?|crackdown|censor(ed|s|ship)?|sedition|defamation|libel|espionage|cyber ?(crime|security)|regime|ice|fbi|doj|justice department|attorney general|state department|governor|mayor|attacks? on)\b/gi;
 
-function prefilterScore(text) {
+export function prefilterScore(text) {
   const t = String(text || "");
   const p = (t.match(PRESS_RE) || []).length;
   const g = (t.match(STATE_RE) || []).length;

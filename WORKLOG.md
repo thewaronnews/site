@@ -1046,3 +1046,27 @@ Unattended run from the Cowork sandbox (device_bash). `linkcheck.py --all` drive
   impressions, CTR 0.4%, average position 10.1. No settings touched. Bing not checked.
 - **Open for Peter.** (1) Cron scoring 0 for a third day while items still appear; check feeds/scoring. (2) Wayback
   saved nothing again. (3) Update summary and effect_on_reporting with the PI motion; watch for the Oct 2 response.
+
+## 2026-09-29 ~12:30 UTC: follow-up fixes (Peter asked to address the open items)
+
+- **Coverage intake (site/src/coverage.js, deployed).** "Scored 0" was only the latest hourly pass; intake was
+  steady (Sept 28: 22 items fetched, 4 shown). The real gap was the keyword pre-screen: it matched only singular
+  forms ("subpoena", "judge", "lawsuit") and needed the word "press"-style terms, so headlines like "ICE's Secret
+  Subpoenas Bypass Judges ..." and "CNN barred from Trump's Air Force One flight" never reached Jev. PRESS_RE and
+  STATE_RE now accept plurals/inflections, outlet names (CNN, Politico, MS NOW, BBC, Reuters, AP ...) and terms such
+  as crackdown, censorship, officials, defamation, sedition. Re-scored the keyword-screened hidden items since
+  Sept 25 with the same Jev question; 3 cleared 0.8 and were shown (ids 356, 362, 364). deploy.sh run
+  (SECRETS_FILE=../../secrets.env; it looks for ../secrets.env by default). Dry-run cron after deploy: no errors.
+- **Wayback (ops/wayback.py).** Cause: the availability API answered 429 for most URLs, and save_simple treated
+  a 429 as success and then re-queried the same availability API, so every source failed; the same unarchivable
+  URLs (axios, pogo, one CourtListener docket: HTTP 520) headed the queue every run. Now: https availability
+  endpoint, a 429 there skips straight to the save, the snapshot URL is read from Save Page Now's 302 redirect,
+  a save 429 waits once (Retry-After, max 120 s), and --all orders by archive_attempts. Test batch: 5 saved of 8.
+  567 of 622 sources still lack a snapshot.
+- **Focal incident text.** what_happened gains Sept 26 to 28 paragraphs (claims 984, 987, 988, 989, 990);
+  "Status as of 2026-09-29" notes the TRO runs to 2026-10-08 and the PI motion; summary and effect_on_reporting
+  updated (revision 36).
+- **Search Console.** Peter's URL without authuser lands on "no access" (Chrome default account is
+  peterbenes@gmail.com); with authuser=betty@benesthemenace.com it works. Page indexing still "Processing data";
+  sitemap.xml read Sept 29, success, 4,447 discovered pages. Routine prompt updated to use the authuser URL, the
+  correct mount path ($HOME/mnt/thewaronnews.com), the deploy SECRETS_FILE note, and the stale git-lock workaround.

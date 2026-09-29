@@ -45,6 +45,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import os
 import sys
 import time
@@ -57,7 +58,9 @@ sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent))
 import common  # noqa: E402
 
 SCRIPT = "wayback"
-AVAILABLE_URL = "http://archive.org/wayback/available"
+AVAILABLE_URL = "https://archive.org/wayback/available"
+RATE_LIMIT_BACKOFF = 45  # seconds to wait once after an archive.org 429 (2026-09-29)
+SNAPSHOT_RE = re.compile(r"^https?://web\.archive\.org/web/\d{14}[^/]*/")
 SAVE_URL = "https://web.archive.org/save/"
 SPN2_URL = "https://web.archive.org/save"
 SPN2_STATUS_URL = "https://web.archive.org/save/status/"
@@ -73,17 +76,33 @@ def _get_json(url: str, headers: Optional[dict] = None, timeout: float = 20.0) -
         return json.loads(resp.read().decode("utf-8"))
 
 
+def _retry_after(exc: urllib.error.HTTPError) -> float:
+    try:
+        return min(float(exc.headers.get("Retry-After") or RATE_LIMIT_BACKOFF), 120.0)
+    except (TypeError, ValueError):
+        return float(RATE_LIMIT_BACKOFF)
+
+
 def check_available(url: str) -> Optional[Dict[str, Any]]:
     """Query the availability API. Returns the closest snapshot dict, or
-    None if there isn't one (or under MAX_SNAPSHOT_AGE_DAYS old check is
-    left to the caller, which compares timestamp)."""
+    None if there isn't one or the API refuses (freshness is left to the
+    caller). On 2026-09-29 the availability API was answering 429 for most
+    URLs while Save Page Now itself worked, so a refusal is not fatal."""
     q = urllib.parse.urlencode({"url": url})
-    try:
-        data = _get_json(f"{AVAILABLE_URL}?{q}")
-    except Exception as exc:  # noqa: BLE001
-        common.log(SCRIPT, "available_error", url=url, error=str(exc))
-        return None
-    closest = data.get("archived_snapshots", {}).get("closest")
+    data = None
+    for attempt in (1,):
+        try:
+            data = _get_json(f"{AVAILABLE_URL}?{q}")
+            break
+        except urllib.error.HTTPError as exc:
+            common.log(SCRIPT, "available_error", url=url, error=str(exc), attempt=attempt)
+            # A 429 here is not worth waiting for: the save below returns
+            # the snapshot URL itself, so skip the lookup and go straight on.
+            return None
+        except Exception as exc:  # noqa: BLE001
+            common.log(SCRIPT, "available_error", url=url, error=str(exc), attempt=attempt)
+            return None
+    closest = (data or {}).get("archived_snapshots", {}).get("closest")
     if closest and closest.get("available"):
         return closest
     return None
@@ -99,23 +118,33 @@ def snapshot_is_fresh(snapshot: Dict[str, Any]) -> bool:
     return age_days <= MAX_SNAPSHOT_AGE_DAYS
 
 
-def save_simple(url: str) -> bool:
-    """GET https://web.archive.org/save/<url>. Returns True on apparent
-    success (2xx/3xx); does not itself return the snapshot URL -- caller
-    re-queries the availability API."""
+def save_simple(url: str) -> Optional[str]:
+    """GET https://web.archive.org/save/<url>. Save Page Now answers with a
+    302 whose Location is the new snapshot (x-location: save-sync), so the
+    snapshot URL is read from the redirect instead of re-querying the
+    availability API. Returns the snapshot URL, "" on apparent success with
+    no URL, or None on failure. A 429 waits once and retries."""
     target = SAVE_URL + url
-    req = urllib.request.Request(target, headers={"User-Agent": SAVE_UA})
-    try:
-        with urllib.request.urlopen(req, timeout=SAVE_TIMEOUT) as resp:
-            return 200 <= resp.status < 400
-    except urllib.error.HTTPError as exc:
-        # Save Page Now often 302s through a job page, and 429 usually
-        # means "already captured / try the availability API"; treat both
-        # as soft successes. Anything else is a failure.
-        return exc.code in (302, 429)
-    except Exception as exc:  # noqa: BLE001
-        common.log(SCRIPT, "save_simple_error", url=url, error=str(exc))
-        return False
+    for attempt in (1, 2):
+        req = urllib.request.Request(target, headers={"User-Agent": SAVE_UA})
+        try:
+            with urllib.request.urlopen(req, timeout=SAVE_TIMEOUT) as resp:
+                final = resp.geturl() or ""
+                if SNAPSHOT_RE.match(final):
+                    return final
+                return "" if 200 <= resp.status < 400 else None
+        except urllib.error.HTTPError as exc:
+            loc = exc.headers.get("Location") or ""
+            if SNAPSHOT_RE.match(loc):
+                return loc
+            common.log(SCRIPT, "save_simple_error", url=url, error=str(exc), attempt=attempt)
+            if exc.code != 429 or attempt == 2:
+                return None
+            time.sleep(_retry_after(exc))
+        except Exception as exc:  # noqa: BLE001
+            common.log(SCRIPT, "save_simple_error", url=url, error=str(exc), attempt=attempt)
+            return None
+    return None
 
 
 def save_spn2(url: str, access_key: str, secret_key: str) -> bool:
@@ -190,7 +219,10 @@ def archive_one(url: str) -> Optional[Dict[str, str]]:
     if access_key and secret_key:
         ok = save_spn2(url, access_key, secret_key)
     else:
-        ok = save_simple(url)
+        saved = save_simple(url)
+        if saved:
+            return {"wayback_url": _as_https_web_archive(saved), "wayback_saved_at": common.iso_now()}
+        ok = saved is not None
 
     if not ok:
         return None
@@ -217,7 +249,10 @@ def run_batch(limit: int, dry_run: bool, base: Optional[str], max_failures: int,
     client = common.AdminClient("TWON_TOKEN_FILE_TRIAGE", base_url=base)
     if all_sources:
         all_rows = fetch_all_sources_from_export(base)
-        sources = [s for s in all_rows if not s.get("wayback_url")][:limit]
+        # Least-attempted first, so sources that always fail (sites that
+        # refuse archive.org) stop eating every run's window (2026-09-29).
+        sources = sorted((s for s in all_rows if not s.get("wayback_url")),
+                         key=lambda s: (s.get("archive_attempts") or 0, s.get("id") or 0))[:limit]
         common.log(SCRIPT, "start", count=len(sources), dry_run=dry_run, mode="all")
     else:
         due = client.get(f"/admin/sources/due?limit={limit}") or {"sources": []}
