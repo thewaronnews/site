@@ -1,0 +1,15 @@
+{"count": 150, "dry_run": false, "event": "start", "mode": "all", "script": "wayback", "ts": "2026-09-30T09:46:21Z"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-30T09:46:22Z", "url": "https://www.law.cornell.edu/uscode/text/18/793"}
+{"event": "saved", "script": "wayback", "source_id": 92, "ts": "2026-09-30T09:46:41Z", "url": "https://www.law.cornell.edu/uscode/text/18/793", "wayback_url": "https://web.archive.org/web/20260929121458/https://www.law.cornell.edu/uscode/text/18/793"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-30T09:46:50Z", "url": "https://www.rcfp.org/federal-shield-law/"}
+{"event": "saved", "script": "wayback", "source_id": 93, "ts": "2026-09-30T09:47:12Z", "url": "https://www.rcfp.org/federal-shield-law/", "wayback_url": "https://web.archive.org/web/20260930094653/https://www.rcfp.org/federal-shield-law/"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-30T09:47:21Z", "url": "https://www.foia.gov/"}
+{"event": "saved", "script": "wayback", "source_id": 94, "ts": "2026-09-30T09:47:40Z", "url": "https://www.foia.gov/", "wayback_url": "https://web.archive.org/web/20260930094724/https://www.foia.gov/"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-30T09:47:49Z", "url": "https://www.law.cornell.edu/wex/slapp_suit"}
+{"event": "saved", "script": "wayback", "source_id": 95, "ts": "2026-09-30T09:48:08Z", "url": "https://www.law.cornell.edu/wex/slapp_suit", "wayback_url": "https://web.archive.org/web/20260930094753/https://www.law.cornell.edu/wex/slapp_suit"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-30T09:48:17Z", "url": "https://www.fcc.gov/broadcast-news-distortion"}
+{"attempt": 1, "error": "HTTP Error 520: UNKNOWN", "event": "save_simple_error", "script": "wayback", "ts": "2026-09-30T09:48:24Z", "url": "https://www.fcc.gov/broadcast-news-distortion"}
+{"event": "failed", "script": "wayback", "source_id": 96, "ts": "2026-09-30T09:48:24Z", "url": "https://www.fcc.gov/broadcast-news-distortion"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-30T09:48:32Z", "url": "https://en.wikipedia.org/wiki/Corporation_for_Public_Broadcasting"}
+{"event": "saved", "script": "wayback", "source_id": 97, "ts": "2026-09-30T09:48:52Z", "url": "https://en.wikipedia.org/wiki/Corporation_for_Public_Broadcasting", "wayback_url": "https://web.archive.org/web/20260930094836/https://en.wikipedia.org/wiki/Corporation_for_Public_Broadcasting"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-09-30T09:49:00Z", "url": "https://foreignpolicy.com/2025/01/08/trump-media-nixon-pentagon-papers/"}

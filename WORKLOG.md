@@ -1076,3 +1076,25 @@ Unattended run from the Cowork sandbox (device_bash). `linkcheck.py --all` drive
   every incident Article carried isPartOf as a typed Dataset stub. Now isPartOf references `/data#dataset` by @id
   and the /data Dataset carries that @id (site/src/jsonld.js, deployed, verified live). Breadcrumbs 1,558 valid,
   Events 80 valid. "Validate fix" in GSC not clicked; Peter can start it.
+
+## 2026-09-30 ~09:55 UTC: scheduled maintenance
+
+Unattended run from the Cowork sandbox (device_bash). `linkcheck.py --all` driven in five slices through
+`../.maint-tmp/slice.py`; focal-case writes through `../.maint-tmp/focal11.py`.
+
+- **Health.** incidents 227 (226 published), sources 624, claims 991 (975 current), events 17 after this run.
+  coverage_last_run 09:05 UTC (fresh; no manual cron): 21 feeds, 2 feed errors (Google News HTTP 503), 1 scored,
+  0 shown. Intake over 24 h by fetched_at: 20 items fetched. Daily export #17 at 07:18 UTC.
+- **Link integrity.** 623 sources checked: live 497, paywalled 48, bot_blocked 5, redirected 22, error 50, dead 1
+  (source 493, https://cpj.org/about/staff/, flagged dead on HTTP 200, likely a soft-404 rule; review). Health:
+  617 ok, 6 unchecked, 65 archived. Wayback: 5 saved, 1 failed before the 170 s timeout (Save Page Now slow,
+  availability API 429s). IndexNow: 9 URLs, HTTP 200.
+- **Focal case.** Chrome skipped: list_connected_browsers shows deviceId 793b969a... named "Browser 1" and
+  "Browser 2" as 14c579f2...; the routine's name and deviceId disagree, so no browser was selected. Research by
+  WebSearch/WebFetch instead. New: source 624 (TIME, 2026-09-29), claim 991, event 24 (action, 2026-09-29, network
+  TV pool resuming coverage). what_happened paragraph, "Status as of 2026-09-30", summary and effect_on_reporting
+  updated (revision 38). Status unchanged (enjoined; TRO to 2026-10-08; PI motion pending). No docket entries
+  confirmed for Sept 29 to 30 (CourtListener API blocked by robots.txt from the sandbox).
+- **Coverage sanity.** /coverage.json: 57 items; 3 published in the last 24 h (370, 371, 380), meets threshold.
+  Nothing off-topic; nothing hidden.
+- **Search Console.** Skipped (browser identity mismatch above).
