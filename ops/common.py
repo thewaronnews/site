@@ -258,8 +258,14 @@ class JevClient:
             attempt += 1
             try:
                 with urllib.request.urlopen(req, timeout=self.timeout) as resp:
-                    parsed = json.loads(resp.read().decode("utf-8"))
-                    return parsed.get("answers", {})
+                    raw_body = resp.read().decode("utf-8", "replace")
+                try:
+                    parsed = json.loads(raw_body)
+                except ValueError:
+                    # Demo endpoint now 301s to an HTML page (2026-10-01);
+                    # treat a non-JSON reply as a Jev failure, not a fatal.
+                    raise JevError(f"jev classify: non-JSON reply: {raw_body[:120]!r}") from None
+                return parsed.get("answers", {})
             except urllib.error.HTTPError as exc:
                 raw = exc.read().decode("utf-8", "replace")
                 if exc.code == 429 and attempt <= 3:

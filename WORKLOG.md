@@ -1098,3 +1098,35 @@ Unattended run from the Cowork sandbox (device_bash). `linkcheck.py --all` drive
 - **Coverage sanity.** /coverage.json: 57 items; 3 published in the last 24 h (370, 371, 380), meets threshold.
   Nothing off-topic; nothing hidden.
 - **Search Console.** Skipped (browser identity mismatch above).
+
+## 2026-10-01 ~09:35 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Chrome = Browser 2, deviceId 793b969a..., name and id now agree).
+
+- **Health.** incidents 227 (226 published), sources 625, claims 994 (events 26 after this run). coverage_last_run
+  09:05 UTC (fresh, no manual cron): 21 feeds, 629 fetched, 242 fresh, **scored 0, shown 0**; feed errors: Google
+  News India HTTP 503 and three `jev` errors ("Unexpected token '<'"). Cause: the simple-jev demo endpoint
+  (simple-jev-demo-api.featherless.ai/v1/classifier) now 301-redirects to an HTML page at featherless.ai, so
+  scoring returns HTML. Intake by fetched_at over 24 h: 17 items fetched; none newer than 2026-09-30 15:06 UTC
+  has been shown. Daily export #18 at 07:18 UTC.
+- **Jev fix (ops only).** `linkcheck.py --all` died with a JSON decode FATAL on the same redirect. `ops/common.py`
+  JevClient now raises JevError on a non-JSON reply, so linkcheck falls back instead of aborting. The Worker
+  (`site/src/coverage.js`) still uses the demo endpoint unless a `JEV_API_KEY` secret is set; not changed.
+- **Link integrity.** 624 sources in five slices: live 408, paywalled 48, redirected 22, error 146, dead 0,
+  bot_blocked 0. The error count is inflated: 95 pages could not be classified because Jev is down. Health before
+  run: 617 ok, 6 unchecked, 1 dead, 65 archived. Wayback: 2 saved, 3 failed (availability API errors, simple save
+  errors) before the 170 s timeout. IndexNow: 10 URLs, HTTP 200.
+- **Focal case.** Perplexity (Browser 2) plus CourtListener docket. New: source 625 (NBC News, 2026-09-30), claim
+  992 and event 25 (action: White House removes CNN from the pool for the Oct 1 Texas and Oklahoma trip); claim 994
+  and event 26 on source 105 (docket: Reporters Committee for Freedom of the Press and 77 media organizations move
+  to file an amicus brief; ACLU amicus granted the same day). Claim 993 was a duplicate of 992 from a retried
+  script (the dedupe read the daily export, which lacks today's events) and was retired. what_happened paragraphs,
+  "Status as of 2026-10-01", summary and effect_on_reporting updated (revision 41). Status unchanged (enjoined; TRO
+  to 2026-10-08; PI pending). Docket also shows entries 34 to 39 (Society for the Rule of Law amicus motion, a pro se
+  motion to intervene, a rejected amicus filing); not recorded.
+- **Coverage sanity.** /coverage.json: 63 items; 6 added in the last 24 h (388, 391, 393, 396, 397, 398), all on
+  topic; nothing hidden.
+- **Search Console (Browser 2).** Overview: Breadcrumbs 1,644 valid / 0 invalid; Datasets 1 valid / 58 invalid
+  (down from 80 after the 09-29 isPartOf fix); Events 59 valid. Page indexing still "Processing data". sitemap.xml
+  success, last read Sept 30, 4,450 discovered. Performance (Sept 21 to 28): 10 clicks, 2,140 impressions, CTR
+  0.5%, average position 10.9, 145 queries.
