@@ -155,8 +155,15 @@ function redirect301(path) {
 // Permanent moves (v2): /methodology became /sources-and-standards; the
 // News Desk pages and feeds became Recent coverage; country codes and
 // decades have one canonical spelling. v3: /compare became /ladders.
+// Renamed slugs (old slug -> new slug). The slug is changed in D1; the old
+// URL, with or without a .md/.json twin suffix, answers 301 to the new one.
+const SLUG_MOVES = {
+  "2026-israel-maintains-ban-on-foreign-press-access-to-gaza": "2026-israel-maintains-ban-on-independent-press-access-to-gaza",
+};
+
 function v2Redirect(p, search) {
   let m;
+  if ((m = p.match(/^\/incidents\/([a-z0-9-]+)(\.md|\.json)?$/)) && SLUG_MOVES[m[1]]) return `/incidents/${SLUG_MOVES[m[1]]}${m[2] || ""}${search}`;
   if ((m = p.match(/^\/methodology(\.md|\.json)?$/))) return `/sources-and-standards${m[1] || ""}`;
   if (/^\/news(\/page\/\d+)?(\.md|\.json)?$/.test(p)) return "/coverage";
   if ((m = p.match(/^\/news\/(feed\.xml|atom\.xml|feed\.json)$/))) return `/coverage/${m[1]}`;
