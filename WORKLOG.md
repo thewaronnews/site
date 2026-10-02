@@ -1130,3 +1130,31 @@ Unattended run (device_bash on the Mac Studio; Chrome = Browser 2, deviceId 793b
   (down from 80 after the 09-29 isPartOf fix); Events 59 valid. Page indexing still "Processing data". sitemap.xml
   success, last read Sept 30, 4,450 discovered. Performance (Sept 21 to 28): 10 clicks, 2,140 impressions, CTR
   0.5%, average position 10.9, 145 queries.
+
+## 2026-10-01 ~21:30 UTC: Gaza slug rename (site agent)
+
+Incident 11 slug `2026-israel-maintains-ban-on-foreign-press-access-to-gaza` renamed to `2026-israel-maintains-ban-on-independent-press-access-to-gaza` by direct D1 UPDATE (no admin endpoint; no revision row written). Explainer 6 body links updated. `SLUG_MOVES` in `site/src/index.js` `v2Redirect` answers 301 for the old slug (html, .md, .json). Deployed via deploy.sh; verified old 301, new 200, sitemap. Closes TODO 11 and v2 TODO 1's slug part. Before-values in Claude outputs/2026-10-01-twon/. GITHUB_TOKEN note in TODO 5 (2026-09-22) is stale: token is set and daily exports commit to the data repo.
+
+## 2026-10-02 ~10:00 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Chrome = Browser 2, deviceId 793b969a..., selected by deviceId).
+
+- **Health.** incidents 227 (226 published), sources 625, claims 994 before run (997 after), events 19 before (22
+  after). coverage_last_run 09:05 UTC (fresh, no manual cron): 21 feeds, 715 fetched, 274 fresh, scored 1, shown 1,
+  no feed or Jev errors. Jev scoring is working again (model featherless-ai/Qwen3.6-35B-A3B-classifier). Intake by
+  fetched_at over 24 h: 44 items, 12 shown, 32 hidden. Daily export #19 at 07:18 UTC.
+- **Link integrity.** 625 sources in five slices: live 500, paywalled 48, redirected 22, error 49, bot_blocked 5,
+  dead 1. Health: 618 ok, 6 unchecked, 1 dead, 67 archived (share 0.989). Wayback: 21 saved, 4 failed (3 x HTTP 520,
+  1 connection refused). IndexNow: 9 URLs, HTTP 200.
+- **Focal case.** Perplexity (Browser 2) plus CourtListener docket. On source 105 (docket): claim 995 / event 27
+  (Oct 1 minute order: preliminary injunction hearing set for Oct 8, 11:00); claim 996 / event 28 (Oct 1: Society
+  for the Rule of Law and Democracy granted leave to file amicus); claim 997 / event 29 (Oct 2: NAACP consent motion
+  for leave to file amicus). Incident revision 42: summary, what_happened and "Status as of 2026-10-02" updated;
+  effect_on_reporting unchanged. Status unchanged (enjoined; TRO to 2026-10-08). Not recorded: pro hac vice
+  admissions, pro se intervention denial. Defendants' PI opposition was due Oct 2; not on the docket at check time.
+  Note: focal12-ids.json lists claim 993 (retired duplicate) for event 25; claim 992 is the current one.
+- **Coverage sanity.** /coverage.json: 76 items; 13 added in the last 24 h, all on topic; nothing hidden.
+- **Search Console (Browser 2).** Breadcrumbs 1,644 valid / 0 invalid; Datasets 1 valid / 58 invalid; Events 59
+  valid. Page indexing still "Processing data". sitemap.xml success, last read Oct 1, 4,452 discovered.
+  Performance (to Sept 29): 12 clicks, 2,420 impressions, CTR 0.5%, average position 11.4. Recommendation: unused
+  verification token on property.
