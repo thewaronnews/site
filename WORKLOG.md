@@ -1158,3 +1158,27 @@ Unattended run (device_bash on the Mac Studio; Chrome = Browser 2, deviceId 793b
   valid. Page indexing still "Processing data". sitemap.xml success, last read Oct 1, 4,452 discovered.
   Performance (to Sept 29): 12 clicks, 2,420 impressions, CTR 0.5%, average position 11.4. Recommendation: unused
   verification token on property.
+
+## 2026-10-03 ~10:00 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Chrome selected by deviceId 793b969a..., which the extension listed under the label "Browser 1" this run).
+
+- **Health.** incidents 227 (226 published), sources 625, claims 997 before run (999 after), events 22 before (24
+  after). coverage_last_run 09:05 UTC (fresh, no manual cron): 21 feeds, 263 fetched, 134 fresh, scored 0, shown 0;
+  5 Google News feeds returned HTTP 503. Intake by fetched_at over 24 h: 22 items, all shown. Daily export #20 at
+  07:19 UTC.
+- **Link integrity.** 625 sources in five slices: live 499, paywalled 48, redirected 22, error 50, bot_blocked 5,
+  dead 1. Health before run: 619 ok, 5 unchecked, 1 dead, 76 archived (share 0.99). Wayback: 6 saved, 0 failed
+  logged (run stopped at the 170 s timeout). IndexNow: 11 URLs, HTTP 200.
+- **Focal case.** CourtListener docket via Chrome (Perplexity not used). On source 105: claim 998 / event 30 (Oct 2,
+  ECF 43: defendants' opposition to the preliminary injunction motion, quoting that the revocation "became final" at
+  5:00 pm the prior Friday); claim 999 / event 31 (Oct 2 minute order: Reporters Committee and 77 media organizations
+  granted leave to file amicus). Incident revision 43: summary, what_happened and "Status as of 2026-10-03" updated;
+  effect_on_reporting unchanged. Status unchanged (enjoined; TRO to 2026-10-08; PI hearing Oct 8). Not recorded:
+  Oct 1 denial of a pro se intervention motion, NAACP errata (ECF 42), an unverified report on Air Force One seating.
+  Script focal14.py, ids in focal14-ids.json.
+- **Coverage sanity.** /coverage.json: 85 items; 9 added in the last 24 h, all on topic; nothing hidden.
+- **Search Console.** Overview (as read by the subagent): 1,263 indexed; Breadcrumbs 1,192 valid; Datasets 1 valid
+  / 13 invalid; Events 14 valid (all lower than 10-02's 1,644 / 58 / 59; may be a different view, recheck).
+  Page indexing still "Processing data". sitemap.xml success, last read Oct 2, 4,455 discovered. Performance (Sept
+  21 to 29): 12 clicks, 2,420 impressions, CTR 0.5%, average position 11.4. Recommendation: unused verification token.
