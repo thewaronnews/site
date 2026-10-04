@@ -1182,3 +1182,24 @@ Unattended run (device_bash on the Mac Studio; Chrome selected by deviceId 793b9
   / 13 invalid; Events 14 valid (all lower than 10-02's 1,644 / 58 / 59; may be a different view, recheck).
   Page indexing still "Processing data". sitemap.xml success, last read Oct 2, 4,455 discovered. Performance (Sept
   21 to 29): 12 clicks, 2,420 impressions, CTR 0.5%, average position 11.4. Recommendation: unused verification token.
+
+## 2026-10-04 ~09:30 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Chrome selected by deviceId 793b969a...).
+
+- **Health.** incidents 227 (226 published), sources 625, claims 999 (982 current), events 24; no records changed this
+  run. coverage_last_run 09:05 UTC (fresh, no manual cron): 21 feeds, 261 fetched, 134 fresh, scored 0, shown 0;
+  5 Google News feeds again HTTP 503. Intake by fetched_at over 24 h: 4 items, all shown (down from 22 on 10-03).
+  Daily export #21 at 07:19 UTC.
+- **Link integrity.** 625 sources in five slices (slice 500:700 timed out once, rerun OK): live 498, paywalled 48,
+  redirected 22, error 51, bot_blocked 5, dead 1. Health: 619 ok, 5 unchecked, 1 dead, 88 archived (share 0.99).
+  Wayback: 6 saved, 0 failed logged (stopped at the 170 s timeout). IndexNow: 8 URLs, HTTP 200.
+- **Focal case.** Perplexity and CourtListener docket via Chrome. Docket last filing Oct 2; nothing dated Oct 3 or
+  Oct 4; no press reports newer than already recorded. No events, claims or text updates written. Status unchanged
+  (enjoined; TRO to 2026-10-08; PI hearing Oct 8 11:00). Plaintiffs' PI reply due Oct 5. Not recorded: NAACP
+  errata (ECF 42, clerical). Docket shows the Reporters Committee amicus grant dated Oct 2 (matches event 31).
+- **Coverage sanity.** /coverage.json: 88 items; 3 added in the last 24 h, all on topic; nothing hidden.
+- **Search Console.** Breadcrumbs 1,004 valid / 0 invalid; Datasets 1 valid / 12 invalid; Events 13 valid; 1,263
+  indexed (overview). Page indexing still "Processing data". sitemap.xml success, last read Oct 3, 4,457 discovered.
+  Performance (Sept 21 to 29): 12 clicks, 2,420 impressions, CTR 0.5%, average position 11.4. Recommendation: unused
+  verification token.
