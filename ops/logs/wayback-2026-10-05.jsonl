@@ -1,0 +1,7 @@
+{"count": 150, "dry_run": false, "event": "start", "mode": "all", "script": "wayback", "ts": "2026-10-05T09:49:13Z"}
+{"event": "saved", "script": "wayback", "source_id": 126, "ts": "2026-10-05T09:49:14Z", "url": "https://www.law.cornell.edu/constitution/first_amendment", "wayback_url": "https://web.archive.org/web/20261004095110/https://www.law.cornell.edu/constitution/first_amendment"}
+{"event": "saved", "script": "wayback", "source_id": 127, "ts": "2026-10-05T09:49:46Z", "url": "https://www.law.cornell.edu/constitution/fifth_amendment", "wayback_url": "https://web.archive.org/web/20261005094931/https://www.law.cornell.edu/constitution/fifth_amendment"}
+{"event": "saved", "script": "wayback", "source_id": 128, "ts": "2026-10-05T09:50:17Z", "url": "https://www.law.cornell.edu/wex/temporary_restraining_order", "wayback_url": "https://web.archive.org/web/20261005095002/https://www.law.cornell.edu/wex/temporary_restraining_order"}
+{"event": "saved", "script": "wayback", "source_id": 129, "ts": "2026-10-05T09:50:47Z", "url": "https://www.law.cornell.edu/wex/preliminary_injunction", "wayback_url": "https://web.archive.org/web/20261005095032/https://www.law.cornell.edu/wex/preliminary_injunction"}
+{"attempt": 1, "error": "The read operation timed out", "event": "save_simple_error", "script": "wayback", "ts": "2026-10-05T09:51:57Z", "url": "https://www.law.cornell.edu/wex/en_banc"}
+{"event": "failed", "script": "wayback", "source_id": 130, "ts": "2026-10-05T09:51:57Z", "url": "https://www.law.cornell.edu/wex/en_banc"}

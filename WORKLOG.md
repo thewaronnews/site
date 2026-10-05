@@ -1203,3 +1203,26 @@ Unattended run (device_bash on the Mac Studio; Chrome selected by deviceId 793b9
   indexed (overview). Page indexing still "Processing data". sitemap.xml success, last read Oct 3, 4,457 discovered.
   Performance (Sept 21 to 29): 12 clicks, 2,420 impressions, CTR 0.5%, average position 11.4. Recommendation: unused
   verification token.
+
+## 2026-10-05 ~09:55 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Chrome selected by deviceId 793b969a..., which the extension now labels
+"Browser 1" because it is the only browser connected).
+
+- **Health.** incidents 227 (226 published), sources 625, claims 999 (982 current), events 24; no records changed this
+  run. coverage_last_run 09:05 UTC (fresh, no manual cron): 21 feeds, Google News feeds again HTTP 503. Intake by
+  fetched_at over 24 h: 15 items. Daily export #22 at 07:17 UTC.
+- **Link integrity.** 625 sources in six slices (500:700 timed out, rerun as 500:565 and 565:700): live 496, paywalled
+  48, redirected 22, error 51, bot_blocked 7, dead 1. Health: 619 ok, 5 unchecked, 1 dead, 88 archived (share 0.99).
+  Wayback: 4 saved, 1 failed, 1 save_simple_error (stopped at the 170 s timeout). IndexNow: 4 URLs, HTTP 200.
+- **Focal case.** Perplexity and CourtListener docket via Chrome. Docket last updated Oct 3, last filing Oct 2;
+  nothing dated Oct 3 to 5; no newer press reports. No events, claims or text updates written. Status unchanged
+  (enjoined; TRO to 2026-10-08; PI hearing Oct 8 11:00, Courtroom 11). Plaintiffs' PI reply due Oct 5 (not yet on
+  RECAP). Not recorded: Oct 1 minute order granting the Society for the Rule of Law amicus leave; NAACP/NABJ amicus
+  motion (ECF 41) and errata (ECF 42) still pending.
+- **Coverage sanity.** /coverage.json: 91 items; 3 added in the last 24 h (Hong Kong journalist Tang Ho-wing
+  sedition arrest x2, Egyptian newsroom detention), all on topic; nothing hidden.
+- **Search Console.** Overview: 1,263 indexed; Breadcrumbs 904 valid / 0 invalid; Datasets 1 valid / 9 invalid;
+  Events 10 valid. Page indexing still "Processing data". sitemap.xml success, last read Oct 4, 4,457 discovered.
+  Performance (Sept 21 to Oct 2): 15 clicks, 3,030 impressions, CTR 0.5%, average position 13.7. Recommendation:
+  unused verification token.
