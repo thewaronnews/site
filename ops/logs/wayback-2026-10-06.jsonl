@@ -1,0 +1,13 @@
+{"count": 150, "dry_run": false, "event": "start", "mode": "all", "script": "wayback", "ts": "2026-10-06T09:47:38Z"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-06T09:47:38Z", "url": "https://www.law.cornell.edu/wex/due_process"}
+{"event": "saved", "script": "wayback", "source_id": 131, "ts": "2026-10-06T09:47:59Z", "url": "https://www.law.cornell.edu/wex/due_process", "wayback_url": "https://web.archive.org/web/20260924012331/https://www.law.cornell.edu/wex/due_process"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-06T09:48:08Z", "url": "http://government.ru/en/department/58/"}
+{"event": "saved", "script": "wayback", "source_id": 132, "ts": "2026-10-06T09:48:57Z", "url": "http://government.ru/en/department/58/", "wayback_url": "https://web.archive.org/web/20261006094843/http://government.ru/en/department/58/"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-06T09:49:06Z", "url": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6112.pdf"}
+{"event": "saved", "script": "wayback", "source_id": 133, "ts": "2026-10-06T09:49:21Z", "url": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6112.pdf", "wayback_url": "https://web.archive.org/web/20261006094916/https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6112.pdf"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-06T09:49:29Z", "url": "https://rsf.org/en/country/turkey"}
+{"event": "saved", "script": "wayback", "source_id": 134, "ts": "2026-10-06T09:49:50Z", "url": "https://rsf.org/en/country/turkey", "wayback_url": "https://web.archive.org/web/20261006094934/https://rsf.org/en/country-t%C3%BCrkiye"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-06T09:49:59Z", "url": "https://www.legislation.gov.uk/ukpga/2002/11/section/1"}
+{"attempt": 1, "error": "HTTP Error 520: UNKNOWN", "event": "save_simple_error", "script": "wayback", "ts": "2026-10-06T09:50:12Z", "url": "https://www.legislation.gov.uk/ukpga/2002/11/section/1"}
+{"event": "failed", "script": "wayback", "source_id": 135, "ts": "2026-10-06T09:50:12Z", "url": "https://www.legislation.gov.uk/ukpga/2002/11/section/1"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-06T09:50:20Z", "url": "https://www.epra.org/organisations"}

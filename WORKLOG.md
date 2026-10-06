@@ -1226,3 +1226,28 @@ Unattended run (device_bash on the Mac Studio; Chrome selected by deviceId 793b9
   Events 10 valid. Page indexing still "Processing data". sitemap.xml success, last read Oct 4, 4,457 discovered.
   Performance (Sept 21 to Oct 2): 15 clicks, 3,030 impressions, CTR 0.5%, average position 13.7. Recommendation:
   unused verification token.
+
+## 2026-10-06 ~09:55 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Chrome selected by deviceId 793b969a...).
+
+- **Health.** incidents 227 (226 published), sources 625, claims 999 (982 current) before the focal write, events 24.
+  coverage_last_run 09:05 UTC (fresh, no manual cron): 21 feeds, 545 fetched, 222 fresh, scored 0, shown 0; Google
+  News feeds again HTTP 503 (2 listed). Intake by fetched_at over 24 h (/admin/coverage): 27 items. Daily export #23
+  at 07:17 UTC.
+- **Link integrity.** 625 sources in six slices: live 499, paywalled 48, redirected 20, error 50, bot_blocked 5,
+  dead 3 (cpj.org/about/staff as before; two reason.com URLs, sources 307 and 562, returned HTTP 504, likely a
+  reason.com outage; recheck next run). Health before run: 619 ok, 5 unchecked, 1 dead, 92 archived (share 0.99).
+  Wayback: 4 saved, 1 failed, 1 save_simple_error, 6 availability 429s (stopped at the 170 s timeout). IndexNow:
+  7 URLs, HTTP 200.
+- **Focal case.** Perplexity and CourtListener docket via Chrome. Docket (updated Oct 6): ECF 44, plaintiffs' reply
+  in support of the PI motion, filed Oct 5. Written on source 105: claim 1000 / event 32 (filing, 2026-10-05).
+  Incident revision 44: summary, what_happened and "Status as of 2026-10-06" updated. Status unchanged (enjoined; TRO
+  to 2026-10-08; PI hearing Oct 8 11:00). Script focal15.py. Not recorded: Oct 5 minute order granting NAACP et al.
+  amicus leave; reported Oct 5 exclusion of Politico from the Air Force One print pool (Nebraska trip), seen only via
+  Perplexity citing CNN, Time, Washington Examiner, not fetched or quoted.
+- **Coverage sanity.** /coverage.json: 93 items; 2 added in the last 24 h (below 3): Turkey disinformation-law
+  lawfare against journalists; Egyptian journalists allege torture after arrest. Both on topic; nothing hidden.
+- **Search Console.** Overview: 1,263 indexed; Breadcrumbs 904 valid; Datasets 1 valid / 9 invalid; Events 10 valid.
+  Page indexing still "Processing data". sitemap.xml success, last read Oct 5, 4,457 discovered. Performance (Sept 21
+  to Oct 3): 16 clicks, 3,190 impressions, CTR 0.5%, average position 14.5. Recommendation: unused verification token.
