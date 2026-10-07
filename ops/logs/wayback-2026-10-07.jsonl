@@ -1,0 +1,11 @@
+{"count": 150, "dry_run": false, "event": "start", "mode": "all", "script": "wayback", "ts": "2026-10-07T09:46:56Z"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-07T09:46:56Z", "url": "https://www.epra.org/organisations"}
+{"event": "saved", "script": "wayback", "source_id": 136, "ts": "2026-10-07T09:47:21Z", "url": "https://www.epra.org/organisations", "wayback_url": "https://web.archive.org/web/20261007094703/https://www.epra.org/organisations"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-07T09:47:30Z", "url": "https://laws-lois.justice.gc.ca/eng/acts/c-22/page-1.html"}
+{"event": "saved", "script": "wayback", "source_id": 137, "ts": "2026-10-07T09:47:49Z", "url": "https://laws-lois.justice.gc.ca/eng/acts/c-22/page-1.html", "wayback_url": "https://web.archive.org/web/20261007094734/https://laws-lois.justice.gc.ca/eng/acts/c-22/page-1.html"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-07T09:47:58Z", "url": "http://duma.gov.ru/en/"}
+{"attempt": 1, "error": "The read operation timed out", "event": "save_simple_error", "script": "wayback", "ts": "2026-10-07T09:48:58Z", "url": "http://duma.gov.ru/en/"}
+{"event": "failed", "script": "wayback", "source_id": 138, "ts": "2026-10-07T09:48:58Z", "url": "http://duma.gov.ru/en/"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-07T09:49:07Z", "url": "https://cpj.org/about/"}
+{"event": "saved", "script": "wayback", "source_id": 139, "ts": "2026-10-07T09:49:32Z", "url": "https://cpj.org/about/", "wayback_url": "https://web.archive.org/web/20261007094913/https://cpj.org/about/"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-07T09:49:41Z", "url": "https://rsf.org/en/who-are-we"}

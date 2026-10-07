@@ -1251,3 +1251,30 @@ Unattended run (device_bash on the Mac Studio; Chrome selected by deviceId 793b9
 - **Search Console.** Overview: 1,263 indexed; Breadcrumbs 904 valid; Datasets 1 valid / 9 invalid; Events 10 valid.
   Page indexing still "Processing data". sitemap.xml success, last read Oct 5, 4,457 discovered. Performance (Sept 21
   to Oct 3): 16 clicks, 3,190 impressions, CTR 0.5%, average position 14.5. Recommendation: unused verification token.
+
+## 2026-10-07 ~09:55 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Chrome selected by deviceId 793b969a...).
+
+- **Health.** incidents 227 (226 published), sources 625, claims 1000 (983 current), events 25 before the focal
+  write. coverage_last_run 09:05 UTC (fresh, no manual cron): 21 feeds, 645 fetched, 242 fresh, scored 0, shown 0,
+  1 hidden; one Google News feed HTTP 503. Intake by fetched_at over 24 h (/admin/coverage): 29 items. Daily export
+  #24 at 07:18 UTC. Link health: 619 ok, 5 unchecked, 1 dead, 96 archived (share 0.99).
+- **Link integrity.** 625 sources in seven slices: live 497, paywalled 48, redirected 21, error 50, bot_blocked 6,
+  dead 3 (cpj.org/about/staff; reason.com sources 307 and 562 HTTP 504 for a second day). Wayback: 3 saved,
+  1 failed, 1 save_simple_error, 5 availability errors (stopped at the 170 s timeout). IndexNow: 8 URLs, HTTP 200.
+- **Focal case.** Perplexity and CourtListener docket via Chrome. Docket last updated Oct 6 14:27, last filing Oct 5;
+  no entries dated Oct 6 or 7. Written: source 626 (CNN, Oct 5, "White House blocks Politico from Air Force One amid
+  press access lawsuit"), claim 1001 / event 33 (action, 2026-10-05: Politico not allowed on Air Force One for its
+  print pool turn; White House spokesperson quoted: "a privilege not a right"). Incident revision 45: summary,
+  effect_on_reporting, what_happened and "Status as of 2026-10-07" updated. Status unchanged (enjoined; TRO to
+  2026-10-08; PI hearing Oct 8 11:00, Courtroom 11). Script focal16.py. Not recorded: Oct 6 CNN report that new owner
+  David Ellison backs the lawsuit (owner statement, not a case or access event); Oct 5 NAACP amicus minute order.
+- **Coverage sanity.** /coverage.json: 98 items; 5 added in the last 24 h (Delhi journalist arrest over video; AP
+  challenge to court rule on immigration records access; Cambodian journalist arrested on extortion allegations;
+  Derya Okatan arrest in Turkey; Egyptian fact-checkers allege torture). All on topic; nothing hidden.
+- **Search Console.** Overview now populated: 18,280 indexed, 19,908 not indexed (crawled not indexed 14,824;
+  discovered not indexed 3,345; duplicate, Google chose different canonical 1,479; noindex 225; alternate canonical
+  31; redirect 4). Enhancements: Breadcrumbs 446 valid / 0 invalid; Datasets 1 / 8 invalid; Events 9 valid.
+  sitemap.xml success, last read Oct 5, 4,458 discovered. Performance (Sept 21 to Oct 4): 17 clicks, 3,320
+  impressions, CTR 0.5%, average position 15.
