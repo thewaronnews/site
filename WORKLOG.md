@@ -1278,3 +1278,22 @@ Unattended run (device_bash on the Mac Studio; Chrome selected by deviceId 793b9
   31; redirect 4). Enhancements: Breadcrumbs 446 valid / 0 invalid; Datasets 1 / 8 invalid; Events 9 valid.
   sitemap.xml success, last read Oct 5, 4,458 discovered. Performance (Sept 21 to Oct 4): 17 clicks, 3,320
   impressions, CTR 0.5%, average position 15.
+
+## 2026-10-08 ~09:50 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio).
+
+- **Health.** incidents 227 (226 published), sources 626, claims 1001 (984 current), events 26. coverage_last_run
+  09:05 UTC (fresh, no manual cron): 21 feeds, 0 feed errors, 702 fetched, 220 fresh, scored 0, shown 0. Intake by
+  fetched_at over 24 h (/admin/coverage): 20 items. Daily export #25 at 07:18 UTC. Link health: 619 ok, 6 unchecked,
+  1 dead, 99 archived (share 0.989).
+- **Link integrity.** 626 sources in seven slices: live 499, paywalled 49, redirected 22, error 50, bot_blocked 5,
+  dead 1. Wayback: 3 saved (freedom.press, rcfp.org, knightcolumbia.org), 1 failed (rsf.org/en/who-are-we, HTTP
+  520), 5 availability 429s (stopped at the 170 s timeout). IndexNow: 7 URLs, HTTP 200.
+- **Focal case.** Not checked. Chrome list_connected_browsers showed deviceId 793b969a... labelled "Browser 1" (not
+  "Browser 2"); the run rule forbids Browser 1, so Chrome steps were skipped. Nothing written. Pending: outcome of the
+  Oct 8 11:00 ET preliminary injunction hearing and TRO expiry (2026-10-08).
+- **Coverage sanity.** /coverage.json: 100 items; 2 added in the last 24 h (below 3): Georgia Fort on arrest while
+  filming an anti-ICE protest in Minnesota; White House excludes Politico from Air Force One pool. Both on topic;
+  nothing hidden.
+- **Search Console.** Skipped (Chrome, see above).

@@ -1,0 +1,11 @@
+{"count": 150, "dry_run": false, "event": "start", "mode": "all", "script": "wayback", "ts": "2026-10-08T09:40:25Z"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-08T09:40:26Z", "url": "https://rsf.org/en/who-are-we"}
+{"attempt": 1, "error": "HTTP Error 520: UNKNOWN", "event": "save_simple_error", "script": "wayback", "ts": "2026-10-08T09:40:32Z", "url": "https://rsf.org/en/who-are-we"}
+{"event": "failed", "script": "wayback", "source_id": 140, "ts": "2026-10-08T09:40:32Z", "url": "https://rsf.org/en/who-are-we"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-08T09:40:41Z", "url": "https://freedom.press/about/"}
+{"event": "saved", "script": "wayback", "source_id": 141, "ts": "2026-10-08T09:41:37Z", "url": "https://freedom.press/about/", "wayback_url": "https://web.archive.org/web/20261008094121/https://freedom.press/about/"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-08T09:41:46Z", "url": "https://www.rcfp.org/about/"}
+{"event": "saved", "script": "wayback", "source_id": 142, "ts": "2026-10-08T09:42:05Z", "url": "https://www.rcfp.org/about/", "wayback_url": "https://web.archive.org/web/20261008094150/https://www.rcfp.org/about-face-reno-releases-contact-data-its-city-volunteers/"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-08T09:42:14Z", "url": "https://knightcolumbia.org/"}
+{"event": "saved", "script": "wayback", "source_id": 143, "ts": "2026-10-08T09:42:35Z", "url": "https://knightcolumbia.org/", "wayback_url": "https://web.archive.org/web/20261008094217/https://knightcolumbia.org/"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-08T09:42:43Z", "url": "https://pressfreedomtracker.us/about/"}
