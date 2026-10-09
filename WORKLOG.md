@@ -1297,3 +1297,32 @@ Unattended run (device_bash on the Mac Studio).
   filming an anti-ICE protest in Minnesota; White House excludes Politico from Air Force One pool. Both on topic;
   nothing hidden.
 - **Search Console.** Skipped (Chrome, see above).
+
+## 2026-10-09 ~10:00 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio).
+
+- **Health.** incidents 227 (226 published), sources 626, claims 1001 (984 current), events 26 (before this run's
+  writes). coverage_last_run 09:05 UTC (fresh, no manual cron): 21 feeds, 0 feed errors, 701 fetched, 213 fresh,
+  scored 0, shown 0. Intake by fetched_at over 24 h (/admin/coverage): 31 items. Daily export #26 at 07:18 UTC.
+  Link health: 620 ok, 5 unchecked, 1 dead, 102 archived (share 0.99).
+- **Link integrity.** 626 sources in seven slices: live 499, paywalled 49, redirected 21, error 51, bot_blocked 5,
+  dead 1. (Background slices die when the device_bash call ends; slices must run in the foreground, 90 per call.)
+  Wayback: 5 saved (pressfreedomtracker.us, freedomhouse.org, monitor.civicus.org, hrw.org, ca5.uscourts.gov),
+  0 failed, 5 availability 429s (stopped at the 170 s timeout). IndexNow: 7 URLs, HTTP 200.
+- **Focal case.** Chrome deviceId 793b969a... (only browser connected; labelled "Browser 1" because it is the only
+  one) used by deviceId. Perplexity plus CBS and CNN pages. Oct 8 PI hearing before Judge Kelly: no ruling from the
+  bench; TRO extended through Tue 2026-10-13; ruling promised by then. Written: source 627 (CBS News, Oct 8, "Judge
+  presses Justice Department on justifications for White House media ban"), claim 1002 / event 34 (hearing,
+  2026-10-08). Incident revision 46: summary, effect_on_reporting (also fixed a missing period), what_happened,
+  outcome_note and "Status as of 2026-10-09" updated. Status field unchanged (enjoined), so no superseding status
+  claim. CourtListener RECAP has no entries after Oct 1; the Oct 8 minute order is not in RECAP. Nothing dated Oct 9.
+  Script focal17.py.
+- **Coverage sanity.** /coverage.json: 107 items; 7 added in the last 24 h (Thai defamation case against Tom Wright;
+  Tunisia blogger Hajer Awadi sentenced; White House press access ruling by Tuesday; two Angola criminal defamation
+  items; two Egypt fact-checker arrest items). All on topic; nothing hidden.
+- **Search Console.** 18,280 indexed, 19,908 not indexed (reasons unchanged: crawled not indexed 14,824; discovered
+  not indexed 3,345; duplicate canonical 1,479; noindex 225; alternate canonical 31; redirect 4). Enhancements:
+  Breadcrumbs 441 valid / 0 invalid; Datasets 1 valid / 10 invalid (up from 8; "89% of items not eligible");
+  Events 11 valid. sitemap.xml success, last read Oct 7, 4,459 discovered. Performance (Sep 21 to Oct 6): 20 clicks,
+  3,610 impressions, CTR 0.6%, average position 15.8.

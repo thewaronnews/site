@@ -1,0 +1,11 @@
+{"count": 150, "dry_run": false, "event": "start", "mode": "all", "script": "wayback", "ts": "2026-10-09T09:50:58Z"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-09T09:50:58Z", "url": "https://pressfreedomtracker.us/about/"}
+{"event": "saved", "script": "wayback", "source_id": 144, "ts": "2026-10-09T09:51:17Z", "url": "https://pressfreedomtracker.us/about/", "wayback_url": "https://web.archive.org/web/20261009095102/https://pressfreedomtracker.us/about/"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-09T09:51:26Z", "url": "https://freedomhouse.org/about-us"}
+{"event": "saved", "script": "wayback", "source_id": 145, "ts": "2026-10-09T09:51:45Z", "url": "https://freedomhouse.org/about-us", "wayback_url": "https://web.archive.org/web/20261009095130/https://freedomhouse.org/about-us"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-09T09:51:54Z", "url": "https://monitor.civicus.org/about/"}
+{"event": "saved", "script": "wayback", "source_id": 146, "ts": "2026-10-09T09:52:15Z", "url": "https://monitor.civicus.org/about/", "wayback_url": "https://web.archive.org/web/20261009095201/https://monitor.civicus.org/about/"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-09T09:52:24Z", "url": "https://www.hrw.org/about/about-us"}
+{"event": "saved", "script": "wayback", "source_id": 147, "ts": "2026-10-09T09:53:19Z", "url": "https://www.hrw.org/about/about-us", "wayback_url": "https://web.archive.org/web/20261009095301/https://www.hrw.org/about-us"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-09T09:53:28Z", "url": "https://www.ca5.uscourts.gov/"}
+{"event": "saved", "script": "wayback", "source_id": 148, "ts": "2026-10-09T09:53:47Z", "url": "https://www.ca5.uscourts.gov/", "wayback_url": "https://web.archive.org/web/20261009095332/https://www.ca5.uscourts.gov/"}
