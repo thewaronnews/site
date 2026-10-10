@@ -1326,3 +1326,29 @@ Unattended run (device_bash on the Mac Studio).
   Breadcrumbs 441 valid / 0 invalid; Datasets 1 valid / 10 invalid (up from 8; "89% of items not eligible");
   Events 11 valid. sitemap.xml success, last read Oct 7, 4,459 discovered. Performance (Sep 21 to Oct 6): 20 clicks,
   3,610 impressions, CTR 0.6%, average position 15.8.
+
+## 2026-10-10 ~09:30 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet and Haiku subagents for Chrome steps).
+
+- **Health.** incidents 227 (226 published), sources 627, claims 1002 (985 current), events 27. coverage_last_run
+  09:05 UTC (fresh, no manual cron): 21 feeds, 0 feed errors, 700 fetched, 210 fresh, scored 0, shown 0. Intake by
+  fetched_at over 24 h (/admin/coverage): 15 items. Daily export #27 at 07:18 UTC. Link health: 620 ok, 6 unchecked,
+  1 dead, 107 archived (share 0.989).
+- **Link integrity.** 627 sources in seven foreground slices (timeout 170 each; 85 s is too short for 90 sources):
+  live 500, paywalled 49, redirected 22, error 50, bot_blocked 5, dead 1. Wayback: 4 saved (dcd.uscourts.gov,
+  archives.gov, two firstamendment.mtsu.edu), 1 failed (insidevoa.com/p/5831.html, HTTP 520); stopped at the 170 s
+  timeout. IndexNow: 7 URLs, HTTP 200.
+- **Focal case.** Chrome deviceId 793b969a... used by deviceId (labelled "Browser 1"). Perplexity plus CourtListener.
+  No substantive development Oct 9-10: PI motion (ECF 32) under advisement, TRO extended through 2026-10-13, ruling
+  promised by then. Oct 9 docket: ECF 47 (Oct 8 hearing transcript, 47 pp.), ECF 48 (CNN supplemental disclosure).
+  Pending pro se filings ECF 45 (amicus leave) and ECF 46 (motion to intervene), not ruled on. Oct 9 CBS and Politico
+  items were updates of Oct 8 coverage. Nothing written.
+- **Coverage sanity.** /coverage.json: 109 items; 2 added in the last 24 h (below 3): Ukrainian journalists detained
+  in Austria; judge extends pause on Trump media ban. Both on topic; nothing hidden.
+- **Search Console.** 18,280 indexed, 19,908 not indexed (reasons unchanged: crawled not indexed 14,824; discovered
+  not indexed 3,345; duplicate canonical 1,479; noindex 225; alternate canonical 31; redirect 4). Enhancements:
+  Breadcrumbs 356 valid / 0 invalid (down from 441); Datasets 1 valid / 10 invalid ("91% not eligible"); Events 11
+  valid. Recommendation: focal incident page impressions -91%; 1 unused verification token. sitemap.xml success,
+  last read Oct 9, 4,460 discovered. Performance (Sep 21 to Oct 6): 20 clicks, 3,610 impressions, CTR 0.6%,
+  average position 15.8.

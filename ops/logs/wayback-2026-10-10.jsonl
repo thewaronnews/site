@@ -1,0 +1,7 @@
+{"count": 150, "dry_run": false, "event": "start", "mode": "all", "script": "wayback", "ts": "2026-10-10T09:48:31Z"}
+{"event": "saved", "script": "wayback", "source_id": 149, "ts": "2026-10-10T09:48:34Z", "url": "https://www.dcd.uscourts.gov/", "wayback_url": "https://web.archive.org/web/20261008155943/https://www.dcd.uscourts.gov/"}
+{"attempt": 1, "error": "HTTP Error 520: UNKNOWN", "event": "save_simple_error", "script": "wayback", "ts": "2026-10-10T09:48:55Z", "url": "https://www.insidevoa.com/p/5831.html"}
+{"event": "failed", "script": "wayback", "source_id": 150, "ts": "2026-10-10T09:48:55Z", "url": "https://www.insidevoa.com/p/5831.html"}
+{"event": "saved", "script": "wayback", "source_id": 151, "ts": "2026-10-10T09:49:34Z", "url": "https://www.archives.gov/federal-register/executive-orders/about.html", "wayback_url": "https://web.archive.org/web/20261010094912/https://www.archives.gov/federal-register/executive-orders/about.html"}
+{"event": "saved", "script": "wayback", "source_id": 152, "ts": "2026-10-10T09:50:17Z", "url": "https://firstamendment.mtsu.edu/article/espionage-act-of-1917/", "wayback_url": "https://web.archive.org/web/20261010095004/https://firstamendment.mtsu.edu/article/espionage-act-of-1917/"}
+{"event": "saved", "script": "wayback", "source_id": 153, "ts": "2026-10-10T09:50:51Z", "url": "https://firstamendment.mtsu.edu/article/masses-publishing-co-v-patten-s-d-n-y/", "wayback_url": "https://web.archive.org/web/20261010095034/https://firstamendment.mtsu.edu/article/masses-publishing-co-v-patten-s-d-n-y/"}
