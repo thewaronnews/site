@@ -1352,3 +1352,33 @@ Unattended run (device_bash on the Mac Studio; Sonnet and Haiku subagents for Ch
   valid. Recommendation: focal incident page impressions -91%; 1 unused verification token. sitemap.xml success,
   last read Oct 9, 4,460 discovered. Performance (Sep 21 to Oct 6): 20 clicks, 3,610 impressions, CTR 0.6%,
   average position 15.8.
+
+## 2026-10-11 ~09:30 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet and Haiku subagents for Chrome steps).
+
+- **Health.** incidents 227 (226 published), sources 627 before this run, claims 1002 (985 current), events 27.
+  coverage_last_run 09:05 UTC (fresh, no manual cron): 21 feeds, 0 feed errors, 700 fetched, 212 fresh, scored 0,
+  shown 0. Intake by fetched_at over 24 h (/admin/coverage): 7 items. Daily export #28 at 07:18 UTC. Link health:
+  621 ok, 5 unchecked, 1 dead, 111 archived (share 0.99).
+- **Link integrity.** 627 sources in seven slices: live 502, paywalled 49, redirected 21, error 49, bot_blocked 5,
+  dead 1. Wayback: 4 saved (firstamendment.mtsu.edu Milwaukee, supreme.justia.com 283/697, ebsco.com, pbs.org
+  reportingamericaatwar after a 429 retry), 1 failed (time.com archive, HTTP 429); stopped at the 170 s timeout.
+  IndexNow: 7 URLs, HTTP 200.
+- **Focal case.** Chrome deviceId 793b969a... (Perplexity plus CourtListener). No court development Oct 10-11:
+  PI motion (ECF 32) under advisement, TRO through 2026-10-13; CourtListener last filing Oct 9 (ECF 47, 48).
+  New related development: on Oct 10 a Justice Department spokesperson said the Antitrust Division is investigating
+  whether the White House TV pool's September halt of coverage violated antitrust law (AP; also CNN, which reports
+  document demands to the networks on Oct 9). Written: source 628 (AP via U.S. News, Oct 10), claim 1003, event 35
+  (statement, 2026-10-10). Incident revision 47: summary, effect_on_reporting, what_happened (new paragraph) and
+  "Status as of 2026-10-11" updated. Status unchanged (enjoined); no superseding status claim. Script focal18.py.
+  Quote taken by the subagent from the page; WebFetch could not re-fetch usnews.com or cnn.com to double-check.
+- **Coverage sanity.** /coverage.json: 113 items; 4 added in the last 24 h (Delhi protest journalist detentions;
+  journalist arrested on "attempted rape" charges; Reporters Committee statement on DOJ pool investigation; Press
+  Freedom This Week). All on topic; nothing hidden.
+- **Search Console.** 18,280 indexed, 19,908 not indexed (reasons unchanged: crawled not indexed 14,824; discovered
+  not indexed 3,345; duplicate canonical 1,479; noindex 225; alternate canonical 31; redirect 4). Enhancements:
+  Breadcrumbs 274 valid / 0 invalid (down from 356, from 441 on Oct 9); Datasets 1 valid / 10 invalid; Events 11
+  valid. Recommendations: focal incident page impressions -91%; 1 unused verification token. sitemap.xml success,
+  last read Oct 10, 4,460 discovered. Performance (Sep 21 to Oct 8): 20 clicks, 3,880 impressions, CTR 0.5%,
+  average position 16.3.
