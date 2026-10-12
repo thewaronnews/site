@@ -1382,3 +1382,28 @@ Unattended run (device_bash on the Mac Studio; Sonnet and Haiku subagents for Ch
   valid. Recommendations: focal incident page impressions -91%; 1 unused verification token. sitemap.xml success,
   last read Oct 10, 4,460 discovered. Performance (Sep 21 to Oct 8): 20 clicks, 3,880 impressions, CTR 0.5%,
   average position 16.3.
+
+## 2026-10-12 ~09:55 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet and Haiku subagents for Chrome steps).
+
+- **Health.** incidents 227 (226 published), sources 628, claims 1003 (986 current), events 28. coverage_last_run
+  09:05 UTC (fresh, no manual cron): 21 feeds, 0 feed errors, 696 fetched, 216 fresh, scored 0, shown 0. Intake by
+  fetched_at over 24 h (/admin/coverage): 6 items, none shown. Daily export #29 at 07:17 UTC. Link health: 621 ok,
+  6 unchecked, 1 dead, 115 archived (share 0.989).
+- **Link integrity.** 628 sources in seven slices: live 498, paywalled 49, redirected 22, error 53, bot_blocked 5,
+  dead 1. Wayback: 0 saved, 2 failed (time.com archive and exhibits.lib.unc.edu, HTTP 429 then save timeout); third
+  (britannica.com Pentagon Papers) cut off by the 170 s timeout. IndexNow: 6 URLs, HTTP 200.
+- **Focal case.** Chrome deviceId 793b969a... (Perplexity plus CourtListener). No court development Oct 10-12:
+  PI motion (ECF 32) under advisement; TRO extended through 2026-10-13; CourtListener last filing Oct 9 (ECF 47, 48);
+  ECF 45, 46 unruled. NBC (Oct 11) adds detail on the already-recorded DOJ antitrust inquiry (civil investigative
+  demands sent Oct 9, already in claim 1003 via CNN). CNBC (Oct 11) reports TV pool coverage has resumed, with no
+  date given; not written. Nothing written; no status change.
+- **Coverage sanity.** /coverage.json: 113 items; 0 added in the last 24 h (below 3). The 6 fetched items scored
+  below the show threshold. Nothing hidden.
+- **Search Console.** 18,369 indexed, 20,482 not indexed (crawled not indexed 15,194; discovered not indexed 3,342;
+  duplicate canonical 1,671; noindex 227; alternate canonical 44; redirect 4). Enhancements: Breadcrumbs 891 valid /
+  0 invalid (up from 274); Datasets 1 valid / 33 invalid (up from 10 invalid; "92% not eligible"); Events 36 valid.
+  Recommendations: focal incident page impressions -84%; 1 unused verification token; Datasets eligibility.
+  sitemap.xml success, last read Oct 11, 4,460 discovered. Performance (Sep 21 to Oct 9): 23 clicks, 3,960
+  impressions, CTR 0.6%, average position 16.3.

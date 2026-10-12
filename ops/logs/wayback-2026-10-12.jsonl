@@ -1,0 +1,8 @@
+{"count": 150, "dry_run": false, "event": "start", "mode": "all", "script": "wayback", "ts": "2026-10-12T09:48:18Z"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-12T09:48:18Z", "url": "https://time.com/archive/6799287/the-press-eastland-v-the-times/"}
+{"attempt": 1, "error": "The read operation timed out", "event": "save_simple_error", "script": "wayback", "ts": "2026-10-12T09:49:19Z", "url": "https://time.com/archive/6799287/the-press-eastland-v-the-times/"}
+{"event": "failed", "script": "wayback", "source_id": 158, "ts": "2026-10-12T09:49:19Z", "url": "https://time.com/archive/6799287/the-press-eastland-v-the-times/"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-12T09:49:28Z", "url": "https://exhibits.lib.unc.edu/exhibits/show/watergate/nixon-s-enemies-list"}
+{"attempt": 1, "error": "The read operation timed out", "event": "save_simple_error", "script": "wayback", "ts": "2026-10-12T09:50:28Z", "url": "https://exhibits.lib.unc.edu/exhibits/show/watergate/nixon-s-enemies-list"}
+{"event": "failed", "script": "wayback", "source_id": 159, "ts": "2026-10-12T09:50:28Z", "url": "https://exhibits.lib.unc.edu/exhibits/show/watergate/nixon-s-enemies-list"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-12T09:50:37Z", "url": "https://www.britannica.com/event/Pentagon-Papers"}
