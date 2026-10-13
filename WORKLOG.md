@@ -1407,3 +1407,25 @@ Unattended run (device_bash on the Mac Studio; Sonnet and Haiku subagents for Ch
   Recommendations: focal incident page impressions -84%; 1 unused verification token; Datasets eligibility.
   sitemap.xml success, last read Oct 11, 4,460 discovered. Performance (Sep 21 to Oct 9): 23 clicks, 3,960
   impressions, CTR 0.6%, average position 16.3.
+
+## 2026-10-13 ~10:00 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal-case Chrome step).
+
+- **Health.** incidents 227 (226 published), sources 628, claims 1003 (986 current), events 28. coverage_last_run
+  09:05 UTC (fresh, no manual cron): 21 feeds, 0 feed errors, 695 fetched, 215 fresh, scored 0, shown 0, hidden 1.
+  Intake by fetched_at over 24 h (/admin/coverage): 19 items, 3 shown, 16 hidden. Daily export #30 at 07:18 UTC.
+  Link health: 621 ok, 6 unchecked, 1 dead, 115 archived (share 0.989).
+- **Link integrity.** 628 sources in seven slices: live 500, paywalled 49, redirected 22, error 50, bot_blocked 5,
+  dead 2. Wayback: 2 saved (rcfp.org Grenada, fair.org Grenada excerpt), 2 failed (britannica.com Pentagon Papers,
+  supreme.justia.com 408/665); run cut off by the 170 s timeout. IndexNow: 4 URLs, HTTP 200.
+- **Focal case.** No court development. CourtListener (updated Oct 12 21:16): last filings Oct 9 (ECF 47, 48);
+  PI motion (ECF 32), ECF 45, 46 unruled; TRO extended through 2026-10-13 (today). NPR (Oct 12) reports Judge Kelly
+  said he would decide CNN, MS NOW and Politico access by end of day Tuesday Oct 13. NBC (Oct 12) explainer on pool
+  declines adds no new dated event. Nothing written; no status change.
+- **Coverage sanity.** /coverage.json: 116 items; 3 added in the last 24 h (India election-chief protest
+  detentions; Turkey 4 journalists arrested; Egypt press union chief on detained journalists). All on topic; nothing
+  hidden.
+- **Search Console.** Skipped. list_connected_browsers now labels deviceId 793b969a... as "Browser 1" (only browser
+  connected); the instruction-level conflict (use 793b969a = "Browser 2", never use "Browser 1") needs Peter to
+  confirm. The focal-case research step did run on that deviceId.
