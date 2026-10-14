@@ -1429,3 +1429,30 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal-cas
 - **Search Console.** Skipped. list_connected_browsers now labels deviceId 793b969a... as "Browser 1" (only browser
   connected); the instruction-level conflict (use 793b969a = "Browser 2", never use "Browser 1") needs Peter to
   confirm. The focal-case research step did run on that deviceId.
+
+## 2026-10-14 ~10:00 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal-case Chrome step, Haiku for Search Console).
+
+- **Health.** incidents 227 (226 published), sources 628, claims 1003 (986 current), events 28 before this run.
+  coverage_last_run 09:06 UTC (fresh, no manual cron): 21 feeds, 0 feed errors, 695 fetched, 222 fresh, scored 1,
+  shown 0, hidden 1. Intake by fetched_at over 24 h (/admin/coverage): 34 items, 12 shown, 22 hidden. Daily export
+  #31 at 07:19 UTC. Link health: 621 ok, 6 unchecked, 1 dead, 117 archived (share 0.989).
+- **Link integrity.** 628 sources in six slices: live 500, paywalled 49, redirected 22, error 49, bot_blocked 7,
+  dead 1. Wayback: 2 saved (rsf.org Jean Dominique, haitisupportgroup.org), 2 failed (camara.leg.br 1939 Vargas,
+  britannica.com Estado Novo; HTTP 429/520/timeout); run cut off by the 170 s timeout. IndexNow: 8 URLs, HTTP 200.
+- **Focal case: preliminary injunction granted.** CourtListener: ECF 49 (order granting PI motion ECF 32) and ECF 50
+  (memorandum opinion), both 2026-10-13, Judge Timothy J. Kelly; TRO superseded; no appeal on the docket yet.
+  Written via admin API (.maint-tmp/focal19.py): source 629 (NBC News, 2026-10-14, quote verified by direct fetch),
+  claim 1004 (action), event 36 (2026-10-13 ruling), status claim 1005 superseding 735; status stays enjoined,
+  status_updated_on 2026-10-13; summary, effect_on_reporting, outcome_note and "Status as of 2026-10-14" updated
+  (revision 48). Order does not cover the Oval Office or Air Force One (NBC). Trump said on Truth Social he would
+  appeal. Reuters, Politico and Axios pages returned 401/403 to direct fetch, so NBC is the cited source.
+- **Coverage sanity.** /coverage.json: 128 items; 12 added in the last 24 h (Japanese journalist arrested on
+  Sakhalin, Turkey TV raid, British journalist detained in Israel, CPJ on Israel). Hid item 654 (CPJ safety
+  resources guide for Serbia elections; not a government action).
+- **Search Console.** 18,369 indexed, 20,482 not indexed (reasons unchanged from Oct 12). Enhancements: Breadcrumbs
+  960 valid; Datasets 1 valid / 25 invalid (down from 33); Events 36; HTTPS 580. Recommendations: focal page
+  impressions -70%; /incidents/1937-japan-newspaper-law-war-censorship +3,100%; 1 unused verification token.
+  sitemap.xml success, last read Oct 12, 4,461 discovered. Performance (Sep 21 to Oct 11): 24 clicks, 4,190
+  impressions, CTR 0.6%, position 16.1. Browser deviceId 793b969a... is still labeled "Browser 1".
