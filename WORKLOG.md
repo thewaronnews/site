@@ -1456,3 +1456,32 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal-cas
   impressions -70%; /incidents/1937-japan-newspaper-law-war-censorship +3,100%; 1 unused verification token.
   sitemap.xml success, last read Oct 12, 4,461 discovered. Performance (Sep 21 to Oct 11): 24 clicks, 4,190
   impressions, CTR 0.6%, position 16.1. Browser deviceId 793b969a... is still labeled "Browser 1".
+
+## 2026-10-15 ~09:35 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal-case Chrome step, Haiku for Search Console).
+
+- **Health.** incidents 227 (226 published), sources 629, claims 1007 (988 current), events 30 (after this run's
+  write). coverage_last_run 09:06 UTC (fresh, no manual cron): 21 feeds, 0 feed errors, 706 fetched, 314 fresh, all
+  duplicates, scored 0. Intake by fetched_at over 24 h (/admin/coverage): 64 items. Daily export #32 at 07:19 UTC.
+  Link health: 621 ok, 7 unchecked, 1 dead, 119 archived (share 0.987).
+- **Link integrity.** 629 sources in seven slices: live 500, paywalled 49, redirected 22, error 52, bot_blocked 5,
+  dead 1. Wayback: 6 saved (latamjournalismreview.org Chile coup, ebsco.com Chile censorship, cidh.oas.org Argentina
+  1980 report, buenosairesherald.com, encyclopedia.ushmm.org press in the Third Reich, britannica.com Glavlit),
+  0 failed; run cut off by the 170 s timeout. IndexNow: 10 URLs, HTTP 200.
+- **Focal case: government notice of appeal.** CourtListener (updated Oct 14 18:18): ECF 51 (2026-10-14) notice of
+  interlocutory appeal of ECF 49 and 50 by Trump, Curran, Wiles and Cheung; ECF 52 transmission to the D.C. Circuit;
+  USCA case no. 26-5356; ECF 53 amicus leave request (Valine). No stay motion seen. Written via admin API
+  (.maint-tmp/focal20.py): existing source 105 (CourtListener docket) quoting ECF 51 docket text, claim 1006,
+  event 37 (2026-10-14 filing), status claim 1007 superseding 1005; status stays enjoined, status_updated_on
+  2026-10-14; summary, effect_on_reporting, outcome_note and "Status as of 2026-10-15" updated (revision 49).
+  Bloomberg and Deadline reported the appeal; Deadline direct fetch failed, so the docket is the cited source.
+- **Coverage sanity.** /coverage.json: 149 items; 22 added in the last 24 h (Delhi journalist detentions, Halk TV
+  raid in Turkey, Japanese journalist detained in Russia, Taliban suspends BBC FM, Argentina deports Brazilian
+  journalist, CNN/MS NOW/Politico ruling). All on topic; nothing hidden.
+- **Search Console.** 18,369 indexed, 20,482 not indexed (crawled not indexed 15,194; discovered not indexed 3,342;
+  duplicate Google-chosen canonical 1,671; alternate canonical 44; noindex 227; redirect 4). Enhancements:
+  Breadcrumbs 960 valid; Datasets 1 valid / 25 invalid; Events 36. Recommendations unchanged (focal page
+  impressions -70%; 1937 Japan newspaper law +3,100%; 1 unused verification token). sitemap.xml success, last read
+  Oct 14, 4,462 discovered. Performance (Sep 21 to Oct 12): 24 clicks, 4.25K impressions, CTR 0.6%, position 16.1.
+  Browser deviceId 793b969a... is still labeled "Browser 1".
