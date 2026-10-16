@@ -1485,3 +1485,28 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal-cas
   impressions -70%; 1937 Japan newspaper law +3,100%; 1 unused verification token). sitemap.xml success, last read
   Oct 14, 4,462 discovered. Performance (Sep 21 to Oct 12): 24 clicks, 4.25K impressions, CTR 0.6%, position 16.1.
   Browser deviceId 793b969a... is still labeled "Browser 1".
+
+## 2026-10-16 ~09:55 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal-case Chrome step, Haiku for Search Console).
+
+- **Health.** incidents 227 (226 published), sources 629, claims 1007 (988 current), events 30. coverage_last_run
+  09:05 UTC (fresh, no manual cron): 21 feeds, 0 feed errors, 705 fetched, 321 fresh, 319 duplicates, scored 0.
+  Intake by fetched_at over 24 h (/admin/coverage): 41 items. Daily export #33 at 07:19 UTC. Link health: 622 ok,
+  6 unchecked, 1 dead, 125 archived (share 0.989).
+- **Link integrity.** 629 sources in seven slices: live 503, paywalled 49, redirected 22, error 49, bot_blocked 5,
+  dead 1. Wayback: 3 saved (encyclopedia.com Glavlit, history.state.gov 1968 Czechoslovakia, archivum.org telex
+  lines), 3 failed (sagepub PDF, britannica Estado Novo, britannica Prague Spring), 7 availability 429s; run cut
+  off by the 170 s timeout. IndexNow: 8 URLs, HTTP 200.
+- **Focal case: no change.** Perplexity and CourtListener (docket updated Oct 15 16:50; last filing Oct 14): newest
+  entry ECF 53; no stay motion or ruling in D.D.C.; D.C. Circuit docket 26-5356 not checked directly. No new dated
+  development from a qualifying source, so nothing written. Status stays enjoined.
+- **Coverage sanity.** /coverage.json: 161 items; 12 added in the last 24 h (Turkey journalist arrests, Halk TV
+  seizure, Japanese journalist detained by FSB in Russia, Iraq parliamentary media ban, local officials restricting
+  access). All on topic; nothing hidden.
+- **Search Console.** 18,575 indexed, 20,664 not indexed (crawled not indexed 15,375; discovered not indexed 3,330;
+  duplicate Google-chosen canonical 1,680; noindex 231; alternate canonical 44; redirect 4). Enhancements:
+  Breadcrumbs 918 valid; Datasets 1 valid / 20 invalid; Events 36; HTTPS 952. Recommendations: 1922 USSR Glavlit
+  impressions -67%; 1937 Japan newspaper law +743%; 1 unused verification token. sitemap.xml success, last read
+  Oct 14, 4,462 discovered. Performance (Sep 21 to Oct 13): 26 clicks, 4.36K impressions, CTR 0.6%, position 16.
+  Browser deviceId 793b969a... is still labeled "Browser 1".
