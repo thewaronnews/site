@@ -1510,3 +1510,29 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal-cas
   impressions -67%; 1937 Japan newspaper law +743%; 1 unused verification token. sitemap.xml success, last read
   Oct 14, 4,462 discovered. Performance (Sep 21 to Oct 13): 26 clicks, 4.36K impressions, CTR 0.6%, position 16.
   Browser deviceId 793b969a... is still labeled "Browser 1".
+
+## 2026-10-17 ~09:50 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal-case Chrome step, Haiku for Search Console).
+
+- **Health.** incidents 227 (226 published), sources 629, claims 1007 (988 current), events 30. coverage_last_run
+  09:05 UTC (fresh, no manual cron): 21 feeds, 0 feed errors, 700 fetched, 312 fresh, 312 duplicates, scored 0.
+  Intake by fetched_at over 24 h (/admin/coverage): 21 items. Daily export #34 at 07:18 UTC. Link health: 622 ok,
+  6 unchecked, 1 dead, 128 archived (share 0.989).
+- **Link integrity.** 629 sources in seven slices: live 503, paywalled 49, redirected 22, error 49, bot_blocked 5,
+  dead 1 (unchanged from Oct 16). Wayback: 1 saved (thejournal.ie UK broadcast ban), 1 failed (ebsco Poland
+  censorship, read timeout); run cut off by the 170 s timeout. IndexNow: 4 URLs, HTTP 200.
+- **Focal case: no change.** CourtListener D.D.C. docket updated Oct 16 13:10, last filing Oct 14, highest ECF 53.
+  D.C. Circuit 26-5356 (checked directly): 3 entries, all Oct 14 (docketed; notice of appeal; clerk's order setting
+  procedural motions and initial filings due Nov 13, dispositive motions due Nov 30). No stay motion or ruling.
+  Perplexity found no case development Oct 15 to 17. Not recorded (not a case development): CNN reported Oct 16
+  that Trump fired press secretary Katie Zacharia after five days. Nothing written; status stays enjoined.
+- **Coverage sanity.** /coverage.json: 165 items; 4 added in the last 24 h (Pakistan regulator restrictions on TV
+  coverage of attacks and press freedom group response, Turkish journalist released under judicial supervision,
+  Delhi High Court refuses to stay probe against journalist). All on topic; nothing hidden.
+- **Search Console.** 18,575 indexed, 20,664 not indexed (crawled not indexed 15,375; discovered not indexed 3,330;
+  duplicate Google-chosen canonical 1,680; noindex 231; alternate canonical 44; redirect 4); indexing numbers
+  unchanged since Oct 16. Enhancements: Breadcrumbs 918 valid; Datasets 1 valid / 20 invalid; Events 36.
+  Recommendations: Glavlit page impressions -67%; 1937 Japan newspaper law +743%. sitemap.xml success, last read
+  Oct 16, 4,463 discovered. Performance (Sep 21 to Oct 14): 26 clicks, 4.37K impressions, CTR 0.6%, position 16.
+  Browser deviceId 793b969a... is still labeled "Browser 1".
