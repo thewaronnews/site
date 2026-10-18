@@ -1536,3 +1536,30 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal-cas
   Recommendations: Glavlit page impressions -67%; 1937 Japan newspaper law +743%. sitemap.xml success, last read
   Oct 16, 4,463 discovered. Performance (Sep 21 to Oct 14): 26 clicks, 4.37K impressions, CTR 0.6%, position 16.
   Browser deviceId 793b969a... is still labeled "Browser 1".
+
+## 2026-10-18 ~09:50 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal-case Chrome step, Haiku for Search Console).
+
+- **Health.** incidents 227 (226 published), sources 629, claims 1007 (988 current), events 30. coverage_last_run
+  09:05 UTC (fresh, no manual cron): 21 feeds, 3 feed errors (Google News RSS queries, HTTP 503), 408 fetched,
+  185 fresh, 185 duplicates, scored 0. Intake by fetched_at over 24 h (/admin/coverage): 11 items. Daily export #35
+  at 07:18 UTC. Link health: 622 ok, 6 unchecked, 1 dead, 129 archived (share 0.989).
+- **Link integrity.** 629 sources in seven slices: live 498, paywalled 49, redirected 22, error 50, bot_blocked 8,
+  dead 2 (source 133 mevzuat.gov.tr Turkish law PDF, no HTTP status; source 493 cpj.org/about/staff, HTTP 200 but
+  classed dead). Wayback: 3 saved (sahistory.org.za Suppression of Communism Act, egypt.mom-rsf.org history,
+  pib.gov.in factsheet), 3 failed (britannica Suppression of Communism Act, UPI 1985 South Africa TV ban, britannica
+  Al-Ahram; HTTP 520); run cut off by the 170 s timeout. IndexNow: 4 URLs, HTTP 200.
+- **Focal case: no change.** CourtListener D.D.C. docket updated Oct 17 09:49, last filing Oct 14, highest ECF 53.
+  D.C. Circuit 26-5356: 3 entries, all Oct 14 (initial submissions due Nov 13, dispositive motions Nov 30); no stay
+  motion. Perplexity found no ruling or filing Oct 16 to 18. Not recorded (not case developments): Oct 16 to 18 pool
+  travel rosters listed none of CNN, MS NOW or Politico (forth.news pool list, unverified); press secretary Katie
+  Zacharia's departure (already noted Oct 17). Nothing written; status stays enjoined.
+- **Coverage sanity.** /coverage.json: 169 items; 4 added in the last 24 h (Washington Post photographer attacked in
+  West Bank, Nepal editor arrest, Kansas newspaper raid documentary, UK Terrorism Act arrests of journalists at a
+  protest). All on topic; nothing hidden.
+- **Search Console.** 18,575 indexed, 20,664 not indexed (crawled not indexed 15,375; discovered not indexed 3,330;
+  duplicate Google-chosen canonical 1,680; noindex 231; alternate canonical 44; redirect 4); unchanged since Oct 16.
+  Enhancements: Breadcrumbs 936 valid; Datasets 1 valid / 20 invalid; Events 38. Recommendations: Glavlit page
+  impressions -70%; 1937 Japan newspaper law +743%; 1 unused verification token. sitemap.xml success, last read
+  Oct 16, 4,463 discovered. Performance (Sep 21 to Oct 16): 26 clicks, 4.41K impressions, CTR 0.6%, position 16.1.
