@@ -1563,3 +1563,28 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal-cas
   Enhancements: Breadcrumbs 936 valid; Datasets 1 valid / 20 invalid; Events 38. Recommendations: Glavlit page
   impressions -70%; 1937 Japan newspaper law +743%; 1 unused verification token. sitemap.xml success, last read
   Oct 16, 4,463 discovered. Performance (Sep 21 to Oct 16): 26 clicks, 4.41K impressions, CTR 0.6%, position 16.1.
+
+## 2026-10-19 ~09:35 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal-case Chrome step, Haiku for Search Console).
+
+- **Health.** incidents 227 (226 published), sources 629, claims 1007 (988 current), events 30. coverage_last_run
+  09:05 UTC (fresh, no manual cron): 21 feeds, 5 feed errors (Google News RSS queries, HTTP 503), 255 fetched,
+  121 fresh, 120 duplicates, 1 scored (hidden: SAnews government tribute to media, off topic). Intake by fetched_at
+  over 24 h (/admin/coverage): 11 items. Daily export #36 at 07:18 UTC.
+- **Link integrity.** 629 sources in seven slices: live 498, paywalled 49, redirected 22, error 52, bot_blocked 6,
+  dead 2. Wayback: 2 saved (rappler.com Marcos martial law press, cmfr-phil.org press freedom timeline), 1 failed
+  (koreaherald.com, read timeout); run cut off by the 170 s timeout. IndexNow: no URLs to ping.
+- **Focal case: no change.** CourtListener D.D.C. docket updated Oct 18 06:40, last filing Oct 14, highest ECF 53.
+  D.C. Circuit 26-5356: 3 entries, all Oct 14 (initial submissions due Nov 13, dispositive motions Nov 30); no stay
+  motion. Perplexity found no ruling or filing Oct 17 to 19. Not recorded (press access, not a case development):
+  CNN Reliable Sources (Oct 17) reported CNN again excluded from Air Force One, disrupting pooled TV coverage; the
+  Oct 13 injunction covers hard passes, not pool access. Nothing written; status stays enjoined.
+- **Coverage sanity.** /coverage.json: 169 items; 0 added in the last 24 h (latest fetched Oct 17 23:05). Shown
+  items unchanged from Oct 18 and on topic; nothing hidden. Google News feeds returning 503 (5 of 21) likely explain
+  the low intake.
+- **Search Console.** 18,575 indexed, 20,664 not indexed (crawled not indexed 15,375; discovered not indexed 3,330;
+  duplicate Google-chosen canonical 1,680; noindex 231; alternate canonical 44; redirect 4); unchanged since Oct 16.
+  Enhancements: Breadcrumbs 923 valid; Datasets 1 valid / 13 invalid (was 20); Events 31. Recommendations: Glavlit
+  page impressions -70%; 1937 Japan newspaper law +743%; 1 unused verification token. sitemap.xml success, last read
+  Oct 18, 4,463 discovered. Performance (Sep 21 to Oct 17): 26 clicks, 4.42K impressions, CTR 0.6%, position 16.2.

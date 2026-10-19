@@ -1,0 +1,5 @@
+{"count": 150, "dry_run": false, "event": "start", "mode": "all", "script": "wayback", "ts": "2026-10-19T09:49:39Z"}
+{"event": "saved", "script": "wayback", "source_id": 188, "ts": "2026-10-19T09:49:41Z", "url": "https://www.rappler.com/newsbreak/iq/how-marcos-silenced-media-press-freedom-martial-law/", "wayback_url": "https://web.archive.org/web/20261018094520/https://www.rappler.com/newsbreak/iq/how-marcos-silenced-media-press-freedom-martial-law/"}
+{"event": "saved", "script": "wayback", "source_id": 189, "ts": "2026-10-19T09:50:11Z", "url": "https://cmfr-phil.org/media-ethics-responsibility/ethics/back-to-the-past-a-timeline-of-press-freedom/", "wayback_url": "https://web.archive.org/web/20261019094955/https://cmfr-phil.org/media-ethics-responsibility/ethics/back-to-the-past-a-timeline-of-press-freedom/"}
+{"attempt": 1, "error": "The read operation timed out", "event": "save_simple_error", "script": "wayback", "ts": "2026-10-19T09:51:20Z", "url": "https://koreaherald.com/view.php?ud=20241213050077"}
+{"event": "failed", "script": "wayback", "source_id": 191, "ts": "2026-10-19T09:51:20Z", "url": "https://koreaherald.com/view.php?ud=20241213050077"}
