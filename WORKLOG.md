@@ -1588,3 +1588,25 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal-cas
   Enhancements: Breadcrumbs 923 valid; Datasets 1 valid / 13 invalid (was 20); Events 31. Recommendations: Glavlit
   page impressions -70%; 1937 Japan newspaper law +743%; 1 unused verification token. sitemap.xml success, last read
   Oct 18, 4,463 discovered. Performance (Sep 21 to Oct 17): 26 clicks, 4.42K impressions, CTR 0.6%, position 16.2.
+
+## 2026-10-20 ~09:35 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal case without Chrome).
+
+- **Chrome skipped.** list_connected_browsers now labels deviceId 793b969a-... as "Browser 1" and 14c579f2-... as
+  "Browser 2"; the routine prompt names 793b969a as Browser 2. Neither was selected; Perplexity and Search Console
+  steps not run. Peter to confirm which deviceId is the Betty Mac Studio.
+- **Health.** incidents 227 (226 published), sources 629, claims 1007 (988 current), events 30. Daily export #37 at
+  07:18 UTC. Intake by fetched_at over 24 h (/admin/coverage): 24 items. No manual coverage cron needed.
+- **Link integrity.** 629 sources in seven slices: live 500, paywalled 49, redirected 22, error 51, bot_blocked 5,
+  dead 2. Wayback: 2 saved (article19.org Burma censorship PDF, irrawaddy.com Burma censorship), 2 failed
+  (upi.com 1989 China expulsions, HTTP 520; ebsco.com Israel censorship, read timeout); several HTTP 429 from
+  availability API; run cut off by the 170 s timeout. IndexNow: 4 URLs, HTTP 200.
+- **Focal case: no change found.** Web search (Reuters, AP, CNN, Politico etc.) found nothing dated Oct 18 to 20 in
+  1:26-cv-03287 or D.C. Circuit 26-5356. CourtListener API throttled (125/day limit) and docket page blocked to
+  fetch, so docket not verified this run. Poynter commentary on a White House pool workaround (Oct 19, also in
+  coverage) relates to the already-noted Air Force One pool exclusion. Nothing written; status stays enjoined.
+- **Coverage sanity.** /coverage.json: 173 items; 4 added in the last 24 h (BreakThrough News congressional
+  threats, Florida polling-place newsgathering law, Poynter on CNN pool workaround, Delhi Police detention of
+  journalists). All on topic; nothing hidden.
+- **Search Console.** Not run (Chrome skipped).
