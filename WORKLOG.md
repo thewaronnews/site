@@ -1610,3 +1610,28 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   threats, Florida polling-place newsgathering law, Poynter on CNN pool workaround, Delhi Police detention of
   journalists). All on topic; nothing hidden.
 - **Search Console.** Not run (Chrome skipped).
+
+## 2026-10-21 ~10:00 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal case, Haiku for Search Console).
+
+- **Chrome browser identity unclear.** list_connected_browsers showed one browser only: deviceId 793b969a-...
+  labelled "Browser 1" (the prompt names 793b969a as Browser 2). Selected it by deviceId. It is signed in as
+  ineedinfo.peter@gmail.com, and Search Console says that account has no access to sc-domain:thewaronnews.com,
+  so this is probably not the Chrome that ran Search Console on Oct 19. Peter to confirm the deviceId.
+- **Health.** incidents 227 (226 published), sources 630 (after focal write), claims 1008, events 31. Daily export
+  #38 at 07:18 UTC. coverage_last_run 09:06 UTC (5 of 21 Google News feeds HTTP 503). Intake by fetched_at over
+  24 h (/admin/coverage): 30 items. No manual coverage cron needed.
+- **Link integrity.** 629 sources in eight slices: live 495, paywalled 49, redirected 18, error 57, bot_blocked 6,
+  dead 4 (was 2). Wayback: 1 saved (adb.anu.edu.au Calwell biography), 2 failed (emelbourne.net.au, ushmm.org
+  Editors Law; read timeouts), HTTP 429 from availability API; cut off at 170 s. IndexNow: 7 URLs, HTTP 200.
+- **Focal case: recorded.** CNN (Oct 20): on Oct 19 CNN counsel Ted Boutrous sent the Justice Department a letter
+  over CNN's exclusion from Air Force One and TV pool duties, asking for written confirmation by Oct 22, 5 p.m. ET,
+  and saying CNN "will be forced to pursue additional judicial relief." Written via .maint-tmp/focal21.py: source 630,
+  claim 1008, event 38 (2026-10-19, statement); incident revision 50 (summary, effect_on_reporting, Status as of
+  2026-10-21). Status unchanged: enjoined. Docket not verified beyond ECF 53; Perplexity cites an Oct 19 USCA case
+  number entry and an Oct 20 bond deposit, unverified and not recorded.
+- **Coverage sanity.** /coverage.json: 180 items; 7 added in the last 24 h (Kenya Citizen TV journalist arrest and
+  reaction, Russia detains Japanese journalist, CPJ on Vladimir Driagin, HRW on Lebanon media law, fuel protest
+  arrests). All on topic; nothing hidden.
+- **Search Console.** Not read: "you don't have access to this property" for the signed-in account.

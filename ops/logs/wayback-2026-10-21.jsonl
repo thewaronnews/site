@@ -1,0 +1,7 @@
+{"count": 150, "dry_run": false, "event": "start", "mode": "all", "script": "wayback", "ts": "2026-10-21T09:54:53Z"}
+{"event": "saved", "script": "wayback", "source_id": 196, "ts": "2026-10-21T09:54:54Z", "url": "https://adb.anu.edu.au/biography/calwell-arthur-augustus-9667", "wayback_url": "https://web.archive.org/web/20261020095347/https://adb.anu.edu.au/biography/calwell-arthur-augustus-9667"}
+{"attempt": 1, "error": "The read operation timed out", "event": "save_simple_error", "script": "wayback", "ts": "2026-10-21T09:56:03Z", "url": "https://www.emelbourne.net.au/biogs/EM01578b.htm"}
+{"event": "failed", "script": "wayback", "source_id": 197, "ts": "2026-10-21T09:56:03Z", "url": "https://www.emelbourne.net.au/biogs/EM01578b.htm"}
+{"attempt": 1, "error": "The read operation timed out", "event": "save_simple_error", "script": "wayback", "ts": "2026-10-21T09:57:13Z", "url": "https://encyclopedia.ushmm.org/content/en/timeline-event/holocaust/1933-1938/editors-law"}
+{"event": "failed", "script": "wayback", "source_id": 198, "ts": "2026-10-21T09:57:13Z", "url": "https://encyclopedia.ushmm.org/content/en/timeline-event/holocaust/1933-1938/editors-law"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-21T09:57:22Z", "url": "https://www.history.com/articles/richard-nixon-enemies-list-who-was-on-it"}
