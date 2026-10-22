@@ -1635,3 +1635,28 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   reaction, Russia detains Japanese journalist, CPJ on Vladimir Driagin, HRW on Lebanon media law, fuel protest
   arrests). All on topic; nothing hidden.
 - **Search Console.** Not read: "you don't have access to this property" for the signed-in account.
+
+## 2026-10-22 ~10:00 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal case, Haiku for Search Console).
+
+- **Chrome.** deviceId 793b969a-... now shows as "Browser 2" (matches the prompt). Signed in as ineedinfo.peter@gmail.com.
+- **Health.** incidents 227 (226 published), sources 630, claims 1008 (989 current), events 31. Daily export #39 at
+  07:18 UTC. coverage_last_run 09:05 UTC. Intake by fetched_at over 24 h (/admin/coverage): 34 items. No manual
+  coverage cron needed.
+- **Link integrity.** 630 sources in seven slices: live 495, paywalled 50, redirected 22, error 53, bot_blocked 7,
+  dead 3. Wayback: 6 saved (history.com Nixon enemies list, hrw.org 1991 report, PBS Frontline Gulf press appendix,
+  DoD embedding report PDF, RCFP and RSF on Judith Miller), 0 failed; cut off at 170 s. IndexNow: 7 URLs, HTTP 200.
+- **Focal case: no change recorded.** CourtListener docket (last filing Oct 20): nothing after ECF 53; the "USCA
+  case number" entry is dated Oct 14 (26-5356), and the Oct 19/20 entries are a $1.00 bond deposit receipt
+  (administrative). Nothing dated Oct 21 to 22. Press access: Mediaite (Oct 21) reports CNN left off the pool for the
+  South Carolina trip; quote only via a fetch summary and Mediaite is outside the source list, so not recorded.
+  TheWrap gives the Boutrous letter wording as "CNN will have no choice but to return to the court to defend its
+  rights."; our claim 1008 quote ("additional judicial relief") came from CNN and could not be re-fetched (robots).
+  CNN's deadline is Oct 22, 5 p.m. ET: check the docket next run for a motion to enforce or for contempt.
+  Unverified (Perplexity only): Independent reporter removed from a pool; reports Trump weighs moving the press
+  corps out of the building. Status stays enjoined.
+- **Coverage sanity.** /coverage.json: 189 items; 9 added in the last 24 h (Nigeria Kaduna journalist sentence, CNN
+  Air Force One threat, Japan journalist detained in Russia x3, Turkey press protests, Kenya journalist arrest, LA
+  photojournalist arrest, a censorship roundup). All on topic; nothing hidden.
+- **Search Console.** Not read: "you don't have access to this property" for ineedinfo.peter@gmail.com.
