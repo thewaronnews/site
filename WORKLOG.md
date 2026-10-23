@@ -1660,3 +1660,30 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   Air Force One threat, Japan journalist detained in Russia x3, Turkey press protests, Kenya journalist arrest, LA
   photojournalist arrest, a censorship roundup). All on topic; nothing hidden.
 - **Search Console.** Not read: "you don't have access to this property" for ineedinfo.peter@gmail.com.
+
+## 2026-10-23 ~10:00 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal case, Haiku for Search Console).
+
+- **Chrome.** deviceId 793b969a-... was the only connected browser but now reports its name as "Browser 1" (the
+  prompt expects "Browser 2"). deviceId matched, so it was used. Signed in as ineedinfo.peter@gmail.com.
+- **Health.** incidents 227 (226 published), sources 630, claims 1011 (989 current; 1009 to 1011 are not on the
+  focal incident), events 31. link_integrity share 0.987 (ok 622, dead 2, archived 143). Daily export #40 at
+  07:18 UTC, but its note reads "GitHub: failed: ... repo lookup failed: HTTP 401" (export's GitHub push token
+  rejected). coverage_last_run 09:25 UTC (several Google News feeds HTTP 503). Intake by fetched_at over 24 h
+  (/admin/coverage): 34 items. No manual coverage cron needed.
+- **Link integrity.** 630 sources in eight slices (the 540:640 slice timed out once and was re-run as two halves):
+  live 498, paywalled 50, redirected 22, error 53, bot_blocked 5, dead 2. Wayback: 3 saved (ACLU Manning timeline,
+  ABC News Kiriakou, Al Jazeera AP phone records), 1 failed (Lawfare AP phone records, read timeout), HTTP 429 from
+  the availability API; cut off at 170 s. IndexNow: 24 URLs, HTTP 200.
+- **Focal case: no change recorded.** CourtListener docket (updated Oct 22, 6:19 pm): latest entry still the Oct 20
+  $1.00 bond receipt; no motion to enforce, contempt motion or government response after CNN's Oct 22, 5 p.m. ET
+  deadline. No post-deadline reporting found from Reuters, AP, NYT, WaPo, CNN, Politico or NBC. Unverified
+  (Perplexity / secondary outlets only): CNN left off the Oct 21 South Carolina pool; Independent reporter Andrew
+  Feinberg removed from the Oct 22 Iowa pool (WHCA president Jacqui Heinrich quoted calling it "retaliation");
+  Will Scharf correction demand to Politico over a Susie Wiles article; press corps relocation reports. Status
+  stays enjoined.
+- **Coverage sanity.** /coverage.json: 201 items; 12 added in the last 24 h (BreakThrough News subpoena threat x2,
+  Azerbaijan Meclis.info, Turkey Ismail Ari, Georgia journalists x3, Nigeria Kaduna x3, Palestinian journalist
+  detained, LA photojournalist). All on topic; nothing hidden.
+- **Search Console.** Not read: "Oops, you don't have access to this property" for ineedinfo.peter@gmail.com.
