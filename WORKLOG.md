@@ -1687,3 +1687,27 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   Azerbaijan Meclis.info, Turkey Ismail Ari, Georgia journalists x3, Nigeria Kaduna x3, Palestinian journalist
   detained, LA photojournalist). All on topic; nothing hidden.
 - **Search Console.** Not read: "Oops, you don't have access to this property" for ineedinfo.peter@gmail.com.
+
+## 2026-10-24 ~09:50 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal case, Haiku for Search Console).
+
+- **Chrome.** deviceId 793b969a-... selected (Browser 2); signed in as ineedinfo.peter@gmail.com.
+- **Health.** incidents 227 (226 published), sources 630, claims 1011 (989 current), events 31. link_integrity
+  share 0.987 (ok 622, dead 2, archived 146, unchecked 6). Daily export #41 at 07:18 UTC; note still reads
+  "GitHub: failed: ... repo lookup failed: HTTP 401" (export's GitHub token rejected; second day). coverage_last_run
+  09:05 UTC (Google News feeds HTTP 503). Intake by fetched_at over 24 h (/admin/coverage): 20 items. No manual
+  coverage cron needed.
+- **Link integrity.** 630 sources in nine slices (run in parallel): live 496, paywalled 50, redirected 22, error 53,
+  bot_blocked 6, dead 3. Wayback: 5 saved (RCFP Fox News warrant, CPJ 2013 Fox News, FPF James Risen, CBS Risen
+  subpoena, ABC Acosta credentials), 0 failed, HTTP 429 from the availability API; cut off at 170 s. IndexNow: 4
+  URLs, HTTP 200.
+- **Focal case: no change recorded.** CourtListener docket 74823502 (updated Oct 22, 6:19 pm): latest entry still the
+  Oct 20 $1.00 bond receipt; highest ECF 53; appeal USCA 26-5356 unchanged. No motion to enforce, contempt motion or
+  government response after CNN's Oct 22, 5 p.m. ET deadline. Perplexity found no new ruling or filing; secondary
+  only (US News, Yahoo-hosted): deadline passed without announcement, Oct 21 pool items already noted, press corps
+  relocation talk. Status stays enjoined.
+- **Coverage sanity.** /coverage.json: 206 items; 5 added in the last 24 h (Egypt press crackdown and Mada Masr editor
+  Lina Attalah referred to trial x3, Georgia journalist arrest, Oct 24 journalists' call against censorship). All on
+  topic; nothing hidden.
+- **Search Console.** Not read: "Oops, you don't have access to this property" for ineedinfo.peter@gmail.com.
