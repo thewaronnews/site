@@ -1711,3 +1711,26 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   Lina Attalah referred to trial x3, Georgia journalist arrest, Oct 24 journalists' call against censorship). All on
   topic; nothing hidden.
 - **Search Console.** Not read: "Oops, you don't have access to this property" for ineedinfo.peter@gmail.com.
+
+## 2026-10-25 ~09:55 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal case, Haiku for Search Console).
+
+- **Chrome.** deviceId 793b969a-... selected (Browser 2).
+- **Health.** incidents 227 (226 published), sources 630, claims 1011 (989 current), events 31. link_integrity
+  share 0.987 (ok 622, dead 2, archived 150, unchecked 6). Daily export #42 at 07:18 UTC; note still reads
+  "GitHub: failed: ... repo lookup failed: HTTP 401" (third day). coverage_last_run 09:05 UTC (one Google News
+  feed HTTP 503). Intake by fetched_at over 24 h (/admin/coverage): 17 items. No manual coverage cron needed.
+- **Link integrity.** 630 sources in seven slices (525:630 timed out and was re-run as two halves): live 496,
+  paywalled 50, redirected 22, error 54, bot_blocked 5, dead 3. Wayback: 6 saved (ABC Acosta credentials, Al
+  Jazeera Acosta order, ABC Assange indictment, Gulf News Assange plea, RSF Turkey 102 outlets, HRW Turkey report),
+  1 failed (Refworld CPJ 1999, HTTP 520); cut off at 170 s. IndexNow: 4 URLs, HTTP 200.
+- **Focal case: no change recorded.** CourtListener docket page behind a bot check (not completed); Perplexity
+  relays "last updated Oct 24" with no filing after the Oct 20 bond receipt (ECF 53). No stay, appellate ruling,
+  enforcement or contempt motion found. Not recorded (no verbatim quote obtainable): Reuters, syndicated by The
+  Citizen, Oct 24, Trump says he may move the White House press corps; article body would not load. Status stays
+  enjoined.
+- **Coverage sanity.** /coverage.json: 219 items; 13 added in the last 24 h (Philippines Philip Lustre cyberlibel
+  arrest x7, Turkey protests over journalist arrests x3, Somaliland journalist detained, Kenya Citizen TV journalist
+  arrested in Nairobi). All on topic; nothing hidden.
+- **Search Console.** Not read: "Oops, you don't have access to this property" for ineedinfo.peter@gmail.com.
