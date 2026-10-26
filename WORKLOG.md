@@ -1734,3 +1734,27 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   arrest x7, Turkey protests over journalist arrests x3, Somaliland journalist detained, Kenya Citizen TV journalist
   arrested in Nairobi). All on topic; nothing hidden.
 - **Search Console.** Not read: "Oops, you don't have access to this property" for ineedinfo.peter@gmail.com.
+
+## 2026-10-26 ~10:00 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal case, Haiku for Search Console).
+
+- **Chrome.** deviceId 793b969a-... selected. The focal-case agent saw it as "Browser 2"; the Search Console agent
+  reported the same deviceId labelled "Browser 1". ID matched, so it was used; worth a look if labels keep shifting.
+- **Health.** incidents 227 (226 published), sources 630, claims 1011 (989 current), events 31. link_integrity
+  share 0.987 (ok 622, dead 2, archived 156, unchecked 6). Daily export #43 at 07:18 UTC; note still reads
+  "GitHub: failed: ... repo lookup failed: HTTP 401" (fourth day). coverage_last_run 09:05 UTC (21 feeds, 0 feed
+  errors, 2 scored, 1 shown). Intake by fetched_at over 24 h (/admin/coverage): 14 items. No manual coverage cron
+  needed.
+- **Link integrity.** 630 sources in eight parallel slices: live 496, paywalled 50, redirected 22, error 54,
+  bot_blocked 5, dead 3. Wayback: 3 saved (IFEX Chris Anyanwu, CPJ Attacks on the Press 2000 Malaysia, CPJ Gazprom
+  NTV takeover), 1 failed (HRW 1998 Malaysia, read timeout), HTTP 429 from the availability API; cut off at 170 s.
+  IndexNow: 4 URLs, HTTP 200.
+- **Focal case: no change recorded.** CourtListener docket 74823502 behind a human-verification check (not
+  bypassed). Perplexity (Oct 26) found no new ruling, filing or press restriction since Oct 25; Oct 13 preliminary
+  injunction stands; latest known ECF 53. Oct 24 Reuters item on moving the press corps still unrecorded (no
+  verbatim quote). Status stays enjoined.
+- **Coverage sanity.** /coverage.json: 227 items; 8 added in the last 24 h (Sudanese journalist detained x2, IAPA on
+  Cuba, Philip Lustre cyberlibel arrest x3, Turkey journalists' protest, RSF on West Bengal). All on topic; nothing
+  hidden.
+- **Search Console.** Not read: "Oops, you don't have access to this property" for ineedinfo.peter@gmail.com.
