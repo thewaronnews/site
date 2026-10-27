@@ -1758,3 +1758,27 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   Cuba, Philip Lustre cyberlibel arrest x3, Turkey journalists' protest, RSF on West Bengal). All on topic; nothing
   hidden.
 - **Search Console.** Not read: "Oops, you don't have access to this property" for ineedinfo.peter@gmail.com.
+
+## 2026-10-27 ~09:35 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal case, Haiku for Search Console).
+
+- **Chrome.** Only one browser connected: deviceId 793b969a-... (labelled "Browser 1", not "Browser 2"). ID matched the configured one, so it was used.
+- **Health.** incidents 227 (226 published), sources 630, claims 1011 (989 current), events 31. link_integrity
+  share 0.987 (ok 622, dead 2, archived 159, unchecked 6). Daily export #44 at 07:18 UTC; note still reads
+  "GitHub: failed: ... repo lookup failed: HTTP 401" (fifth day). coverage_last_run 09:05 UTC (21 feeds, 1 feed
+  error: Google News IN HTTP 503; 11 scored, 1 shown). Intake by fetched_at over 24 h (/admin/coverage, all states):
+  59 items. No manual coverage cron needed.
+- **Link integrity.** 630 sources in eight parallel slices (560:630 timed out and was re-run as two halves): live 495,
+  paywalled 50, redirected 22, error 54, bot_blocked 5, dead 4. Wayback: 1 saved (Al Jazeera 2008 Russia journalist
+  killers), 2 failed (Refworld Freedom House 2011, HTTP 520; RFE/RL 1071874, read timeout); cut off at 160 s.
+  IndexNow: 7 URLs, HTTP 200.
+- **Focal case: one statement recorded.** Reuters (via GV Wire, Oct 24, verbatim checked in Chrome): Trump says he may
+  move the White House press corps. Source 631, claim 1012, event 39 (2026-10-24, statement); summary,
+  effect_on_reporting and "Status as of 2026-10-27" updated (revision 51). Status unchanged: enjoined. CourtListener
+  blocked by robots.txt for fetch; no new filing found after ECF 53. D.C. Cir. appeal 26-5356 already recorded.
+  Not recorded: Roth v. Trump (Knight Institute / Yale MFIA suit over media bans, filed ~Oct 26), a separate case.
+- **Coverage sanity.** /coverage.json: 241 items; 14 added in the last 24 h (Indian publishers vs privacy law x4,
+  White House media-ban suit x5 incl. Knight Institute, CPJ West Bank, Turkey protests, Uganda Adjumani arrests,
+  Herridge Supreme Court). All on topic; nothing hidden.
+- **Search Console.** Not read: "Oops, you don't have access to this property" for ineedinfo.peter@gmail.com.
