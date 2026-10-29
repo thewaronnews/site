@@ -1782,3 +1782,32 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   White House media-ban suit x5 incl. Knight Institute, CPJ West Bank, Turkey protests, Uganda Adjumani arrests,
   Herridge Supreme Court). All on topic; nothing hidden.
 - **Search Console.** Not read: "Oops, you don't have access to this property" for ineedinfo.peter@gmail.com.
+
+## 2026-10-29 ~09:40 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal case, Haiku for Search Console).
+
+- **Note.** No 2026-10-28 WORKLOG entry or commit exists; that run left only untracked logs (common, linkcheck,
+  wayback 2026-10-28), committed here.
+- **Chrome.** Three browsers connected; "Browser 2" (793b969a-...) selected as configured.
+- **Health.** incidents 227 (226 published), sources 632 after this run (631 at start), claims 1013, events 32 at
+  start. link_integrity share 0.984 (ok 621, dead 3, archived 163, unchecked 7). Daily export #46 at 07:17 UTC; note
+  still reads "GitHub: failed: ... repo lookup failed: HTTP 401" (seventh day). coverage_last_run 09:05 UTC (21
+  feeds, 3 feed errors: Google News HTTP 503; 0 scored, all 145 fresh were duplicates). Intake by fetched_at over
+  24 h (/admin/coverage): 65 items (9 shown, 56 hidden). No manual coverage cron needed.
+- **Link integrity.** 631 sources in eight parallel slices: live 495, paywalled 50, redirected 21, error 57,
+  bot_blocked 5, dead 3. Wayback: 6 saved, 6 availability-API HTTP 429 errors; cut off at 165 s. IndexNow: 7 URLs,
+  HTTP 200.
+- **Focal case: one filing recorded.** Bloomberg (Oct 28, read in Chrome): plaintiffs filed an amended complaint
+  adding exclusion from Air Force One, Oval Office and pool assignments. Source 632, claim 1013, event 40
+  (2026-10-28, filing); summary, effect_on_reporting and "Status as of 2026-10-29" updated (revision 52, script
+  .maint-tmp/focal23.py). Status unchanged: enjoined. Not recorded: White House official's response to Bloomberg
+  (seen only in Perplexity summary); pool-exclusion counts (local NBC station only). CourtListener docket 74823502
+  returned 404. Roth v. Trump: nothing new found.
+- **Coverage sanity.** /coverage.json: 259 items; 9 added in the last 24 h (Iran espionage sentences, Egypt Mada Masr
+  shutdown, Somaliland detention, Tunisia Zied el-Heni, Turkey TV fines, Philippines Lustre x3, one other arrest).
+  All on topic; nothing hidden.
+- **Search Console.** Readable for the first time. Indexed 18,922, not indexed 20,989 (crawled not indexed 15,656;
+  discovered not indexed 3,307; duplicate, Google chose different canonical 1,730; noindex 239; alternate canonical
+  53; redirect 4). Enhancements: breadcrumbs 896/0, events 35/0, datasets 0/0. Sitemap read Oct 26, 4,464
+  discovered. Performance Sep 21 to Oct 27: 28 clicks, 4.56K impressions, CTR 0.6%, position 17.1.
