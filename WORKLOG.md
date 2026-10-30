@@ -1811,3 +1811,29 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   discovered not indexed 3,307; duplicate, Google chose different canonical 1,730; noindex 239; alternate canonical
   53; redirect 4). Enhancements: breadcrumbs 896/0, events 35/0, datasets 0/0. Sitemap read Oct 26, 4,464
   discovered. Performance Sep 21 to Oct 27: 28 clicks, 4.56K impressions, CTR 0.6%, position 17.1.
+
+## 2026-10-30 ~09:50 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal case, Haiku for Search Console).
+
+- **Chrome.** Device 793b969a-... selected as configured (it was the only connected browser; select_browser labelled it
+  "Browser 1" this time, same deviceId).
+- **Health.** incidents 227 (226 published), sources 632, claims 1013 (991 current), events 33. link_integrity share
+  0.983 (ok 621, dead 3, archived 169, unchecked 8). Daily export #47 at 07:18 UTC; note still reads "GitHub: failed:
+  ... repo lookup failed: HTTP 401" (eighth day). coverage_last_run 09:05 UTC (21 feeds; Google News feeds HTTP 503).
+  Intake by fetched_at over 24 h (/admin/coverage): 35 items. No manual coverage cron needed.
+- **Link integrity.** 632 sources in eight parallel slices: live 496, paywalled 50, redirected 23, error 55,
+  bot_blocked 5, dead 3. Wayback: 0 saved, 2 failed (Index on Censorship 2016 Poland, Al Jazeera 2017 Cambodia Daily;
+  both read timeouts), cut off at 170 s. IndexNow: 7 URLs, HTTP 200.
+- **Focal case: nothing recorded.** Perplexity and CourtListener checked. Only Oct 28-30 development reported is the
+  Oct 28 amended complaint (already recorded; AP Oct 29 and NYT coverage of it). No ruling in appeal 26-5356 found.
+  CourtListener search returned only Roth v. Trump (S.D.N.Y. 1:26-cv-09327, filed Oct 26, separate case); D.D.C.
+  docket not surfaced. Status unchanged: enjoined.
+- **Coverage sanity.** /coverage.json: 267 items; 8 added in the last 24 h (West Bengal FIR, US journalist detained
+  in West Bank x2, Georgia Keshikchidagh arrest, Egypt Matsadaash detainees, Egypt Forum, libel op-ed, street
+  journalist profile). All on topic; nothing hidden.
+- **Search Console.** Indexed 18,922, not indexed 20,989 (reasons unchanged from 10-29). Enhancements read as
+  breadcrumbs 133/0, events 8/0, datasets 0/0 (10-29 read 896/0 and 35/0; drop unverified, subagent read).
+  Recommendation: 1 unused verification token; /incidents/1937-japan-newspaper-law-war-censorship impressions down
+  96%. Sitemap last read Oct 26, 4,464 discovered. Performance Sep 21 to Oct 27: 28 clicks, 4.56K impressions, CTR
+  0.6%, position 17.1.

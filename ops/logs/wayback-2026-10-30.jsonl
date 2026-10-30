@@ -1,0 +1,5 @@
+{"count": 150, "dry_run": false, "event": "start", "mode": "all", "script": "wayback", "ts": "2026-10-30T09:38:13Z"}
+{"attempt": 1, "error": "The read operation timed out", "event": "save_simple_error", "script": "wayback", "ts": "2026-10-30T09:39:14Z", "url": "https://www.indexoncensorship.org/2016/05/polands-political-cleansing-of-journalists/"}
+{"event": "failed", "script": "wayback", "source_id": 237, "ts": "2026-10-30T09:39:14Z", "url": "https://www.indexoncensorship.org/2016/05/polands-political-cleansing-of-journalists/"}
+{"attempt": 1, "error": "The read operation timed out", "event": "save_simple_error", "script": "wayback", "ts": "2026-10-30T09:40:24Z", "url": "https://www.aljazeera.com/news/2017/9/3/cambodia-daily-to-close-after-tax-fight-with-government"}
+{"event": "failed", "script": "wayback", "source_id": 238, "ts": "2026-10-30T09:40:24Z", "url": "https://www.aljazeera.com/news/2017/9/3/cambodia-daily-to-close-after-tax-fight-with-government"}
