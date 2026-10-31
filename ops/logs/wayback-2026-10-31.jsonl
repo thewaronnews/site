@@ -1,0 +1,6 @@
+{"count": 150, "dry_run": false, "event": "start", "mode": "all", "script": "wayback", "ts": "2026-10-31T09:39:35Z"}
+{"attempt": 1, "error": "The read operation timed out", "event": "save_simple_error", "script": "wayback", "ts": "2026-10-31T09:40:36Z", "url": "https://www.nbcnews.com/news/asian-america/cambodia-daily-newspaper-closes-over-disputed-tax-bill-n799671"}
+{"event": "failed", "script": "wayback", "source_id": 239, "ts": "2026-10-31T09:40:36Z", "url": "https://www.nbcnews.com/news/asian-america/cambodia-daily-newspaper-closes-over-disputed-tax-bill-n799671"}
+{"attempt": 1, "error": "The read operation timed out", "event": "save_simple_error", "script": "wayback", "ts": "2026-10-31T09:41:45Z", "url": "https://www.article19.org/resources/tanzania-restrictive-regulations-online-content-signed-law/"}
+{"event": "failed", "script": "wayback", "source_id": 240, "ts": "2026-10-31T09:41:45Z", "url": "https://www.article19.org/resources/tanzania-restrictive-regulations-online-content-signed-law/"}
+{"attempt": 1, "error": "HTTP Error 429: Too Many Requests", "event": "available_error", "script": "wayback", "ts": "2026-10-31T09:41:54Z", "url": "https://edition.cnn.com/2018/04/12/africa/tanzania-blogging-internet-freedoms-africa/index.html"}

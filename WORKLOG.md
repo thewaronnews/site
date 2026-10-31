@@ -1837,3 +1837,27 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   Recommendation: 1 unused verification token; /incidents/1937-japan-newspaper-law-war-censorship impressions down
   96%. Sitemap last read Oct 26, 4,464 discovered. Performance Sep 21 to Oct 27: 28 clicks, 4.56K impressions, CTR
   0.6%, position 17.1.
+
+## 2026-10-31 ~09:45 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal case, Haiku for Search Console).
+
+- **Chrome.** Two browsers connected; "Browser 2" (793b969a-...) selected as configured.
+- **Health.** incidents 227 (226 published), sources 632, claims 1013 (991 current), events 33. link_integrity share
+  0.983 (ok 621, dead 3, archived 169, unchecked 8). Daily export #48 at 07:18 UTC; note still reads "GitHub: failed:
+  ... repo lookup failed: HTTP 401" (ninth day). coverage_last_run 09:05 UTC (21 feeds; Google News feeds HTTP 503).
+  No manual coverage cron needed.
+- **Link integrity.** 632 sources in parallel slices: live 497, paywalled 50, redirected 23, error 54, bot_blocked 5,
+  dead 3. Wayback: 0 saved, 2 failed (NBC News 2017 Cambodia Daily, Article 19 Tanzania; read timeouts) plus an
+  availability-API 429; cut off at 170 s. IndexNow: 4 URLs, HTTP 200.
+- **Focal case: nothing recorded.** Perplexity and CourtListener checked. No order, filing or D.C. Cir. 26-5356 action
+  dated Oct 29-31 found; latest is the Oct 28 amended complaint (already recorded; AP Oct 29). Perplexity misdated a
+  PBS Oct 14 item as new; checked and discarded. CourtListener showed only Roth v. Trump (separate case). Status
+  unchanged: enjoined.
+- **Coverage sanity.** /coverage.json: 284 items; 17 added in the last 24 h (Nepal newsroom raids x9, Japanese
+  journalist detained in Russia x2, Somaliland detention, Egypt Mada Masr, Arunachal search warrants, Novaya Gazeta,
+  two others). All on topic; nothing hidden.
+- **Search Console.** Indexed 18,922, not indexed 20,989 (reasons unchanged). Enhancements: breadcrumbs 91/0, events
+  4/0, datasets 0/0 (continuing decline from 896/35 on 10-29). Recommendations unchanged (unused verification token;
+  1937 Japan newspaper law page impressions down 96%). Sitemap last read Oct 26, 4,464 discovered. Performance Sep 21
+  to Oct 28: 28 clicks, 4.57K impressions, CTR 0.6%, position 17.1.
