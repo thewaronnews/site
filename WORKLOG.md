@@ -1861,3 +1861,27 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   4/0, datasets 0/0 (continuing decline from 896/35 on 10-29). Recommendations unchanged (unused verification token;
   1937 Japan newspaper law page impressions down 96%). Sitemap last read Oct 26, 4,464 discovered. Performance Sep 21
   to Oct 28: 28 clicks, 4.57K impressions, CTR 0.6%, position 17.1.
+
+## 2026-11-01 ~10:50 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal case, Haiku for Search Console).
+
+- **Chrome.** One browser connected; deviceId 793b969a-... (configured Mac Studio Chrome) now labelled "Browser 1";
+  selected by deviceId.
+- **Health.** incidents 227 (226 published), sources 632, claims 1013 (991 current), events 33. link_integrity share
+  0.983 (ok 621, dead 3, archived 169, unchecked 8). Daily export #49 at 07:18 UTC; note still reads "GitHub: failed:
+  ... repo lookup failed: HTTP 401" (tenth day). coverage_last_run 10:05 UTC (21 feeds; Google News feeds HTTP 503).
+  Intake by fetched_at over 24 h (/admin/coverage): 10 items. No manual coverage cron needed.
+- **Link integrity.** 632 sources in eight parallel slices: live 496, paywalled 50, redirected 23, error 55,
+  bot_blocked 5, dead 3. Wayback: 5 saved (sources 241-245), 0 failed, cut off at 170 s. IndexNow: 4 URLs, HTTP 200.
+- **Focal case: nothing recorded.** Perplexity found no order, filing or D.C. Cir. 26-5356 action dated Oct 30-Nov 1.
+  In-window items were commentary only (Deadline Q&A with counsel Boutrous, Oct 30; WaPo piece on press-freedom
+  groups, Oct 31; neither a filing). Perplexity listed a SCOTUSblog entry "Trump v. Cable News Network, Inc. (26-223)"
+  not opened; to verify next run. CourtListener showed a human-verification check; docket not read. Status unchanged:
+  enjoined.
+- **Coverage sanity.** /coverage.json: 286 items; 2 with fetched_at in the last 24 h (Somaliland three journalists
+  arrested; Nepal three journalists detained). Under 3. Both on topic; nothing hidden.
+- **Search Console.** Indexed 18,922, not indexed 20,989 (crawled not indexed 15,656; discovered not indexed 3,307;
+  Google chose different canonical 1,730; noindex 239; alternate canonical 53; redirect 4). Enhancements: breadcrumbs
+  91/0, events 4/0, datasets 0/0. Recommendations unchanged. Sitemap last read Oct 26, 4,464 discovered. Performance
+  Sep 21 to Oct 30: 28 clicks, 4.58K impressions, CTR 0.6%, position 17.2.
