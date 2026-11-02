@@ -1919,3 +1919,7 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   verification token; 1937 Japan newspaper law page impressions down 96%). Sitemap last read Oct 26, 4,464 discovered.
   28 web search clicks over the period shown. authuser=0 (peterbenes@) and 1 (ineedinfo.peter@) have no access.
 - **GitHub.** New token in secrets.env works; 39 pending commits pushed. Worker GITHUB_TOKEN secret not yet replaced.
+- **Follow-ups (~11:50 UTC).** Peter replaced the Worker GITHUB_TOKEN secret in the Cloudflare dashboard; first
+  check is the 2026-11-03 07:17 UTC nightly export note (no on-demand export endpoint). Scheduled tasks updated:
+  this maintenance task and the weekly AI-citation panel now use Chrome deviceId 14c579f2-...; Search Console via
+  authuser=2; maintenance runs request delete permission before git.
