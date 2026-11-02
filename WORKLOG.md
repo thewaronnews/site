@@ -1908,3 +1908,9 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   Purge of the White House Press Corps", dated Oct 26). All on topic; nothing hidden. The Knight Institute item may
   describe a separate lawsuit over White House press access; not yet in the record.
 - **Search Console.** Skipped (browser unavailable).
+- **Rerun of Chrome steps (~11:10 UTC, Peter confirmed deviceId 14c579f2-... is the Betty Mac Studio Chrome).**
+  Perplexity: no new D.D.C. or D.C. Cir. order Oct 29-Nov 2; reports a D.C. Cir. 26-5356 clerk's order setting
+  Nov 13 (procedural motions) and Nov 30 (dispositive motions), not verified against the docket. CourtListener:
+  human-verification page, docket not read. Knight Institute suit identified as Roth v. Trump, filed Oct 26 (with Yale
+  MFIA clinic; reader/listener plaintiffs); court and docket number not stated; not in the record. Search Console:
+  "you don't have access to this property" for peterbenes@gmail.com; nothing read. Nothing written to the record.
