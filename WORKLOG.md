@@ -1885,3 +1885,26 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   Google chose different canonical 1,730; noindex 239; alternate canonical 53; redirect 4). Enhancements: breadcrumbs
   91/0, events 4/0, datasets 0/0. Recommendations unchanged. Sitemap last read Oct 26, 4,464 discovered. Performance
   Sep 21 to Oct 30: 28 clicks, 4.58K impressions, CTR 0.6%, position 17.2.
+
+## 2026-11-02 ~10:45 UTC: scheduled maintenance
+
+Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal case via web search).
+
+- **Chrome.** Configured deviceId 793b969a-... not connected; only "Browser 1" (deviceId 14c579f2-..., a different
+  machine) listed. Chrome steps skipped: no Perplexity, no Search Console this run.
+- **Health.** incidents 227 (226 published), sources 632, claims 1013 (991 current), events 33. link_integrity share
+  0.983 (ok 621, dead 3, archived 174, unchecked 8). Daily export #50 at 07:18 UTC; note still reads "GitHub: failed:
+  ... repo lookup failed: HTTP 401" (eleventh day). coverage_last_run 10:05 UTC (21 feeds, no feed errors). Intake by
+  fetched_at over 24 h (/admin/coverage): 15 items. No manual coverage cron needed.
+- **Link integrity.** 632 sources in eight parallel slices: live 495, paywalled 50, redirected 23, error 56,
+  bot_blocked 5, dead 3. Wayback: 4 saved (sources 246-248, 251), 2 failed (249, 250; HTTP 520), several 429s from
+  the availability API; cut off at 170 s. IndexNow: 4 URLs, HTTP 200.
+- **Focal case: nothing recorded.** Web search (Perplexity unavailable) found no order, filing or D.C. Cir. 26-5356
+  action dated Oct 31-Nov 2; latest remains the Oct 28 amended complaint. SCOTUSblog "Trump v. Cable News Network,
+  Inc." (26-223) verified: Trump's cert petition in his 11th Cir. defamation suit against CNN, unrelated to the
+  press-access case; not linked. CourtListener not readable without a browser. Status unchanged: enjoined.
+- **Coverage sanity.** /coverage.json: 289 items; 3 with fetched_at in the last 24 h (Nepal four journalists
+  detained; West Bengal police case against Maktoob; Knight First Amendment Institute "Why We're Suing Over Trump's
+  Purge of the White House Press Corps", dated Oct 26). All on topic; nothing hidden. The Knight Institute item may
+  describe a separate lawsuit over White House press access; not yet in the record.
+- **Search Console.** Skipped (browser unavailable).
