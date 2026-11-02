@@ -1914,3 +1914,8 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   human-verification page, docket not read. Knight Institute suit identified as Roth v. Trump, filed Oct 26 (with Yale
   MFIA clinic; reader/listener plaintiffs); court and docket number not stated; not in the record. Search Console:
   "you don't have access to this property" for peterbenes@gmail.com; nothing read. Nothing written to the record.
+- **Search Console (~11:30 UTC, via the Betty Chrome, Google account authuser=2).** Indexed 18,922, not indexed
+  20,989. Enhancements: breadcrumbs 86/0, events 3/0, datasets 0/0. HTTPS 86. Recommendations unchanged (unused
+  verification token; 1937 Japan newspaper law page impressions down 96%). Sitemap last read Oct 26, 4,464 discovered.
+  28 web search clicks over the period shown. authuser=0 (peterbenes@) and 1 (ineedinfo.peter@) have no access.
+- **GitHub.** New token in secrets.env works; 39 pending commits pushed. Worker GITHUB_TOKEN secret not yet replaced.
