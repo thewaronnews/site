@@ -1923,3 +1923,25 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   check is the 2026-11-03 07:17 UTC nightly export note (no on-demand export endpoint). Scheduled tasks updated:
   this maintenance task and the weekly AI-citation panel now use Chrome deviceId 14c579f2-...; Search Console via
   authuser=2; maintenance runs request delete permission before git.
+
+## 2026-11-03 (scheduled maintenance, ~12:20 UTC)
+
+- **Health.** incidents 227 (226 published), sources 632, claims 1013 (991 current), events 33. link_integrity share
+  0.983 (ok 621, dead 3, archived 178, unchecked 8). Daily export #51 at 07:17 UTC; note still reads "GitHub: failed:
+  ... repo lookup failed: HTTP 401" (first export after Peter replaced the Worker GITHUB_TOKEN secret; still failing).
+  coverage_last_run 12:05 UTC (21 feeds; several Google News RSS feeds HTTP 503). Intake by fetched_at over 24 h
+  (/admin/coverage, first 200 rows): 47 items. No manual coverage cron needed.
+- **Link integrity.** 632 sources in eight parallel slices: live 496, paywalled 50, redirected 22, error 56,
+  bot_blocked 5, dead 3. Wayback: 3 saved (sources 252-254), 1 failed (255, read timeout), 429s from the availability
+  API; cut off at 170 s. IndexNow: 4 URLs, HTTP 200.
+- **Focal case: nothing recorded.** Perplexity (Betty Chrome, deviceId 14c579f2-...) found no verifiable Nov 1-3
+  ruling, hearing or filing in 1:26-cv-03287 or D.C. Cir. 26-5356; latest remains the Oct 28 amended complaint.
+  CourtListener: human-verification page, not read. Next CNN TV-pool date per the amended complaint: Nov 5. Status
+  unchanged: enjoined.
+- **Coverage sanity.** /coverage.json: 292 items; 3 with fetched_at in the last 24 h (RSF press freedom predators
+  list; Sudan anti-state law amendment; NC call for parliamentary panel on journalists' arrest). All on topic; nothing hidden.
+- **Search Console (authuser=3; authuser=2, 0, 1 had no access today).** Indexed 18,922, not indexed 20,989
+  (crawled not indexed 15,656; discovered not indexed 3,307; duplicate/Google-chosen canonical 1,730; noindex 239;
+  alternate canonical 53; redirect 4). Enhancements: breadcrumbs 84/0, events 3/0, datasets 0/0. Recommendation:
+  unused verification token. Sitemap last read Oct 26, 4,464 discovered. Performance Sep 21-Nov 1: 28 clicks,
+  4.58K impressions, CTR 0.6%, avg position 17.2.
