@@ -1945,3 +1945,27 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   alternate canonical 53; redirect 4). Enhancements: breadcrumbs 84/0, events 3/0, datasets 0/0. Recommendation:
   unused verification token. Sitemap last read Oct 26, 4,464 discovered. Performance Sep 21-Nov 1: 28 clicks,
   4.58K impressions, CTR 0.6%, avg position 17.2.
+
+## 2026-11-07 (scheduled maintenance, ~12:30 UTC)
+
+- **Health.** incidents 227 (226 published), sources 632, claims 1013 before this run (991 current), events 33.
+  link_integrity share 0.983 (ok 621, dead 3, archived 181, unchecked 8). Latest daily export is #53 at
+  2026-11-05 07:17 UTC (no export row for 11-06 or 11-07); its note still reads "GitHub: failed: ... repo lookup
+  failed: HTTP 401". coverage_last_run 12:05 UTC (21 feeds, 5 Google News RSS feeds HTTP 503; fetched 254, fresh 119,
+  shown 0, hidden 2). Intake by fetched_at over 24 h (/admin/coverage, first 200 rows): 25 items, 6 shown, 19 hidden.
+  No manual coverage cron needed. No WORKLOG entries for 11-04 to 11-06 runs.
+- **Link integrity.** 632 sources in eight parallel slices: live 493, paywalled 50, redirected 23, error 55,
+  bot_blocked 8, dead 3. Wayback: 4 saved (sources 257-259, 261), 1 failed (260, HTTP 520); cut off at 170 s.
+  IndexNow: 4 URLs, HTTP 200.
+- **Focal case** (Cable News Network, Inc. v. Trump). No ruling; Oct 13 preliminary injunction stands, appeal
+  26-5356 pending. Added from the CourtListener docket (source 105, court_record): claim 1014 / event 41 (11-04
+  further PI motion, ECF 55), claim 1015 / event 42 (11-05 minute order: opposition 11-18, reply 11-25, hearing
+  12-02), claim 1016 / event 43 (11-06 Reporters Committee amicus motion, ECF 58). Summary, effect_on_reporting and
+  "Status as of 2026-11-07" updated (revision 53); status unchanged (enjoined). Not added: Daily Beast report of CNN
+  blocked from an Oval Office TV pool event (Kaitlan Collins post, published 11-06); no Reuters/AP/NYT/WaPo/CNN/
+  Politico confirmation found. Script .maint-tmp/focal24.py.
+- **Coverage.** /coverage.json: 6 items fetched in the last 24 h, all on topic; nothing hidden.
+- **Search Console** (authuser=3 worked; 2, 0, 1 had no access). 18,922 indexed, 20,989 not indexed (crawled not
+  indexed 15,656; discovered not indexed 3,307; duplicate canonical 1,730; noindex 239; alternate canonical 53;
+  redirect 4). Breadcrumbs 82 valid / 0 invalid; Events 3 valid. Recommendation: 1 unused verification token.
+  Sitemap: 4,464 discovered, last read 2026-10-26. Performance: 29 clicks, 4.58K impressions, CTR 0.6%, position 17.1.
