@@ -1969,3 +1969,27 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   indexed 15,656; discovered not indexed 3,307; duplicate canonical 1,730; noindex 239; alternate canonical 53;
   redirect 4). Breadcrumbs 82 valid / 0 invalid; Events 3 valid. Recommendation: 1 unused verification token.
   Sitemap: 4,464 discovered, last read 2026-10-26. Performance: 29 clicks, 4.58K impressions, CTR 0.6%, position 17.1.
+
+## 2026-11-08 (scheduled maintenance, ~14:50 UTC)
+
+- **Health.** incidents 227 (226 published), sources 632, claims 1016 before this run (994 current), events 36.
+  link_integrity share 0.983 (ok 621, dead 3, archived 185, unchecked 8). Latest daily export is still #53 at
+  2026-11-05 07:17 UTC (none for 11-06 to 11-08); note still "GitHub: failed: ... repo lookup failed: HTTP 401".
+  coverage_last_run 14:05 UTC (21 feeds, 1 Google News RSS feed HTTP 503; fetched 508, fresh 223, scored 0, shown 0).
+  Intake by fetched_at over 24 h (/admin/coverage, first 200 rows): 13 items. No manual coverage cron needed.
+- **Link integrity.** 632 sources in eight parallel foreground slices (background nohup slices are killed when a
+  device_bash call returns): live 495, paywalled 50, redirected 23, error 56, bot_blocked 5, dead 3. Wayback: 6
+  saved (sources 257-259, 261, 263, 264), 2 failed (260, 262; HTTP 520); cut off at 170 s. IndexNow: 7 URLs, HTTP 200.
+- **Focal case** (Cable News Network, Inc. v. Trump). No ruling; Oct 13 preliminary injunction stands, appeal
+  26-5356 pending, hearing on the further PI motion 12-02. CourtListener docket read from screenshots (no
+  verification page): added claim 1017 / event 44 (11-06 supplemental declaration of Alicia Jennings, ECF 57,
+  source 105, court_record). Summary and what_happened updated, "Status as of 2026-11-08" (revision 54); status
+  unchanged (enjoined). Not added: TheWrap (11-05) reports CNN left off its scheduled TV pool slot on 11-05 and The
+  Independent replaced in the 11-06 print pool by OAN; no Reuters/AP/NYT/WaPo/CNN/Politico confirmation found.
+  Perplexity found no Nov 6-8 development from qualifying sources. Script .maint-tmp/focal25.py.
+- **Coverage.** /coverage.json: 320 items; 3 fetched in the last 24 h (Asia police action on journalists; Egypt
+  regulator on website licensing; Nepal press freedom protest), all on topic; nothing hidden.
+- **Search Console** (authuser=3). 18,922 indexed, 20,989 not indexed (crawled not indexed 15,656; discovered not
+  indexed 3,307; duplicate canonical 1,730; noindex 239; alternate canonical 53; redirect 4). Breadcrumbs 82/0,
+  Events 3/0, Datasets 0/0. Recommendation: 1 unused verification token. Sitemap: 4,464 discovered, last read
+  2026-10-26. Performance (to Nov 6): 29 clicks, 4.58K impressions, CTR 0.6%, position 17.1.
