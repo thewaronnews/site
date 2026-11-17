@@ -1,0 +1,2 @@
+slice 480:560 of 632
+linkcheck: 80 due; live=65, paywalled=5, bot_blocked=1, dead=1, redirected=5, error=3

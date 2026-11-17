@@ -1993,3 +1993,29 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   indexed 3,307; duplicate canonical 1,730; noindex 239; alternate canonical 53; redirect 4). Breadcrumbs 82/0,
   Events 3/0, Datasets 0/0. Recommendation: 1 unused verification token. Sitemap: 4,464 discovered, last read
   2026-10-26. Performance (to Nov 6): 29 clicks, 4.58K impressions, CTR 0.6%, position 17.1.
+
+## 2026-11-17 (scheduled maintenance, ~00:35 UTC)
+
+- **Health.** incidents 227 (226 published), sources 632, claims 1017 before this run (995 current), events 37.
+  link_integrity share 0.983 (ok 621, dead 3, archived 187, unchecked 8). Latest daily export is still #53 at
+  2026-11-05 07:17 UTC (none for 11-06 to 11-17); note still "GitHub: failed: ... repo lookup failed: HTTP 401".
+  coverage_last_run 00:05 UTC (21 feeds, 5 Google News RSS feeds HTTP 503; fetched 263, fresh 114, scored 1,
+  shown 0, hidden 2). Intake by fetched_at over 24 h (/admin/coverage, first 200 rows): 39 items. No manual cron.
+- **Link integrity.** 632 sources in eight parallel slices: live 491, paywalled 50, redirected 23, error 60,
+  bot_blocked 7, dead 1. Wayback: 0 saved, 16 failed (Save Page Now HTTP 429 rate limit; sources 257-261 retried).
+  IndexNow: 7 URLs, HTTP 200.
+- **Focal case** (Cable News Network, Inc. v. Trump). No ruling on the further PI motion; Oct 13 preliminary
+  injunction stands, appeal 26-5356 pending; opposition due 11-18, reply 11-25, hearing 12-02. CourtListener
+  (no verification page; last filing 11-10): added claim 1018 / event 45 (11-10 minute order granting the
+  Reporters Committee amicus motion, ECF 58; source 105, court_record). Summary and what_happened updated,
+  "Status as of 2026-11-17" (revision 55); status unchanged (enjoined). Not added: 11-10 order denying a private
+  individual's amicus/intervention filings (not material to the record); TheWrap pool reports already noted 11-08.
+  Perplexity found no Nov 8-17 pool-access development from qualifying sources. Script .maint-tmp/focal26.py.
+- **Coverage.** /coverage.json: 361 items; many fetched in the last 24 h (Nigeria detention of journalist
+  Daniel Ojukwu, FPF suit over Defense Department media list, India police raid on news channel, Philippines
+  protest arrests), all on topic; nothing hidden.
+- **Search Console** (authuser=3). 12,187 indexed (down from 18,922 on 11-08), 28,718 not indexed (crawled not
+  indexed 23,352; discovered not indexed 3,307; duplicate canonical 1,757; noindex 242; alternate canonical 54;
+  redirect 5; server error 1). Breadcrumbs 82/0, Events 3/0, Datasets 0/0. Recommendation: 1 unused verification
+  token. Sitemap: 4,464 discovered, last read 2026-10-26. Performance (Sep 21 to Nov 14): 29 clicks, 4.58K
+  impressions, CTR 0.6%, position 17.1.
