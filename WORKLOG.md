@@ -2019,3 +2019,23 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   redirect 5; server error 1). Breadcrumbs 82/0, Events 3/0, Datasets 0/0. Recommendation: 1 unused verification
   token. Sitemap: 4,464 discovered, last read 2026-10-26. Performance (Sep 21 to Nov 14): 29 clicks, 4.58K
   impressions, CTR 0.6%, position 17.1.
+
+## 2026-11-17 (scheduled maintenance, ~00:40 UTC)
+
+- **Health.** incidents 227 (226 published), sources 632, claims 1017 (995 current), events 37. link_integrity share
+  0.983 (ok 621, dead 3, archived 187, unchecked 8). Latest daily export is still #53 at 2026-11-05; note still
+  "GitHub: failed: ... repo lookup failed: HTTP 401" (Worker GITHUB_TOKEN still rejected; no export since 11-05).
+  coverage_last_run 00:05 UTC (21 feeds, Google News RSS 503/429); no manual cron needed.
+- **Link integrity.** linkcheck in parallel slices (first pass cut at 170 s, remaining slices rerun at 80 s):
+  632 sources covered; mostly live, ~50 paywalled, ~60 error, 3 dead. Wayback: see ops/logs/wayback-2026-11-17.jsonl
+  (cut off by timeout). IndexNow: 7 URLs, HTTP 200.
+- **Focal case.** Chrome (deviceId 14c579f2-...) was used. No verified development after 11-08 from a qualifying
+  source; CourtListener docket not readable (stale page, WebFetch failed). Unconfirmed: TheWrap "Judge Rules Against
+  White House Resuming Ban..." (date unknown), PBS NewsHour pool story (date unknown). Nothing written; status stays
+  enjoined (hearing on further PI motion 12-02, appeal 26-5356 pending).
+- **Coverage.** /coverage.json 361 items; 6+ fetched in last 24 h (FPF v. Defense Dept; Nigeria Ojukwu; India; ASEAN
+  protest arrests), all on topic; nothing hidden.
+- **Search Console** (authuser=3). Indexed 12,187 (was 18,922 on 11-08), not indexed 28,718: crawled not indexed
+  23,352 (was 15,656), discovered not indexed 3,307, duplicate canonical 1,757, noindex 242, alternate canonical 54,
+  redirect 5, 5xx 1. Breadcrumbs 82/0, Events 3/0, HTTPS 81. Sitemap 4,464 discovered, last read 2026-10-26.
+  Performance (Sep 21 to Nov 14): 29 clicks, 4.58K impressions, CTR 0.6%, position 17.1.
