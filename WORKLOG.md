@@ -2039,3 +2039,17 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   23,352 (was 15,656), discovered not indexed 3,307, duplicate canonical 1,757, noindex 242, alternate canonical 54,
   redirect 5, 5xx 1. Breadcrumbs 82/0, Events 3/0, HTTPS 81. Sitemap 4,464 discovered, last read 2026-10-26.
   Performance (Sep 21 to Nov 14): 29 clicks, 4.58K impressions, CTR 0.6%, position 17.1.
+
+## 2026-11-17 (scheduled maintenance, third concurrent run, ~00:35 to 01:00 UTC)
+
+- **Concurrency.** At least three runs of this routine started near 00:35 UTC and shared the same folder and logs
+  (see the two entries above). This entry adds only what differs.
+- **Link integrity.** Eight slices covering 632: live 494, paywalled 50, redirected 23, error 58, bot_blocked 6,
+  dead 1. Wayback (last pass, 00:46 start): 5 saved (257-259, 261, 263), 2 failed (260, 262; HTTP 520/429). The
+  same sources 257-263 are re-attempted every run, so the "least-attempted first" order appears stuck there.
+  IndexNow: 7 URLs, HTTP 200.
+- **Focal case.** CourtListener (mirror updated 11-16, last filing 11-10; no verification page) confirms claim 1018 /
+  event 45 already added by the 00:35 run; nothing further added. 11-10 orders denying Tatum intervention (ECF 46) and
+  three individual amicus requests (ECF 39, 45, 53) not added. White House rotation notices list CNN as primary TV
+  11-10, 11-15, 11-20 and Politico as primary print 11-13 (Perplexity via pool notices; not a qualifying source).
+- **Search Console** (authuser=3): same figures as the 00:35 entry (12,187 indexed, 28,718 not indexed).
