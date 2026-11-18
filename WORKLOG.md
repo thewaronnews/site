@@ -2053,3 +2053,19 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   three individual amicus requests (ECF 39, 45, 53) not added. White House rotation notices list CNN as primary TV
   11-10, 11-15, 11-20 and Politico as primary print 11-13 (Perplexity via pool notices; not a qualifying source).
 - **Search Console** (authuser=3): same figures as the 00:35 entry (12,187 indexed, 28,718 not indexed).
+
+## 2026-11-18 (scheduled maintenance, ~15:00 UTC)
+
+- **Health.** incidents 227 (226 published), sources 632, claims 1018 (996 current), events 38. Link integrity
+  0.986 (ok 623, dead 1, archived 187, unchecked 8). coverage_last_run 14:05 UTC (21 feeds; Google News RSS 503/429),
+  no manual cron needed. last_export still #53 at 2026-11-05 with "GitHub ... HTTP 401" (Worker GITHUB_TOKEN secret
+  still rejected; no export for 13 days).
+- **Link integrity.** linkcheck --all in 8 parallel slices: 632 sources; live 494, paywalled 50, redirected 24,
+  error 58, bot_blocked 5, dead 1. Wayback (timeout 170 s): 7 saved (257-259, 261, 263-265), 2 failed (260, 262;
+  HTTP 520). Same low-numbered sources are still retried each run. IndexNow: 4 URLs, HTTP 200.
+- **Focal case.** Chrome deviceId 14c579f2-... listed and selected, but tabs_context timed out twice; Perplexity and
+  CourtListener not reached (CourtListener API requires auth). Web search found nothing after the 11-10 orders.
+  Nothing written; status stays enjoined (PI hearing 12-02, appeal 26-5356 pending).
+- **Coverage.** Intake 36 items fetched in 24 h (admin/coverage); /coverage.json shows 366 items, 4 shown items added
+  in 24 h (Ateeq detention, Sozcu TV seizure, VOA director ruling, Mada Masr), all on topic; nothing hidden.
+- **Search Console.** Skipped: Chrome not responding.
