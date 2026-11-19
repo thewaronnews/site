@@ -2069,3 +2069,23 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
 - **Coverage.** Intake 36 items fetched in 24 h (admin/coverage); /coverage.json shows 366 items, 4 shown items added
   in 24 h (Ateeq detention, Sozcu TV seizure, VOA director ruling, Mada Masr), all on topic; nothing hidden.
 - **Search Console.** Skipped: Chrome not responding.
+
+## 2026-11-19 (scheduled maintenance, ~23:40 UTC)
+
+- **Health.** incidents 227 (226 published), sources 632, claims 1018 (996 current), events 38. Link integrity 0.987
+  (ok 624, dead 1, archived 188, unchecked 7). coverage_last_run 23:05 UTC (21 feeds; Knight Columbia RSS 404,
+  Google News 503/429); no manual cron needed. last_export still #53 at 2026-11-05 with "GitHub ... HTTP 401"
+  (Worker GITHUB_TOKEN secret still rejected; no export for 14 days).
+- **Link integrity.** linkcheck --all in 8 parallel slices: 632 sources; live 496, paywalled 50, redirected 24,
+  error 56, bot_blocked 5, dead 1. Wayback (timeout 170 s): 8 saved (257-259, 261, 263-266), 3 failed (260, 262,
+  267). Same low-numbered sources are still retried each run. IndexNow: 4 URLs, HTTP 200.
+- **Focal case.** Chrome deviceId 14c579f2-... worked; Perplexity reports a 2026-11-18 government filing arguing
+  restored credentials do not require press-pool access (source: MS NOW, a plaintiff; no exact URL), and a
+  2026-11-19 report (The Hill) of phones taken from travelling pool reporters. Neither from a qualifying source or
+  verified court record; CourtListener tab failed to load twice. Nothing written; status stays enjoined (pool-access
+  hearing expected December, appeal 26-5356 pending).
+- **Coverage.** Intake 30 items fetched in 24 h (admin/coverage); /coverage.json shows 372 items, 5 added in 24 h
+  (appeals court journalist records, Shahid Maitla x2, Jenin reporter, Manila protest arrests), all on topic;
+  nothing hidden.
+- **Search Console.** No access: authuser=3 now lands on the marketing page; authuser=0, 1, 2 report "you don't have
+  access to this property". Not read.
