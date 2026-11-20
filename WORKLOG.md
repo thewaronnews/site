@@ -2087,5 +2087,9 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
 - **Coverage.** Intake 30 items fetched in 24 h (admin/coverage); /coverage.json shows 372 items, 5 added in 24 h
   (appeals court journalist records, Shahid Maitla x2, Jenin reporter, Manila protest arrests), all on topic;
   nothing hidden.
-- **Search Console.** No access: authuser=3 now lands on the marketing page; authuser=0, 1, 2 report "you don't have
-  access to this property". Not read.
+- **Search Console** (read later from Peter's Betty Chrome, extension deviceId 793b969a-..., "Work" profile; the
+  14c579f2 extension and its authuser=0-3 accounts have no access). Indexed 11,432 (was 12,187 on 11-17), not
+  indexed 29,473: crawled not indexed 24,107 (was 23,352), discovered not indexed 3,307, duplicate canonical 1,757,
+  noindex 242, alternate canonical 54, redirect 5, 5xx 1. Breadcrumbs 81/0, Events 3/0, Datasets 0/0, HTTPS 81.
+  Recommendation: 1 unused verification token. Sitemap 4,464 discovered, last read 2026-10-26. Performance (Sep 21
+  to Nov 17): 29 clicks, 4.58K impressions, CTR 0.6%, position 17.1.
