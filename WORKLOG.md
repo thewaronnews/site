@@ -2093,3 +2093,22 @@ Unattended run (device_bash on the Mac Studio; Sonnet subagent for the focal cas
   noindex 242, alternate canonical 54, redirect 5, 5xx 1. Breadcrumbs 81/0, Events 3/0, Datasets 0/0, HTTPS 81.
   Recommendation: 1 unused verification token. Sitemap 4,464 discovered, last read 2026-10-26. Performance (Sep 21
   to Nov 17): 29 clicks, 4.58K impressions, CTR 0.6%, position 17.1.
+
+## 2026-11-20 (scheduled maintenance, ~21:40 UTC)
+
+- **Health.** incidents 227 (226 published), sources 632, claims 1018 (996 current), events 38. Link integrity 0.987
+  (ok 624, dead 1, archived 189, unchecked 7). coverage_last_run 21:05 UTC (21 feeds; Knight Columbia RSS 404,
+  Google News 503); no manual cron needed. last_export still #53 at 2026-11-05 with "GitHub ... HTTP 401"
+  (Worker GITHUB_TOKEN secret still rejected; no export for 15 days).
+- **Link integrity.** linkcheck --all in 8 parallel slices: 632 sources; live 494, paywalled 50, redirected 24,
+  error 58, bot_blocked 5, dead 1. Wayback (timeout 170 s): 8 saved (257-259, 261, 263-265, 267), 3 failed (260,
+  262, 266). Same low-numbered sources are still retried each run. IndexNow: 4 URLs, HTTP 200.
+- **Focal case.** Chrome deviceId 14c579f2-... worked. Perplexity and CourtListener docket 74823502 (no
+  verification page): last filing still Doc 60 (Nov 18, government response to motion for further PI); reply due
+  Nov 25, hearing Dec 2. Air Force One phone story (Nov 19) already known; no qualifying Nov 19-20 court
+  development. Nothing written; status stays enjoined (appeal 26-5356 pending).
+- **Coverage.** Intake 23 items fetched in 24 h (admin/coverage); /coverage.json shows 370 items, 6 added in 24 h
+  (Pentagon suit, journalist arrested in Russia, Shahid Maitla, Pakistan cybercrime laws, NYT lawsuit ruling,
+  Air Force One phones), all on topic; nothing hidden.
+- **Search Console.** Skipped: the 14c579f2 Chrome's accounts had no access to the property on 11-19, and this
+  routine may not use another browser.
